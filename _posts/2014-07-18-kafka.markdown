@@ -1,0 +1,10 @@
+---
+title: Kafka
+subtitle: Queue
+layout: default
+modal-id: 9
+img: kafka.png
+alt: image-alt
+category: Messaging
+
+---

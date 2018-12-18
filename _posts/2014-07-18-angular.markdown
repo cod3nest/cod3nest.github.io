@@ -1,0 +1,10 @@
+---
+title: Angular
+subtitle: Front End
+layout: default
+modal-id: 14
+img: angular.png
+alt: image-alt
+category: Front End
+
+---

@@ -1,0 +1,10 @@
+---
+title: GCP
+subtitle: Cloud
+layout: default
+modal-id: 13
+img: gcp.png
+alt: image-alt
+category: Cloud Provider
+
+---

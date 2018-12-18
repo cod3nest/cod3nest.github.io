@@ -1,0 +1,10 @@
+---
+title: RabbitMq
+subtitle: Queue
+layout: default
+modal-id: 10
+img: rabbitmq.png
+alt: image-alt
+category: Messaging
+
+---

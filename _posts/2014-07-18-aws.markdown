@@ -1,0 +1,10 @@
+---
+title: AWS
+subtitle: Cloud
+layout: default
+modal-id: 12
+img: aws.png
+alt: image-alt
+category: Cloud Provider
+
+---
