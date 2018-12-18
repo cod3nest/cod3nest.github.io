@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Codenest - Welcome To Our Nest!</title>
+    <description>Specialist in developing REST API using Java and Spring Boot and DevOps</description>
+    <link>https://codenestltd.github.io/</link>
+    <atom:link href="https://codenestltd.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Tue, 18 Dec 2018 23:49:59 +0000</pubDate>
+    <lastBuildDate>Tue, 18 Dec 2018 23:49:59 +0000</lastBuildDate>
+    <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Spring</title>
+        <description>
+</description>
+        <pubDate>Fri, 18 Jul 2014 00:00:00 +0100</pubDate>
+        <link>https://codenestltd.github.io/web%20development/2014/07/18/spring/</link>
+        <guid isPermaLink="true">https://codenestltd.github.io/web%20development/2014/07/18/spring/</guid>
+        
+        
+        <category>Web Development</category>
+        
+      </item>
+    
+      <item>
+        <title>RabbitMq</title>
+        <description>
+</description>
+        <pubDate>Fri, 18 Jul 2014 00:00:00 +0100</pubDate>
+        <link>https://codenestltd.github.io/messaging/2014/07/18/rabbitmq/</link>
+        <guid isPermaLink="true">https://codenestltd.github.io/messaging/2014/07/18/rabbitmq/</guid>
+        
+        
+        <category>Messaging</category>
+        
+      </item>
+    
+      <item>
+        <title>Neo4j</title>
+        <description>
+</description>
+        <pubDate>Fri, 18 Jul 2014 00:00:00 +0100</pubDate>
+        <link>https://codenestltd.github.io/database/2014/07/18/neo4j/</link>
+        <guid isPermaLink="true">https://codenestltd.github.io/database/2014/07/18/neo4j/</guid>
+        
+        
+        <category>Database</category>
+        
+      </item>
+    
+      <item>
+        <title>MySql</title>
+        <description>
+</description>
+        <pubDate>Fri, 18 Jul 2014 00:00:00 +0100</pubDate>
+        <link>https://codenestltd.github.io/database/2014/07/18/mysql/</link>
+        <guid isPermaLink="true">https://codenestltd.github.io/database/2014/07/18/mysql/</guid>
+        
+        
+        <category>Database</category>
+        
+      </item>
+    
+      <item>
+        <title>Kubernetes</title>
+        <description>
+</description>
+        <pubDate>Fri, 18 Jul 2014 00:00:00 +0100</pubDate>
+        <link>https://codenestltd.github.io/devops/2014/07/18/kubernetes/</link>
+        <guid isPermaLink="true">https://codenestltd.github.io/devops/2014/07/18/kubernetes/</guid>
+        
+        
+        <category>DevOps</category>
+        
+      </item>
+    
+      <item>
+        <title>Kafka</title>
+        <description>
+</description>
+        <pubDate>Fri, 18 Jul 2014 00:00:00 +0100</pubDate>
+        <link>https://codenestltd.github.io/messaging/2014/07/18/kafka/</link>
+        <guid isPermaLink="true">https://codenestltd.github.io/messaging/2014/07/18/kafka/</guid>
+        
+        
+        <category>Messaging</category>
+        
+      </item>
+    
+      <item>
+        <title>Jenkins</title>
+        <description>
+</description>
+        <pubDate>Fri, 18 Jul 2014 00:00:00 +0100</pubDate>
+        <link>https://codenestltd.github.io/build/devops/2014/07/18/jenkins/</link>
+        <guid isPermaLink="true">https://codenestltd.github.io/build/devops/2014/07/18/jenkins/</guid>
+        
+        
+        <category>Build/Devops</category>
+        
+      </item>
+    
+      <item>
+        <title>Java</title>
+        <description>
+</description>
+        <pubDate>Fri, 18 Jul 2014 00:00:00 +0100</pubDate>
+        <link>https://codenestltd.github.io/web%20development/2014/07/18/java/</link>
+        <guid isPermaLink="true">https://codenestltd.github.io/web%20development/2014/07/18/java/</guid>
+        
+        
+        <category>Web Development</category>
+        
+      </item>
+    
+      <item>
+        <title>Gradle</title>
+        <description>
+</description>
+        <pubDate>Fri, 18 Jul 2014 00:00:00 +0100</pubDate>
+        <link>https://codenestltd.github.io/build%20tool/2014/07/18/gradle/</link>
+        <guid isPermaLink="true">https://codenestltd.github.io/build%20tool/2014/07/18/gradle/</guid>
+        
+        
+        <category>Build tool</category>
+        
+      </item>
+    
+      <item>
+        <title>GCP</title>
+        <description>
+</description>
+        <pubDate>Fri, 18 Jul 2014 00:00:00 +0100</pubDate>
+        <link>https://codenestltd.github.io/cloud%20provider/2014/07/18/gcp/</link>
+        <guid isPermaLink="true">https://codenestltd.github.io/cloud%20provider/2014/07/18/gcp/</guid>
+        
+        
+        <category>Cloud Provider</category>
+        
+      </item>
+    
+  </channel>
+</rss>
