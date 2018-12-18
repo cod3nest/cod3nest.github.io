@@ -1,0 +1,36 @@
+url: https://codenestltd.github.io
+
+# Site settings
+title: Codenest Ltd
+email: ankit@codenest.uk
+description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+
+
+# Team names, titles and social links
+people:
+- name: Ankit Rana
+  pic: Ankit
+  position: Director
+  social:
+    - title: linkedin
+      url: https://www.linkedin.com/in/arana198
+    - title: twitter
+      url: https://twitter.com/arana198
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: twitter
+    url: https://twitter.com/Codenest_Ltd
+  - title: github
+    url: https://github.com/CodenestLtd
+
+# Postal address (add as many lines as necessary)
+address:
+  - line: Clearway Accountant
+  - line: Colley Way
+  - line: Reigate
+  - line: RH2 9JH
+
+# Build settings
+markdown: kramdown
+permalink: pretty
