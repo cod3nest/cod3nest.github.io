@@ -5,11 +5,11 @@ Agency theme based on [Agency bootstrap theme ](https://startbootstrap.com/templ
 
 # How to use
 
-###Portfolio 
+###Technologies 
 
-Portfolio projects are in '/_posts'
+Technologies projects are in '/_posts'
 
-Images are in '/img/portfolio'
+Images are in '/img/technologies'
 
 ###About
 
