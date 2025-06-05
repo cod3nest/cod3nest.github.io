@@ -362,7 +362,7 @@ const App = () => {
               className="h-10 w-auto mb-4 filter brightness-0 invert"
             />
             <p className="text-gray-400 mb-4">
-              Expert IT consultancy for cloud, GitOps, automation, DevOps, and Java backend solutions.
+              Automation-first IT consultancy delivering GitOps-driven solutions with Kubernetes orchestration and Java-based backends.
             </p>
             <p className="text-gray-500 text-sm">
               © 2025 codenest. All rights reserved.
