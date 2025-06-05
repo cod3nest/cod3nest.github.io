@@ -176,7 +176,7 @@ const App = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Our Expertise</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We deliver comprehensive IT solutions that drive business growth and operational excellence
+              Comprehensive automation-first IT solutions spanning GitOps, Kubernetes, and cloud-native development
             </p>
           </div>
 
