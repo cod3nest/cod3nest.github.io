@@ -2,7 +2,7 @@
 
 Welcome to the official GitHub Pages site for **Codenest**, a boutique IT consultancy specialising in GitOps, automation, DevOps (Terraform), and Java-based backend systems.
 
-🌐 **Live Site**: [https://your-username.github.io/your-repo-name](https://codenest.uk)
+🌐 **Live Site**: [https://codenest.uk](https://codenest.uk)
 
 ---
 
