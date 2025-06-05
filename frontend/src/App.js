@@ -134,12 +134,14 @@ const App = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
-                Transforming Ideas into 
-                <span className="text-orange-500 block">Digital Solutions</span>
+                Automation-First
+                <span className="text-orange-500 block">IT Solutions</span>
               </h1>
-              <p className="text-xl text-gray-600 mt-6 leading-relaxed">
-                Expert IT consultancy specializing in cloud architecture, GitOps, automation, DevOps, and Java backend development. 
-                We help businesses scale and innovate with cutting-edge technology solutions.
+              <p className="text-lg text-orange-600 font-semibold mt-4 mb-4">
+                Where GitOps meets real-world delivery
+              </p>
+              <p className="text-xl text-gray-600 leading-relaxed">
+                We deliver scalable, GitOps-driven solutions with Java-based backends, Kubernetes orchestration, and cloud-native infrastructure that teams trust.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <a href="#contact" className="bg-orange-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors text-center">
