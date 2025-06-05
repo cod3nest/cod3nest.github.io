@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import './App.css';
 
@@ -11,6 +11,11 @@ const App = () => {
     message: ''
   });
   const [formStatus, setFormStatus] = useState('');
+
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
+  }, []);
 
   const handleInputChange = (e) => {
     setFormData({
