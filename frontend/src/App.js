@@ -24,17 +24,17 @@ const App = () => {
     setFormStatus('sending');
 
     try {
-      // EmailJS configuration - user will need to set these up
+      // EmailJS configuration from environment variables
       await emailjs.send(
-        'YOUR_SERVICE_ID', // User needs to replace
-        'YOUR_TEMPLATE_ID', // User needs to replace
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: formData.name,
           from_email: formData.email,
           company: formData.company,
           message: formData.message,
         },
-        'YOUR_PUBLIC_KEY' // User needs to replace
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       );
       
       setFormStatus('success');
