@@ -58,6 +58,12 @@ const App = () => {
       image: "https://images.unsplash.com/photo-1648134859211-4a1b57575f4e"
     },
     {
+      title: "Kubernetes",
+      description: "Container orchestration and cloud-native infrastructure management",
+      icon: "🎯",
+      image: "https://images.pexels.com/photos/1148820/pexels-photo-1148820.jpeg"
+    },
+    {
       title: "Automation",
       description: "Streamline your processes with intelligent automation solutions",
       icon: "🤖",
