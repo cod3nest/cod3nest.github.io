@@ -84,7 +84,7 @@ const App = () => {
       title: "Java Backend",
       description: "Robust and scalable Java application development and architecture",
       icon: "☕",
-      image: "https://github.com/cod3nest/cod3nest.github.io/blob/gh-pages/img/java.jpg"
+      image: "https://github.com/cod3nest/cod3nest.github.io/blob/gh-pages/img/java.jpg?raw=true"
     }
   ];
 
