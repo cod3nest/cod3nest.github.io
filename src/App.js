@@ -51,40 +51,29 @@ const App = () => {
 
   const services = [
     {
-      title: "Cloud Solutions",
-      description: "Scalable cloud architecture and migration services for modern businesses",
-      icon: "☁️",
+      title: "Fractional CTO",
+      description: "Technical leadership and strategic guidance for early-stage startups — from architecture decisions to team scaling and investor readiness.",
       image: "https://github.com/cod3nest/cod3nest.github.io/blob/gh-pages/img/pexels-photo-1181354.jpeg?raw=true"
     },
     {
-      title: "GitOps",
-      description: "Infrastructure as code and automated deployment pipelines",
-      icon: "🔄",
-      image: "https://github.com/cod3nest/cod3nest.github.io/blob/gh-pages/img/gitops.avif?raw=true"
-    },
-    {
-      title: "Kubernetes",
-      description: "Container orchestration and cloud-native infrastructure management",
-      icon: "🎯",
+      title: "0→1 Product Builds",
+      description: "MVP development using modular, cloud-native templates — fast iteration without sacrificing quality or scalability.",
       image: "https://github.com/cod3nest/cod3nest.github.io/blob/gh-pages/img/pexels-photo-1148820.jpeg?raw=true"
     },
     {
-      title: "Automation",
-      description: "Streamline your processes with intelligent automation solutions",
-      icon: "🤖",
+      title: "AI & Data Engineering",
+      description: "LLM integration, MLOps, and scalable data pipelines that turn experimental models into production-ready systems.",
       image: "https://github.com/cod3nest/cod3nest.github.io/blob/gh-pages/img/photo-1735494034924-f4fd13af1cea.jpeg?raw=true"
     },
     {
-      title: "DevOps",
-      description: "Continuous integration and deployment for faster software delivery",
-      icon: "⚙️",
-      image: "https://github.com/cod3nest/cod3nest.github.io/blob/gh-pages/img/pexels-photo-11035393.jpeg?raw=true"
+      title: "IaC & GitOps Acceleration",
+      description: "Reproducible cloud environments and CI/CD pipelines — enabling fast, reliable iteration from day one.",
+      image: "https://github.com/cod3nest/cod3nest.github.io/blob/gh-pages/img/gitops.avif?raw=true"
     },
     {
-      title: "Java Backend",
-      description: "Robust and scalable Java application development and architecture",
-      icon: "☕",
-      image: "https://github.com/cod3nest/cod3nest.github.io/blob/gh-pages/img/java.jpg?raw=true"
+      title: "Technical Due Diligence",
+      description: "Investor readiness assessments, scalability audits, and system design reviews to validate technical foundations.",
+      image: "https://github.com/cod3nest/cod3nest.github.io/blob/gh-pages/img/pexels-photo-11035393.jpeg?raw=true"
     }
   ];
 
@@ -107,6 +96,7 @@ const App = () => {
               <div className="ml-10 flex items-baseline space-x-8">
                 <a href="#home" className="text-gray-700 hover:text-orange-500 px-3 py-2 text-sm font-medium transition-colors">Home</a>
                 <a href="#services" className="text-gray-700 hover:text-orange-500 px-3 py-2 text-sm font-medium transition-colors">Services</a>
+                <a href="#approach" className="text-gray-700 hover:text-orange-500 px-3 py-2 text-sm font-medium transition-colors">Approach</a>
                 <a href="#about" className="text-gray-700 hover:text-orange-500 px-3 py-2 text-sm font-medium transition-colors">About</a>
                 <a href="#contact" className="bg-orange-500 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-orange-600 transition-colors">Contact</a>
               </div>
@@ -131,6 +121,7 @@ const App = () => {
               <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
                 <a href="#home" className="text-gray-700 hover:text-orange-500 block px-3 py-2 text-base font-medium">Home</a>
                 <a href="#services" className="text-gray-700 hover:text-orange-500 block px-3 py-2 text-base font-medium">Services</a>
+                <a href="#approach" className="text-gray-700 hover:text-orange-500 block px-3 py-2 text-base font-medium">Approach</a>
                 <a href="#about" className="text-gray-700 hover:text-orange-500 block px-3 py-2 text-base font-medium">About</a>
                 <a href="#contact" className="text-orange-500 block px-3 py-2 text-base font-medium">Contact</a>
               </div>
@@ -145,28 +136,25 @@ const App = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
-                Automation-First
-                <span className="text-orange-500 block">IT Solutions</span>
+                From Idea to Scalable Product
+                <span className="text-orange-500 block">Technical Leadership for Startups</span>
               </h1>
-              <p className="text-lg text-orange-600 font-semibold mt-4 mb-4">
-                Where GitOps meets real-world delivery
-              </p>
-              <p className="text-xl text-gray-600 leading-relaxed">
-                We deliver scalable, GitOps-driven solutions with Java-based backends, Kubernetes orchestration, and cloud-native infrastructure that teams trust.
+              <p className="text-xl text-gray-600 mt-6 leading-relaxed">
+                We help founders build fast and scale smart — combining engineering execution with reproducible IaC and GitOps foundations.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
                 <a href="#contact" className="bg-orange-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors text-center">
-                  Get Started
+                  Book a Discovery Call
                 </a>
                 <a href="#services" className="border-2 border-orange-500 text-orange-500 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors text-center">
-                  Our Services
+                  View Services
                 </a>
               </div>
             </div>
             <div className="relative">
-              <img 
+              <img
                 src="https://github.com/cod3nest/cod3nest.github.io/blob/gh-pages/img/photo-1489648022186-8f49310909a0.jpeg?raw=true"
-                alt="Digital transformation" 
+                alt="Startup product development"
                 className="w-full h-96 object-cover rounded-xl shadow-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-transparent rounded-xl"></div>
@@ -179,9 +167,9 @@ const App = () => {
       <section id="services" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Our Expertise</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">What We Do</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive automation-first IT solutions spanning GitOps, Kubernetes, and cloud-native development
+              Technical leadership and engineering execution for startups building their first product
             </p>
           </div>
 
@@ -189,19 +177,18 @@ const App = () => {
             {services.map((service, index) => (
               <div key={index} className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
                 <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={service.image} 
+                  <img
+                    src={service.image}
                     alt={service.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 text-white">
-                    <span className="text-3xl">{service.icon}</span>
+                    <h3 className="text-xl font-bold">{service.title}</h3>
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
-                  <p className="text-gray-600">{service.description}</p>
+                  <p className="text-gray-600 leading-relaxed">{service.description}</p>
                 </div>
               </div>
             ))}
@@ -209,74 +196,95 @@ const App = () => {
         </div>
       </section>
 
+      {/* Approach Section */}
+      <section id="approach" className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">How We Work</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Every engagement begins with a production-grade foundation — so iteration is safe, fast, and measurable.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <div className="bg-orange-500 text-white w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-xl font-bold">
+                1
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Discover & Define</h3>
+              <p className="text-gray-600 leading-relaxed">
+                We clarify your vision, identify user value, and define product scope. This phase ensures alignment on goals and establishes a clear path forward.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <div className="bg-orange-500 text-white w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-xl font-bold">
+                2
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Architect & Accelerate</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Before writing code, we establish IaC foundations, CI/CD pipelines, and GitOps workflows. This structure enables rapid, reliable iteration from day one.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <div className="bg-orange-500 text-white w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-xl font-bold">
+                3
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Deliver & Handover</h3>
+              <p className="text-gray-600 leading-relaxed">
+                We launch your MVP with full observability, clean documentation, and knowledge transfer. You own the system and can iterate independently.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
-      <section id="about" className="py-20 bg-gray-50">
+      <section id="about" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Why Choose codenest?</h2>
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="bg-orange-500 text-white p-2 rounded-lg mr-4 mt-1">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Cutting-Edge Technology</h3>
-                    <p className="text-gray-600">We stay ahead of the curve with the latest technologies and best practices in cloud computing, automation, and software development.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-orange-500 text-white p-2 rounded-lg mr-4 mt-1">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Proven Track Record</h3>
-                    <p className="text-gray-600">Our experienced team has successfully delivered complex IT projects across various industries, ensuring reliable and scalable solutions.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-orange-500 text-white p-2 rounded-lg mr-4 mt-1">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">End-to-End Support</h3>
-                    <p className="text-gray-600">From initial consultation to deployment and ongoing maintenance, we provide comprehensive support throughout your digital transformation journey.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
             <div className="relative">
-              <img 
+              <img
                 src="https://github.com/cod3nest/cod3nest.github.io/blob/gh-pages/img/photo-1488229297570-58520851e868.jpeg?raw=true"
-                alt="Professional technology" 
+                alt="Technical leadership"
                 className="w-full h-96 object-cover rounded-xl shadow-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-transparent rounded-xl"></div>
+            </div>
+            <div>
+              <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">About codenest</h2>
+              <div className="space-y-4 text-gray-600 leading-relaxed">
+                <p>
+                  I've spent years building and leading engineering teams in early-stage startups — guiding founders through the critical 0→1 phase where technical decisions can make or break momentum.
+                </p>
+                <p>
+                  What I've learned: speed comes from structure. The fastest-moving teams are those with repeatable systems — Infrastructure as Code, GitOps workflows, and production-grade observability from day one.
+                </p>
+                <p>
+                  This is what codenest delivers. We bring clarity to complexity, reliability to experimentation, and craftsmanship to rapid iteration. Whether you're building your first MVP or scaling to meet demand, we provide the technical leadership and execution that keeps you moving forward.
+                </p>
+                <p className="text-gray-900 font-semibold">
+                  We believe speed comes from structure — Infrastructure as Code and GitOps bring the discipline startups need without slowing innovation.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-white">
+      <section id="contact" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Let's Work Together</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">Let's Discuss Your Next Product Milestone</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Ready to transform your business with innovative IT solutions? Get in touch with our expert team.
+              Whether you're validating an idea, building an MVP, or scaling your architecture — let's talk about how we can help.
             </p>
           </div>
 
           <div className="max-w-3xl mx-auto">
-            <form onSubmit={handleSubmit} className="bg-gray-50 p-8 rounded-xl shadow-lg">
+            <form onSubmit={handleSubmit} className="bg-white p-8 rounded-xl shadow-lg">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Name *</label>
@@ -367,7 +375,7 @@ const App = () => {
               className="h-10 w-auto mb-4 filter brightness-0 invert"
             />
             <p className="text-gray-400 mb-4">
-              Automation-first IT consultancy delivering GitOps-driven solutions with Kubernetes orchestration and Java-based backends.
+              Technical leadership for startups — delivering speed and structure through IaC, GitOps, and production-grade engineering.
             </p>
             <p className="text-gray-500 text-sm">
               © 2025 codenest. All rights reserved.
