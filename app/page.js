@@ -97,7 +97,7 @@ export default function Home() {
       <Navigation />
 
       {/* Hero Section */}
-      <section id="home" className="pt-32 pb-20 bg-gradient-to-b from-slate-50 to-white">
+      <section id="home" className="pt-40 pb-32 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -111,11 +111,11 @@ export default function Home() {
                 For founders who need reliable delivery from day one — Codenest builds automation-first cloud platforms that evolve with your product. From first commit to global rollout, we use GitOps, IaC, and continuous delivery to help you scale confidently.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="#contact" className="bg-primary-600 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-primary-700 transition-all shadow-lg hover:shadow-xl text-center">
-                  Book a Free 30-Min Strategy Call
+                <a href="#contact" className="bg-gradient-to-r from-sky-600 to-cyan-500 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:from-sky-700 hover:to-cyan-600 transition-all shadow-lg hover:shadow-xl text-center">
+                  Book a Strategy Call
                 </a>
-                <a href="#contact" className="border-2 border-slate-300 text-slate-700 px-8 py-4 rounded-2xl text-lg font-semibold hover:border-primary-600 hover:text-primary-600 transition-all text-center">
-                  Request a Platform Audit
+                <a href="#contact" className="border-2 border-slate-300 text-slate-700 px-8 py-4 rounded-2xl text-lg font-semibold hover:border-sky-700 hover:text-sky-700 transition-all text-center">
+                  Request Platform Audit
                 </a>
               </div>
             </div>
@@ -134,7 +134,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-slate-900 text-white">
+      <section className="py-24 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Trusted by teams building fast and scaling fearlessly.</h2>
@@ -161,7 +161,7 @@ export default function Home() {
       </section>
 
       {/* Philosophy Section */}
-      <section className="py-16 bg-gradient-to-b from-white to-slate-50">
+      <section className="py-24 bg-gradient-to-b from-white to-slate-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-3xl p-10 md:p-16 border-2 border-primary-100 shadow-xl">
             <div className="text-center mb-8">
