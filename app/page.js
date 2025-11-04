@@ -462,8 +462,7 @@ export default function Home() {
               <h4 className="font-semibold mb-4">Connect</h4>
               <ul className="space-y-2 text-sm">
                 <li><a href="#contact" className="text-slate-400 hover:text-white transition-colors">Book a Call</a></li>
-                <li><a href="mailto:hello@codenest.uk" className="text-slate-400 hover:text-white transition-colors">hello@codenest.uk</a></li>
-                <li><a href="https://www.linkedin.com" className="text-slate-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://www.linkedin.com/company/codenest-ltd" className="text-slate-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
               </ul>
             </div>
           </div>
