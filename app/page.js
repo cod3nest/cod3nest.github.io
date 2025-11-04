@@ -112,10 +112,10 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="#contact" className="bg-gradient-to-r from-sky-600 to-cyan-500 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:from-sky-700 hover:to-cyan-600 transition-all shadow-lg hover:shadow-xl text-center">
-                  Book a Strategy Call
+                  Book a Discovery Call
                 </a>
-                <a href="#contact" className="border-2 border-slate-300 text-slate-700 px-8 py-4 rounded-2xl text-lg font-semibold hover:border-sky-700 hover:text-sky-700 transition-all text-center">
-                  Request Platform Audit
+                <a href="#case-studies" className="border-2 border-slate-300 text-slate-700 px-8 py-4 rounded-2xl text-lg font-semibold hover:border-sky-700 hover:text-sky-700 transition-all text-center">
+                  View Case Studies
                 </a>
               </div>
             </div>
@@ -452,16 +452,16 @@ export default function Home() {
             <div>
               <h4 className="font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#services" className="text-slate-400 hover:text-white transition-colors">Services</a></li>
                 <li><a href="#case-studies" className="text-slate-400 hover:text-white transition-colors">Case Studies</a></li>
-                <li><a href="#approach" className="text-slate-400 hover:text-white transition-colors">How We Work</a></li>
-                <li><a href="#about" className="text-slate-400 hover:text-white transition-colors">About</a></li>
+                <li><a href="#services" className="text-slate-400 hover:text-white transition-colors">Services</a></li>
+                <li><a href="#approach" className="text-slate-400 hover:text-white transition-colors">Our Process</a></li>
+                <li><a href="#about" className="text-slate-400 hover:text-white transition-colors">Our Story</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Connect</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#contact" className="text-slate-400 hover:text-white transition-colors">Book a Call</a></li>
+                <li><a href="#contact" className="text-slate-400 hover:text-white transition-colors">Book a Discovery Call</a></li>
                 <li><a href="https://www.linkedin.com/company/codenest-ltd" className="text-slate-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
               </ul>
             </div>
