@@ -102,13 +102,13 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-slate-900 leading-tight mb-6">
-                From 0 to 1 — Faster.
+                From 0 to 1. Faster.
               </h1>
               <p className="text-2xl md:text-3xl text-slate-600 mb-4 leading-relaxed">
-                Build your product on an automation-first foundation that scales from MVP to enterprise.
+                Build a product that scales from day one — with automation-first engineering and cloud-native delivery.
               </p>
-              <p className="text-lg text-slate-500 mb-10">
-                For founders who need reliable delivery from day one — Codenest builds automation-first cloud platforms that evolve with your product. From first commit to global rollout, we use GitOps, IaC, and continuous delivery to help you scale confidently.
+              <p className="text-lg text-slate-700 mb-10">
+                Stop building on shaky ground. Codenest helps startups move from MVP to enterprise-ready using GitOps, Infrastructure-as-Code, and Kubernetes-powered platforms. From first commit to global rollout, we deliver the reliability, speed, and clarity your team needs to grow confidently.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="#contact" className="bg-gradient-to-r from-sky-600 to-cyan-500 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:from-sky-700 hover:to-cyan-600 transition-all shadow-lg hover:shadow-xl text-center">
@@ -446,7 +446,7 @@ export default function Home() {
                 className="h-10 w-auto mb-4 company-logo"
               />
               <p className="text-slate-400 text-sm">
-                Build your product on an automation-first foundation that scales from MVP to enterprise.
+                Build a product that scales from day one — with automation-first engineering and cloud-native delivery.
               </p>
             </div>
             <div>
