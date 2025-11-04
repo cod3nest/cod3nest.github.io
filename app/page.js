@@ -53,7 +53,7 @@ export default function Home() {
     {
       title: "Opayo by Elavon: Payment Platform Transformation",
       challenge: "Leading payment provider needed to modernize their infrastructure and integrate new payment channels (Apple Pay, Google Pay) while maintaining 100% uptime for critical transaction processing. The platform required cloud-native transformation and improved deployment velocity.",
-      solution: "Led technical strategy as Principal Developer/Technical Lead, orchestrating AWS EKS migration with Kubernetes and Helm. Implemented comprehensive GitOps workflows and Infrastructure as Code using Terraform. Managed the transition from monolithic architecture to microservices, established Jenkins CI/CD pipelines migrated to Kubernetes, and scaled engineering culture across distributed teams.",
+      solution: "We orchestrated a comprehensive AWS EKS migration with Kubernetes and Helm, implementing GitOps workflows and Infrastructure as Code using Terraform. Our team managed the transition from monolithic architecture to microservices, established Jenkins CI/CD pipelines migrated to Kubernetes, and scaled engineering culture across distributed teams.",
       results: ["Contributed to 10% revenue increase through faster feature delivery", "Reduced CI pipeline failures through automated testing", "Improved deployment speed and reliability with GitOps", "Successfully integrated Apple Pay and Google Pay"],
       tags: ["Payment Systems", "AWS EKS", "Kubernetes", "Terraform", "GitOps", "Team Leadership"],
       image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&auto=format&fit=crop&q=80"
@@ -61,7 +61,7 @@ export default function Home() {
     {
       title: "AstraZeneca: Drug Delivery Tracking System MVP",
       challenge: "AstraZeneca needed to replace manual spreadsheet-based drug delivery tracking with a modern web-based tool to improve efficiency and accelerate time-to-market for pharmaceutical products. The system required integration with existing workflows while maintaining regulatory compliance.",
-      solution: "Led a team of 4+ Java developers at Deloitte Digital to build a production-grade web application with REST APIs and automated CI/CD pipelines. Collaborated closely with stakeholders and business analysts to define requirements and align delivery with business goals. Architected scalable deployments on Kubernetes using Docker and Jenkins (config-as-code), establishing robust testing practices with JUnit and Spock.",
+      solution: "We built a production-grade web application with REST APIs and automated CI/CD pipelines. Our team collaborated closely with stakeholders and business analysts to define requirements and align delivery with business goals. We architected scalable deployments on Kubernetes using Docker and Jenkins (config-as-code), establishing robust testing practices with JUnit and Spock.",
       results: ["Accelerated delivery by 40% compared to manual processes", "Cut deployment errors by 30% through automated pipelines", "Improved stakeholder confidence through transparent roadmap planning", "Delivered production-ready MVP on Kubernetes infrastructure"],
       tags: ["Healthcare", "Team Leadership", "Kubernetes", "CI/CD", "REST APIs", "Stakeholder Management"],
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop&q=80"
@@ -80,7 +80,7 @@ export default function Home() {
     },
     {
       question: "What's your tech stack expertise?",
-      answer: "We specialize in cloud-native architectures (AWS, GCP), Kubernetes, Terraform, Python/Node.js backends, React/Next.js frontends, and modern data/ML stacks. But our real value is in architectural thinking — we choose the right tools for your specific needs."
+      answer: "We specialize in cloud-native architectures (AWS, GCP), Kubernetes, Terraform, Python, Java, Postgres/Mysql, Gitops, and modern data/ML stacks. But our real value is in architectural thinking — we choose the right tools for your specific needs."
     },
     {
       question: "Do you offer ongoing support after delivery?",
@@ -101,22 +101,21 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 leading-tight mb-6">
-                Ship your MVP.<br/>
-                <span className="text-primary-600">Raise your round.</span>
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-slate-900 leading-tight mb-6">
+                From 0 to 1 — Faster.
               </h1>
-              <p className="text-xl md:text-2xl text-slate-600 mb-4 leading-relaxed">
-                Technical leadership for founders who need to move fast without breaking things.
+              <p className="text-2xl md:text-3xl text-slate-600 mb-4 leading-relaxed">
+                Build your product on an automation-first foundation that scales from MVP to enterprise.
               </p>
               <p className="text-lg text-slate-500 mb-10">
-                We build production-grade MVPs in 8-12 weeks using Infrastructure as Code and GitOps — so you can iterate quickly while maintaining reliability.
+                Codenest helps startups and scaleups deliver faster, safer, and smarter with GitOps, IaC, and modern cloud architecture. For founders who need reliable delivery from day one — Codenest builds automation-first cloud platforms that evolve with your product. From first commit to global rollout, we use GitOps, IaC, and continuous delivery to help you scale confidently.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="#contact" className="bg-primary-600 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-primary-700 transition-all shadow-lg hover:shadow-xl text-center">
-                  Book Free Discovery Call
+                  Book a Free 30-Min Strategy Call
                 </a>
-                <a href="#case-studies" className="border-2 border-slate-300 text-slate-700 px-8 py-4 rounded-2xl text-lg font-semibold hover:border-primary-600 hover:text-primary-600 transition-all text-center">
-                  View Case Studies
+                <a href="#contact" className="border-2 border-slate-300 text-slate-700 px-8 py-4 rounded-2xl text-lg font-semibold hover:border-primary-600 hover:text-primary-600 transition-all text-center">
+                  Request a Platform Audit
                 </a>
               </div>
             </div>
@@ -137,22 +136,21 @@ export default function Home() {
       {/* Stats Section */}
       <section className="py-16 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Trusted by teams building fast and scaling fearlessly.</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-accent-400 mb-2">8-12</div>
-              <div className="text-slate-300 text-sm md:text-base">Week avg. MVP delivery</div>
+              <div className="text-4xl md:text-5xl font-bold text-accent-400 mb-2">4h → 15m</div>
+              <div className="text-slate-300 text-sm md:text-base">Cut deployment time for a fintech platform</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold text-accent-400 mb-2">$2M+</div>
-              <div className="text-slate-300 text-sm md:text-base">Raised by clients</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold text-accent-400 mb-2">15+</div>
-              <div className="text-slate-300 text-sm md:text-base">Startups shipped</div>
+              <div className="text-4xl md:text-5xl font-bold text-accent-400 mb-2">Zero</div>
+              <div className="text-slate-300 text-sm md:text-base">Downtime during legacy infra to K8s migration</div>
             </div>
             <div>
               <div className="text-4xl md:text-5xl font-bold text-accent-400 mb-2">100%</div>
-              <div className="text-slate-300 text-sm md:text-base">Production uptime</div>
+              <div className="text-slate-300 text-sm md:text-base">Automated multi-environment release pipelines for enterprise SaaS</div>
             </div>
           </div>
         </div>
@@ -272,13 +270,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Approach Section */}
-      <section id="approach" className="py-24 bg-white">
+      {/* How We Work Section */}
+      <section id="how-we-work" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">How We Work</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Production-grade foundations first — then fast iteration
+              A simple, three-step process to get you from idea to automated reality.
             </p>
           </div>
 
@@ -287,90 +285,86 @@ export default function Home() {
               <div className="bg-primary-600 text-white w-14 h-14 rounded-2xl flex items-center justify-center mb-6 text-2xl font-bold shadow-lg">
                 1
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Discover & Define</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Assess</h3>
               <p className="text-slate-600 leading-relaxed mb-6">
                 We start with a deep-dive discovery session to understand your vision, market, and technical constraints. Then we define a clear MVP scope and technical roadmap.
               </p>
-              <ul className="space-y-2 text-sm">
-                <li className="flex items-start">
-                  <svg className="w-4 h-4 text-accent-600 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-slate-600">Product-market fit validation</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-4 h-4 text-accent-600 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-slate-600">Technical feasibility assessment</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-4 h-4 text-accent-600 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-slate-600">Prioritized feature roadmap</span>
-                </li>
-              </ul>
             </div>
 
             <div className="bg-slate-50 rounded-3xl p-10 border border-slate-200">
               <div className="bg-primary-600 text-white w-14 h-14 rounded-2xl flex items-center justify-center mb-6 text-2xl font-bold shadow-lg">
                 2
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Architect & Accelerate</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Architect</h3>
               <p className="text-slate-600 leading-relaxed mb-6">
                 Before writing code, we set up IaC, CI/CD, and GitOps workflows. This foundation enables rapid, safe iteration from day one.
               </p>
-              <ul className="space-y-2 text-sm">
-                <li className="flex items-start">
-                  <svg className="w-4 h-4 text-accent-600 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-slate-600">Automated deployments</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-4 h-4 text-accent-600 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-slate-600">Infrastructure as Code (Terraform)</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-4 h-4 text-accent-600 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-slate-600">Observability & monitoring</span>
-                </li>
-              </ul>
             </div>
 
             <div className="bg-slate-50 rounded-3xl p-10 border border-slate-200">
               <div className="bg-primary-600 text-white w-14 h-14 rounded-2xl flex items-center justify-center mb-6 text-2xl font-bold shadow-lg">
                 3
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Deliver & Handover</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Automate</h3>
               <p className="text-slate-600 leading-relaxed mb-6">
                 We launch your MVP with full observability, documentation, and knowledge transfer. You own the system and can iterate independently.
               </p>
-              <ul className="space-y-2 text-sm">
-                <li className="flex items-start">
-                  <svg className="w-4 h-4 text-accent-600 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-slate-600">Production deployment</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-4 h-4 text-accent-600 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-slate-600">Comprehensive documentation</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-4 h-4 text-accent-600 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-slate-600">Team training & support</span>
-                </li>
-              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+            <div className="lg:col-span-2">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&auto=format&fit=crop&q=80"
+                  alt="Technical leadership"
+                  className="w-full h-[600px] object-cover filter grayscale"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-600/20 to-transparent"></div>
+              </div>
+            </div>
+            <div className="lg:col-span-3">
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">About Codenest</h2>
+              <div className="space-y-5 text-slate-600 leading-relaxed text-lg">
+                <p>
+                  We've spent years building and scaling engineering systems in fast-paced startups — where every architectural decision directly impacts whether the product can handle growth or collapses under load.
+                </p>
+                <p>
+                  At Rungway, we were the sole backend and DevOps engineers responsible for transforming a system that could barely handle 5 concurrent users into a platform serving thousands. That experience taught us that <span className="font-semibold text-slate-900">structure enables speed.</span>
+                </p>
+                <p>
+                  We've led architectural migrations, implemented microservices with domain-driven design, established Infrastructure as Code and CI/CD pipelines from scratch, and scaled databases under production load. We've also worked directly with stakeholders to translate business requirements into technical execution in lean startup environments.
+                </p>
+                <p>
+                  What we learned: The fastest-moving teams aren't the ones who skip infrastructure — they're the ones who automate it. Infrastructure as Code, GitOps, and production-grade observability from day one are what separate startups that scale from those that collapse under their own momentum.
+                </p>
+                <p className="text-slate-900 font-semibold text-xl pt-4">
+                  Speed comes from structure. Let's build yours.
+                </p>
+              </div>
+
+              <div className="mt-10 p-8 bg-slate-50 rounded-2xl border border-slate-200">
+                <h3 className="font-semibold text-slate-900 mb-4 text-lg">Our Expertise: The Foundation for Scalable Growth</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div className="flex flex-col">
+                    <h4 className="font-semibold text-primary-600 mb-2">Architecture & Strategy</h4>
+                    <p className="text-sm text-slate-700 flex-grow">System design, cloud foundations, and scalability planning.</p>
+                  </div>
+                  <div className="flex flex-col">
+                    <h4 className="font-semibold text-primary-600 mb-2">Automation & Delivery</h4>
+                    <p className="text-sm text-slate-700 flex-grow">GitOps, IaC, CI/CD, platform observability.</p>
+                  </div>
+                  <div className="flex flex-col">
+                    <h4 className="font-semibold text-primary-600 mb-2">Engineering Excellence</h4>
+                    <p className="text-sm text-slate-700 flex-grow">Secure, Java-based microservices with modern cloud orchestration.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -399,91 +393,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
-            <div className="lg:col-span-2">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&auto=format&fit=crop&q=80"
-                  alt="Technical leadership"
-                  className="w-full h-[600px] object-cover filter grayscale"
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-600/20 to-transparent"></div>
-              </div>
-            </div>
-            <div className="lg:col-span-3">
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">About Codenest</h2>
-              <div className="space-y-5 text-slate-600 leading-relaxed text-lg">
-                <p>
-                  I've spent years building and scaling engineering systems in fast-paced startups — where every architectural decision directly impacts whether the product can handle growth or collapses under load.
-                </p>
-                <p>
-                  At Rungway, I was the sole backend and DevOps engineer responsible for transforming a system that could barely handle 5 concurrent users into a platform serving thousands. That experience taught me that <span className="font-semibold text-slate-900">structure enables speed.</span>
-                </p>
-                <p>
-                  I've led architectural migrations, implemented microservices with domain-driven design, established Infrastructure as Code and CI/CD pipelines from scratch, and scaled databases under production load. I've also worked directly with stakeholders to translate business requirements into technical execution in lean startup environments.
-                </p>
-                <p>
-                  What I learned: The fastest-moving teams aren't the ones who skip infrastructure — they're the ones who automate it. Infrastructure as Code, GitOps, and production-grade observability from day one are what separate startups that scale from those that collapse under their own momentum.
-                </p>
-                <p className="text-slate-900 font-semibold text-xl pt-4">
-                  Speed comes from structure. Let's build yours.
-                </p>
-              </div>
-
-              <div className="mt-10 p-8 bg-slate-50 rounded-2xl border border-slate-200">
-                <h3 className="font-semibold text-slate-900 mb-4 text-lg">Core Expertise</h3>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="flex items-start">
-                    <svg className="w-5 h-5 text-primary-600 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-sm text-slate-700">Cloud Architecture (AWS, GCP)</span>
-                  </div>
-                  <div className="flex items-start">
-                    <svg className="w-5 h-5 text-primary-600 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-sm text-slate-700">Kubernetes & Docker</span>
-                  </div>
-                  <div className="flex items-start">
-                    <svg className="w-5 h-5 text-primary-600 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-sm text-slate-700">Terraform & IaC</span>
-                  </div>
-                  <div className="flex items-start">
-                    <svg className="w-5 h-5 text-primary-600 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-sm text-slate-700">Python, Node.js, Go</span>
-                  </div>
-                  <div className="flex items-start">
-                    <svg className="w-5 h-5 text-primary-600 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-sm text-slate-700">React, Next.js</span>
-                  </div>
-                  <div className="flex items-start">
-                    <svg className="w-5 h-5 text-primary-600 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-sm text-slate-700">AI/ML Infrastructure</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
       <section id="contact" className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Let's Build Together</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Book a Free 30-Min Strategy Call</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Book a free 30-minute discovery call. No sales pitch — just an honest conversation about your technical needs.
             </p>
@@ -501,12 +415,12 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
             <div>
               <img
-                src="https://github.com/cod3nest/cod3nest.github.io/blob/gh-pages/img/companylogo.png?raw=true"
+                src="/img/companylogo.png"
                 alt="codenest logo"
-                className="h-10 w-auto mb-4 filter brightness-0 invert"
+                className="h-10 w-auto mb-4 company-logo"
               />
               <p className="text-slate-400 text-sm">
-                Technical leadership for startups — delivering speed and structure through IaC, GitOps, and production-grade engineering.
+                Codenest — Engineering Automation. Accelerating Startups.
               </p>
             </div>
             <div>

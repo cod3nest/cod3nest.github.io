@@ -23,6 +23,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" />
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `

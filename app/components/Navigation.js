@@ -12,9 +12,9 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
             <img
-              src="https://github.com/cod3nest/cod3nest.github.io/blob/gh-pages/img/companylogo.png?raw=true"
+              src="/img/companylogo.png"
               alt="codenest logo"
-              className="h-9 w-auto"
+              className="h-9 w-auto company-logo"
             />
           </div>
 
