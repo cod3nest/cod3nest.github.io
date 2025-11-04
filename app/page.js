@@ -446,7 +446,7 @@ export default function Home() {
                 className="h-10 w-auto mb-4 company-logo"
               />
               <p className="text-slate-400 text-sm">
-                Codenest — Engineering Automation. Accelerating Startups.
+                Build your product on an automation-first foundation that scales from MVP to enterprise.
               </p>
             </div>
             <div>
