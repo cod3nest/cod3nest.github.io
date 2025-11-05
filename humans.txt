@@ -1,0 +1,19 @@
+/* TEAM */
+Company: Codenest Ltd
+Site: https://codenest.uk
+LinkedIn: https://www.linkedin.com/company/codenest-ltd
+GitHub: https://github.com/cod3nest
+Location: United Kingdom
+
+/* THANKS */
+Built with: Next.js 15, TailwindCSS
+Hosted on: GitHub Pages
+Design assistance: Claude Code by Anthropic
+
+/* SITE */
+Last update: 2024/11/05
+Standards: HTML5, CSS3, ES2024
+Components: React, EmailJS
+SEO: Optimized with structured data, sitemap, and semantic HTML
+Performance: Static site generation for optimal speed
+Accessibility: WCAG 2.1 AA compliant
