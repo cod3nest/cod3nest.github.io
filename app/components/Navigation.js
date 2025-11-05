@@ -15,7 +15,7 @@ export default function Navigation() {
               <img
                 src="/img/companylogo.svg"
                 alt="codenest logo"
-                className="h-9 w-auto company-logo"
+                className="h-10 w-auto company-logo"
               />
             </a>
           </div>
