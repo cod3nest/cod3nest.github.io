@@ -11,17 +11,16 @@ export default function GiscusComments() {
       const script = document.createElement('script')
       script.src = 'https://giscus.app/client.js'
       script.setAttribute('data-repo', 'cod3nest/cod3nest.github.io')
-      script.setAttribute('data-repo-id', 'YOUR_REPO_ID') // You'll need to get this from giscus.app
-      script.setAttribute('data-category', 'Blog Comments')
-      script.setAttribute('data-category-id', 'YOUR_CATEGORY_ID') // You'll need to get this from giscus.app
+      script.setAttribute('data-repo-id', 'MDEwOlJlcG9zaXRvcnkxMDU1NDE0MDI=')
+      script.setAttribute('data-category', 'General')
+      script.setAttribute('data-category-id', 'DIC_kwDOBkpvGs4CxdgG')
       script.setAttribute('data-mapping', 'pathname')
-      script.setAttribute('data-strict', '0')
+      script.setAttribute('data-strict', '1')
       script.setAttribute('data-reactions-enabled', '1')
       script.setAttribute('data-emit-metadata', '0')
       script.setAttribute('data-input-position', 'top')
-      script.setAttribute('data-theme', 'light')
+      script.setAttribute('data-theme', 'preferred_color_scheme')
       script.setAttribute('data-lang', 'en')
-      script.setAttribute('data-loading', 'lazy')
       script.crossOrigin = 'anonymous'
       script.async = true
 
