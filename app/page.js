@@ -5,7 +5,7 @@ export default function Home() {
   const services = [
     {
       title: "Fractional CTO",
-      description: "Strategic technical leadership for early-stage startups. Architecture decisions, team scaling, and investor readiness — without the full-time cost.",
+      description: "Strategic technical leadership for UK startups in fintech, healthtech, and SaaS. Architecture decisions, team scaling, and investor readiness — without the full-time cost of a startup CTO in London.",
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=80",
       outcomes: ["Clear technical roadmap", "Investor-ready architecture", "Engineering team scaling"]
     },
@@ -23,7 +23,7 @@ export default function Home() {
     },
     {
       title: "IaC & GitOps Acceleration",
-      description: "Reproducible infrastructure and automated deployments. CI/CD pipelines that enable fast, safe iteration from day one.",
+      description: "GitOps consulting for UK startups: reproducible infrastructure and automated deployments. CI/CD pipelines that enable fast, safe iteration from day one.",
       image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format&fit=crop&q=80",
       outcomes: ["Automated deployments", "Infrastructure as code", "Zero-downtime releases"]
     },
@@ -44,15 +44,15 @@ export default function Home() {
   const caseStudies = [
     {
       title: "Rungway: Scaling a Social Mentoring Platform",
-      challenge: "A London-based startup with a social mentoring platform that could only handle 5 concurrent users before experiencing severe performance degradation. The system needed to scale to support thousands of active users.",
-      solution: "We delivered a complete architectural transformation, migrating from Neo4J to a hybrid MySQL/NoSQL architecture for the primary data store (retaining Neo4J for AI/ML). Our team implemented microservices with domain-driven design, established Infrastructure as Code with AWS, built CI/CD pipelines, introduced event-driven architecture with SQS, and containerized the entire stack.",
+      challenge: "A London-based HR-tech startup needed fractional CTO support to scale their social mentoring platform. The system could only handle 5 concurrent users before experiencing severe performance degradation — completely inadequate for their UK enterprise client base.",
+      solution: "We delivered a complete architectural transformation as their interim startup CTO, migrating from Neo4J to a hybrid MySQL/NoSQL architecture for the primary data store (retaining Neo4J for AI/ML). Our team implemented microservices with domain-driven design, established Infrastructure as Code with AWS, built CI/CD pipelines, introduced event-driven architecture with SQS, and containerized the entire stack.",
       results: ["Scaled from 5 to 1000+ concurrent users", "Zero-downtime database migration", "Modern DevOps foundations established", "Event-driven microservices architecture"],
       tags: ["Backend Architecture", "AWS", "DevOps", "Scalability", "Microservices"],
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80"
     },
     {
       title: "Opayo by Elavon: Payment Platform Transformation",
-      challenge: "Leading payment provider needed to modernize their infrastructure and integrate new payment channels (Apple Pay, Google Pay) while maintaining 100% uptime for critical transaction processing. The platform required cloud-native transformation and improved deployment velocity.",
+      challenge: "Leading UK fintech payment provider needed Kubernetes consulting to modernize their infrastructure and integrate new payment channels (Apple Pay, Google Pay) while maintaining 100% uptime for critical transaction processing across Europe.",
       solution: "We orchestrated a comprehensive AWS EKS migration with Kubernetes and Helm, implementing GitOps workflows and Infrastructure as Code using Terraform. Our team managed the transition from monolithic architecture to microservices, established Jenkins CI/CD pipelines migrated to Kubernetes, and scaled engineering culture across distributed teams.",
       results: ["Accelerated releases from every 2 weeks to multiple times per day", "Contributed to 10% revenue increase through faster feature delivery", "Reduced CI pipeline failures through automated testing", "Successfully integrated Apple Pay and Google Pay"],
       tags: ["Payment Systems", "AWS EKS", "Kubernetes", "Terraform", "GitOps", "Team Leadership"],
@@ -108,7 +108,7 @@ export default function Home() {
                 Build a product that scales from day one — with automation-first engineering and cloud-native delivery.
               </p>
               <p className="text-lg text-slate-700 mb-10">
-                Stop building on shaky ground. Codenest helps startups move from MVP to enterprise-ready using GitOps, Infrastructure-as-Code, and Kubernetes-powered platforms. From first commit to global rollout, we deliver the reliability, speed, and clarity your team needs to grow confidently.
+                Stop building on shaky ground. Based in the UK, Codenest provides fractional CTO services for London startups and beyond — helping fintech, healthtech, and SaaS companies move from MVP to enterprise-ready using GitOps, Infrastructure-as-Code, and Kubernetes-powered platforms. From first commit to global rollout, we deliver the reliability, speed, and clarity your team needs to grow confidently.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="#contact" className="bg-accent-500 text-primary-900 px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-accent-600 transition-all shadow-lg hover:shadow-xl text-center">
@@ -137,7 +137,7 @@ export default function Home() {
       <section className="py-24 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Trusted by teams building fast and scaling fearlessly.</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Trusted by UK startups building fast and scaling fearlessly.</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             <div className="space-y-2">
@@ -182,8 +182,130 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Who We Serve Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Who We Serve</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Fractional CTO services for UK startups across high-growth sectors
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-slate-50 to-white border-2 border-slate-200 rounded-3xl p-8 hover:border-primary-300 hover:shadow-xl transition-all">
+              <div className="w-16 h-16 bg-accent-100 rounded-2xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-accent-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Fintech Startups</h3>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                Fractional CTO for fintech startups in London and across the UK. From payment platforms to lending apps, we help you navigate complex compliance requirements while building scalable, secure infrastructure.
+              </p>
+              <ul className="space-y-2 text-sm text-slate-700">
+                <li className="flex items-start">
+                  <svg className="w-4 h-4 text-accent-600 mt-1 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  PCI-DSS compliant architecture
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-4 h-4 text-accent-600 mt-1 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Payment gateway integration
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-4 h-4 text-accent-600 mt-1 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  FCA regulatory guidance
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-gradient-to-br from-slate-50 to-white border-2 border-slate-200 rounded-3xl p-8 hover:border-primary-300 hover:shadow-xl transition-all">
+              <div className="w-16 h-16 bg-accent-100 rounded-2xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-accent-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Healthtech Startups</h3>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                Fractional CTO for healthcare startups navigating GDPR, NHS integrations, and medical device regulations. We build secure, compliant platforms that can scale with your patient base.
+              </p>
+              <ul className="space-y-2 text-sm text-slate-700">
+                <li className="flex items-start">
+                  <svg className="w-4 h-4 text-accent-600 mt-1 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  GDPR & data protection
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-4 h-4 text-accent-600 mt-1 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  NHS integration experience
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-4 h-4 text-accent-600 mt-1 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Clinical data security
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-gradient-to-br from-slate-50 to-white border-2 border-slate-200 rounded-3xl p-8 hover:border-primary-300 hover:shadow-xl transition-all">
+              <div className="w-16 h-16 bg-accent-100 rounded-2xl flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-accent-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">SaaS & B2B Platforms</h3>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                Startup CTO expertise for UK B2B SaaS companies. We help you build multi-tenant architectures, implement usage-based billing, and scale infrastructure as you grow from 10 to 10,000 customers.
+              </p>
+              <ul className="space-y-2 text-sm text-slate-700">
+                <li className="flex items-start">
+                  <svg className="w-4 h-4 text-accent-600 mt-1 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Multi-tenant architecture
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-4 h-4 text-accent-600 mt-1 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  API-first design
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-4 h-4 text-accent-600 mt-1 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Usage-based billing
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-slate-600 mb-6">
+              Serving startups across London, Manchester, Edinburgh, and throughout the UK and Europe
+            </p>
+            <a href="#contact" className="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold">
+              Discuss your sector-specific needs
+              <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
-      <section id="services" className="py-24 bg-white">
+      <section id="services" className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">What We Do</h2>
