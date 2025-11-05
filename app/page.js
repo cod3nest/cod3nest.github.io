@@ -341,55 +341,40 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 bg-white">
+      <section id="about" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
-            <div className="lg:col-span-2">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&auto=format&fit=crop&q=80"
-                  alt="Technical leadership"
-                  className="w-full h-[600px] object-cover filter grayscale"
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-600/20 to-transparent"></div>
-              </div>
-            </div>
-            <div className="lg:col-span-3">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">About Codenest</h2>
               <div className="space-y-5 text-slate-600 leading-relaxed text-lg">
                 <p>
-                  We've spent years building and scaling engineering systems in fast-paced startups — where every architectural decision directly impacts whether the product can handle growth or collapses under load.
+                  We've spent years engineering platforms in fast-moving startups — where every architectural choice can decide whether a product scales smoothly or collapses under pressure.
                 </p>
                 <p>
-                  At Rungway, we were the sole backend and DevOps engineers responsible for transforming a system that could barely handle 5 concurrent users into a platform serving thousands. That experience taught us that <span className="font-semibold text-slate-900">structure enables speed.</span>
+                  At Rungway, we were the core backend and DevOps team transforming a fragile system that could barely handle five concurrent users into a resilient platform serving thousands. That experience taught us one thing: <span className="font-semibold text-slate-900">structure enables speed.</span>
                 </p>
                 <p>
-                  We've led architectural migrations, implemented microservices with domain-driven design, established Infrastructure as Code and CI/CD pipelines from scratch, and scaled databases under production load. We've also worked directly with stakeholders to translate business requirements into technical execution in lean startup environments.
+                  Since then, we've led architectural migrations, designed microservice ecosystems with domain-driven design, built Infrastructure as Code and CI/CD pipelines from the ground up, and scaled databases under live production load. We've also worked shoulder-to-shoulder with founders, PMs, and engineers — turning business ideas into systems that deliver at scale.
                 </p>
                 <p>
-                  What we learned: The fastest-moving teams aren't the ones who skip infrastructure — they're the ones who automate it. Infrastructure as Code, GitOps, and production-grade observability from day one are what separate startups that scale from those that collapse under their own momentum.
+                  <span className="font-semibold text-slate-900">Our core belief:</span> The fastest teams aren't the ones who skip infrastructure — they're the ones who automate it.
+                </p>
+                <p>
+                  That's why we build every system with GitOps, IaC, and observability from day one. It's how we help startups move fast without breaking things.
                 </p>
                 <p className="text-slate-900 font-semibold text-xl pt-4">
                   Speed comes from structure. Let's build yours.
                 </p>
               </div>
-
-              <div className="mt-10 p-8 bg-slate-50 rounded-2xl border border-slate-200">
-                <h3 className="font-semibold text-slate-900 mb-4 text-lg">Our Expertise: The Foundation for Scalable Growth</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  <div className="flex flex-col">
-                    <h4 className="font-semibold text-primary-600 mb-2">Architecture & Strategy</h4>
-                    <p className="text-sm text-slate-700 flex-grow">System design, cloud foundations, and scalability planning.</p>
-                  </div>
-                  <div className="flex flex-col">
-                    <h4 className="font-semibold text-primary-600 mb-2">Automation & Delivery</h4>
-                    <p className="text-sm text-slate-700 flex-grow">GitOps, IaC, CI/CD, platform observability.</p>
-                  </div>
-                  <div className="flex flex-col">
-                    <h4 className="font-semibold text-primary-600 mb-2">Engineering Excellence</h4>
-                    <p className="text-sm text-slate-700 flex-grow">Secure, Java-based microservices with modern cloud orchestration.</p>
-                  </div>
-                </div>
+            </div>
+            <div className="relative">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format&fit=crop&q=80"
+                  alt="Infrastructure and automation"
+                  className="w-full h-[500px] object-cover filter grayscale"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-600/20 to-transparent"></div>
               </div>
             </div>
           </div>
