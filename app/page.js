@@ -111,10 +111,10 @@ export default function Home() {
                 Stop building on shaky ground. Codenest helps startups move from MVP to enterprise-ready using GitOps, Infrastructure-as-Code, and Kubernetes-powered platforms. From first commit to global rollout, we deliver the reliability, speed, and clarity your team needs to grow confidently.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="#contact" className="bg-gradient-to-r from-sky-600 to-cyan-500 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:from-sky-700 hover:to-cyan-600 transition-all shadow-lg hover:shadow-xl text-center">
+                <a href="#contact" className="bg-accent-500 text-primary-900 px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-accent-600 transition-all shadow-lg hover:shadow-xl text-center">
                   Book a Discovery Call
                 </a>
-                <a href="#case-studies" className="border-2 border-slate-300 text-slate-700 px-8 py-4 rounded-2xl text-lg font-semibold hover:border-sky-700 hover:text-sky-700 transition-all text-center">
+                <a href="#case-studies" className="border-2 border-primary-600 text-primary-700 px-8 py-4 rounded-2xl text-lg font-semibold hover:border-primary-700 hover:bg-primary-50 transition-all text-center">
                   View Case Studies
                 </a>
               </div>
@@ -441,7 +441,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
             <div>
               <img
-                src="/img/companylogo.png"
+                src="/img/companylogo-light.svg"
                 alt="codenest logo"
                 className="h-10 w-auto mb-4 company-logo"
               />
