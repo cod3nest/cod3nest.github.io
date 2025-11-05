@@ -483,8 +483,9 @@ export function generateStaticParams() {
   }))
 }
 
-export function generateMetadata({ params }) {
-  const post = blogPosts[params.slug]
+export async function generateMetadata({ params }) {
+  const { slug } = await params
+  const post = blogPosts[slug]
 
   return {
     title: `${post.title} – Codenest Blog`,
@@ -492,8 +493,9 @@ export function generateMetadata({ params }) {
   }
 }
 
-export default function BlogPost({ params }) {
-  const post = blogPosts[params.slug]
+export default async function BlogPost({ params }) {
+  const { slug } = await params
+  const post = blogPosts[slug]
 
   if (!post) {
     return <div>Post not found</div>
