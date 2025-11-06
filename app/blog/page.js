@@ -1,41 +1,14 @@
 import Link from 'next/link'
+import { getAllBlogPosts } from '../../lib/blog'
 
 export const metadata = {
   title: 'Blog – Codenest | Insights on Startup Engineering & Infrastructure',
   description: 'Technical insights on GitOps, Infrastructure as Code, startup engineering, and scaling from 0 to 1.',
 }
 
-const blogPosts = [
-  {
-    slug: 'from-chaos-to-gitops',
-    title: 'From Chaos to GitOps: How We Scaled Rungway from 5 to 5000 Users',
-    excerpt: 'The story of transforming a fragile monolith into a resilient microservices platform using GitOps and Infrastructure as Code.',
-    date: '2024-11-05',
-    author: 'Codenest Team',
-    readTime: '8 min read',
-    tags: ['GitOps', 'Scaling', 'Case Study']
-  },
-  {
-    slug: 'iac-for-startups',
-    title: 'Why Every Startup Should Start with Infrastructure as Code',
-    excerpt: 'Infrastructure as Code isn\'t just for enterprises. Here\'s why it\'s the secret weapon for fast-moving startups.',
-    date: '2024-10-28',
-    author: 'Codenest Team',
-    readTime: '6 min read',
-    tags: ['IaC', 'Startups', 'DevOps']
-  },
-  {
-    slug: 'kubernetes-overkill-or-essential',
-    title: 'Kubernetes for Startups: Overkill or Essential?',
-    excerpt: 'When does it make sense to adopt Kubernetes? A pragmatic guide for early-stage startups.',
-    date: '2024-10-15',
-    author: 'Codenest Team',
-    readTime: '7 min read',
-    tags: ['Kubernetes', 'Cloud Native', 'Startups']
-  }
-]
-
 export default function BlogPage() {
+  const blogPosts = getAllBlogPosts()
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       {/* Navigation spacing */}
@@ -81,7 +54,7 @@ export default function BlogPage() {
                     </h2>
 
                     <p className="text-slate-600 leading-relaxed mb-4">
-                      {post.excerpt}
+                      {post.content.substring(0, 150)}...
                     </p>
                   </div>
 
