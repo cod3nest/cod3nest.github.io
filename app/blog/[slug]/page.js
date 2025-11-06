@@ -16,10 +16,41 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { slug } = await params
   const post = getBlogPost(slug)
+  const description = post.content.substring(0, 160).replace(/[#*\n]/g, ' ').trim()
 
   return {
     title: `${post.title} – Codenest Blog`,
-    description: post.content.substring(0, 160),
+    description: description,
+    keywords: post.tags.join(', '),
+    authors: [{ name: post.author }],
+    openGraph: {
+      title: post.title,
+      description: description,
+      type: 'article',
+      publishedTime: post.date,
+      authors: [post.author],
+      tags: post.tags,
+      url: `https://codenest.uk/blog/${slug}`,
+      siteName: 'Codenest',
+      locale: 'en_GB',
+      images: [
+        {
+          url: '/img/companylogo.png',
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: description,
+      images: ['/img/companylogo.png'],
+    },
+    alternates: {
+      canonical: `https://codenest.uk/blog/${slug}`,
+    },
   }
 }
 

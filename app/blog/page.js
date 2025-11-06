@@ -4,6 +4,32 @@ import { getAllBlogPosts } from '../../lib/blog'
 export const metadata = {
   title: 'Blog – Codenest | Insights on Startup Engineering & Infrastructure',
   description: 'Technical insights on GitOps, Infrastructure as Code, startup engineering, and scaling from 0 to 1.',
+  keywords: ['startup engineering blog', 'GitOps', 'Infrastructure as Code', 'Kubernetes', 'DevOps', 'fractional CTO', 'startup scaling', 'cloud architecture'],
+  openGraph: {
+    title: 'Codenest Engineering Blog',
+    description: 'Practical lessons from scaling startups, building resilient infrastructure, and shipping products that matter.',
+    type: 'website',
+    url: 'https://codenest.uk/blog',
+    siteName: 'Codenest',
+    locale: 'en_GB',
+    images: [
+      {
+        url: '/img/companylogo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Codenest Blog - Startup Engineering Insights',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Codenest Engineering Blog',
+    description: 'Practical lessons from scaling startups, building resilient infrastructure, and shipping products that matter.',
+    images: ['/img/companylogo.png'],
+  },
+  alternates: {
+    canonical: 'https://codenest.uk/blog',
+  },
 }
 
 export default function BlogPage() {
