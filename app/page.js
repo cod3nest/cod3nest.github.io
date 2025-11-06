@@ -32,12 +32,6 @@ export default function Home() {
       description: "Comprehensive technical assessments for investors and acquirers. Architecture reviews, scalability audits, and risk analysis.",
       image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop&q=80",
       outcomes: ["Detailed audit reports", "Risk assessment", "Scalability roadmap"]
-    },
-    {
-      title: "Fractional CFO & FP&A",
-      description: "Financial strategy and planning for startups. Business modeling, fundraising preparation, and financial operations — giving you the strategic finance expertise you need to scale.",
-      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&auto=format&fit=crop&q=80",
-      outcomes: ["Financial models for fundraising", "Budget planning & forecasting", "Investor-ready metrics"]
     }
   ]
 
