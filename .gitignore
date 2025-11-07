@@ -38,3 +38,11 @@ next-env.d.ts
 
 # legacy
 *.iml
+
+# GitHub Pages build artifacts (now built by GitHub Actions)
+/_next/
+/blog/
+/*.html
+/*.txt
+!README.md
+.nojekyll
