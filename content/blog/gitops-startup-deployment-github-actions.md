@@ -34,12 +34,12 @@ GitOps is not a replacement for CI/CD; rather, it complements it. CI builds and 
 ### Tooling Landscape  
 
 | Category | Popular Tools | Key Strengths | Typical Pricing |
-|----------|---------------|---------------|-----------------|
-| **GitOps Platforms** | **Argo CD** – declarative, Git‑first CI/CD<br>**Flux** – lightweight, Git‑only approach | Declarative sync, rollbacks, health checks | Open source (free) |
-| **CI/CD** | **GitHub Actions** – native GitHub integration<br>**GitLab CI** – built‑in to GitLab | Seamless pipeline triggers on commit | Free for public repos; $4/seat for private |
-| **IaC** | **Terraform** – cloud‑agnostic<br>**Pulumi** – multi‑language SDKs<br>**CloudFormation** – AWS‑native | Reproducible infrastructure, state management | Free (open source) |
-| **Secrets Management** | **HashiCorp Vault** – secure vaulting<br>**Sealed Secrets** – Kubernetes‑native | Fine‑grained access control, audit logs | Free (open source) |
-| **Observability** | **Prometheus** + **Grafana** | Metrics collection, dashboards | Free (open source) |
+|-----------|---------------|---------------|-----------------|
+| **GitOps Platforms** | **Argo CD** – declarative, Git-first CI/CD; **Flux** – lightweight, Git-only | Declarative sync, rollbacks, health checks | Open source (free) |
+| **CI/CD** | **GitHub Actions** – native GitHub; **GitLab CI** – integrated | Seamless pipeline triggers on commit | Free (public); $4/seat (private) |
+| **IaC** | **Terraform**, **Pulumi**, **CloudFormation** | Reproducible infrastructure, state management | Free (open source) |
+| **Secrets Management** | **Vault**, **Sealed Secrets** | Fine-grained access control, audit logs | Free (open source) |
+| **Observability** | **Prometheus + Grafana** | Metrics collection, dashboards | Free (open source) |
 
 > **Tip**: Start with a minimal stack—Argo CD + GitHub Actions + Terraform. Add tooling as your team grows.
 
@@ -69,7 +69,7 @@ GitOps is not a replacement for CI/CD; rather, it complements it. CI builds and 
 6. **Iterate & Optimize**  
    * Review pipeline metrics, reduce build times, and refine resource requests.
 
-### Production‑Ready Code Example  
+### Code Example  
 
 ```yaml
 # .github/workflows/deploy.yaml
@@ -121,6 +121,8 @@ jobs:
           git config user.name "GitHub Actions"
           git commit -am "Update image to ${{ github.sha }}"
           git push
+```
+
 ```yaml
 # argocd-deployment.yaml
 apiVersion: argoproj.io/v1alpha1
@@ -143,10 +145,13 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
+
 > **Explanation**  
 > * The CI job builds and pushes a container image tagged with the commit SHA.  
 > * The deploy job updates the `deployment.yaml` in the `infra` repo with the new image tag, committing and pushing the change.  
 > * Argo CD automatically detects the change and applies it to the cluster, ensuring the running pods match the desired state.
+
+```
 
 ### Best Practices  
 
