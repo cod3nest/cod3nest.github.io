@@ -38,7 +38,7 @@
 </url>
 <url>
 <loc>https://codenest.uk/blog</loc>
-<lastmod>2025-11-07T16:54:58.249Z</lastmod>
+<lastmod>2025-11-07T17:32:43.078Z</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.9</priority>
 </url>
@@ -56,6 +56,12 @@
 </url>
 <url>
 <loc>https://codenest.uk/blog/kubernetes-startups-overkill-essential</loc>
+<lastmod>2025-11-07T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://codenest.uk/blog/terraform-aws-infrastructure-as-code</loc>
 <lastmod>2025-11-07T00:00:00.000Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
