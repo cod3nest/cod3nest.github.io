@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { getAllBlogPosts } from '../../lib/blog'
+import Navigation from '../components/Navigation'
 
 export const metadata = {
   title: 'Blog – Codenest | Insights on Startup Engineering & Infrastructure',
@@ -37,8 +38,7 @@ export default function BlogPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
-      {/* Navigation spacing */}
-      <div className="h-20"></div>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
@@ -118,6 +118,46 @@ export default function BlogPage() {
           </a>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="bg-slate-900 text-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            <div>
+              <img
+                src="/img/companylogo-light.svg"
+                alt="codenest logo"
+                className="h-10 w-auto mb-4 company-logo"
+              />
+              <p className="text-slate-400 text-sm">
+                Build a product that scales from day one — with automation-first engineering and cloud-native delivery.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Quick Links</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="/#case-studies" className="text-slate-400 hover:text-white transition-colors">Case Studies</a></li>
+                <li><a href="/#services" className="text-slate-400 hover:text-white transition-colors">Services</a></li>
+                <li><a href="/#approach" className="text-slate-400 hover:text-white transition-colors">Our Process</a></li>
+                <li><a href="/#about" className="text-slate-400 hover:text-white transition-colors">Our Story</a></li>
+                <li><a href="/blog" className="text-slate-400 hover:text-white transition-colors">Blog</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Connect</h4>
+              <ul className="space-y-2 text-sm">
+                <li><a href="/#contact" className="text-slate-400 hover:text-white transition-colors">Book a Discovery Call</a></li>
+                <li><a href="https://www.linkedin.com/company/codenest-ltd" className="text-slate-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="pt-8 border-t border-slate-800 text-center">
+            <p className="text-slate-500 text-sm">
+              © 2025 Codenest. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
