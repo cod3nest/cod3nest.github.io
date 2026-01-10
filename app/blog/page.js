@@ -126,7 +126,7 @@ export default function BlogPage() {
             <div>
               <img
                 src="/img/companylogo-light.svg"
-                alt="codenest logo"
+                alt="Codenest - Fractional CTO and Startup Engineering Services"
                 className="h-10 w-auto mb-4 company-logo"
               />
               <p className="text-slate-400 text-sm">
@@ -138,7 +138,7 @@ export default function BlogPage() {
               <ul className="space-y-2 text-sm">
                 <li><a href="/#case-studies" className="text-slate-400 hover:text-white transition-colors">Case Studies</a></li>
                 <li><a href="/#services" className="text-slate-400 hover:text-white transition-colors">Services</a></li>
-                <li><a href="/#approach" className="text-slate-400 hover:text-white transition-colors">Our Process</a></li>
+                <li><a href="/#how-we-work" className="text-slate-400 hover:text-white transition-colors">Our Process</a></li>
                 <li><a href="/#about" className="text-slate-400 hover:text-white transition-colors">Our Story</a></li>
                 <li><a href="/blog" className="text-slate-400 hover:text-white transition-colors">Blog</a></li>
               </ul>

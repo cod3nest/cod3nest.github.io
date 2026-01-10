@@ -5,33 +5,38 @@ export default function Home() {
   const services = [
     {
       title: "Fractional CTO",
-      description: "Strategic technical leadership for UK startups in fintech, healthtech, and SaaS. Architecture decisions, team scaling, and investor readiness — without the full-time cost of a startup CTO in London.",
+      benefit: "Get executive-level technical leadership at a fraction of the cost",
+      description: "Make confident architecture decisions, build the right team, and become investor-ready. Strategic guidance for fintech, healthtech, and SaaS startups across the UK.",
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=80",
-      outcomes: ["Clear technical roadmap", "Investor-ready architecture", "Engineering team scaling"]
+      outcomes: ["Save 60-80% vs full-time CTO", "Investor-ready in weeks", "Scale your team confidently"]
     },
     {
-      title: "0→1 Product Builds",
-      description: "MVP development using proven cloud-native templates. Ship in weeks, not months — with production-grade foundations built in.",
+      title: "0-to-1 Product Builds",
+      benefit: "Launch your MVP in weeks, not months",
+      description: "Go from idea to production-ready product with a system built to scale. No rebuilding later, no technical debt from day one.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80",
-      outcomes: ["8-12 week delivery", "Scalable architecture", "Clean handover docs"]
+      outcomes: ["8-12 week delivery", "Built to handle growth", "Full ownership handover"]
     },
     {
       title: "AI & Data Engineering",
-      description: "Turn experimental LLMs into production systems. MLOps pipelines, vector databases, and scalable data infrastructure.",
+      benefit: "Turn AI experiments into production revenue",
+      description: "Move beyond prototypes. We build production-grade LLM applications, ML pipelines, and data infrastructure that actually scale.",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=80",
-      outcomes: ["Production LLM apps", "Scalable ML pipelines", "Cost-optimized inference"]
+      outcomes: ["Production-ready AI", "Cost-optimized inference", "Scalable data pipelines"]
     },
     {
-      title: "IaC & GitOps Acceleration",
-      description: "GitOps consulting for UK startups: reproducible infrastructure and automated deployments. CI/CD pipelines that enable fast, safe iteration from day one.",
+      title: "DevOps & Platform Engineering",
+      benefit: "Deploy daily with zero downtime",
+      description: "Automated infrastructure, CI/CD pipelines, and GitOps workflows. Ship confidently and iterate fast from day one.",
       image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format&fit=crop&q=80",
       outcomes: ["Automated deployments", "Infrastructure as code", "Zero-downtime releases"]
     },
     {
       title: "Technical Due Diligence",
-      description: "Comprehensive technical assessments for investors and acquirers. Architecture reviews, scalability audits, and risk analysis.",
+      benefit: "Close your funding round with confidence",
+      description: "Comprehensive technical assessments that satisfy investors. We identify risks, validate scalability, and create actionable roadmaps.",
       image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop&q=80",
-      outcomes: ["Detailed audit reports", "Risk assessment", "Scalability roadmap"]
+      outcomes: ["Investor-ready reports", "Risk mitigation plan", "Scalability roadmap"]
     }
   ]
 
@@ -42,7 +47,8 @@ export default function Home() {
       solution: "We delivered a complete architectural transformation as their interim startup CTO, migrating from Neo4J to a hybrid MySQL/NoSQL architecture for the primary data store (retaining Neo4J for AI/ML). Our team implemented microservices with domain-driven design, established Infrastructure as Code with AWS, built CI/CD pipelines, introduced event-driven architecture with SQS, and containerized the entire stack.",
       results: ["Scaled from 5 to 1000+ concurrent users", "Zero-downtime database migration", "Modern DevOps foundations established", "Event-driven microservices architecture"],
       tags: ["Backend Architecture", "AWS", "DevOps", "Scalability", "Microservices"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80"
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80",
+      imageAlt: "Data analytics dashboard showing platform scalability metrics"
     },
     {
       title: "Opayo by Elavon: Payment Platform Transformation",
@@ -50,7 +56,8 @@ export default function Home() {
       solution: "We orchestrated a comprehensive AWS EKS migration with Kubernetes and Helm, implementing GitOps workflows and Infrastructure as Code using Terraform. Our team managed the transition from monolithic architecture to microservices, established Jenkins CI/CD pipelines migrated to Kubernetes, and scaled engineering culture across distributed teams.",
       results: ["Accelerated releases from every 2 weeks to multiple times per day", "Contributed to 10% revenue increase through faster feature delivery", "Reduced CI pipeline failures through automated testing", "Successfully integrated Apple Pay and Google Pay"],
       tags: ["Payment Systems", "AWS EKS", "Kubernetes", "Terraform", "GitOps", "Team Leadership"],
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&auto=format&fit=crop&q=80"
+      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&auto=format&fit=crop&q=80",
+      imageAlt: "Secure payment processing and mobile payment integration"
     },
     {
       title: "AstraZeneca: Drug Delivery Tracking System MVP",
@@ -58,7 +65,8 @@ export default function Home() {
       solution: "We built a production-grade web application with REST APIs and automated CI/CD pipelines. Our team collaborated closely with stakeholders and business analysts to define requirements and align delivery with business goals. We architected scalable deployments on Kubernetes using Docker and Jenkins (config-as-code), establishing robust testing practices with JUnit and Spock.",
       results: ["Accelerated delivery by 40% compared to manual processes", "Cut deployment errors by 30% through automated pipelines", "Improved stakeholder confidence through transparent roadmap planning", "Delivered production-ready MVP on Kubernetes infrastructure"],
       tags: ["Healthcare", "Team Leadership", "Kubernetes", "CI/CD", "REST APIs", "Stakeholder Management"],
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop&q=80"
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop&q=80",
+      imageAlt: "Healthcare technology and pharmaceutical tracking systems"
     }
   ]
 
@@ -95,21 +103,46 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold text-slate-900 leading-tight mb-6">
-                From 0 to 1. Faster.
+              {/* Business benefit tagline */}
+              <p className="text-accent-600 font-semibold text-lg mb-4 tracking-wide">
+                Ship faster. Scale smarter. Save CTO budget.
+              </p>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 leading-tight mb-6">
+                Technical Leadership Without the Full-Time Cost
               </h1>
-              <p className="text-2xl md:text-3xl text-slate-600 mb-4 leading-relaxed">
-                Build a product that scales from day one — with automation-first engineering and cloud-native delivery.
+              <p className="text-xl md:text-2xl text-slate-600 mb-4 leading-relaxed">
+                We help startups go from idea to scalable product in weeks, not months.
               </p>
-              <p className="text-lg text-slate-700 mb-10">
-                Stop building on shaky ground. Based in the UK, Codenest provides fractional CTO services for London startups and beyond — helping fintech, healthtech, and SaaS companies move from MVP to enterprise-ready using GitOps, Infrastructure-as-Code, and Kubernetes-powered platforms. From first commit to global rollout, we deliver the reliability, speed, and clarity your team needs to grow confidently.
+              <p className="text-lg text-slate-700 mb-8">
+                Fractional CTO services for UK startups. Get enterprise-grade architecture, automated infrastructure, and hands-on engineering leadership, without hiring a full-time technical executive.
               </p>
+              {/* Benefits strip */}
+              <div className="flex flex-wrap gap-4 mb-10">
+                <div className="flex items-center text-sm text-slate-600">
+                  <svg className="w-5 h-5 text-accent-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Reduce time to market
+                </div>
+                <div className="flex items-center text-sm text-slate-600">
+                  <svg className="w-5 h-5 text-accent-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Scale without rebuilding
+                </div>
+                <div className="flex items-center text-sm text-slate-600">
+                  <svg className="w-5 h-5 text-accent-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Investor-ready systems
+                </div>
+              </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="#contact" className="bg-accent-500 text-primary-900 px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-accent-600 transition-all shadow-lg hover:shadow-xl text-center">
-                  Book a Discovery Call
+                  Book a Free Discovery Call
                 </a>
                 <a href="#case-studies" className="border-2 border-primary-600 text-primary-700 px-8 py-4 rounded-2xl text-lg font-semibold hover:border-primary-700 hover:bg-primary-50 transition-all text-center">
-                  View Case Studies
+                  See Our Results
                 </a>
               </div>
             </div>
@@ -117,7 +150,7 @@ export default function Home() {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=80"
-                  alt="Startup team collaboration"
+                  alt="Technical team collaborating on startup product development"
                   className="w-full h-[500px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary-600/20 to-transparent"></div>
@@ -127,28 +160,107 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Social Proof - Client Logos */}
+      <section className="py-12 bg-slate-100 border-y border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-sm text-slate-500 mb-8 uppercase tracking-wider font-medium">Trusted by engineering teams at</p>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+            <div className="text-2xl font-bold text-slate-600">Rungway</div>
+            <div className="text-2xl font-bold text-slate-600">Opayo</div>
+            <div className="text-2xl font-bold text-slate-600">Elavon</div>
+            <div className="text-2xl font-bold text-slate-600">AstraZeneca</div>
+          </div>
+        </div>
+      </section>
+
       {/* Stats Section */}
       <section className="py-24 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Trusted by UK startups building fast and scaling fearlessly.</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Real Results for Real Startups</h2>
+            <p className="text-slate-400 max-w-2xl mx-auto">Measurable impact from our engineering partnerships</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             <div className="space-y-2">
               <div className="text-4xl md:text-5xl font-bold text-accent-400">2wk → Daily</div>
-              <div className="text-slate-300 text-sm md:text-base">Release frequency for payment platform</div>
+              <div className="text-slate-300 text-sm md:text-base">Release frequency improvement</div>
             </div>
             <div className="space-y-2">
               <div className="text-4xl md:text-5xl font-bold text-accent-400">4h → 15m</div>
-              <div className="text-slate-300 text-sm md:text-base">Cut deployment time for fintech</div>
+              <div className="text-slate-300 text-sm md:text-base">Deployment time reduction</div>
             </div>
             <div className="space-y-2">
               <div className="text-4xl md:text-5xl font-bold text-accent-400">Zero</div>
-              <div className="text-slate-300 text-sm md:text-base">Downtime during K8s migration</div>
+              <div className="text-slate-300 text-sm md:text-base">Downtime during migrations</div>
             </div>
             <div className="space-y-2">
-              <div className="text-4xl md:text-5xl font-bold text-accent-400">100%</div>
-              <div className="text-slate-300 text-sm md:text-base">Automated release pipelines</div>
+              <div className="text-4xl md:text-5xl font-bold text-accent-400">200x</div>
+              <div className="text-slate-300 text-sm md:text-base">User capacity increase</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">What Founders Say</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-slate-50 rounded-2xl p-8 border border-slate-200">
+              <div className="flex items-center mb-4">
+                <div className="flex text-accent-500">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+              </div>
+              <p className="text-slate-600 mb-6 italic">
+                "They transformed our platform from handling 5 users to 1000+ concurrent users. The migration was seamless with zero downtime. Exactly the technical leadership we needed."
+              </p>
+              <div>
+                <p className="font-semibold text-slate-900">Engineering Lead</p>
+                <p className="text-sm text-slate-500">HR-Tech Startup, London</p>
+              </div>
+            </div>
+            <div className="bg-slate-50 rounded-2xl p-8 border border-slate-200">
+              <div className="flex items-center mb-4">
+                <div className="flex text-accent-500">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+              </div>
+              <p className="text-slate-600 mb-6 italic">
+                "Release cycles went from every two weeks to multiple times per day. The GitOps workflows they implemented gave us the confidence to ship fast without breaking things."
+              </p>
+              <div>
+                <p className="font-semibold text-slate-900">VP of Engineering</p>
+                <p className="text-sm text-slate-500">Payment Platform, UK</p>
+              </div>
+            </div>
+            <div className="bg-slate-50 rounded-2xl p-8 border border-slate-200">
+              <div className="flex items-center mb-4">
+                <div className="flex text-accent-500">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+              </div>
+              <p className="text-slate-600 mb-6 italic">
+                "As a non-technical founder, I needed someone who could translate business requirements into technical reality. They delivered our MVP in 10 weeks with a system that just works."
+              </p>
+              <div>
+                <p className="font-semibold text-slate-900">Founder &amp; CEO</p>
+                <p className="text-sm text-slate-500">SaaS Startup, Manchester</p>
+              </div>
             </div>
           </div>
         </div>
@@ -302,9 +414,9 @@ export default function Home() {
       <section id="services" className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">What We Do</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">How We Help</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Technical and financial leadership — from strategy to execution
+              Results-focused technical leadership from strategy to execution
             </p>
           </div>
 
@@ -314,7 +426,7 @@ export default function Home() {
                 <div className="relative h-64 overflow-hidden">
                   <img
                     src={service.image}
-                    alt={service.title}
+                    alt={`${service.title} - ${service.benefit}`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter grayscale group-hover:grayscale-0"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/40 to-transparent"></div>
@@ -323,6 +435,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="p-8">
+                  <p className="text-accent-600 font-semibold mb-3">{service.benefit}</p>
                   <p className="text-slate-600 leading-relaxed mb-6">{service.description}</p>
                   <div className="space-y-2">
                     {service.outcomes.map((outcome, i) => (
@@ -358,7 +471,7 @@ export default function Home() {
                   <div className={`relative h-80 lg:h-auto ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
                     <img
                       src={study.image}
-                      alt={study.title}
+                      alt={study.imageAlt || study.title}
                       className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-500"
                     />
                   </div>
@@ -487,12 +600,40 @@ export default function Home() {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format&fit=crop&q=80"
-                  alt="Infrastructure and automation"
+                  alt="Cloud infrastructure and DevOps automation representing modern startup engineering"
                   className="w-full h-[500px] object-cover filter grayscale"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-600/20 to-transparent"></div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Secondary CTA - Lead Magnet */}
+      <section className="py-20 bg-gradient-to-r from-primary-600 to-primary-700">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Not Ready to Talk Yet?
+          </h2>
+          <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+            Get our free Startup Tech Readiness Checklist - 15 questions to assess if your technical foundation is ready to scale.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://www.linkedin.com/company/codenest-ltd"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white text-primary-700 px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-primary-50 transition-all shadow-lg text-center"
+            >
+              Follow Us on LinkedIn
+            </a>
+            <a
+              href="/blog"
+              className="border-2 border-white text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-white/10 transition-all text-center"
+            >
+              Read Our Engineering Blog
+            </a>
           </div>
         </div>
       </section>
@@ -543,7 +684,7 @@ export default function Home() {
             <div>
               <img
                 src="/img/companylogo-light.svg"
-                alt="codenest logo"
+                alt="Codenest - Fractional CTO and Startup Engineering Services"
                 className="h-10 w-auto mb-4 company-logo"
               />
               <p className="text-slate-400 text-sm">
@@ -555,7 +696,7 @@ export default function Home() {
               <ul className="space-y-2 text-sm">
                 <li><a href="#case-studies" className="text-slate-400 hover:text-white transition-colors">Case Studies</a></li>
                 <li><a href="#services" className="text-slate-400 hover:text-white transition-colors">Services</a></li>
-                <li><a href="#approach" className="text-slate-400 hover:text-white transition-colors">Our Process</a></li>
+                <li><a href="#how-we-work" className="text-slate-400 hover:text-white transition-colors">Our Process</a></li>
                 <li><a href="#about" className="text-slate-400 hover:text-white transition-colors">Our Story</a></li>
               </ul>
             </div>

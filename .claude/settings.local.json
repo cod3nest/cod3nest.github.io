@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "WebFetch(domain:turnstudio.work)",
+      "Bash(npm run predeploy:*)",
+      "Bash(git rm:*)",
+      "Bash(cat:*)",
+      "Bash(gh repo view:*)",
+      "Bash(gh api:*)",
+      "Bash(git checkout:*)",
+      "Bash(find:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "WebFetch(domain:codenest.uk)",
+      "Bash(test:*)",
+      "Bash(lsof:*)",
+      "Bash(curl:*)",
+      "Bash(kill:*)",
+      "Bash(npm run dev:*)",
+      "Bash(git log:*)",
+      "Bash(node convert-logo.js:*)",
+      "Bash(node convert-favicon.js:*)",
+      "Bash(identify:*)",
+      "Bash(sips:*)",
+      "Bash(git cherry-pick:*)",
+      "Bash(awk:*)",
+      "Bash(mkdir:*)",
+      "Bash(mv:*)",
+      "Bash(git pull:*)",
+      "Bash(node scripts/generate-icons.js:*)",
+      "Bash(ls:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
