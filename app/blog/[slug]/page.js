@@ -63,8 +63,74 @@ export default async function BlogPost({ params }) {
     return <div>Post not found</div>
   }
 
+  // Structured data for breadcrumbs
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://codenest.uk'
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Blog',
+        item: 'https://codenest.uk/blog'
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: post.title,
+        item: `https://codenest.uk/blog/${slug}`
+      }
+    ]
+  }
+
+  // Structured data for the article
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: post.title,
+    description: post.content.substring(0, 160).replace(/[#*\n]/g, ' ').trim(),
+    author: {
+      '@type': 'Person',
+      name: post.author,
+      url: 'https://codenest.uk/#about'
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Codenest',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://codenest.uk/img/companylogo.png'
+      }
+    },
+    datePublished: post.date,
+    dateModified: post.date,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://codenest.uk/blog/${slug}`
+    },
+    keywords: post.tags.join(', '),
+    articleSection: 'Technology',
+    inLanguage: 'en-GB'
+  }
+
   return (
     <div className="min-h-screen bg-white">
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+
       <Navigation />
 
       {/* Article Header */}
@@ -159,7 +225,7 @@ export default async function BlogPost({ params }) {
             <div>
               <img
                 src="/img/companylogo-light.svg"
-                alt="codenest logo"
+                alt="Codenest - Fractional CTO and Startup Engineering Services"
                 className="h-10 w-auto mb-4 company-logo"
               />
               <p className="text-slate-400 text-sm">
@@ -171,7 +237,7 @@ export default async function BlogPost({ params }) {
               <ul className="space-y-2 text-sm">
                 <li><a href="/#case-studies" className="text-slate-400 hover:text-white transition-colors">Case Studies</a></li>
                 <li><a href="/#services" className="text-slate-400 hover:text-white transition-colors">Services</a></li>
-                <li><a href="/#approach" className="text-slate-400 hover:text-white transition-colors">Our Process</a></li>
+                <li><a href="/#how-we-work" className="text-slate-400 hover:text-white transition-colors">Our Process</a></li>
                 <li><a href="/#about" className="text-slate-400 hover:text-white transition-colors">Our Story</a></li>
                 <li><a href="/blog" className="text-slate-400 hover:text-white transition-colors">Blog</a></li>
               </ul>

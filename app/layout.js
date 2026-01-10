@@ -58,6 +58,7 @@ export default function RootLayout({ children }) {
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
+    '@id': 'https://codenest.uk/#organization',
     name: 'Codenest',
     alternateName: 'Codenest Ltd',
     url: 'https://codenest.uk',
@@ -67,11 +68,14 @@ export default function RootLayout({ children }) {
     priceRange: '££-£££',
     address: {
       '@type': 'PostalAddress',
+      addressLocality: 'London',
+      addressRegion: 'Greater London',
       addressCountry: 'GB'
     },
     geo: {
       '@type': 'GeoCoordinates',
-      addressCountry: 'United Kingdom'
+      latitude: 51.5074,
+      longitude: -0.1278
     },
     areaServed: [
       {
@@ -90,7 +94,8 @@ export default function RootLayout({ children }) {
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'Customer Service',
-      availableLanguage: ['English']
+      availableLanguage: ['English'],
+      email: 'hello@codenest.uk'
     },
     knowsAbout: [
       'GitOps',
@@ -103,7 +108,29 @@ export default function RootLayout({ children }) {
       'Fractional CTO Services',
       'Startup Engineering',
       'MVP Development'
-    ]
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Technical Leadership Services',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Fractional CTO Services',
+            description: 'Part-time technical leadership for startups'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'MVP Development',
+            description: '8-12 week production-ready MVP builds'
+          }
+        }
+      ]
+    }
   }
 
   const servicesSchema = {
@@ -223,9 +250,7 @@ export default function RootLayout({ children }) {
         <meta name="theme-color" content="#2C3E50" />
         <meta name="apple-mobile-web-app-status-bar-style" content="#2C3E50" />
 
-        {/* Performance & Security */}
-        <link rel="dns-prefetch" href="https://images.unsplash.com" />
-        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
+        {/* Performance optimizations removed - images now self-hosted */}
 
         {/* Structured Data - Organization */}
         <script

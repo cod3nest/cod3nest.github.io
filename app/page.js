@@ -7,35 +7,35 @@ export default function Home() {
       title: "Fractional CTO",
       benefit: "Get executive-level technical leadership at a fraction of the cost",
       description: "Make confident architecture decisions, build the right team, and become investor-ready. Strategic guidance for fintech, healthtech, and SaaS startups across the UK.",
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=80",
+      image: "/img/photos/service-cto.jpg",
       outcomes: ["Save 60-80% vs full-time CTO", "Investor-ready in weeks", "Scale your team confidently"]
     },
     {
       title: "0-to-1 Product Builds",
       benefit: "Launch your MVP in weeks, not months",
       description: "Go from idea to production-ready product with a system built to scale. No rebuilding later, no technical debt from day one.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80",
+      image: "/img/photos/service-product.jpg",
       outcomes: ["8-12 week delivery", "Built to handle growth", "Full ownership handover"]
     },
     {
       title: "AI & Data Engineering",
       benefit: "Turn AI experiments into production revenue",
       description: "Move beyond prototypes. We build production-grade LLM applications, ML pipelines, and data infrastructure that actually scale.",
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=80",
+      image: "/img/photos/service-ai.jpg",
       outcomes: ["Production-ready AI", "Cost-optimized inference", "Scalable data pipelines"]
     },
     {
       title: "DevOps & Platform Engineering",
       benefit: "Deploy daily with zero downtime",
       description: "Automated infrastructure, CI/CD pipelines, and GitOps workflows. Ship confidently and iterate fast from day one.",
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format&fit=crop&q=80",
+      image: "/img/photos/infrastructure.jpg",
       outcomes: ["Automated deployments", "Infrastructure as code", "Zero-downtime releases"]
     },
     {
       title: "Technical Due Diligence",
       benefit: "Close your funding round with confidence",
       description: "Comprehensive technical assessments that satisfy investors. We identify risks, validate scalability, and create actionable roadmaps.",
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&auto=format&fit=crop&q=80",
+      image: "/img/photos/service-diligence.jpg",
       outcomes: ["Investor-ready reports", "Risk mitigation plan", "Scalability roadmap"]
     }
   ]
@@ -47,7 +47,7 @@ export default function Home() {
       solution: "We delivered a complete architectural transformation as their interim startup CTO, migrating from Neo4J to a hybrid MySQL/NoSQL architecture for the primary data store (retaining Neo4J for AI/ML). Our team implemented microservices with domain-driven design, established Infrastructure as Code with AWS, built CI/CD pipelines, introduced event-driven architecture with SQS, and containerized the entire stack.",
       results: ["Scaled from 5 to 1000+ concurrent users", "Zero-downtime database migration", "Modern DevOps foundations established", "Event-driven microservices architecture"],
       tags: ["Backend Architecture", "AWS", "DevOps", "Scalability", "Microservices"],
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80",
+      image: "/img/photos/case-rungway.jpg",
       imageAlt: "Data analytics dashboard showing platform scalability metrics"
     },
     {
@@ -56,7 +56,7 @@ export default function Home() {
       solution: "We orchestrated a comprehensive AWS EKS migration with Kubernetes and Helm, implementing GitOps workflows and Infrastructure as Code using Terraform. Our team managed the transition from monolithic architecture to microservices, established Jenkins CI/CD pipelines migrated to Kubernetes, and scaled engineering culture across distributed teams.",
       results: ["Accelerated releases from every 2 weeks to multiple times per day", "Contributed to 10% revenue increase through faster feature delivery", "Reduced CI pipeline failures through automated testing", "Successfully integrated Apple Pay and Google Pay"],
       tags: ["Payment Systems", "AWS EKS", "Kubernetes", "Terraform", "GitOps", "Team Leadership"],
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&auto=format&fit=crop&q=80",
+      image: "/img/photos/case-opayo.jpg",
       imageAlt: "Secure payment processing and mobile payment integration"
     },
     {
@@ -65,7 +65,7 @@ export default function Home() {
       solution: "We built a production-grade web application with REST APIs and automated CI/CD pipelines. Our team collaborated closely with stakeholders and business analysts to define requirements and align delivery with business goals. We architected scalable deployments on Kubernetes using Docker and Jenkins (config-as-code), establishing robust testing practices with JUnit and Spock.",
       results: ["Accelerated delivery by 40% compared to manual processes", "Cut deployment errors by 30% through automated pipelines", "Improved stakeholder confidence through transparent roadmap planning", "Delivered production-ready MVP on Kubernetes infrastructure"],
       tags: ["Healthcare", "Team Leadership", "Kubernetes", "CI/CD", "REST APIs", "Stakeholder Management"],
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&auto=format&fit=crop&q=80",
+      image: "/img/photos/case-astrazeneca.jpg",
       imageAlt: "Healthcare technology and pharmaceutical tracking systems"
     }
   ]
@@ -149,9 +149,12 @@ export default function Home() {
             <div className="relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=80"
+                  src="/img/photos/hero-team.jpg"
                   alt="Technical team collaborating on startup product development"
                   className="w-full h-[500px] object-cover"
+                  width={800}
+                  height={500}
+                  fetchPriority="high"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary-600/20 to-transparent"></div>
               </div>
@@ -428,6 +431,9 @@ export default function Home() {
                     src={service.image}
                     alt={`${service.title} - ${service.benefit}`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter grayscale group-hover:grayscale-0"
+                    loading="lazy"
+                    width={400}
+                    height={256}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/40 to-transparent"></div>
                   <div className="absolute bottom-6 left-6 right-6">
@@ -473,6 +479,9 @@ export default function Home() {
                       src={study.image}
                       alt={study.imageAlt || study.title}
                       className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-500"
+                      loading="lazy"
+                      width={600}
+                      height={400}
                     />
                   </div>
                   <div className={`p-10 lg:p-12 ${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}>
@@ -599,9 +608,12 @@ export default function Home() {
             <div className="relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format&fit=crop&q=80"
+                  src="/img/photos/infrastructure.jpg"
                   alt="Cloud infrastructure and DevOps automation representing modern startup engineering"
                   className="w-full h-[500px] object-cover filter grayscale"
+                  loading="lazy"
+                  width={800}
+                  height={500}
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-600/20 to-transparent"></div>
               </div>

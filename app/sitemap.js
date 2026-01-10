@@ -6,42 +6,12 @@ export const dynamic = 'force-static'
 export default function sitemap() {
   const blogPosts = getAllBlogPosts()
 
-  // Static pages
+  // Static pages - only real URLs (no hash fragments, Google ignores them)
   const staticPages = [
     {
       url: 'https://codenest.uk',
-      lastModified: new Date('2024-11-06'),
+      lastModified: new Date('2025-01-10'),
       changeFrequency: 'weekly',
-      priority: 1.0,
-    },
-    {
-      url: 'https://codenest.uk/#case-studies',
-      lastModified: new Date('2024-11-05'),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: 'https://codenest.uk/#services',
-      lastModified: new Date('2024-11-05'),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: 'https://codenest.uk/#approach',
-      lastModified: new Date('2024-11-05'),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://codenest.uk/#about',
-      lastModified: new Date('2024-11-05'),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://codenest.uk/#contact',
-      lastModified: new Date('2024-11-05'),
-      changeFrequency: 'monthly',
       priority: 1.0,
     },
     {
