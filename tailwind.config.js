@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-inter)', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        serif: ['var(--font-playfair)', 'Georgia', 'Times New Roman', 'serif'],
+      },
       colors: {
         primary: {
           50: '#f8f9fa',
@@ -22,16 +26,16 @@ module.exports = {
           950: '#0d1419',
         },
         accent: {
-          50: '#fffbeb',
-          100: '#fff4cc',
-          200: '#ffe999',
-          300: '#ffdd66',
-          400: '#ffd633',
-          500: '#FFC300',  // Electric Yellow - energy and precision
-          600: '#e6b000',
-          700: '#cc9d00',
-          800: '#b38a00',
-          900: '#996600',
+          50: '#faf8f3',
+          100: '#f5f0e6',
+          200: '#ebe0c9',
+          300: '#dccba3',
+          400: '#c9a227',
+          500: '#D4AF37',  // Muted Gold - premium and refined
+          600: '#b8962f',
+          700: '#9a7d27',
+          800: '#7c641f',
+          900: '#5e4b17',
         },
       },
       borderRadius: {

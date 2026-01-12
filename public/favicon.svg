@@ -1,9 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="favGoldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#E5C158"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+  </defs>
+
   <rect width="64" height="64" rx="12" fill="#2C3E50"/>
-  <g fill="none" fill-rule="evenodd" transform="translate(13, 10)">
-    <!-- Braces -->
-    <path fill="#FFC300" d="M32 15c0-3.866-3.134-7-7-7h-2v4h2c1.657 0 3 1.343 3 3v6c0 1.657 1.343 3 3 3v2c-1.657 0-3 1.343-3 3v6c0 1.657-1.343 3-3 3h-2v4h2c3.866 0 7-3.134 7-7v-6c0-1.657 1.343-3 3-3v-2c-1.657 0-3-1.343-3-3v-6zM16 8h-2c-3.866 0-7 3.134-7 7v6c0 1.657-1.343 3-3 3v2c1.657 0 3 1.343 3 3v6c0 3.866 3.134 7 7 7h2v-4h-2c-1.657 0-3-1.343-3-3v-6c0-1.657-1.343-3-3-3v-2c1.657 0 3-1.343 3-3v-6c0-1.657 1.343-3 3-3h2V8z"/>
-    <!-- Center dot -->
-    <circle cx="19" cy="30" r="3.5" fill="#FFC300"/>
+
+  <g fill="none" fill-rule="evenodd">
+    <!-- Premium CN Monogram -->
+    <g transform="translate(10, 12)">
+      <path d="M20 4 C8 4, 0 14, 0 22 C0 30, 8 40, 20 40"
+            stroke="#FFFFFF"
+            stroke-width="5"
+            stroke-linecap="round"
+            fill="none"/>
+
+      <path d="M24 40 L24 4 L42 40 L42 0"
+            stroke="#FFFFFF"
+            stroke-width="5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            fill="none"/>
+
+      <rect x="39" y="0" width="5" height="14" rx="2.5" fill="url(#favGoldGradient)"/>
+    </g>
   </g>
 </svg>

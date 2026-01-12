@@ -1,42 +1,75 @@
+import Image from 'next/image'
 import Navigation from './components/Navigation'
 import ContactForm from './components/ContactForm'
+import Footer from './components/Footer'
+import ServiceCard from './components/ServiceCard'
 
 export default function Home() {
   const services = [
+    // Technical Services
     {
       title: "Fractional CTO",
-      benefit: "Get executive-level technical leadership at a fraction of the cost",
+      benefit: "Executive-level technical leadership at a fraction of the cost",
       description: "Make confident architecture decisions, build the right team, and become investor-ready. Strategic guidance for fintech, healthtech, and SaaS startups across the UK.",
       image: "/img/photos/service-cto.jpg",
-      outcomes: ["Save 60-80% vs full-time CTO", "Investor-ready in weeks", "Scale your team confidently"]
+      outcomes: ["Save 60-80% vs full-time CTO", "Investor-ready in weeks", "Scale your team confidently"],
+      track: "technical"
+    },
+    {
+      title: "Financial & Business Strategy",
+      benefit: "FP&A and strategic finance leadership",
+      description: "Financial planning & analysis, business strategy, and investor-ready reporting. The financial discipline of a high-growth company — without the overhead.",
+      image: "/img/photos/service-diligence.jpg",
+      outcomes: ["Financial modeling & forecasting", "Business strategy development", "Investor-ready reporting"],
+      track: "business"
     },
     {
       title: "0-to-1 Product Builds",
       benefit: "Launch your MVP in weeks, not months",
       description: "Go from idea to production-ready product with a system built to scale. No rebuilding later, no technical debt from day one.",
       image: "/img/photos/service-product.jpg",
-      outcomes: ["8-12 week delivery", "Built to handle growth", "Full ownership handover"]
+      outcomes: ["8-12 week delivery", "Built to handle growth", "Full ownership handover"],
+      track: "technical"
+    },
+    {
+      title: "Financial Modeling",
+      benefit: "Know your numbers before investors ask",
+      description: "3-statement models, unit economics, and scenario planning. Financial models that stand up to due diligence scrutiny.",
+      image: "/img/photos/infrastructure.jpg",
+      outcomes: ["3-statement models", "Unit economics analysis", "Scenario planning"],
+      track: "business"
     },
     {
       title: "AI & Data Engineering",
       benefit: "Turn AI experiments into production revenue",
       description: "Move beyond prototypes. We build production-grade LLM applications, ML pipelines, and data infrastructure that actually scale.",
       image: "/img/photos/service-ai.jpg",
-      outcomes: ["Production-ready AI", "Cost-optimized inference", "Scalable data pipelines"]
+      outcomes: ["Production-ready AI", "Cost-optimized inference", "Scalable data pipelines"],
+      track: "technical"
+    },
+    {
+      title: "Fundraising Support",
+      benefit: "Close your round with confidence",
+      description: "Pitch deck financial sections, data room preparation, and investor Q&A coaching. We've helped startups raise from pre-seed to Series A.",
+      image: "/img/photos/hero-team.jpg",
+      outcomes: ["Data room ready", "Financial due diligence prep", "Valuation support"],
+      track: "business"
     },
     {
       title: "DevOps & Platform Engineering",
       benefit: "Deploy daily with zero downtime",
       description: "Automated infrastructure, CI/CD pipelines, and GitOps workflows. Ship confidently and iterate fast from day one.",
       image: "/img/photos/infrastructure.jpg",
-      outcomes: ["Automated deployments", "Infrastructure as code", "Zero-downtime releases"]
+      outcomes: ["Automated deployments", "Infrastructure as code", "Zero-downtime releases"],
+      track: "technical"
     },
     {
-      title: "Technical Due Diligence",
-      benefit: "Close your funding round with confidence",
-      description: "Comprehensive technical assessments that satisfy investors. We identify risks, validate scalability, and create actionable roadmaps.",
+      title: "Due Diligence",
+      benefit: "Satisfy investors with comprehensive assessments",
+      description: "Technical and financial due diligence that gives investors confidence. We identify risks, validate scalability, and create actionable roadmaps.",
       image: "/img/photos/service-diligence.jpg",
-      outcomes: ["Investor-ready reports", "Risk mitigation plan", "Scalability roadmap"]
+      outcomes: ["Investor-ready reports", "Risk mitigation plan", "Scalability roadmap"],
+      track: "technical"
     }
   ]
 
@@ -77,8 +110,20 @@ export default function Home() {
       answer: "Most engagements start within 1-2 weeks after our initial discovery call. For urgent projects, we can mobilize faster."
     },
     {
+      question: "Do you handle both technical and financial leadership?",
+      answer: "Yes. Many startups need both CTO and CFO guidance but can't justify two executive hires. We offer integrated leadership covering technology architecture, financial planning, and investor relations."
+    },
+    {
       question: "Do you work with non-technical founders?",
-      answer: "Absolutely. Many of our clients are first-time founders without technical backgrounds. We excel at translating technical concepts into clear business terms."
+      answer: "Absolutely. Many of our clients are first-time founders without technical or financial backgrounds. We excel at translating complex concepts into clear business terms."
+    },
+    {
+      question: "Can you help with fundraising?",
+      answer: "Yes. We prepare financial models, data rooms, and due diligence materials. We've supported raises from pre-seed through Series A across fintech, healthtech, and B2B SaaS."
+    },
+    {
+      question: "What's the difference between FP&A and accounting?",
+      answer: "Accountants handle compliance and historical reporting. FP&A is forward-looking: financial modeling, forecasting, unit economics, pricing strategy, and investor communications. We provide strategic finance leadership, not bookkeeping."
     },
     {
       question: "What's your tech stack expertise?",
@@ -86,11 +131,11 @@ export default function Home() {
     },
     {
       question: "Do you offer ongoing support after delivery?",
-      answer: "Yes. We offer retainer arrangements for post-launch support, scaling assistance, and continued technical leadership."
+      answer: "Yes. We offer retainer arrangements for post-launch support, scaling assistance, and continued technical and financial leadership."
     },
     {
       question: "What makes you different from a dev shop?",
-      answer: "Dev shops execute your specifications. We provide strategic technical leadership first — helping you figure out what to build, how to build it sustainably, and how to set up your team for long-term success."
+      answer: "Dev shops execute your specifications. We provide strategic leadership first — helping you figure out what to build, how to fund it, and how to set up your team for long-term success."
     }
   ]
 
@@ -99,64 +144,39 @@ export default function Home() {
       <Navigation />
 
       {/* Hero Section */}
-      <section id="home" className="pt-40 pb-32 bg-gradient-to-b from-slate-50 to-white">
+      <section id="home" className="pt-44 pb-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div>
-              {/* Business benefit tagline */}
-              <p className="text-accent-600 font-semibold text-lg mb-4 tracking-wide">
-                Ship faster. Scale smarter. Save CTO budget.
+              <p className="text-sm uppercase tracking-[0.2em] text-slate-400 mb-8">
+                Fractional CTO & CFO
               </p>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 leading-tight mb-6">
-                Technical Leadership Without the Full-Time Cost
+              <h1 className="font-serif text-5xl md:text-6xl font-normal text-slate-900 leading-[1.1] mb-8">
+                Startup leadership,<br />
+                <span className="italic">without the overhead.</span>
               </h1>
-              <p className="text-xl md:text-2xl text-slate-600 mb-4 leading-relaxed">
-                We help startups go from idea to scalable product in weeks, not months.
+              <p className="text-xl text-slate-600 mb-10 leading-relaxed max-w-lg">
+                We take startups from idea to investor-ready, with the technology, finance, and operating discipline required to scale.
               </p>
-              <p className="text-lg text-slate-700 mb-8">
-                Fractional CTO services for UK startups. Get enterprise-grade architecture, automated infrastructure, and hands-on engineering leadership, without hiring a full-time technical executive.
-              </p>
-              {/* Benefits strip */}
-              <div className="flex flex-wrap gap-4 mb-10">
-                <div className="flex items-center text-sm text-slate-600">
-                  <svg className="w-5 h-5 text-accent-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  Reduce time to market
-                </div>
-                <div className="flex items-center text-sm text-slate-600">
-                  <svg className="w-5 h-5 text-accent-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  Scale without rebuilding
-                </div>
-                <div className="flex items-center text-sm text-slate-600">
-                  <svg className="w-5 h-5 text-accent-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  Investor-ready systems
-                </div>
-              </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="#contact" className="bg-accent-500 text-primary-900 px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-accent-600 transition-all shadow-lg hover:shadow-xl text-center">
-                  Book a Free Discovery Call
+                <a href="#contact" className="bg-primary-600 text-white px-8 py-4 rounded-lg text-base font-medium hover:bg-primary-700 transition-all text-center">
+                  Schedule a Conversation
                 </a>
-                <a href="#case-studies" className="border-2 border-primary-600 text-primary-700 px-8 py-4 rounded-2xl text-lg font-semibold hover:border-primary-700 hover:bg-primary-50 transition-all text-center">
-                  See Our Results
+                <a href="#case-studies" className="border border-slate-300 text-slate-700 px-8 py-4 rounded-lg text-base font-medium hover:border-slate-400 hover:bg-slate-50 transition-all text-center">
+                  View Client Outcomes
                 </a>
               </div>
             </div>
             <div className="relative">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-                <img
+              <div className="relative rounded-lg overflow-hidden h-[520px]">
+                <Image
                   src="/img/photos/hero-team.jpg"
-                  alt="Technical team collaborating on startup product development"
-                  className="w-full h-[500px] object-cover"
-                  width={800}
-                  height={500}
-                  fetchPriority="high"
+                  alt="Technical and financial team collaborating on startup strategy"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-tr from-primary-600/20 to-transparent"></div>
               </div>
             </div>
           </div>
@@ -164,14 +184,14 @@ export default function Home() {
       </section>
 
       {/* Social Proof - Client Logos */}
-      <section className="py-12 bg-slate-100 border-y border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-sm text-slate-500 mb-8 uppercase tracking-wider font-medium">Trusted by engineering teams at</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300">
-            <div className="text-2xl font-bold text-slate-600">Rungway</div>
-            <div className="text-2xl font-bold text-slate-600">Opayo</div>
-            <div className="text-2xl font-bold text-slate-600">Elavon</div>
-            <div className="text-2xl font-bold text-slate-600">AstraZeneca</div>
+      <section className="py-16 bg-white border-b border-slate-100">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-sm text-slate-400 mb-10 uppercase tracking-widest">Trusted by</p>
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20">
+            <div className="text-xl font-serif tracking-wide text-slate-400 hover:text-slate-600 transition-colors">Rungway</div>
+            <div className="text-xl font-serif tracking-wide text-slate-400 hover:text-slate-600 transition-colors">Opayo</div>
+            <div className="text-xl font-serif tracking-wide text-slate-400 hover:text-slate-600 transition-colors">Elavon</div>
+            <div className="text-xl font-serif tracking-wide text-slate-400 hover:text-slate-600 transition-colors">AstraZeneca</div>
           </div>
         </div>
       </section>
@@ -180,25 +200,25 @@ export default function Home() {
       <section className="py-24 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Real Results for Real Startups</h2>
-            <p className="text-slate-400 max-w-2xl mx-auto">Measurable impact from our engineering partnerships</p>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">Client Outcomes</h2>
+            <p className="text-slate-400 max-w-2xl mx-auto">Measurable impact from our technical and financial partnerships</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="space-y-2">
-              <div className="text-4xl md:text-5xl font-bold text-accent-400">2wk → Daily</div>
-              <div className="text-slate-300 text-sm md:text-base">Release frequency improvement</div>
+              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-accent-400">200x</div>
+              <div className="text-slate-300 text-sm md:text-base">Platform scalability gains</div>
             </div>
             <div className="space-y-2">
-              <div className="text-4xl md:text-5xl font-bold text-accent-400">4h → 15m</div>
-              <div className="text-slate-300 text-sm md:text-base">Deployment time reduction</div>
+              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-accent-400">40%</div>
+              <div className="text-slate-300 text-sm md:text-base">Average runway extension</div>
             </div>
             <div className="space-y-2">
-              <div className="text-4xl md:text-5xl font-bold text-accent-400">Zero</div>
-              <div className="text-slate-300 text-sm md:text-base">Downtime during migrations</div>
+              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-accent-400">Series A</div>
+              <div className="text-slate-300 text-sm md:text-base">Fundraises supported</div>
             </div>
             <div className="space-y-2">
-              <div className="text-4xl md:text-5xl font-bold text-accent-400">200x</div>
-              <div className="text-slate-300 text-sm md:text-base">User capacity increase</div>
+              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-accent-400">100%</div>
+              <div className="text-slate-300 text-sm md:text-base">Due diligence pass rate</div>
             </div>
           </div>
         </div>
@@ -208,59 +228,35 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">What Founders Say</h2>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-900 mb-4">What Founders Say</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-slate-50 rounded-2xl p-8 border border-slate-200">
-              <div className="flex items-center mb-4">
-                <div className="flex text-accent-500">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-              </div>
-              <p className="text-slate-600 mb-6 italic">
-                "They transformed our platform from handling 5 users to 1000+ concurrent users. The migration was seamless with zero downtime. Exactly the technical leadership we needed."
+            <div className="bg-white rounded-xl p-8 border border-slate-200 shadow-sm">
+              <div className="text-accent-500 text-4xl font-serif mb-4">"</div>
+              <p className="text-slate-700 mb-6 leading-relaxed">
+                They transformed our platform from handling 5 users to 1000+ concurrent users. The migration was seamless with zero downtime. Exactly the technical leadership we needed.
               </p>
-              <div>
+              <div className="border-t border-slate-100 pt-4">
                 <p className="font-semibold text-slate-900">Engineering Lead</p>
                 <p className="text-sm text-slate-500">HR-Tech Startup, London</p>
               </div>
             </div>
-            <div className="bg-slate-50 rounded-2xl p-8 border border-slate-200">
-              <div className="flex items-center mb-4">
-                <div className="flex text-accent-500">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-              </div>
-              <p className="text-slate-600 mb-6 italic">
-                "Release cycles went from every two weeks to multiple times per day. The GitOps workflows they implemented gave us the confidence to ship fast without breaking things."
+            <div className="bg-white rounded-xl p-8 border border-slate-200 shadow-sm">
+              <div className="text-accent-500 text-4xl font-serif mb-4">"</div>
+              <p className="text-slate-700 mb-6 leading-relaxed">
+                Their financial modeling and due diligence preparation were instrumental in closing our Series A. Investors commented on how well-organised our data room was.
               </p>
-              <div>
-                <p className="font-semibold text-slate-900">VP of Engineering</p>
-                <p className="text-sm text-slate-500">Payment Platform, UK</p>
+              <div className="border-t border-slate-100 pt-4">
+                <p className="font-semibold text-slate-900">Founder & CEO</p>
+                <p className="text-sm text-slate-500">Fintech Startup, London</p>
               </div>
             </div>
-            <div className="bg-slate-50 rounded-2xl p-8 border border-slate-200">
-              <div className="flex items-center mb-4">
-                <div className="flex text-accent-500">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-              </div>
-              <p className="text-slate-600 mb-6 italic">
-                "As a non-technical founder, I needed someone who could translate business requirements into technical reality. They delivered our MVP in 10 weeks with a system that just works."
+            <div className="bg-white rounded-xl p-8 border border-slate-200 shadow-sm">
+              <div className="text-accent-500 text-4xl font-serif mb-4">"</div>
+              <p className="text-slate-700 mb-6 leading-relaxed">
+                As a non-technical founder, I needed someone who could translate business requirements into technical reality. They delivered our MVP in 10 weeks with a system that just works.
               </p>
-              <div>
+              <div className="border-t border-slate-100 pt-4">
                 <p className="font-semibold text-slate-900">Founder &amp; CEO</p>
                 <p className="text-sm text-slate-500">SaaS Startup, Manchester</p>
               </div>
@@ -272,45 +268,149 @@ export default function Home() {
       {/* Philosophy Section */}
       <section className="py-24 bg-gradient-to-b from-white to-slate-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-3xl p-10 md:p-16 border-2 border-primary-100 shadow-xl">
+          <div className="bg-white rounded-xl p-10 md:p-16 border border-primary-100 shadow-lg">
             <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our Philosophy</h2>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our Philosophy</h2>
             </div>
             <div className="space-y-6 text-lg text-slate-700 leading-relaxed">
               <p className="text-center">
-                We believe in <span className="font-semibold text-slate-900">infrastructure as code</span>, <span className="font-semibold text-slate-900">repeatable delivery</span>, and <span className="font-semibold text-slate-900">developer autonomy</span>.
+                We believe in <span className="font-semibold text-slate-900">scalable systems</span>, <span className="font-semibold text-slate-900">financial rigour</span>, and <span className="font-semibold text-slate-900">founder autonomy</span>.
               </p>
               <p className="text-center max-w-3xl mx-auto">
-                Every system we build is designed to scale and evolve — because startups deserve enterprise-grade foundations from day one.
+                Every foundation we build — technical or financial — is designed to scale with you. Startups deserve enterprise-grade discipline from day one.
               </p>
               <p className="text-center text-primary-600 font-semibold text-xl pt-4">
-                Speed comes from structure.
+                Built to scale. Ready to raise.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Who We Serve Section */}
+      {/* Two Tracks Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Who We Serve</h2>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Two Sides of Startup Leadership</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Fractional CTO services for UK startups across high-growth sectors
+              Most startups need both. We deliver both.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Technical Track */}
+            <div className="bg-gradient-to-br from-primary-50 to-white border border-primary-200 rounded-xl p-10 hover:border-primary-400 hover:shadow-lg transition-all">
+              <div className="w-14 h-14 bg-primary-600 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Technical Leadership</h3>
+              <p className="text-slate-600 mb-6 leading-relaxed">
+                Architecture decisions, engineering team building, and infrastructure that scales from day one.
+              </p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center text-slate-700">
+                  <svg className="w-5 h-5 text-primary-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Fractional CTO
+                </li>
+                <li className="flex items-center text-slate-700">
+                  <svg className="w-5 h-5 text-primary-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  0-to-1 Product Builds
+                </li>
+                <li className="flex items-center text-slate-700">
+                  <svg className="w-5 h-5 text-primary-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  AI & Data Engineering
+                </li>
+                <li className="flex items-center text-slate-700">
+                  <svg className="w-5 h-5 text-primary-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  DevOps & Platform Engineering
+                </li>
+              </ul>
+              <a href="/services/fractional-cto" className="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold">
+                Explore Technical Services
+                <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+
+            {/* Business Track */}
+            <div className="bg-gradient-to-br from-accent-50 to-white border border-accent-200 rounded-xl p-10 hover:border-accent-400 hover:shadow-lg transition-all">
+              <div className="w-14 h-14 bg-accent-500 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-primary-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Financial & Business Strategy</h3>
+              <p className="text-slate-600 mb-6 leading-relaxed">
+                FP&A, business strategy, and the financial discipline that makes your startup investable.
+              </p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center text-slate-700">
+                  <svg className="w-5 h-5 text-accent-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Financial Planning & Analysis
+                </li>
+                <li className="flex items-center text-slate-700">
+                  <svg className="w-5 h-5 text-accent-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Business Strategy
+                </li>
+                <li className="flex items-center text-slate-700">
+                  <svg className="w-5 h-5 text-accent-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Fundraising Support
+                </li>
+                <li className="flex items-center text-slate-700">
+                  <svg className="w-5 h-5 text-accent-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Investor Due Diligence Prep
+                </li>
+              </ul>
+              <a href="/services/fractional-cfo" className="inline-flex items-center text-accent-700 hover:text-accent-800 font-semibold">
+                Explore Financial Services
+                <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Who We Serve Section */}
+      <section className="py-24 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Who We Serve</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Fractional CTO and CFO services for UK startups across high-growth sectors
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-slate-50 to-white border-2 border-slate-200 rounded-3xl p-8 hover:border-primary-300 hover:shadow-xl transition-all">
-              <div className="w-16 h-16 bg-accent-100 rounded-2xl flex items-center justify-center mb-6">
+            <div className="bg-white border border-slate-200 rounded-xl p-8 hover:border-primary-300 hover:shadow-lg transition-all">
+              <div className="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mb-5">
                 <svg className="w-8 h-8 text-accent-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-4">Fintech Startups</h3>
               <p className="text-slate-600 leading-relaxed mb-4">
-                Fractional CTO for fintech startups in London and across the UK. From payment platforms to lending apps, we help you navigate complex compliance requirements while building scalable, secure infrastructure.
+                Technical and financial leadership for fintech startups. We help you build compliant platforms, develop investor-ready financial models, and navigate FCA requirements.
               </p>
               <ul className="space-y-2 text-sm text-slate-700">
                 <li className="flex items-start">
@@ -323,7 +423,7 @@ export default function Home() {
                   <svg className="w-4 h-4 text-accent-600 mt-1 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Payment gateway integration
+                  Financial modeling for investors
                 </li>
                 <li className="flex items-start">
                   <svg className="w-4 h-4 text-accent-600 mt-1 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -334,15 +434,15 @@ export default function Home() {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-slate-50 to-white border-2 border-slate-200 rounded-3xl p-8 hover:border-primary-300 hover:shadow-xl transition-all">
-              <div className="w-16 h-16 bg-accent-100 rounded-2xl flex items-center justify-center mb-6">
+            <div className="bg-white border border-slate-200 rounded-xl p-8 hover:border-primary-300 hover:shadow-lg transition-all">
+              <div className="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mb-5">
                 <svg className="w-8 h-8 text-accent-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-4">Healthtech Startups</h3>
               <p className="text-slate-600 leading-relaxed mb-4">
-                Fractional CTO for healthcare startups navigating GDPR, NHS integrations, and medical device regulations. We build secure, compliant platforms that can scale with your patient base.
+                Technical and financial leadership for healthcare startups. We build compliant platforms, prepare fundraising materials, and help you scale sustainably in a regulated market.
               </p>
               <ul className="space-y-2 text-sm text-slate-700">
                 <li className="flex items-start">
@@ -355,26 +455,26 @@ export default function Home() {
                   <svg className="w-4 h-4 text-accent-600 mt-1 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  NHS integration experience
+                  Investor due diligence prep
                 </li>
                 <li className="flex items-start">
                   <svg className="w-4 h-4 text-accent-600 mt-1 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Clinical data security
+                  Unit economics analysis
                 </li>
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-slate-50 to-white border-2 border-slate-200 rounded-3xl p-8 hover:border-primary-300 hover:shadow-xl transition-all">
-              <div className="w-16 h-16 bg-accent-100 rounded-2xl flex items-center justify-center mb-6">
+            <div className="bg-white border border-slate-200 rounded-xl p-8 hover:border-primary-300 hover:shadow-lg transition-all">
+              <div className="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mb-5">
                 <svg className="w-8 h-8 text-accent-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-4">SaaS & B2B Platforms</h3>
               <p className="text-slate-600 leading-relaxed mb-4">
-                Startup CTO expertise for UK B2B SaaS companies. We help you build multi-tenant architectures, implement usage-based billing, and scale infrastructure as you grow from 10 to 10,000 customers.
+                Technical and financial leadership for B2B SaaS companies. We help you build scalable platforms, model SaaS metrics, and prepare for your next funding round.
               </p>
               <ul className="space-y-2 text-sm text-slate-700">
                 <li className="flex items-start">
@@ -387,13 +487,13 @@ export default function Home() {
                   <svg className="w-4 h-4 text-accent-600 mt-1 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  API-first design
+                  SaaS metrics & forecasting
                 </li>
                 <li className="flex items-start">
                   <svg className="w-4 h-4 text-accent-600 mt-1 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Usage-based billing
+                  Fundraising support
                 </li>
               </ul>
             </div>
@@ -414,48 +514,47 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-24 bg-slate-50">
+      <section id="services" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">How We Help</h2>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">How We Help</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Results-focused technical leadership from strategy to execution
+              Technical and financial leadership from strategy to execution
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="group bg-white border border-slate-200 rounded-3xl hover:border-primary-300 hover:shadow-xl transition-all duration-300 overflow-hidden">
-                <div className="relative h-64 overflow-hidden">
-                  <img
-                    src={service.image}
-                    alt={`${service.title} - ${service.benefit}`}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter grayscale group-hover:grayscale-0"
-                    loading="lazy"
-                    width={400}
-                    height={256}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/40 to-transparent"></div>
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
-                  </div>
-                </div>
-                <div className="p-8">
-                  <p className="text-accent-600 font-semibold mb-3">{service.benefit}</p>
-                  <p className="text-slate-600 leading-relaxed mb-6">{service.description}</p>
-                  <div className="space-y-2">
-                    {service.outcomes.map((outcome, i) => (
-                      <div key={i} className="flex items-start">
-                        <svg className="w-5 h-5 text-accent-600 mt-0.5 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-sm text-slate-700">{outcome}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
+          {/* Technical Services */}
+          <div className="mb-16">
+            <h3 className="font-serif text-2xl font-bold text-slate-900 mb-8 flex items-center">
+              <span className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center mr-4">
+                <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </span>
+              Technical Leadership
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {services.filter(s => s.track === 'technical').map((service, index) => (
+                <ServiceCard key={index} service={service} priority={index < 2} />
+              ))}
+            </div>
+          </div>
+
+          {/* Financial Services */}
+          <div>
+            <h3 className="font-serif text-2xl font-bold text-slate-900 mb-8 flex items-center">
+              <span className="w-10 h-10 bg-accent-500 rounded-lg flex items-center justify-center mr-4">
+                <svg className="w-5 h-5 text-primary-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </span>
+              Financial & Business Strategy
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {services.filter(s => s.track === 'business').map((service, index) => (
+                <ServiceCard key={index} service={service} priority={false} />
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -464,7 +563,7 @@ export default function Home() {
       <section id="case-studies" className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Recent Work</h2>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Recent Engagements</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Real problems solved for real startups
             </p>
@@ -510,7 +609,7 @@ export default function Home() {
                       </div>
                       <div className="flex flex-wrap gap-2 pt-2">
                         {study.tags.map((tag, i) => (
-                          <span key={i} className="px-3 py-1 bg-primary-50 text-primary-700 rounded-lg text-sm font-medium">
+                          <span key={i} className="px-2 py-1 bg-primary-50 text-primary-700 rounded text-xs font-medium">
                             {tag}
                           </span>
                         ))}
@@ -538,40 +637,40 @@ export default function Home() {
       <section id="how-we-work" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">How We Work</h2>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">How We Work</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              A simple, three-step process to get you from idea to automated reality.
+              A structured process to get you from idea to investor-ready.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-slate-50 rounded-3xl p-10 border border-slate-200">
-              <div className="bg-primary-600 text-white w-14 h-14 rounded-2xl flex items-center justify-center mb-6 text-2xl font-bold shadow-lg">
+            <div className="bg-slate-50 rounded-xl p-10 border border-slate-200">
+              <div className="bg-primary-600 text-white w-12 h-12 rounded-lg flex items-center justify-center mb-6 text-xl font-bold shadow-md">
                 1
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Assess</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Discover</h3>
               <p className="text-slate-600 leading-relaxed mb-6">
-                We start with a deep-dive discovery session to understand your vision, market, and technical constraints. Then we define a clear MVP scope and technical roadmap.
+                We start with a deep-dive session to understand your vision, market, and constraints. We define your technical roadmap, financial model, and path to investor readiness.
               </p>
             </div>
 
-            <div className="bg-slate-50 rounded-3xl p-10 border border-slate-200">
-              <div className="bg-primary-600 text-white w-14 h-14 rounded-2xl flex items-center justify-center mb-6 text-2xl font-bold shadow-lg">
+            <div className="bg-slate-50 rounded-xl p-10 border border-slate-200">
+              <div className="bg-primary-600 text-white w-12 h-12 rounded-lg flex items-center justify-center mb-6 text-xl font-bold shadow-md">
                 2
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Architect</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Build</h3>
               <p className="text-slate-600 leading-relaxed mb-6">
-                Before writing code, we set up IaC, CI/CD, and GitOps workflows. This foundation enables rapid, safe iteration from day one.
+                We architect scalable systems and build robust financial foundations. Technology infrastructure meets investor-grade reporting and business strategy.
               </p>
             </div>
 
-            <div className="bg-slate-50 rounded-3xl p-10 border border-slate-200">
-              <div className="bg-primary-600 text-white w-14 h-14 rounded-2xl flex items-center justify-center mb-6 text-2xl font-bold shadow-lg">
+            <div className="bg-slate-50 rounded-xl p-10 border border-slate-200">
+              <div className="bg-primary-600 text-white w-12 h-12 rounded-lg flex items-center justify-center mb-6 text-xl font-bold shadow-md">
                 3
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Automate</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Scale</h3>
               <p className="text-slate-600 leading-relaxed mb-6">
-                We launch your MVP with full observability, documentation, and knowledge transfer. You own the system and can iterate independently.
+                We deliver a complete system — technology, financials, and documentation — ready for growth. You own everything and can operate independently.
               </p>
             </div>
           </div>
@@ -583,33 +682,30 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">About Codenest</h2>
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">About Codenest</h2>
               <div className="space-y-5 text-slate-600 leading-relaxed text-lg">
                 <p>
-                  We've spent years engineering platforms in fast-moving startups — where every architectural choice can decide whether a product scales smoothly or collapses under pressure.
+                  We partner with founders who are building something ambitious. Our role is to provide the executive leadership — both technical and financial — that early-stage startups need but can't yet afford full-time.
                 </p>
                 <p>
-                  At Rungway, we were the core backend and DevOps team transforming a fragile system that could barely handle five concurrent users into a resilient platform serving thousands. That experience taught us one thing: <span className="font-semibold text-slate-900">structure enables speed.</span>
+                  On the technology side, we've led platform transformations, designed systems that scale, and built engineering teams from the ground up. On the finance side, we've created investor-ready financial models, prepared data rooms that close rounds, and implemented the reporting discipline that boards expect.
                 </p>
                 <p>
-                  Since then, we've led architectural migrations, designed microservice ecosystems with domain-driven design, built Infrastructure as Code and CI/CD pipelines from the ground up, and scaled databases under live production load. We've also worked shoulder-to-shoulder with founders, PMs, and engineers — turning business ideas into systems that deliver at scale.
+                  We've worked with fintech, healthtech, and B2B SaaS founders across the UK — helping them navigate fundraising, build investor confidence, and establish the operational foundations for growth.
                 </p>
                 <p>
-                  <span className="font-semibold text-slate-900">Our core belief:</span> The fastest teams aren't the ones who skip infrastructure — they're the ones who automate it.
-                </p>
-                <p>
-                  That's why we build every system with GitOps, IaC, and observability from day one. It's how we help startups move fast without breaking things.
+                  <span className="font-semibold text-slate-900">Our core belief:</span> The best startups combine technical excellence with financial discipline from day one.
                 </p>
                 <p className="text-slate-900 font-semibold text-xl pt-4">
-                  Speed comes from structure. Let's build yours.
+                  Leadership that scales with you.
                 </p>
               </div>
             </div>
             <div className="relative">
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-xl overflow-hidden shadow-xl">
                 <img
-                  src="/img/photos/infrastructure.jpg"
-                  alt="Cloud infrastructure and DevOps automation representing modern startup engineering"
+                  src="/img/photos/hero-team.jpg"
+                  alt="Technical and financial leadership team collaborating on startup strategy"
                   className="w-full h-[500px] object-cover filter grayscale"
                   loading="lazy"
                   width={800}
@@ -622,29 +718,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Secondary CTA - Lead Magnet */}
-      <section className="py-20 bg-gradient-to-r from-primary-600 to-primary-700">
+      {/* Secondary CTA */}
+      <section className="py-20 bg-primary-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Not Ready to Talk Yet?
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">
+            Explore Our Thinking
           </h2>
-          <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            Get our free Startup Tech Readiness Checklist - 15 questions to assess if your technical foundation is ready to scale.
+          <p className="text-xl text-primary-200 mb-8 max-w-2xl mx-auto">
+            Insights on startup leadership, fundraising readiness, and building investable companies.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/blog"
+              className="bg-white text-primary-700 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-primary-50 transition-all shadow-lg text-center"
+            >
+              Read Our Insights
+            </a>
             <a
               href="https://www.linkedin.com/company/codenest-ltd"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white text-primary-700 px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-primary-50 transition-all shadow-lg text-center"
+              className="border-2 border-white/30 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-white/10 transition-all text-center"
             >
-              Follow Us on LinkedIn
-            </a>
-            <a
-              href="/blog"
-              className="border-2 border-white text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-white/10 transition-all text-center"
-            >
-              Read Our Engineering Blog
+              Follow on LinkedIn
             </a>
           </div>
         </div>
@@ -654,12 +750,12 @@ export default function Home() {
       <section className="py-24 bg-slate-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Common Questions</h2>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Common Questions</h2>
           </div>
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <details key={index} className="group bg-white rounded-2xl p-8 border border-slate-200 hover:border-primary-300 transition-colors">
+              <details key={index} className="group bg-white rounded-lg p-6 border border-slate-200 hover:border-primary-300 transition-colors">
                 <summary className="font-semibold text-lg text-slate-900 cursor-pointer list-none flex items-center justify-between">
                   {faq.question}
                   <svg className="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -677,9 +773,9 @@ export default function Home() {
       <section id="contact" className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Book a Free 30-Min Strategy Call</h2>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Let's Talk</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Book a free 30-minute discovery call. No sales pitch — just an honest conversation about your technical needs.
+              Schedule a conversation. No sales pitch — just an honest discussion about your technical and financial needs.
             </p>
           </div>
 
@@ -689,44 +785,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-slate-900 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-            <div>
-              <img
-                src="/img/companylogo-light.svg"
-                alt="Codenest - Fractional CTO and Startup Engineering Services"
-                className="h-10 w-auto mb-4 company-logo"
-              />
-              <p className="text-slate-400 text-sm">
-                Build a product that scales from day one — with automation-first engineering and cloud-native delivery.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#case-studies" className="text-slate-400 hover:text-white transition-colors">Case Studies</a></li>
-                <li><a href="#services" className="text-slate-400 hover:text-white transition-colors">Services</a></li>
-                <li><a href="#how-we-work" className="text-slate-400 hover:text-white transition-colors">Our Process</a></li>
-                <li><a href="#about" className="text-slate-400 hover:text-white transition-colors">Our Story</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Connect</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#contact" className="text-slate-400 hover:text-white transition-colors">Book a Discovery Call</a></li>
-                <li><a href="https://www.linkedin.com/company/codenest-ltd" className="text-slate-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="pt-8 border-t border-slate-800 text-center">
-            <p className="text-slate-500 text-sm">
-              © 2025 Codenest. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

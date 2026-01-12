@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" role="img" aria-labelledby="icon-title">
+  <title id="icon-title">Codenest Icon</title>
+
+  <defs>
+    <linearGradient id="iconSunGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#E6B000"/>
+      <stop offset="100%" stop-color="#FFC300"/>
+    </linearGradient>
+  </defs>
+
+  <g fill="none" fill-rule="evenodd">
+    <!-- Nest curves -->
+    <path d="M8 38 Q24 48, 40 38" stroke="#2C3E50" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+    <path d="M12 29 Q24 36, 36 29" stroke="#2C3E50" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.75"/>
+    <path d="M16 21 Q24 26, 32 21" stroke="#2C3E50" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.5"/>
+
+    <!-- Rising sun/growth element -->
+    <circle cx="24" cy="12" r="9" fill="url(#iconSunGradient)"/>
+
+    <!-- Upward rays -->
+    <path d="M24 0 L24 3" stroke="#FFC300" stroke-width="3" stroke-linecap="round"/>
+    <path d="M15 3 L17 6" stroke="#FFC300" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+    <path d="M33 3 L31 6" stroke="#FFC300" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+  </g>
+</svg>

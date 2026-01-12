@@ -1,19 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="240" height="60" viewBox="0 0 240 60" role="img" aria-labelledby="logo-light-title logo-light-desc">
-  <title id="logo-light-title">Codenest</title>
-  <desc id="logo-light-desc">Codenest logo light variant - nest-shaped braces with company name</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="50" viewBox="0 0 220 50" role="img" aria-labelledby="logo-title logo-desc">
+  <title id="logo-title">Codenest</title>
+  <desc id="logo-desc">Codenest - premium startup consultancy (light version)</desc>
 
-  <style>
-    text { text-rendering: optimizeLegibility; }
-  </style>
+  <defs>
+    <linearGradient id="goldGradientLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C9A227"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#C9A227"/>
+    </linearGradient>
+  </defs>
 
   <g fill="none" fill-rule="evenodd">
-    <!-- Braces -->
-    <path fill="#FFC300" d="M32 15c0-3.866-3.134-7-7-7h-2v4h2c1.657 0 3 1.343 3 3v6c0 1.657 1.343 3 3 3v2c-1.657 0-3 1.343-3 3v6c0 1.657-1.343 3-3 3h-2v4h2c3.866 0 7-3.134 7-7v-6c0-1.657 1.343-3 3-3v-2c-1.657 0-3-1.343-3-3v-6zM16 8h-2c-3.866 0-7 3.134-7 7v6c0 1.657-1.343 3-3 3v2c1.657 0 3 1.343 3 3v6c0 3.866 3.134 7 7 7h2v-4h-2c-1.657 0-3-1.343-3-3v-6c0-1.657-1.343-3-3-3v-2c1.657 0 3-1.343 3-3v-6c0-1.657 1.343-3 3-3h2V8z"/>
-    <!-- Center dot -->
-    <circle cx="19" cy="30" r="3.5" fill="#FFC300"/>
-    <!-- Text - light color for dark backgrounds -->
-    <text x="42" y="36" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Poppins', 'Roboto', system-ui, sans-serif" font-size="30" font-weight="600" fill="#ffffff">
-      codenest
+    <!-- Minimal CN Mark -->
+    <g transform="translate(0, 5)">
+      <path d="M18 4 C8 4, 0 13, 0 20 C0 27, 8 36, 18 36"
+            stroke="#FFFFFF"
+            stroke-width="3"
+            stroke-linecap="round"
+            fill="none"/>
+      <path d="M22 36 L22 4 L36 36 L36 0"
+            stroke="#FFFFFF"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            fill="none"/>
+      <rect x="34" y="0" width="3" height="10" rx="1.5" fill="url(#goldGradientLight)"/>
+    </g>
+
+    <!-- Wordmark - refined letterspace -->
+    <text x="52" y="33"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="24"
+          font-weight="400"
+          letter-spacing="4"
+          fill="#FFFFFF">
+      CODENEST
     </text>
   </g>
 </svg>

@@ -1,13 +1,26 @@
 import './globals.css'
+import { Inter, Playfair_Display } from 'next/font/google'
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-playfair',
+})
 
 export const metadata = {
   metadataBase: new URL('https://codenest.uk'),
   title: {
-    default: 'Codenest – Fractional CTO & Startup Engineering | GitOps, IaC & MVP Development',
+    default: 'Codenest – Fractional CTO & CFO | Startup Leadership for UK Founders',
     template: '%s | Codenest'
   },
-  description: 'Expert fractional CTO services for UK startups. We help founders build scalable MVPs using GitOps, Infrastructure as Code, and Kubernetes. From 0→1 with production-grade foundations. Based in the UK, serving Europe.',
-  keywords: ['fractional CTO UK', 'fractional CTO London', 'startup CTO UK', 'GitOps consulting UK', 'Infrastructure as Code UK', 'IaC consulting', 'MVP development UK', 'Kubernetes consulting UK', 'startup engineering UK', 'DevOps consulting UK', 'cloud architecture UK', 'technical leadership UK', '0 to 1 product UK', 'startup technical partner UK', 'microservices architecture', 'CI/CD consulting UK', 'fractional CTO Europe', 'part-time CTO UK', 'interim CTO UK'],
+  description: 'Fractional CTO and CFO leadership for UK startups. We bring the engineering rigour and financial discipline of a high-growth company — without the cost or risk of full-time executives.',
+  keywords: ['fractional CTO UK', 'fractional CFO UK', 'fractional CTO London', 'fractional CFO London', 'startup CTO UK', 'startup CFO UK', 'GitOps consulting UK', 'Infrastructure as Code UK', 'financial modeling startups', 'MVP development UK', 'Kubernetes consulting UK', 'startup engineering UK', 'DevOps consulting UK', 'fundraising support UK', 'technical leadership UK', 'financial strategy startups', '0 to 1 product UK', 'startup technical partner UK', 'Series A preparation', 'startup due diligence UK', 'fractional CTO Europe', 'fractional CFO Europe', 'part-time CTO UK', 'part-time CFO UK'],
   authors: [{ name: 'Codenest', url: 'https://codenest.uk' }],
   creator: 'Codenest',
   publisher: 'Codenest',
@@ -17,8 +30,8 @@ export const metadata = {
     telephone: false,
   },
   openGraph: {
-    title: 'Codenest – Fractional CTO & Startup Engineering Services',
-    description: 'Expert technical leadership for startups. Build scalable products with GitOps, IaC, and cloud-native architecture. Fractional CTO services that accelerate your 0→1 journey.',
+    title: 'Codenest – Fractional CTO & CFO for UK Startups',
+    description: 'Fractional CTO and CFO leadership for UK startups. We bring the engineering rigour and financial discipline of a high-growth company — without the cost or risk of full-time executives.',
     type: 'website',
     locale: 'en_GB',
     url: 'https://codenest.uk',
@@ -28,14 +41,14 @@ export const metadata = {
         url: '/img/companylogo.png',
         width: 1200,
         height: 630,
-        alt: 'Codenest - Technical Leadership for Startups',
+        alt: 'Codenest - Fractional CTO & CFO for Startups',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Codenest – Fractional CTO & Startup Engineering',
-    description: 'Expert technical leadership for startups. GitOps, IaC, Kubernetes. Build scalable products from day one.',
+    title: 'Codenest – Fractional CTO & CFO for UK Startups',
+    description: 'Executive-grade CTO & CFO leadership for ambitious UK startups.',
     images: ['/img/companylogo.png'],
   },
   robots: {
@@ -64,7 +77,7 @@ export default function RootLayout({ children }) {
     url: 'https://codenest.uk',
     logo: 'https://codenest.uk/img/companylogo.png',
     image: 'https://codenest.uk/img/companylogo.png',
-    description: 'Expert fractional CTO and technical leadership for startups. Specializing in GitOps, Infrastructure as Code, and cloud-native architecture.',
+    description: 'Fractional CTO and CFO leadership for UK startups. We bring the engineering rigour and financial discipline of a high-growth company — without the cost or risk of full-time executives.',
     priceRange: '££-£££',
     address: {
       '@type': 'PostalAddress',
@@ -106,12 +119,16 @@ export default function RootLayout({ children }) {
       'Microservices',
       'CI/CD',
       'Fractional CTO Services',
+      'Fractional CFO Services',
       'Startup Engineering',
-      'MVP Development'
+      'MVP Development',
+      'Financial Modeling',
+      'Fundraising',
+      'Startup Financial Strategy'
     ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Technical Leadership Services',
+      name: 'Startup Leadership Services',
       itemListElement: [
         {
           '@type': 'Offer',
@@ -125,8 +142,24 @@ export default function RootLayout({ children }) {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
+            name: 'Fractional CFO Services',
+            description: 'Part-time financial leadership for startups'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
             name: 'MVP Development',
             description: '8-12 week production-ready MVP builds'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Financial Modeling & Strategy',
+            description: 'Financial models, unit economics, and fundraising preparation'
           }
         }
       ]
@@ -150,6 +183,17 @@ export default function RootLayout({ children }) {
       },
       {
         '@type': 'Service',
+        name: 'Fractional CFO Services',
+        description: 'Part-time CFO leadership for startups. Financial strategy, investor reporting, and cash flow management without full-time costs.',
+        provider: {
+          '@type': 'Organization',
+          name: 'Codenest'
+        },
+        areaServed: 'United Kingdom',
+        serviceType: 'Financial Leadership'
+      },
+      {
+        '@type': 'Service',
         name: 'MVP Development',
         description: 'Build production-ready MVPs using modern tech stack, GitOps workflows, and Infrastructure as Code from day one.',
         provider: {
@@ -158,6 +202,17 @@ export default function RootLayout({ children }) {
         },
         areaServed: 'United Kingdom',
         serviceType: 'Software Development'
+      },
+      {
+        '@type': 'Service',
+        name: 'Financial Modeling & Strategy',
+        description: 'Unit economics, revenue forecasting, and scenario planning. Build financial models that stand up to investor scrutiny.',
+        provider: {
+          '@type': 'Organization',
+          name: 'Codenest'
+        },
+        areaServed: 'United Kingdom',
+        serviceType: 'Financial Consulting'
       },
       {
         '@type': 'Service',
@@ -191,6 +246,17 @@ export default function RootLayout({ children }) {
         },
         areaServed: 'United Kingdom',
         serviceType: 'Consulting'
+      },
+      {
+        '@type': 'Service',
+        name: 'Fundraising Support',
+        description: 'Pitch deck financial sections, data room preparation, and investor Q&A coaching for pre-seed to Series A.',
+        provider: {
+          '@type': 'Organization',
+          name: 'Codenest'
+        },
+        areaServed: 'United Kingdom',
+        serviceType: 'Financial Consulting'
       }
     ]
   }
@@ -209,6 +275,14 @@ export default function RootLayout({ children }) {
       },
       {
         '@type': 'Question',
+        name: 'What is a Fractional CFO?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'A Fractional CFO is a part-time Chief Financial Officer who provides strategic financial leadership without the cost of a full-time executive. They handle financial planning, investor reporting, cash flow management, and fundraising preparation.'
+        }
+      },
+      {
+        '@type': 'Question',
         name: 'How long does it take to build an MVP?',
         acceptedAnswer: {
           '@type': 'Answer',
@@ -220,7 +294,15 @@ export default function RootLayout({ children }) {
         name: 'Do you work with early-stage startups?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes! We specialize in helping startups go from 0→1. Whether you\'re pre-seed or Series A, we provide the technical leadership and engineering execution you need to build and scale.'
+          text: 'Yes! We specialize in helping startups go from 0→1. Whether you\'re pre-seed or Series A, we provide both the technical and financial leadership you need to build and scale.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Can you help with fundraising?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. We prepare financial models, data rooms, and due diligence materials. We\'ve supported raises from pre-seed through Series A across fintech, healthtech, and B2B SaaS.'
         }
       },
       {
@@ -235,7 +317,7 @@ export default function RootLayout({ children }) {
   }
 
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <head>
         {/* Favicons */}
         <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
@@ -270,7 +352,7 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       </head>
-      <body>{children}</body>
+      <body className="font-sans antialiased">{children}</body>
     </html>
   )
 }

@@ -1,11 +1,11 @@
 {
-  "name": "Codenest - Fractional CTO & Startup Engineering",
+  "name": "Codenest - Where Startups Scale",
   "short_name": "Codenest",
-  "description": "Expert fractional CTO services for startups. GitOps, IaC, and cloud-native architecture.",
+  "description": "Fractional CTO and CFO leadership for UK startups. Engineering rigour and financial discipline — without the overhead.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#2C3E50",
-  "theme_color": "#FFC300",
+  "theme_color": "#D4AF37",
   "orientation": "portrait-primary",
   "icons": [
     {
