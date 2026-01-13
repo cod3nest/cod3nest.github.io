@@ -34,12 +34,12 @@ export default function Navigation() {
       >
         <a
           href="#contact"
-          className="flex items-center gap-2 bg-primary-600 text-white px-6 py-3 rounded-full text-sm font-semibold shadow-lg hover:bg-primary-700 hover:shadow-xl transition-all"
+          className="flex items-center gap-2 bg-accent-400 text-primary-900 px-6 py-3 rounded-full text-sm font-semibold shadow-gold hover:shadow-gold-lg hover:bg-accent-500 transition-all btn-premium"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
           </svg>
-          Book a Call
+          Schedule a Strategy Call
         </a>
       </div>
 
@@ -59,12 +59,12 @@ export default function Navigation() {
           {/* Desktop Menu */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-1">
-              <a href="/#case-studies" className="text-slate-700 hover:text-primary-700 px-4 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50">Case Studies</a>
-              <a href="/#services" className="text-slate-700 hover:text-primary-700 px-4 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50">Services</a>
-              <a href="/#how-we-work" className="text-slate-700 hover:text-primary-700 px-4 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50">Our Process</a>
-              <a href="/#about" className="text-slate-700 hover:text-primary-700 px-4 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50">Our Story</a>
-              <a href="/blog" className="text-slate-700 hover:text-primary-700 px-4 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50">Blog</a>
-              <a href="/#contact" className="bg-accent-500 text-primary-900 px-6 py-2.5 ml-2 rounded-lg text-sm font-semibold hover:bg-accent-600 transition-all shadow-sm hover:shadow">Schedule a Call</a>
+              <a href="/#case-studies" className="text-slate-700 hover:text-primary-700 px-4 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Case Studies</a>
+              <a href="/#services" className="text-slate-700 hover:text-primary-700 px-4 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Services</a>
+              <a href="/#how-we-work" className="text-slate-700 hover:text-primary-700 px-4 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Our Process</a>
+              <a href="/#about" className="text-slate-700 hover:text-primary-700 px-4 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Our Story</a>
+              <a href="/blog" className="text-slate-700 hover:text-primary-700 px-4 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Blog</a>
+              <a href="/#contact" className="bg-accent-400 text-primary-900 px-6 py-2.5 ml-2 rounded-lg text-sm font-semibold hover:bg-accent-500 transition-all shadow-sm hover:shadow-gold btn-premium">Schedule a Strategy Call</a>
             </div>
           </div>
 
@@ -93,7 +93,7 @@ export default function Navigation() {
               <a href="/#how-we-work" className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">Our Process</a>
               <a href="/#about" className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">Our Story</a>
               <a href="/blog" className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">Blog</a>
-              <a href="/#contact" className="bg-accent-500 text-primary-900 font-semibold block px-3 py-2 text-base rounded-lg hover:bg-accent-600 transition-all">Schedule a Call</a>
+              <a href="/#contact" className="bg-accent-400 text-primary-900 font-semibold block px-3 py-2 text-base rounded-lg hover:bg-accent-500 transition-all shadow-sm">Schedule a Strategy Call</a>
             </div>
           </div>
         )}

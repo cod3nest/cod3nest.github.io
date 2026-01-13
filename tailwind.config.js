@@ -26,21 +26,58 @@ module.exports = {
           950: '#0d1419',
         },
         accent: {
-          50: '#faf8f3',
-          100: '#f5f0e6',
-          200: '#ebe0c9',
-          300: '#dccba3',
-          400: '#c9a227',
-          500: '#D4AF37',  // Muted Gold - premium and refined
-          600: '#b8962f',
-          700: '#9a7d27',
-          800: '#7c641f',
-          900: '#5e4b17',
+          50: '#fdfbf7',
+          100: '#faf5eb',
+          200: '#f3e8d0',
+          300: '#e8d5a8',
+          400: '#d4af37',  // Rich Gold - premium signature
+          500: '#B8860B',  // Dark Goldenrod - deeper premium
+          600: '#9a7209',
+          700: '#7c5c07',
+          800: '#5e4605',
+          900: '#403003',
         },
       },
       borderRadius: {
         '2xl': '1.5rem',
         '3xl': '2rem',
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.5s ease-out',
+        'slide-up': 'slideUp 0.5s ease-out',
+        'scale-in': 'scaleIn 0.3s ease-out',
+        'shimmer': 'shimmer 2s infinite',
+        'pulse-subtle': 'pulseSubtle 2s infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { opacity: '0', transform: 'translateY(10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        scaleIn: {
+          '0%': { opacity: '0', transform: 'scale(0.95)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
+        pulseSubtle: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.85' },
+        },
+      },
+      backgroundImage: {
+        'gold-gradient': 'linear-gradient(135deg, #B8860B 0%, #D4AF37 50%, #B8860B 100%)',
+        'gold-shimmer': 'linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent)',
+      },
+      boxShadow: {
+        'gold': '0 4px 14px 0 rgba(184, 134, 11, 0.25)',
+        'gold-lg': '0 10px 25px -3px rgba(184, 134, 11, 0.3)',
       },
     },
   },

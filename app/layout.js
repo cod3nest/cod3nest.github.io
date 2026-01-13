@@ -16,11 +16,11 @@ const playfair = Playfair_Display({
 export const metadata = {
   metadataBase: new URL('https://codenest.uk'),
   title: {
-    default: 'Codenest – Premium Fractional CTO & CFO | Technical & Financial Leadership for UK Startups',
+    default: 'Codenest – Boutique Technical & Financial Advisory for UK Startups',
     template: '%s | Codenest'
   },
-  description: 'Premium fractional CTO and CFO services for ambitious UK startups. Enterprise-grade technical architecture and investor-ready financial leadership — without the overhead of full-time executives. 100% due diligence pass rate.',
-  keywords: ['premium startup consultancy London', 'fractional CTO UK', 'fractional CFO UK', 'fractional CTO London', 'fractional CFO London', 'startup CTO UK', 'startup CFO UK', 'premium tech consultancy UK', 'executive leadership startups', 'GitOps consulting UK', 'Infrastructure as Code UK', 'financial modeling startups', 'MVP development UK', 'Kubernetes consulting UK', 'startup engineering UK', 'DevOps consulting UK', 'fundraising support UK', 'technical leadership UK', 'financial strategy startups', '0 to 1 product UK', 'startup technical partner UK', 'Series A preparation', 'startup due diligence UK', 'fractional CTO Europe', 'fractional CFO Europe', 'part-time CTO UK', 'part-time CFO UK', 'investor ready startups', 'startup scale up UK'],
+  description: 'Boutique advisory for ambitious founders. Big 4 rigour meets startup agility. Bespoke technical and financial leadership for select UK startups — executive firepower without the overhead.',
+  keywords: ['boutique startup advisory London', 'fractional CTO UK', 'fractional CFO UK', 'startup advisory London', 'executive advisory startups', 'premium tech consultancy UK', 'bespoke startup consulting', 'Big 4 startup advisory', 'GitOps consulting UK', 'Infrastructure as Code UK', 'financial modeling startups', 'MVP development UK', 'Kubernetes consulting UK', 'startup engineering UK', 'DevOps consulting UK', 'fundraising support UK', 'technical leadership UK', 'financial strategy startups', '0 to 1 product UK', 'startup technical partner UK', 'Series A preparation', 'startup due diligence UK', 'boutique consultancy UK', 'select founders UK', 'investor ready startups', 'startup scale up UK'],
   authors: [{ name: 'Codenest', url: 'https://codenest.uk' }],
   creator: 'Codenest',
   publisher: 'Codenest',
@@ -30,8 +30,8 @@ export const metadata = {
     telephone: false,
   },
   openGraph: {
-    title: 'Codenest – Premium Fractional CTO & CFO for UK Startups',
-    description: 'Premium technical and financial leadership for ambitious UK startups. Enterprise-grade systems, investor-ready financials, 100% due diligence pass rate.',
+    title: 'Codenest – Boutique Advisory for Ambitious Founders',
+    description: 'Big 4 rigour meets startup agility. Bespoke technical and financial leadership for select UK startups. Executive firepower, startup pricing.',
     type: 'website',
     locale: 'en_GB',
     url: 'https://codenest.uk',
@@ -41,14 +41,14 @@ export const metadata = {
         url: '/img/companylogo.png',
         width: 1200,
         height: 630,
-        alt: 'Codenest - Fractional CTO & CFO for Startups',
+        alt: 'Codenest - Boutique Startup Advisory',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Codenest – Premium Fractional CTO & CFO for UK Startups',
-    description: 'Premium technical & financial leadership for ambitious UK startups. 100% due diligence pass rate.',
+    title: 'Codenest – Boutique Advisory for Ambitious Founders',
+    description: 'Big 4 rigour meets startup agility. Executive firepower, startup pricing.',
     images: ['/img/companylogo.png'],
   },
   robots: {
@@ -77,7 +77,7 @@ export default function RootLayout({ children }) {
     url: 'https://codenest.uk',
     logo: 'https://codenest.uk/img/companylogo.png',
     image: 'https://codenest.uk/img/companylogo.png',
-    description: 'Premium fractional CTO and CFO services for ambitious UK startups. Enterprise-grade technical architecture and investor-ready financial leadership with 100% due diligence pass rate.',
+    description: 'Boutique technical and financial advisory for ambitious UK founders. Big 4 rigour meets startup agility. Executive firepower, startup pricing.',
     priceRange: '£££',
     address: {
       '@type': 'PostalAddress',

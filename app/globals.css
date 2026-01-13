@@ -1,3 +1,135 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Selection color - gold accent */
+  ::selection {
+    background-color: rgba(212, 175, 55, 0.3);
+    color: #1a2e3b;
+  }
+}
+
+@layer components {
+  /* Premium button with gold shimmer effect */
+  .btn-premium {
+    @apply relative overflow-hidden;
+  }
+
+  .btn-premium::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transform: translateX(-100%);
+  }
+
+  .btn-premium:hover::before {
+    @apply opacity-100;
+    animation: btnShimmer 0.6s ease-out;
+  }
+
+  /* Gold accent underline for links */
+  .link-gold {
+    @apply relative;
+  }
+
+  .link-gold::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300;
+    background: linear-gradient(90deg, #B8860B, #D4AF37);
+  }
+
+  .link-gold:hover::after {
+    @apply w-full;
+  }
+
+  /* Card lift effect */
+  .card-lift {
+    @apply transition-all duration-300;
+  }
+
+  .card-lift:hover {
+    transform: translateY(-4px);
+  }
+
+  /* Warm overlay for grayscale images */
+  .img-warm-overlay {
+    @apply relative;
+  }
+
+  .img-warm-overlay::after {
+    content: '';
+    @apply absolute inset-0 pointer-events-none transition-opacity duration-500;
+    background: linear-gradient(135deg, rgba(184, 134, 11, 0.08) 0%, rgba(212, 175, 55, 0.05) 100%);
+    mix-blend-mode: overlay;
+  }
+
+  .img-warm-overlay:hover::after {
+    @apply opacity-0;
+  }
+
+  /* Gold border glow effect */
+  .border-gold-glow {
+    @apply relative;
+  }
+
+  .border-gold-glow::before {
+    content: '';
+    @apply absolute -inset-px rounded-xl opacity-0 transition-opacity duration-300;
+    background: linear-gradient(135deg, #B8860B, #D4AF37, #B8860B);
+    z-index: -1;
+  }
+
+  .border-gold-glow:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Service card track indicators */
+  .service-card-tech {
+    @apply border-l-4 border-l-primary-600;
+  }
+
+  .service-card-financial {
+    @apply border-l-4 border-l-accent-400;
+  }
+
+  /* Stats number animation */
+  .stat-number {
+    @apply relative;
+  }
+
+  .stat-number::after {
+    content: '';
+    @apply absolute -bottom-2 left-1/2 -translate-x-1/2 w-12 h-0.5;
+    background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+  }
+}
+
+@layer utilities {
+  /* Text gradient utility */
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #B8860B 0%, #D4AF37 50%, #B8860B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Subtle focus ring with gold */
+  .focus-gold:focus {
+    @apply outline-none ring-2 ring-accent-400 ring-offset-2;
+  }
+}
+
+@keyframes btnShimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

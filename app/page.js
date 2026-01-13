@@ -111,12 +111,20 @@ export default function Home() {
       answer: "Most engagements start within 1-2 weeks after our initial discovery call. For urgent projects, we can mobilize faster."
     },
     {
+      question: "What does a typical engagement look like?",
+      answer: "Fractional CTO/CFO engagements typically run 3-6 months at 2-3 days per week. MVP builds are fixed-scope at 8-12 weeks. We tailor every engagement to your stage and needs — no cookie-cutter packages."
+    },
+    {
       question: "Do you handle both technical and financial leadership?",
       answer: "Yes. Many startups need both CTO and CFO guidance but can't justify two executive hires. We offer integrated leadership covering technology architecture, financial planning, and investor relations."
     },
     {
       question: "Do you work with non-technical founders?",
       answer: "Absolutely. Many of our clients are first-time founders without technical or financial backgrounds. We excel at translating complex concepts into clear business terms."
+    },
+    {
+      question: "What's your pricing model?",
+      answer: "We work on retainer for fractional leadership (monthly commitment) and fixed-fee for defined projects like MVP builds or financial modeling. Investment varies based on scope and intensity — typically 60-80% less than equivalent full-time hires."
     },
     {
       question: "Can you help with fundraising?",
@@ -132,7 +140,7 @@ export default function Home() {
     },
     {
       question: "Do you offer ongoing support after delivery?",
-      answer: "Yes. We offer retainer arrangements for post-launch support, scaling assistance, and continued technical and financial leadership."
+      answer: "Yes. We offer retainer arrangements for post-launch support, scaling assistance, and continued technical and financial leadership. Many clients transition from intensive builds to lighter advisory after launch."
     },
     {
       question: "What makes you different from a dev shop?",
@@ -149,47 +157,49 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div>
-              <p className="text-sm uppercase tracking-[0.2em] text-slate-400 mb-8">
-                Fractional CTO & CFO for UK Startups
+              <p className="text-sm uppercase tracking-[0.2em] text-accent-500 mb-8 font-medium">
+                Boutique Advisory for Select Founders
               </p>
               <h1 className="font-serif text-5xl md:text-6xl font-normal text-slate-900 leading-[1.1] mb-6">
-                Technical & Financial Leadership,<br />
-                <span className="italic">Without the Overhead</span>
+                Executive Firepower.<br />
+                <span className="italic">Startup Agility.</span>
               </h1>
               <p className="text-xl text-slate-600 mb-6 leading-relaxed max-w-lg">
-                Scale faster with enterprise-grade systems and investor-ready financial rigour — without hiring full-time executives.
+                Big 4 rigour meets founder empathy. Bespoke technical and financial leadership for ambitious UK startups — without the overhead of full-time executives.
               </p>
               <ul className="space-y-3 mb-8 max-w-lg">
-                <li className="flex items-center text-slate-700">
-                  <svg className="w-5 h-5 text-primary-600 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <li className="flex items-center text-slate-700 group">
+                  <svg className="w-5 h-5 text-accent-500 mr-3 flex-shrink-0 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Save 60-80% vs full-time executive hires
+                  Enterprise-grade expertise, startup pricing
                 </li>
-                <li className="flex items-center text-slate-700">
-                  <svg className="w-5 h-5 text-primary-600 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <li className="flex items-center text-slate-700 group">
+                  <svg className="w-5 h-5 text-accent-500 mr-3 flex-shrink-0 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   Investor-ready in weeks, not months
                 </li>
-                <li className="flex items-center text-slate-700">
-                  <svg className="w-5 h-5 text-primary-600 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <li className="flex items-center text-slate-700 group">
+                  <svg className="w-5 h-5 text-accent-500 mr-3 flex-shrink-0 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   100% due diligence pass rate
                 </li>
               </ul>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="#contact" className="bg-primary-600 text-white px-8 py-4 rounded-lg text-base font-semibold hover:bg-primary-700 transition-all text-center shadow-lg hover:shadow-xl">
-                  Book a Strategy Call
+                <a href="#contact" className="bg-accent-400 text-primary-900 px-8 py-4 rounded-lg text-base font-semibold hover:bg-accent-500 transition-all text-center shadow-gold hover:shadow-gold-lg btn-premium">
+                  Schedule a Strategy Call
                 </a>
-                <a href="#case-studies" className="border-2 border-slate-300 text-slate-700 px-8 py-4 rounded-lg text-base font-semibold hover:border-primary-400 hover:text-primary-700 transition-all text-center">
+                <a href="#case-studies" className="border-2 border-slate-300 text-slate-700 px-8 py-4 rounded-lg text-base font-semibold hover:border-accent-400 hover:text-primary-700 transition-all text-center">
                   View Case Studies
                 </a>
               </div>
             </div>
             <div className="relative">
-              <div className="relative rounded-lg overflow-hidden h-[520px]">
+              {/* Premium gold frame effect */}
+              <div className="absolute -inset-1 bg-gradient-to-br from-accent-400/30 via-accent-500/20 to-transparent rounded-2xl blur-sm" />
+              <div className="relative rounded-xl overflow-hidden h-[520px] img-warm-overlay ring-1 ring-accent-400/20">
                 <Image
                   src="/img/photos/hero-team.jpg"
                   alt="Technical and financial team collaborating on startup strategy"
@@ -198,21 +208,58 @@ export default function Home() {
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
                 />
+                {/* Warm overlay for premium feel */}
+                <div className="absolute inset-0 bg-gradient-to-br from-accent-400/5 to-transparent mix-blend-overlay pointer-events-none" />
               </div>
+              {/* Gold accent decorations */}
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gold-gradient opacity-20 rounded-full blur-xl" />
+              <div className="absolute -top-2 -left-2 w-16 h-16 bg-gold-gradient opacity-15 rounded-full blur-lg" />
             </div>
           </div>
         </div>
       </section>
 
       {/* Social Proof - Client Logos */}
-      <section className="py-16 bg-white border-b border-slate-100">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-sm text-slate-400 mb-10 uppercase tracking-widest">Trusted by</p>
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20">
-            <div className="text-xl font-serif tracking-wide text-slate-400 hover:text-slate-600 transition-colors">Rungway</div>
-            <div className="text-xl font-serif tracking-wide text-slate-400 hover:text-slate-600 transition-colors">Opayo</div>
-            <div className="text-xl font-serif tracking-wide text-slate-400 hover:text-slate-600 transition-colors">Elavon</div>
-            <div className="text-xl font-serif tracking-wide text-slate-400 hover:text-slate-600 transition-colors">AstraZeneca</div>
+      <section className="py-12 bg-slate-50/50 border-y border-slate-100">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-xs text-slate-400 mb-8 uppercase tracking-[0.2em] font-medium">Trusted by category leaders</p>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+            {/* Rungway - HR Tech */}
+            <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm transition-all cursor-default">
+              <img
+                src="/img/clients/rungway.webp"
+                alt="Rungway"
+                className="w-10 h-10 rounded-lg object-contain"
+              />
+              <div>
+                <span className="text-lg font-semibold text-slate-700 group-hover:text-slate-900 transition-colors">Rungway</span>
+                <p className="text-xs text-slate-400">HR Tech</p>
+              </div>
+            </div>
+
+            {/* Opayo/Elavon - Payments */}
+            <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm transition-all cursor-default">
+              <img
+                src="/img/clients/opayo.png"
+                alt="Opayo by Elavon"
+                className="h-8 w-auto object-contain"
+              />
+            </div>
+
+            {/* AstraZeneca - Pharma */}
+            <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm transition-all cursor-default">
+              <img
+                src="/img/clients/astrazeneca.png"
+                alt="AstraZeneca"
+                className="h-8 w-auto object-contain"
+              />
+            </div>
+
+            {/* Additional credibility indicator */}
+            <div className="hidden lg:flex items-center gap-2 px-6 py-3 border-l border-slate-200">
+              <span className="text-2xl font-bold text-accent-500">15+</span>
+              <span className="text-sm text-slate-500 leading-tight">Startups<br/>supported</span>
+            </div>
           </div>
         </div>
       </section>
@@ -225,20 +272,20 @@ export default function Home() {
             <p className="text-slate-400 max-w-2xl mx-auto">Measurable impact from our technical and financial partnerships</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div className="space-y-2">
-              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-accent-400">200x</div>
+            <div className="space-y-2 group">
+              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gold-gradient stat-number group-hover:scale-105 transition-transform">200x</div>
               <div className="text-slate-300 text-sm md:text-base">Platform scalability gains</div>
             </div>
-            <div className="space-y-2">
-              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-accent-400">40%</div>
+            <div className="space-y-2 group">
+              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gold-gradient stat-number group-hover:scale-105 transition-transform">40%</div>
               <div className="text-slate-300 text-sm md:text-base">Average runway extension</div>
             </div>
-            <div className="space-y-2">
-              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-accent-400">Series A</div>
+            <div className="space-y-2 group">
+              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gold-gradient stat-number group-hover:scale-105 transition-transform">Series A</div>
               <div className="text-slate-300 text-sm md:text-base">Fundraises supported</div>
             </div>
-            <div className="space-y-2">
-              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-accent-400">100%</div>
+            <div className="space-y-2 group">
+              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gold-gradient stat-number group-hover:scale-105 transition-transform">100%</div>
               <div className="text-slate-300 text-sm md:text-base">Due diligence pass rate</div>
             </div>
           </div>
@@ -247,42 +294,67 @@ export default function Home() {
 
       <Testimonials />
 
-      {/* Philosophy Section */}
-      <section className="py-24 bg-gradient-to-b from-white to-slate-50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-xl p-10 md:p-16 border border-primary-100 shadow-lg">
-            <div className="text-center mb-8">
-              <p className="text-sm uppercase tracking-widest text-primary-600 mb-4">Best for founders who want</p>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-900 mb-4">Scalable Tech, Clear Strategy, Confident Fundraising</h2>
-            </div>
-            <div className="space-y-6 text-lg text-slate-700 leading-relaxed">
-              <p className="text-center">
-                We believe in <span className="font-semibold text-slate-900">scalable systems</span>, <span className="font-semibold text-slate-900">financial rigour</span>, and <span className="font-semibold text-slate-900">founder autonomy</span>.
-              </p>
-              <p className="text-center max-w-3xl mx-auto">
-                Every foundation we build is designed to scale with you. Enterprise-grade discipline from day one.
-              </p>
-              <p className="text-center text-primary-600 font-semibold text-xl pt-4">
-                Built to scale. Ready to raise.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Two Tracks Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Two Sides of Startup Leadership</h2>
+            <p className="text-sm uppercase tracking-[0.2em] text-accent-500 mb-4 font-medium">Integrated Partnership</p>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Your Strategic Advisory Team</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Most startups need both. We deliver both.
+              Most startups need both CTO and CFO guidance. We deliver integrated leadership — not siloed consulting.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Strategy Track - Listed First */}
+            <div className="bg-gradient-to-br from-accent-50 to-white border border-accent-200 rounded-xl p-10 hover:border-accent-400 hover:shadow-gold transition-all card-lift relative overflow-hidden">
+              {/* Gold accent decoration */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gold-gradient opacity-5 rounded-bl-full" />
+              <div className="w-14 h-14 bg-accent-400 rounded-lg flex items-center justify-center mb-6 shadow-gold relative">
+                <svg className="w-8 h-8 text-primary-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4 relative">Strategic & Financial Leadership</h3>
+              <p className="text-slate-600 mb-6 leading-relaxed relative">
+                Business strategy, FP&A, and the financial discipline that makes your startup investable.
+              </p>
+              <ul className="space-y-3 mb-8 relative">
+                <li className="flex items-center text-slate-700">
+                  <svg className="w-5 h-5 text-accent-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Business Strategy & Planning
+                </li>
+                <li className="flex items-center text-slate-700">
+                  <svg className="w-5 h-5 text-accent-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Financial Modeling & FP&A
+                </li>
+                <li className="flex items-center text-slate-700">
+                  <svg className="w-5 h-5 text-accent-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Fundraising & Investor Relations
+                </li>
+                <li className="flex items-center text-slate-700">
+                  <svg className="w-5 h-5 text-accent-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Due Diligence Preparation
+                </li>
+              </ul>
+              <a href="/services/fractional-cfo" className="inline-flex items-center text-accent-500 hover:text-accent-600 font-semibold link-gold relative">
+                Explore Strategic Advisory
+                <svg className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+
             {/* Technical Track */}
-            <div className="bg-gradient-to-br from-primary-50 to-white border border-primary-200 rounded-xl p-10 hover:border-primary-400 hover:shadow-lg transition-all">
+            <div className="bg-gradient-to-br from-primary-50 to-white border border-primary-200 rounded-xl p-10 hover:border-primary-400 hover:shadow-lg transition-all card-lift">
               <div className="w-14 h-14 bg-primary-600 rounded-lg flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -297,7 +369,7 @@ export default function Home() {
                   <svg className="w-5 h-5 text-primary-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Fractional CTO
+                  Fractional CTO Advisory
                 </li>
                 <li className="flex items-center text-slate-700">
                   <svg className="w-5 h-5 text-primary-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -319,52 +391,7 @@ export default function Home() {
                 </li>
               </ul>
               <a href="/services/fractional-cto" className="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold">
-                Explore Technical Services
-                <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
-            </div>
-
-            {/* Business Track */}
-            <div className="bg-gradient-to-br from-accent-50 to-white border border-accent-200 rounded-xl p-10 hover:border-accent-400 hover:shadow-lg transition-all">
-              <div className="w-14 h-14 bg-accent-500 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-primary-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Financial & Business Strategy</h3>
-              <p className="text-slate-600 mb-6 leading-relaxed">
-                FP&A, business strategy, and the financial discipline that makes your startup investable.
-              </p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center text-slate-700">
-                  <svg className="w-5 h-5 text-accent-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  Financial Planning & Analysis
-                </li>
-                <li className="flex items-center text-slate-700">
-                  <svg className="w-5 h-5 text-accent-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  Business Strategy
-                </li>
-                <li className="flex items-center text-slate-700">
-                  <svg className="w-5 h-5 text-accent-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  Fundraising Support
-                </li>
-                <li className="flex items-center text-slate-700">
-                  <svg className="w-5 h-5 text-accent-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  Investor Due Diligence Prep
-                </li>
-              </ul>
-              <a href="/services/fractional-cfo" className="inline-flex items-center text-accent-700 hover:text-accent-800 font-semibold">
-                Explore Financial Services
+                Explore Technical Advisory
                 <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -378,9 +405,10 @@ export default function Home() {
       <section className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Who We Serve</h2>
+            <p className="text-sm uppercase tracking-[0.2em] text-accent-500 mb-4 font-medium">Selective Partnerships</p>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Built for Ambitious Founders</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Fractional CTO and CFO services for UK startups across high-growth sectors
+              We partner with a limited number of high-potential startups across these sectors
             </p>
           </div>
 
@@ -500,9 +528,10 @@ export default function Home() {
       <section id="services" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">How We Help</h2>
+            <p className="text-sm uppercase tracking-[0.2em] text-accent-500 mb-4 font-medium">Bespoke Engagements</p>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Advisory & Implementation</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Technical and financial leadership from strategy to execution
+              Hands-on leadership from strategy through execution — not just advice from the sidelines
             </p>
           </div>
 
@@ -546,28 +575,35 @@ export default function Home() {
       <section id="case-studies" className="py-24 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Recent Engagements</h2>
+            <p className="text-sm uppercase tracking-[0.2em] text-accent-500 mb-4 font-medium">Proven Track Record</p>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Client Partnerships</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Real problems solved for real startups
+              Transformational outcomes from deep, hands-on collaboration
             </p>
           </div>
 
           <div className="space-y-12">
             {caseStudies.map((study, index) => (
-              <div key={index} className="bg-white rounded-3xl shadow-lg overflow-hidden border border-slate-200 hover:shadow-2xl transition-shadow duration-300">
+              <div key={index} className="group bg-white rounded-3xl shadow-lg overflow-hidden border border-slate-200 hover:shadow-2xl hover:border-accent-200 transition-all duration-300">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                  <div className={`relative h-80 lg:h-auto ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
+                  <div className={`relative h-80 lg:h-auto overflow-hidden ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
                     <img
                       src={study.image}
                       alt={study.imageAlt || study.title}
-                      className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-500"
+                      className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                       loading="lazy"
                       width={600}
                       height={400}
                     />
+                    {/* Warm overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-accent-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    {/* Index badge */}
+                    <div className="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-md">
+                      <span className="text-sm font-bold text-primary-600">{String(index + 1).padStart(2, '0')}</span>
+                    </div>
                   </div>
                   <div className={`p-10 lg:p-12 ${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}>
-                    <h3 className="text-3xl font-bold text-slate-900 mb-4">{study.title}</h3>
+                    <h3 className="text-3xl font-bold text-slate-900 mb-4 group-hover:text-primary-700 transition-colors">{study.title}</h3>
                     <div className="space-y-6">
                       <div>
                         <h4 className="text-sm font-semibold text-primary-600 uppercase tracking-wide mb-2">Challenge</h4>
@@ -578,11 +614,11 @@ export default function Home() {
                         <p className="text-slate-600">{study.solution}</p>
                       </div>
                       <div>
-                        <h4 className="text-sm font-semibold text-primary-600 uppercase tracking-wide mb-3">Results</h4>
+                        <h4 className="text-sm font-semibold text-accent-500 uppercase tracking-wide mb-3">Results</h4>
                         <ul className="space-y-2">
                           {study.results.map((result, i) => (
-                            <li key={i} className="flex items-start">
-                              <svg className="w-5 h-5 text-accent-600 mt-0.5 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <li key={i} className="flex items-start group">
+                              <svg className="w-5 h-5 text-accent-500 mt-0.5 mr-3 flex-shrink-0 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                               </svg>
                               <span className="text-slate-700 font-medium">{result}</span>
@@ -620,9 +656,10 @@ export default function Home() {
       <section id="how-we-work" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">How We Work</h2>
+            <p className="text-sm uppercase tracking-[0.2em] text-accent-500 mb-4 font-medium">Our Methodology</p>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">The Partnership Journey</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              A structured process to get you from idea to investor-ready.
+              A structured, transparent process from discovery to delivery — and beyond.
             </p>
           </div>
 
@@ -635,6 +672,7 @@ export default function Home() {
                 1
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-3">Discover</h3>
+              <p className="text-slate-500 text-sm mb-2">Week 1-2</p>
               <p className="text-slate-600 leading-relaxed">
                 Deep-dive into your vision, market, and constraints. Define your technical roadmap and path to investor readiness.
               </p>
@@ -645,6 +683,7 @@ export default function Home() {
                 2
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-3">Build</h3>
+              <p className="text-slate-500 text-sm mb-2">Week 3-10</p>
               <p className="text-slate-600 leading-relaxed">
                 Architect scalable systems and robust financial foundations. Technology meets investor-grade reporting.
               </p>
@@ -655,6 +694,7 @@ export default function Home() {
                 3
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-3">Scale</h3>
+              <p className="text-slate-500 text-sm mb-2">Week 10+</p>
               <p className="text-slate-600 leading-relaxed">
                 Deliver a complete system ready for growth. You own everything and can operate independently.
               </p>
@@ -662,8 +702,8 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <a href="#contact" className="inline-flex items-center bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-all shadow-lg hover:shadow-xl">
-              Start the Conversation
+            <a href="#contact" className="inline-flex items-center bg-accent-400 text-primary-900 px-8 py-4 rounded-lg font-semibold hover:bg-accent-500 transition-all shadow-gold hover:shadow-gold-lg btn-premium">
+              Schedule a Strategy Call
               <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -672,78 +712,139 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-20 bg-white">
+      {/* About Section - Enhanced with Founder Credibility */}
+      <section id="about" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">About Codenest</h2>
-              <div className="space-y-5 text-slate-600 leading-relaxed text-lg">
-                <p>
-                  We partner with ambitious founders who need executive leadership — both technical and financial — but can't yet justify full-time hires.
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 py-4">
-                  <div>
-                    <h4 className="font-semibold text-slate-900 mb-2">Technology</h4>
-                    <ul className="space-y-1 text-base">
-                      <li>Platform transformations</li>
-                      <li>Scalable system design</li>
-                      <li>Engineering team building</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-slate-900 mb-2">Finance</h4>
-                    <ul className="space-y-1 text-base">
-                      <li>Investor-ready models</li>
-                      <li>Data room preparation</li>
-                      <li>Board-level reporting</li>
-                    </ul>
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <p className="text-sm uppercase tracking-[0.2em] text-accent-500 mb-4 font-medium">Our Story</p>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Built by Operators,<br className="hidden sm:block" /> for Founders</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              We've been in your shoes. Now we help ambitious founders avoid the costly mistakes we've seen — and made.
+            </p>
+          </div>
+
+          {/* Founder Card */}
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 md:p-10 border border-slate-200 shadow-sm">
+              <div className="flex flex-col md:flex-row gap-8 items-start">
+                {/* Founder Avatar */}
+                <div className="flex-shrink-0">
+                  <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary-600 to-primary-700 flex items-center justify-center text-white text-3xl font-serif shadow-lg">
+                    A
                   </div>
                 </div>
-                <p>
-                  We've worked with fintech, healthtech, and B2B SaaS founders across the UK — helping them fundraise, build investor confidence, and scale.
-                </p>
-                <p className="text-slate-900 font-semibold text-xl pt-2">
-                  Leadership that scales with you.
-                </p>
+
+                {/* Founder Info */}
+                <div className="flex-grow">
+                  <div className="flex flex-wrap items-center gap-3 mb-3">
+                    <h3 className="text-2xl font-bold text-slate-900">Ankit Rana</h3>
+                    <span className="px-3 py-1 bg-accent-100 text-accent-700 rounded-full text-xs font-semibold">Founder</span>
+                  </div>
+
+                  <p className="text-slate-600 mb-5 leading-relaxed">
+                    15+ years building and scaling technology platforms. Former engineering lead at payment processors and enterprise SaaS companies. Led teams from 5 to 50+ engineers across fintech, healthtech, and B2B platforms.
+                  </p>
+
+                  {/* Credibility Badges */}
+                  <div className="flex flex-wrap gap-3 mb-5">
+                    <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-100 rounded-lg text-sm">
+                      <svg className="w-4 h-4 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                      <span className="text-slate-700">Ex-Enterprise</span>
+                    </div>
+                    <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-100 rounded-lg text-sm">
+                      <svg className="w-4 h-4 text-accent-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      <span className="text-slate-700">Series A Experience</span>
+                    </div>
+                    <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-100 rounded-lg text-sm">
+                      <svg className="w-4 h-4 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                      </svg>
+                      <span className="text-slate-700">AWS Certified</span>
+                    </div>
+                  </div>
+
+                  {/* LinkedIn */}
+                  <a href="https://www.linkedin.com/in/arana198" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-medium text-sm">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    Connect on LinkedIn
+                  </a>
+                </div>
               </div>
             </div>
-            <div className="relative">
-              <div className="relative rounded-xl overflow-hidden shadow-xl">
-                <img
-                  src="/img/photos/hero-team.jpg"
-                  alt="Technical and financial leadership team collaborating on startup strategy"
-                  className="w-full h-[500px] object-cover filter grayscale"
-                  loading="lazy"
-                  width={800}
-                  height={500}
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-600/20 to-transparent"></div>
+          </div>
+
+          {/* Philosophy / Values (merged from Philosophy section) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            <div className="bg-white rounded-xl p-8 border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all card-lift">
+              <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-5">
+                <svg className="w-6 h-6 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                </svg>
               </div>
+              <h4 className="text-lg font-bold text-slate-900 mb-2">Scalable Systems</h4>
+              <p className="text-slate-600 text-sm leading-relaxed">Every foundation we build is designed to grow with you. Enterprise-grade architecture from day one.</p>
             </div>
+
+            <div className="bg-white rounded-xl p-8 border border-slate-200 hover:border-accent-300 hover:shadow-md transition-all card-lift">
+              <div className="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mb-5">
+                <svg className="w-6 h-6 text-accent-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h4 className="text-lg font-bold text-slate-900 mb-2">Financial Rigour</h4>
+              <p className="text-slate-600 text-sm leading-relaxed">Investor-grade financial discipline. Models and reporting that stand up to scrutiny.</p>
+            </div>
+
+            <div className="bg-white rounded-xl p-8 border border-slate-200 hover:border-emerald-300 hover:shadow-md transition-all card-lift">
+              <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-5">
+                <svg className="w-6 h-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h4 className="text-lg font-bold text-slate-900 mb-2">Founder Autonomy</h4>
+              <p className="text-slate-600 text-sm leading-relaxed">We build you up and hand over. You own everything and can operate independently.</p>
+            </div>
+          </div>
+
+          {/* Tagline */}
+          <div className="text-center">
+            <p className="text-2xl md:text-3xl font-serif text-gold-gradient font-semibold">
+              Built to scale. Ready to raise.
+            </p>
           </div>
         </div>
       </section>
 
       {/* Secondary CTA */}
-      <section className="py-20 bg-primary-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-20 bg-primary-600 relative overflow-hidden">
+        {/* Gold accent decorations */}
+        <div className="absolute top-0 left-0 w-64 h-64 bg-accent-400 opacity-5 rounded-full -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent-400 opacity-5 rounded-full translate-x-1/3 translate-y-1/3" />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+          <p className="text-sm uppercase tracking-[0.2em] text-accent-400 mb-4 font-medium">Limited Availability</p>
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Scale?
+            Ready to Partner?
           </h2>
           <p className="text-xl text-primary-200 mb-8 max-w-2xl mx-auto">
-            Book a free strategy call. No pitch — just an honest conversation about your technical and financial needs.
+            We take on a limited number of new partnerships each quarter. Schedule a confidential strategy session to explore fit.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#contact"
-              className="bg-accent-500 text-primary-900 px-10 py-4 rounded-xl text-lg font-semibold hover:bg-accent-400 transition-all shadow-lg text-center"
+              className="bg-accent-400 text-primary-900 px-10 py-4 rounded-xl text-lg font-semibold hover:bg-accent-500 transition-all shadow-gold hover:shadow-gold-lg text-center btn-premium"
             >
-              Book a Strategy Call
+              Schedule a Strategy Call
             </a>
             <a
               href="/blog"
-              className="border-2 border-white/30 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-white/10 transition-all text-center"
+              className="border-2 border-accent-400/50 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-accent-400/10 hover:border-accent-400 transition-all text-center"
             >
               Read Our Insights
             </a>
@@ -752,36 +853,83 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Common Questions</h2>
+            <p className="text-sm uppercase tracking-[0.2em] text-accent-500 mb-4 font-medium">Got questions?</p>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-4">Common Questions</h2>
+            <p className="text-slate-600">Everything you need to know about working with us</p>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <details key={index} className="group bg-white rounded-lg p-6 border border-slate-200 hover:border-primary-300 transition-colors">
-                <summary className="font-semibold text-lg text-slate-900 cursor-pointer list-none flex items-center justify-between">
-                  {faq.question}
-                  <svg className="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <details key={index} className="group bg-white rounded-xl border border-slate-200 hover:border-accent-300 hover:shadow-md transition-all overflow-hidden">
+                <summary className="font-semibold text-lg text-slate-900 cursor-pointer list-none flex items-center justify-between p-6 hover:bg-slate-50 transition-colors">
+                  <span className="flex items-center gap-4">
+                    <span className="flex-shrink-0 w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center text-accent-600 text-sm font-bold group-open:bg-accent-500 group-open:text-white transition-colors">
+                      {index + 1}
+                    </span>
+                    {faq.question}
+                  </span>
+                  <svg className="w-5 h-5 text-slate-400 group-open:text-accent-500 group-open:rotate-180 transition-all flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </summary>
-                <p className="mt-4 text-slate-600 leading-relaxed">{faq.answer}</p>
+                <div className="px-6 pb-6 pt-2 border-t border-slate-100 bg-slate-50/50">
+                  <p className="text-slate-600 leading-relaxed pl-12">{faq.answer}</p>
+                </div>
               </details>
             ))}
+          </div>
+
+          {/* Additional CTA */}
+          <div className="mt-12 text-center">
+            <p className="text-slate-600 mb-4">Still have questions?</p>
+            <a href="#contact" className="inline-flex items-center gap-2 text-accent-600 hover:text-accent-700 font-semibold">
+              Let's chat
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="contact" className="py-24 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
+        {/* Background decorations */}
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent-400 opacity-[0.02] rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-primary-600 opacity-[0.03] rounded-full blur-3xl" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-16">
+            <p className="text-sm uppercase tracking-[0.2em] text-accent-500 mb-4 font-medium">Start the conversation</p>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Let's Talk</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Schedule a conversation. No sales pitch — just an honest discussion about your technical and financial needs.
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              No sales pitch — just an honest discussion about your needs.
             </p>
+          </div>
+
+          {/* Trust indicators */}
+          <div className="flex flex-wrap justify-center gap-8 mb-12">
+            <div className="flex items-center gap-2 text-sm text-slate-600">
+              <svg className="w-5 h-5 text-accent-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Typically respond within 24hrs
+            </div>
+            <div className="flex items-center gap-2 text-sm text-slate-600">
+              <svg className="w-5 h-5 text-accent-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+              100% confidential
+            </div>
+            <div className="flex items-center gap-2 text-sm text-slate-600">
+              <svg className="w-5 h-5 text-accent-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Free initial consultation
+            </div>
           </div>
 
           <div className="max-w-3xl mx-auto">
