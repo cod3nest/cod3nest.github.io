@@ -4,34 +4,29 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'Our Story',
-  description: 'Meet Ankit Rana, founder of Codenest. 15+ years of enterprise engineering and startup leadership experience, now helping ambitious UK founders build and scale.',
+  description: 'Meet Ankit Rana, founder of Codenest. 15+ years at Deloitte Digital, Elavon, and high-growth startups. Fractional CTO and CFO helping ambitious UK founders build and scale.',
   openGraph: {
     title: 'Our Story | Codenest',
-    description: 'Meet Ankit Rana, founder of Codenest. 15+ years of enterprise engineering and startup leadership experience.',
+    description: 'Meet Ankit Rana, founder of Codenest. 15+ years at Deloitte Digital, Elavon, and high-growth startups.',
   },
 }
 
 export default function AboutPage() {
   const milestones = [
     {
-      year: "2008-2015",
+      year: "2011-2015",
       title: "Enterprise Foundations",
-      description: "Built scalable systems at major enterprises including payment processors and financial services companies. Learned what 'enterprise-grade' really means — and what startups can borrow from it."
+      description: "Built scalable systems at Deloitte Digital and Elavon (US Bancorp), working on payment processors and financial services platforms. Learned what 'enterprise-grade' really means — and what startups can borrow from it."
     },
     {
-      year: "2015-2019",
+      year: "2015-2017",
       title: "Scaling Startups",
-      description: "Led engineering teams from 5 to 50+ engineers. Experienced the chaos of hypergrowth firsthand — the technical debt, the hiring mistakes, the architecture decisions that come back to haunt you."
+      description: "Led engineering teams from 5 to 50+ engineers across fintech and healthtech. Experienced the chaos of hypergrowth firsthand — the technical debt, the hiring mistakes, the architecture decisions that come back to haunt you."
     },
     {
-      year: "2019-2022",
-      title: "Technical Leadership",
-      description: "Fractional CTO and engineering consultant for startups across fintech, healthtech, and B2B SaaS. Helped founders avoid the expensive mistakes I'd seen (and made) before."
-    },
-    {
-      year: "2022-Present",
+      year: "2017-Present",
       title: "Codenest",
-      description: "Founded Codenest to provide integrated technical and financial leadership. Because most startups don't just need a CTO or a CFO — they need someone who understands both sides."
+      description: "Founded Codenest to provide integrated technical and financial leadership for ambitious founders. Fractional CTO and CFO for startups across fintech, healthtech, proptech, and B2B SaaS — helping them build right and raise successfully."
     }
   ]
 
@@ -142,7 +137,7 @@ export default function AboutPage() {
               <div>
                 <h3 className="text-xl font-bold text-slate-900 mb-4">The Short Version</h3>
                 <p className="text-slate-600 leading-relaxed mb-4">
-                  I spent 15+ years building and scaling technology platforms — from payment processors handling millions of transactions to startups going through hypergrowth. I've led engineering teams from 5 to 50+, navigated Series A due diligence, and seen firsthand what separates startups that scale from those that struggle.
+                  I spent 15+ years building and scaling technology platforms — from payment processors at Deloitte Digital and Elavon (US Bancorp) to startups going through hypergrowth across fintech, healthtech, and proptech. I've led engineering teams from 5 to 50+, navigated Series A due diligence, and seen firsthand what separates startups that scale from those that struggle.
                 </p>
                 <p className="text-slate-600 leading-relaxed">
                   Now I help founders get it right the first time.
@@ -158,7 +153,7 @@ export default function AboutPage() {
                   I kept seeing the same patterns. Founders who needed senior guidance but couldn't justify a full-time CTO or CFO. Startups that hired dev shops and got code, but not strategy. Companies that raised money but couldn't answer basic questions about unit economics.
                 </p>
                 <p className="text-slate-600 leading-relaxed">
-                  Codenest exists to fill that gap. We provide the technical and financial leadership that early-stage startups need — with the rigour of enterprise experience and the empathy of someone who's been in the founder's seat.
+                  Codenest exists to fill that gap. We provide the technical and financial leadership that early-stage startups need — with Big 4 rigour and the empathy of someone who's been in the founder's seat.
                 </p>
               </div>
 

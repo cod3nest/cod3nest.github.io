@@ -62,13 +62,14 @@ export default function FractionalCFOPage() {
     "Financial modeling and forecasting",
     "Cash flow management and optimization",
     "Unit economics analysis",
-    "Fundraising strategy and preparation",
     "Data room creation and management",
     "Investor presentation support",
     "Board reporting and materials",
     "Budget planning and tracking",
     "Pricing strategy development",
     "Financial due diligence preparation",
+    "Finance systems implementation",
+    "Procurement systems project management",
   ]
 
   const faqs = [
@@ -165,7 +166,7 @@ export default function FractionalCFOPage() {
             <div>
               <h2 className="font-serif text-4xl font-bold text-slate-900 mb-6">What We Do</h2>
               <p className="text-xl text-slate-600 mb-8">
-                Comprehensive financial leadership covering strategy, fundraising, and operational excellence.
+                Comprehensive financial leadership covering strategy, systems implementation, and operational excellence.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {services.map((service, index) => (

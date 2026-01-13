@@ -42,6 +42,7 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Partner With Us</h4>
             <ul className="space-y-2 text-sm">
               <li><a href="/#contact" className="text-slate-400 hover:text-accent-400 transition-colors">Schedule a Strategy Call</a></li>
+              <li><Link href="/refer" className="text-slate-400 hover:text-accent-400 transition-colors">Referral Program</Link></li>
               <li><a href="https://www.linkedin.com/company/codenest-ltd" className="text-slate-400 hover:text-accent-400 transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
             </ul>
             <div className="mt-6">
