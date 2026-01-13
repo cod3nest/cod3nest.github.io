@@ -346,6 +346,8 @@ const ContactForm = () => {
           <label className="block text-sm font-semibold text-slate-700 mb-3">
             What are you looking for?
           </label>
+          {/* Hidden input to ensure engagement value is sent to EmailJS */}
+          <input type="hidden" name="engagement" value={formData.engagement} />
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
               { value: 'fractional', label: 'Fractional CTO/CFO', desc: 'Part-time leadership' },
@@ -363,10 +365,9 @@ const ContactForm = () => {
               >
                 <input
                   type="radio"
-                  name="engagement"
                   value={option.value}
                   checked={formData.engagement === option.value}
-                  onChange={handleChange}
+                  onChange={(e) => handleChange({ target: { name: 'engagement', value: e.target.value } })}
                   className="sr-only"
                 />
                 <div className="flex-grow">

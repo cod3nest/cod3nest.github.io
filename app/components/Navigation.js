@@ -27,20 +27,40 @@ export default function Navigation() {
       </a>
 
       {/* Sticky CTA - appears after scrolling past hero */}
+      {/* Desktop: bottom-right floating button */}
       <div
-        className={`fixed bottom-6 right-6 z-50 transition-all duration-300 ${
+        className={`fixed bottom-6 right-6 z-50 transition-all duration-300 hidden md:block ${
           showStickyCTA ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
         }`}
       >
         <a
           href="#contact"
-          className="flex items-center gap-2 bg-accent-400 text-primary-900 px-6 py-3 rounded-full text-sm font-semibold shadow-gold hover:shadow-gold-lg hover:bg-accent-500 transition-all btn-premium"
+          className="flex items-center gap-2 bg-accent-400 text-primary-900 px-6 py-3 rounded-full text-sm font-semibold shadow-gold hover:shadow-gold-lg hover:bg-accent-500 transition-all btn-premium cta-pulse"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
           </svg>
           Schedule a Strategy Call
         </a>
+      </div>
+
+      {/* Mobile: full-width bottom bar for better tap target */}
+      <div
+        className={`fixed bottom-0 left-0 right-0 z-50 transition-all duration-300 md:hidden ${
+          showStickyCTA ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-full pointer-events-none'
+        }`}
+      >
+        <div className="bg-white/95 backdrop-blur-sm border-t border-slate-200 px-4 py-3 safe-area-bottom">
+          <a
+            href="#contact"
+            className="flex items-center justify-center gap-2 bg-accent-400 text-primary-900 w-full py-3.5 rounded-xl text-base font-semibold shadow-gold hover:bg-accent-500 transition-all cta-pulse"
+          >
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+            Schedule a Strategy Call
+          </a>
+        </div>
       </div>
 
       <nav className="bg-white/95 backdrop-blur-sm shadow-sm fixed w-full z-50 border-b border-slate-100">
@@ -64,7 +84,7 @@ export default function Navigation() {
               <a href="/#how-we-work" className="text-slate-700 hover:text-primary-700 px-4 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Our Process</a>
               <a href="/about" className="text-slate-700 hover:text-primary-700 px-4 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Our Story</a>
               <a href="/blog" className="text-slate-700 hover:text-primary-700 px-4 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Blog</a>
-              <a href="/#contact" className="bg-accent-400 text-primary-900 px-6 py-2.5 ml-2 rounded-lg text-sm font-semibold hover:bg-accent-500 transition-all shadow-sm hover:shadow-gold btn-premium">Schedule a Strategy Call</a>
+              <a href="/#contact" className="bg-accent-400 text-primary-900 px-6 py-2.5 ml-2 rounded-lg text-sm font-semibold hover:bg-accent-500 transition-all shadow-sm hover:shadow-gold btn-premium cta-pulse">Schedule a Strategy Call</a>
             </div>
           </div>
 

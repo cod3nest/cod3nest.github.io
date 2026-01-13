@@ -133,3 +133,36 @@
     transform: translateX(100%);
   }
 }
+
+/* Subtle pulse animation for CTAs */
+@keyframes ctaPulse {
+  0%, 100% {
+    box-shadow: 0 4px 14px 0 rgba(212, 175, 55, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 20px 0 rgba(212, 175, 55, 0.5);
+  }
+}
+
+.cta-pulse {
+  animation: ctaPulse 2s ease-in-out infinite;
+}
+
+/* Attention-grabbing bounce for sticky CTA */
+@keyframes subtleBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.cta-bounce {
+  animation: subtleBounce 2s ease-in-out infinite;
+}
+
+/* Safe area for iPhone notch/home indicator */
+.safe-area-bottom {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
