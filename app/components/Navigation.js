@@ -71,7 +71,7 @@ export default function Navigation() {
               <img
                 src="/img/companylogo.svg"
                 alt="Codenest - Fractional CTO Services"
-                className="h-10 w-auto company-logo"
+                className="h-12 w-auto company-logo"
               />
             </a>
           </div>

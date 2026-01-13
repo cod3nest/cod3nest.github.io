@@ -218,17 +218,17 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div>
-              <p className="text-sm uppercase tracking-[0.2em] text-accent-500 mb-8 font-medium">
+              <p className="text-sm uppercase tracking-[0.2em] text-accent-500 mb-8 font-medium animate-hero-1">
                 Boutique Advisory for Select Founders
               </p>
-              <h1 className="font-serif text-5xl md:text-6xl font-normal text-slate-900 leading-[1.1] mb-6">
+              <h1 className="font-serif text-5xl md:text-6xl font-normal text-slate-900 leading-[1.1] mb-6 animate-hero-2">
                 Executive Firepower.<br />
                 <span className="italic">Startup Agility.</span>
               </h1>
-              <p className="text-xl text-slate-600 mb-6 leading-relaxed max-w-lg">
+              <p className="text-xl text-slate-600 mb-6 leading-relaxed max-w-lg animate-hero-3">
                 Big 4 rigour meets founder empathy. Bespoke technical and financial leadership for ambitious UK startups — without the overhead of full-time executives.
               </p>
-              <ul className="space-y-4 mb-8 max-w-lg">
+              <ul className="space-y-4 mb-8 max-w-lg animate-hero-3">
                 <li className="flex items-start text-slate-700 group">
                   <svg className="w-5 h-5 text-accent-500 mr-3 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -257,8 +257,8 @@ export default function Home() {
                   </div>
                 </li>
               </ul>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a href="#contact" className="bg-accent-400 text-primary-900 px-8 py-4 rounded-lg text-base font-semibold hover:bg-accent-500 transition-all text-center shadow-gold hover:shadow-gold-lg btn-premium">
+              <div className="flex flex-col sm:flex-row gap-4 animate-hero-4">
+                <a href="#contact" className="bg-accent-400 text-primary-900 px-8 py-4 rounded-lg text-base font-semibold hover:bg-accent-500 transition-all text-center shadow-gold hover:shadow-gold-lg btn-premium cta-pulse">
                   Schedule a Strategy Call
                 </a>
                 <a href="#case-studies" className="border-2 border-slate-300 text-slate-700 px-8 py-4 rounded-lg text-base font-semibold hover:border-accent-400 hover:text-primary-700 transition-all text-center">
@@ -266,7 +266,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative animate-hero-image">
               {/* Premium gold frame effect */}
               <div className="absolute -inset-1 bg-gradient-to-br from-accent-400/30 via-accent-500/20 to-transparent rounded-2xl blur-sm" />
               <div className="relative rounded-xl overflow-hidden h-[520px] img-warm-overlay ring-1 ring-accent-400/20">
