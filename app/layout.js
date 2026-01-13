@@ -16,11 +16,11 @@ const playfair = Playfair_Display({
 export const metadata = {
   metadataBase: new URL('https://codenest.uk'),
   title: {
-    default: 'Codenest – Fractional CTO & CFO | Startup Leadership for UK Founders',
+    default: 'Codenest – Premium Fractional CTO & CFO | Technical & Financial Leadership for UK Startups',
     template: '%s | Codenest'
   },
-  description: 'Fractional CTO and CFO leadership for UK startups. We bring the engineering rigour and financial discipline of a high-growth company — without the cost or risk of full-time executives.',
-  keywords: ['fractional CTO UK', 'fractional CFO UK', 'fractional CTO London', 'fractional CFO London', 'startup CTO UK', 'startup CFO UK', 'GitOps consulting UK', 'Infrastructure as Code UK', 'financial modeling startups', 'MVP development UK', 'Kubernetes consulting UK', 'startup engineering UK', 'DevOps consulting UK', 'fundraising support UK', 'technical leadership UK', 'financial strategy startups', '0 to 1 product UK', 'startup technical partner UK', 'Series A preparation', 'startup due diligence UK', 'fractional CTO Europe', 'fractional CFO Europe', 'part-time CTO UK', 'part-time CFO UK'],
+  description: 'Premium fractional CTO and CFO services for ambitious UK startups. Enterprise-grade technical architecture and investor-ready financial leadership — without the overhead of full-time executives. 100% due diligence pass rate.',
+  keywords: ['premium startup consultancy London', 'fractional CTO UK', 'fractional CFO UK', 'fractional CTO London', 'fractional CFO London', 'startup CTO UK', 'startup CFO UK', 'premium tech consultancy UK', 'executive leadership startups', 'GitOps consulting UK', 'Infrastructure as Code UK', 'financial modeling startups', 'MVP development UK', 'Kubernetes consulting UK', 'startup engineering UK', 'DevOps consulting UK', 'fundraising support UK', 'technical leadership UK', 'financial strategy startups', '0 to 1 product UK', 'startup technical partner UK', 'Series A preparation', 'startup due diligence UK', 'fractional CTO Europe', 'fractional CFO Europe', 'part-time CTO UK', 'part-time CFO UK', 'investor ready startups', 'startup scale up UK'],
   authors: [{ name: 'Codenest', url: 'https://codenest.uk' }],
   creator: 'Codenest',
   publisher: 'Codenest',
@@ -30,8 +30,8 @@ export const metadata = {
     telephone: false,
   },
   openGraph: {
-    title: 'Codenest – Fractional CTO & CFO for UK Startups',
-    description: 'Fractional CTO and CFO leadership for UK startups. We bring the engineering rigour and financial discipline of a high-growth company — without the cost or risk of full-time executives.',
+    title: 'Codenest – Premium Fractional CTO & CFO for UK Startups',
+    description: 'Premium technical and financial leadership for ambitious UK startups. Enterprise-grade systems, investor-ready financials, 100% due diligence pass rate.',
     type: 'website',
     locale: 'en_GB',
     url: 'https://codenest.uk',
@@ -47,8 +47,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Codenest – Fractional CTO & CFO for UK Startups',
-    description: 'Executive-grade CTO & CFO leadership for ambitious UK startups.',
+    title: 'Codenest – Premium Fractional CTO & CFO for UK Startups',
+    description: 'Premium technical & financial leadership for ambitious UK startups. 100% due diligence pass rate.',
     images: ['/img/companylogo.png'],
   },
   robots: {
@@ -77,8 +77,8 @@ export default function RootLayout({ children }) {
     url: 'https://codenest.uk',
     logo: 'https://codenest.uk/img/companylogo.png',
     image: 'https://codenest.uk/img/companylogo.png',
-    description: 'Fractional CTO and CFO leadership for UK startups. We bring the engineering rigour and financial discipline of a high-growth company — without the cost or risk of full-time executives.',
-    priceRange: '££-£££',
+    description: 'Premium fractional CTO and CFO services for ambitious UK startups. Enterprise-grade technical architecture and investor-ready financial leadership with 100% due diligence pass rate.',
+    priceRange: '£££',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'London',

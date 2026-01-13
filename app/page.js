@@ -3,6 +3,7 @@ import Navigation from './components/Navigation'
 import ContactForm from './components/ContactForm'
 import Footer from './components/Footer'
 import ServiceCard from './components/ServiceCard'
+import ClientLogos from './components/ClientLogos'
 
 export default function Home() {
   const services = [
@@ -206,13 +207,8 @@ export default function Home() {
       {/* Social Proof - Client Logos */}
       <section className="py-16 bg-white border-b border-slate-100">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-sm text-slate-400 mb-10 uppercase tracking-widest">Trusted by</p>
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20">
-            <div className="text-xl font-serif tracking-wide text-slate-400 hover:text-slate-600 transition-colors">Rungway</div>
-            <div className="text-xl font-serif tracking-wide text-slate-400 hover:text-slate-600 transition-colors">Opayo</div>
-            <div className="text-xl font-serif tracking-wide text-slate-400 hover:text-slate-600 transition-colors">Elavon</div>
-            <div className="text-xl font-serif tracking-wide text-slate-400 hover:text-slate-600 transition-colors">AstraZeneca</div>
-          </div>
+          <p className="text-center text-sm text-slate-400 mb-10 uppercase tracking-widest">Trusted by leading companies</p>
+          <ClientLogos />
         </div>
       </section>
 
@@ -249,37 +245,98 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-900 mb-4">What Founders Say</h2>
+            <p className="text-slate-600">Real feedback from startup leaders we've worked with</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl p-8 border border-slate-200 shadow-sm">
-              <div className="text-accent-500 text-4xl font-serif mb-4">"</div>
+            {/* Testimonial 1 - Replace with named testimonial when available */}
+            <div className="bg-white rounded-xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center gap-1 mb-4">
+                {[1,2,3,4,5].map((star) => (
+                  <svg key={star} className="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
               <p className="text-slate-700 mb-6 leading-relaxed">
-                They transformed our platform from handling 5 users to 1000+ concurrent users. The migration was seamless with zero downtime. Exactly the technical leadership we needed.
+                "They transformed our platform from handling 5 users to 1000+ concurrent users. The migration was seamless with zero downtime. Exactly the technical leadership we needed."
               </p>
-              <div className="border-t border-slate-100 pt-4">
-                <p className="font-semibold text-slate-900">Engineering Lead</p>
-                <p className="text-sm text-slate-500">HR-Tech Startup, London</p>
+              <div className="flex items-center gap-4 border-t border-slate-100 pt-4">
+                {/* Avatar placeholder - replace with actual photo */}
+                <div className="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center text-primary-600 font-semibold text-lg">
+                  EL
+                </div>
+                <div>
+                  <p className="font-semibold text-slate-900">Engineering Lead</p>
+                  <p className="text-sm text-slate-500">Rungway, London</p>
+                </div>
               </div>
             </div>
-            <div className="bg-white rounded-xl p-8 border border-slate-200 shadow-sm">
-              <div className="text-accent-500 text-4xl font-serif mb-4">"</div>
+
+            {/* Testimonial 2 */}
+            <div className="bg-white rounded-xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center gap-1 mb-4">
+                {[1,2,3,4,5].map((star) => (
+                  <svg key={star} className="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
               <p className="text-slate-700 mb-6 leading-relaxed">
-                Their financial modeling and due diligence preparation were instrumental in closing our Series A. Investors commented on how well-organised our data room was.
+                "Their financial modeling and due diligence preparation were instrumental in closing our Series A. Investors commented on how well-organised our data room was."
               </p>
-              <div className="border-t border-slate-100 pt-4">
-                <p className="font-semibold text-slate-900">Founder & CEO</p>
-                <p className="text-sm text-slate-500">Fintech Startup, London</p>
+              <div className="flex items-center gap-4 border-t border-slate-100 pt-4">
+                <div className="w-12 h-12 rounded-full bg-accent-100 flex items-center justify-center text-accent-700 font-semibold text-lg">
+                  FC
+                </div>
+                <div>
+                  <p className="font-semibold text-slate-900">Founder & CEO</p>
+                  <p className="text-sm text-slate-500">Fintech Startup, London</p>
+                </div>
               </div>
             </div>
-            <div className="bg-white rounded-xl p-8 border border-slate-200 shadow-sm">
-              <div className="text-accent-500 text-4xl font-serif mb-4">"</div>
-              <p className="text-slate-700 mb-6 leading-relaxed">
-                As a non-technical founder, I needed someone who could translate business requirements into technical reality. They delivered our MVP in 10 weeks with a system that just works.
-              </p>
-              <div className="border-t border-slate-100 pt-4">
-                <p className="font-semibold text-slate-900">Founder &amp; CEO</p>
-                <p className="text-sm text-slate-500">SaaS Startup, Manchester</p>
+
+            {/* Testimonial 3 */}
+            <div className="bg-white rounded-xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center gap-1 mb-4">
+                {[1,2,3,4,5].map((star) => (
+                  <svg key={star} className="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
               </div>
+              <p className="text-slate-700 mb-6 leading-relaxed">
+                "As a non-technical founder, I needed someone who could translate business requirements into technical reality. They delivered our MVP in 10 weeks with a system that just works."
+              </p>
+              <div className="flex items-center gap-4 border-t border-slate-100 pt-4">
+                <div className="w-12 h-12 rounded-full bg-primary-100 flex items-center justify-center text-primary-600 font-semibold text-lg">
+                  FC
+                </div>
+                <div>
+                  <p className="font-semibold text-slate-900">Founder & CEO</p>
+                  <p className="text-sm text-slate-500">SaaS Startup, Manchester</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Review platforms - placeholder for Trustpilot/Clutch */}
+          <div className="mt-12 pt-8 border-t border-slate-200">
+            <div className="flex flex-wrap justify-center items-center gap-8 text-slate-400">
+              <p className="text-sm">Also reviewed on:</p>
+              {/* Placeholder for Trustpilot - replace with actual widget */}
+              <a href="#" className="flex items-center gap-2 hover:text-slate-600 transition-colors">
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                </svg>
+                <span className="text-sm font-medium">Trustpilot</span>
+              </a>
+              {/* Placeholder for Clutch - replace with actual widget */}
+              <a href="#" className="flex items-center gap-2 hover:text-slate-600 transition-colors">
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+                <span className="text-sm font-medium">Clutch</span>
+              </a>
             </div>
           </div>
         </div>
@@ -664,36 +721,48 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-slate-50 rounded-xl p-10 border border-slate-200">
-              <div className="bg-primary-600 text-white w-12 h-12 rounded-lg flex items-center justify-center mb-6 text-xl font-bold shadow-md">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+            {/* Connecting line (desktop only) */}
+            <div className="hidden md:block absolute top-16 left-[20%] right-[20%] h-0.5 bg-gradient-to-r from-primary-200 via-primary-400 to-primary-200"></div>
+
+            <div className="bg-slate-50 rounded-xl p-10 border border-slate-200 relative">
+              <div className="bg-primary-600 text-white w-12 h-12 rounded-full flex items-center justify-center mb-6 text-xl font-bold shadow-md relative z-10">
                 1
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Discover</h3>
-              <p className="text-slate-600 leading-relaxed mb-6">
-                We start with a deep-dive session to understand your vision, market, and constraints. We define your technical roadmap, financial model, and path to investor readiness.
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">Discover</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Deep-dive into your vision, market, and constraints. Define your technical roadmap and path to investor readiness.
               </p>
             </div>
 
-            <div className="bg-slate-50 rounded-xl p-10 border border-slate-200">
-              <div className="bg-primary-600 text-white w-12 h-12 rounded-lg flex items-center justify-center mb-6 text-xl font-bold shadow-md">
+            <div className="bg-slate-50 rounded-xl p-10 border border-slate-200 relative">
+              <div className="bg-primary-600 text-white w-12 h-12 rounded-full flex items-center justify-center mb-6 text-xl font-bold shadow-md relative z-10">
                 2
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Build</h3>
-              <p className="text-slate-600 leading-relaxed mb-6">
-                We architect scalable systems and build robust financial foundations. Technology infrastructure meets investor-grade reporting and business strategy.
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">Build</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Architect scalable systems and robust financial foundations. Technology meets investor-grade reporting.
               </p>
             </div>
 
-            <div className="bg-slate-50 rounded-xl p-10 border border-slate-200">
-              <div className="bg-primary-600 text-white w-12 h-12 rounded-lg flex items-center justify-center mb-6 text-xl font-bold shadow-md">
+            <div className="bg-slate-50 rounded-xl p-10 border border-slate-200 relative">
+              <div className="bg-primary-600 text-white w-12 h-12 rounded-full flex items-center justify-center mb-6 text-xl font-bold shadow-md relative z-10">
                 3
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Scale</h3>
-              <p className="text-slate-600 leading-relaxed mb-6">
-                We deliver a complete system — technology, financials, and documentation — ready for growth. You own everything and can operate independently.
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">Scale</h3>
+              <p className="text-slate-600 leading-relaxed">
+                Deliver a complete system ready for growth. You own everything and can operate independently.
               </p>
             </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <a href="#contact" className="inline-flex items-center bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition-all shadow-lg hover:shadow-xl">
+              Start the Conversation
+              <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
           </div>
         </div>
       </section>
