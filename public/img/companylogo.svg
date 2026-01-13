@@ -1,39 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="220" height="50" viewBox="0 0 220 50" role="img" aria-labelledby="logo-title logo-desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="48" viewBox="0 0 240 48" role="img" aria-labelledby="logo-title logo-desc">
   <title id="logo-title">Codenest</title>
-  <desc id="logo-desc">Codenest - premium startup consultancy</desc>
+  <desc id="logo-desc">Codenest - Premium Startup Consultancy</desc>
 
   <defs>
-    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#C9A227"/>
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B8860B"/>
       <stop offset="50%" stop-color="#D4AF37"/>
-      <stop offset="100%" stop-color="#C9A227"/>
+      <stop offset="100%" stop-color="#B8860B"/>
     </linearGradient>
   </defs>
 
   <g fill="none" fill-rule="evenodd">
-    <!-- Minimal CN Mark -->
-    <g transform="translate(0, 5)">
-      <path d="M18 4 C8 4, 0 13, 0 20 C0 27, 8 36, 18 36"
-            stroke="#2C3E50"
-            stroke-width="3"
+    <!-- Refined CN Monogram -->
+    <g transform="translate(0, 6)">
+      <!-- C - elegant open curve -->
+      <path d="M16 2 C6 2, 0 10, 0 18 C0 26, 6 34, 16 34"
+            stroke="#1a2e3b"
+            stroke-width="2.5"
             stroke-linecap="round"
             fill="none"/>
-      <path d="M22 36 L22 4 L36 36 L36 0"
-            stroke="#2C3E50"
-            stroke-width="3"
+
+      <!-- N - clean geometric form -->
+      <path d="M22 34 L22 2"
+            stroke="#1a2e3b"
+            stroke-width="2.5"
             stroke-linecap="round"
-            stroke-linejoin="round"
             fill="none"/>
-      <rect x="34" y="0" width="3" height="10" rx="1.5" fill="url(#goldGradient)"/>
+      <path d="M22 2 L38 34"
+            stroke="#1a2e3b"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            fill="none"/>
+      <path d="M38 34 L38 2"
+            stroke="#1a2e3b"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            fill="none"/>
+
+      <!-- Gold accent bar - subtle refinement -->
+      <rect x="36" y="0" width="2.5" height="8" rx="1.25" fill="url(#goldAccent)"/>
     </g>
 
-    <!-- Wordmark - refined letterspace -->
-    <text x="52" y="33"
-          font-family="Georgia, 'Times New Roman', serif"
-          font-size="24"
+    <!-- Divider line -->
+    <line x1="52" y1="12" x2="52" y2="36" stroke="#d1d5db" stroke-width="1"/>
+
+    <!-- Wordmark - refined spacing -->
+    <text x="64" y="32"
+          font-family="Georgia, 'Palatino Linotype', 'Book Antiqua', Palatino, serif"
+          font-size="22"
           font-weight="400"
-          letter-spacing="4"
-          fill="#2C3E50">
+          letter-spacing="6"
+          fill="#1a2e3b">
       CODENEST
     </text>
   </g>

@@ -2,33 +2,42 @@
   <title id="icon-title">Codenest Icon</title>
 
   <defs>
-    <linearGradient id="iconGoldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#D4AF37"/>
-      <stop offset="50%" stop-color="#E5C158"/>
-      <stop offset="100%" stop-color="#D4AF37"/>
+    <linearGradient id="iconGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B8860B"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#B8860B"/>
     </linearGradient>
   </defs>
 
   <g fill="none" fill-rule="evenodd">
     <!-- Premium CN Monogram -->
-    <g transform="translate(4, 4)">
-      <!-- C shape -->
-      <path d="M20 4 C8 4, 0 14, 0 22 C0 30, 8 40, 20 40"
-            stroke="#2C3E50"
-            stroke-width="5"
+    <g transform="translate(4, 6)">
+      <!-- C - elegant open curve -->
+      <path d="M16 2 C6 2, 0 10, 0 18 C0 26, 6 34, 16 34"
+            stroke="#1a2e3b"
+            stroke-width="3.5"
             stroke-linecap="round"
             fill="none"/>
 
-      <!-- N shape with ascending stroke -->
-      <path d="M24 40 L24 4 L40 40 L40 0"
-            stroke="#2C3E50"
-            stroke-width="5"
+      <!-- N - clean geometric form -->
+      <path d="M22 34 L22 2"
+            stroke="#1a2e3b"
+            stroke-width="3.5"
             stroke-linecap="round"
-            stroke-linejoin="round"
+            fill="none"/>
+      <path d="M22 2 L38 34"
+            stroke="#1a2e3b"
+            stroke-width="3.5"
+            stroke-linecap="round"
+            fill="none"/>
+      <path d="M38 34 L38 2"
+            stroke="#1a2e3b"
+            stroke-width="3.5"
+            stroke-linecap="round"
             fill="none"/>
 
-      <!-- Gold accent -->
-      <rect x="37" y="0" width="5" height="14" rx="2.5" fill="url(#iconGoldGradient)"/>
+      <!-- Gold accent bar -->
+      <rect x="35.5" y="0" width="4" height="10" rx="2" fill="url(#iconGold)"/>
     </g>
   </g>
 </svg>
