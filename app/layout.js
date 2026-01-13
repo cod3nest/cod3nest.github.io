@@ -19,7 +19,7 @@ export const metadata = {
     default: 'Codenest – Boutique Technical & Financial Advisory for UK Startups',
     template: '%s | Codenest'
   },
-  description: 'Fractional CTO and CFO services for UK tech startups. Technical architecture, financial modeling, and fundraising support from ex-Deloitte leadership. 100% due diligence pass rate. Based in London.',
+  description: 'London-based fractional CTO and CFO for UK startups. Ex-Deloitte leadership delivering technical architecture, financial modeling, and fundraising support. 100% due diligence pass rate. Trusted by seed to Series A founders across fintech, healthtech, and B2B SaaS.',
   keywords: ['boutique startup advisory London', 'fractional CTO UK', 'fractional CFO UK', 'startup advisory London', 'executive advisory startups', 'premium tech consultancy UK', 'bespoke startup consulting', 'Big 4 startup advisory', 'GitOps consulting UK', 'Infrastructure as Code UK', 'financial modeling startups', 'MVP development UK', 'Kubernetes consulting UK', 'startup engineering UK', 'DevOps consulting UK', 'fundraising support UK', 'technical leadership UK', 'financial strategy startups', '0 to 1 product UK', 'startup technical partner UK', 'Series A preparation', 'startup due diligence UK', 'boutique consultancy UK', 'select founders UK', 'investor ready startups', 'startup scale up UK', 'technical co-founder UK', 'startup co-founder London', 'CTO co-founder', 'find technical co-founder', 'tech co-founder partnership', 'co-founder for startup UK', 'technical partner equity', 'startup equity partnership'],
   authors: [{ name: 'Codenest', url: 'https://codenest.uk' }],
   creator: 'Codenest',

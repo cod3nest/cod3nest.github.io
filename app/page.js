@@ -140,8 +140,77 @@ export default function Home() {
     }
   ]
 
+  // FAQ Schema for SEO
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(faq => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer
+      }
+    }))
+  }
+
+  // Service Schema for SEO
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Business Consulting',
+    provider: {
+      '@type': 'ProfessionalService',
+      name: 'Codenest',
+      url: 'https://codenest.uk'
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'United Kingdom'
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Startup Advisory Services',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Fractional CTO',
+            description: 'Part-time technical leadership for startups. Architecture decisions, team building, and investor readiness.'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Fractional CFO',
+            description: 'Part-time financial leadership for startups. Financial modeling, fundraising support, and strategic planning.'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: '0-to-1 Product Development',
+            description: 'End-to-end MVP development from strategy to launch.'
+          }
+        }
+      ]
+    }
+  }
+
   return (
     <div className="min-h-screen bg-white">
+      {/* Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Navigation />
 
       {/* Hero Section */}
@@ -993,6 +1062,41 @@ export default function Home() {
               className="border-2 border-accent-400/50 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-accent-400/10 hover:border-accent-400 transition-all text-center"
             >
               Read Our Insights
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Insights Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="text-sm uppercase tracking-[0.2em] text-accent-500 mb-3 font-medium">Resources</p>
+            <h2 className="font-serif text-2xl md:text-3xl font-bold text-slate-900">Featured Insights</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <a href="/blog/fractional-cto-vs-full-time-cto-uk-startups" className="group p-5 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
+              <span className="text-xs font-medium text-accent-600 uppercase tracking-wide">Guide</span>
+              <h3 className="text-lg font-semibold text-slate-900 mt-2 group-hover:text-primary-600 transition-colors">Fractional vs Full-Time CTO: The Real Cost Analysis</h3>
+              <p className="text-sm text-slate-600 mt-2">Beyond salary: hidden costs and strategic trade-offs for UK startups.</p>
+            </a>
+            <a href="/blog/financial-modeling-seed-stage-startups" className="group p-5 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
+              <span className="text-xs font-medium text-accent-600 uppercase tracking-wide">Finance</span>
+              <h3 className="text-lg font-semibold text-slate-900 mt-2 group-hover:text-primary-600 transition-colors">Financial Modeling for Seed-Stage Startups</h3>
+              <p className="text-sm text-slate-600 mt-2">What investors actually want to see in your financial model.</p>
+            </a>
+            <a href="/blog/investor-due-diligence-what-to-expect" className="group p-5 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
+              <span className="text-xs font-medium text-accent-600 uppercase tracking-wide">Fundraising</span>
+              <h3 className="text-lg font-semibold text-slate-900 mt-2 group-hover:text-primary-600 transition-colors">What Investors Look for in Due Diligence</h3>
+              <p className="text-sm text-slate-600 mt-2">Prepare your data room and avoid common pitfalls.</p>
+            </a>
+          </div>
+          <div className="text-center mt-8">
+            <a href="/blog" className="text-primary-600 hover:text-primary-700 font-medium inline-flex items-center gap-2">
+              View all insights
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </a>
           </div>
         </div>
