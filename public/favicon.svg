@@ -1,31 +1,50 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
     <linearGradient id="favGoldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#D4AF37"/>
-      <stop offset="50%" stop-color="#E5C158"/>
-      <stop offset="100%" stop-color="#D4AF37"/>
+      <stop offset="0%" stop-color="#B8860B"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#B8860B"/>
+    </linearGradient>
+    <linearGradient id="favGoldShine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E5C158"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#B8860B"/>
     </linearGradient>
   </defs>
 
-  <rect width="64" height="64" rx="12" fill="#2C3E50"/>
+  <!-- Background with subtle gold border -->
+  <rect x="1" y="1" width="62" height="62" rx="12" fill="#2C3E50"/>
+  <rect x="1" y="1" width="62" height="62" rx="12" fill="none" stroke="url(#favGoldGradient)" stroke-width="1.5"/>
 
   <g fill="none" fill-rule="evenodd">
     <!-- Premium CN Monogram -->
     <g transform="translate(10, 12)">
-      <path d="M20 4 C8 4, 0 14, 0 22 C0 30, 8 40, 20 40"
+      <!-- C - elegant curve -->
+      <path d="M18 4 C8 4, 0 13, 0 22 C0 31, 8 40, 18 40"
             stroke="#FFFFFF"
-            stroke-width="5"
+            stroke-width="4.5"
             stroke-linecap="round"
             fill="none"/>
 
-      <path d="M24 40 L24 4 L42 40 L42 0"
+      <!-- N - geometric form -->
+      <path d="M24 40 L24 4"
             stroke="#FFFFFF"
-            stroke-width="5"
+            stroke-width="4.5"
             stroke-linecap="round"
-            stroke-linejoin="round"
+            fill="none"/>
+      <path d="M24 4 L42 40"
+            stroke="#FFFFFF"
+            stroke-width="4.5"
+            stroke-linecap="round"
+            fill="none"/>
+      <path d="M42 40 L42 4"
+            stroke="#FFFFFF"
+            stroke-width="4.5"
+            stroke-linecap="round"
             fill="none"/>
 
-      <rect x="39" y="0" width="5" height="14" rx="2.5" fill="url(#favGoldGradient)"/>
+      <!-- Gold accent bar - prominent -->
+      <rect x="39" y="0" width="5" height="12" rx="2.5" fill="url(#favGoldShine)"/>
     </g>
   </g>
 </svg>

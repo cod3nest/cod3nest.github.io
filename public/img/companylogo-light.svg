@@ -1,10 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="260" height="48" viewBox="0 0 260 48" role="img" aria-labelledby="logo-title logo-desc">
   <title id="logo-title">Codenest</title>
-  <desc id="logo-desc">Codenest - Premium Startup Consultancy (light version)</desc>
+  <desc id="logo-desc">Codenest - Boutique Startup Advisory (light version)</desc>
 
   <defs>
     <linearGradient id="goldAccentLight" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#E5C158"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+    <linearGradient id="goldShineLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F0D875"/>
       <stop offset="50%" stop-color="#E5C158"/>
       <stop offset="100%" stop-color="#D4AF37"/>
     </linearGradient>
@@ -37,19 +42,22 @@
             stroke-linecap="round"
             fill="none"/>
 
-      <!-- Gold accent bar -->
-      <rect x="36" y="0" width="2.5" height="8" rx="1.25" fill="url(#goldAccentLight)"/>
+      <!-- Gold accent bar - more prominent -->
+      <rect x="36" y="0" width="3" height="10" rx="1.5" fill="url(#goldShineLight)"/>
     </g>
 
     <!-- Divider line -->
     <line x1="56" y1="12" x2="56" y2="36" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
 
     <!-- Wordmark -->
-    <text x="68" y="32"
+    <text x="68" y="31"
           font-family="Georgia, 'Palatino Linotype', 'Book Antiqua', Palatino, serif"
           font-size="22"
           font-weight="400"
-          letter-spacing="5"
+          letter-spacing="4"
           fill="#ffffff">CODENEST</text>
+
+    <!-- Subtle gold underline accent -->
+    <line x1="68" y1="36" x2="118" y2="36" stroke="url(#goldAccentLight)" stroke-width="1.5" stroke-linecap="round"/>
   </g>
 </svg>
