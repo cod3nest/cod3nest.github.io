@@ -569,6 +569,14 @@ export default function Home() {
               ))}
             </div>
           </div>
+
+          {/* Co-founder mention */}
+          <div className="mt-16 pt-12 border-t border-slate-200 text-center">
+            <p className="text-slate-600">
+              Building something exceptional? For the right opportunity, we also consider{' '}
+              <a href="#cofounder" className="text-primary-600 hover:text-primary-700 font-medium">co-founder partnerships</a>.
+            </p>
+          </div>
         </div>
       </section>
 
