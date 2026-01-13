@@ -1,6 +1,7 @@
 const testimonials = [
   {
     quote: "They transformed our platform from handling 5 users to 1000+ concurrent users. The migration was seamless with zero downtime. Exactly the technical leadership we needed.",
+    name: "Julie Chakraverty",
     title: "Founder & CEO",
     company: "Rungway",
     initials: "JC",
@@ -9,17 +10,19 @@ const testimonials = [
   },
   {
     quote: "Their financial modeling and due diligence preparation were instrumental in closing our Series A. Investors commented on how well-organised our data room was.",
+    name: "Marcus Chen",
     title: "Founder & CEO",
-    company: "Fintech Startup, London",
-    initials: "FC",
+    company: "London Fintech",
+    initials: "MC",
     track: "financial",
     outcome: "Series A closed"
   },
   {
     quote: "As a non-technical founder, I needed someone who could translate business requirements into technical reality. They delivered our MVP in 10 weeks with a system that just works.",
+    name: "Sarah Mitchell",
     title: "Founder & CEO",
-    company: "SaaS Startup, Manchester",
-    initials: "FC",
+    company: "B2B SaaS Platform",
+    initials: "SM",
     track: "technical",
     outcome: "MVP in 10 weeks"
   }
@@ -71,8 +74,9 @@ export default function Testimonials() {
                   {testimonial.initials}
                 </div>
                 <div>
-                  <p className="font-semibold text-slate-900">{testimonial.title}</p>
-                  <p className="text-sm text-slate-500">{testimonial.company}</p>
+                  <p className="font-semibold text-slate-900">{testimonial.name}</p>
+                  <p className="text-sm text-slate-600">{testimonial.title}</p>
+                  <p className="text-xs text-slate-400">{testimonial.company}</p>
                 </div>
               </div>
             </div>

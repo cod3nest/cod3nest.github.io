@@ -27,7 +27,6 @@ export default function Footer() {
               <li><Link href="/services/fractional-cfo" className="text-slate-400 hover:text-accent-400 transition-colors">Financial Strategy</Link></li>
               <li><a href="/#services" className="text-slate-400 hover:text-accent-400 transition-colors">0-to-1 Product Builds</a></li>
               <li><a href="/#services" className="text-slate-400 hover:text-accent-400 transition-colors">AI & Data Engineering</a></li>
-              <li><a href="/#services" className="text-slate-400 hover:text-accent-400 transition-colors">Due Diligence</a></li>
             </ul>
           </div>
           <div>
@@ -35,7 +34,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li><a href="/#case-studies" className="text-slate-400 hover:text-accent-400 transition-colors">Client Partnerships</a></li>
               <li><a href="/#how-we-work" className="text-slate-400 hover:text-accent-400 transition-colors">Our Methodology</a></li>
-              <li><a href="/#about" className="text-slate-400 hover:text-accent-400 transition-colors">Our Story</a></li>
+              <li><a href="/about" className="text-slate-400 hover:text-accent-400 transition-colors">Our Story</a></li>
               <li><Link href="/blog" className="text-slate-400 hover:text-accent-400 transition-colors">Insights</Link></li>
             </ul>
           </div>

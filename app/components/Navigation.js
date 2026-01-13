@@ -62,7 +62,7 @@ export default function Navigation() {
               <a href="/#case-studies" className="text-slate-700 hover:text-primary-700 px-4 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Case Studies</a>
               <a href="/#services" className="text-slate-700 hover:text-primary-700 px-4 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Services</a>
               <a href="/#how-we-work" className="text-slate-700 hover:text-primary-700 px-4 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Our Process</a>
-              <a href="/#about" className="text-slate-700 hover:text-primary-700 px-4 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Our Story</a>
+              <a href="/about" className="text-slate-700 hover:text-primary-700 px-4 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Our Story</a>
               <a href="/blog" className="text-slate-700 hover:text-primary-700 px-4 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Blog</a>
               <a href="/#contact" className="bg-accent-400 text-primary-900 px-6 py-2.5 ml-2 rounded-lg text-sm font-semibold hover:bg-accent-500 transition-all shadow-sm hover:shadow-gold btn-premium">Schedule a Strategy Call</a>
             </div>
@@ -91,7 +91,7 @@ export default function Navigation() {
               <a href="/#case-studies" className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">Case Studies</a>
               <a href="/#services" className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">Services</a>
               <a href="/#how-we-work" className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">Our Process</a>
-              <a href="/#about" className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">Our Story</a>
+              <a href="/about" className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">Our Story</a>
               <a href="/blog" className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">Blog</a>
               <a href="/#contact" className="bg-accent-400 text-primary-900 font-semibold block px-3 py-2 text-base rounded-lg hover:bg-accent-500 transition-all shadow-sm">Schedule a Strategy Call</a>
             </div>

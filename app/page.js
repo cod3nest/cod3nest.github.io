@@ -63,14 +63,6 @@ export default function Home() {
       image: "/img/photos/infrastructure.jpg",
       outcomes: ["Automated deployments", "Infrastructure as code", "Zero-downtime releases"],
       track: "technical"
-    },
-    {
-      title: "Due Diligence",
-      benefit: "Satisfy investors with comprehensive assessments",
-      description: "Technical and financial due diligence that gives investors confidence. We identify risks, validate scalability, and create actionable roadmaps.",
-      image: "/img/photos/service-diligence.jpg",
-      outcomes: ["Investor-ready reports", "Risk mitigation plan", "Scalability roadmap"],
-      track: "technical"
     }
   ]
 
@@ -167,24 +159,33 @@ export default function Home() {
               <p className="text-xl text-slate-600 mb-6 leading-relaxed max-w-lg">
                 Big 4 rigour meets founder empathy. Bespoke technical and financial leadership for ambitious UK startups — without the overhead of full-time executives.
               </p>
-              <ul className="space-y-3 mb-8 max-w-lg">
-                <li className="flex items-center text-slate-700 group">
-                  <svg className="w-5 h-5 text-accent-500 mr-3 flex-shrink-0 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <ul className="space-y-4 mb-8 max-w-lg">
+                <li className="flex items-start text-slate-700 group">
+                  <svg className="w-5 h-5 text-accent-500 mr-3 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Enterprise-grade expertise, startup pricing
+                  <div>
+                    <span className="font-medium">Save 60-80% vs full-time executives</span>
+                    <span className="text-slate-500 text-sm block">Enterprise-grade expertise, founder-friendly terms</span>
+                  </div>
                 </li>
-                <li className="flex items-center text-slate-700 group">
-                  <svg className="w-5 h-5 text-accent-500 mr-3 flex-shrink-0 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <li className="flex items-start text-slate-700 group">
+                  <svg className="w-5 h-5 text-accent-500 mr-3 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Investor-ready in weeks, not months
+                  <div>
+                    <span className="font-medium">Investor-ready in 8-12 weeks</span>
+                    <span className="text-slate-500 text-sm block">Data room, financial models, technical architecture</span>
+                  </div>
                 </li>
-                <li className="flex items-center text-slate-700 group">
-                  <svg className="w-5 h-5 text-accent-500 mr-3 flex-shrink-0 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <li className="flex items-start text-slate-700 group">
+                  <svg className="w-5 h-5 text-accent-500 mr-3 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  100% due diligence pass rate
+                  <div>
+                    <span className="font-medium">100% due diligence pass rate</span>
+                    <span className="text-slate-500 text-sm block">Proven track record across 15+ startups</span>
+                  </div>
                 </li>
               </ul>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -202,7 +203,7 @@ export default function Home() {
               <div className="relative rounded-xl overflow-hidden h-[520px] img-warm-overlay ring-1 ring-accent-400/20">
                 <Image
                   src="/img/photos/hero-team.jpg"
-                  alt="Technical and financial team collaborating on startup strategy"
+                  alt="Strategic advisory session for startup founders"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -512,7 +513,7 @@ export default function Home() {
 
           <div className="mt-12 text-center">
             <p className="text-slate-600 mb-6">
-              Serving startups across London, Manchester, Edinburgh, and throughout the UK and Europe
+              Based in London, serving ambitious founders across the UK tech ecosystem
             </p>
             <a href="#contact" className="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold">
               Discuss your sector-specific needs
@@ -578,7 +579,7 @@ export default function Home() {
             <p className="text-sm uppercase tracking-[0.2em] text-accent-500 mb-4 font-medium">Proven Track Record</p>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Client Partnerships</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Transformational outcomes from deep, hands-on collaboration
+              From high-growth startups to FTSE 100 enterprises — transformational outcomes from deep, hands-on collaboration
             </p>
           </div>
 
@@ -712,112 +713,148 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section - Enhanced with Founder Credibility */}
-      <section id="about" className="py-24 bg-white">
+      {/* Why Founders Choose Us - Comparison Section */}
+      <section className="py-24 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Section Header */}
           <div className="text-center mb-16">
-            <p className="text-sm uppercase tracking-[0.2em] text-accent-500 mb-4 font-medium">Our Story</p>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Built by Operators,<br className="hidden sm:block" /> for Founders</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              We've been in your shoes. Now we help ambitious founders avoid the costly mistakes we've seen — and made.
+            <p className="text-sm uppercase tracking-[0.2em] text-accent-400 mb-4 font-medium">The Right Partner</p>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-white mb-6">Why Founders Choose Us</h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Not every model works for every stage. Here's how we compare.
             </p>
           </div>
 
-          {/* Founder Card */}
-          <div className="max-w-4xl mx-auto mb-16">
-            <div className="bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 md:p-10 border border-slate-200 shadow-sm">
-              <div className="flex flex-col md:flex-row gap-8 items-start">
-                {/* Founder Avatar */}
-                <div className="flex-shrink-0">
-                  <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary-600 to-primary-700 flex items-center justify-center text-white text-3xl font-serif shadow-lg">
-                    A
-                  </div>
-                </div>
-
-                {/* Founder Info */}
-                <div className="flex-grow">
-                  <div className="flex flex-wrap items-center gap-3 mb-3">
-                    <h3 className="text-2xl font-bold text-slate-900">Ankit Rana</h3>
-                    <span className="px-3 py-1 bg-accent-100 text-accent-700 rounded-full text-xs font-semibold">Founder</span>
-                  </div>
-
-                  <p className="text-slate-600 mb-5 leading-relaxed">
-                    15+ years building and scaling technology platforms. Former engineering lead at payment processors and enterprise SaaS companies. Led teams from 5 to 50+ engineers across fintech, healthtech, and B2B platforms.
-                  </p>
-
-                  {/* Credibility Badges */}
-                  <div className="flex flex-wrap gap-3 mb-5">
-                    <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-100 rounded-lg text-sm">
-                      <svg className="w-4 h-4 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                      <span className="text-slate-700">Ex-Enterprise</span>
-                    </div>
-                    <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-100 rounded-lg text-sm">
-                      <svg className="w-4 h-4 text-accent-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      <span className="text-slate-700">Series A Experience</span>
-                    </div>
-                    <div className="flex items-center gap-2 px-3 py-1.5 bg-slate-100 rounded-lg text-sm">
-                      <svg className="w-4 h-4 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                      </svg>
-                      <span className="text-slate-700">AWS Certified</span>
-                    </div>
-                  </div>
-
-                  {/* LinkedIn */}
-                  <a href="https://www.linkedin.com/in/arana198" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-medium text-sm">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg>
-                    Connect on LinkedIn
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Philosophy / Values (merged from Philosophy section) */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            <div className="bg-white rounded-xl p-8 border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all card-lift">
-              <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-5">
-                <svg className="w-6 h-6 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                </svg>
-              </div>
-              <h4 className="text-lg font-bold text-slate-900 mb-2">Scalable Systems</h4>
-              <p className="text-slate-600 text-sm leading-relaxed">Every foundation we build is designed to grow with you. Enterprise-grade architecture from day one.</p>
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            {/* Full-time Exec */}
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
+              <h3 className="text-lg font-bold text-slate-400 mb-4">Full-time CTO/CFO</h3>
+              <ul className="space-y-3 text-sm">
+                <li className="flex items-start gap-2">
+                  <svg className="w-4 h-4 text-red-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  <span className="text-slate-400">£150-250k+ annual cost</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="w-4 h-4 text-red-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  <span className="text-slate-400">3-6 month hiring process</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="w-4 h-4 text-red-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  <span className="text-slate-400">Equity dilution required</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                  </svg>
+                  <span className="text-slate-400">Often overkill for early stage</span>
+                </li>
+              </ul>
+              <p className="text-xs text-slate-500 mt-4">Best for: Post-Series B</p>
             </div>
 
-            <div className="bg-white rounded-xl p-8 border border-slate-200 hover:border-accent-300 hover:shadow-md transition-all card-lift">
-              <div className="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center mb-5">
-                <svg className="w-6 h-6 text-accent-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <h4 className="text-lg font-bold text-slate-900 mb-2">Financial Rigour</h4>
-              <p className="text-slate-600 text-sm leading-relaxed">Investor-grade financial discipline. Models and reporting that stand up to scrutiny.</p>
+            {/* Dev Shop */}
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
+              <h3 className="text-lg font-bold text-slate-400 mb-4">Dev Shop / Agency</h3>
+              <ul className="space-y-3 text-sm">
+                <li className="flex items-start gap-2">
+                  <svg className="w-4 h-4 text-red-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  <span className="text-slate-400">Executes specs, not strategy</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="w-4 h-4 text-red-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  <span className="text-slate-400">No skin in the game</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="w-4 h-4 text-red-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  <span className="text-slate-400">Junior devs on your project</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="w-4 h-4 text-red-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  <span className="text-slate-400">No investor credibility</span>
+                </li>
+              </ul>
+              <p className="text-xs text-slate-500 mt-4">Best for: Defined feature work</p>
             </div>
 
-            <div className="bg-white rounded-xl p-8 border border-slate-200 hover:border-emerald-300 hover:shadow-md transition-all card-lift">
-              <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-5">
-                <svg className="w-6 h-6 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h4 className="text-lg font-bold text-slate-900 mb-2">Founder Autonomy</h4>
-              <p className="text-slate-600 text-sm leading-relaxed">We build you up and hand over. You own everything and can operate independently.</p>
+            {/* Solo Freelancer */}
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
+              <h3 className="text-lg font-bold text-slate-400 mb-4">Solo Freelancer</h3>
+              <ul className="space-y-3 text-sm">
+                <li className="flex items-start gap-2">
+                  <svg className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                  </svg>
+                  <span className="text-slate-400">Limited capacity</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="w-4 h-4 text-red-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  <span className="text-slate-400">Rarely has exec experience</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="w-4 h-4 text-red-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  <span className="text-slate-400">Single domain expertise</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="w-4 h-4 text-red-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  <span className="text-slate-400">Bus factor risk</span>
+                </li>
+              </ul>
+              <p className="text-xs text-slate-500 mt-4">Best for: Specific technical tasks</p>
             </div>
-          </div>
 
-          {/* Tagline */}
-          <div className="text-center">
-            <p className="text-2xl md:text-3xl font-serif text-gold-gradient font-semibold">
-              Built to scale. Ready to raise.
-            </p>
+            {/* Codenest - Highlighted */}
+            <div className="bg-gradient-to-br from-accent-500/20 to-accent-600/10 rounded-xl p-6 border-2 border-accent-400 relative">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-accent-400 text-primary-900 text-xs font-bold rounded-full">
+                BEST FIT
+              </div>
+              <h3 className="text-lg font-bold text-accent-400 mb-4">Codenest</h3>
+              <ul className="space-y-3 text-sm">
+                <li className="flex items-start gap-2">
+                  <svg className="w-4 h-4 text-accent-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-white">60-80% cost savings</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="w-4 h-4 text-accent-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-white">Start in 1-2 weeks</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="w-4 h-4 text-accent-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-white">Big 4 + startup experience</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <svg className="w-4 h-4 text-accent-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-white">Tech + finance integrated</span>
+                </li>
+              </ul>
+              <p className="text-xs text-accent-300 mt-4">Best for: Pre-seed to Series A</p>
+            </div>
           </div>
         </div>
       </section>

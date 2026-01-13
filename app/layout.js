@@ -19,7 +19,7 @@ export const metadata = {
     default: 'Codenest – Boutique Technical & Financial Advisory for UK Startups',
     template: '%s | Codenest'
   },
-  description: 'Boutique advisory for ambitious founders. Big 4 rigour meets startup agility. Bespoke technical and financial leadership for select UK startups — executive firepower without the overhead.',
+  description: 'Fractional CTO and CFO services for UK tech startups. Technical architecture, financial modeling, and fundraising support from ex-Deloitte leadership. 100% due diligence pass rate. Based in London.',
   keywords: ['boutique startup advisory London', 'fractional CTO UK', 'fractional CFO UK', 'startup advisory London', 'executive advisory startups', 'premium tech consultancy UK', 'bespoke startup consulting', 'Big 4 startup advisory', 'GitOps consulting UK', 'Infrastructure as Code UK', 'financial modeling startups', 'MVP development UK', 'Kubernetes consulting UK', 'startup engineering UK', 'DevOps consulting UK', 'fundraising support UK', 'technical leadership UK', 'financial strategy startups', '0 to 1 product UK', 'startup technical partner UK', 'Series A preparation', 'startup due diligence UK', 'boutique consultancy UK', 'select founders UK', 'investor ready startups', 'startup scale up UK'],
   authors: [{ name: 'Codenest', url: 'https://codenest.uk' }],
   creator: 'Codenest',
@@ -31,7 +31,7 @@ export const metadata = {
   },
   openGraph: {
     title: 'Codenest – Boutique Advisory for Ambitious Founders',
-    description: 'Big 4 rigour meets startup agility. Bespoke technical and financial leadership for select UK startups. Executive firepower, startup pricing.',
+    description: 'Big 4 rigour meets startup agility. Fractional CTO and CFO services for select UK startups. Executive firepower, founder-friendly terms.',
     type: 'website',
     locale: 'en_GB',
     url: 'https://codenest.uk',
@@ -48,7 +48,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Codenest – Boutique Advisory for Ambitious Founders',
-    description: 'Big 4 rigour meets startup agility. Executive firepower, startup pricing.',
+    description: 'Fractional CTO and CFO services for UK startups. Executive firepower, founder-friendly terms.',
     images: ['/img/companylogo.png'],
   },
   robots: {
@@ -77,7 +77,7 @@ export default function RootLayout({ children }) {
     url: 'https://codenest.uk',
     logo: 'https://codenest.uk/img/companylogo.png',
     image: 'https://codenest.uk/img/companylogo.png',
-    description: 'Boutique technical and financial advisory for ambitious UK founders. Big 4 rigour meets startup agility. Executive firepower, startup pricing.',
+    description: 'Boutique technical and financial advisory for ambitious UK founders. Big 4 rigour meets startup agility. Fractional CTO and CFO services with executive firepower.',
     priceRange: '£££',
     address: {
       '@type': 'PostalAddress',
