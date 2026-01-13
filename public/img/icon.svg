@@ -10,34 +10,34 @@
   </defs>
 
   <g fill="none" fill-rule="evenodd">
-    <!-- Premium CN Monogram -->
-    <g transform="translate(4, 6)">
+    <!-- Premium CN Monogram - centered with padding for strokes -->
+    <g transform="translate(3, 5)">
       <!-- C - elegant open curve -->
-      <path d="M16 2 C6 2, 0 10, 0 18 C0 26, 6 34, 16 34"
+      <path d="M14 2 C5 2, 0 9, 0 18 C0 27, 5 36, 14 36"
             stroke="#1a2e3b"
-            stroke-width="3.5"
+            stroke-width="3"
             stroke-linecap="round"
             fill="none"/>
 
       <!-- N - clean geometric form -->
-      <path d="M22 34 L22 2"
+      <path d="M20 36 L20 2"
             stroke="#1a2e3b"
-            stroke-width="3.5"
+            stroke-width="3"
             stroke-linecap="round"
             fill="none"/>
-      <path d="M22 2 L38 34"
+      <path d="M20 2 L38 36"
             stroke="#1a2e3b"
-            stroke-width="3.5"
+            stroke-width="3"
             stroke-linecap="round"
             fill="none"/>
-      <path d="M38 34 L38 2"
+      <path d="M38 36 L38 2"
             stroke="#1a2e3b"
-            stroke-width="3.5"
+            stroke-width="3"
             stroke-linecap="round"
             fill="none"/>
 
       <!-- Gold accent bar -->
-      <rect x="35.5" y="0" width="4" height="10" rx="2" fill="url(#iconGold)"/>
+      <rect x="36" y="0" width="3.5" height="10" rx="1.75" fill="url(#iconGold)"/>
     </g>
   </g>
 </svg>

@@ -8,7 +8,6 @@ Location: United Kingdom
 /* THANKS */
 Built with: Next.js 15, TailwindCSS
 Hosted on: GitHub Pages
-Design assistance: Claude Code by Anthropic
 
 /* SITE */
 Last update: 2024/11/05

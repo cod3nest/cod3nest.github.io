@@ -19,11 +19,10 @@ const conversions = [
   { input: 'icon.svg', output: 'icon-256.png', size: 256 },
   { input: 'icon.svg', output: 'icon-512.png', size: 512 },
 
-  // Monochrome icons
-  { input: 'icon-mono-white.svg', output: 'icon-mono-white-256.png', size: 256 },
-  { input: 'icon-mono-black.svg', output: 'icon-mono-black-256.png', size: 256 },
+  // Company logo for OG/meta images
+  { input: 'companylogo.svg', output: 'companylogo.png', width: 1200 },
 
-  // Full logo at higher resolutions
+  // Full logo at higher resolutions (remove if not needed)
   { input: 'companylogo.svg', output: 'companylogo-480.png', width: 480 },
   { input: 'companylogo.svg', output: 'companylogo-960.png', width: 960 },
   { input: 'companylogo-light.svg', output: 'companylogo-light-480.png', width: 480 },
