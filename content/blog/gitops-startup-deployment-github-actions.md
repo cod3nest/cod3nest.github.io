@@ -1,9 +1,10 @@
 ---
 title: 'GitOps for Startups: When Automated Deployments Are Worth the Investment'
+description: 'When automated deployments are worth the investment. A practical guide to deciding if GitOps is right for your startup stage and team size.'
 date: '2025-05-12'
 author: 'Ankit Rana'
 readTime: '7 min read'
-tags: ['GitOps', 'DevOps', 'Deployments', 'Technical Decisions']
+tags: ['GitOps', 'DevOps']
 ---
 
 # GitOps for Startups: When Automated Deployments Are Worth the Investment

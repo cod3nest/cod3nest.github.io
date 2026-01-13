@@ -1,9 +1,10 @@
 ---
 title: "Kubernetes for Startups: When It Makes Sense (And When It Doesn't)"
+description: 'The honest answer to "should we use Kubernetes?" Avoid premature optimisation and painful re-architecture with this stage-appropriate guide.'
 date: '2025-06-25'
 author: 'Ankit Rana'
 readTime: '7 min read'
-tags: ['Kubernetes', 'Infrastructure', 'Scaling', 'Technical Decisions']
+tags: ['Kubernetes', 'Infrastructure']
 ---
 
 # Kubernetes for Startups: When It Makes Sense (And When It Doesn't)

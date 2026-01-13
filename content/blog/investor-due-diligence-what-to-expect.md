@@ -1,9 +1,10 @@
 ---
 title: "What Investors Look for in Due Diligence: A Founder's Preparation Guide"
+description: 'What investors actually examine during due diligence, how to prepare your data room, and common pitfalls that cause deals to fall apart.'
 date: '2025-09-22'
 author: 'Ankit Rana'
 readTime: '10 min read'
-tags: ['Due Diligence', 'Fundraising', 'Investor Relations', 'Data Room']
+tags: ['Due Diligence', 'Fundraising']
 ---
 
 # What Investors Look for in Due Diligence: A Founder's Preparation Guide

@@ -859,6 +859,107 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Beyond Advisory - Co-founder Section */}
+      <section id="cofounder" className="py-24 bg-gradient-to-b from-slate-50 to-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-sm uppercase tracking-[0.2em] text-slate-400 mb-4 font-medium">Exceptional Opportunities</p>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Beyond Advisory: Co-founder Partnerships
+            </h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Most of our work is fractional — time-bound, cash-based, designed to make you self-sufficient. But occasionally, we meet a founder building something we can't stop thinking about.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            {/* What we consider */}
+            <div className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-3">
+                <span className="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center">
+                  <svg className="w-4 h-4 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </span>
+                For the right opportunity
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3 text-slate-600">
+                  <svg className="w-5 h-5 text-primary-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Technical co-founder roles</span>
+                </li>
+                <li className="flex items-start gap-3 text-slate-600">
+                  <svg className="w-5 h-5 text-primary-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Equity-based partnerships</span>
+                </li>
+                <li className="flex items-start gap-3 text-slate-600">
+                  <svg className="w-5 h-5 text-primary-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Long-term commitment (2-5+ years)</span>
+                </li>
+                <li className="flex items-start gap-3 text-slate-600">
+                  <svg className="w-5 h-5 text-primary-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Full technical leadership & ownership</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* What makes it right */}
+            <div className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-3">
+                <span className="w-8 h-8 bg-accent-100 rounded-lg flex items-center justify-center">
+                  <svg className="w-4 h-4 text-accent-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                  </svg>
+                </span>
+                What makes it "right"
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3 text-slate-600">
+                  <span className="w-5 h-5 flex items-center justify-center text-accent-500 font-bold flex-shrink-0">1</span>
+                  <span>Strong founder-market fit</span>
+                </li>
+                <li className="flex items-start gap-3 text-slate-600">
+                  <span className="w-5 h-5 flex items-center justify-center text-accent-500 font-bold flex-shrink-0">2</span>
+                  <span>Problem I'm genuinely passionate about</span>
+                </li>
+                <li className="flex items-start gap-3 text-slate-600">
+                  <span className="w-5 h-5 flex items-center justify-center text-accent-500 font-bold flex-shrink-0">3</span>
+                  <span>Clear path to meaningful scale</span>
+                </li>
+                <li className="flex items-start gap-3 text-slate-600">
+                  <span className="w-5 h-5 flex items-center justify-center text-accent-500 font-bold flex-shrink-0">4</span>
+                  <span>Values and vision alignment</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* CTA and Note */}
+          <div className="text-center">
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-4 rounded-xl font-semibold hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl mb-6"
+            >
+              Start a Confidential Conversation
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+            <p className="text-sm text-slate-500 max-w-md mx-auto">
+              <strong className="text-slate-700">Note:</strong> I take on at most one co-founder role per year. Most conversations start as advisory engagements — it's the best way to test working chemistry.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Secondary CTA */}
       <section className="py-20 bg-primary-600 relative overflow-hidden">
         {/* Gold accent decorations */}

@@ -1,9 +1,10 @@
 ---
 title: 'AWS Infrastructure for Growing Startups: Choosing the Right Tools'
+description: 'Cut through the IaC noise—Terraform, CloudFormation, CDK, Pulumi. How to choose the right infrastructure tools for your stage.'
 date: '2025-04-08'
 author: 'Ankit Rana'
 readTime: '8 min read'
-tags: ['AWS', 'Infrastructure', 'Terraform', 'Technical Decisions']
+tags: ['AWS', 'Terraform']
 ---
 
 # AWS Infrastructure for Growing Startups: Choosing the Right Tools

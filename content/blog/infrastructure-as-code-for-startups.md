@@ -1,9 +1,10 @@
 ---
 title: 'Infrastructure as Code for Startups: Why It Matters for Your Next Raise'
+description: 'Why "we click around in the AWS console" raises red flags during due diligence, and how to implement IaC without derailing product development.'
 date: '2025-07-18'
 author: 'Ankit Rana'
 readTime: '8 min read'
-tags: ['Infrastructure', 'DevOps', 'Technical Due Diligence', 'Terraform']
+tags: ['Infrastructure', 'Due Diligence']
 ---
 
 # Infrastructure as Code for Startups: Why It Matters for Your Next Raise

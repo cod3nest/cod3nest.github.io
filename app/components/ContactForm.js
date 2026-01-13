@@ -29,6 +29,7 @@ const ContactForm = () => {
     name: '',
     email: '',
     company: '',
+    engagement: '',
     message: ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -220,7 +221,7 @@ const ContactForm = () => {
         type: 'success',
         message: 'Thank you! Your message has been sent successfully. We will get back to you soon.'
       })
-      setFormData({ name: '', email: '', company: '', message: '' })
+      setFormData({ name: '', email: '', company: '', engagement: '', message: '' })
       setEmailValidation({ status: 'idle', message: '', suggestion: null })
     } catch (error) {
       setSubmitStatus({
@@ -339,6 +340,51 @@ const ContactForm = () => {
             className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all text-slate-900"
             placeholder="Your Company"
           />
+        </div>
+
+        <div>
+          <label className="block text-sm font-semibold text-slate-700 mb-3">
+            What are you looking for?
+          </label>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {[
+              { value: 'fractional', label: 'Fractional CTO/CFO', desc: 'Part-time leadership' },
+              { value: 'project', label: 'Project Work', desc: 'MVP or specific build' },
+              { value: 'advisory', label: 'Advisory', desc: 'Strategic guidance' },
+              { value: 'cofounder', label: 'Co-founder Fit', desc: 'Deeper partnership' },
+            ].map((option) => (
+              <label
+                key={option.value}
+                className={`relative flex items-start p-3 rounded-xl border-2 cursor-pointer transition-all ${
+                  formData.engagement === option.value
+                    ? 'border-primary-500 bg-primary-50'
+                    : 'border-slate-200 hover:border-slate-300 bg-white'
+                }`}
+              >
+                <input
+                  type="radio"
+                  name="engagement"
+                  value={option.value}
+                  checked={formData.engagement === option.value}
+                  onChange={handleChange}
+                  className="sr-only"
+                />
+                <div className="flex-grow">
+                  <span className={`block text-sm font-medium ${
+                    formData.engagement === option.value ? 'text-primary-700' : 'text-slate-900'
+                  }`}>
+                    {option.label}
+                  </span>
+                  <span className="block text-xs text-slate-500 mt-0.5">{option.desc}</span>
+                </div>
+                {formData.engagement === option.value && (
+                  <svg className="w-5 h-5 text-primary-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                )}
+              </label>
+            ))}
+          </div>
         </div>
 
         <div>

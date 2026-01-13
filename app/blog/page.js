@@ -42,58 +42,48 @@ export default function BlogPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+      <section className="pt-32 pb-12 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Engineering Insights
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+            Insights
           </h1>
-          <p className="text-xl text-slate-300 leading-relaxed">
-            Practical lessons from scaling startups, building resilient infrastructure, and shipping products that matter.
+          <p className="text-lg text-slate-600">
+            Practical guidance for startup founders on technical leadership, finance, and scaling.
           </p>
         </div>
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="py-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {blogPosts.map((post) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
                 className="group"
               >
-                <article className="bg-white rounded-2xl border border-slate-200 p-6 hover:shadow-xl transition-all duration-300 hover:border-accent-500 h-full flex flex-col">
+                <article className="bg-white rounded-xl border border-slate-200 p-5 hover:shadow-md hover:border-slate-300 transition-all h-full flex flex-col">
                   <div className="flex-grow">
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {post.tags.map((tag) => (
+                    <div className="flex items-center gap-2 mb-3">
+                      {post.tags.slice(0, 2).map((tag) => (
                         <span
                           key={tag}
-                          className="text-xs font-medium px-3 py-1 bg-accent-100 text-primary-800 rounded-full"
+                          className="text-xs font-medium px-2 py-0.5 bg-slate-100 text-slate-600 rounded"
                         >
                           {tag}
                         </span>
                       ))}
+                      <span className="text-xs text-slate-400 ml-auto">{post.readTime}</span>
                     </div>
 
-                    <h2 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-primary-600 transition-colors">
+                    <h2 className="text-lg font-semibold text-slate-900 mb-2 group-hover:text-primary-600 transition-colors leading-snug">
                       {post.title}
                     </h2>
 
-                    <p className="text-slate-600 leading-relaxed mb-4">
-                      {post.content.substring(0, 150)}...
+                    <p className="text-sm text-slate-600 leading-relaxed">
+                      {post.description}
                     </p>
-                  </div>
-
-                  <div className="flex items-center justify-between text-sm text-slate-500 pt-4 border-t border-slate-100">
-                    <time dateTime={post.date}>
-                      {new Date(post.date).toLocaleDateString('en-US', {
-                        month: 'short',
-                        day: 'numeric',
-                        year: 'numeric'
-                      })}
-                    </time>
-                    <span>{post.readTime}</span>
                   </div>
                 </article>
               </Link>
@@ -103,19 +93,16 @@ export default function BlogPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-            Ready to accelerate your startup?
-          </h2>
-          <p className="text-xl text-slate-600 mb-8">
-            We provide fractional executive leadership to help startups build, scale, and raise.
+      <section className="py-12 border-t border-slate-200">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-slate-600 mb-4">
+            Need fractional executive leadership to help your startup build, scale, and raise?
           </p>
           <a
             href="/#contact"
-            className="inline-block bg-accent-500 text-primary-900 px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-accent-600 transition-all shadow-lg hover:shadow-xl"
+            className="inline-block text-primary-600 font-medium hover:text-primary-700 transition-colors"
           >
-            Book a Discovery Call
+            Book a discovery call &rarr;
           </a>
         </div>
       </section>

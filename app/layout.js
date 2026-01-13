@@ -20,7 +20,7 @@ export const metadata = {
     template: '%s | Codenest'
   },
   description: 'Fractional CTO and CFO services for UK tech startups. Technical architecture, financial modeling, and fundraising support from ex-Deloitte leadership. 100% due diligence pass rate. Based in London.',
-  keywords: ['boutique startup advisory London', 'fractional CTO UK', 'fractional CFO UK', 'startup advisory London', 'executive advisory startups', 'premium tech consultancy UK', 'bespoke startup consulting', 'Big 4 startup advisory', 'GitOps consulting UK', 'Infrastructure as Code UK', 'financial modeling startups', 'MVP development UK', 'Kubernetes consulting UK', 'startup engineering UK', 'DevOps consulting UK', 'fundraising support UK', 'technical leadership UK', 'financial strategy startups', '0 to 1 product UK', 'startup technical partner UK', 'Series A preparation', 'startup due diligence UK', 'boutique consultancy UK', 'select founders UK', 'investor ready startups', 'startup scale up UK'],
+  keywords: ['boutique startup advisory London', 'fractional CTO UK', 'fractional CFO UK', 'startup advisory London', 'executive advisory startups', 'premium tech consultancy UK', 'bespoke startup consulting', 'Big 4 startup advisory', 'GitOps consulting UK', 'Infrastructure as Code UK', 'financial modeling startups', 'MVP development UK', 'Kubernetes consulting UK', 'startup engineering UK', 'DevOps consulting UK', 'fundraising support UK', 'technical leadership UK', 'financial strategy startups', '0 to 1 product UK', 'startup technical partner UK', 'Series A preparation', 'startup due diligence UK', 'boutique consultancy UK', 'select founders UK', 'investor ready startups', 'startup scale up UK', 'technical co-founder UK', 'startup co-founder London', 'CTO co-founder', 'find technical co-founder', 'tech co-founder partnership', 'co-founder for startup UK', 'technical partner equity', 'startup equity partnership'],
   authors: [{ name: 'Codenest', url: 'https://codenest.uk' }],
   creator: 'Codenest',
   publisher: 'Codenest',
@@ -124,7 +124,9 @@ export default function RootLayout({ children }) {
       'MVP Development',
       'Financial Modeling',
       'Fundraising',
-      'Startup Financial Strategy'
+      'Startup Financial Strategy',
+      'Technical Co-founder Partnerships',
+      'Startup Equity Partnerships'
     ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
@@ -311,6 +313,14 @@ export default function RootLayout({ children }) {
         acceptedAnswer: {
           '@type': 'Answer',
           text: 'GitOps is a way of managing infrastructure and deployments using Git as the single source of truth. It enables automated, repeatable deployments with full audit trails. For startups, it means faster releases, fewer bugs, and easier scaling.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you offer technical co-founder partnerships?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'For exceptional opportunities, we consider equity-based co-founder partnerships. These are highly selective—typically 1-2 per year. We look for founders with deep domain expertise, validated markets, and complementary skills. Learn more at codenest.uk/cofounder.'
         }
       }
     ]

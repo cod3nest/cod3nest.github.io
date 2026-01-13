@@ -1,9 +1,10 @@
 ---
 title: 'Extending Your Runway: A Practical Guide to Startup Cash Management'
+description: 'Practical strategies to extend your runway without sacrificing growth. Cash management tactics that work for seed and Series A startups.'
 date: '2025-08-10'
 author: 'Ankit Rana'
 readTime: '9 min read'
-tags: ['Runway', 'Cash Management', 'Startup Finance', 'Burn Rate']
+tags: ['Cash Management', 'Startup Finance']
 ---
 
 # Extending Your Runway: A Practical Guide to Startup Cash Management
