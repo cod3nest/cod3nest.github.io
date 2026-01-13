@@ -4,12 +4,12 @@ import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 
 export const metadata = {
-  title: 'Fractional CTO Services UK | Technical Leadership for Ambitious Startups',
-  description: 'Fractional CTO leadership for UK startups. We bring the engineering rigour of a high-growth company — without the cost or risk of a full-time executive.',
-  keywords: ['fractional CTO UK', 'fractional CTO London', 'part-time CTO', 'startup CTO', 'technical leadership', 'CTO as a service', 'interim CTO UK'],
+  title: 'Fractional CTO Services London | Part-Time Technical Leadership UK',
+  description: 'Expert fractional CTO services for London and UK startups. Senior technical leadership from £3k/month. Architecture, hiring, due diligence prep. Book a free consultation.',
+  keywords: ['fractional CTO UK', 'fractional CTO London', 'part-time CTO', 'startup CTO', 'technical leadership', 'CTO as a service', 'interim CTO UK', 'fractional CTO cost', 'startup technical leadership'],
   openGraph: {
-    title: 'Fractional CTO Services | Codenest',
-    description: 'Engineering rigour and technical leadership for UK startups — without the overhead.',
+    title: 'Fractional CTO Services London | Codenest',
+    description: 'Engineering rigour and technical leadership for UK startups — without the overhead. From £3k/month.',
     type: 'website',
     url: 'https://codenest.uk/services/fractional-cto',
   },
@@ -90,8 +90,50 @@ export default function FractionalCTOPage() {
     },
   ]
 
+  // FAQ Schema for rich snippets
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(faq => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer
+      }
+    }))
+  }
+
+  // Service Schema
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Fractional CTO Services',
+    description: 'Part-time technical leadership for startups. Architecture, team building, and strategic guidance.',
+    provider: {
+      '@type': 'Organization',
+      name: 'Codenest',
+      url: 'https://codenest.uk'
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'United Kingdom'
+    },
+    serviceType: 'Technical Leadership Consulting'
+  }
+
   return (
     <div className="min-h-screen bg-white">
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+
       <Navigation />
 
       {/* Hero Section */}

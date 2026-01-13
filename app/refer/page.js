@@ -3,13 +3,17 @@ import Footer from '../components/Footer'
 import CopyButton from '../components/CopyButton'
 
 export const metadata = {
-  title: 'Referral Program – Earn Up to £2,000 | Codenest',
-  description: 'Refer founders who need technical or financial leadership. Earn up to £2,000 for successful introductions to Codenest.',
+  title: 'Refer a UK Startup, Earn Up to £2,000 | Codenest Partner Program',
+  description: 'Refer London and UK startups needing fractional CTO or CFO support. Earn up to £2,000 per successful engagement. Simple referral program for VCs, accelerators, and founders.',
+  keywords: ['startup referral program UK', 'refer a startup', 'fractional CTO referral', 'VC referral fees', 'startup partner program London'],
   openGraph: {
     title: 'Codenest Referral Program – Earn Up to £2,000',
-    description: 'Know a founder who needs a fractional CTO or CFO? Refer them to Codenest and earn up to £2,000.',
+    description: 'Know a UK founder who needs a fractional CTO or CFO? Refer them to Codenest and earn up to £2,000 per engagement.',
     type: 'website',
     url: 'https://codenest.uk/refer',
+  },
+  alternates: {
+    canonical: 'https://codenest.uk/refer',
   },
 }
 

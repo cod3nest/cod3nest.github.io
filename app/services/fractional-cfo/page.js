@@ -4,12 +4,12 @@ import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 
 export const metadata = {
-  title: 'Financial & Business Strategy | FP&A for UK Startups',
-  description: 'Financial planning & analysis, business strategy, and investor-ready reporting for UK startups. The financial discipline of a high-growth company — without the overhead.',
-  keywords: ['FP&A UK', 'financial planning analysis', 'startup CFO', 'financial strategy', 'business strategy', 'financial modeling', 'startup finance UK'],
+  title: 'Fractional CFO Services London | Startup Financial Planning UK',
+  description: 'Expert fractional CFO for London and UK startups. Financial modeling, fundraising support, investor relations from £2.5k/month. SEIS/EIS expertise. Book consultation.',
+  keywords: ['fractional CFO UK', 'fractional CFO London', 'startup CFO', 'FP&A UK', 'financial planning analysis', 'financial strategy', 'startup finance UK', 'part-time CFO'],
   openGraph: {
-    title: 'Financial & Business Strategy | Codenest',
-    description: 'FP&A and business strategy leadership for UK startups — without the overhead.',
+    title: 'Fractional CFO Services London | Codenest',
+    description: 'FP&A and financial strategy for UK startups — investor-ready financials without the overhead.',
     type: 'website',
     url: 'https://codenest.uk/services/fractional-cfo',
   },
@@ -91,8 +91,50 @@ export default function FractionalCFOPage() {
     },
   ]
 
+  // FAQ Schema for rich snippets
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(faq => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer
+      }
+    }))
+  }
+
+  // Service Schema
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Fractional CFO Services',
+    description: 'Part-time financial leadership for startups. FP&A, financial modeling, and fundraising support.',
+    provider: {
+      '@type': 'Organization',
+      name: 'Codenest',
+      url: 'https://codenest.uk'
+    },
+    areaServed: {
+      '@type': 'Country',
+      name: 'United Kingdom'
+    },
+    serviceType: 'Financial Leadership Consulting'
+  }
+
   return (
     <div className="min-h-screen bg-white">
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+
       <Navigation />
 
       {/* Hero Section */}
