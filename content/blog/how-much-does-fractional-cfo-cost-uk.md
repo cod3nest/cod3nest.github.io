@@ -2,7 +2,7 @@
 title: 'How Much Does a Fractional CFO Cost in the UK? 2026 Pricing Guide'
 description: 'Complete UK pricing guide for fractional CFO services in 2026. Retainer ranges, day rates, full-time cost comparisons, and how to budget at every stage.'
 date: '2026-08-04'
-author: 'Ankit Rana'
+author: 'Michelle Rana'
 readTime: '7 min read'
 tags: ['Fractional CFO', 'Pricing', 'Startup Finance']
 ---

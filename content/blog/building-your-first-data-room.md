@@ -2,7 +2,7 @@
 title: 'Building Your First Data Room: What Investors Expect to See'
 description: 'Complete guide to creating a data room for fundraising. What documents to include, how to organise them, and common mistakes to avoid.'
 date: '2024-12-28'
-author: 'Ankit Rana'
+author: 'Michelle Rana'
 readTime: '9 min read'
 tags: ['Fundraising', 'Due Diligence', 'Data Room']
 ---

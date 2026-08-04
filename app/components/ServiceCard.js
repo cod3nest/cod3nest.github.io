@@ -1,35 +1,33 @@
-import Image from 'next/image'
 import Link from 'next/link'
 
-export default function ServiceCard({ service, priority = false }) {
+export default function ServiceCard({ service }) {
   const isTech = service.track === 'technical'
   const trackBorderClass = isTech ? 'service-card-tech' : 'service-card-financial'
   const href = service.href || (isTech ? '/services/fractional-cto' : '/services/fractional-cfo')
 
   return (
     <Link href={href} className={`group bg-white border border-slate-200 rounded-xl hover:shadow-xl transition-all duration-300 overflow-hidden h-full flex flex-col card-lift ${trackBorderClass}`}>
-      {/* Image Section with warm overlay */}
-      <div className="relative h-56 overflow-hidden img-warm-overlay">
-        <Image
-          src={service.image}
-          alt={`${service.title} - ${service.benefit}`}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-cover group-hover:scale-105 transition-transform duration-500 filter grayscale group-hover:grayscale-0"
-          priority={priority}
-        />
-        {/* Gradient overlay with track-specific tint */}
-        <div className={`absolute inset-0 bg-gradient-to-t ${isTech ? 'from-primary-900/80' : 'from-accent-900/70'} via-slate-900/30 to-transparent`} />
+      {/* Track panel. Deliberately not a photograph: every stock image available
+          is an engineering scene, which mislabelled the financial services as
+          technical work. Colour carries the track instead. */}
+      <div
+        className={`relative h-56 overflow-hidden flex items-end ${
+          isTech
+            ? 'bg-gradient-to-br from-primary-800 to-primary-600'
+            : 'bg-gradient-to-br from-accent-800 to-accent-600'
+        }`}
+      >
+        <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
 
         {/* Track indicator badge */}
         <div className="absolute top-4 right-4">
-          <span className={`px-2.5 py-1 rounded-full text-xs font-medium ${isTech ? 'bg-primary-600 text-white' : 'bg-accent-400 text-primary-900'}`}>
+          <span className={`px-2.5 py-1 rounded-full text-xs font-semibold ${isTech ? 'bg-white text-primary-800' : 'bg-accent-400 text-primary-900'}`}>
             {isTech ? 'Technical' : 'Financial'}
           </span>
         </div>
 
-        <div className="absolute bottom-5 left-5 right-5">
-          <h3 className="text-xl font-bold text-white drop-shadow-lg">{service.title}</h3>
+        <div className="relative p-5">
+          <h3 className="text-xl font-bold text-white">{service.title}</h3>
         </div>
       </div>
 

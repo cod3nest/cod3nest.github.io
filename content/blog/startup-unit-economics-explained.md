@@ -2,7 +2,7 @@
 title: 'Startup Unit Economics Explained: CAC, LTV, and the Metrics That Matter'
 description: 'Complete guide to unit economics for startup founders. Learn how to calculate CAC, LTV, payback period, and why these metrics matter for fundraising.'
 date: '2024-12-22'
-author: 'Ankit Rana'
+author: 'Michelle Rana'
 readTime: '10 min read'
 tags: ['Finance', 'Metrics', 'Unit Economics']
 ---

@@ -81,20 +81,21 @@ export default function Navigation() {
             </a>
           </div>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:block">
+          {/* Desktop Menu — six links plus the CTA need lg; at md they overflow. */}
+          <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-1">
-              <Link href="/services/fractional-cto" className="text-slate-700 hover:text-primary-700 px-4 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Fractional CTO</Link>
-              <Link href="/services/fractional-cfo" className="text-slate-700 hover:text-primary-700 px-4 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Fractional CFO</Link>
-              <a href="/case-studies" className="text-slate-700 hover:text-primary-700 px-4 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Case Studies</a>
-              <a href="/about" className="text-slate-700 hover:text-primary-700 px-4 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">About</a>
-              <a href="/blog" className="text-slate-700 hover:text-primary-700 px-4 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Blog</a>
+              <Link href="/services" className="text-slate-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Services</Link>
+              <Link href="/services/fractional-cto" className="text-slate-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Fractional CTO</Link>
+              <Link href="/services/fractional-cfo" className="text-slate-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Fractional CFO</Link>
+              <a href="/case-studies" className="text-slate-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Case Studies</a>
+              <a href="/about" className="text-slate-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">About</a>
+              <a href="/blog" className="text-slate-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Blog</a>
               <a href={contactHref} className="bg-accent-400 text-primary-900 px-6 py-2.5 ml-2 rounded-lg text-sm font-semibold hover:bg-accent-500 transition-all shadow-sm hover:shadow-gold">Request a Strategy Call</a>
             </div>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-slate-700 hover:text-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg p-2"
@@ -111,8 +112,9 @@ export default function Navigation() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div id="mobile-menu" className="md:hidden">
+          <div id="mobile-menu" className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-slate-100">
+              <Link href="/services" onClick={() => setIsMenuOpen(false)} className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">Services</Link>
               <Link href="/services/fractional-cto" onClick={() => setIsMenuOpen(false)} className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">Fractional CTO</Link>
               <Link href="/services/fractional-cfo" onClick={() => setIsMenuOpen(false)} className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">Fractional CFO</Link>
               <a href="/case-studies" onClick={() => setIsMenuOpen(false)} className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">Case Studies</a>

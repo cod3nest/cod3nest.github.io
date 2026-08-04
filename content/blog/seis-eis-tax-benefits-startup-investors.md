@@ -2,7 +2,7 @@
 title: 'SEIS and EIS Explained: UK Tax Benefits for Startup Investors'
 description: 'Complete guide to SEIS and EIS tax relief schemes for UK startup investors. Understand the benefits, eligibility, and how startups can become SEIS/EIS qualifying.'
 date: '2025-01-04'
-author: 'Ankit Rana'
+author: 'Michelle Rana'
 readTime: '9 min read'
 tags: ['Fundraising', 'Finance', 'UK Startups']
 ---

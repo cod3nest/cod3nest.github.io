@@ -59,7 +59,6 @@ const services =
       title: "Fractional CTO",
       benefit: "Executive-level technical leadership at a fraction of the cost",
       description: "Make confident architecture decisions, build the right team, and become investor-ready. Strategic guidance for fintech, healthtech, and SaaS startups across the UK.",
-      image: "/img/photos/service-cto.jpg",
       outcomes: ["Save 60-80% vs full-time CTO", "Investor-ready in weeks", "Scale your team confidently"],
       track: "technical"
     },
@@ -67,7 +66,6 @@ const services =
       title: "Fractional CFO",
       benefit: "FP&A and strategic finance leadership",
       description: "Financial planning & analysis, business strategy, and investor-ready reporting. The financial discipline of a high-growth company — without the overhead.",
-      image: "/img/photos/service-diligence.jpg",
       outcomes: ["Financial modeling & forecasting", "Business strategy development", "Investor-ready reporting"],
       track: "business"
     },
@@ -75,7 +73,6 @@ const services =
       title: "0-to-1 Product Builds",
       benefit: "Launch your MVP in weeks, not months",
       description: "Go from idea to production-ready product with a system built to scale. No rebuilding later, no technical debt from day one.",
-      image: "/img/photos/service-product.jpg",
       outcomes: ["8-12 week delivery", "Built to handle growth", "Full ownership handover"],
       track: "technical"
     },
@@ -83,7 +80,6 @@ const services =
       title: "Financial Modeling",
       benefit: "Know your numbers before investors ask",
       description: "3-statement models, unit economics, and scenario planning. Financial models that stand up to due diligence scrutiny.",
-      image: "/img/photos/infrastructure.jpg",
       outcomes: ["3-statement models", "Unit economics analysis", "Scenario planning"],
       track: "business"
     },
@@ -91,7 +87,6 @@ const services =
       title: "AI & Data Engineering",
       benefit: "Turn AI experiments into production revenue",
       description: "Move beyond prototypes. We build production-grade LLM applications, ML pipelines, and data infrastructure that actually scale.",
-      image: "/img/photos/service-ai.jpg",
       outcomes: ["Production-ready AI", "Cost-optimized inference", "Scalable data pipelines"],
       track: "technical"
     },
@@ -99,7 +94,6 @@ const services =
       title: "Fundraising Support",
       benefit: "Close your round with confidence",
       description: "Pitch deck financial sections, data room preparation, and investor Q&A coaching. We've helped startups raise from pre-seed to Series A.",
-      image: "/img/photos/hero-team.jpg",
       outcomes: ["Data room ready", "Financial due diligence prep", "Valuation support"],
       track: "business"
     },
@@ -107,9 +101,15 @@ const services =
       title: "DevOps & Platform Engineering",
       benefit: "Deploy daily with zero downtime",
       description: "Automated infrastructure, CI/CD pipelines, and GitOps workflows. Ship confidently and iterate fast from day one.",
-      image: "/img/photos/infrastructure.jpg",
       outcomes: ["Automated deployments", "Infrastructure as code", "Zero-downtime releases"],
       track: "technical"
+    },
+    {
+      title: "Financial Controls & Governance",
+      benefit: "Close the books faster, with numbers you can trust",
+      description: "Month-end close discipline, purchasing and payroll controls, and CapEx governance. The financial plumbing that stops surprises reaching your board.",
+      outcomes: ["Faster, cleaner month-end close", "Audit-ready controls", "CapEx and spend governance"],
+      track: "business"
     }
   ]
 
@@ -179,14 +179,17 @@ export default function ServicesPage() {
                   Hands-on leadership from strategy through execution — not just advice from the sidelines
                 </p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-4">
-                {services.filter(s => s.track === 'technical').map((service, index) => (
-                  <ServiceCard key={service.title} service={service} priority={false} />
+              <h3 className="text-sm uppercase tracking-[0.2em] text-primary-700 font-semibold mb-6">Technical Track &mdash; Fractional CTO</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-14">
+                {services.filter(s => s.track === 'technical').map((service) => (
+                  <ServiceCard key={service.title} service={service} />
                 ))}
               </div>
+
+              <h3 className="text-sm uppercase tracking-[0.2em] text-accent-700 font-semibold mb-6">Financial Track &mdash; Fractional CFO</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {services.filter(s => s.track === 'business').map((service, index) => (
-                  <ServiceCard key={service.title} service={service} priority={false} />
+                {services.filter(s => s.track === 'business').map((service) => (
+                  <ServiceCard key={service.title} service={service} />
                 ))}
               </div>
             </div>
