@@ -347,7 +347,7 @@ export default function Home() {
 
           </div>
           <p className="text-center text-sm text-slate-600 mt-8">
-            Led by <a href="/about" className="font-semibold text-primary-700 hover:text-primary-800">Ankit Rana</a> — 15+ years building and scaling platforms, from early-career engineering at Deloitte Digital and Elavon (US Bancorp) to fractional CTO and CFO engagements today.
+            Led by <a href="/about" className="font-semibold text-primary-700 hover:text-primary-800">Ankit Rana</a>, Fractional CTO — 15+ years across Deloitte Digital, Elavon (US Bancorp) and Opayo — and <a href="/about" className="font-semibold text-primary-700 hover:text-primary-800">Michelle Rana FCCA</a>, Fractional CFO, who took a business from &pound;35m to &pound;165m revenue while improving EBITDA margin by 4%.
           </p>
         </div>
       </section>
