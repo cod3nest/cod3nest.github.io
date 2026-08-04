@@ -36,7 +36,7 @@ const caseStudies = [
   {
     title: "Opayo by Elavon: Payment Platform Transformation",
     challenge: "Leading UK fintech payment provider needed Kubernetes consulting to modernize their infrastructure and integrate new payment channels (Apple Pay, Google Pay) while maintaining 100% uptime for critical transaction processing across Europe.",
-    solution: "Working inside the Opayo platform team, our founder orchestrated a comprehensive AWS EKS migration with Kubernetes and Helm, implementing GitOps workflows and Infrastructure as Code using Terraform — managing the transition from monolithic architecture to microservices, establishing Jenkins CI/CD pipelines on Kubernetes, and scaling engineering culture across distributed teams.",
+    solution: "Working inside the Opayo platform team from August 2019 to June 2026, our founder orchestrated a comprehensive AWS EKS migration with Kubernetes and Helm, implementing GitOps workflows and Infrastructure as Code using Terraform — managing the transition from monolithic architecture to microservices, establishing Jenkins CI/CD pipelines on Kubernetes, and scaling engineering culture across distributed teams.",
     results: ["Accelerated releases from every 2 weeks to multiple times per day", "Contributed to 10% revenue increase through faster feature delivery", "Reduced CI pipeline failures through automated testing", "Successfully integrated Apple Pay and Google Pay"],
     tags: ["Payment Systems", "AWS EKS", "Kubernetes", "Terraform", "GitOps", "Team Leadership"],
     image: "/img/photos/case-opayo.jpg",

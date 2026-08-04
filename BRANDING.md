@@ -65,6 +65,9 @@ every claim — write as if they will check, because they will.
    employment is framed as pedigree: "Founder track record includes…" — never
    "Trusted by…". Anonymous testimonials are labelled as discretion
    ("Founder & CEO, London fintech — name withheld under NDA"), never left ambiguous.
+   The two anonymised testimonials (fintech Series A; B2B SaaS MVP) are verified
+   genuine — owner confirmed 4 Aug 2026, real clients under NDA. Keep them; name
+   a client only with that client's permission.
 4. **Founder-led voice.** "I" for personal commitments (co-founder page, values,
    About). "We"/"Codenest" for methodology and delivery. Never "our team" for work
    done as an individual or as prior employment. Never disparage solo operators
@@ -262,3 +265,12 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
 8. **No gold text on white below AA contrast.** (4 Aug 2026.)
 9. **One FAQPage schema per page, owned by the page.** (4 Aug 2026.)
 10. **ICP phrasing is "pre-seed to Series A"** — one variant, sitewide. (4 Aug 2026.)
+11. **Opayo engagement dates: August 2019 – June 2026** — a Codenest-era engagement.
+    Elavon (US Bancorp) employment 2011-2015 is separate early-career history; never
+    date Opayo work into that window. (Owner, 4 Aug 2026.)
+12. **The two anonymised testimonials are verified genuine** (owner, 4 Aug 2026) —
+    real clients under NDA. Never delete or reword them as "placeholders"; name a
+    client only with permission.
+13. **Stat cells carry a named engagement or an offer term** — Rungway users, Opayo
+    duration, the testimonial-backed Series A, 8-12 wks MVP. No bare counts without
+    a citable denominator ("15+ startups" retired). (4 Aug 2026.)

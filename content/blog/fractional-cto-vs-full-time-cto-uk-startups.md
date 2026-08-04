@@ -11,7 +11,7 @@ tags: ['Fractional CTO', 'Hiring']
 
 You've built something that's gaining traction. Investors are asking about your technical roadmap. Your lead developer is great at shipping code but struggles with architecture decisions. You need technical leadership—but should you hire a full-time CTO or bring in a fractional one?
 
-This isn't just a cost question. It's a strategic decision that affects your runway, your ability to raise, and your product's long-term viability. After working with 15+ UK startups across fintech, healthtech, and B2B SaaS, here's the honest breakdown.
+This isn't just a cost question. It's a strategic decision that affects your runway, your ability to raise, and your product's long-term viability. After working with UK startups across fintech, healthtech, and B2B SaaS, here's the honest breakdown.
 
 ## The True Cost of a Full-Time CTO
 

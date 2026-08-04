@@ -1,7 +1,7 @@
 // Testimonial policy (BRANDING.md §2.3): only real feedback. Named attributions
 // require the client's permission; confidential ones are explicitly anonymised.
-// TODO(owner): confirm the two anonymised quotes below are genuine client
-// feedback — if not, they must be removed, not reworded.
+// Owner-verified (4 Aug 2026): the two anonymised quotes are genuine client
+// feedback published under NDA — keep them; name clients only with permission.
 const testimonials = [
   {
     quote: "They transformed our platform from handling 5 users to 1000+ concurrent users. The migration was seamless with zero downtime. Exactly the technical leadership we needed.",
