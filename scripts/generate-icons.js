@@ -2,15 +2,14 @@ const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
+// public/ is the only image root. Next copies it verbatim into out/ at build time,
+// so the mirror this script used to write to ../img was never served — it only
+// duplicated every asset in the repo.
 const publicImg = path.join(__dirname, '../public/img');
-const imgDir = path.join(__dirname, '../img');
 
-// Ensure directories exist
-[publicImg, imgDir].forEach(dir => {
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
-});
+if (!fs.existsSync(publicImg)) {
+  fs.mkdirSync(publicImg, { recursive: true });
+}
 
 const conversions = [
   // Icon variations at multiple sizes
@@ -35,7 +34,6 @@ async function generateImages() {
   for (const conv of conversions) {
     const inputPath = path.join(publicImg, conv.input);
     const outputPath = path.join(publicImg, conv.output);
-    const imgOutputPath = path.join(imgDir, conv.output);
 
     if (!fs.existsSync(inputPath)) {
       console.log(`  Skipping ${conv.input} (not found)`);
@@ -54,9 +52,6 @@ async function generateImages() {
       }
 
       await sharpInstance.png().toFile(outputPath);
-
-      // Also copy to img directory for static export
-      fs.copyFileSync(outputPath, imgOutputPath);
 
       console.log(`  Generated: ${conv.output}`);
     } catch (err) {
