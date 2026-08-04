@@ -8,11 +8,11 @@ import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
 
 export const metadata = {
   title: 'Fractional CTO Services London for UK Startups',
-  description: 'Fractional CTO for UK startups from £3k/month. Architecture, engineering hiring and due diligence preparation. Free 30-minute strategy call.',
+  description: 'Fractional CTO for UK startups, pre-seed to Series A. Architecture, engineering hiring and due diligence preparation. Free 30-minute strategy call.',
   keywords: ['fractional CTO UK', 'fractional CTO London', 'part-time CTO', 'startup CTO', 'technical leadership', 'CTO as a service', 'interim CTO UK', 'fractional CTO cost', 'startup technical leadership'],
   openGraph: {
     title: 'Fractional CTO Services London | Codenest',
-    description: 'Engineering rigour and technical leadership for UK startups — without the overhead. From £3k/month.',
+    description: 'Engineering rigour and technical leadership for UK startups — without the overhead.',
     type: 'website',
     url: 'https://codenest.uk/services/fractional-cto/',
     images: [
@@ -186,7 +186,7 @@ export default function FractionalCTOPage() {
                 Engineering rigour and technical leadership for ambitious startups. Make confident architecture decisions, build the right team, and become investor-ready — without the overhead.
               </p>
               <p className="text-sm font-medium text-slate-700 mb-8">
-                Engagements from £3,000/month &middot; typically 60-80% less than a full-time CTO
+                Retained monthly engagements, scoped to your stage &middot; typically 60-80% less than a full-time CTO
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button href="/contact/">Request a Strategy Call</Button>
@@ -246,7 +246,7 @@ export default function FractionalCTOPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {services.map((service, index) => (
                   <div key={index} className="flex items-start">
-                    <svg className="w-5 h-5 text-accent-600 mt-1 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-5 h-5 text-accent-700 mt-1 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span className="text-slate-700">{service}</span>

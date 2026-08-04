@@ -4,19 +4,22 @@ import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-// The two named services are the commercial pages people search for; the hub
-// carries the six others. Grouping them keeps all three one interaction away
-// without spending three top-level slots on them.
+// The offer is two executive seats, so the dropdown is two links. The /services
+// hub used to sit here as "All Services", but every route out of it leads to one
+// of these same two pages — a third nav slot that reached nothing new, and a
+// third page competing for the same queries. It stays linked from the homepage
+// and the footer as the side-by-side overview.
+// The dropdown itself stays: five top-level links already overflow at md.
 const SERVICE_LINKS = [
   { href: '/services/fractional-cto/', label: 'Fractional CTO', hint: 'Architecture, engineering leadership, delivery' },
   { href: '/services/fractional-cfo/', label: 'Fractional CFO', hint: 'Financial models, controls, fundraising' },
-  { href: '/services/', label: 'All Services', hint: 'Both tracks, eight services' },
 ]
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
-  const [showStickyCTA, setShowStickyCTA] = useState(false)
+  const [isPastHero, setIsPastHero] = useState(false)
+  const [isContactInView, setIsContactInView] = useState(false)
   const servicesRef = useRef(null)
   const servicesButtonRef = useRef(null)
   const serviceItemRefs = useRef([])
@@ -29,11 +32,32 @@ export default function Navigation() {
   useEffect(() => {
     const handleScroll = () => {
       // Show sticky CTA after scrolling past 600px (roughly past hero)
-      setShowStickyCTA(window.scrollY > 600)
+      setIsPastHero(window.scrollY > 600)
     }
+    handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  // The mobile bar is fixed and opaque, so while the contact form is on screen it
+  // sits directly over the form's own submit button — two near-identical gold
+  // buttons stacked, with the one that only scrolls back here on top. Once the
+  // form is visible the shortcut has nothing left to do, so it gets out of the way.
+  useEffect(() => {
+    const contactSection = document.getElementById('contact')
+    if (!contactSection) {
+      setIsContactInView(false)
+      return
+    }
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsContactInView(entry.isIntersecting),
+      { rootMargin: '0px 0px -25% 0px' }
+    )
+    observer.observe(contactSection)
+    return () => observer.disconnect()
+  }, [pathname])
+
+  const showStickyCTA = isPastHero && !isContactInView
 
   // A dropdown that survives a route change, a click elsewhere, or Escape.
   useEffect(() => {

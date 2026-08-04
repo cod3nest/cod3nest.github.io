@@ -343,6 +343,14 @@ export default function RunwayCalculator() {
             {emailStatus.state === 'error' && (
               <p className="text-sm font-medium text-red-700 mt-2">{emailStatus.message}</p>
             )}
+            {/* Privacy information at the point of collection (UK GDPR, Art. 13). */}
+            <p className="text-xs text-slate-600 mt-3">
+              We use your address only to send this projection and reply to you. See our{' '}
+              <a href="/privacy/" className="underline hover:text-slate-800">
+                Privacy Policy
+              </a>
+              .
+            </p>
           </div>
         </div>
       )}

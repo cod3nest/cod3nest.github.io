@@ -85,7 +85,7 @@ export default function GuidesPage() {
         <section className="pt-40 pb-24 bg-white">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <p className="text-sm uppercase tracking-[0.2em] text-accent-600 mb-4 font-medium">Resources</p>
+              <p className="text-sm uppercase tracking-[0.2em] text-accent-700 mb-4 font-medium">Resources</p>
               <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Guides for Founders</h1>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto">
                 Free, in-depth resources for evaluating technical and financial leadership at your stage.
@@ -113,7 +113,7 @@ export default function GuidesPage() {
               <p className="text-slate-600 mb-4 max-w-xl mx-auto">
                 Work out how many months of runway you have and when to start fundraising.
               </p>
-              <Link href="/tools/runway-calculator/" className="inline-flex items-center font-semibold text-accent-600 hover:text-accent-700">
+              <Link href="/tools/runway-calculator/" className="inline-flex items-center font-semibold text-accent-700 hover:text-accent-800">
                 Open the calculator
                 <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

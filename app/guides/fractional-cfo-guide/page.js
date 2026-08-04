@@ -48,7 +48,7 @@ export default function FractionalCFOGuidePage() {
   const faqs = [
     {
       question: 'How much does a fractional CFO cost in the UK?',
-      answer: 'Most UK fractional CFO engagements fall roughly between £2,000 and £12,000 per month depending on intensity, from light-touch advisory through to two or three days per week. Codenest Fractional CFO engagements start from £2,500 per month. A full-time CFO, by comparison, typically costs £150,000-£250,000+ in salary alone, plus equity, benefits and recruitment fees.'
+      answer: 'Most UK fractional CFO engagements fall roughly between £2,000 and £12,000 per month depending on intensity, from light-touch advisory through to two or three days per week. A full-time CFO, by comparison, typically costs £150,000-£250,000+ in salary alone, plus equity, benefits and recruitment fees.'
     },
     {
       question: 'What is the difference between a fractional CFO and an accountant?',
@@ -341,7 +341,7 @@ export default function FractionalCFOGuidePage() {
                 </div>
 
                 <p>
-                  Codenest Fractional CFO engagements start from £2,500 per month. See the <Link href="/services/fractional-cfo/" className="text-primary-600 hover:text-primary-700 font-medium">Fractional CFO services page</Link> for what each engagement includes.
+                  Codenest Fractional CFO engagements are scoped to your stage and the intensity you need — see the <Link href="/services/fractional-cfo/" className="text-primary-600 hover:text-primary-700 font-medium">Fractional CFO services page</Link> for what each engagement includes.
                 </p>
 
                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Cost Comparison: Fractional vs Full-Time</h3>
@@ -592,7 +592,7 @@ export default function FractionalCFOGuidePage() {
                   Need a Fractional CFO?
                 </h2>
                 <p className="text-primary-100 mb-6 max-w-xl mx-auto">
-                  Codenest provides Fractional CFO services for UK startups from pre-seed to Series A: financial modelling, runway management, fundraising support and board reporting, from £2,500 per month.
+                  Codenest provides Fractional CFO services for UK startups from pre-seed to Series A — financial modelling, runway management, fundraising support and board reporting.
                 </p>
                 <Link
                   href="/contact/"

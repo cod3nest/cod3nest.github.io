@@ -191,6 +191,12 @@ export default function sitemap() {
       changeFrequency: 'monthly',
       priority: 0.5,
     },
+    {
+      url: withSlash('/privacy'),
+      lastModified: getGitModDate(path.join(process.cwd(), 'app/privacy/page.js')),
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
   ]
 
   return [

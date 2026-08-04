@@ -39,7 +39,7 @@ export default function Home() {
     },
     {
       question: "What's your pricing model?",
-      answer: "We work on retainer for fractional leadership (monthly commitment) and fixed-fee for defined projects like MVP builds or financial modeling. Fractional engagements start from £2,500 per month (CFO) and £3,000 per month (CTO), typically 60-80% less than equivalent full-time hires."
+      answer: "We work on retainer for fractional leadership (monthly commitment) and fixed-fee for defined projects like MVP builds or financial modelling. Every engagement is scoped to your stage and the intensity you need — typically 60-80% less than an equivalent full-time hire. Request a strategy call and we'll quote against your actual requirements."
     }
   ]
 
@@ -351,9 +351,21 @@ export default function Home() {
               />
             </div>
 
+            {/* Dishoom - Hospitality. Michelle's track record, and the first
+                non-technical mark in a strip that was otherwise entirely Ankit's.
+                Sized on cap-height rather than box-height: the wordmark is ~9:1,
+                so h-8 would render it nearly three times wider than the others. */}
+            <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm transition-all cursor-default">
+              <img
+                src="/img/clients/dishoom.svg"
+                alt="Dishoom"
+                className="h-5 w-auto object-contain"
+              />
+            </div>
+
           </div>
           <p className="text-center text-sm text-slate-600 mt-8">
-            <a href="/about/" className="font-semibold text-primary-700 hover:text-primary-800">Ankit Rana</a>, Fractional CTO, brings 15+ years across Deloitte Digital, Elavon (US Bancorp) and Opayo. <a href="/about/" className="font-semibold text-primary-700 hover:text-primary-800">Michelle Rana FCCA</a>, Fractional CFO, took a business from &pound;35m to &pound;165m revenue while improving EBITDA margin by 4%.
+            <a href="/about/" className="font-semibold text-primary-700 hover:text-primary-800">Ankit Rana</a>, Fractional CTO, brings 15+ years across Deloitte Digital, Elavon (US Bancorp) and Opayo. <a href="/about/" className="font-semibold text-primary-700 hover:text-primary-800">Michelle Rana FCCA</a>, Fractional CFO, led strategic finance at Dishoom through &pound;35m to &pound;165m revenue growth and a four-point EBITDA margin improvement.
           </p>
         </div>
       </section>
@@ -362,8 +374,11 @@ export default function Home() {
       <section className="py-24 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">Client Outcomes</h2>
-            <p className="text-slate-400 max-w-2xl mx-auto">Measurable impact from our technical and financial partnerships</p>
+            {/* Not "Client Outcomes": two of these four cells (Rungway, Opayo) are
+                founder track record rather than Codenest client engagements, and the
+                fourth is an offer term. The heading has to cover all three honestly. */}
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">Track Record</h2>
+            <p className="text-slate-400 max-w-2xl mx-auto">Numbers we can point to, each tied to a named engagement or offer term</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="space-y-2 group">
@@ -450,11 +465,11 @@ export default function Home() {
                   </dd>
                 </div>
                 <div>
-                  <dt className="text-xl font-bold text-slate-900 mb-2">Our rates are published.</dt>
+                  <dt className="text-xl font-bold text-slate-900 mb-2">You know the commercial shape up front.</dt>
                   <dd className="text-slate-600 leading-relaxed">
-                    £3,000 a month for the CTO seat, £2,500 for the CFO seat, fixed fee for defined
-                    projects. You can work out what we cost before you speak to us, which is how we
-                    would want to buy it.
+                    Retainer for the fractional seats, fixed fee for defined projects like an MVP build
+                    or a financial model. We quote against your actual requirements, and the scope is
+                    agreed in writing before the first week.
                   </dd>
                 </div>
                 <div>
@@ -518,7 +533,7 @@ export default function Home() {
               <details key={index} className="group bg-white rounded-xl border border-slate-200 hover:border-accent-300 hover:shadow-md transition-all overflow-hidden">
                 <summary className="font-semibold text-lg text-slate-900 cursor-pointer list-none flex items-center justify-between p-6 hover:bg-slate-50 transition-colors">
                   <span className="flex items-center gap-4">
-                    <span className="flex-shrink-0 w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center text-accent-600 text-sm font-bold group-open:bg-accent-500 group-open:text-white transition-colors">
+                    <span className="flex-shrink-0 w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center text-accent-700 text-sm font-bold group-open:bg-accent-500 group-open:text-white transition-colors">
                       {index + 1}
                     </span>
                     {faq.question}
@@ -537,7 +552,7 @@ export default function Home() {
           {/* Additional CTA */}
           <div className="mt-12 text-center">
             <p className="text-slate-600 mb-4">Still have questions?</p>
-            <a href="#contact" className="inline-flex items-center gap-2 text-accent-600 hover:text-accent-700 font-semibold">
+            <a href="#contact" className="inline-flex items-center gap-2 text-accent-700 hover:text-accent-800 font-semibold">
               Request a Strategy Call
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

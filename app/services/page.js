@@ -7,7 +7,7 @@ import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../lib/schema'
 
 export const metadata = {
   title: 'Fractional CTO & CFO Services for UK Startups',
-  description: 'Two executive seats, one integrated partner. Fractional CTO and Fractional CFO services for UK startups, pre-seed to Series A. Eight services, two tracks.',
+  description: 'Two executive seats, one integrated partner. Fractional CTO and Fractional CFO services for UK startups, pre-seed to Series A, and what each engagement covers.',
   openGraph: {
     title: 'Codenest Services — Fractional CTO & Fractional CFO',
     description: 'Technical and financial leadership for UK startups, pre-seed to Series A.',
@@ -54,23 +54,14 @@ const tracks = [
   },
 ]
 
+// Capabilities delivered inside a seat — not services you buy separately, and not
+// pages. They render as static tiles (see ServiceCard). The two seats themselves are
+// deliberately absent: they are the `tracks` cards at the top of this page, and
+// repeating them here listed "Fractional CTO" as an item within the Fractional CTO
+// track — the seat appearing three times on one page.
 const services =
 [
     // Technical Services
-    {
-      title: "Fractional CTO",
-      benefit: "Executive-level technical leadership at a fraction of the cost",
-      description: "Make confident architecture decisions, build the right team, and become investor-ready. Strategic guidance for fintech, healthtech, and SaaS startups across the UK.",
-      outcomes: ["Save 60-80% vs full-time CTO", "Investor-ready in weeks", "Scale your team confidently"],
-      track: "technical"
-    },
-    {
-      title: "Fractional CFO",
-      benefit: "FP&A and strategic finance leadership",
-      description: "Financial planning & analysis, business strategy, and investor-ready reporting. The financial discipline of a high-growth company — without the overhead.",
-      outcomes: ["Financial modeling & forecasting", "Business strategy development", "Investor-ready reporting"],
-      track: "business"
-    },
     {
       title: "0-to-1 Product Builds",
       benefit: "Launch your MVP in weeks, not months",
@@ -142,7 +133,7 @@ export default function ServicesPage() {
         <section className="pt-40 pb-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <p className="text-sm uppercase tracking-[0.2em] text-accent-600 mb-4 font-medium">Integrated Partnership</p>
+              <p className="text-sm uppercase tracking-[0.2em] text-accent-700 mb-4 font-medium">Integrated Partnership</p>
               <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Fractional CTO &amp; CFO Services</h1>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto">
                 Most startups need both CTO and CFO guidance. We cover both seats in one engagement, so the technical plan and the financial plan agree.
@@ -179,7 +170,7 @@ export default function ServicesPage() {
                   <Link
                     href={track.href}
                     className={`inline-flex items-center font-semibold ${
-                      track.accent === 'accent' ? 'text-accent-600 hover:text-accent-700' : 'text-primary-600 hover:text-primary-700'
+                      track.accent === 'accent' ? 'text-accent-700 hover:text-accent-800' : 'text-primary-600 hover:text-primary-700'
                     }`}
                   >
                     Explore {track.name} Services
@@ -193,20 +184,21 @@ export default function ServicesPage() {
 
             <div className="mt-20">
               <div className="text-center mb-12">
-                <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-900 mb-4">Advisory &amp; Implementation</h2>
+                <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-900 mb-4">What Each Seat Covers</h2>
                 <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-                  Hands-on leadership from strategy through execution
+                  Hands-on leadership from strategy through execution. These are the capabilities
+                  delivered inside each engagement, not separate retainers.
                 </p>
               </div>
               <h3 className="text-sm uppercase tracking-[0.2em] text-primary-700 font-semibold mb-6">Technical Track &mdash; Fractional CTO</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-14">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-14">
                 {services.filter(s => s.track === 'technical').map((service) => (
                   <ServiceCard key={service.title} service={service} />
                 ))}
               </div>
 
               <h3 className="text-sm uppercase tracking-[0.2em] text-accent-700 font-semibold mb-6">Financial Track &mdash; Fractional CFO</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {services.filter(s => s.track === 'business').map((service) => (
                   <ServiceCard key={service.title} service={service} />
                 ))}

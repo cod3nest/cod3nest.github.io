@@ -62,7 +62,7 @@ export default function TableOfContents({ content }) {
                 level === 3 ? 'pl-6' : 'pl-4'
               } ${
                 activeId === id
-                  ? 'text-accent-600 border-l-2 border-accent-500 -ml-px font-medium'
+                  ? 'text-accent-700 border-l-2 border-accent-500 -ml-px font-medium'
                   : 'text-slate-500 hover:text-slate-700'
               }`}
               onClick={(e) => {

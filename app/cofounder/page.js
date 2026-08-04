@@ -336,19 +336,19 @@ export default function CofounderPage() {
             </p>
             <ul className="space-y-3 text-slate-600 mb-8">
               <li className="flex items-start gap-3">
-                <span className="w-6 h-6 bg-accent-100 rounded-full flex items-center justify-center text-accent-600 text-sm font-bold flex-shrink-0">1</span>
+                <span className="w-6 h-6 bg-accent-100 rounded-full flex items-center justify-center text-accent-700 text-sm font-bold flex-shrink-0">1</span>
                 <span>The problem you're solving and why it matters to you</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="w-6 h-6 bg-accent-100 rounded-full flex items-center justify-center text-accent-600 text-sm font-bold flex-shrink-0">2</span>
+                <span className="w-6 h-6 bg-accent-100 rounded-full flex items-center justify-center text-accent-700 text-sm font-bold flex-shrink-0">2</span>
                 <span>Your background and what you bring to the table</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="w-6 h-6 bg-accent-100 rounded-full flex items-center justify-center text-accent-600 text-sm font-bold flex-shrink-0">3</span>
+                <span className="w-6 h-6 bg-accent-100 rounded-full flex items-center justify-center text-accent-700 text-sm font-bold flex-shrink-0">3</span>
                 <span>Why you're looking for a technical co-founder specifically</span>
               </li>
               <li className="flex items-start gap-3">
-                <span className="w-6 h-6 bg-accent-100 rounded-full flex items-center justify-center text-accent-600 text-sm font-bold flex-shrink-0">4</span>
+                <span className="w-6 h-6 bg-accent-100 rounded-full flex items-center justify-center text-accent-700 text-sm font-bold flex-shrink-0">4</span>
                 <span>Where you are in the journey (idea, MVP, revenue, etc.)</span>
               </li>
             </ul>
