@@ -62,7 +62,7 @@ A CFO is the forward-looking layer: strategy, capital, and the decisions that de
 - **Board and investor work** — board packs, metrics, the narrative behind the numbers
 - **Cash and runway** — burn management, hiring plans, scenario planning
 
-**Typical UK cost:** £2,000-£12,000 per month depending on intensity — a couple of days a month at the low end, several days a week at the top. Codenest engagements start from £2,500 per month. We've broken down [what a fractional CFO costs in the UK](/blog/how-much-does-fractional-cfo-cost-uk/), including what pushes the price up or down, in a separate post.
+**Typical UK cost:** £2,000-£12,000 per month depending on intensity — a couple of days a month at the low end, several days a week at the top. We've broken down [what a fractional CFO costs in the UK](/blog/how-much-does-fractional-cfo-cost-uk/), including what pushes the price up or down, in a separate post.
 
 ## The Three Roles at a Glance
 
@@ -136,4 +136,4 @@ Sequence them in that order, and don't expect any of them to do the others' jobs
 
 ---
 
-*Not sure which role your startup actually needs first? Our [fractional CFO services](/services/fractional-cfo/) start from £2,500 per month and are designed to work alongside your existing accountant — [get in touch](/contact/) for a straight answer.*
+*Not sure which role your startup actually needs first? Our [fractional CFO services](/services/fractional-cfo/) are designed to work alongside your existing accountant — [get in touch](/contact/) for a straight answer.*

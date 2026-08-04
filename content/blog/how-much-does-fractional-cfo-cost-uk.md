@@ -196,7 +196,7 @@ Fractional CFO services in the UK typically cost:
 - **Standard (~1 day/week):** £3,500-£6,000/month
 - **Intensive (2-3 days/week):** £6,000-£12,000/month
 
-As a reference point, Codenest fractional CFO engagements start from £2,500 per month. For most pre-seed to Series A startups, the fractional model represents **60-80% savings** versus a full-time CFO hire, with:
+For most pre-seed to Series A startups, the fractional model represents **60-80% savings** versus a full-time CFO hire, with:
 
 - Zero equity dilution
 - Zero recruitment fees

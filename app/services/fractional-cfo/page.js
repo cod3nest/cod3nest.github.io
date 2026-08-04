@@ -8,7 +8,7 @@ import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
 
 export const metadata = {
   title: 'Fractional CFO Services London for UK Startups',
-  description: 'Fractional CFO for UK startups from £2.5k/month. Financial modelling, fundraising support and investor reporting. Free 30-minute strategy call.',
+  description: 'Fractional CFO for UK startups, pre-seed to Series A. Financial modelling, fundraising support and investor reporting. Free 30-minute strategy call.',
   keywords: ['fractional CFO UK', 'fractional CFO London', 'startup CFO', 'FP&A UK', 'financial planning analysis', 'financial strategy', 'startup finance UK', 'part-time CFO'],
   openGraph: {
     title: 'Fractional CFO Services London | Codenest',
@@ -175,7 +175,7 @@ export default function FractionalCFOPage() {
                 FP&A, financial modeling, and investor-ready reporting from a part-time CFO. The financial discipline of a high-growth company — without the overhead.
               </p>
               <p className="text-sm font-medium text-slate-700 mb-8">
-                Engagements from £2,500/month &middot; typically 60-80% less than a full-time CFO
+                Fixed monthly retainer &middot; typically 60-80% less than a full-time CFO
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button href="/contact/">Request a Strategy Call</Button>

@@ -39,7 +39,7 @@ export default function Home() {
     },
     {
       question: "What's your pricing model?",
-      answer: "We work on retainer for fractional leadership (monthly commitment) and fixed-fee for defined projects like MVP builds or financial modeling. Fractional engagements start from £2,500 per month (CFO) and £3,000 per month (CTO), typically 60-80% less than equivalent full-time hires."
+      answer: "We work on retainer for fractional leadership (monthly commitment) and fixed-fee for defined projects like MVP builds or financial modeling. You get a written scope and a fixed monthly figure before anything starts. Fractional leadership typically costs 60-80% less than an equivalent full-time hire."
     }
   ]
 
@@ -450,11 +450,11 @@ export default function Home() {
                   </dd>
                 </div>
                 <div>
-                  <dt className="text-xl font-bold text-slate-900 mb-2">Our rates are published.</dt>
+                  <dt className="text-xl font-bold text-slate-900 mb-2">We scope before we quote.</dt>
                   <dd className="text-slate-600 leading-relaxed">
-                    £3,000 a month for the CTO seat, £2,500 for the CFO seat, fixed fee for defined
-                    projects. You can work out what we cost before you speak to us, which is how we
-                    would want to buy it.
+                    You get a written scope and a fixed monthly figure before any work starts. No
+                    day-rate creep, no change requests for things that were always going to be needed,
+                    and no invoice that surprises you.
                   </dd>
                 </div>
                 <div>

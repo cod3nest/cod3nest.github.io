@@ -206,8 +206,12 @@ Assemble pages from these; don't invent parallel patterns:
 - **Blog:** meta description = frontmatter `description`; post CTA is tag-aware
   (finance tags → Fractional CFO CTA, technical tags → Fractional CTO CTA);
   evergreen titles carry no year unless the content is genuinely refreshed annually.
-- **Pricing:** whatever figure metadata promises, the page states visibly. Current
-  anchors: CTO from £3k/month, CFO from £2.5k/month, "60-80% less than full-time".
+- **Pricing: Codenest publishes no prices of its own** (owner, 4 Aug 2026). No
+  per-month anchors on pages, in metadata, in OG descriptions, in the guides or in
+  posts. Comparative claims stay ("60-80% less than full-time", full-time salary
+  ranges), as does market-rate editorial such as the £2,000-£12,000 range in the CFO
+  guide — those describe the market, not our invoice. Pages say scope and terms
+  instead: written scope, fixed monthly figure, agreed before work starts.
 
 ## 9. Logo
 
