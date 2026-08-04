@@ -35,7 +35,7 @@ export default function NotFound() {
       <footer className="bg-slate-900 text-white py-16 mt-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-slate-500 text-sm">
-            &copy; 2025 Codenest. All rights reserved.
+            &copy; {new Date().getFullYear()} Codenest. All rights reserved.
           </p>
         </div>
       </footer>

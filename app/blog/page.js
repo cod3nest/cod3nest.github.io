@@ -4,12 +4,12 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
 export const metadata = {
-  title: 'Blog – Codenest | Insights on Startup Engineering & Infrastructure',
-  description: 'Technical insights on GitOps, Infrastructure as Code, startup engineering, and scaling from 0 to 1.',
-  keywords: ['startup engineering blog', 'GitOps', 'Infrastructure as Code', 'Kubernetes', 'DevOps', 'fractional CTO', 'startup scaling', 'cloud architecture'],
+  title: 'Blog | Fractional CTO & CFO Insights for UK Startup Founders',
+  description: 'Practical guidance for startup founders on technical leadership, startup finance, fundraising, and scaling from 0 to 1.',
+  keywords: ['fractional CTO', 'fractional CFO', 'startup engineering blog', 'startup finance blog', 'financial modeling', 'fundraising', 'GitOps', 'Infrastructure as Code', 'startup scaling'],
   openGraph: {
-    title: 'Codenest Engineering Blog',
-    description: 'Practical lessons from scaling startups, building resilient infrastructure, and shipping products that matter.',
+    title: 'Codenest Blog — Fractional CTO & CFO Insights',
+    description: 'Practical lessons on technical leadership, startup finance, fundraising, and scaling from 0 to 1.',
     type: 'website',
     url: 'https://codenest.uk/blog',
     siteName: 'Codenest',
@@ -19,14 +19,14 @@ export const metadata = {
         url: '/img/companylogo.png',
         width: 1200,
         height: 630,
-        alt: 'Codenest Blog - Startup Engineering Insights',
+        alt: 'Codenest - Fractional CTO & CFO for UK startups',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Codenest Engineering Blog',
-    description: 'Practical lessons from scaling startups, building resilient infrastructure, and shipping products that matter.',
+    title: 'Codenest Blog — Fractional CTO & CFO Insights',
+    description: 'Practical lessons on technical leadership, startup finance, fundraising, and scaling from 0 to 1.',
     images: ['/img/companylogo.png'],
   },
   alternates: {
@@ -44,7 +44,7 @@ export default function BlogPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-12 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+          <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-4">
             Insights
           </h1>
           <p className="text-lg text-slate-600">
@@ -102,7 +102,7 @@ export default function BlogPage() {
             href="/#contact"
             className="inline-block text-primary-600 font-medium hover:text-primary-700 transition-colors"
           >
-            Book a discovery call &rarr;
+            Request a Strategy Call &rarr;
           </a>
         </div>
       </section>

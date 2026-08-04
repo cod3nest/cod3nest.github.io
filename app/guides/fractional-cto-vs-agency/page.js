@@ -219,7 +219,7 @@ export default function FractionalVsAgencyPage() {
             Not Sure What You Need?
           </h2>
           <p className="text-xl text-primary-100 mb-8">
-            Book a free call. We'll help you figure out whether you need a fractional CTO, an agency, both, or neither.
+            Request a free call. We'll help you figure out whether you need a fractional CTO, an agency, both, or neither.
           </p>
           <Link
             href="/#contact"

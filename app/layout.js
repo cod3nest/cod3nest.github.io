@@ -16,7 +16,7 @@ const playfair = Playfair_Display({
 export const metadata = {
   metadataBase: new URL('https://codenest.uk'),
   title: {
-    default: 'Codenest – Boutique Technical & Financial Advisory for UK Startups',
+    default: 'Fractional CTO & Fractional CFO for UK Startups | Codenest',
     template: '%s | Codenest'
   },
   description: 'London-based fractional CTO and CFO for UK startups. Ex-Deloitte leadership delivering technical architecture, financial modeling, and fundraising support. 100% due diligence pass rate. Trusted by seed to Series A founders across fintech, healthtech, and B2B SaaS.',
@@ -30,8 +30,8 @@ export const metadata = {
     telephone: false,
   },
   openGraph: {
-    title: 'Codenest – Boutique Advisory for Ambitious Founders',
-    description: 'Big 4 rigour meets startup agility. Fractional CTO and CFO services for select UK startups. Executive firepower, founder-friendly terms.',
+    title: 'Fractional CTO & Fractional CFO for UK Startups | Codenest',
+    description: 'Big 4 rigour meets founder empathy. Fractional CTO and CFO services for UK startups, pre-seed to Series A.',
     type: 'website',
     locale: 'en_GB',
     url: 'https://codenest.uk',
@@ -41,13 +41,13 @@ export const metadata = {
         url: '/img/companylogo.png',
         width: 1200,
         height: 630,
-        alt: 'Codenest - Boutique Startup Advisory',
+        alt: 'Codenest - Fractional CTO & CFO for UK startups',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Codenest – Boutique Advisory for Ambitious Founders',
+    title: 'Fractional CTO & Fractional CFO for UK Startups | Codenest',
     description: 'Fractional CTO and CFO services for UK startups. Executive firepower, founder-friendly terms.',
     images: ['/img/companylogo.png'],
   },

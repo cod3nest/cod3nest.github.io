@@ -138,7 +138,7 @@ export default function RunwayCalculatorPage() {
             href="/#contact"
             className="inline-block bg-accent-500 text-primary-900 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-accent-600 transition-all"
           >
-            Book a Free Consultation
+            Request a Strategy Call
           </a>
         </div>
       </section>

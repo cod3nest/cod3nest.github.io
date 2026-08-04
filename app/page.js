@@ -17,7 +17,7 @@ export default function Home() {
       track: "technical"
     },
     {
-      title: "Financial & Business Strategy",
+      title: "Fractional CFO",
       benefit: "FP&A and strategic finance leadership",
       description: "Financial planning & analysis, business strategy, and investor-ready reporting. The financial discipline of a high-growth company — without the overhead.",
       image: "/img/photos/service-diligence.jpg",
@@ -219,14 +219,14 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div>
               <p className="text-sm uppercase tracking-[0.2em] text-accent-500 mb-8 font-medium animate-hero-1">
-                Boutique Advisory for Select Founders
+                Fractional CTO &amp; CFO for UK Startups
               </p>
               <h1 className="font-serif text-5xl md:text-6xl font-normal text-slate-900 leading-[1.1] mb-6 animate-hero-2">
                 Executive Firepower.<br />
                 <span className="italic">Startup Agility.</span>
               </h1>
               <p className="text-xl text-slate-600 mb-6 leading-relaxed max-w-lg animate-hero-3">
-                Big 4 rigour meets founder empathy. Bespoke technical and financial leadership for ambitious UK startups — without the overhead of full-time executives.
+                Big 4 rigour meets founder empathy. Your part-time CTO and CFO in one engagement — architecture, engineering leadership, financial models, and fundraising for founders from pre-seed to Series A.
               </p>
               <ul className="space-y-4 mb-8 max-w-lg animate-hero-3">
                 <li className="flex items-start text-slate-700 group">
@@ -259,7 +259,7 @@ export default function Home() {
               </ul>
               <div className="flex flex-col sm:flex-row gap-4 animate-hero-4">
                 <a href="#contact" className="bg-accent-400 text-primary-900 px-8 py-4 rounded-lg text-base font-semibold hover:bg-accent-500 transition-all text-center shadow-gold hover:shadow-gold-lg btn-premium cta-pulse">
-                  Schedule a Strategy Call
+                  Request a Strategy Call
                 </a>
                 <a href="#case-studies" className="border-2 border-slate-300 text-slate-700 px-8 py-4 rounded-lg text-base font-semibold hover:border-accent-400 hover:text-primary-700 transition-all text-center">
                   View Case Studies
@@ -369,7 +369,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-sm uppercase tracking-[0.2em] text-accent-500 mb-4 font-medium">Integrated Partnership</p>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Your Strategic Advisory Team</h2>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Your Fractional CTO &amp; CFO</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Most startups need both CTO and CFO guidance. We deliver integrated leadership — not siloed consulting.
             </p>
@@ -385,9 +385,9 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4 relative">Strategic & Financial Leadership</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4 relative">Fractional CFO</h3>
               <p className="text-slate-600 mb-6 leading-relaxed relative">
-                Business strategy, FP&A, and the financial discipline that makes your startup investable.
+                Strategic finance, FP&A, and the financial discipline that makes your startup investable.
               </p>
               <ul className="space-y-3 mb-8 relative">
                 <li className="flex items-center text-slate-700">
@@ -416,7 +416,7 @@ export default function Home() {
                 </li>
               </ul>
               <a href="/services/fractional-cfo" className="inline-flex items-center text-accent-500 hover:text-accent-600 font-semibold link-gold relative">
-                Explore Strategic Advisory
+                Explore Fractional CFO Services
                 <svg className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -430,7 +430,7 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Technical Leadership</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Fractional CTO</h3>
               <p className="text-slate-600 mb-6 leading-relaxed">
                 Architecture decisions, engineering team building, and infrastructure that scales from day one.
               </p>
@@ -439,7 +439,7 @@ export default function Home() {
                   <svg className="w-5 h-5 text-primary-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Fractional CTO Advisory
+                  Technical Strategy &amp; Architecture
                 </li>
                 <li className="flex items-center text-slate-700">
                   <svg className="w-5 h-5 text-primary-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -461,7 +461,7 @@ export default function Home() {
                 </li>
               </ul>
               <a href="/services/fractional-cto" className="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold">
-                Explore Technical Advisory
+                Explore Fractional CTO Services
                 <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -613,7 +613,7 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
               </span>
-              Technical Leadership
+              Fractional CTO Services
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.filter(s => s.track === 'technical').map((service, index) => (
@@ -630,7 +630,7 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
               </span>
-              Financial & Business Strategy
+              Fractional CFO Services
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.filter(s => s.track === 'business').map((service, index) => (
@@ -781,7 +781,7 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <a href="#contact" className="inline-flex items-center bg-accent-400 text-primary-900 px-8 py-4 rounded-lg font-semibold hover:bg-accent-500 transition-all shadow-gold hover:shadow-gold-lg btn-premium">
-              Schedule a Strategy Call
+              Request a Strategy Call
               <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -1048,14 +1048,14 @@ export default function Home() {
             Ready to Partner?
           </h2>
           <p className="text-xl text-primary-200 mb-8 max-w-2xl mx-auto">
-            We take on a limited number of new partnerships each quarter. Schedule a confidential strategy session to explore fit.
+            We take on a limited number of new partnerships each quarter. Request a confidential strategy session to explore fit.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#contact"
               className="bg-accent-400 text-primary-900 px-10 py-4 rounded-xl text-lg font-semibold hover:bg-accent-500 transition-all shadow-gold hover:shadow-gold-lg text-center btn-premium"
             >
-              Schedule a Strategy Call
+              Request a Strategy Call
             </a>
             <a
               href="/blog"
@@ -1136,7 +1136,7 @@ export default function Home() {
           <div className="mt-12 text-center">
             <p className="text-slate-600 mb-4">Still have questions?</p>
             <a href="#contact" className="inline-flex items-center gap-2 text-accent-600 hover:text-accent-700 font-semibold">
-              Let's chat
+              Request a Strategy Call
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

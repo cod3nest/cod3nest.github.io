@@ -285,13 +285,13 @@ export default function FractionalVsFullTimePage() {
             Still Not Sure Which Is Right for You?
           </h2>
           <p className="text-xl text-primary-100 mb-8">
-            Book a free 30-minute call. We'll help you assess your needs and recommend the best path forward—even if it's not us.
+            Request a free 30-minute call. We'll help you assess your needs and recommend the best path forward—even if it's not us.
           </p>
           <Link
             href="/#contact"
             className="inline-block bg-accent-500 text-primary-900 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-accent-600 transition-all"
           >
-            Book a Free Consultation
+            Request a Strategy Call
           </Link>
         </div>
       </section>
