@@ -374,8 +374,11 @@ export default function Home() {
       <section className="py-24 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">Client Outcomes</h2>
-            <p className="text-slate-400 max-w-2xl mx-auto">Measurable impact from our technical and financial partnerships</p>
+            {/* Not "Client Outcomes": two of these four cells (Rungway, Opayo) are
+                founder track record rather than Codenest client engagements, and the
+                fourth is an offer term. The heading has to cover all three honestly. */}
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">Track Record</h2>
+            <p className="text-slate-400 max-w-2xl mx-auto">Numbers we can point to, each tied to a named engagement or offer term</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="space-y-2 group">
