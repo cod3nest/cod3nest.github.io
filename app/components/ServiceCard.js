@@ -1,12 +1,13 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function ServiceCard({ service, priority = false }) {
   const isTech = service.track === 'technical'
-  const trackColor = isTech ? 'primary' : 'accent'
   const trackBorderClass = isTech ? 'service-card-tech' : 'service-card-financial'
+  const href = service.href || (isTech ? '/services/fractional-cto' : '/services/fractional-cfo')
 
   return (
-    <div className={`group bg-white border border-slate-200 rounded-xl hover:shadow-xl transition-all duration-300 overflow-hidden h-full flex flex-col card-lift ${trackBorderClass}`}>
+    <Link href={href} className={`group bg-white border border-slate-200 rounded-xl hover:shadow-xl transition-all duration-300 overflow-hidden h-full flex flex-col card-lift ${trackBorderClass}`}>
       {/* Image Section with warm overlay */}
       <div className="relative h-56 overflow-hidden img-warm-overlay">
         <Image
@@ -28,13 +29,13 @@ export default function ServiceCard({ service, priority = false }) {
         </div>
 
         <div className="absolute bottom-5 left-5 right-5">
-          <h3 className="font-serif text-xl font-bold text-white drop-shadow-lg">{service.title}</h3>
+          <h3 className="text-xl font-bold text-white drop-shadow-lg">{service.title}</h3>
         </div>
       </div>
 
       {/* Content Section */}
       <div className="p-6 flex flex-col flex-grow">
-        <p className={`${isTech ? 'text-primary-600' : 'text-accent-500'} font-semibold text-sm mb-2`}>{service.benefit}</p>
+        <p className={`${isTech ? 'text-primary-600' : 'text-accent-700'} font-semibold text-sm mb-2`}>{service.benefit}</p>
         <p className="text-slate-600 text-sm leading-relaxed mb-5">{service.description}</p>
 
         {/* Outcomes with track-colored checkmarks */}
@@ -52,6 +53,6 @@ export default function ServiceCard({ service, priority = false }) {
 
       {/* Bottom accent bar */}
       <div className={`h-1 ${isTech ? 'bg-gradient-to-r from-primary-600 to-primary-400' : 'bg-gold-gradient'} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-    </div>
+    </Link>
   )
 }

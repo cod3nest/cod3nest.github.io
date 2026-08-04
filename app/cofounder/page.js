@@ -143,6 +143,8 @@ export default function CofounderPage() {
 
       <Navigation />
 
+      <main id="main-content">
+
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
         {/* Background decoration */}
@@ -362,6 +364,8 @@ export default function CofounderPage() {
           </p>
         </div>
       </section>
+
+      </main>
 
       <Footer />
     </div>

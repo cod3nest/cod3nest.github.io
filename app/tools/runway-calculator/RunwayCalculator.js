@@ -1,12 +1,15 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import emailjs from '@emailjs/browser'
 
 export default function RunwayCalculator() {
   const [cashOnHand, setCashOnHand] = useState(500000)
   const [monthlyBurn, setMonthlyBurn] = useState(30000)
   const [monthlyRevenue, setMonthlyRevenue] = useState(5000)
   const [expectedGrowth, setExpectedGrowth] = useState(10)
+  const [leadEmail, setLeadEmail] = useState('')
+  const [emailStatus, setEmailStatus] = useState({ state: 'idle', message: '' })
 
   const [results, setResults] = useState(null)
 
@@ -94,6 +97,40 @@ export default function RunwayCalculator() {
       zeroDate,
       projections
     })
+  }
+
+  const sendProjection = async (e) => {
+    e.preventDefault()
+    if (!results || !leadEmail) return
+    setEmailStatus({ state: 'sending', message: '' })
+    const summary = [
+      `Runway summary requested from the Codenest calculator`,
+      `Cash on hand: ${formatCurrency(cashOnHand)}`,
+      `Monthly burn: ${formatCurrency(monthlyBurn)}`,
+      `Monthly revenue: ${formatCurrency(monthlyRevenue)} (growth ${expectedGrowth}%/month)`,
+      results.runwayMonths === Infinity
+        ? 'Status: cash flow positive'
+        : `Runway: ${results.runwayMonths} months (cash-out ${formatDate(results.zeroDate)}; start fundraising by ${results.fundraiseDate ? formatDate(results.fundraiseDate) : 'now'})`,
+    ].join('\n')
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        {
+          name: 'Runway Calculator Lead',
+          email: leadEmail,
+          company: '',
+          engagement: 'fractional-cfo',
+          message: summary,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      )
+      setEmailStatus({ state: 'sent', message: "Done — we'll send your 12-month projection to your inbox." })
+      setLeadEmail('')
+    } catch (error) {
+      console.error('EmailJS Error:', error)
+      setEmailStatus({ state: 'error', message: 'Sorry, that didn\'t send. Please try again or email hello@codenest.uk.' })
+    }
   }
 
   const formatCurrency = (amount) => {
@@ -269,6 +306,44 @@ export default function RunwayCalculator() {
               </div>
             </div>
           )}
+
+          {/* Email capture — CFO-intent lead */}
+          <div className="bg-accent-50 rounded-2xl p-8 border border-accent-200">
+            <h3 className="text-lg font-bold text-slate-900 mb-2">Email me my 12-month projection</h3>
+            <p className="text-sm text-slate-600 mb-4">
+              We&apos;ll send this summary to your inbox — and if you want help extending your runway, our fractional CFO service covers burn-rate optimisation and cash management.
+            </p>
+            {emailStatus.state === 'sent' ? (
+              <p className="text-sm font-medium text-green-700">{emailStatus.message}</p>
+            ) : (
+              <form onSubmit={sendProjection} className="flex flex-col sm:flex-row gap-3">
+                <label htmlFor="lead-email" className="sr-only">Email address</label>
+                <input
+                  id="lead-email"
+                  type="email"
+                  required
+                  value={leadEmail}
+                  onChange={(e) => setLeadEmail(e.target.value)}
+                  placeholder="you@company.com"
+                  className="flex-1 px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-slate-900"
+                />
+                <button
+                  type="submit"
+                  disabled={emailStatus.state === 'sending'}
+                  className={`px-6 py-3 rounded-lg font-semibold transition-all ${
+                    emailStatus.state === 'sending'
+                      ? 'bg-slate-400 text-white cursor-not-allowed'
+                      : 'bg-accent-400 text-primary-900 hover:bg-accent-500 shadow-gold'
+                  }`}
+                >
+                  {emailStatus.state === 'sending' ? 'Sending...' : 'Send My Projection'}
+                </button>
+              </form>
+            )}
+            {emailStatus.state === 'error' && (
+              <p className="text-sm font-medium text-red-700 mt-2">{emailStatus.message}</p>
+            )}
+          </div>
         </div>
       )}
     </div>

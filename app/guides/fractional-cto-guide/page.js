@@ -3,11 +3,11 @@ import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 
 export const metadata = {
-  title: 'The Complete Guide to Fractional CTO Services UK (2025)',
+  title: 'The Complete Guide to Fractional CTO Services UK',
   description: 'Everything UK founders need to know about fractional CTO services: costs, benefits, when to hire, what to expect, and how to choose the right fractional CTO for your startup.',
   keywords: ['fractional CTO guide', 'what is a fractional CTO', 'fractional CTO cost UK', 'when to hire fractional CTO', 'fractional CTO vs full-time CTO', 'part-time CTO startup', 'CTO as a service UK'],
   openGraph: {
-    title: 'The Complete Guide to Fractional CTO Services UK (2025)',
+    title: 'The Complete Guide to Fractional CTO Services UK',
     description: 'Everything UK founders need to know about fractional CTO services: costs, benefits, when to hire, and how to choose.',
     type: 'article',
     url: 'https://codenest.uk/guides/fractional-cto-guide/',
@@ -70,7 +70,7 @@ export default function FractionalCTOGuidePage() {
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'The Complete Guide to Fractional CTO Services UK (2025)',
+    headline: 'The Complete Guide to Fractional CTO Services UK',
     description: 'Everything UK founders need to know about fractional CTO services.',
     author: {
       '@type': 'Organization',
@@ -86,7 +86,7 @@ export default function FractionalCTOGuidePage() {
       }
     },
     datePublished: '2025-01-13',
-    dateModified: '2025-01-13',
+    dateModified: '2026-08-04',
     mainEntityOfPage: 'https://codenest.uk/guides/fractional-cto-guide/'
   }
 
@@ -116,6 +116,8 @@ export default function FractionalCTOGuidePage() {
 
       <Navigation />
 
+      <main id="main-content">
+
       {/* Hero */}
       <section className="pt-32 pb-16 bg-gradient-to-b from-primary-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -130,7 +132,7 @@ export default function FractionalCTOGuidePage() {
               Everything UK founders need to know about hiring a fractional CTO: costs, benefits, timing, and how to make it work for your startup.
             </p>
             <p className="text-sm text-slate-500">
-              Updated January 2025 &middot; 15 min read
+              Updated August 2026 &middot; 15 min read
             </p>
           </div>
         </div>
@@ -571,6 +573,8 @@ export default function FractionalCTOGuidePage() {
           </article>
         </div>
       </div>
+
+      </main>
 
       <Footer />
     </div>

@@ -41,6 +41,8 @@ export default function FractionalVsFullTimePage() {
     <div className="min-h-screen bg-white">
       <Navigation />
 
+      <main id="main-content">
+
       {/* Hero */}
       <section className="pt-32 pb-16 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -311,6 +313,8 @@ export default function FractionalVsFullTimePage() {
           </div>
         </div>
       </section>
+
+      </main>
 
       <Footer />
     </div>

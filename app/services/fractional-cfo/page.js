@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Navigation from '../../components/Navigation'
+import Button from '../../components/Button'
 import Footer from '../../components/Footer'
 
 export const metadata = {
@@ -97,6 +98,10 @@ export default function FractionalCFOPage() {
       question: "Can you help us prepare for due diligence?",
       answer: "Absolutely. Due diligence preparation is one of our core strengths. We ensure your financials, projections, and data room are investor-ready and can withstand scrutiny."
     },
+    {
+      question: "Can you help with fundraising?",
+      answer: "Yes. We prepare financial models, data rooms, and due diligence materials. We've supported raises from pre-seed through Series A across fintech, healthtech, and B2B SaaS."
+    },
   ]
 
   // FAQ Schema for rich snippets
@@ -145,6 +150,8 @@ export default function FractionalCFOPage() {
 
       <Navigation />
 
+      <main id="main-content">
+
       {/* Hero Section */}
       <section className="pt-40 pb-24 bg-gradient-to-b from-accent-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -156,16 +163,15 @@ export default function FractionalCFOPage() {
               <h1 className="font-serif text-5xl md:text-6xl font-bold text-slate-900 leading-tight mb-6">
                 Fractional CFO Services
               </h1>
-              <p className="text-xl text-slate-600 mb-8 leading-relaxed">
+              <p className="text-xl text-slate-600 mb-4 leading-relaxed">
                 FP&A, financial modeling, and investor-ready reporting from a part-time CFO. The financial discipline of a high-growth company — without the overhead.
               </p>
+              <p className="text-sm font-medium text-slate-700 mb-8">
+                Engagements from £2,500/month &middot; typically 60-80% less than a full-time CFO
+              </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="/contact" className="bg-accent-500 text-primary-900 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-accent-600 transition-all shadow-lg hover:shadow-xl text-center">
-                  Request a Strategy Call
-                </a>
-                <a href="/#case-studies" className="border-2 border-primary-600 text-primary-700 px-8 py-4 rounded-2xl text-lg font-semibold hover:border-primary-700 hover:bg-primary-50 transition-all text-center">
-                  See Our Results
-                </a>
+                <Button href="/contact">Request a Strategy Call</Button>
+                <Button href="/case-studies" variant="secondary">See Our Results</Button>
               </div>
             </div>
             <div className="relative">
@@ -289,7 +295,11 @@ export default function FractionalCFOPage() {
           {/* Related resources */}
           <div className="mt-12 p-6 bg-accent-50 rounded-2xl border border-accent-100 text-center">
             <p className="text-slate-700">
-              Not sure when you&apos;ll need to raise? Try our free{' '}
+              New to strategic finance? Read{' '}
+              <Link href="/guides/fractional-cfo-guide" className="font-semibold text-accent-700 hover:text-accent-800 underline">
+                The Complete Guide to Fractional CFO Services
+              </Link>.
+              {' '}Not sure when you&apos;ll need to raise? Try our free{' '}
               <Link href="/tools/runway-calculator" className="font-semibold text-accent-700 hover:text-accent-800 underline">
                 Startup Runway Calculator
               </Link>{' '}
@@ -319,6 +329,8 @@ export default function FractionalCFOPage() {
           </a>
         </div>
       </section>
+
+      </main>
 
       <Footer />
     </div>

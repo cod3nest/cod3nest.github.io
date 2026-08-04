@@ -342,22 +342,20 @@ const ContactForm = () => {
           />
         </div>
 
-        <div>
-          <label className="block text-sm font-semibold text-slate-700 mb-3">
+        <fieldset>
+          <legend className="block text-sm font-semibold text-slate-700 mb-3">
             What are you looking for?
-          </label>
-          {/* Hidden input to ensure engagement value is sent to EmailJS */}
-          <input type="hidden" name="engagement" value={formData.engagement} />
+          </legend>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
-              { value: 'fractional', label: 'Fractional CTO/CFO', desc: 'Part-time leadership' },
-              { value: 'project', label: 'Project Work', desc: 'MVP or specific build' },
-              { value: 'advisory', label: 'Advisory', desc: 'Strategic guidance' },
-              { value: 'cofounder', label: 'Co-founder Fit', desc: 'Deeper partnership' },
+              { value: 'fractional-cto', label: 'Fractional CTO', desc: 'Technology leadership' },
+              { value: 'fractional-cfo', label: 'Fractional CFO', desc: 'Finance leadership' },
+              { value: 'both', label: 'Both / Not sure yet', desc: 'Integrated or exploring' },
+              { value: 'cofounder', label: 'Co-founder Partnership', desc: 'Deeper commitment' },
             ].map((option) => (
               <label
                 key={option.value}
-                className={`relative flex items-start p-3 rounded-xl border-2 cursor-pointer transition-all ${
+                className={`relative flex items-start p-3 rounded-xl border-2 cursor-pointer transition-all has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-primary-500 has-[:focus-visible]:ring-offset-2 ${
                   formData.engagement === option.value
                     ? 'border-primary-500 bg-primary-50'
                     : 'border-slate-200 hover:border-slate-300 bg-white'
@@ -365,6 +363,7 @@ const ContactForm = () => {
               >
                 <input
                   type="radio"
+                  name="engagement"
                   value={option.value}
                   checked={formData.engagement === option.value}
                   onChange={(e) => handleChange({ target: { name: 'engagement', value: e.target.value } })}
@@ -386,7 +385,7 @@ const ContactForm = () => {
               </label>
             ))}
           </div>
-        </div>
+        </fieldset>
 
         <div>
           <label htmlFor="message" className="block text-sm font-semibold text-slate-700 mb-2">

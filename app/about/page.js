@@ -116,11 +116,13 @@ export default function AboutPage() {
       />
       <Navigation />
 
+      <main id="main-content">
+
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-sm uppercase tracking-[0.2em] text-accent-500 mb-4 font-medium">Our Story</p>
+            <p className="text-sm uppercase tracking-[0.2em] text-accent-700 mb-4 font-medium">Our Story</p>
             <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">
               Built by an Operator,<br />for Founders
             </h1>
@@ -331,7 +333,7 @@ export default function AboutPage() {
           </p>
           <a
             href="/contact"
-            className="inline-flex items-center bg-accent-400 text-primary-900 px-8 py-4 rounded-lg font-semibold hover:bg-accent-500 transition-all shadow-gold hover:shadow-gold-lg btn-premium"
+            className="inline-flex items-center bg-accent-400 text-primary-900 px-8 py-4 rounded-lg font-semibold hover:bg-accent-500 transition-all shadow-gold hover:shadow-gold-lg"
           >
             Request a Strategy Call
             <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -340,6 +342,8 @@ export default function AboutPage() {
           </a>
         </div>
       </section>
+
+      </main>
 
       <Footer />
     </div>

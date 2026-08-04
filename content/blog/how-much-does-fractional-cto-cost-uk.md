@@ -1,13 +1,13 @@
 ---
-title: 'How Much Does a Fractional CTO Cost in the UK? 2025 Pricing Guide'
-description: 'Complete UK pricing guide for fractional CTO services in 2025. Understand retainer costs, engagement levels, and how to budget for part-time technical leadership.'
-date: '2025-01-06'
+title: 'How Much Does a Fractional CTO Cost in the UK? 2026 Pricing Guide'
+description: 'Complete UK pricing guide for fractional CTO services in 2026. Understand retainer costs, engagement levels, and how to budget for part-time technical leadership.'
+date: '2026-08-04'
 author: 'Ankit Rana'
 readTime: '7 min read'
 tags: ['Fractional CTO', 'Pricing', 'Budgeting']
 ---
 
-# How Much Does a Fractional CTO Cost in the UK? 2025 Pricing Guide
+# How Much Does a Fractional CTO Cost in the UK? 2026 Pricing Guide
 
 If you're considering fractional CTO support for your startup, the first question is usually: "What does it cost?"
 
