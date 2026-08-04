@@ -7,7 +7,7 @@ import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../lib/schema'
 
 export const metadata = {
   title: 'Fractional CTO & CFO Services for UK Startups',
-  description: 'Two executive seats, one integrated partner. Fractional CTO and Fractional CFO services for UK startups, pre-seed to Series A, and what each engagement covers.',
+  description: 'Two executive seats, each engageable on its own. Fractional CTO and Fractional CFO services for UK startups, pre-seed to Series A, and what each engagement covers.',
   openGraph: {
     title: 'Codenest Services — Fractional CTO & Fractional CFO',
     description: 'Technical and financial leadership for UK startups, pre-seed to Series A.',
@@ -133,10 +133,10 @@ export default function ServicesPage() {
         <section className="pt-40 pb-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <p className="text-sm uppercase tracking-[0.2em] text-accent-700 mb-4 font-medium">Integrated Partnership</p>
+              <p className="text-sm uppercase tracking-[0.2em] text-accent-700 mb-4 font-medium">Two Executive Seats</p>
               <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Fractional CTO &amp; CFO Services</h1>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-                Most startups need both CTO and CFO guidance. We cover both seats in one engagement, so the technical plan and the financial plan agree.
+                Two seats, each engageable on its own. Take the one you need now, or both and get a roadmap and a financial plan that already agree.
               </p>
             </div>
 
