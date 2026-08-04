@@ -327,7 +327,7 @@ export default function FractionalCFOPage() {
             Ready for a Fractional CFO?
           </h2>
           <p className="text-xl text-primary-800 mb-8 max-w-2xl mx-auto">
-            Request a free 30-minute discovery call. No sales pitch — just an honest conversation about your financial and business strategy needs.
+            Request a free 30-minute call. No sales pitch, and we'll say so if a fractional CFO isn't what you need.
           </p>
           <a
             href="/contact/"

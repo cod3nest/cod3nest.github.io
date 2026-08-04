@@ -56,7 +56,7 @@ export default function ContactPage() {
               <p className="text-sm uppercase tracking-[0.2em] text-accent-600 mb-4 font-medium">Start the conversation</p>
               <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Let&apos;s Talk</h1>
               <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-                Fractional CTO or CFO — tell us what you&apos;re building. No sales pitch, just an honest discussion about your needs.
+                Fractional CTO or CFO: tell us what you&apos;re building. Thirty minutes, no sales pitch.
               </p>
             </div>
 

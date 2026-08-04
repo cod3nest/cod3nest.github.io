@@ -117,7 +117,7 @@ export default function AboutPage() {
       accent: "primary",
       linkedin: "https://www.linkedin.com/in/arana198",
       credentials: ["AWS Certified", "15+ Years Engineering", "Kubernetes & Cloud"],
-      bio: "Fifteen years building and scaling technology platforms — payment processors at Deloitte Digital and Elavon (US Bancorp), then startups going through hypergrowth across fintech, healthtech and proptech. Has led engineering teams from 5 to 50+, run a near seven-year platform transformation at Opayo by Elavon, and sat on the receiving end of technical due diligence.",
+      bio: "Fifteen years building and scaling technology platforms: payment processors at Deloitte Digital and Elavon (US Bancorp), then startups going through hypergrowth across fintech, healthtech and proptech. Has led engineering teams from 5 to 50+, run a near seven-year platform transformation at Opayo by Elavon, and sat on the receiving end of technical due diligence.",
       proof: "Scaled Rungway from 5 to 1,000+ concurrent users",
       tracks: [
         { year: "2011-2015", title: "Enterprise Foundations", description: "Payment processors and financial services platforms at Deloitte Digital and Elavon (US Bancorp) — learning what enterprise-grade actually costs, and what startups can borrow from it." },
@@ -145,7 +145,7 @@ export default function AboutPage() {
   const values = [
     {
       title: "Founder-First",
-      description: "Your success is our success. We're not here to rack up billable hours — we're here to make you self-sufficient.",
+      description: "We're here to make you self-sufficient. Billable hours are not the measure.",
       icon: (
         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -272,7 +272,7 @@ export default function AboutPage() {
                   We kept seeing the same patterns. Founders who needed senior guidance but couldn't justify a full-time CTO or CFO. Startups that hired dev shops and got code, but not strategy. Companies that grew revenue but couldn't answer basic questions about their unit economics.
                 </p>
                 <p className="text-slate-600 leading-relaxed">
-                  Codenest exists to fill that gap — and to fill it properly. You get an engineer who has actually run the platform and an accountant who has actually owned the P&amp;L, rather than one generalist doing a passable impression of both.
+                  Codenest exists to fill that gap, and to fill it properly. You get an engineer who has actually run the platform and an accountant who has actually owned the P&amp;L, rather than one generalist doing a passable impression of both.
                 </p>
               </div>
 
@@ -317,7 +317,7 @@ export default function AboutPage() {
                   <div>
                     <p className="text-sm font-semibold text-slate-900 mb-1">Beyond Advisory</p>
                     <p className="text-sm text-slate-600">
-                      In rare cases, for exceptional opportunities, Ankit considers deeper partnerships — including technical co-founder roles. If you're building something truly ambitious and looking for a committed partner, not just an advisor, <a href="/contact/" className="text-accent-700 font-medium hover:text-accent-800 underline">let's talk</a>.
+                      In rare cases, for exceptional opportunities, Ankit considers deeper partnerships, including technical co-founder roles. If you're building something truly ambitious and looking for a committed partner, not just an advisor, <a href="/contact/" className="text-accent-700 font-medium hover:text-accent-800 underline">let's talk</a>.
                     </p>
                   </div>
                 </div>
@@ -394,7 +394,7 @@ export default function AboutPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-serif text-3xl font-bold text-slate-900 mb-4">Technical & Financial Expertise</h2>
-            <p className="text-slate-600">Deep experience across the full stack — technology and finance</p>
+            <p className="text-slate-600">Deep experience across the full stack: technology and finance</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
