@@ -68,10 +68,12 @@ every claim — write as if they will check, because they will.
    The two anonymised testimonials (fintech Series A; B2B SaaS MVP) are verified
    genuine — owner confirmed 4 Aug 2026, real clients under NDA. Keep them; name
    a client only with that client's permission.
-4. **Founder-led voice.** "I" for personal commitments (co-founder page, values,
-   About). "We"/"Codenest" for methodology and delivery. Never "our team" for work
-   done as an individual or as prior employment. Never disparage solo operators
-   (bus-factor jabs) — Codenest is one.
+4. **Two principals, two seats.** Codenest is **Ankit Rana, Fractional CTO** and
+   **Michelle Rana FCCA, Fractional CFO** — not one generalist covering both.
+   Never attribute the CFO offer to Ankit or the CTO offer to Michelle, in copy or
+   in schema. "We"/"Codenest" is the default voice for methodology and delivery;
+   attribute individual track records by name ("Ankit led…", "Michelle owned…").
+   Prior employment stays framed as pedigree, never as Codenest client work.
 5. **CTA honesty.** The primary CTA is **"Request a Strategy Call"** everywhere, until
    a real scheduling tool is embedded — only then may it become "Book…"/"Schedule…".
    The form submit says "Request My Call" with the microcopy "We'll reply within
@@ -274,3 +276,15 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
 13. **Stat cells carry a named engagement or an offer term** — Rungway users, Opayo
     duration, the testimonial-backed Series A, 8-12 wks MVP. No bare counts without
     a citable denominator ("15+ startups" retired). (4 Aug 2026.)
+14. **Codenest is two people.** Ankit Rana is the Fractional CTO; Michelle Rana FCCA
+    is the Fractional CFO. Any surface that names one must be checked for whether it
+    should name both — especially `/about`, Person schema, and founder bylines.
+    (Owner, 4 Aug 2026.)
+15. **Rungway predates Codenest.** It is founder track record, not a Codenest client
+    engagement — never caption it "our client" or attribute it to Codenest as a firm.
+    (Owner, 4 Aug 2026.)
+16. **Michelle's documented strength is operational scale-up finance**, not venture
+    fundraising: multi-site P&L, budgeting and rolling forecasts, controls and
+    governance, margin and procurement, Board reporting. Do not claim VC fundraising,
+    data-room or cap-table experience for her without owner confirmation.
+    (4 Aug 2026 — pending owner input.)
