@@ -3,17 +3,25 @@ import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 
 export const metadata = {
-  title: 'The Complete Guide to Fractional CTO Services UK (2025) | Codenest',
+  title: 'The Complete Guide to Fractional CTO Services UK (2025)',
   description: 'Everything UK founders need to know about fractional CTO services: costs, benefits, when to hire, what to expect, and how to choose the right fractional CTO for your startup.',
   keywords: ['fractional CTO guide', 'what is a fractional CTO', 'fractional CTO cost UK', 'when to hire fractional CTO', 'fractional CTO vs full-time CTO', 'part-time CTO startup', 'CTO as a service UK'],
   openGraph: {
     title: 'The Complete Guide to Fractional CTO Services UK (2025)',
     description: 'Everything UK founders need to know about fractional CTO services: costs, benefits, when to hire, and how to choose.',
     type: 'article',
-    url: 'https://codenest.uk/guides/fractional-cto-guide',
+    url: 'https://codenest.uk/guides/fractional-cto-guide/',
+    images: [
+      {
+        url: '/img/og-default.png',
+        width: 1200,
+        height: 630,
+        alt: 'Codenest - Fractional CTO & CFO for UK startups',
+      },
+    ],
   },
   alternates: {
-    canonical: 'https://codenest.uk/guides/fractional-cto-guide',
+    canonical: 'https://codenest.uk/guides/fractional-cto-guide/',
   },
 }
 
@@ -79,7 +87,7 @@ export default function FractionalCTOGuidePage() {
     },
     datePublished: '2025-01-13',
     dateModified: '2025-01-13',
-    mainEntityOfPage: 'https://codenest.uk/guides/fractional-cto-guide'
+    mainEntityOfPage: 'https://codenest.uk/guides/fractional-cto-guide/'
   }
 
   const faqSchema = {

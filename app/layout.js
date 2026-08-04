@@ -19,7 +19,7 @@ export const metadata = {
     default: 'Fractional CTO & Fractional CFO for UK Startups | Codenest',
     template: '%s | Codenest'
   },
-  description: 'London-based fractional CTO and CFO for UK startups. Ex-Deloitte leadership delivering technical architecture, financial modeling, and fundraising support. 100% due diligence pass rate. Trusted by seed to Series A founders across fintech, healthtech, and B2B SaaS.',
+  description: 'London-based fractional CTO and CFO for UK startups. Ex-Deloitte leadership delivering technical architecture, financial modeling, and fundraising support. Trusted by pre-seed to Series A founders across fintech, healthtech, and B2B SaaS.',
   keywords: ['boutique startup advisory London', 'fractional CTO UK', 'fractional CFO UK', 'startup advisory London', 'executive advisory startups', 'premium tech consultancy UK', 'bespoke startup consulting', 'Big 4 startup advisory', 'GitOps consulting UK', 'Infrastructure as Code UK', 'financial modeling startups', 'MVP development UK', 'Kubernetes consulting UK', 'startup engineering UK', 'DevOps consulting UK', 'fundraising support UK', 'technical leadership UK', 'financial strategy startups', '0 to 1 product UK', 'startup technical partner UK', 'Series A preparation', 'startup due diligence UK', 'boutique consultancy UK', 'select founders UK', 'investor ready startups', 'startup scale up UK', 'technical co-founder UK', 'startup co-founder London', 'CTO co-founder', 'find technical co-founder', 'tech co-founder partnership', 'co-founder for startup UK', 'technical partner equity', 'startup equity partnership'],
   authors: [{ name: 'Codenest', url: 'https://codenest.uk' }],
   creator: 'Codenest',
@@ -38,7 +38,7 @@ export const metadata = {
     siteName: 'Codenest',
     images: [
       {
-        url: '/img/companylogo.png',
+        url: '/img/og-default.png',
         width: 1200,
         height: 630,
         alt: 'Codenest - Fractional CTO & CFO for UK startups',
@@ -49,7 +49,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Fractional CTO & Fractional CFO for UK Startups | Codenest',
     description: 'Fractional CTO and CFO services for UK startups. Executive firepower, founder-friendly terms.',
-    images: ['/img/companylogo.png'],
+    images: ['/img/og-default.png'],
   },
   robots: {
     index: true,
@@ -77,7 +77,7 @@ export default function RootLayout({ children }) {
     url: 'https://codenest.uk',
     logo: 'https://codenest.uk/img/companylogo.png',
     image: 'https://codenest.uk/img/companylogo.png',
-    description: 'Boutique technical and financial advisory for ambitious UK founders. Big 4 rigour meets startup agility. Fractional CTO and CFO services with executive firepower.',
+    description: 'Boutique technical and financial advisory for ambitious UK founders. Big 4 rigour meets founder empathy. Fractional CTO and CFO services with executive firepower.',
     priceRange: '£££',
     address: {
       '@type': 'PostalAddress',
@@ -168,164 +168,6 @@ export default function RootLayout({ children }) {
     }
   }
 
-  const servicesSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    itemListElement: [
-      {
-        '@type': 'Service',
-        name: 'Fractional CTO Services',
-        description: 'Part-time CTO leadership for startups. Technical strategy, team building, and architectural guidance without full-time costs.',
-        provider: {
-          '@type': 'Organization',
-          name: 'Codenest'
-        },
-        areaServed: 'United Kingdom',
-        serviceType: 'Technical Leadership'
-      },
-      {
-        '@type': 'Service',
-        name: 'Fractional CFO Services',
-        description: 'Part-time CFO leadership for startups. Financial strategy, investor reporting, and cash flow management without full-time costs.',
-        provider: {
-          '@type': 'Organization',
-          name: 'Codenest'
-        },
-        areaServed: 'United Kingdom',
-        serviceType: 'Financial Leadership'
-      },
-      {
-        '@type': 'Service',
-        name: 'MVP Development',
-        description: 'Build production-ready MVPs using modern tech stack, GitOps workflows, and Infrastructure as Code from day one.',
-        provider: {
-          '@type': 'Organization',
-          name: 'Codenest'
-        },
-        areaServed: 'United Kingdom',
-        serviceType: 'Software Development'
-      },
-      {
-        '@type': 'Service',
-        name: 'Financial Modeling & Strategy',
-        description: 'Unit economics, revenue forecasting, and scenario planning. Build financial models that stand up to investor scrutiny.',
-        provider: {
-          '@type': 'Organization',
-          name: 'Codenest'
-        },
-        areaServed: 'United Kingdom',
-        serviceType: 'Financial Consulting'
-      },
-      {
-        '@type': 'Service',
-        name: 'GitOps & Infrastructure as Code Consulting',
-        description: 'Implement GitOps workflows and Infrastructure as Code to accelerate deployments and improve reliability.',
-        provider: {
-          '@type': 'Organization',
-          name: 'Codenest'
-        },
-        areaServed: 'United Kingdom',
-        serviceType: 'DevOps Consulting'
-      },
-      {
-        '@type': 'Service',
-        name: 'Kubernetes & Cloud Native Architecture',
-        description: 'Design and implement Kubernetes-based architectures for scalable, cloud-native applications.',
-        provider: {
-          '@type': 'Organization',
-          name: 'Codenest'
-        },
-        areaServed: 'United Kingdom',
-        serviceType: 'Cloud Architecture'
-      },
-      {
-        '@type': 'Service',
-        name: 'Technical Due Diligence',
-        description: 'Comprehensive technical audits for investors. Evaluate architecture, team, code quality, and scalability.',
-        provider: {
-          '@type': 'Organization',
-          name: 'Codenest'
-        },
-        areaServed: 'United Kingdom',
-        serviceType: 'Consulting'
-      },
-      {
-        '@type': 'Service',
-        name: 'Fundraising Support',
-        description: 'Pitch deck financial sections, data room preparation, and investor Q&A coaching for pre-seed to Series A.',
-        provider: {
-          '@type': 'Organization',
-          name: 'Codenest'
-        },
-        areaServed: 'United Kingdom',
-        serviceType: 'Financial Consulting'
-      }
-    ]
-  }
-
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'What is a Fractional CTO?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'A Fractional CTO is a part-time Chief Technology Officer who provides strategic technical leadership without the cost of a full-time executive. Perfect for early-stage startups that need experienced technical guidance but aren\'t ready for a full-time CTO.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'What is a Fractional CFO?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'A Fractional CFO is a part-time Chief Financial Officer who provides strategic financial leadership without the cost of a full-time executive. They handle financial planning, investor reporting, cash flow management, and fundraising preparation.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'How long does it take to build an MVP?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Typically 6-12 weeks for a production-ready MVP, depending on complexity. We focus on shipping core features fast while building on solid foundations (GitOps, IaC, CI/CD) so you can scale without rebuilding.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you work with early-stage startups?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes! We specialize in helping startups go from 0→1. Whether you\'re pre-seed or Series A, we provide both the technical and financial leadership you need to build and scale.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'Can you help with fundraising?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes. We prepare financial models, data rooms, and due diligence materials. We\'ve supported raises from pre-seed through Series A across fintech, healthtech, and B2B SaaS.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'What is GitOps and why does it matter?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'GitOps is a way of managing infrastructure and deployments using Git as the single source of truth. It enables automated, repeatable deployments with full audit trails. For startups, it means faster releases, fewer bugs, and easier scaling.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you offer technical co-founder partnerships?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'For exceptional opportunities, we consider equity-based co-founder partnerships. These are highly selective—typically 1-2 per year. We look for founders with deep domain expertise, validated markets, and complementary skills. Learn more at codenest.uk/cofounder.'
-        }
-      }
-    ]
-  }
-
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <head>
@@ -348,18 +190,6 @@ export default function RootLayout({ children }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-        />
-
-        {/* Structured Data - Services */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
-        />
-
-        {/* Structured Data - FAQs */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       </head>
       <body className="font-sans antialiased">{children}</body>

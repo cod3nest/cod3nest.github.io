@@ -279,4 +279,4 @@ Cash is oxygen. Manage it like your company's survival depends on it—because i
 
 ---
 
-*Need help optimising your burn rate or building a cash management system? [Get in touch](/contact) for a consultation.*
+*Work out your own numbers with our free [Startup Runway Calculator](/tools/runway-calculator), or [get in touch](/contact) — our [fractional CFO services](/services/fractional-cfo) cover burn-rate optimisation and cash management.*

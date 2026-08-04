@@ -18,7 +18,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { slug } = await params
   const post = getBlogPost(slug)
-  const description = post.content.substring(0, 160).replace(/[#*\n]/g, ' ').trim()
+  const description = post.description || post.content.substring(0, 160).replace(/[#*\n]/g, ' ').trim()
 
   return {
     title: `${post.title} – Codenest Blog`,
@@ -32,12 +32,12 @@ export async function generateMetadata({ params }) {
       publishedTime: post.date,
       authors: [post.author],
       tags: post.tags,
-      url: `https://codenest.uk/blog/${slug}`,
+      url: `https://codenest.uk/blog/${slug}/`,
       siteName: 'Codenest',
       locale: 'en_GB',
       images: [
         {
-          url: '/img/companylogo.png',
+          url: '/img/og-default.png',
           width: 1200,
           height: 630,
           alt: post.title,
@@ -48,10 +48,10 @@ export async function generateMetadata({ params }) {
       card: 'summary_large_image',
       title: post.title,
       description: description,
-      images: ['/img/companylogo.png'],
+      images: ['/img/og-default.png'],
     },
     alternates: {
-      canonical: `https://codenest.uk/blog/${slug}`,
+      canonical: `https://codenest.uk/blog/${slug}/`,
     },
   }
 }
@@ -79,13 +79,13 @@ export default async function BlogPost({ params }) {
         '@type': 'ListItem',
         position: 2,
         name: 'Blog',
-        item: 'https://codenest.uk/blog'
+        item: 'https://codenest.uk/blog/'
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: post.title,
-        item: `https://codenest.uk/blog/${slug}`
+        item: `https://codenest.uk/blog/${slug}/`
       }
     ]
   }
@@ -93,9 +93,9 @@ export default async function BlogPost({ params }) {
   // Structured data for the article
   const articleSchema = {
     '@context': 'https://schema.org',
-    '@type': 'TechArticle',
+    '@type': 'BlogPosting',
     headline: post.title,
-    description: post.content.substring(0, 160).replace(/[#*\n]/g, ' ').trim(),
+    description: post.description || post.content.substring(0, 160).replace(/[#*\n]/g, ' ').trim(),
     author: {
       '@type': 'Person',
       name: post.author,
@@ -113,10 +113,10 @@ export default async function BlogPost({ params }) {
     dateModified: post.date,
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://codenest.uk/blog/${slug}`
+      '@id': `https://codenest.uk/blog/${slug}/`
     },
     keywords: post.tags.join(', '),
-    articleSection: 'Technology',
+    articleSection: post.tags?.[0] || 'Startups',
     inLanguage: 'en-GB'
   }
 
@@ -235,7 +235,7 @@ export default async function BlogPost({ params }) {
               {cta.label}
             </Link>
             <a
-              href="/#contact"
+              href="/contact"
               className="inline-block border-2 border-slate-300 text-slate-700 px-6 py-3 rounded-xl font-semibold hover:border-accent-400 hover:text-primary-700 transition-all text-center"
             >
               Request a Strategy Call

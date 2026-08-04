@@ -23,7 +23,7 @@ export default function NotFound() {
               Back to Home
             </Link>
             <Link
-              href="/#contact"
+              href="/contact"
               className="border-2 border-primary-600 text-primary-700 px-8 py-4 rounded-2xl text-lg font-semibold hover:border-primary-700 hover:bg-primary-50 transition-all text-center"
             >
               Contact Us

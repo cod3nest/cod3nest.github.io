@@ -11,10 +11,18 @@ export const metadata = {
     title: 'Fractional CFO Services London | Codenest',
     description: 'FP&A and financial strategy for UK startups — investor-ready financials without the overhead.',
     type: 'website',
-    url: 'https://codenest.uk/services/fractional-cfo',
+    url: 'https://codenest.uk/services/fractional-cfo/',
+    images: [
+      {
+        url: '/img/og-default.png',
+        width: 1200,
+        height: 630,
+        alt: 'Codenest - Fractional CTO & CFO for UK startups',
+      },
+    ],
   },
   alternates: {
-    canonical: 'https://codenest.uk/services/fractional-cfo',
+    canonical: 'https://codenest.uk/services/fractional-cfo/',
   },
 }
 
@@ -83,7 +91,7 @@ export default function FractionalCFOPage() {
     },
     {
       question: "When should a startup invest in FP&A?",
-      answer: "Ideal timing is when you're preparing to raise funding, need to optimize runway, or want to professionalize your financial operations. Typically pre-seed through Series B stage."
+      answer: "Ideal timing is when you're preparing to raise funding, need to optimize runway, or want to professionalize your financial operations. Typically pre-seed through Series A — and we stay on as you scale."
     },
     {
       question: "Can you help us prepare for due diligence?",
@@ -152,7 +160,7 @@ export default function FractionalCFOPage() {
                 FP&A, financial modeling, and investor-ready reporting from a part-time CFO. The financial discipline of a high-growth company — without the overhead.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="/#contact" className="bg-accent-500 text-primary-900 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-accent-600 transition-all shadow-lg hover:shadow-xl text-center">
+                <a href="/contact" className="bg-accent-500 text-primary-900 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-accent-600 transition-all shadow-lg hover:shadow-xl text-center">
                   Request a Strategy Call
                 </a>
                 <a href="/#case-studies" className="border-2 border-primary-600 text-primary-700 px-8 py-4 rounded-2xl text-lg font-semibold hover:border-primary-700 hover:bg-primary-50 transition-all text-center">
@@ -277,6 +285,20 @@ export default function FractionalCFOPage() {
               </details>
             ))}
           </div>
+
+          {/* Related resources */}
+          <div className="mt-12 p-6 bg-accent-50 rounded-2xl border border-accent-100 text-center">
+            <p className="text-slate-700">
+              Not sure when you&apos;ll need to raise? Try our free{' '}
+              <Link href="/tools/runway-calculator" className="font-semibold text-accent-700 hover:text-accent-800 underline">
+                Startup Runway Calculator
+              </Link>{' '}
+              — or read{' '}
+              <Link href="/blog/financial-modeling-seed-stage-startups" className="font-semibold text-accent-700 hover:text-accent-800 underline">
+                our financial modeling guide
+              </Link>.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -290,7 +312,7 @@ export default function FractionalCFOPage() {
             Request a free 30-minute discovery call. No sales pitch — just an honest conversation about your financial and business strategy needs.
           </p>
           <a
-            href="/#contact"
+            href="/contact"
             className="inline-block bg-primary-600 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-primary-700 transition-all shadow-lg hover:shadow-xl"
           >
             Request a Strategy Call

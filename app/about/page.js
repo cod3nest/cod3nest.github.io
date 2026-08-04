@@ -3,12 +3,44 @@ import Footer from '../components/Footer'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Our Story',
+  title: 'About Ankit Rana | Fractional CTO & CFO for UK Startups',
   description: 'Meet Ankit Rana, founder of Codenest. 15+ years at Deloitte Digital, Elavon, and high-growth startups. Fractional CTO and CFO helping ambitious UK founders build and scale.',
   openGraph: {
-    title: 'Our Story | Codenest',
+    title: 'About Ankit Rana | Codenest',
     description: 'Meet Ankit Rana, founder of Codenest. 15+ years at Deloitte Digital, Elavon, and high-growth startups.',
+    type: 'website',
+    url: 'https://codenest.uk/about/',
+    images: [
+      {
+        url: '/img/og-default.png',
+        width: 1200,
+        height: 630,
+        alt: 'Codenest - Fractional CTO & CFO for UK startups',
+      },
+    ],
   },
+  alternates: {
+    canonical: 'https://codenest.uk/about/',
+  },
+}
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Ankit Rana',
+  jobTitle: 'Founder, Fractional CTO & CFO',
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Codenest',
+    url: 'https://codenest.uk',
+  },
+  alumniOf: [
+    { '@type': 'Organization', name: 'Deloitte Digital' },
+    { '@type': 'Organization', name: 'Elavon (US Bancorp)' },
+  ],
+  knowsAbout: ['Fractional CTO services', 'Fractional CFO services', 'Startup engineering', 'Financial modeling', 'Fundraising'],
+  sameAs: ['https://www.linkedin.com/company/codenest-ltd'],
+  url: 'https://codenest.uk/about/',
 }
 
 export default function AboutPage() {
@@ -78,6 +110,10 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
       <Navigation />
 
       {/* Hero Section */}
@@ -198,7 +234,7 @@ export default function AboutPage() {
                   <div>
                     <p className="text-sm font-semibold text-slate-900 mb-1">Beyond Advisory</p>
                     <p className="text-sm text-slate-600">
-                      In rare cases, for exceptional opportunities, I consider deeper partnerships — including technical co-founder roles. If you're building something truly ambitious and looking for a committed partner, not just an advisor, <a href="/#contact" className="text-accent-600 font-medium hover:text-accent-700 underline">let's talk</a>.
+                      In rare cases, for exceptional opportunities, I consider deeper partnerships — including technical co-founder roles. If you're building something truly ambitious and looking for a committed partner, not just an advisor, <a href="/contact" className="text-accent-600 font-medium hover:text-accent-700 underline">let's talk</a>.
                     </p>
                   </div>
                 </div>
@@ -294,7 +330,7 @@ export default function AboutPage() {
             Let's discuss how we can help you build something great.
           </p>
           <a
-            href="/#contact"
+            href="/contact"
             className="inline-flex items-center bg-accent-400 text-primary-900 px-8 py-4 rounded-lg font-semibold hover:bg-accent-500 transition-all shadow-gold hover:shadow-gold-lg btn-premium"
           >
             Request a Strategy Call

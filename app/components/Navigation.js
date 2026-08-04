@@ -2,10 +2,15 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [showStickyCTA, setShowStickyCTA] = useState(false)
+  // On the homepage, scroll to its inline contact section instead of
+  // navigating away (and potentially discarding in-progress form input).
+  const pathname = usePathname()
+  const contactHref = pathname === '/' ? '/#contact' : '/contact'
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,7 +39,7 @@ export default function Navigation() {
         }`}
       >
         <a
-          href="#contact"
+          href={contactHref}
           className="flex items-center gap-2 bg-accent-400 text-primary-900 px-6 py-3 rounded-full text-sm font-semibold shadow-gold hover:shadow-gold-lg hover:bg-accent-500 transition-all btn-premium cta-pulse"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -52,7 +57,7 @@ export default function Navigation() {
       >
         <div className="bg-white/95 backdrop-blur-sm border-t border-slate-200 px-4 py-3 safe-area-bottom">
           <a
-            href="#contact"
+            href={contactHref}
             className="flex items-center justify-center gap-2 bg-accent-400 text-primary-900 w-full py-3.5 rounded-xl text-base font-semibold shadow-gold hover:bg-accent-500 transition-all cta-pulse"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -84,7 +89,7 @@ export default function Navigation() {
               <a href="/#case-studies" className="text-slate-700 hover:text-primary-700 px-4 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Case Studies</a>
               <a href="/about" className="text-slate-700 hover:text-primary-700 px-4 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">About</a>
               <a href="/blog" className="text-slate-700 hover:text-primary-700 px-4 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Blog</a>
-              <a href="/#contact" className="bg-accent-400 text-primary-900 px-6 py-2.5 ml-2 rounded-lg text-sm font-semibold hover:bg-accent-500 transition-all shadow-sm hover:shadow-gold btn-premium cta-pulse">Request a Strategy Call</a>
+              <a href={contactHref} className="bg-accent-400 text-primary-900 px-6 py-2.5 ml-2 rounded-lg text-sm font-semibold hover:bg-accent-500 transition-all shadow-sm hover:shadow-gold btn-premium cta-pulse">Request a Strategy Call</a>
             </div>
           </div>
 
@@ -113,7 +118,7 @@ export default function Navigation() {
               <a href="/#case-studies" onClick={() => setIsMenuOpen(false)} className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">Case Studies</a>
               <a href="/about" onClick={() => setIsMenuOpen(false)} className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">About</a>
               <a href="/blog" onClick={() => setIsMenuOpen(false)} className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">Blog</a>
-              <a href="/#contact" onClick={() => setIsMenuOpen(false)} className="bg-accent-400 text-primary-900 font-semibold block px-3 py-2 text-base rounded-lg hover:bg-accent-500 transition-all shadow-sm">Request a Strategy Call</a>
+              <a href={contactHref} onClick={() => setIsMenuOpen(false)} className="bg-accent-400 text-primary-900 font-semibold block px-3 py-2 text-base rounded-lg hover:bg-accent-500 transition-all shadow-sm">Request a Strategy Call</a>
             </div>
           </div>
         )}

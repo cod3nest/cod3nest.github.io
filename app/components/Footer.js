@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-slate-900 text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           <div>
             <img
               src="/img/companylogo-light.svg"
@@ -14,7 +14,7 @@ export default function Footer() {
               className="h-10 w-auto mb-4"
             />
             <p className="text-slate-400 text-sm leading-relaxed">
-              Boutique advisory for ambitious founders. Big 4 rigour meets startup agility.
+              Boutique advisory for ambitious founders. Big 4 rigour meets founder empathy.
             </p>
             <p className="text-accent-400 text-sm font-medium mt-3">
               Executive firepower. Startup agility.
@@ -23,10 +23,22 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Advisory</h4>
             <ul className="space-y-2 text-sm">
+              <li><Link href="/services" className="text-slate-400 hover:text-accent-400 transition-colors">All Services</Link></li>
               <li><Link href="/services/fractional-cto" className="text-slate-400 hover:text-accent-400 transition-colors">Fractional CTO</Link></li>
               <li><Link href="/services/fractional-cfo" className="text-slate-400 hover:text-accent-400 transition-colors">Fractional CFO</Link></li>
               <li><Link href="/#services" className="text-slate-400 hover:text-accent-400 transition-colors">0-to-1 Product Builds</Link></li>
               <li><Link href="/#services" className="text-slate-400 hover:text-accent-400 transition-colors">AI & Data Engineering</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-semibold mb-4">Resources</h4>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="/guides" className="text-slate-400 hover:text-accent-400 transition-colors">All Guides</Link></li>
+              <li><Link href="/guides/fractional-cto-guide" className="text-slate-400 hover:text-accent-400 transition-colors">Fractional CTO Guide</Link></li>
+              <li><Link href="/guides/fractional-cto-vs-full-time" className="text-slate-400 hover:text-accent-400 transition-colors">CTO vs Full-Time</Link></li>
+              <li><Link href="/guides/fractional-cto-vs-agency" className="text-slate-400 hover:text-accent-400 transition-colors">CTO vs Agency</Link></li>
+              <li><Link href="/guides/technical-cofounder-alternatives" className="text-slate-400 hover:text-accent-400 transition-colors">Co-founder Alternatives</Link></li>
+              <li><Link href="/tools/runway-calculator" className="text-slate-400 hover:text-accent-400 transition-colors">Runway Calculator</Link></li>
             </ul>
           </div>
           <div>
@@ -41,7 +53,7 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Partner With Us</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="/#contact" className="text-slate-400 hover:text-accent-400 transition-colors">Request a Strategy Call</a></li>
+              <li><a href="/contact" className="text-slate-400 hover:text-accent-400 transition-colors">Request a Strategy Call</a></li>
               <li><a href="/cofounder" className="text-slate-400 hover:text-accent-400 transition-colors">Co-founder Opportunities</a></li>
               <li><Link href="/refer" className="text-slate-400 hover:text-accent-400 transition-colors">Referral Program</Link></li>
               <li><a href="https://www.linkedin.com/company/codenest-ltd" className="text-slate-400 hover:text-accent-400 transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>

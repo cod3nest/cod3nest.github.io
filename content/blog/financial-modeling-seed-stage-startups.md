@@ -214,4 +214,4 @@ Financial modeling is a skill that improves with practice. Your first model won'
 
 ---
 
-*Need help building your financial model or preparing for investor conversations? [Get in touch](/contact) for a free consultation.*
+*Need help building your financial model or preparing for investor conversations? Start with our free [Startup Runway Calculator](/tools/runway-calculator), or [get in touch](/contact) about our [fractional CFO services](/services/fractional-cfo).*

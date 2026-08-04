@@ -11,12 +11,12 @@ export const metadata = {
     title: 'Codenest Blog — Fractional CTO & CFO Insights',
     description: 'Practical lessons on technical leadership, startup finance, fundraising, and scaling from 0 to 1.',
     type: 'website',
-    url: 'https://codenest.uk/blog',
+    url: 'https://codenest.uk/blog/',
     siteName: 'Codenest',
     locale: 'en_GB',
     images: [
       {
-        url: '/img/companylogo.png',
+        url: '/img/og-default.png',
         width: 1200,
         height: 630,
         alt: 'Codenest - Fractional CTO & CFO for UK startups',
@@ -27,10 +27,10 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Codenest Blog — Fractional CTO & CFO Insights',
     description: 'Practical lessons on technical leadership, startup finance, fundraising, and scaling from 0 to 1.',
-    images: ['/img/companylogo.png'],
+    images: ['/img/og-default.png'],
   },
   alternates: {
-    canonical: 'https://codenest.uk/blog',
+    canonical: 'https://codenest.uk/blog/',
   },
 }
 
@@ -99,7 +99,7 @@ export default function BlogPage() {
             Need fractional executive leadership to help your startup build, scale, and raise?
           </p>
           <a
-            href="/#contact"
+            href="/contact"
             className="inline-block text-primary-600 font-medium hover:text-primary-700 transition-colors"
           >
             Request a Strategy Call &rarr;
