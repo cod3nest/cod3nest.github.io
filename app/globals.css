@@ -16,23 +16,6 @@
 }
 
 @layer components {
-  /* Premium button with gold shimmer effect */
-  .btn-premium {
-    @apply relative overflow-hidden;
-  }
-
-  .btn-premium::before {
-    content: '';
-    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transform: translateX(-100%);
-  }
-
-  .btn-premium:hover::before {
-    @apply opacity-100;
-    animation: btnShimmer 0.6s ease-out;
-  }
-
   /* Gold accent underline for links */
   .link-gold {
     @apply relative;
@@ -118,36 +101,9 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-
-  /* Subtle focus ring with gold */
-  .focus-gold:focus {
-    @apply outline-none ring-2 ring-accent-400 ring-offset-2;
-  }
-}
-
-@keyframes btnShimmer {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
 }
 
 /* Subtle pulse animation for CTAs */
-@keyframes ctaPulse {
-  0%, 100% {
-    box-shadow: 0 4px 14px 0 rgba(212, 175, 55, 0.3);
-  }
-  50% {
-    box-shadow: 0 4px 20px 0 rgba(212, 175, 55, 0.5);
-  }
-}
-
-.cta-pulse {
-  animation: ctaPulse 2s ease-in-out infinite;
-}
-
 /* Attention-grabbing bounce for sticky CTA */
 @keyframes subtleBounce {
   0%, 100% {
@@ -218,14 +174,17 @@
   opacity: 0;
 }
 
-/* Section reveal on scroll (requires JS intersection observer) */
-.reveal-section {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
 
-.reveal-section.revealed {
-  opacity: 1;
-  transform: translateY(0);
+/* Respect users who opt out of motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

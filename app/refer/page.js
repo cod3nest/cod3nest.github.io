@@ -110,6 +110,8 @@ export default function ReferralPage() {
     <div className="min-h-screen bg-white">
       <Navigation />
 
+      <main id="main-content">
+
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -485,6 +487,8 @@ I'll leave you both to connect.
           </div>
         </div>
       </section>
+
+      </main>
 
       <Footer />
     </div>

@@ -123,7 +123,7 @@ export default async function BlogPost({ params }) {
   // Route the end-of-post CTA to the service the post actually supports:
   // finance-tagged posts sell the Fractional CFO service unless an explicitly
   // technical tag overrides (e.g. technical due-diligence, CTO cost guides).
-  const FINANCE_TAGS = ['Finance', 'Startup Finance', 'Financial Modeling', 'Fundraising', 'Cash Management', 'Unit Economics', 'Data Room', 'Metrics']
+  const FINANCE_TAGS = ['Fractional CFO', 'Finance', 'Startup Finance', 'Financial Modeling', 'Fundraising', 'Cash Management', 'Unit Economics', 'Data Room', 'Metrics']
   const TECH_OVERRIDE_TAGS = ['Fractional CTO', 'Technical Leadership', 'Infrastructure']
   const postTags = post.tags ?? []
   const isFinancePost =
@@ -156,6 +156,8 @@ export default async function BlogPost({ params }) {
       />
 
       <Navigation />
+
+      <main id="main-content">
 
       {/* Article Header */}
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -249,6 +251,8 @@ export default async function BlogPost({ params }) {
         <h2 className="text-3xl font-bold text-slate-900 mb-8">Comments</h2>
         <GiscusComments />
       </section>
+
+      </main>
 
       <Footer />
     </div>

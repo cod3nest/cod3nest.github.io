@@ -1,13 +1,13 @@
 ---
-title: "Non-Technical Founder's Guide to Hiring Developers in 2025"
+title: "Non-Technical Founder's Guide to Hiring Developers in 2026"
 description: "How to hire developers when you are not technical yourself. Practical guide covering where to find developers, how to evaluate them, and what to pay."
-date: '2025-01-02'
+date: '2026-08-04'
 author: 'Ankit Rana'
 readTime: '11 min read'
 tags: ['Hiring', 'Team Building', 'Non-Technical Founders']
 ---
 
-# Non-Technical Founder's Guide to Hiring Developers in 2025
+# Non-Technical Founder's Guide to Hiring Developers in 2026
 
 You've got a great idea and maybe even some funding. Now you need developers to build it. But how do you hire technical people when you're not technical yourself?
 
@@ -192,7 +192,7 @@ Even without technical knowledge, these questions reveal a lot:
 - Honesty about limitations
 - Enthusiasm for your problem
 
-## Salary Benchmarks (UK, 2025)
+## Salary Benchmarks (UK, 2026)
 
 | Role | Junior | Mid | Senior |
 |------|--------|-----|--------|

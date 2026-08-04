@@ -41,6 +41,8 @@ export default function BlogPage() {
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <Navigation />
 
+      <main id="main-content">
+
       {/* Hero Section */}
       <section className="pt-32 pb-12 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -74,7 +76,7 @@ export default function BlogPage() {
                           {tag}
                         </span>
                       ))}
-                      <span className="text-xs text-slate-400 ml-auto">{post.readTime}</span>
+                      <span className="text-xs text-slate-500 ml-auto">{post.readTime}</span>
                     </div>
 
                     <h2 className="text-lg font-semibold text-slate-900 mb-2 group-hover:text-primary-600 transition-colors leading-snug">
@@ -106,6 +108,8 @@ export default function BlogPage() {
           </a>
         </div>
       </section>
+
+      </main>
 
       <Footer />
     </div>

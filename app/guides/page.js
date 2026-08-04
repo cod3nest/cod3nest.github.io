@@ -26,6 +26,12 @@ export const metadata = {
 
 const guides = [
   {
+    title: 'The Complete Guide to Fractional CFO Services',
+    href: '/guides/fractional-cfo-guide',
+    description: 'What a fractional CFO does, when to hire one, UK costs, and how they differ from accountants and controllers.',
+    tag: 'Guide',
+  },
+  {
     title: 'The Complete Guide to Fractional CTO Services',
     href: '/guides/fractional-cto-guide',
     description: 'What a fractional CTO does, when you need one, costs, and how to choose — the full picture for UK founders.',

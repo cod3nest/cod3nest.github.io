@@ -26,8 +26,8 @@ export default function Footer() {
               <li><Link href="/services" className="text-slate-400 hover:text-accent-400 transition-colors">All Services</Link></li>
               <li><Link href="/services/fractional-cto" className="text-slate-400 hover:text-accent-400 transition-colors">Fractional CTO</Link></li>
               <li><Link href="/services/fractional-cfo" className="text-slate-400 hover:text-accent-400 transition-colors">Fractional CFO</Link></li>
-              <li><Link href="/#services" className="text-slate-400 hover:text-accent-400 transition-colors">0-to-1 Product Builds</Link></li>
-              <li><Link href="/#services" className="text-slate-400 hover:text-accent-400 transition-colors">AI & Data Engineering</Link></li>
+              <li><Link href="/services" className="text-slate-400 hover:text-accent-400 transition-colors">0-to-1 Product Builds</Link></li>
+              <li><Link href="/services" className="text-slate-400 hover:text-accent-400 transition-colors">AI & Data Engineering</Link></li>
             </ul>
           </div>
           <div>
@@ -35,6 +35,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li><Link href="/guides" className="text-slate-400 hover:text-accent-400 transition-colors">All Guides</Link></li>
               <li><Link href="/guides/fractional-cto-guide" className="text-slate-400 hover:text-accent-400 transition-colors">Fractional CTO Guide</Link></li>
+              <li><Link href="/guides/fractional-cfo-guide" className="text-slate-400 hover:text-accent-400 transition-colors">Fractional CFO Guide</Link></li>
               <li><Link href="/guides/fractional-cto-vs-full-time" className="text-slate-400 hover:text-accent-400 transition-colors">CTO vs Full-Time</Link></li>
               <li><Link href="/guides/fractional-cto-vs-agency" className="text-slate-400 hover:text-accent-400 transition-colors">CTO vs Agency</Link></li>
               <li><Link href="/guides/technical-cofounder-alternatives" className="text-slate-400 hover:text-accent-400 transition-colors">Co-founder Alternatives</Link></li>
@@ -44,7 +45,7 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Company</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="/#case-studies" className="text-slate-400 hover:text-accent-400 transition-colors">Client Partnerships</a></li>
+              <li><a href="/case-studies" className="text-slate-400 hover:text-accent-400 transition-colors">Client Partnerships</a></li>
               <li><a href="/#how-we-work" className="text-slate-400 hover:text-accent-400 transition-colors">Our Methodology</a></li>
               <li><a href="/about" className="text-slate-400 hover:text-accent-400 transition-colors">Our Story</a></li>
               <li><Link href="/blog" className="text-slate-400 hover:text-accent-400 transition-colors">Insights</Link></li>

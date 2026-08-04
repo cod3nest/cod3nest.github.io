@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Navigation from '../../components/Navigation'
+import Button from '../../components/Button'
 import Footer from '../../components/Footer'
 
 export const metadata = {
@@ -96,6 +97,22 @@ export default function FractionalCTOPage() {
       question: "Can you help us hire a full-time CTO eventually?",
       answer: "Yes. Part of our role is building the foundation for your permanent leadership. We help define the role, source candidates, and ensure a smooth transition when you're ready."
     },
+    {
+      question: "Do you work with non-technical founders?",
+      answer: "Absolutely. Many of our clients are first-time founders without technical backgrounds. We excel at translating complex concepts into clear business terms."
+    },
+    {
+      question: "What's your tech stack expertise?",
+      answer: "We specialize in cloud-native architectures (AWS, GCP), Kubernetes, Terraform, Python, Java, Postgres/MySQL, GitOps, and modern data/ML stacks. But our real value is in architectural thinking — we choose the right tools for your specific needs."
+    },
+    {
+      question: "What makes you different from a dev shop?",
+      answer: "Dev shops execute your specifications. We provide strategic leadership first — helping you figure out what to build, how to fund it, and how to set up your team for long-term success."
+    },
+    {
+      question: "Do you offer ongoing support after delivery?",
+      answer: "Yes. We offer retainer arrangements for post-launch support, scaling assistance, and continued technical leadership. Many clients transition from intensive builds to lighter advisory after launch."
+    },
   ]
 
   // FAQ Schema for rich snippets
@@ -144,6 +161,8 @@ export default function FractionalCTOPage() {
 
       <Navigation />
 
+      <main id="main-content">
+
       {/* Hero Section */}
       <section className="pt-40 pb-24 bg-gradient-to-b from-primary-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -155,16 +174,15 @@ export default function FractionalCTOPage() {
               <h1 className="font-serif text-5xl md:text-6xl font-bold text-slate-900 leading-tight mb-6">
                 Fractional CTO Services
               </h1>
-              <p className="text-xl text-slate-600 mb-8 leading-relaxed">
+              <p className="text-xl text-slate-600 mb-4 leading-relaxed">
                 Engineering rigour and technical leadership for ambitious startups. Make confident architecture decisions, build the right team, and become investor-ready — without the overhead.
               </p>
+              <p className="text-sm font-medium text-slate-700 mb-8">
+                Engagements from £3,000/month &middot; typically 60-80% less than a full-time CTO
+              </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="/contact" className="bg-accent-500 text-primary-900 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-accent-600 transition-all shadow-lg hover:shadow-xl text-center">
-                  Request a Strategy Call
-                </a>
-                <a href="/#case-studies" className="border-2 border-primary-600 text-primary-700 px-8 py-4 rounded-xl text-lg font-semibold hover:border-primary-700 hover:bg-primary-50 transition-all text-center">
-                  View Client Outcomes
-                </a>
+                <Button href="/contact">Request a Strategy Call</Button>
+                <Button href="/case-studies" variant="secondary">View Client Outcomes</Button>
               </div>
             </div>
             <div className="relative">
@@ -322,6 +340,8 @@ export default function FractionalCTOPage() {
           </a>
         </div>
       </section>
+
+      </main>
 
       <Footer />
     </div>

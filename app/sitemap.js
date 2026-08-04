@@ -130,6 +130,12 @@ export default function sitemap() {
   // ============================================
   const otherPages = [
     {
+      url: withSlash('/case-studies'),
+      lastModified: getFileModDate(path.join(process.cwd(), 'app/case-studies/page.js')),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
       url: withSlash('/contact'),
       lastModified: getFileModDate(path.join(process.cwd(), 'app/contact/page.js')),
       changeFrequency: 'monthly',
