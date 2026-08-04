@@ -6,7 +6,7 @@ import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
 
 export const metadata = {
   title: 'The Complete Guide to Fractional CFO Services UK',
-  description: 'What a fractional CFO does, UK costs, when to hire one, and how they differ from an accountant — the full picture for startup founders.',
+  description: 'What a fractional CFO does, UK costs, when to hire one, and how they differ from an accountant. The full picture for startup founders.',
   keywords: ['fractional CFO guide', 'what is a fractional CFO', 'fractional CFO cost UK', 'when to hire a fractional CFO', 'fractional CFO vs accountant', 'part-time CFO startup', 'fractional CFO services UK'],
   openGraph: {
     title: 'The Complete Guide to Fractional CFO Services UK',
@@ -174,18 +174,18 @@ export default function FractionalCFOGuidePage() {
                   A <strong>fractional CFO</strong> is a senior finance executive who provides part-time strategic financial leadership to companies that need the judgement of a Chief Financial Officer without the cost of a full-time hire.
                 </p>
                 <p>
-                  The key word is <em>strategic</em>. A fractional CFO is not a bookkeeper and not a replacement for your accountant. Bookkeeping and accounting record what has already happened; a fractional CFO is concerned with what happens next — how long your cash lasts, what your next round needs to look like, whether your pricing supports the business you are building, and what the board should be told and when.
+                  The key word is <em>strategic</em>. A fractional CFO is not a bookkeeper and not a replacement for your accountant. Bookkeeping and accounting record what has already happened; a fractional CFO is concerned with what happens next: how long your cash lasts, what your next round needs to look like, whether your pricing supports the business you are building, and what the board should be told and when.
                 </p>
                 <p>
-                  Like a fractional CTO, a fractional CFO is embedded rather than advisory-only. They own the financial model, sit in board meetings, field investor questions, and take accountability for the quality of your numbers — typically for one to three days a week rather than five.
+                  Like a fractional CTO, a fractional CFO is embedded rather than advisory-only. They own the financial model, sit in board meetings, field investor questions, and take accountability for the quality of your numbers, typically for one to three days a week rather than five.
                 </p>
                 <p>
-                  The model has become a natural fit for UK startups between pre-seed and Series A: the financial workload at that stage is genuinely executive-level, but it is not yet a five-day-a-week job. Fractional finance leadership is one of the two executive seats Codenest provides — you can read exactly what an engagement includes on our <Link href="/services/fractional-cfo/" className="text-primary-600 hover:text-primary-700 font-medium">Fractional CFO services page</Link>.
+                  The model has become a natural fit for UK startups between pre-seed and Series A: the financial workload at that stage is genuinely executive-level, but it is not yet a five-day-a-week job. Fractional finance leadership is one of the two executive seats Codenest provides. You can read exactly what an engagement includes on our <Link href="/services/fractional-cfo/" className="text-primary-600 hover:text-primary-700 font-medium">Fractional CFO services page</Link>.
                 </p>
                 <div className="bg-primary-50 border border-primary-200 rounded-xl p-6 my-8 not-prose">
                   <p className="font-semibold text-primary-900 mb-2">Key Point</p>
                   <p className="text-primary-800">
-                    A fractional CFO typically works between half a day and three days per week, costs 60-80% less than a full-time hire, and can usually start within a couple of weeks — rather than the months a full-time executive search takes.
+                    A fractional CFO typically works between half a day and three days per week, costs 60-80% less than a full-time hire, and can usually start within a couple of weeks, rather than the months a full-time executive search takes.
                   </p>
                 </div>
               </section>
@@ -203,7 +203,7 @@ export default function FractionalCFOGuidePage() {
                 <ul>
                   <li>Building and maintaining a three-statement financial model founders can actually use</li>
                   <li>Budgeting, and monthly budget-versus-actuals reviews</li>
-                  <li>Scenario and sensitivity analysis — what happens if sales slip a quarter, or a hire is delayed</li>
+                  <li>Scenario and sensitivity analysis: what happens if sales slip a quarter, or a hire is delayed</li>
                   <li>Defining the KPIs that matter for your business model, and reporting them consistently</li>
                   <li>Modelling the cash impact of hiring plans and major spend decisions before they are made</li>
                 </ul>
@@ -217,7 +217,7 @@ export default function FractionalCFOGuidePage() {
                 <ul>
                   <li>A 13-week rolling cash flow, so short-term cash is never a surprise</li>
                   <li>Burn tracking and runway scenarios under different growth and spend assumptions</li>
-                  <li>Working-capital management — debtor chasing, creditor terms, VAT timing</li>
+                  <li>Working-capital management: debtor chasing, creditor terms, VAT timing</li>
                   <li>Cost reviews and supplier renegotiation when runway needs extending</li>
                 </ul>
 
@@ -233,14 +233,14 @@ export default function FractionalCFOGuidePage() {
                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Board &amp; Investor Reporting</h3>
                 <ul>
                   <li>A monthly management accounts and KPI pack, produced on a reliable rhythm</li>
-                  <li>Owning the financial section of the board pack — and the narrative around the numbers</li>
+                  <li>Owning the financial section of the board pack, and the narrative around the numbers</li>
                   <li>Regular investor updates that build confidence between rounds</li>
                   <li>Grant, covenant or R&amp;D-claim reporting where relevant</li>
                 </ul>
 
                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Unit Economics &amp; Pricing</h3>
                 <ul>
-                  <li>Customer acquisition cost, lifetime value and payback period — measured, not guessed</li>
+                  <li>Customer acquisition cost, lifetime value and payback period, measured rather than guessed</li>
                   <li>Contribution margin by product, plan or customer segment</li>
                   <li>Pricing structure and pricing-change analysis grounded in margin and willingness to pay</li>
                   <li>Discounting policy, so sales flexibility does not quietly erode the model</li>
@@ -258,7 +258,7 @@ export default function FractionalCFOGuidePage() {
 
                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">You&apos;re Preparing to Raise</h3>
                 <p>
-                  This is the most common trigger, and the one with the clearest payoff. Investors will diligence your numbers: the model, the assumptions behind it, historical performance and the data room. A fractional CFO gets all of that investor-ready — ideally starting three to six months before you go out, so the numbers shape the raise rather than scramble after it.
+                  This is the most common trigger, and the one with the clearest payoff. Investors will diligence your numbers: the model, the assumptions behind it, historical performance and the data room. A fractional CFO gets all of that investor-ready, ideally starting three to six months before you go out, so the numbers shape the raise rather than scramble after it.
                 </p>
 
                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">You&apos;ve Just Closed a Round</h3>
@@ -268,7 +268,7 @@ export default function FractionalCFOGuidePage() {
 
                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Runway Is Under Pressure</h3>
                 <p>
-                  When cash is tight, precision matters. A fractional CFO replaces a vague sense of &quot;about a year left&quot; with a 13-week cash flow, runway scenarios, and a clear-eyed view of which costs to cut, defer or renegotiate — and how those choices trade off against growth.
+                  When cash is tight, precision matters. A fractional CFO replaces a vague sense of &quot;about a year left&quot; with a 13-week cash flow, runway scenarios, and a clear-eyed view of which costs to cut, defer or renegotiate, and how those choices trade off against growth.
                 </p>
                 <p>
                   <Link href="/tools/runway-calculator/" className="text-primary-600 hover:text-primary-700 font-medium">
@@ -304,7 +304,7 @@ export default function FractionalCFOGuidePage() {
                   How Much Does a Fractional CFO Cost?
                 </h2>
                 <p>
-                  UK fractional CFO pricing varies with experience, sector and — above all — intensity. Most engagements fall roughly between £2,000 and £12,000 per month:
+                  UK fractional CFO pricing varies with experience, sector and, above all, intensity. Most engagements fall roughly between £2,000 and £12,000 per month:
                 </p>
 
                 <div className="overflow-x-auto my-8 not-prose">
@@ -360,7 +360,7 @@ export default function FractionalCFOGuidePage() {
                   <strong>Total Year 1:</strong> roughly £210,000-£360,000+ plus equity dilution.
                 </p>
                 <p>
-                  A fractional CFO at around one day per week costs £48,000-£96,000 a year — typically <strong>60-80% less</strong> than the all-in cost of a full-time hire, with no equity dilution, no recruitment fees, and no severance exposure if your needs change.
+                  A fractional CFO at around one day per week costs £48,000-£96,000 a year, typically <strong>60-80% less</strong> than the all-in cost of a full-time hire, with no equity dilution, no recruitment fees, and no severance exposure if your needs change.
                 </p>
               </section>
 
@@ -426,7 +426,7 @@ export default function FractionalCFOGuidePage() {
                   <strong>Choose full-time when:</strong> you have a finance team that needs daily executive leadership, you are running M&amp;A, international expansion or complex revenue operations, or post-Series B governance genuinely demands a full-time seat at the table.
                 </p>
                 <p>
-                  The honest answer for most pre-seed to Series A startups is that the full-time question simply arrives later. A good fractional CFO will tell you when you have outgrown them — and help you hire their replacement.
+                  The honest answer for most pre-seed to Series A startups is that the full-time question simply arrives later. A good fractional CFO will tell you when you have outgrown them, and help you hire their replacement.
                 </p>
               </section>
 
@@ -436,10 +436,10 @@ export default function FractionalCFOGuidePage() {
                   Fractional CFO vs Accountant vs Financial Controller
                 </h2>
                 <p>
-                  These three roles are often confused, and the confusion is expensive in both directions — founders either pay CFO rates for bookkeeping, or expect strategic finance from an accountant who was never hired to provide it. The distinction is about time horizon:
+                  These three roles are often confused, and the confusion is expensive in both directions: founders either pay CFO rates for bookkeeping, or expect strategic finance from an accountant who was never hired to provide it. The distinction is about time horizon:
                 </p>
 
-                <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Accountant — Historical &amp; Compliance</h3>
+                <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Accountant: Historical &amp; Compliance</h3>
                 <ul>
                   <li><strong>Answers:</strong> what happened, and are we compliant?</li>
                   <li><strong>Covers:</strong> statutory accounts, corporation tax, VAT returns, payroll, Companies House filings</li>
@@ -447,7 +447,7 @@ export default function FractionalCFOGuidePage() {
                   <li><strong>Typical cost:</strong> a few hundred pounds a month outsourced at early stage</li>
                 </ul>
 
-                <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Financial Controller — Operational</h3>
+                <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Financial Controller: Operational</h3>
                 <ul>
                   <li><strong>Answers:</strong> are the numbers right, and is the machine running?</li>
                   <li><strong>Covers:</strong> bookkeeping oversight, month-end close, invoicing and collections, spend controls, management accounts production</li>
@@ -455,7 +455,7 @@ export default function FractionalCFOGuidePage() {
                   <li><strong>Typically arrives:</strong> once transaction volume outgrows the founder-plus-accountant setup</li>
                 </ul>
 
-                <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Fractional CFO — Strategic &amp; Forward-Looking</h3>
+                <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Fractional CFO: Strategic &amp; Forward-Looking</h3>
                 <ul>
                   <li><strong>Answers:</strong> where are we going, and can we afford to get there?</li>
                   <li><strong>Covers:</strong> financial modelling, runway scenarios, fundraising and data rooms, pricing and unit economics, board narrative</li>
@@ -466,7 +466,7 @@ export default function FractionalCFOGuidePage() {
                 <div className="bg-slate-100 border border-slate-200 rounded-xl p-6 my-8 not-prose">
                   <p className="font-semibold text-slate-900 mb-2">They Complement, Not Compete</p>
                   <p className="text-slate-700">
-                    A fractional CFO does not replace your accountant — they build on the records your accountant keeps and will usually work with them directly. At pre-seed and seed, an outsourced accountant plus a fractional CFO covers both the compliance and the strategy; a controller tends to join later, as transaction volume grows.
+                    A fractional CFO does not replace your accountant. They build on the records your accountant keeps and will usually work with them directly. At pre-seed and seed, an outsourced accountant plus a fractional CFO covers both the compliance and the strategy; a controller tends to join later, as transaction volume grows.
                   </p>
                 </div>
               </section>
@@ -479,20 +479,20 @@ export default function FractionalCFOGuidePage() {
 
                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Green Flags</h3>
                 <ul>
-                  <li><strong>Sector experience</strong> — They know your business model&apos;s economics, whether that is fintech, healthtech or B2B SaaS</li>
-                  <li><strong>Stage fit</strong> — Pre-seed to Series A finance is a different craft from corporate finance; scrappy data and fast decisions should not faze them</li>
-                  <li><strong>Fundraising track record</strong> — They have supported rounds like the one you are planning and know what UK investors actually ask</li>
-                  <li><strong>Hands-on with models</strong> — They build and maintain the model themselves, rather than reviewing someone else&apos;s work from a distance</li>
-                  <li><strong>Plain-English communication</strong> — They make the numbers clearer, not more intimidating; you will spend hours together, so chemistry matters</li>
+                  <li><strong>Sector experience:</strong> They know your business model&apos;s economics, whether that is fintech, healthtech or B2B SaaS</li>
+                  <li><strong>Stage fit:</strong> Pre-seed to Series A finance is a different craft from corporate finance; scrappy data and fast decisions should not faze them</li>
+                  <li><strong>Fundraising track record:</strong> They have supported rounds like the one you are planning and know what UK investors actually ask</li>
+                  <li><strong>Hands-on with models:</strong> They build and maintain the model themselves, rather than reviewing someone else&apos;s work from a distance</li>
+                  <li><strong>Plain-English communication:</strong> They make the numbers clearer, not more intimidating; you will spend hours together, so chemistry matters</li>
                 </ul>
 
                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Red Flags</h3>
                 <ul>
-                  <li><strong>Compliance background rebadged</strong> — A career in historical reporting does not automatically translate into forward-looking strategy</li>
-                  <li><strong>Template models</strong> — If every model they show ends in the same hockey stick, the assumptions are decoration, not analysis</li>
-                  <li><strong>Overcommitted</strong> — Too many concurrent clients means your board week gets whatever attention is left over</li>
-                  <li><strong>Can&apos;t face investors</strong> — If they cannot defend the model in a diligence conversation, you will be doing it alone</li>
-                  <li><strong>Equity-first pricing</strong> — Fractional engagements should be cash-based; significant equity is for full-time commitment</li>
+                  <li><strong>Compliance background rebadged:</strong> A career in historical reporting does not automatically translate into forward-looking strategy</li>
+                  <li><strong>Template models:</strong> If every model they show ends in the same hockey stick, the assumptions are decoration, not analysis</li>
+                  <li><strong>Overcommitted:</strong> Too many concurrent clients means your board week gets whatever attention is left over</li>
+                  <li><strong>Can&apos;t face investors:</strong> If they cannot defend the model in a diligence conversation, you will be doing it alone</li>
+                  <li><strong>Equity-first pricing:</strong> Fractional engagements should be cash-based; significant equity is for full-time commitment</li>
                 </ul>
 
                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Questions to Ask</h3>
@@ -500,7 +500,7 @@ export default function FractionalCFOGuidePage() {
                   <li>&quot;Which fundraises have you supported at our stage, and what was your role in them?&quot;</li>
                   <li>&quot;Walk me through a model you built. Which three assumptions mattered most, and how did you test them?&quot;</li>
                   <li>&quot;How would you approach our cash position and runway in your first 30 days?&quot;</li>
-                  <li>&quot;What does a monthly reporting rhythm look like with you — what do we get, and when?&quot;</li>
+                  <li>&quot;What does a monthly reporting rhythm look like with you: what do we get, and when?&quot;</li>
                   <li>&quot;What would make you advise us not to raise?&quot;</li>
                 </ol>
                 <p>
@@ -514,7 +514,7 @@ export default function FractionalCFOGuidePage() {
                   Working with a Fractional CFO
                 </h2>
                 <p>
-                  A well-run fractional CFO engagement has a predictable shape. Here is what to expect — and what to insist on.
+                  A well-run fractional CFO engagement has a predictable shape. Here is what to expect, and what to insist on.
                 </p>
 
                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">The First 30 Days: Diagnostic</h3>
@@ -525,7 +525,7 @@ export default function FractionalCFOGuidePage() {
                   <li>Cash position and a first-cut 13-week cash flow</li>
                   <li>Review (or rebuild) of the financial model and its assumptions</li>
                   <li>A baseline for reporting: what the board and investors currently see, and what they should</li>
-                  <li>Quick wins — cost anomalies, billing gaps, working-capital timing</li>
+                  <li>Quick wins: cost anomalies, billing gaps, working-capital timing</li>
                 </ul>
 
                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">The Ongoing Cadence</h3>
@@ -533,7 +533,7 @@ export default function FractionalCFOGuidePage() {
                   <li><strong>Weekly:</strong> a founder sync, plus async availability for decisions that cannot wait</li>
                   <li><strong>Monthly:</strong> management accounts, KPI pack and budget-versus-actuals review</li>
                   <li><strong>Quarterly:</strong> reforecast and a strategic review of runway, hiring and pricing</li>
-                  <li><strong>Around a raise:</strong> intensity increases — model, data room, investor Q&amp;A support</li>
+                  <li><strong>Around a raise:</strong> intensity increases: model, data room, investor Q&amp;A support</li>
                 </ul>
 
                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">The Deliverables You Should Expect</h3>
@@ -552,13 +552,13 @@ export default function FractionalCFOGuidePage() {
 
                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Tools and Ownership</h3>
                 <p>
-                  Expect the work to live in tools you control: your accounting platform (typically Xero or QuickBooks), spreadsheet models shared in your own drive, and dashboards built on your data. Everything should be documented and owned by the company — if the engagement ends, the model, the data room and the reporting rhythm stay with you. A fractional CFO who keeps the model as a black box has built a dependency, not a finance function.
+                  Expect the work to live in tools you control: your accounting platform (typically Xero or QuickBooks), spreadsheet models shared in your own drive, and dashboards built on your data. Everything should be documented and owned by the company. If the engagement ends, the model, the data room and the reporting rhythm stay with you. A fractional CFO who keeps the model as a black box has built a dependency, not a finance function.
                 </p>
 
                 <div className="bg-slate-100 border border-slate-200 rounded-xl p-6 my-8 not-prose">
                   <p className="font-semibold text-slate-900 mb-2">Also Hiring Technical Leadership?</p>
                   <p className="text-slate-700">
-                    Many founders face the technical and financial leadership gaps at the same time — and the two searches follow the same logic.{' '}
+                    Many founders face the technical and financial leadership gaps at the same time, and the two searches follow the same logic.{' '}
                     <Link href="/guides/fractional-cto-guide/" className="text-primary-600 hover:text-primary-700 font-medium">
                       Read the Complete Guide to Fractional CTO Services →
                     </Link>

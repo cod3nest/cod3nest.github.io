@@ -136,7 +136,7 @@ export default function ServicesPage() {
               <p className="text-sm uppercase tracking-[0.2em] text-accent-700 mb-4 font-medium">Integrated Partnership</p>
               <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Fractional CTO &amp; CFO Services</h1>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-                Most startups need both CTO and CFO guidance. We deliver integrated leadership — not siloed consulting.
+                Most startups need both CTO and CFO guidance. We cover both seats in one engagement, so the technical plan and the financial plan agree.
               </p>
             </div>
 
@@ -186,8 +186,8 @@ export default function ServicesPage() {
               <div className="text-center mb-12">
                 <h2 className="font-serif text-3xl md:text-4xl font-bold text-slate-900 mb-4">What Each Seat Covers</h2>
                 <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-                  Hands-on leadership from strategy through execution — not just advice from the sidelines.
-                  These are the capabilities delivered inside each engagement, not separate retainers.
+                  Hands-on leadership from strategy through execution. These are the capabilities
+                  delivered inside each engagement, not separate retainers.
                 </p>
               </div>
               <h3 className="text-sm uppercase tracking-[0.2em] text-primary-700 font-semibold mb-6">Technical Track &mdash; Fractional CTO</h3>

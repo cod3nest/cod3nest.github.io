@@ -114,7 +114,7 @@ export default function FractionalCTOPage() {
     },
     {
       question: "What makes you different from a dev shop?",
-      answer: "Dev shops execute your specifications. We provide strategic leadership first — helping you figure out what to build, how to fund it, and how to set up your team for long-term success."
+      answer: "Dev shops execute your specifications. We provide strategic leadership first, helping you figure out what to build, how to fund it, and how to set up your team for long-term success."
     },
     {
       question: "Do you offer ongoing support after delivery?",
@@ -338,7 +338,7 @@ export default function FractionalCTOPage() {
             Ready to Level Up Your Technical Leadership?
           </h2>
           <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            Request a free 30-minute discovery call. No sales pitch — just an honest conversation about your technical needs.
+            Request a free 30-minute call. No sales pitch, and we'll say so if a fractional CTO isn't what you need.
           </p>
           <a
             href="/contact/"

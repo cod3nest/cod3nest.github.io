@@ -311,35 +311,48 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     confirmed fundraising and investor due-diligence experience on top (4 Aug 2026).
     Claim the capability; do not attach invented specifics (round sizes, named
     investors, amounts raised) until real figures are supplied.
-17. **Never publish personal contact details.** No personal mobile numbers or personal
+17. **Two engagements we decline, stated on the homepage.** Technology as the core
+    moat (novel algorithms, custom hardware) and anything needing 40+ hours a week
+    both point at a full-time hire, and the site says so in "When we are the wrong
+    call". Owner-approved 4 Aug 2026. The 15+ engineers case and staff augmentation
+    were considered and deliberately NOT declined — do not add them.
+18. **No "X meets Y" or "X, not Y" constructions** outside the tagline itself. Both
+    read as generated marketing copy. The tagline keeps its "meets" by owner decision
+    (4 Aug 2026); everything else was rewritten. Em-dashes in body copy went from 130
+    to 57 for the same reason — prefer a colon, a comma or a full stop.
+19. **The homepage does not carry a staged process timeline.** A Discover/Build/Scale
+    block with tidy week ranges was removed 4 Aug 2026: the FAQ already states the
+    real shape (3-6 months at 2-3 days a week, 8-12 week fixed-scope MVPs) and states
+    it more precisely.
+20. **Never publish personal contact details.** No personal mobile numbers or personal
     email addresses for either principal, from CVs or anywhere else — the contact form
     and the business address are the only channels. (Owner, 4 Aug 2026.)
-18. **Privacy information lives where data is collected.** Every form that takes
+21. **Privacy information lives where data is collected.** Every form that takes
     personal data carries a one-line notice and a link to `/privacy`, not just the
     footer (UK GDPR Art. 13). `/privacy` lists each collection point and every
     processor by name — update it in the same change that adds a field, a form, or a
     third-party call. (4 Aug 2026.)
-19. **No gold-flooded sections.** Full-bleed `accent-*` grounds are banned: they force
+22. **No gold-flooded sections.** Full-bleed `accent-*` grounds are banned: they force
     dark-on-gold body copy below AA and break the charcoal/gold hierarchy. CTA bands
     are `primary-600 → primary-700`; the track shows in the eyebrow and the button.
     (4 Aug 2026 — replaced the Fractional CFO page's gold band at 3.42:1.)
-20. **Gold text on light grounds is `accent-700` or darker — no exceptions.**
+23. **Gold text on light grounds is `accent-700` or darker — no exceptions.**
     `accent-600` at 14px on white measures 4.39:1 and fails AA; it had drifted onto
     four pages. Verified sitewide by walking every rendered text node against its
     effective background — re-run that check after any colour change rather than
     eyeballing it. (4 Aug 2026.)
-21. **No Codenest prices on the site.** Own-price anchors are retired sitewide (owner,
+24. **No Codenest prices on the site.** Own-price anchors are retired sitewide (owner,
     4 Aug 2026) — pages, metadata, OG descriptions, guides and blog posts. Market-rate
     editorial stays. If a price is ever reinstated it must state its VAT basis, because
     Codenest is VAT-registered (275 3255 93) and the E-Commerce Regs require a quoted
     price to say whether tax is included. (§8.)
-22. **Statutory disclosures live in the footer of every page:** registered name
+25. **Statutory disclosures live in the footer of every page:** registered name
     Codenest Ltd, company number 10909723, England and Wales, registered office
     Clearways Accountants, Clearways, Colley Way, Reigate RH2 9JH, and the VAT number.
     Never remove them. Note the registered office is **Surrey, not London** — reconcile
     any "London-based" claim and the `addressLocality` in `app/layout.js` against it.
     (4 Aug 2026.)
-23. **The Services dropdown is the two seats, nothing else.** "All Services" was removed
+26. **The Services dropdown is the two seats, nothing else.** "All Services" was removed
     from it (4 Aug 2026): every route out of `/services` leads back to one of those two
     pages, so it was a third nav slot reaching nothing new — and a third page competing
     for the same queries as its own children. `/services` stays linked from the homepage

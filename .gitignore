@@ -42,11 +42,18 @@ next-env.d.ts
 # legacy
 *.iml
 
-# GitHub Pages build artifacts (now built by GitHub Actions)
+# GitHub Pages build artifacts (now built by GitHub Actions from out/, never from
+# the repo root). Anything matched here is export output that used to be copied
+# back over the source tree by the old predeploy script.
 /_next/
 /blog/
+/404/
+/img/
 /*.html
 /*.txt
+/manifest.json
+/sitemap.xml
+/feed.xml
 !README.md
 .nojekyll
 

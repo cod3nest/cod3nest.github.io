@@ -31,7 +31,7 @@ export default function Home() {
     },
     {
       question: "What does a typical engagement look like?",
-      answer: "Fractional CTO/CFO engagements typically run 3-6 months at 2-3 days per week. MVP builds are fixed-scope at 8-12 weeks. We tailor every engagement to your stage and needs — no cookie-cutter packages."
+      answer: "Fractional CTO/CFO engagements typically run 3-6 months at 2-3 days per week. MVP builds are fixed-scope at 8-12 weeks. We tailor every engagement to your stage and needs. No cookie-cutter packages."
     },
     {
       question: "Do you handle both technical and financial leadership?",
@@ -131,7 +131,7 @@ export default function Home() {
                 <span className="italic">Startup Agility.</span>
               </h1>
               <p className="text-xl text-slate-600 mb-6 leading-relaxed max-w-lg animate-hero-3">
-                Big 4 rigour meets founder empathy. Your part-time CTO and CFO in one engagement — architecture, engineering leadership, financial models, and fundraising for founders from pre-seed to Series A.
+                Big 4 rigour meets founder empathy. Your part-time CTO and CFO in one engagement: architecture, engineering leadership, financial models, and fundraising for founders from pre-seed to Series A.
               </p>
               <ul className="space-y-4 mb-8 max-w-lg animate-hero-3">
                 <li className="flex items-start text-slate-700 group">
@@ -204,7 +204,7 @@ export default function Home() {
             <p className="text-sm uppercase tracking-[0.2em] text-accent-700 mb-4 font-medium">Integrated Partnership</p>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Your Fractional CTO &amp; CFO</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Most startups need both CTO and CFO guidance. We deliver integrated leadership — not siloed consulting.
+              Most startups need both CTO and CFO guidance. We cover both seats in one engagement, so the technical plan and the financial plan agree.
             </p>
           </div>
 
@@ -365,7 +365,7 @@ export default function Home() {
 
           </div>
           <p className="text-center text-sm text-slate-600 mt-8">
-            Led by <a href="/about/" className="font-semibold text-primary-700 hover:text-primary-800">Ankit Rana</a>, Fractional CTO — 15+ years across Deloitte Digital, Elavon (US Bancorp) and Opayo — and <a href="/about/" className="font-semibold text-primary-700 hover:text-primary-800">Michelle Rana FCCA</a>, Fractional CFO, who led strategic finance at Dishoom through &pound;35m to &pound;165m revenue growth and a four-point EBITDA margin improvement.
+            <a href="/about/" className="font-semibold text-primary-700 hover:text-primary-800">Ankit Rana</a>, Fractional CTO, brings 15+ years across Deloitte Digital, Elavon (US Bancorp) and Opayo. <a href="/about/" className="font-semibold text-primary-700 hover:text-primary-800">Michelle Rana FCCA</a>, Fractional CFO, led strategic finance at Dishoom through &pound;35m to &pound;165m revenue growth and a four-point EBITDA margin improvement.
           </p>
         </div>
       </section>
@@ -431,56 +431,83 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How We Work Section */}
+      {/* How We Work Section. Deliberately not a three-stage timeline: the FAQ below
+          already carries the real engagement shape (3-6 months at 2-3 days a week,
+          8-12 week fixed-scope MVPs, published rates), and a tidy Discover/Build/Scale
+          pipeline said less than that in more words. Two asymmetric columns rather
+          than a third card grid. */}
       <section id="how-we-work" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <p className="text-sm uppercase tracking-[0.2em] text-accent-700 mb-4 font-medium">Our Methodology</p>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">The Partnership Journey</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              A structured, transparent process from discovery to delivery — and beyond.
-            </p>
+          <div className="mb-16 max-w-2xl">
+            <p className="text-sm uppercase tracking-[0.2em] text-accent-700 mb-4 font-medium">How We Work</p>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900">
+              Four things we hold to
+            </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-            {/* Connecting line (desktop only) */}
-            <div className="hidden md:block absolute top-16 left-[20%] right-[20%] h-0.5 bg-gradient-to-r from-primary-200 via-primary-400 to-primary-200"></div>
-
-            <div className="bg-slate-50 rounded-xl p-10 border border-slate-200 relative">
-              <div className="bg-primary-600 text-white w-12 h-12 rounded-full flex items-center justify-center mb-6 text-xl font-bold shadow-md relative z-10">
-                1
-              </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">Discover</h3>
-              <p className="text-slate-500 text-sm mb-2">Week 1-2</p>
-              <p className="text-slate-600 leading-relaxed">
-                Deep-dive into your vision, market, and constraints. Define your technical roadmap and path to investor readiness.
-              </p>
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
+            <div className="lg:col-span-3">
+              <dl className="space-y-10">
+                <div>
+                  <dt className="text-xl font-bold text-slate-900 mb-2">The roadmap and the model are built together.</dt>
+                  <dd className="text-slate-600 leading-relaxed">
+                    Your technical plan and your financial plan come from the same two people, in the same
+                    conversations. The hiring plan in the model matches the architecture it is paying for,
+                    because nobody had to reconcile them afterwards.
+                  </dd>
+                </div>
+                <div>
+                  <dt className="text-xl font-bold text-slate-900 mb-2">You own the output.</dt>
+                  <dd className="text-slate-600 leading-relaxed">
+                    Code, infrastructure, financial models, documentation. Handover is designed in from
+                    the first week, so there is nothing to unpick when we leave and no dependency on us
+                    once we have.
+                  </dd>
+                </div>
+                <div>
+                  <dt className="text-xl font-bold text-slate-900 mb-2">You know the commercial shape up front.</dt>
+                  <dd className="text-slate-600 leading-relaxed">
+                    Retainer for the fractional seats, fixed fee for defined projects like an MVP build
+                    or a financial model. We quote against your actual requirements, and the scope is
+                    agreed in writing before the first week.
+                  </dd>
+                </div>
+                <div>
+                  <dt className="text-xl font-bold text-slate-900 mb-2">We say when you should not hire us.</dt>
+                  <dd className="text-slate-600 leading-relaxed">
+                    Fractional suits most startups between pre-seed and Series A. It does not suit every
+                    one of them, and we would rather establish that on the first call than in the third
+                    month.
+                  </dd>
+                </div>
+              </dl>
             </div>
 
-            <div className="bg-slate-50 rounded-xl p-10 border border-slate-200 relative">
-              <div className="bg-primary-600 text-white w-12 h-12 rounded-full flex items-center justify-center mb-6 text-xl font-bold shadow-md relative z-10">
-                2
+            <div className="lg:col-span-2">
+              <div className="bg-primary-800 rounded-xl p-8 lg:p-10 h-full">
+                <h3 className="font-serif text-2xl font-bold text-white mb-6">When we are the wrong call</h3>
+                <ul className="space-y-7">
+                  <li>
+                    <p className="text-accent-300 font-semibold mb-2">Technology is your moat.</p>
+                    <p className="text-slate-300 text-sm leading-relaxed">
+                      If your edge is a novel algorithm or custom hardware, that work needs someone in the
+                      building full time with their name on it. Two days a week will hold you back.
+                    </p>
+                  </li>
+                  <li>
+                    <p className="text-accent-300 font-semibold mb-2">You need someone 40+ hours a week.</p>
+                    <p className="text-slate-300 text-sm leading-relaxed">
+                      At that point you are describing a full-time hire, and paying fractional rates for it
+                      is the expensive way to get one. We will tell you so and, where we can, point you at
+                      people worth talking to.
+                    </p>
+                  </li>
+                </ul>
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">Build</h3>
-              <p className="text-slate-500 text-sm mb-2">Week 3-10</p>
-              <p className="text-slate-600 leading-relaxed">
-                Architect scalable systems and robust financial foundations. Technology meets investor-grade reporting.
-              </p>
-            </div>
-
-            <div className="bg-slate-50 rounded-xl p-10 border border-slate-200 relative">
-              <div className="bg-primary-600 text-white w-12 h-12 rounded-full flex items-center justify-center mb-6 text-xl font-bold shadow-md relative z-10">
-                3
-              </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">Scale</h3>
-              <p className="text-slate-500 text-sm mb-2">Week 10+</p>
-              <p className="text-slate-600 leading-relaxed">
-                Deliver a complete system ready for growth. You own everything and can operate independently.
-              </p>
             </div>
           </div>
 
-          <div className="text-center mt-12">
+          <div className="mt-14">
             <a href="#contact" className="inline-flex items-center bg-accent-400 text-primary-900 px-8 py-4 rounded-lg font-semibold hover:bg-accent-500 transition-all shadow-gold hover:shadow-gold-lg">
               Request a Strategy Call
               <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -546,7 +573,7 @@ export default function Home() {
             <p className="text-sm uppercase tracking-[0.2em] text-accent-700 mb-4 font-medium">Start the conversation</p>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Let's Talk</h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              No sales pitch — just an honest discussion about your needs.
+              Thirty minutes, no sales pitch. We'll tell you if you don't need us.
             </p>
           </div>
 

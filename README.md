@@ -68,15 +68,17 @@ This will create an `out` directory with static files ready for deployment.
 
 ### Deploying to GitHub Pages
 
-```bash
-# Build and prepare for deployment
-npm run predeploy
+Deployment is automatic. `.github/workflows/deploy.yml` builds the site and uploads
+`out/` as a Pages artifact on every push to `master` — there is no manual step and no
+`gh-pages` branch.
 
-# Commit and push to gh-pages branch
-git add .
-git commit -m "Deploy updates"
-git push origin gh-pages
-```
+The workflow checks out with `fetch-depth: 0` because `app/sitemap.js` reads per-file
+commit dates for `<lastmod>`; a shallow clone would give every URL the same date.
+
+Never copy `out/` back over the repository root. Build output at the root is not served
+(the workflow only ever publishes `out/`), so it silently rots out of date — the root
+previously held a six-URL `sitemap.xml` against the real thirty-six, and a duplicate
+`manifest.json` with the wrong description.
 
 ## Project Structure
 
