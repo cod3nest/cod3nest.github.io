@@ -17,13 +17,21 @@ function getFileModDate(filePath) {
   }
 }
 
-// Helper to scan directory for page.js files
+// Helper to scan directory for page.js files (including the directory's own index page)
 function scanPages(dir) {
   const pages = []
   const appDir = path.join(process.cwd(), 'app')
   const fullDir = path.join(appDir, dir)
 
   if (!fs.existsSync(fullDir)) return pages
+
+  const indexPage = path.join(fullDir, 'page.js')
+  if (fs.existsSync(indexPage)) {
+    pages.push({
+      route: `/${dir}`,
+      modDate: getFileModDate(indexPage)
+    })
+  }
 
   const items = fs.readdirSync(fullDir)
 
@@ -48,6 +56,12 @@ function scanPages(dir) {
   return pages
 }
 
+// trailingSlash: true is set in next.config.js, so the canonical form of every
+// non-root URL ends with a slash; the sitemap must match to avoid listing redirects.
+function withSlash(route) {
+  return `${BASE_URL}${route}/`
+}
+
 export default function sitemap() {
   const now = new Date()
   const blogPosts = getAllBlogPosts()
@@ -68,7 +82,7 @@ export default function sitemap() {
   // SERVICE PAGES (high priority - money pages)
   // ============================================
   const servicePages = scanPages('services').map(({ route, modDate }) => ({
-    url: `${BASE_URL}${route}`,
+    url: withSlash(route),
     lastModified: modDate,
     changeFrequency: 'weekly',
     priority: 0.95,
@@ -78,7 +92,7 @@ export default function sitemap() {
   // GUIDE PAGES (high priority - SEO content)
   // ============================================
   const guidePages = scanPages('guides').map(({ route, modDate }) => ({
-    url: `${BASE_URL}${route}`,
+    url: withSlash(route),
     lastModified: modDate,
     changeFrequency: 'monthly',
     priority: 0.85,
@@ -88,7 +102,7 @@ export default function sitemap() {
   // TOOL PAGES (medium-high priority - interactive)
   // ============================================
   const toolPages = scanPages('tools').map(({ route, modDate }) => ({
-    url: `${BASE_URL}${route}`,
+    url: withSlash(route),
     lastModified: modDate,
     changeFrequency: 'monthly',
     priority: 0.8,
@@ -98,14 +112,14 @@ export default function sitemap() {
   // BLOG (index + posts)
   // ============================================
   const blogIndex = {
-    url: `${BASE_URL}/blog`,
+    url: withSlash('/blog'),
     lastModified: now,
     changeFrequency: 'weekly',
     priority: 0.9,
   }
 
   const blogPages = blogPosts.map((post) => ({
-    url: `${BASE_URL}/blog/${post.slug}`,
+    url: withSlash(`/blog/${post.slug}`),
     lastModified: new Date(post.date),
     changeFrequency: 'monthly',
     priority: 0.8,
@@ -116,19 +130,25 @@ export default function sitemap() {
   // ============================================
   const otherPages = [
     {
-      url: `${BASE_URL}/about`,
+      url: withSlash('/contact'),
+      lastModified: getFileModDate(path.join(process.cwd(), 'app/contact/page.js')),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: withSlash('/about'),
       lastModified: getFileModDate(path.join(process.cwd(), 'app/about/page.js')),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${BASE_URL}/cofounder`,
+      url: withSlash('/cofounder'),
       lastModified: getFileModDate(path.join(process.cwd(), 'app/cofounder/page.js')),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${BASE_URL}/refer`,
+      url: withSlash('/refer'),
       lastModified: getFileModDate(path.join(process.cwd(), 'app/refer/page.js')),
       changeFrequency: 'monthly',
       priority: 0.5,

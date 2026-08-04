@@ -3,7 +3,7 @@ import Footer from '../components/Footer'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Technical Co-founder for UK Startups | Find Your Tech Partner | Codenest',
+  title: 'Technical Co-founder for UK Startups | Find Your Tech Partner',
   description: 'Looking for a technical co-founder in London or the UK? Experienced CTO open to equity partnerships with exceptional founders. 15+ years building scalable platforms across fintech, healthtech, and B2B SaaS.',
   keywords: [
     'technical cofounder',
@@ -26,9 +26,17 @@ export const metadata = {
     title: 'Technical Co-founder for UK Startups | Codenest',
     description: 'Experienced CTO open to equity partnerships with exceptional founders. 15+ years in fintech, healthtech, and B2B SaaS.',
     type: 'website',
-    url: 'https://codenest.uk/cofounder',
+    url: 'https://codenest.uk/cofounder/',
     siteName: 'Codenest',
     locale: 'en_GB',
+    images: [
+      {
+        url: '/img/og-default.png',
+        width: 1200,
+        height: 630,
+        alt: 'Codenest - Fractional CTO & CFO for UK startups',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
@@ -36,7 +44,7 @@ export const metadata = {
     description: 'Experienced CTO open to equity partnerships with exceptional founders.',
   },
   alternates: {
-    canonical: 'https://codenest.uk/cofounder',
+    canonical: 'https://codenest.uk/cofounder/',
   },
 }
 
@@ -103,7 +111,7 @@ export default function CofounderPage() {
     name: 'Ankit Rana',
     jobTitle: 'Technical Co-founder & CTO',
     description: 'Experienced technical leader open to co-founder partnerships with exceptional UK startup founders. 15+ years in fintech, healthtech, and B2B SaaS.',
-    url: 'https://codenest.uk/cofounder',
+    url: 'https://codenest.uk/cofounder/',
     sameAs: [
       'https://www.linkedin.com/in/arana198',
       'https://codenest.uk'
@@ -339,7 +347,7 @@ export default function CofounderPage() {
             </ul>
 
             <a
-              href="/#contact"
+              href="/contact"
               className="inline-flex items-center justify-center gap-2 w-full bg-slate-900 text-white px-8 py-4 rounded-xl font-semibold hover:bg-slate-800 transition-all"
             >
               Start the Conversation

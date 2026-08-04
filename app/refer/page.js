@@ -10,10 +10,18 @@ export const metadata = {
     title: 'Codenest Referral Program – Earn Up to £2,000',
     description: 'Know a UK founder who needs a fractional CTO or CFO? Refer them to Codenest and earn up to £2,000 per engagement.',
     type: 'website',
-    url: 'https://codenest.uk/refer',
+    url: 'https://codenest.uk/refer/',
+    images: [
+      {
+        url: '/img/og-default.png',
+        width: 1200,
+        height: 630,
+        alt: 'Codenest - Fractional CTO & CFO for UK startups',
+      },
+    ],
   },
   alternates: {
-    canonical: 'https://codenest.uk/refer',
+    canonical: 'https://codenest.uk/refer/',
   },
 }
 

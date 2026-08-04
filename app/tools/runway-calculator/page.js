@@ -3,17 +3,25 @@ import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 
 export const metadata = {
-  title: 'Startup Runway Calculator | How Long Until You Need Funding? | Codenest',
+  title: 'Startup Runway Calculator | How Long Until You Need Funding?',
   description: 'Free startup runway calculator. Calculate how many months of runway you have based on your cash position and burn rate. Plan your fundraising timeline.',
   keywords: ['startup runway calculator', 'burn rate calculator', 'how long is my runway', 'startup cash runway', 'months of runway', 'when to fundraise', 'startup financial planning'],
   openGraph: {
     title: 'Free Startup Runway Calculator',
     description: 'Calculate your runway and plan your fundraising timeline.',
     type: 'website',
-    url: 'https://codenest.uk/tools/runway-calculator',
+    url: 'https://codenest.uk/tools/runway-calculator/',
+    images: [
+      {
+        url: '/img/og-default.png',
+        width: 1200,
+        height: 630,
+        alt: 'Codenest - Fractional CTO & CFO for UK startups',
+      },
+    ],
   },
   alternates: {
-    canonical: 'https://codenest.uk/tools/runway-calculator',
+    canonical: 'https://codenest.uk/tools/runway-calculator/',
   },
 }
 
@@ -135,10 +143,10 @@ export default function RunwayCalculatorPage() {
             Our fractional CFO services help startups optimize burn rate, build financial models, and prepare for fundraising.
           </p>
           <a
-            href="/#contact"
+            href="/contact"
             className="inline-block bg-accent-500 text-primary-900 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-accent-600 transition-all"
           >
-            Book a Free Consultation
+            Request a Strategy Call
           </a>
         </div>
       </section>

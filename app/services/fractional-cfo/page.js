@@ -5,16 +5,24 @@ import Footer from '../../components/Footer'
 
 export const metadata = {
   title: 'Fractional CFO Services London | Startup Financial Planning UK',
-  description: 'Expert fractional CFO for London and UK startups. Financial modeling, fundraising support, investor relations from £2.5k/month. SEIS/EIS expertise. Book consultation.',
+  description: 'Expert fractional CFO for London and UK startups. Financial modeling, fundraising support, investor relations from £2.5k/month. SEIS/EIS expertise. Request a free consultation.',
   keywords: ['fractional CFO UK', 'fractional CFO London', 'startup CFO', 'FP&A UK', 'financial planning analysis', 'financial strategy', 'startup finance UK', 'part-time CFO'],
   openGraph: {
     title: 'Fractional CFO Services London | Codenest',
     description: 'FP&A and financial strategy for UK startups — investor-ready financials without the overhead.',
     type: 'website',
-    url: 'https://codenest.uk/services/fractional-cfo',
+    url: 'https://codenest.uk/services/fractional-cfo/',
+    images: [
+      {
+        url: '/img/og-default.png',
+        width: 1200,
+        height: 630,
+        alt: 'Codenest - Fractional CTO & CFO for UK startups',
+      },
+    ],
   },
   alternates: {
-    canonical: 'https://codenest.uk/services/fractional-cfo',
+    canonical: 'https://codenest.uk/services/fractional-cfo/',
   },
 }
 
@@ -83,7 +91,7 @@ export default function FractionalCFOPage() {
     },
     {
       question: "When should a startup invest in FP&A?",
-      answer: "Ideal timing is when you're preparing to raise funding, need to optimize runway, or want to professionalize your financial operations. Typically pre-seed through Series B stage."
+      answer: "Ideal timing is when you're preparing to raise funding, need to optimize runway, or want to professionalize your financial operations. Typically pre-seed through Series A — and we stay on as you scale."
     },
     {
       question: "Can you help us prepare for due diligence?",
@@ -143,17 +151,17 @@ export default function FractionalCFOPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <div className="inline-block px-4 py-2 bg-accent-100 text-accent-800 rounded-full text-sm font-medium mb-6">
-                Financial & Business Strategy
+                Financial Leadership
               </div>
               <h1 className="font-serif text-5xl md:text-6xl font-bold text-slate-900 leading-tight mb-6">
-                FP&A & Business Strategy
+                Fractional CFO Services
               </h1>
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                Financial planning & analysis, business strategy, and investor-ready reporting. The financial discipline of a high-growth company — without the overhead.
+                FP&A, financial modeling, and investor-ready reporting from a part-time CFO. The financial discipline of a high-growth company — without the overhead.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="/#contact" className="bg-accent-500 text-primary-900 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-accent-600 transition-all shadow-lg hover:shadow-xl text-center">
-                  Schedule a Conversation
+                <a href="/contact" className="bg-accent-500 text-primary-900 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-accent-600 transition-all shadow-lg hover:shadow-xl text-center">
+                  Request a Strategy Call
                 </a>
                 <a href="/#case-studies" className="border-2 border-primary-600 text-primary-700 px-8 py-4 rounded-2xl text-lg font-semibold hover:border-primary-700 hover:bg-primary-50 transition-all text-center">
                   See Our Results
@@ -181,7 +189,7 @@ export default function FractionalCFOPage() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl font-bold text-slate-900 mb-4">Why FP&A Matters</h2>
+            <h2 className="font-serif text-4xl font-bold text-slate-900 mb-4">Why Hire a Fractional CFO?</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Strategic finance and business strategy tailored to your startup's stage
             </p>
@@ -277,6 +285,20 @@ export default function FractionalCFOPage() {
               </details>
             ))}
           </div>
+
+          {/* Related resources */}
+          <div className="mt-12 p-6 bg-accent-50 rounded-2xl border border-accent-100 text-center">
+            <p className="text-slate-700">
+              Not sure when you&apos;ll need to raise? Try our free{' '}
+              <Link href="/tools/runway-calculator" className="font-semibold text-accent-700 hover:text-accent-800 underline">
+                Startup Runway Calculator
+              </Link>{' '}
+              — or read{' '}
+              <Link href="/blog/financial-modeling-seed-stage-startups" className="font-semibold text-accent-700 hover:text-accent-800 underline">
+                our financial modeling guide
+              </Link>.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -284,16 +306,16 @@ export default function FractionalCFOPage() {
       <section className="py-20 bg-gradient-to-r from-accent-500 to-accent-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary-900 mb-4">
-            Ready for Strategic Finance Leadership?
+            Ready for a Fractional CFO?
           </h2>
           <p className="text-xl text-primary-800 mb-8 max-w-2xl mx-auto">
-            Book a free 30-minute discovery call. No sales pitch — just an honest conversation about your financial and business strategy needs.
+            Request a free 30-minute discovery call. No sales pitch — just an honest conversation about your financial and business strategy needs.
           </p>
           <a
-            href="/#contact"
+            href="/contact"
             className="inline-block bg-primary-600 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-primary-700 transition-all shadow-lg hover:shadow-xl"
           >
-            Book a Discovery Call
+            Request a Strategy Call
           </a>
         </div>
       </section>

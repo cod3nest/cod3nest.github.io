@@ -17,7 +17,7 @@ export default function Home() {
       track: "technical"
     },
     {
-      title: "Financial & Business Strategy",
+      title: "Fractional CFO",
       benefit: "FP&A and strategic finance leadership",
       description: "Financial planning & analysis, business strategy, and investor-ready reporting. The financial discipline of a high-growth company — without the overhead.",
       image: "/img/photos/service-diligence.jpg",
@@ -70,7 +70,7 @@ export default function Home() {
     {
       title: "Rungway: Scaling a Social Mentoring Platform",
       challenge: "A London-based HR-tech startup needed fractional CTO support to scale their social mentoring platform. The system could only handle 5 concurrent users before experiencing severe performance degradation — completely inadequate for their UK enterprise client base.",
-      solution: "We delivered a complete architectural transformation as their interim startup CTO, migrating from Neo4J to a hybrid MySQL/NoSQL architecture for the primary data store (retaining Neo4J for AI/ML). Our team implemented microservices with domain-driven design, established Infrastructure as Code with AWS, built CI/CD pipelines, introduced event-driven architecture with SQS, and containerized the entire stack.",
+      solution: "As Rungway's interim CTO, our founder delivered a complete architectural transformation: migrating from Neo4J to a hybrid MySQL/NoSQL architecture for the primary data store (retaining Neo4J for AI/ML), implementing microservices with domain-driven design, establishing Infrastructure as Code with AWS, building CI/CD pipelines, introducing event-driven architecture with SQS, and containerizing the entire stack.",
       results: ["Scaled from 5 to 1000+ concurrent users", "Zero-downtime database migration", "Modern DevOps foundations established", "Event-driven microservices architecture"],
       tags: ["Backend Architecture", "AWS", "DevOps", "Scalability", "Microservices"],
       image: "/img/photos/case-rungway.jpg",
@@ -79,7 +79,7 @@ export default function Home() {
     {
       title: "Opayo by Elavon: Payment Platform Transformation",
       challenge: "Leading UK fintech payment provider needed Kubernetes consulting to modernize their infrastructure and integrate new payment channels (Apple Pay, Google Pay) while maintaining 100% uptime for critical transaction processing across Europe.",
-      solution: "We orchestrated a comprehensive AWS EKS migration with Kubernetes and Helm, implementing GitOps workflows and Infrastructure as Code using Terraform. Our team managed the transition from monolithic architecture to microservices, established Jenkins CI/CD pipelines migrated to Kubernetes, and scaled engineering culture across distributed teams.",
+      solution: "Working inside the Opayo platform team, our founder orchestrated a comprehensive AWS EKS migration with Kubernetes and Helm, implementing GitOps workflows and Infrastructure as Code using Terraform — managing the transition from monolithic architecture to microservices, establishing Jenkins CI/CD pipelines on Kubernetes, and scaling engineering culture across distributed teams.",
       results: ["Accelerated releases from every 2 weeks to multiple times per day", "Contributed to 10% revenue increase through faster feature delivery", "Reduced CI pipeline failures through automated testing", "Successfully integrated Apple Pay and Google Pay"],
       tags: ["Payment Systems", "AWS EKS", "Kubernetes", "Terraform", "GitOps", "Team Leadership"],
       image: "/img/photos/case-opayo.jpg",
@@ -88,7 +88,7 @@ export default function Home() {
     {
       title: "AstraZeneca: Drug Delivery Tracking System MVP",
       challenge: "AstraZeneca needed to replace manual spreadsheet-based drug delivery tracking with a modern web-based tool to improve efficiency and accelerate time-to-market for pharmaceutical products. The system required integration with existing workflows while maintaining regulatory compliance.",
-      solution: "We built a production-grade web application with REST APIs and automated CI/CD pipelines. Our team collaborated closely with stakeholders and business analysts to define requirements and align delivery with business goals. We architected scalable deployments on Kubernetes using Docker and Jenkins (config-as-code), establishing robust testing practices with JUnit and Spock.",
+      solution: "Our founder built a production-grade web application with REST APIs and automated CI/CD pipelines, collaborating closely with stakeholders and business analysts to define requirements and align delivery with business goals — architecting scalable deployments on Kubernetes using Docker and Jenkins (config-as-code), and establishing robust testing practices with JUnit and Spock.",
       results: ["Accelerated delivery by 40% compared to manual processes", "Cut deployment errors by 30% through automated pipelines", "Improved stakeholder confidence through transparent roadmap planning", "Delivered production-ready MVP on Kubernetes infrastructure"],
       tags: ["Healthcare", "Team Leadership", "Kubernetes", "CI/CD", "REST APIs", "Stakeholder Management"],
       image: "/img/photos/case-astrazeneca.jpg",
@@ -219,14 +219,14 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div>
               <p className="text-sm uppercase tracking-[0.2em] text-accent-500 mb-8 font-medium animate-hero-1">
-                Boutique Advisory for Select Founders
+                Fractional CTO &amp; CFO for UK Startups
               </p>
               <h1 className="font-serif text-5xl md:text-6xl font-normal text-slate-900 leading-[1.1] mb-6 animate-hero-2">
                 Executive Firepower.<br />
                 <span className="italic">Startup Agility.</span>
               </h1>
               <p className="text-xl text-slate-600 mb-6 leading-relaxed max-w-lg animate-hero-3">
-                Big 4 rigour meets founder empathy. Bespoke technical and financial leadership for ambitious UK startups — without the overhead of full-time executives.
+                Big 4 rigour meets founder empathy. Your part-time CTO and CFO in one engagement — architecture, engineering leadership, financial models, and fundraising for founders from pre-seed to Series A.
               </p>
               <ul className="space-y-4 mb-8 max-w-lg animate-hero-3">
                 <li className="flex items-start text-slate-700 group">
@@ -252,14 +252,14 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <div>
-                    <span className="font-medium">100% due diligence pass rate</span>
-                    <span className="text-slate-500 text-sm block">Proven track record across 15+ startups</span>
+                    <span className="font-medium">Every client diligence passed to date</span>
+                    <span className="text-slate-500 text-sm block">Technical and financial, across 15+ startups</span>
                   </div>
                 </li>
               </ul>
               <div className="flex flex-col sm:flex-row gap-4 animate-hero-4">
                 <a href="#contact" className="bg-accent-400 text-primary-900 px-8 py-4 rounded-lg text-base font-semibold hover:bg-accent-500 transition-all text-center shadow-gold hover:shadow-gold-lg btn-premium cta-pulse">
-                  Schedule a Strategy Call
+                  Request a Strategy Call
                 </a>
                 <a href="#case-studies" className="border-2 border-slate-300 text-slate-700 px-8 py-4 rounded-lg text-base font-semibold hover:border-accent-400 hover:text-primary-700 transition-all text-center">
                   View Case Studies
@@ -292,7 +292,7 @@ export default function Home() {
       {/* Social Proof - Client Logos */}
       <section className="py-12 bg-slate-50/50 border-y border-slate-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-center text-xs text-slate-400 mb-8 uppercase tracking-[0.2em] font-medium">Trusted by category leaders</p>
+          <p className="text-center text-xs text-slate-500 mb-8 uppercase tracking-[0.2em] font-medium">Founder track record includes</p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
             {/* Rungway - HR Tech */}
             <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm transition-all cursor-default">
@@ -325,12 +325,10 @@ export default function Home() {
               />
             </div>
 
-            {/* Additional credibility indicator */}
-            <div className="hidden lg:flex items-center gap-2 px-6 py-3 border-l border-slate-200">
-              <span className="text-2xl font-bold text-accent-500">15+</span>
-              <span className="text-sm text-slate-500 leading-tight">Startups<br/>supported</span>
-            </div>
           </div>
+          <p className="text-center text-sm text-slate-600 mt-8">
+            Led by <a href="/about" className="font-semibold text-primary-700 hover:text-primary-800">Ankit Rana</a> — ex-Deloitte Digital and Elavon (US Bancorp), 15+ years building and scaling platforms.
+          </p>
         </div>
       </section>
 
@@ -343,20 +341,20 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="space-y-2 group">
-              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gold-gradient stat-number group-hover:scale-105 transition-transform">200x</div>
-              <div className="text-slate-300 text-sm md:text-base">Platform scalability gains</div>
+              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gold-gradient stat-number group-hover:scale-105 transition-transform">5 &rarr; 1,000+</div>
+              <div className="text-slate-300 text-sm md:text-base">Concurrent users scaled at Rungway</div>
             </div>
             <div className="space-y-2 group">
-              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gold-gradient stat-number group-hover:scale-105 transition-transform">40%</div>
-              <div className="text-slate-300 text-sm md:text-base">Average runway extension</div>
+              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gold-gradient stat-number group-hover:scale-105 transition-transform">15+</div>
+              <div className="text-slate-300 text-sm md:text-base">Startups supported</div>
             </div>
             <div className="space-y-2 group">
               <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gold-gradient stat-number group-hover:scale-105 transition-transform">Series A</div>
               <div className="text-slate-300 text-sm md:text-base">Fundraises supported</div>
             </div>
             <div className="space-y-2 group">
-              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gold-gradient stat-number group-hover:scale-105 transition-transform">100%</div>
-              <div className="text-slate-300 text-sm md:text-base">Due diligence pass rate</div>
+              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gold-gradient stat-number group-hover:scale-105 transition-transform">8-12 wks</div>
+              <div className="text-slate-300 text-sm md:text-base">Fixed-scope MVP delivery</div>
             </div>
           </div>
         </div>
@@ -369,7 +367,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className="text-sm uppercase tracking-[0.2em] text-accent-500 mb-4 font-medium">Integrated Partnership</p>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Your Strategic Advisory Team</h2>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Your Fractional CTO &amp; CFO</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Most startups need both CTO and CFO guidance. We deliver integrated leadership — not siloed consulting.
             </p>
@@ -385,9 +383,9 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4 relative">Strategic & Financial Leadership</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4 relative">Fractional CFO</h3>
               <p className="text-slate-600 mb-6 leading-relaxed relative">
-                Business strategy, FP&A, and the financial discipline that makes your startup investable.
+                Strategic finance, FP&A, and the financial discipline that makes your startup investable.
               </p>
               <ul className="space-y-3 mb-8 relative">
                 <li className="flex items-center text-slate-700">
@@ -416,7 +414,7 @@ export default function Home() {
                 </li>
               </ul>
               <a href="/services/fractional-cfo" className="inline-flex items-center text-accent-500 hover:text-accent-600 font-semibold link-gold relative">
-                Explore Strategic Advisory
+                Explore Fractional CFO Services
                 <svg className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -430,7 +428,7 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Technical Leadership</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Fractional CTO</h3>
               <p className="text-slate-600 mb-6 leading-relaxed">
                 Architecture decisions, engineering team building, and infrastructure that scales from day one.
               </p>
@@ -439,7 +437,7 @@ export default function Home() {
                   <svg className="w-5 h-5 text-primary-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Fractional CTO Advisory
+                  Technical Strategy &amp; Architecture
                 </li>
                 <li className="flex items-center text-slate-700">
                   <svg className="w-5 h-5 text-primary-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -461,7 +459,7 @@ export default function Home() {
                 </li>
               </ul>
               <a href="/services/fractional-cto" className="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold">
-                Explore Technical Advisory
+                Explore Fractional CTO Services
                 <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -613,7 +611,7 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
               </span>
-              Technical Leadership
+              Fractional CTO Services
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.filter(s => s.track === 'technical').map((service, index) => (
@@ -630,7 +628,7 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
               </span>
-              Financial & Business Strategy
+              Fractional CFO Services
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.filter(s => s.track === 'business').map((service, index) => (
@@ -656,7 +654,7 @@ export default function Home() {
             <p className="text-sm uppercase tracking-[0.2em] text-accent-500 mb-4 font-medium">Proven Track Record</p>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Client Partnerships</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              From high-growth startups to FTSE 100 enterprises — transformational outcomes from deep, hands-on collaboration
+              Startup outcomes, backed by enterprise-grade experience — deep, hands-on collaboration at every stage
             </p>
           </div>
 
@@ -781,7 +779,7 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <a href="#contact" className="inline-flex items-center bg-accent-400 text-primary-900 px-8 py-4 rounded-lg font-semibold hover:bg-accent-500 transition-all shadow-gold hover:shadow-gold-lg btn-premium">
-              Schedule a Strategy Call
+              Request a Strategy Call
               <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -886,13 +884,13 @@ export default function Home() {
                   <svg className="w-4 h-4 text-red-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
-                  <span className="text-slate-400">Single domain expertise</span>
+                  <span className="text-slate-400">Tech or finance — rarely both</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <svg className="w-4 h-4 text-red-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
-                  <span className="text-slate-400">Bus factor risk</span>
+                  <span className="text-slate-400">Task execution, not strategy</span>
                 </li>
               </ul>
               <p className="text-xs text-slate-500 mt-4">Best for: Specific technical tasks</p>
@@ -1048,14 +1046,14 @@ export default function Home() {
             Ready to Partner?
           </h2>
           <p className="text-xl text-primary-200 mb-8 max-w-2xl mx-auto">
-            We take on a limited number of new partnerships each quarter. Schedule a confidential strategy session to explore fit.
+            We take on a limited number of new partnerships each quarter. Request a confidential strategy session to explore fit.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#contact"
               className="bg-accent-400 text-primary-900 px-10 py-4 rounded-xl text-lg font-semibold hover:bg-accent-500 transition-all shadow-gold hover:shadow-gold-lg text-center btn-premium"
             >
-              Schedule a Strategy Call
+              Request a Strategy Call
             </a>
             <a
               href="/blog"
@@ -1136,7 +1134,7 @@ export default function Home() {
           <div className="mt-12 text-center">
             <p className="text-slate-600 mb-4">Still have questions?</p>
             <a href="#contact" className="inline-flex items-center gap-2 text-accent-600 hover:text-accent-700 font-semibold">
-              Let's chat
+              Request a Strategy Call
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

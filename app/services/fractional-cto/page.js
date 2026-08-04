@@ -5,16 +5,24 @@ import Footer from '../../components/Footer'
 
 export const metadata = {
   title: 'Fractional CTO Services London | Part-Time Technical Leadership UK',
-  description: 'Expert fractional CTO services for London and UK startups. Senior technical leadership from £3k/month. Architecture, hiring, due diligence prep. Book a free consultation.',
+  description: 'Expert fractional CTO services for London and UK startups. Senior technical leadership from £3k/month. Architecture, hiring, due diligence prep. Request a free consultation.',
   keywords: ['fractional CTO UK', 'fractional CTO London', 'part-time CTO', 'startup CTO', 'technical leadership', 'CTO as a service', 'interim CTO UK', 'fractional CTO cost', 'startup technical leadership'],
   openGraph: {
     title: 'Fractional CTO Services London | Codenest',
     description: 'Engineering rigour and technical leadership for UK startups — without the overhead. From £3k/month.',
     type: 'website',
-    url: 'https://codenest.uk/services/fractional-cto',
+    url: 'https://codenest.uk/services/fractional-cto/',
+    images: [
+      {
+        url: '/img/og-default.png',
+        width: 1200,
+        height: 630,
+        alt: 'Codenest - Fractional CTO & CFO for UK startups',
+      },
+    ],
   },
   alternates: {
-    canonical: 'https://codenest.uk/services/fractional-cto',
+    canonical: 'https://codenest.uk/services/fractional-cto/',
   },
 }
 
@@ -151,8 +159,8 @@ export default function FractionalCTOPage() {
                 Engineering rigour and technical leadership for ambitious startups. Make confident architecture decisions, build the right team, and become investor-ready — without the overhead.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="/#contact" className="bg-accent-500 text-primary-900 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-accent-600 transition-all shadow-lg hover:shadow-xl text-center">
-                  Schedule a Conversation
+                <a href="/contact" className="bg-accent-500 text-primary-900 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-accent-600 transition-all shadow-lg hover:shadow-xl text-center">
+                  Request a Strategy Call
                 </a>
                 <a href="/#case-studies" className="border-2 border-primary-600 text-primary-700 px-8 py-4 rounded-xl text-lg font-semibold hover:border-primary-700 hover:bg-primary-50 transition-all text-center">
                   View Client Outcomes
@@ -276,6 +284,24 @@ export default function FractionalCTOPage() {
               </details>
             ))}
           </div>
+
+          {/* Related resources */}
+          <div className="mt-12 p-6 bg-primary-50 rounded-2xl border border-primary-100 text-center">
+            <p className="text-slate-700">
+              Still researching? Read{' '}
+              <Link href="/guides/fractional-cto-guide" className="font-semibold text-primary-700 hover:text-primary-800 underline">
+                The Complete Guide to Fractional CTO Services
+              </Link>{' '}
+              or compare{' '}
+              <Link href="/guides/fractional-cto-vs-full-time" className="font-semibold text-primary-700 hover:text-primary-800 underline">
+                fractional vs full-time
+              </Link>{' '}
+              and{' '}
+              <Link href="/guides/fractional-cto-vs-agency" className="font-semibold text-primary-700 hover:text-primary-800 underline">
+                fractional vs agency
+              </Link>.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -286,13 +312,13 @@ export default function FractionalCTOPage() {
             Ready to Level Up Your Technical Leadership?
           </h2>
           <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            Book a free 30-minute discovery call. No sales pitch — just an honest conversation about your technical needs.
+            Request a free 30-minute discovery call. No sales pitch — just an honest conversation about your technical needs.
           </p>
           <a
-            href="/#contact"
+            href="/contact"
             className="inline-block bg-accent-500 text-primary-900 px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-accent-600 transition-all shadow-lg hover:shadow-xl"
           >
-            Book a Discovery Call
+            Request a Strategy Call
           </a>
         </div>
       </section>

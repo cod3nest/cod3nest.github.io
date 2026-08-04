@@ -3,17 +3,25 @@ import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 
 export const metadata = {
-  title: 'Technical Co-founder Alternatives: Options for Non-Technical Founders | Codenest',
+  title: 'Technical Co-founder Alternatives: Options for Non-Technical Founders',
   description: 'Can\'t find a technical co-founder? Explore alternatives: fractional CTO, development agencies, technical advisors, and more. Find the right path for your startup.',
   keywords: ['technical co-founder alternative', 'can\'t find technical co-founder', 'non-technical founder options', 'startup without technical co-founder', 'fractional CTO vs co-founder', 'hire CTO instead of co-founder'],
   openGraph: {
     title: 'Technical Co-founder Alternatives for Non-Technical Founders',
     description: 'Can\'t find the right technical co-founder? Here are your options.',
     type: 'article',
-    url: 'https://codenest.uk/guides/technical-cofounder-alternatives',
+    url: 'https://codenest.uk/guides/technical-cofounder-alternatives/',
+    images: [
+      {
+        url: '/img/og-default.png',
+        width: 1200,
+        height: 630,
+        alt: 'Codenest - Fractional CTO & CFO for UK startups',
+      },
+    ],
   },
   alternates: {
-    canonical: 'https://codenest.uk/guides/technical-cofounder-alternatives',
+    canonical: 'https://codenest.uk/guides/technical-cofounder-alternatives/',
   },
 }
 

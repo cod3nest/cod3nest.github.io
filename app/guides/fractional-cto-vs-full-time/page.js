@@ -3,17 +3,25 @@ import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 
 export const metadata = {
-  title: 'Fractional CTO vs Full-Time CTO: Which Is Right for Your Startup? | Codenest',
+  title: 'Fractional CTO vs Full-Time CTO: Which Is Right for Your Startup?',
   description: 'Compare fractional CTO vs full-time CTO for UK startups. Cost analysis, pros and cons, decision framework, and when each option makes sense for your stage.',
   keywords: ['fractional CTO vs full-time CTO', 'part-time CTO vs permanent CTO', 'CTO hiring decision', 'startup CTO options UK', 'fractional vs full-time executive'],
   openGraph: {
     title: 'Fractional CTO vs Full-Time CTO: Complete Comparison',
     description: 'Which CTO model is right for your startup? Compare costs, benefits, and find out when each option makes sense.',
     type: 'article',
-    url: 'https://codenest.uk/guides/fractional-cto-vs-full-time',
+    url: 'https://codenest.uk/guides/fractional-cto-vs-full-time/',
+    images: [
+      {
+        url: '/img/og-default.png',
+        width: 1200,
+        height: 630,
+        alt: 'Codenest - Fractional CTO & CFO for UK startups',
+      },
+    ],
   },
   alternates: {
-    canonical: 'https://codenest.uk/guides/fractional-cto-vs-full-time',
+    canonical: 'https://codenest.uk/guides/fractional-cto-vs-full-time/',
   },
 }
 
@@ -285,14 +293,22 @@ export default function FractionalVsFullTimePage() {
             Still Not Sure Which Is Right for You?
           </h2>
           <p className="text-xl text-primary-100 mb-8">
-            Book a free 30-minute call. We'll help you assess your needs and recommend the best path forward—even if it's not us.
+            Request a free 30-minute call. We'll help you assess your needs and recommend the best path forward—even if it's not us.
           </p>
-          <Link
-            href="/#contact"
-            className="inline-block bg-accent-500 text-primary-900 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-accent-600 transition-all"
-          >
-            Book a Free Consultation
-          </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="inline-block bg-accent-500 text-primary-900 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-accent-600 transition-all"
+            >
+              Request a Strategy Call
+            </Link>
+            <Link
+              href="/services/fractional-cto"
+              className="inline-block border-2 border-primary-300 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-primary-500/30 transition-all"
+            >
+              Explore Fractional CTO Services
+            </Link>
+          </div>
         </div>
       </section>
 

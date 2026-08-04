@@ -421,12 +421,15 @@ const ContactForm = () => {
           disabled={isSubmitting || emailValidation.status === 'invalid' || emailValidation.status === 'validating'}
           className={`w-full py-4 px-6 rounded-xl text-lg font-semibold transition-all ${
             isSubmitting || emailValidation.status === 'invalid' || emailValidation.status === 'validating'
-              ? 'bg-slate-400 cursor-not-allowed'
-              : 'bg-primary-600 hover:bg-primary-700 shadow-lg hover:shadow-xl'
-          } text-white`}
+              ? 'bg-slate-400 cursor-not-allowed text-white'
+              : 'bg-accent-400 hover:bg-accent-500 shadow-gold hover:shadow-gold-lg text-primary-900'
+          }`}
         >
-          {isSubmitting ? 'Sending...' : emailValidation.status === 'validating' ? 'Verifying email...' : 'Send Message'}
+          {isSubmitting ? 'Sending...' : emailValidation.status === 'validating' ? 'Verifying email...' : 'Request My Call'}
         </button>
+        <p className="text-sm text-slate-500 text-center -mt-2">
+          We&apos;ll reply within 24 hours with times.
+        </p>
       </form>
     </div>
   )

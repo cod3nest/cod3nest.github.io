@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
 import Navigation from '../../components/Navigation'
+import Footer from '../../components/Footer'
 import GiscusComments from '../../components/GiscusComments'
 import { getBlogPost, getAllBlogSlugs } from '../../../lib/blog'
 import 'highlight.js/styles/github-dark.css'
@@ -17,7 +18,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { slug } = await params
   const post = getBlogPost(slug)
-  const description = post.content.substring(0, 160).replace(/[#*\n]/g, ' ').trim()
+  const description = post.description || post.content.substring(0, 160).replace(/[#*\n]/g, ' ').trim()
 
   return {
     title: `${post.title} – Codenest Blog`,
@@ -31,12 +32,12 @@ export async function generateMetadata({ params }) {
       publishedTime: post.date,
       authors: [post.author],
       tags: post.tags,
-      url: `https://codenest.uk/blog/${slug}`,
+      url: `https://codenest.uk/blog/${slug}/`,
       siteName: 'Codenest',
       locale: 'en_GB',
       images: [
         {
-          url: '/img/companylogo.png',
+          url: '/img/og-default.png',
           width: 1200,
           height: 630,
           alt: post.title,
@@ -47,10 +48,10 @@ export async function generateMetadata({ params }) {
       card: 'summary_large_image',
       title: post.title,
       description: description,
-      images: ['/img/companylogo.png'],
+      images: ['/img/og-default.png'],
     },
     alternates: {
-      canonical: `https://codenest.uk/blog/${slug}`,
+      canonical: `https://codenest.uk/blog/${slug}/`,
     },
   }
 }
@@ -78,13 +79,13 @@ export default async function BlogPost({ params }) {
         '@type': 'ListItem',
         position: 2,
         name: 'Blog',
-        item: 'https://codenest.uk/blog'
+        item: 'https://codenest.uk/blog/'
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: post.title,
-        item: `https://codenest.uk/blog/${slug}`
+        item: `https://codenest.uk/blog/${slug}/`
       }
     ]
   }
@@ -92,9 +93,9 @@ export default async function BlogPost({ params }) {
   // Structured data for the article
   const articleSchema = {
     '@context': 'https://schema.org',
-    '@type': 'TechArticle',
+    '@type': 'BlogPosting',
     headline: post.title,
-    description: post.content.substring(0, 160).replace(/[#*\n]/g, ' ').trim(),
+    description: post.description || post.content.substring(0, 160).replace(/[#*\n]/g, ' ').trim(),
     author: {
       '@type': 'Person',
       name: post.author,
@@ -112,12 +113,35 @@ export default async function BlogPost({ params }) {
     dateModified: post.date,
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://codenest.uk/blog/${slug}`
+      '@id': `https://codenest.uk/blog/${slug}/`
     },
     keywords: post.tags.join(', '),
-    articleSection: 'Technology',
+    articleSection: post.tags?.[0] || 'Startups',
     inLanguage: 'en-GB'
   }
+
+  // Route the end-of-post CTA to the service the post actually supports:
+  // finance-tagged posts sell the Fractional CFO service unless an explicitly
+  // technical tag overrides (e.g. technical due-diligence, CTO cost guides).
+  const FINANCE_TAGS = ['Finance', 'Startup Finance', 'Financial Modeling', 'Fundraising', 'Cash Management', 'Unit Economics', 'Data Room', 'Metrics']
+  const TECH_OVERRIDE_TAGS = ['Fractional CTO', 'Technical Leadership', 'Infrastructure']
+  const postTags = post.tags ?? []
+  const isFinancePost =
+    postTags.some((tag) => FINANCE_TAGS.includes(tag)) &&
+    !postTags.some((tag) => TECH_OVERRIDE_TAGS.includes(tag))
+  const cta = isFinancePost
+    ? {
+        heading: 'Need investor-ready financials?',
+        body: 'Our Fractional CFO service covers financial modeling, runway planning, and data rooms that stand up to due diligence.',
+        href: '/services/fractional-cfo',
+        label: 'Explore Fractional CFO Services',
+      }
+    : {
+        heading: 'Need senior technical leadership?',
+        body: 'Our Fractional CTO service covers architecture, engineering hiring, and infrastructure that scales from day one.',
+        href: '/services/fractional-cto',
+        label: 'Explore Fractional CTO Services',
+      }
 
   return (
     <div className="min-h-screen bg-white">
@@ -195,20 +219,28 @@ export default async function BlogPost({ params }) {
           </ReactMarkdown>
         </div>
 
-        {/* Author CTA */}
+        {/* Author CTA — routed to the service this post supports */}
         <div className="mt-16 p-8 bg-slate-50 rounded-2xl border border-slate-200">
           <h3 className="text-2xl font-bold text-slate-900 mb-4">
-            Want help with your infrastructure?
+            {cta.heading}
           </h3>
           <p className="text-slate-600 mb-6">
-            We help startups build production-grade systems using GitOps, Infrastructure as Code, and cloud-native platforms.
+            {cta.body}
           </p>
-          <a
-            href="/#contact"
-            className="inline-block bg-accent-500 text-primary-900 px-6 py-3 rounded-xl font-semibold hover:bg-accent-600 transition-all"
-          >
-            Book a Discovery Call
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link
+              href={cta.href}
+              className="inline-block bg-accent-500 text-primary-900 px-6 py-3 rounded-xl font-semibold hover:bg-accent-600 transition-all text-center"
+            >
+              {cta.label}
+            </Link>
+            <a
+              href="/contact"
+              className="inline-block border-2 border-slate-300 text-slate-700 px-6 py-3 rounded-xl font-semibold hover:border-accent-400 hover:text-primary-700 transition-all text-center"
+            >
+              Request a Strategy Call
+            </a>
+          </div>
         </div>
       </article>
 
@@ -218,45 +250,7 @@ export default async function BlogPost({ params }) {
         <GiscusComments />
       </section>
 
-      {/* Footer */}
-      <footer className="bg-slate-900 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-            <div>
-              <img
-                src="/img/companylogo-light.svg"
-                alt="Codenest - Fractional CTO and Startup Engineering Services"
-                className="h-10 w-auto mb-4 company-logo"
-              />
-              <p className="text-slate-400 text-sm">
-                Build a product that scales from day one — with automation-first engineering and cloud-native delivery.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="/#case-studies" className="text-slate-400 hover:text-white transition-colors">Case Studies</a></li>
-                <li><a href="/#services" className="text-slate-400 hover:text-white transition-colors">Services</a></li>
-                <li><a href="/#how-we-work" className="text-slate-400 hover:text-white transition-colors">Our Process</a></li>
-                <li><a href="/#about" className="text-slate-400 hover:text-white transition-colors">Our Story</a></li>
-                <li><a href="/blog" className="text-slate-400 hover:text-white transition-colors">Blog</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Connect</h4>
-              <ul className="space-y-2 text-sm">
-                <li><a href="/#contact" className="text-slate-400 hover:text-white transition-colors">Book a Discovery Call</a></li>
-                <li><a href="https://www.linkedin.com/company/codenest-ltd" className="text-slate-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="pt-8 border-t border-slate-800 text-center">
-            <p className="text-slate-500 text-sm">
-              © 2025 Codenest. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

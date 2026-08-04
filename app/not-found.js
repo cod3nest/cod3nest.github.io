@@ -23,7 +23,7 @@ export default function NotFound() {
               Back to Home
             </Link>
             <Link
-              href="/#contact"
+              href="/contact"
               className="border-2 border-primary-600 text-primary-700 px-8 py-4 rounded-2xl text-lg font-semibold hover:border-primary-700 hover:bg-primary-50 transition-all text-center"
             >
               Contact Us
@@ -35,7 +35,7 @@ export default function NotFound() {
       <footer className="bg-slate-900 text-white py-16 mt-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-slate-500 text-sm">
-            &copy; 2025 Codenest. All rights reserved.
+            &copy; {new Date().getFullYear()} Codenest. All rights reserved.
           </p>
         </div>
       </footer>
