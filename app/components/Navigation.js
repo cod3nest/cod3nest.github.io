@@ -84,7 +84,7 @@ export default function Navigation() {
           {/* Desktop Menu — six links plus the CTA need lg; at md they overflow. */}
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-1">
-              <Link href="/services" className="text-slate-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Services</Link>
+              <Link href="/services" className="text-slate-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">All Services</Link>
               <Link href="/services/fractional-cto" className="text-slate-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Fractional CTO</Link>
               <Link href="/services/fractional-cfo" className="text-slate-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Fractional CFO</Link>
               <a href="/case-studies" className="text-slate-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Case Studies</a>
@@ -114,7 +114,7 @@ export default function Navigation() {
         {isMenuOpen && (
           <div id="mobile-menu" className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-slate-100">
-              <Link href="/services" onClick={() => setIsMenuOpen(false)} className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">Services</Link>
+              <Link href="/services" onClick={() => setIsMenuOpen(false)} className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">All Services</Link>
               <Link href="/services/fractional-cto" onClick={() => setIsMenuOpen(false)} className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">Fractional CTO</Link>
               <Link href="/services/fractional-cfo" onClick={() => setIsMenuOpen(false)} className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">Fractional CFO</Link>
               <a href="/case-studies" onClick={() => setIsMenuOpen(false)} className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">Case Studies</a>
