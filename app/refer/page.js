@@ -1,10 +1,12 @@
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import CopyButton from '../components/CopyButton'
+import JsonLd from '../components/JsonLd'
+import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../lib/schema'
 
 export const metadata = {
-  title: 'Refer a UK Startup, Earn Up to £2,000 | Codenest Partner Program',
-  description: 'Refer London and UK startups needing fractional CTO or CFO support. Earn up to £2,000 per successful engagement. Simple referral program for VCs, accelerators, and founders.',
+  title: 'Refer a UK Startup, Earn Up to £2,000',
+  description: 'Refer a UK startup that needs fractional CTO or CFO support and earn up to £2,000 per engagement. For VCs, accelerators and founders.',
   keywords: ['startup referral program UK', 'refer a startup', 'fractional CTO referral', 'VC referral fees', 'startup partner program London'],
   openGraph: {
     title: 'Codenest Referral Program – Earn Up to £2,000',
@@ -24,6 +26,8 @@ export const metadata = {
     canonical: 'https://codenest.uk/refer/',
   },
 }
+
+const pageSchema = breadcrumbs([{ name: 'Referral Program', path: '/refer/' }])
 
 export default function ReferralPage() {
   const referralTiers = [
@@ -108,6 +112,7 @@ export default function ReferralPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <JsonLd schema={pageSchema} />
       <Navigation />
 
       <main id="main-content">

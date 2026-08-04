@@ -1,6 +1,17 @@
 import Link from 'next/link'
 import Navigation from './components/Navigation'
 
+// Static export emits this page twice: out/404.html (which GitHub Pages serves with a
+// real 404 status) and out/404/index.html (which it serves with 200, making it a
+// crawlable soft-404). Next already adds noindex to not-found pages, but not a
+// canonical — so without this the 404 inherited the root layout's and told Google the
+// 404 page IS the homepage.
+export const metadata = {
+  title: 'Page Not Found',
+  description: 'The page you are looking for does not exist or has been moved.',
+  alternates: { canonical: 'https://codenest.uk/404/' },
+}
+
 export default function NotFound() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
@@ -23,7 +34,7 @@ export default function NotFound() {
               Back to Home
             </Link>
             <Link
-              href="/contact"
+              href="/contact/"
               className="border-2 border-primary-600 text-primary-700 px-8 py-4 rounded-2xl text-lg font-semibold hover:border-primary-700 hover:bg-primary-50 transition-all text-center"
             >
               Contact Us
@@ -34,7 +45,7 @@ export default function NotFound() {
 
       <footer className="bg-slate-900 text-white py-16 mt-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-slate-500 text-sm">
+          <p className="text-slate-400 text-sm">
             &copy; {new Date().getFullYear()} Codenest. All rights reserved.
           </p>
         </div>

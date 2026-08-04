@@ -1,5 +1,6 @@
 ---
 title: 'When Should You Hire a Fractional CTO? 7 Signs Your Startup Is Ready'
+seoTitle: 'When to Hire a Fractional CTO: 7 Signs'
 description: 'Not sure if you need a fractional CTO? Here are 7 clear signs that your startup is ready for part-time technical leadership.'
 date: '2025-01-10'
 author: 'Ankit Rana'
@@ -107,4 +108,4 @@ If you recognized yourself in 3+ of these signs, it's probably time to explore f
 
 ---
 
-*Ready to explore fractional CTO support? [Book a free discovery call](/services/fractional-cto) to discuss your situation.*
+*Ready to explore fractional CTO support? [Book a free discovery call](/services/fractional-cto/) to discuss your situation.*

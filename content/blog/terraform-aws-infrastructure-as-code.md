@@ -1,5 +1,6 @@
 ---
 title: 'AWS Infrastructure for Growing Startups: Choosing the Right Tools'
+seoTitle: 'AWS Infrastructure for Growing Startups'
 description: 'Cut through the IaC noise—Terraform, CloudFormation, CDK, Pulumi. How to choose the right infrastructure tools for your stage.'
 date: '2025-04-08'
 author: 'Ankit Rana'
@@ -372,4 +373,4 @@ The goal isn't to have the most sophisticated infrastructure—it's to have infr
 
 ---
 
-*Need help setting up your AWS infrastructure or preparing for technical due diligence? [Get in touch](/contact) for a consultation.*
+*Need help setting up your AWS infrastructure or preparing for technical due diligence? [Get in touch](/contact/) for a consultation.*

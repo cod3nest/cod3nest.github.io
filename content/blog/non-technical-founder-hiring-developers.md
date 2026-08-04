@@ -1,5 +1,6 @@
 ---
 title: "Non-Technical Founder's Guide to Hiring Developers in 2026"
+seoTitle: 'Hiring Developers as a Non-Technical Founder'
 description: "How to hire developers when you are not technical yourself. Practical guide covering where to find developers, how to evaluate them, and what to pay."
 date: '2026-08-04'
 author: 'Ankit Rana'
@@ -257,4 +258,4 @@ The goal isn't to become technical yourself—it's to build systems for making g
 
 ---
 
-*Need help hiring your first developers? Our [fractional CTO services](/services/fractional-cto) include hiring support, technical interview design, and candidate evaluation.*
+*Need help hiring your first developers? Our [fractional CTO services](/services/fractional-cto/) include hiring support, technical interview design, and candidate evaluation.*

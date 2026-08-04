@@ -21,6 +21,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # app/sitemap.js reads per-file commit dates for <lastmod>. The default
+          # shallow clone would give every page the same single-commit date.
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4

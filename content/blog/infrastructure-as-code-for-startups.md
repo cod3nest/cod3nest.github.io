@@ -1,5 +1,6 @@
 ---
 title: 'Infrastructure as Code for Startups: Why It Matters for Your Next Raise'
+seoTitle: 'Infrastructure as Code for Startups'
 description: 'Why "we click around in the AWS console" raises red flags during due diligence, and how to implement IaC without derailing product development.'
 date: '2025-07-18'
 author: 'Ankit Rana'
@@ -286,4 +287,4 @@ The time to implement IaC is before you need it for due diligence, not during. A
 
 ---
 
-*Need help implementing Infrastructure as Code or preparing for technical due diligence? [Get in touch](/contact) for a consultation.*
+*Need help implementing Infrastructure as Code or preparing for technical due diligence? [Get in touch](/contact/) for a consultation.*

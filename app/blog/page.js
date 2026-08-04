@@ -2,9 +2,11 @@ import Link from 'next/link'
 import { getAllBlogPosts } from '../../lib/blog'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+import JsonLd from '../components/JsonLd'
+import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../lib/schema'
 
 export const metadata = {
-  title: 'Blog | Fractional CTO & CFO Insights for UK Startup Founders',
+  title: 'Fractional CTO & CFO Insights for UK Founders',
   description: 'Practical guidance for startup founders on technical leadership, startup finance, fundraising, and scaling from 0 to 1.',
   keywords: ['fractional CTO', 'fractional CFO', 'startup engineering blog', 'startup finance blog', 'financial modeling', 'fundraising', 'GitOps', 'Infrastructure as Code', 'startup scaling'],
   openGraph: {
@@ -34,11 +36,27 @@ export const metadata = {
   },
 }
 
+const pageSchema = [
+  breadcrumbs([{ name: 'Blog', path: '/blog/' }]),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    '@id': 'https://codenest.uk/blog/#blog',
+    name: 'Codenest Blog',
+    description: 'Practical guidance for startup founders on technical leadership, startup finance, fundraising, and scaling from 0 to 1.',
+    url: 'https://codenest.uk/blog/',
+    publisher: { '@id': ORGANIZATION_ID },
+    isPartOf: { '@id': WEBSITE_ID },
+    inLanguage: 'en-GB',
+  },
+]
+
 export default function BlogPage() {
   const blogPosts = getAllBlogPosts()
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <JsonLd schema={pageSchema} />
       <Navigation />
 
       <main id="main-content">
@@ -62,7 +80,7 @@ export default function BlogPage() {
             {blogPosts.map((post) => (
               <Link
                 key={post.slug}
-                href={`/blog/${post.slug}`}
+                href={`/blog/${post.slug}/`}
                 className="group"
               >
                 <article className="bg-white rounded-xl border border-slate-200 p-5 hover:shadow-md hover:border-slate-300 transition-all h-full flex flex-col">
@@ -101,7 +119,7 @@ export default function BlogPage() {
             Need fractional executive leadership to help your startup build, scale, and raise?
           </p>
           <a
-            href="/contact"
+            href="/contact/"
             className="inline-block text-primary-600 font-medium hover:text-primary-700 transition-colors"
           >
             Request a Strategy Call &rarr;

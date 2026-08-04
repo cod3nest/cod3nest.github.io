@@ -1,10 +1,12 @@
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import Link from 'next/link'
+import JsonLd from '../components/JsonLd'
+import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../lib/schema'
 
 export const metadata = {
-  title: 'Technical Co-founder for UK Startups | Find Your Tech Partner',
-  description: 'Looking for a technical co-founder in London or the UK? Experienced CTO open to equity partnerships with exceptional founders. 15+ years building scalable platforms across fintech, healthtech, and B2B SaaS.',
+  title: 'Technical Co-founder for UK Startups',
+  description: 'Looking for a technical co-founder in the UK? An experienced CTO open to equity partnerships, with 15+ years across fintech, healthtech and B2B SaaS.',
   keywords: [
     'technical cofounder',
     'technical co-founder',
@@ -47,6 +49,8 @@ export const metadata = {
     canonical: 'https://codenest.uk/cofounder/',
   },
 }
+
+const pageSchema = breadcrumbs([{ name: 'Technical Co-founder', path: '/cofounder/' }])
 
 export default function CofounderPage() {
   const idealFit = [
@@ -141,6 +145,7 @@ export default function CofounderPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
 
+      <JsonLd schema={pageSchema} />
       <Navigation />
 
       <main id="main-content">
@@ -172,7 +177,7 @@ export default function CofounderPage() {
                 Start the Conversation
               </a>
               <Link
-                href="/about"
+                href="/about/"
                 className="border-2 border-white/30 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-white/10 hover:border-white/50 transition-all"
               >
                 Learn About Me
@@ -349,7 +354,7 @@ export default function CofounderPage() {
             </ul>
 
             <a
-              href="/contact"
+              href="/contact/"
               className="inline-flex items-center justify-center gap-2 w-full bg-slate-900 text-white px-8 py-4 rounded-xl font-semibold hover:bg-slate-800 transition-all"
             >
               Start the Conversation
@@ -360,7 +365,7 @@ export default function CofounderPage() {
           </div>
 
           <p className="text-sm text-slate-500 mt-6">
-            Not ready for co-founder? <Link href="/services/fractional-cto" className="text-primary-600 hover:text-primary-700 font-medium">Fractional CTO services</Link> might be a better fit.
+            Not ready for co-founder? <Link href="/services/fractional-cto/" className="text-primary-600 hover:text-primary-700 font-medium">Fractional CTO services</Link> might be a better fit.
           </p>
         </div>
       </section>

@@ -1,10 +1,12 @@
 import Link from 'next/link'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
+import JsonLd from '../../components/JsonLd'
+import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
 
 export const metadata = {
   title: 'The Complete Guide to Fractional CFO Services UK',
-  description: 'Everything UK founders need to know about fractional CFO services: what they do, costs, when to hire, fractional CFO vs accountant, and how to choose the right one for your startup.',
+  description: 'What a fractional CFO does, UK costs, when to hire one, and how they differ from an accountant — the full picture for startup founders.',
   keywords: ['fractional CFO guide', 'what is a fractional CFO', 'fractional CFO cost UK', 'when to hire a fractional CFO', 'fractional CFO vs accountant', 'part-time CFO startup', 'fractional CFO services UK'],
   openGraph: {
     title: 'The Complete Guide to Fractional CFO Services UK',
@@ -24,6 +26,11 @@ export const metadata = {
     canonical: 'https://codenest.uk/guides/fractional-cfo-guide/',
   },
 }
+
+const guideBreadcrumbs = breadcrumbs([
+  { name: 'Guides', path: '/guides/' },
+  { name: 'Fractional CFO Guide', path: '/guides/fractional-cfo-guide/' },
+])
 
 export default function FractionalCFOGuidePage() {
   const tableOfContents = [
@@ -109,6 +116,7 @@ export default function FractionalCFOGuidePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
+      <JsonLd schema={guideBreadcrumbs} />
       <Navigation />
 
       <main id="main-content">
@@ -172,7 +180,7 @@ export default function FractionalCFOGuidePage() {
                   Like a fractional CTO, a fractional CFO is embedded rather than advisory-only. They own the financial model, sit in board meetings, field investor questions, and take accountability for the quality of your numbers — typically for one to three days a week rather than five.
                 </p>
                 <p>
-                  The model has become a natural fit for UK startups between pre-seed and Series A: the financial workload at that stage is genuinely executive-level, but it is not yet a five-day-a-week job. Fractional finance leadership is one of the two executive seats Codenest provides — you can read exactly what an engagement includes on our <Link href="/services/fractional-cfo" className="text-primary-600 hover:text-primary-700 font-medium">Fractional CFO services page</Link>.
+                  The model has become a natural fit for UK startups between pre-seed and Series A: the financial workload at that stage is genuinely executive-level, but it is not yet a five-day-a-week job. Fractional finance leadership is one of the two executive seats Codenest provides — you can read exactly what an engagement includes on our <Link href="/services/fractional-cfo/" className="text-primary-600 hover:text-primary-700 font-medium">Fractional CFO services page</Link>.
                 </p>
                 <div className="bg-primary-50 border border-primary-200 rounded-xl p-6 my-8 not-prose">
                   <p className="font-semibold text-primary-900 mb-2">Key Point</p>
@@ -200,7 +208,7 @@ export default function FractionalCFOGuidePage() {
                   <li>Modelling the cash impact of hiring plans and major spend decisions before they are made</li>
                 </ul>
                 <p className="mt-4">
-                  <Link href="/blog/financial-modeling-seed-stage-startups" className="text-primary-600 hover:text-primary-700 font-medium">
+                  <Link href="/blog/financial-modeling-seed-stage-startups/" className="text-primary-600 hover:text-primary-700 font-medium">
                     Related reading: Financial modelling for seed-stage startups →
                   </Link>
                 </p>
@@ -263,7 +271,7 @@ export default function FractionalCFOGuidePage() {
                   When cash is tight, precision matters. A fractional CFO replaces a vague sense of &quot;about a year left&quot; with a 13-week cash flow, runway scenarios, and a clear-eyed view of which costs to cut, defer or renegotiate — and how those choices trade off against growth.
                 </p>
                 <p>
-                  <Link href="/tools/runway-calculator" className="text-primary-600 hover:text-primary-700 font-medium">
+                  <Link href="/tools/runway-calculator/" className="text-primary-600 hover:text-primary-700 font-medium">
                     Not sure where you stand? Use our free runway calculator →
                   </Link>
                 </p>
@@ -333,7 +341,7 @@ export default function FractionalCFOGuidePage() {
                 </div>
 
                 <p>
-                  Codenest Fractional CFO engagements start from £2,500 per month — see the <Link href="/services/fractional-cfo" className="text-primary-600 hover:text-primary-700 font-medium">Fractional CFO services page</Link> for what each engagement includes.
+                  Codenest Fractional CFO engagements start from £2,500 per month — see the <Link href="/services/fractional-cfo/" className="text-primary-600 hover:text-primary-700 font-medium">Fractional CFO services page</Link> for what each engagement includes.
                 </p>
 
                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Cost Comparison: Fractional vs Full-Time</h3>
@@ -537,7 +545,7 @@ export default function FractionalCFOGuidePage() {
                   <li>Documented unit economics and pricing analysis</li>
                 </ul>
                 <p className="mt-4">
-                  <Link href="/blog/building-your-first-data-room" className="text-primary-600 hover:text-primary-700 font-medium">
+                  <Link href="/blog/building-your-first-data-room/" className="text-primary-600 hover:text-primary-700 font-medium">
                     Related reading: Building your first data room →
                   </Link>
                 </p>
@@ -551,7 +559,7 @@ export default function FractionalCFOGuidePage() {
                   <p className="font-semibold text-slate-900 mb-2">Also Hiring Technical Leadership?</p>
                   <p className="text-slate-700">
                     Many founders face the technical and financial leadership gaps at the same time — and the two searches follow the same logic.{' '}
-                    <Link href="/guides/fractional-cto-guide" className="text-primary-600 hover:text-primary-700 font-medium">
+                    <Link href="/guides/fractional-cto-guide/" className="text-primary-600 hover:text-primary-700 font-medium">
                       Read the Complete Guide to Fractional CTO Services →
                     </Link>
                   </p>
@@ -587,14 +595,14 @@ export default function FractionalCFOGuidePage() {
                   Codenest provides Fractional CFO services for UK startups from pre-seed to Series A — financial modelling, runway management, fundraising support and board reporting, from £2,500 per month.
                 </p>
                 <Link
-                  href="/contact"
+                  href="/contact/"
                   className="inline-block bg-accent-400 text-primary-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-accent-500 transition-all"
                 >
                   Request a Strategy Call
                 </Link>
                 <p className="text-primary-100 text-sm mt-4">
                   Free 30-minute consultation &middot; 100% confidential &middot;{' '}
-                  <Link href="/services/fractional-cfo" className="underline hover:text-white">
+                  <Link href="/services/fractional-cfo/" className="underline hover:text-white">
                     Explore Fractional CFO Services
                   </Link>
                 </p>

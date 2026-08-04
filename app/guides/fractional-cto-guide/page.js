@@ -1,10 +1,12 @@
 import Link from 'next/link'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
+import JsonLd from '../../components/JsonLd'
+import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
 
 export const metadata = {
   title: 'The Complete Guide to Fractional CTO Services UK',
-  description: 'Everything UK founders need to know about fractional CTO services: costs, benefits, when to hire, what to expect, and how to choose the right fractional CTO for your startup.',
+  description: 'What a fractional CTO does, UK costs, when to hire one, and how to choose the right one — the full picture for startup founders.',
   keywords: ['fractional CTO guide', 'what is a fractional CTO', 'fractional CTO cost UK', 'when to hire fractional CTO', 'fractional CTO vs full-time CTO', 'part-time CTO startup', 'CTO as a service UK'],
   openGraph: {
     title: 'The Complete Guide to Fractional CTO Services UK',
@@ -24,6 +26,11 @@ export const metadata = {
     canonical: 'https://codenest.uk/guides/fractional-cto-guide/',
   },
 }
+
+const guideBreadcrumbs = breadcrumbs([
+  { name: 'Guides', path: '/guides/' },
+  { name: 'Fractional CTO Guide', path: '/guides/fractional-cto-guide/' },
+])
 
 export default function FractionalCTOGuidePage() {
   const tableOfContents = [
@@ -114,6 +121,7 @@ export default function FractionalCTOGuidePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
+      <JsonLd schema={guideBreadcrumbs} />
       <Navigation />
 
       <main id="main-content">
@@ -394,7 +402,7 @@ export default function FractionalCTOGuidePage() {
               </p>
 
               <p className="mt-6">
-                <Link href="/blog/fractional-cto-vs-full-time-cto-uk-startups" className="text-primary-600 hover:text-primary-700 font-medium">
+                <Link href="/blog/fractional-cto-vs-full-time-cto-uk-startups/" className="text-primary-600 hover:text-primary-700 font-medium">
                   Read our detailed analysis: Fractional CTO vs Full-Time CTO →
                 </Link>
               </p>
@@ -563,7 +571,7 @@ export default function FractionalCTOGuidePage() {
                 We provide fractional CTO services for UK startups from pre-seed to Series A. Request a free discovery call to discuss your needs.
               </p>
               <Link
-                href="/services/fractional-cto"
+                href="/services/fractional-cto/"
                 className="inline-block bg-accent-500 text-primary-900 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-accent-600 transition-all"
               >
                 Learn About Our Services

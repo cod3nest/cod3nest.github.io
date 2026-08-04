@@ -1,9 +1,11 @@
 import Link from 'next/link'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
+import JsonLd from '../../components/JsonLd'
+import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
 
 export const metadata = {
-  title: 'Fractional CTO vs Development Agency: Which Should You Hire?',
+  title: 'Fractional CTO vs Development Agency',
   description: 'Compare fractional CTO vs development agency for your startup. Understand when to hire each, cost differences, and how to get the best of both worlds.',
   keywords: ['fractional CTO vs agency', 'development agency vs CTO', 'outsource development vs CTO', 'software agency vs technical leadership', 'hire agency or CTO'],
   openGraph: {
@@ -25,6 +27,25 @@ export const metadata = {
   },
 }
 
+const pageSchema = [
+  breadcrumbs([
+    { name: 'Guides', path: '/guides/' },
+    { name: 'CTO vs Agency', path: '/guides/fractional-cto-vs-agency/' },
+  ]),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'Fractional CTO vs Development Agency',
+    description: 'When to hire a fractional CTO, when to hire a development agency, and how the costs compare.',
+    author: { '@id': ORGANIZATION_ID },
+    publisher: { '@id': ORGANIZATION_ID },
+    datePublished: '2026-01-13',
+    dateModified: '2026-08-04',
+    mainEntityOfPage: 'https://codenest.uk/guides/fractional-cto-vs-agency/',
+    inLanguage: 'en-GB',
+  },
+]
+
 export default function FractionalVsAgencyPage() {
   const comparisonData = [
     { factor: 'Primary Role', fractional: 'Strategic leadership & decisions', agency: 'Software development & delivery' },
@@ -39,6 +60,7 @@ export default function FractionalVsAgencyPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <JsonLd schema={pageSchema} />
       <Navigation />
 
       <main id="main-content">
@@ -233,13 +255,13 @@ export default function FractionalVsAgencyPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              href="/contact/"
               className="inline-block bg-accent-500 text-primary-900 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-accent-600 transition-all"
             >
               Get Free Advice
             </Link>
             <Link
-              href="/services/fractional-cto"
+              href="/services/fractional-cto/"
               className="inline-block border-2 border-primary-300 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-primary-500/30 transition-all"
             >
               Explore Fractional CTO Services

@@ -1,5 +1,6 @@
 ---
 title: 'Extending Your Runway: A Practical Guide to Startup Cash Management'
+seoTitle: 'How to Extend Your Startup Runway'
 description: 'Practical strategies to extend your runway without sacrificing growth. Cash management tactics that work for seed and Series A startups.'
 date: '2025-08-10'
 author: 'Michelle Rana'
@@ -279,4 +280,4 @@ Cash is oxygen. Manage it like your company's survival depends on it—because i
 
 ---
 
-*Work out your own numbers with our free [Startup Runway Calculator](/tools/runway-calculator), or [get in touch](/contact) — our [fractional CFO services](/services/fractional-cfo) cover burn-rate optimisation and cash management.*
+*Work out your own numbers with our free [Startup Runway Calculator](/tools/runway-calculator/), or [get in touch](/contact/) — our [fractional CFO services](/services/fractional-cfo/) cover burn-rate optimisation and cash management.*

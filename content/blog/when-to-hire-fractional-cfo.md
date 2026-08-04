@@ -1,5 +1,6 @@
 ---
 title: 'When Should You Hire a Fractional CFO? 7 Signs Your Startup Is Ready'
+seoTitle: 'When to Hire a Fractional CFO: 7 Signs'
 description: 'Not sure if your startup needs a fractional CFO? Seven clear signs you are ready, from fundraising plans and runway anxiety to investor reporting burden.'
 date: '2026-08-04'
 author: 'Michelle Rana'
@@ -17,7 +18,7 @@ Here are seven clear signs that your startup is ready for a fractional CFO.
 
 A fundraise is won or lost months before the first investor meeting. Investors will ask you to walk through your financial model, defend your assumptions, justify the amount you're raising, and show what the money buys in milestones. Then diligence begins: historical accounts, forecast integrity, contracts, the cap table.
 
-**The problem:** Fundraise readiness takes months to build. If the model gets assembled the week before outreach, it shows — and what investors actually want to see in a [seed-stage financial model](/blog/financial-modeling-seed-stage-startups) is rarely what founders build unprompted.
+**The problem:** Fundraise readiness takes months to build. If the model gets assembled the week before outreach, it shows — and what investors actually want to see in a [seed-stage financial model](/blog/financial-modeling-seed-stage-startups/) is rarely what founders build unprompted.
 
 **A fractional CFO helps by:** Building a three-statement model that survives scrutiny, assembling the data room early, pressure-testing your raise amount against a real milestone plan, and joining investor meetings as the credible voice on the numbers.
 
@@ -86,7 +87,7 @@ The comparison that matters isn't fractional versus nothing — it's fractional 
 | Equity | 0% | 0.5-2% |
 | Time to Start | 1-2 weeks | 3-6 months |
 
-UK fractional CFO retainers typically run £2,000-£3,500 per month for light-touch advisory, £3,500-£6,000 for around a day a week, and £6,000-£12,000 for two to three days. A full-time CFO costs £150,000-£250,000+ in salary alone, plus equity, plus a three-to-six-month hiring process. For the full breakdown by stage, read our [2026 pricing guide](/blog/how-much-does-fractional-cfo-cost-uk).
+UK fractional CFO retainers typically run £2,000-£3,500 per month for light-touch advisory, £3,500-£6,000 for around a day a week, and £6,000-£12,000 for two to three days. A full-time CFO costs £150,000-£250,000+ in salary alone, plus equity, plus a three-to-six-month hiring process. For the full breakdown by stage, read our [2026 pricing guide](/blog/how-much-does-fractional-cfo-cost-uk/).
 
 ## When a Fractional CFO Isn't Right
 
@@ -102,8 +103,8 @@ But for most pre-seed to Series A startups, fractional provides the financial le
 
 If you recognised yourself in 3+ of these signs, it's probably time to explore fractional CFO support. You don't need to wait until you can afford a full-time executive — and you shouldn't wait until a failed diligence process or a missed cash crunch makes the decision for you.
 
-For a deeper look at what the role covers, how engagements are structured, and how to choose well, read our [complete fractional CFO guide](/guides/fractional-cfo-guide).
+For a deeper look at what the role covers, how engagements are structured, and how to choose well, read our [complete fractional CFO guide](/guides/fractional-cfo-guide/).
 
 ---
 
-*Ready to explore fractional CFO support? Learn more about our [fractional CFO services](/services/fractional-cfo), check your numbers with the free [Startup Runway Calculator](/tools/runway-calculator), or [get in touch](/contact) to discuss your situation.*
+*Ready to explore fractional CFO support? Learn more about our [fractional CFO services](/services/fractional-cfo/), check your numbers with the free [Startup Runway Calculator](/tools/runway-calculator/), or [get in touch](/contact/) to discuss your situation.*

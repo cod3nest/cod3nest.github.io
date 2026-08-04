@@ -49,3 +49,7 @@ next-env.d.ts
 /*.txt
 !README.md
 .nojekyll
+
+# claude-mem drops a CLAUDE.md into working directories; anything under public/
+# is copied verbatim into the published site, so keep this one out of the build.
+/public/CLAUDE.md

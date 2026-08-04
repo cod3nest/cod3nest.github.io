@@ -1,6 +1,8 @@
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import ContactForm from '../components/ContactForm'
+import JsonLd from '../components/JsonLd'
+import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../lib/schema'
 
 export const metadata = {
   title: 'Contact | Request a Strategy Call',
@@ -24,9 +26,23 @@ export const metadata = {
   },
 }
 
+const pageSchema = [
+  breadcrumbs([{ name: 'Contact', path: '/contact/' }]),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    name: 'Contact Codenest',
+    url: 'https://codenest.uk/contact/',
+    description: 'Request a free 30-minute strategy call with Codenest.',
+    isPartOf: { '@id': WEBSITE_ID },
+    about: { '@id': ORGANIZATION_ID },
+  },
+]
+
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
+      <JsonLd schema={pageSchema} />
       <Navigation />
 
       <main id="main-content">

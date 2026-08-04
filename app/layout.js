@@ -19,8 +19,19 @@ export const metadata = {
     default: 'Fractional CTO & Fractional CFO for UK Startups | Codenest',
     template: '%s | Codenest'
   },
-  description: 'London-based fractional CTO and CFO for UK startups. A 15-year engineering leader and a chartered accountant (FCCA), delivering technical architecture, financial modelling and commercial discipline for pre-seed to Series A founders across fintech, healthtech and B2B SaaS.',
-  keywords: ['boutique startup advisory London', 'fractional CTO UK', 'fractional CFO UK', 'startup advisory London', 'executive advisory startups', 'premium tech consultancy UK', 'bespoke startup consulting', 'Big 4 startup advisory', 'GitOps consulting UK', 'Infrastructure as Code UK', 'financial modeling startups', 'MVP development UK', 'Kubernetes consulting UK', 'startup engineering UK', 'DevOps consulting UK', 'fundraising support UK', 'technical leadership UK', 'financial strategy startups', '0 to 1 product UK', 'startup technical partner UK', 'Series A preparation', 'startup due diligence UK', 'boutique consultancy UK', 'select founders UK', 'investor ready startups', 'startup scale up UK', 'technical co-founder UK', 'startup co-founder London', 'CTO co-founder', 'find technical co-founder', 'tech co-founder partnership', 'co-founder for startup UK', 'technical partner equity', 'startup equity partnership'],
+  description: 'Fractional CTO and CFO for UK startups. A 15-year engineering leader and a chartered accountant (FCCA), working with founders from pre-seed to Series A.',
+  // Google ignores this tag outright and a 34-term list reads as stuffing to the
+  // engines that still glance at it. Kept short and limited to terms the site
+  // actually ranks pages for.
+  keywords: [
+    'fractional CTO UK',
+    'fractional CFO UK',
+    'fractional CTO London',
+    'fractional CFO London',
+    'startup technical leadership UK',
+    'startup financial modelling',
+    'technical co-founder UK',
+  ],
   authors: [{ name: 'Codenest', url: 'https://codenest.uk' }],
   creator: 'Codenest',
   publisher: 'Codenest',
@@ -34,7 +45,7 @@ export const metadata = {
     description: 'Big 4 rigour meets founder empathy. Fractional CTO and CFO services for UK startups, pre-seed to Series A.',
     type: 'website',
     locale: 'en_GB',
-    url: 'https://codenest.uk',
+    url: 'https://codenest.uk/',
     siteName: 'Codenest',
     images: [
       {
@@ -63,8 +74,23 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: 'https://codenest.uk',
+    canonical: 'https://codenest.uk/',
   },
+}
+
+// Names the site as an entity distinct from the company that runs it, and gives every
+// other schema block on the site a stable @id to point at instead of repeating the
+// organisation inline. `member` rather than `founder`/`employee`: it is the relation
+// we can state for both principals without asserting a legal role we haven't confirmed.
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': 'https://codenest.uk/#website',
+  url: 'https://codenest.uk/',
+  name: 'Codenest',
+  description: 'Fractional CTO and Fractional CFO services for UK startups.',
+  publisher: { '@id': 'https://codenest.uk/#organization' },
+  inLanguage: 'en-GB',
 }
 
 export default function RootLayout({ children }) {
@@ -74,7 +100,11 @@ export default function RootLayout({ children }) {
     '@id': 'https://codenest.uk/#organization',
     name: 'Codenest',
     alternateName: 'Codenest Ltd',
-    url: 'https://codenest.uk',
+    url: 'https://codenest.uk/',
+    member: [
+      { '@id': 'https://codenest.uk/about/#ankit-rana' },
+      { '@id': 'https://codenest.uk/about/#michelle-rana' },
+    ],
     logo: 'https://codenest.uk/img/companylogo.png',
     image: 'https://codenest.uk/img/companylogo.png',
     description: 'Boutique technical and financial advisory for ambitious UK founders. Big 4 rigour meets founder empathy. Fractional CTO and CFO services with executive firepower.',
@@ -180,16 +210,23 @@ export default function RootLayout({ children }) {
         {/* PWA Manifest */}
         <link rel="manifest" href="/manifest.json" />
 
+        {/* Blog feed — discoverable by readers and crawlers */}
+        <link rel="alternate" type="application/rss+xml" title="Codenest Blog" href="/feed.xml" />
+
         {/* Theme Color */}
         <meta name="theme-color" content="#2C3E50" />
         <meta name="apple-mobile-web-app-status-bar-style" content="#2C3E50" />
 
         {/* Performance optimizations removed - images now self-hosted */}
 
-        {/* Structured Data - Organization */}
+        {/* Structured Data - Organization + WebSite */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
       <body className="font-sans antialiased">{children}</body>

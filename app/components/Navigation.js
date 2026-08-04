@@ -8,9 +8,9 @@ import { usePathname } from 'next/navigation'
 // carries the six others. Grouping them keeps all three one interaction away
 // without spending three top-level slots on them.
 const SERVICE_LINKS = [
-  { href: '/services/fractional-cto', label: 'Fractional CTO', hint: 'Architecture, engineering leadership, delivery' },
-  { href: '/services/fractional-cfo', label: 'Fractional CFO', hint: 'Financial models, controls, fundraising' },
-  { href: '/services', label: 'All Services', hint: 'Both tracks, eight services' },
+  { href: '/services/fractional-cto/', label: 'Fractional CTO', hint: 'Architecture, engineering leadership, delivery' },
+  { href: '/services/fractional-cfo/', label: 'Fractional CFO', hint: 'Financial models, controls, fundraising' },
+  { href: '/services/', label: 'All Services', hint: 'Both tracks, eight services' },
 ]
 
 export default function Navigation() {
@@ -24,7 +24,7 @@ export default function Navigation() {
   // On the homepage, scroll to its inline contact section instead of
   // navigating away (and potentially discarding in-progress form input).
   const pathname = usePathname()
-  const contactHref = pathname === '/' ? '/#contact' : '/contact'
+  const contactHref = pathname === '/' ? '/#contact' : '/contact/'
 
   useEffect(() => {
     const handleScroll = () => {
@@ -231,9 +231,9 @@ export default function Navigation() {
                   </div>
                 )}
               </div>
-              <a href="/case-studies" className="text-slate-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Case Studies</a>
-              <a href="/about" className="text-slate-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">About</a>
-              <a href="/blog" className="text-slate-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Blog</a>
+              <a href="/case-studies/" className="text-slate-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Case Studies</a>
+              <a href="/about/" className="text-slate-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">About</a>
+              <a href="/blog/" className="text-slate-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Blog</a>
               <a href={contactHref} className="bg-accent-400 text-primary-900 px-6 py-2.5 ml-2 rounded-lg text-sm font-semibold hover:bg-accent-500 transition-all shadow-sm hover:shadow-gold">Request a Strategy Call</a>
             </div>
           </div>
@@ -276,9 +276,9 @@ export default function Navigation() {
                   </li>
                 ))}
               </ul>
-              <a href="/case-studies" onClick={() => setIsMenuOpen(false)} className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">Case Studies</a>
-              <a href="/about" onClick={() => setIsMenuOpen(false)} className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">About</a>
-              <a href="/blog" onClick={() => setIsMenuOpen(false)} className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">Blog</a>
+              <a href="/case-studies/" onClick={() => setIsMenuOpen(false)} className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">Case Studies</a>
+              <a href="/about/" onClick={() => setIsMenuOpen(false)} className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">About</a>
+              <a href="/blog/" onClick={() => setIsMenuOpen(false)} className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">Blog</a>
               <a href={contactHref} onClick={() => setIsMenuOpen(false)} className="bg-accent-400 text-primary-900 font-semibold block px-3 py-2 text-base rounded-lg hover:bg-accent-500 transition-all shadow-sm">Request a Strategy Call</a>
             </div>
           </div>

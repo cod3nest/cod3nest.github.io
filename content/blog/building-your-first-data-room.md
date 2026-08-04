@@ -1,5 +1,6 @@
 ---
 title: 'Building Your First Data Room: What Investors Expect to See'
+seoTitle: 'Building Your First Investor Data Room'
 description: 'Complete guide to creating a data room for fundraising. What documents to include, how to organise them, and common mistakes to avoid.'
 date: '2024-12-28'
 author: 'Michelle Rana'
@@ -269,4 +270,4 @@ Invest the time upfront. The payoff is faster closes and better investor relatio
 
 ---
 
-*Need help preparing for fundraising? Our [fractional CFO services](/services/fractional-cfo) include data room creation and due diligence preparation.*
+*Need help preparing for fundraising? Our [fractional CFO services](/services/fractional-cfo/) include data room creation and due diligence preparation.*

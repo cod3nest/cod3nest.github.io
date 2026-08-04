@@ -1,5 +1,6 @@
 ---
 title: "Kubernetes for Startups: When It Makes Sense (And When It Doesn't)"
+seoTitle: 'Kubernetes for Startups: Overkill or Essential?'
 description: 'The honest answer to "should we use Kubernetes?" Avoid premature optimisation and painful re-architecture with this stage-appropriate guide.'
 date: '2025-06-25'
 author: 'Ankit Rana'
@@ -294,4 +295,4 @@ The goal isn't to use the coolest technology—it's to make the right trade-off 
 
 ---
 
-*Not sure whether Kubernetes is right for your startup? [Get in touch](/contact) for a technical strategy session.*
+*Not sure whether Kubernetes is right for your startup? [Get in touch](/contact/) for a technical strategy session.*
