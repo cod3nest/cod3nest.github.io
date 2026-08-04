@@ -3,10 +3,12 @@ import Link from 'next/link'
 import Navigation from '../../components/Navigation'
 import Button from '../../components/Button'
 import Footer from '../../components/Footer'
+import JsonLd from '../../components/JsonLd'
+import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
 
 export const metadata = {
-  title: 'Fractional CTO Services London | Part-Time Technical Leadership UK',
-  description: 'Expert fractional CTO services for London and UK startups. Senior technical leadership from £3k/month. Architecture, hiring, due diligence prep. Request a free consultation.',
+  title: 'Fractional CTO Services London for UK Startups',
+  description: 'Fractional CTO for UK startups from £3k/month. Architecture, engineering hiring and due diligence preparation. Free 30-minute strategy call.',
   keywords: ['fractional CTO UK', 'fractional CTO London', 'part-time CTO', 'startup CTO', 'technical leadership', 'CTO as a service', 'interim CTO UK', 'fractional CTO cost', 'startup technical leadership'],
   openGraph: {
     title: 'Fractional CTO Services London | Codenest',
@@ -26,6 +28,11 @@ export const metadata = {
     canonical: 'https://codenest.uk/services/fractional-cto/',
   },
 }
+
+const ctoBreadcrumbs = breadcrumbs([
+  { name: 'Services', path: '/services/' },
+  { name: 'Fractional CTO', path: '/services/fractional-cto/' },
+])
 
 export default function FractionalCTOPage() {
   const benefits = [
@@ -159,6 +166,7 @@ export default function FractionalCTOPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
 
+      <JsonLd schema={ctoBreadcrumbs} />
       <Navigation />
 
       <main id="main-content">
@@ -181,8 +189,8 @@ export default function FractionalCTOPage() {
                 Engagements from £3,000/month &middot; typically 60-80% less than a full-time CTO
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button href="/contact">Request a Strategy Call</Button>
-                <Button href="/case-studies" variant="secondary">View Client Outcomes</Button>
+                <Button href="/contact/">Request a Strategy Call</Button>
+                <Button href="/case-studies/" variant="secondary">View Client Outcomes</Button>
               </div>
             </div>
             <div className="relative">
@@ -307,15 +315,15 @@ export default function FractionalCTOPage() {
           <div className="mt-12 p-6 bg-primary-50 rounded-2xl border border-primary-100 text-center">
             <p className="text-slate-700">
               Still researching? Read{' '}
-              <Link href="/guides/fractional-cto-guide" className="font-semibold text-primary-700 hover:text-primary-800 underline">
+              <Link href="/guides/fractional-cto-guide/" className="font-semibold text-primary-700 hover:text-primary-800 underline">
                 The Complete Guide to Fractional CTO Services
               </Link>{' '}
               or compare{' '}
-              <Link href="/guides/fractional-cto-vs-full-time" className="font-semibold text-primary-700 hover:text-primary-800 underline">
+              <Link href="/guides/fractional-cto-vs-full-time/" className="font-semibold text-primary-700 hover:text-primary-800 underline">
                 fractional vs full-time
               </Link>{' '}
               and{' '}
-              <Link href="/guides/fractional-cto-vs-agency" className="font-semibold text-primary-700 hover:text-primary-800 underline">
+              <Link href="/guides/fractional-cto-vs-agency/" className="font-semibold text-primary-700 hover:text-primary-800 underline">
                 fractional vs agency
               </Link>.
             </p>
@@ -333,7 +341,7 @@ export default function FractionalCTOPage() {
             Request a free 30-minute discovery call. No sales pitch — just an honest conversation about your technical needs.
           </p>
           <a
-            href="/contact"
+            href="/contact/"
             className="inline-block bg-accent-500 text-primary-900 px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-accent-600 transition-all shadow-lg hover:shadow-xl"
           >
             Request a Strategy Call

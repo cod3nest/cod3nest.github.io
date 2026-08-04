@@ -1,6 +1,7 @@
 ---
 title: 'How Much Does a Fractional CTO Cost in the UK? 2026 Pricing Guide'
-description: 'Complete UK pricing guide for fractional CTO services in 2026. Understand retainer costs, engagement levels, and how to budget for part-time technical leadership.'
+seoTitle: 'How Much Does a Fractional CTO Cost in the UK?'
+description: 'UK pricing for fractional CTO services in 2026: retainer costs, engagement levels, and how to budget for part-time technical leadership.'
 date: '2026-08-04'
 author: 'Ankit Rana'
 readTime: '7 min read'
@@ -205,4 +206,4 @@ The question isn't whether you can afford a fractional CTO—it's whether you ca
 
 ---
 
-*Want to discuss pricing for your specific situation? [Book a free discovery call](/services/fractional-cto) to explore what engagement level makes sense for your startup.*
+*Want to discuss pricing for your specific situation? [Book a free discovery call](/services/fractional-cto/) to explore what engagement level makes sense for your startup.*

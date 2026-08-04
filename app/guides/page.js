@@ -1,9 +1,11 @@
 import Link from 'next/link'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+import JsonLd from '../components/JsonLd'
+import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../lib/schema'
 
 export const metadata = {
-  title: 'Guides | Fractional CTO & Startup Leadership Resources',
+  title: 'Fractional CTO & CFO Guides for UK Founders',
   description: 'Free in-depth guides for UK startup founders: fractional CTO costs and comparisons, technical co-founder alternatives, and the startup runway calculator.',
   openGraph: {
     title: 'Codenest Guides — Startup Leadership Resources',
@@ -27,39 +29,56 @@ export const metadata = {
 const guides = [
   {
     title: 'The Complete Guide to Fractional CFO Services',
-    href: '/guides/fractional-cfo-guide',
+    href: '/guides/fractional-cfo-guide/',
     description: 'What a fractional CFO does, when to hire one, UK costs, and how they differ from accountants and controllers.',
     tag: 'Guide',
   },
   {
     title: 'The Complete Guide to Fractional CTO Services',
-    href: '/guides/fractional-cto-guide',
+    href: '/guides/fractional-cto-guide/',
     description: 'What a fractional CTO does, when you need one, costs, and how to choose — the full picture for UK founders.',
     tag: 'Guide',
   },
   {
     title: 'Fractional CTO vs Full-Time CTO',
-    href: '/guides/fractional-cto-vs-full-time',
+    href: '/guides/fractional-cto-vs-full-time/',
     description: 'The real cost analysis: salary, equity, hidden costs, and the strategic trade-offs at each stage.',
     tag: 'Comparison',
   },
   {
     title: 'Fractional CTO vs Development Agency',
-    href: '/guides/fractional-cto-vs-agency',
+    href: '/guides/fractional-cto-vs-agency/',
     description: 'Strategy versus execution: which model fits your startup, and when to combine both.',
     tag: 'Comparison',
   },
   {
     title: 'Technical Co-founder Alternatives',
-    href: '/guides/technical-cofounder-alternatives',
+    href: '/guides/technical-cofounder-alternatives/',
     description: "Can't find a technical co-founder? The realistic alternatives, with equity and cost trade-offs.",
     tag: 'Guide',
+  },
+]
+
+const pageSchema = [
+  breadcrumbs([{ name: 'Guides', path: '/guides/' }]),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Codenest Guides',
+    description: 'In-depth guides for UK founders evaluating fractional CTO and CFO support.',
+    itemListElement: guides.map((guide, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: guide.title,
+      url: `https://codenest.uk${guide.href}`,
+    })),
   },
 ]
 
 export default function GuidesPage() {
   return (
     <div className="min-h-screen bg-white">
+      <JsonLd schema={pageSchema} />
       <Navigation />
 
       <main id="main-content">
@@ -94,7 +113,7 @@ export default function GuidesPage() {
               <p className="text-slate-600 mb-4 max-w-xl mx-auto">
                 Work out how many months of runway you have and when to start fundraising.
               </p>
-              <Link href="/tools/runway-calculator" className="inline-flex items-center font-semibold text-accent-600 hover:text-accent-700">
+              <Link href="/tools/runway-calculator/" className="inline-flex items-center font-semibold text-accent-600 hover:text-accent-700">
                 Open the calculator
                 <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

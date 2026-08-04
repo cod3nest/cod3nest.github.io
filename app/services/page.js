@@ -2,10 +2,12 @@ import Link from 'next/link'
 import Navigation from '../components/Navigation'
 import ServiceCard from '../components/ServiceCard'
 import Footer from '../components/Footer'
+import JsonLd from '../components/JsonLd'
+import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../lib/schema'
 
 export const metadata = {
-  title: 'Services | Fractional CTO & Fractional CFO for UK Startups',
-  description: 'Two executive seats, one integrated partner. Fractional CTO services (architecture, engineering leadership, 0-to-1 builds) and fractional CFO services (FP&A, financial modeling, fundraising) for UK startups, pre-seed to Series A.',
+  title: 'Fractional CTO & CFO Services for UK Startups',
+  description: 'Two executive seats, one integrated partner. Fractional CTO and Fractional CFO services for UK startups, pre-seed to Series A. Eight services, two tracks.',
   openGraph: {
     title: 'Codenest Services — Fractional CTO & Fractional CFO',
     description: 'Technical and financial leadership for UK startups, pre-seed to Series A.',
@@ -28,7 +30,7 @@ export const metadata = {
 const tracks = [
   {
     name: 'Fractional CTO',
-    href: '/services/fractional-cto',
+    href: '/services/fractional-cto/',
     accent: 'primary',
     description: 'Architecture decisions, engineering team building, and infrastructure that scales from day one.',
     items: [
@@ -40,7 +42,7 @@ const tracks = [
   },
   {
     name: 'Fractional CFO',
-    href: '/services/fractional-cfo',
+    href: '/services/fractional-cfo/',
     accent: 'accent',
     description: 'Strategic finance, FP&A, and the financial discipline that makes your startup investable.',
     items: [
@@ -113,10 +115,27 @@ const services =
     }
   ]
 
+const pageSchema = [
+  breadcrumbs([{ name: 'Services', path: '/services/' }]),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Codenest Services',
+    description: 'Fractional CTO and Fractional CFO services for UK startups.',
+    itemListElement: tracks.map((track, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: track.name,
+      url: `https://codenest.uk${track.href}`,
+    })),
+  },
+]
+
 export default function ServicesPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <JsonLd schema={pageSchema} />
       <Navigation />
 
       <main id="main-content">
@@ -196,7 +215,7 @@ export default function ServicesPage() {
 
             <div className="mt-16 text-center">
               <a
-                href="/contact"
+                href="/contact/"
                 className="inline-block bg-accent-400 text-primary-900 px-8 py-4 rounded-lg text-base font-semibold hover:bg-accent-500 transition-all shadow-gold hover:shadow-gold-lg"
               >
                 Request a Strategy Call

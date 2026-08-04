@@ -1,9 +1,11 @@
 import Link from 'next/link'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
+import JsonLd from '../../components/JsonLd'
+import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
 
 export const metadata = {
-  title: 'Fractional CTO vs Full-Time CTO: Which Is Right for Your Startup?',
+  title: 'Fractional CTO vs Full-Time CTO: Cost Comparison',
   description: 'Compare fractional CTO vs full-time CTO for UK startups. Cost analysis, pros and cons, decision framework, and when each option makes sense for your stage.',
   keywords: ['fractional CTO vs full-time CTO', 'part-time CTO vs permanent CTO', 'CTO hiring decision', 'startup CTO options UK', 'fractional vs full-time executive'],
   openGraph: {
@@ -25,6 +27,25 @@ export const metadata = {
   },
 }
 
+const pageSchema = [
+  breadcrumbs([
+    { name: 'Guides', path: '/guides/' },
+    { name: 'CTO vs Full-Time', path: '/guides/fractional-cto-vs-full-time/' },
+  ]),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'Fractional CTO vs Full-Time CTO: Cost Comparison',
+    description: 'Salary, equity and hidden costs compared, plus a decision framework for each startup stage.',
+    author: { '@id': ORGANIZATION_ID },
+    publisher: { '@id': ORGANIZATION_ID },
+    datePublished: '2026-01-13',
+    dateModified: '2026-08-04',
+    mainEntityOfPage: 'https://codenest.uk/guides/fractional-cto-vs-full-time/',
+    inLanguage: 'en-GB',
+  },
+]
+
 export default function FractionalVsFullTimePage() {
   const comparisonData = [
     { factor: 'Annual Cost', fractional: '£48,000-£180,000', fullTime: '£210,000-£320,000+', winner: 'fractional' },
@@ -39,6 +60,7 @@ export default function FractionalVsFullTimePage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <JsonLd schema={pageSchema} />
       <Navigation />
 
       <main id="main-content">
@@ -299,13 +321,13 @@ export default function FractionalVsFullTimePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              href="/contact/"
               className="inline-block bg-accent-500 text-primary-900 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-accent-600 transition-all"
             >
               Request a Strategy Call
             </Link>
             <Link
-              href="/services/fractional-cto"
+              href="/services/fractional-cto/"
               className="inline-block border-2 border-primary-300 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-primary-500/30 transition-all"
             >
               Explore Fractional CTO Services

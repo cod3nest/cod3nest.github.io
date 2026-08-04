@@ -1,5 +1,6 @@
 ---
 title: 'Startup Unit Economics Explained: CAC, LTV, and the Metrics That Matter'
+seoTitle: 'Startup Unit Economics: CAC, LTV and Payback'
 description: 'Complete guide to unit economics for startup founders. Learn how to calculate CAC, LTV, payback period, and why these metrics matter for fundraising.'
 date: '2024-12-22'
 author: 'Michelle Rana'
@@ -293,4 +294,4 @@ Track them monthly. Improve them systematically. Present them honestly to invest
 
 ---
 
-*Need help building your financial model and unit economics? Our [fractional CFO services](/services/fractional-cfo) include metrics analysis and investor-ready financial modeling.*
+*Need help building your financial model and unit economics? Our [fractional CFO services](/services/fractional-cfo/) include metrics analysis and investor-ready financial modeling.*

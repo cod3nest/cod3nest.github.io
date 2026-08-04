@@ -21,7 +21,10 @@ export async function generateMetadata({ params }) {
   const description = post.description || post.content.substring(0, 160).replace(/[#*\n]/g, ' ').trim()
 
   return {
-    title: `${post.title} – Codenest Blog`,
+    // The root layout template already appends "| Codenest"; a "– Codenest Blog"
+    // suffix here branded every post twice and pushed titles past 100 characters.
+    // seoTitle lets a long editorial headline ship a shorter SERP title.
+    title: post.seoTitle || post.title,
     description: description,
     keywords: post.tags.join(', '),
     authors: [{ name: post.author }],
@@ -64,6 +67,21 @@ export default async function BlogPost({ params }) {
     return <div>Post not found</div>
   }
 
+  // Bylines are split by domain, so the author entity has to resolve to the right
+  // principal — a single shared author URL would merge two people into one in
+  // Google's knowledge graph.
+  const AUTHORS = {
+    'Ankit Rana': {
+      jobTitle: 'Fractional CTO',
+      sameAs: 'https://www.linkedin.com/in/arana198',
+    },
+    'Michelle Rana': {
+      jobTitle: 'Fractional CFO',
+      sameAs: 'https://www.linkedin.com/in/michellerana1/',
+    },
+  }
+  const authorInfo = AUTHORS[post.author]
+
   // Structured data for breadcrumbs
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -73,7 +91,7 @@ export default async function BlogPost({ params }) {
         '@type': 'ListItem',
         position: 1,
         name: 'Home',
-        item: 'https://codenest.uk'
+        item: 'https://codenest.uk/'
       },
       {
         '@type': 'ListItem',
@@ -99,18 +117,15 @@ export default async function BlogPost({ params }) {
     author: {
       '@type': 'Person',
       name: post.author,
-      url: 'https://codenest.uk/#about'
+      url: 'https://codenest.uk/about/',
+      ...(authorInfo && { jobTitle: authorInfo.jobTitle, sameAs: [authorInfo.sameAs] })
     },
     publisher: {
-      '@type': 'Organization',
-      name: 'Codenest',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://codenest.uk/img/companylogo.png'
-      }
+      '@id': 'https://codenest.uk/#organization'
     },
+    image: 'https://codenest.uk/img/og-default.png',
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.updated || post.date,
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `https://codenest.uk/blog/${slug}/`
@@ -133,13 +148,13 @@ export default async function BlogPost({ params }) {
     ? {
         heading: 'Need investor-ready financials?',
         body: 'Our Fractional CFO service covers financial modeling, runway planning, and data rooms that stand up to due diligence.',
-        href: '/services/fractional-cfo',
+        href: '/services/fractional-cfo/',
         label: 'Explore Fractional CFO Services',
       }
     : {
         heading: 'Need senior technical leadership?',
         body: 'Our Fractional CTO service covers architecture, engineering hiring, and infrastructure that scales from day one.',
-        href: '/services/fractional-cto',
+        href: '/services/fractional-cto/',
         label: 'Explore Fractional CTO Services',
       }
 
@@ -162,7 +177,7 @@ export default async function BlogPost({ params }) {
       {/* Article Header */}
       <article className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <Link
-          href="/blog"
+          href="/blog/"
           className="inline-flex items-center text-primary-600 hover:text-primary-700 mb-8 font-medium"
         >
           ← Back to Blog
@@ -237,7 +252,7 @@ export default async function BlogPost({ params }) {
               {cta.label}
             </Link>
             <a
-              href="/contact"
+              href="/contact/"
               className="inline-block border-2 border-slate-300 text-slate-700 px-6 py-3 rounded-xl font-semibold hover:border-accent-400 hover:text-primary-700 transition-all text-center"
             >
               Request a Strategy Call

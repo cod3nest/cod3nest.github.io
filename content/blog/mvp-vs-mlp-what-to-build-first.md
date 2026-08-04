@@ -1,5 +1,6 @@
 ---
 title: 'MVP vs MLP: What Should Your Startup Build First?'
+seoTitle: 'MVP vs MLP: What Should You Build First?'
 description: 'Should you build an MVP or MLP? Understand the difference between Minimum Viable Product and Minimum Lovable Product, and when to use each approach.'
 date: '2024-12-18'
 author: 'Ankit Rana'
@@ -240,4 +241,4 @@ The goal is always the same: build something users want, as efficiently as possi
 
 ---
 
-*Need help defining what to build first? Our [fractional CTO services](/services/fractional-cto) include product strategy and technical roadmap development.*
+*Need help defining what to build first? Our [fractional CTO services](/services/fractional-cto/) include product strategy and technical roadmap development.*

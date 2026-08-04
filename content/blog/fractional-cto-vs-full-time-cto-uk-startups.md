@@ -1,5 +1,6 @@
 ---
 title: 'Fractional CTO vs Full-Time CTO: The Real Cost Analysis for UK Startups'
+seoTitle: 'Fractional CTO vs Full-Time CTO: UK Costs'
 description: 'Beyond the salary: the real cost analysis of fractional vs full-time CTO for UK startups, including hidden costs and strategic trade-offs.'
 date: '2026-01-13'
 author: 'Ankit Rana'
@@ -195,4 +196,4 @@ Everyone else? Get the expertise without the overhead. Use the savings to extend
 
 ---
 
-*Need technical leadership without the full-time commitment? [Schedule a strategy call](/contact) to discuss whether fractional CTO support is right for your startup.*
+*Need technical leadership without the full-time commitment? [Schedule a strategy call](/contact/) to discuss whether fractional CTO support is right for your startup.*

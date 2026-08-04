@@ -1,5 +1,6 @@
 ---
 title: 'Financial Modeling for Seed-Stage Startups: A Practical Guide'
+seoTitle: 'Financial Modeling for Seed-Stage Startups'
 description: 'What investors actually want to see in your financial model—revenue projections, unit economics, and scenario planning that builds confidence.'
 date: '2025-10-15'
 author: 'Michelle Rana'
@@ -214,4 +215,4 @@ Financial modeling is a skill that improves with practice. Your first model won'
 
 ---
 
-*Need help building your financial model or preparing for investor conversations? Start with our free [Startup Runway Calculator](/tools/runway-calculator), or [get in touch](/contact) about our [fractional CFO services](/services/fractional-cfo).*
+*Need help building your financial model or preparing for investor conversations? Start with our free [Startup Runway Calculator](/tools/runway-calculator/), or [get in touch](/contact/) about our [fractional CFO services](/services/fractional-cfo/).*

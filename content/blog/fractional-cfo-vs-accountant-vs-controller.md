@@ -1,5 +1,6 @@
 ---
 title: 'Fractional CFO vs Accountant vs Financial Controller: What Your Startup Actually Needs'
+seoTitle: 'Fractional CFO vs Accountant vs Controller'
 description: 'Accountant, financial controller, or fractional CFO? What each role does, what it costs in the UK, and which your startup needs from pre-seed to Series A.'
 date: '2026-08-04'
 author: 'Michelle Rana'
@@ -53,15 +54,15 @@ Controllers are precision people, and that's both their value and their boundary
 
 ## What a Fractional CFO Does
 
-A CFO is the forward-looking layer: strategy, capital, and the decisions that determine whether the company is still here in eighteen months. A fractional CFO delivers that part-time, on a retainer, so you get the seniority without the full-time cost. We've written a [complete guide to fractional CFOs](/guides/fractional-cfo-guide) if you want the role in depth; the short version of the scope is:
+A CFO is the forward-looking layer: strategy, capital, and the decisions that determine whether the company is still here in eighteen months. A fractional CFO delivers that part-time, on a retainer, so you get the seniority without the full-time cost. We've written a [complete guide to fractional CFOs](/guides/fractional-cfo-guide/) if you want the role in depth; the short version of the scope is:
 
-- **Financial modelling** — a three-statement model with scenarios you can defend in a term-sheet negotiation (here's [how to build a financial model for a seed-stage startup](/blog/financial-modeling-seed-stage-startups))
+- **Financial modelling** — a three-statement model with scenarios you can defend in a term-sheet negotiation (here's [how to build a financial model for a seed-stage startup](/blog/financial-modeling-seed-stage-startups/))
 - **FP&A** — budgets, reforecasts, budget-versus-actuals, unit economics
 - **Fundraising** — raise strategy, investor materials, data room preparation, due diligence support
 - **Board and investor work** — board packs, metrics, the narrative behind the numbers
 - **Cash and runway** — burn management, hiring plans, scenario planning
 
-**Typical UK cost:** £2,000-£12,000 per month depending on intensity — a couple of days a month at the low end, several days a week at the top. Codenest engagements start from £2,500 per month. We've broken down [what a fractional CFO costs in the UK](/blog/how-much-does-fractional-cfo-cost-uk), including what pushes the price up or down, in a separate post.
+**Typical UK cost:** £2,000-£12,000 per month depending on intensity — a couple of days a month at the low end, several days a week at the top. Codenest engagements start from £2,500 per month. We've broken down [what a fractional CFO costs in the UK](/blog/how-much-does-fractional-cfo-cost-uk/), including what pushes the price up or down, in a separate post.
 
 ## The Three Roles at a Glance
 
@@ -77,7 +78,7 @@ A CFO is the forward-looking layer: strategy, capital, and the decisions that de
 
 ### Pre-seed: an accountant only
 
-Before institutional money, your finance needs are compliance and visibility. A decent accountant plus a disciplined founder covers both: books reconciled monthly, VAT and payroll handled, and a simple view of burn — our [runway calculator](/tools/runway-calculator) gives you the one number that matters most at this stage.
+Before institutional money, your finance needs are compliance and visibility. A decent accountant plus a disciplined founder covers both: books reconciled monthly, VAT and payroll handled, and a simple view of burn — our [runway calculator](/tools/runway-calculator/) gives you the one number that matters most at this stage.
 
 Resist buying more than this. A CFO with no raise to run and nothing to model is an expensive comfort blanket.
 
@@ -135,4 +136,4 @@ Sequence them in that order, and don't expect any of them to do the others' jobs
 
 ---
 
-*Not sure which role your startup actually needs first? Our [fractional CFO services](/services/fractional-cfo) start from £2,500 per month and are designed to work alongside your existing accountant — [get in touch](/contact) for a straight answer.*
+*Not sure which role your startup actually needs first? Our [fractional CFO services](/services/fractional-cfo/) start from £2,500 per month and are designed to work alongside your existing accountant — [get in touch](/contact/) for a straight answer.*

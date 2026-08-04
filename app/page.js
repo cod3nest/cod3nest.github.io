@@ -248,7 +248,7 @@ export default function Home() {
                   Due Diligence Preparation
                 </li>
               </ul>
-              <a href="/services/fractional-cfo" className="inline-flex items-center text-accent-700 hover:text-accent-800 font-semibold link-gold relative">
+              <a href="/services/fractional-cfo/" className="inline-flex items-center text-accent-700 hover:text-accent-800 font-semibold link-gold relative">
                 Explore Fractional CFO Services
                 <svg className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -293,7 +293,7 @@ export default function Home() {
                   DevOps & Platform Engineering
                 </li>
               </ul>
-              <a href="/services/fractional-cto" className="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold">
+              <a href="/services/fractional-cto/" className="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold">
                 Explore Fractional CTO Services
                 <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -304,12 +304,12 @@ export default function Home() {
           <div className="mt-12 text-center space-y-2">
             <p className="text-slate-600">
               Also need delivery capacity? Explore{' '}
-              <Link href="/services" className="text-primary-600 hover:text-primary-700 font-medium">all services</Link>
+              <Link href="/services/" className="text-primary-600 hover:text-primary-700 font-medium">all services</Link>
               {' '}including 0-to-1 product builds and AI engineering.
             </p>
             <p className="text-slate-600">
               Building something exceptional? For the right opportunity, we also consider{' '}
-              <a href="/cofounder" className="text-primary-600 hover:text-primary-700 font-medium">co-founder partnerships</a>.
+              <a href="/cofounder/" className="text-primary-600 hover:text-primary-700 font-medium">co-founder partnerships</a>.
             </p>
           </div>
         </div>
@@ -353,7 +353,7 @@ export default function Home() {
 
           </div>
           <p className="text-center text-sm text-slate-600 mt-8">
-            Led by <a href="/about" className="font-semibold text-primary-700 hover:text-primary-800">Ankit Rana</a>, Fractional CTO — 15+ years across Deloitte Digital, Elavon (US Bancorp) and Opayo — and <a href="/about" className="font-semibold text-primary-700 hover:text-primary-800">Michelle Rana FCCA</a>, Fractional CFO, who took a business from &pound;35m to &pound;165m revenue while improving EBITDA margin by 4%.
+            Led by <a href="/about/" className="font-semibold text-primary-700 hover:text-primary-800">Ankit Rana</a>, Fractional CTO — 15+ years across Deloitte Digital, Elavon (US Bancorp) and Opayo — and <a href="/about/" className="font-semibold text-primary-700 hover:text-primary-800">Michelle Rana FCCA</a>, Fractional CFO, who took a business from &pound;35m to &pound;165m revenue while improving EBITDA margin by 4%.
           </p>
         </div>
       </section>
@@ -398,7 +398,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
-              <Link key={index} href="/case-studies" className="group">
+              <Link key={index} href="/case-studies/" className="group">
                 <article className="bg-white rounded-xl border border-slate-200 p-8 hover:shadow-lg hover:border-accent-200 transition-all h-full flex flex-col">
                   <span className="text-sm font-bold text-primary-600 mb-4">{String(index + 1).padStart(2, '0')}</span>
                   <h3 className="text-xl font-semibold text-slate-900 mb-3 group-hover:text-primary-700 transition-colors leading-snug">{study.title}</h3>

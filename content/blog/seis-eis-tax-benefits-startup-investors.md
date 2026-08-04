@@ -1,6 +1,7 @@
 ---
 title: 'SEIS and EIS Explained: UK Tax Benefits for Startup Investors'
-description: 'Complete guide to SEIS and EIS tax relief schemes for UK startup investors. Understand the benefits, eligibility, and how startups can become SEIS/EIS qualifying.'
+seoTitle: 'SEIS and EIS Explained: UK Tax Relief'
+description: 'A guide to SEIS and EIS tax relief for UK startup investors: the benefits, the eligibility rules, and how a startup becomes qualifying.'
 date: '2025-01-04'
 author: 'Michelle Rana'
 readTime: '9 min read'
@@ -203,4 +204,4 @@ This makes UK startups more attractive than equivalents in many other countries.
 
 ---
 
-*Need help structuring your raise for SEIS/EIS? Our [fractional CFO services](/services/fractional-cfo) include fundraising preparation and investor documentation.*
+*Need help structuring your raise for SEIS/EIS? Our [fractional CFO services](/services/fractional-cfo/) include fundraising preparation and investor documentation.*

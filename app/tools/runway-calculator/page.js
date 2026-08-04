@@ -1,9 +1,11 @@
 import RunwayCalculator from './RunwayCalculator'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
+import JsonLd from '../../components/JsonLd'
+import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
 
 export const metadata = {
-  title: 'Startup Runway Calculator | How Long Until You Need Funding?',
+  title: 'Free Startup Runway Calculator',
   description: 'Free startup runway calculator. Calculate how many months of runway you have based on your cash position and burn rate. Plan your fundraising timeline.',
   keywords: ['startup runway calculator', 'burn rate calculator', 'how long is my runway', 'startup cash runway', 'months of runway', 'when to fundraise', 'startup financial planning'],
   openGraph: {
@@ -25,9 +27,27 @@ export const metadata = {
   },
 }
 
+const pageSchema = [
+  breadcrumbs([{ name: 'Runway Calculator', path: '/tools/runway-calculator/' }]),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'Startup Runway Calculator',
+    url: 'https://codenest.uk/tools/runway-calculator/',
+    description: 'Calculate how many months of runway you have from your cash position and monthly burn rate.',
+    applicationCategory: 'FinanceApplication',
+    browserRequirements: 'Requires JavaScript.',
+    operatingSystem: 'Any',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'GBP' },
+    publisher: { '@id': ORGANIZATION_ID },
+    isPartOf: { '@id': WEBSITE_ID },
+  },
+]
+
 export default function RunwayCalculatorPage() {
   return (
     <div className="min-h-screen bg-white">
+      <JsonLd schema={pageSchema} />
       <Navigation />
 
       <main id="main-content">
@@ -145,7 +165,7 @@ export default function RunwayCalculatorPage() {
             Our fractional CFO services help startups optimize burn rate, build financial models, and prepare for fundraising.
           </p>
           <a
-            href="/contact"
+            href="/contact/"
             className="inline-block bg-accent-500 text-primary-900 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-accent-600 transition-all"
           >
             Request a Strategy Call

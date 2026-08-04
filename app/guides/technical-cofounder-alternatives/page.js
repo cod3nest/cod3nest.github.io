@@ -1,10 +1,12 @@
 import Link from 'next/link'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
+import JsonLd from '../../components/JsonLd'
+import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
 
 export const metadata = {
-  title: 'Technical Co-founder Alternatives: Options for Non-Technical Founders',
-  description: 'Can\'t find a technical co-founder? Explore alternatives: fractional CTO, development agencies, technical advisors, and more. Find the right path for your startup.',
+  title: 'Technical Co-founder Alternatives for Founders',
+  description: 'Can\'t find a technical co-founder? Compare the alternatives — fractional CTO, development agency, technical advisor — and pick the right path.',
   keywords: ['technical co-founder alternative', 'can\'t find technical co-founder', 'non-technical founder options', 'startup without technical co-founder', 'fractional CTO vs co-founder', 'hire CTO instead of co-founder'],
   openGraph: {
     title: 'Technical Co-founder Alternatives for Non-Technical Founders',
@@ -24,6 +26,25 @@ export const metadata = {
     canonical: 'https://codenest.uk/guides/technical-cofounder-alternatives/',
   },
 }
+
+const pageSchema = [
+  breadcrumbs([
+    { name: 'Guides', path: '/guides/' },
+    { name: 'Co-founder Alternatives', path: '/guides/technical-cofounder-alternatives/' },
+  ]),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'Technical Co-founder Alternatives for Founders',
+    description: 'Fractional CTO, development agency, technical advisor and more, compared for non-technical founders.',
+    author: { '@id': ORGANIZATION_ID },
+    publisher: { '@id': ORGANIZATION_ID },
+    datePublished: '2026-01-13',
+    dateModified: '2026-08-04',
+    mainEntityOfPage: 'https://codenest.uk/guides/technical-cofounder-alternatives/',
+    inLanguage: 'en-GB',
+  },
+]
 
 export default function TechnicalCofounderAlternativesPage() {
   const alternatives = [
@@ -97,6 +118,7 @@ export default function TechnicalCofounderAlternativesPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <JsonLd schema={pageSchema} />
       <Navigation />
 
       <main id="main-content">
@@ -262,13 +284,13 @@ export default function TechnicalCofounderAlternativesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/services/fractional-cto"
+              href="/services/fractional-cto/"
               className="inline-block bg-accent-500 text-primary-900 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-accent-600 transition-all"
             >
               Learn About Fractional CTO
             </Link>
             <Link
-              href="/cofounder"
+              href="/cofounder/"
               className="inline-block bg-white/10 text-white border-2 border-white/30 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-white/20 transition-all"
             >
               Explore Co-founder Partnerships

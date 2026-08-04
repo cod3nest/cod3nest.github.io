@@ -1,8 +1,10 @@
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+import JsonLd from '../components/JsonLd'
+import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../lib/schema'
 
 export const metadata = {
-  title: 'Case Studies | Fractional CTO & CFO Client Outcomes',
+  title: 'Case Studies: Fractional CTO & CFO Outcomes',
   description: 'How Codenest scaled Rungway from 5 to 1,000+ concurrent users, modernised payment infrastructure at Opayo, and delivered a compliant MVP for AstraZeneca.',
   openGraph: {
     title: 'Codenest Case Studies — Client Outcomes',
@@ -53,9 +55,25 @@ const caseStudies = [
   }
 ]
 
+const pageSchema = [
+  breadcrumbs([{ name: 'Case Studies', path: '/case-studies/' }]),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Codenest Case Studies',
+    description: 'Client outcomes from technical and financial leadership engagements.',
+    itemListElement: caseStudies.map((study, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: study.title,
+    })),
+  },
+]
+
 export default function CaseStudiesPage() {
   return (
     <div className="min-h-screen bg-white">
+      <JsonLd schema={pageSchema} />
       <Navigation />
 
       <main id="main-content">
@@ -127,7 +145,7 @@ export default function CaseStudiesPage() {
 
             <div className="text-center mt-16">
               <a
-                href="/contact"
+                href="/contact/"
                 className="inline-block bg-accent-400 text-primary-900 px-8 py-4 rounded-lg text-base font-semibold hover:bg-accent-500 transition-all shadow-gold hover:shadow-gold-lg"
               >
                 Request a Strategy Call

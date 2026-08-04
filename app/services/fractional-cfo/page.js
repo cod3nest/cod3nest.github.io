@@ -3,10 +3,12 @@ import Link from 'next/link'
 import Navigation from '../../components/Navigation'
 import Button from '../../components/Button'
 import Footer from '../../components/Footer'
+import JsonLd from '../../components/JsonLd'
+import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
 
 export const metadata = {
-  title: 'Fractional CFO Services London | Startup Financial Planning UK',
-  description: 'Expert fractional CFO for London and UK startups. Financial modeling, fundraising support, investor relations from £2.5k/month. SEIS/EIS expertise. Request a free consultation.',
+  title: 'Fractional CFO Services London for UK Startups',
+  description: 'Fractional CFO for UK startups from £2.5k/month. Financial modelling, fundraising support and investor reporting. Free 30-minute strategy call.',
   keywords: ['fractional CFO UK', 'fractional CFO London', 'startup CFO', 'FP&A UK', 'financial planning analysis', 'financial strategy', 'startup finance UK', 'part-time CFO'],
   openGraph: {
     title: 'Fractional CFO Services London | Codenest',
@@ -26,6 +28,11 @@ export const metadata = {
     canonical: 'https://codenest.uk/services/fractional-cfo/',
   },
 }
+
+const cfoBreadcrumbs = breadcrumbs([
+  { name: 'Services', path: '/services/' },
+  { name: 'Fractional CFO', path: '/services/fractional-cfo/' },
+])
 
 export default function FractionalCFOPage() {
   const benefits = [
@@ -148,6 +155,7 @@ export default function FractionalCFOPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
 
+      <JsonLd schema={cfoBreadcrumbs} />
       <Navigation />
 
       <main id="main-content">
@@ -170,8 +178,8 @@ export default function FractionalCFOPage() {
                 Engagements from £2,500/month &middot; typically 60-80% less than a full-time CFO
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button href="/contact">Request a Strategy Call</Button>
-                <Button href="/case-studies" variant="secondary">See Our Results</Button>
+                <Button href="/contact/">Request a Strategy Call</Button>
+                <Button href="/case-studies/" variant="secondary">See Our Results</Button>
               </div>
             </div>
             <div className="relative">
@@ -296,15 +304,15 @@ export default function FractionalCFOPage() {
           <div className="mt-12 p-6 bg-accent-50 rounded-2xl border border-accent-100 text-center">
             <p className="text-slate-700">
               New to strategic finance? Read{' '}
-              <Link href="/guides/fractional-cfo-guide" className="font-semibold text-accent-700 hover:text-accent-800 underline">
+              <Link href="/guides/fractional-cfo-guide/" className="font-semibold text-accent-700 hover:text-accent-800 underline">
                 The Complete Guide to Fractional CFO Services
               </Link>.
               {' '}Not sure when you&apos;ll need to raise? Try our free{' '}
-              <Link href="/tools/runway-calculator" className="font-semibold text-accent-700 hover:text-accent-800 underline">
+              <Link href="/tools/runway-calculator/" className="font-semibold text-accent-700 hover:text-accent-800 underline">
                 Startup Runway Calculator
               </Link>{' '}
               — or read{' '}
-              <Link href="/blog/financial-modeling-seed-stage-startups" className="font-semibold text-accent-700 hover:text-accent-800 underline">
+              <Link href="/blog/financial-modeling-seed-stage-startups/" className="font-semibold text-accent-700 hover:text-accent-800 underline">
                 our financial modeling guide
               </Link>.
             </p>
@@ -322,7 +330,7 @@ export default function FractionalCFOPage() {
             Request a free 30-minute discovery call. No sales pitch — just an honest conversation about your financial and business strategy needs.
           </p>
           <a
-            href="/contact"
+            href="/contact/"
             className="inline-block bg-primary-600 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-primary-700 transition-all shadow-lg hover:shadow-xl"
           >
             Request a Strategy Call

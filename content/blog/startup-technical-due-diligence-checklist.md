@@ -1,5 +1,6 @@
 ---
 title: 'Startup Technical Due Diligence Checklist: What Investors Actually Look For'
+seoTitle: 'Technical Due Diligence Checklist for Startups'
 description: 'Preparing for investor due diligence? Here is the complete checklist of what VCs examine during technical due diligence, and how to prepare.'
 date: '2025-01-08'
 author: 'Ankit Rana'
@@ -206,4 +207,4 @@ A startup that acknowledges "We have technical debt in our payment system, here'
 
 ---
 
-*Need help preparing for technical due diligence? Our [fractional CTO services](/services/fractional-cto) include due diligence preparation and investor meeting support.*
+*Need help preparing for technical due diligence? Our [fractional CTO services](/services/fractional-cto/) include due diligence preparation and investor meeting support.*

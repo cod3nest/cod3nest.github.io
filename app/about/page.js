@@ -1,10 +1,12 @@
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import Link from 'next/link'
+import JsonLd from '../components/JsonLd'
+import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../lib/schema'
 
 export const metadata = {
   title: 'Meet Our Fractional CTO & CFO',
-  description: 'Meet the two people behind Codenest: Ankit Rana, Fractional CTO with 15+ years across Deloitte Digital, Elavon and high-growth startups, and Michelle Rana FCCA, Fractional CFO who scaled a business from £35m to £165m revenue.',
+  description: 'Meet the two people behind Codenest: Ankit Rana, Fractional CTO with 15+ years in engineering leadership, and Michelle Rana FCCA, Fractional CFO.',
   openGraph: {
     title: 'About Codenest | Our Fractional CTO & CFO',
     description: 'Ankit Rana, Fractional CTO, and Michelle Rana FCCA, Fractional CFO — the two executives behind Codenest.',
@@ -26,16 +28,16 @@ export const metadata = {
 
 // Two principals, two Person entities. Ankit owns the technical track and
 // Michelle the financial one — never model one person as holding both seats.
-const codenest = {
-  '@type': 'Organization',
-  name: 'Codenest',
-  url: 'https://codenest.uk',
-}
+// Reference the root layout's ProfessionalService by @id rather than restating it:
+// two differently-shaped Organization nodes for the same company invite Google to
+// treat them as two companies.
+const codenest = { '@id': 'https://codenest.uk/#organization' }
 
 const peopleSchema = [
   {
     '@context': 'https://schema.org',
     '@type': 'Person',
+    '@id': 'https://codenest.uk/about/#ankit-rana',
     name: 'Ankit Rana',
     jobTitle: 'Fractional CTO',
     worksFor: codenest,
@@ -57,6 +59,7 @@ const peopleSchema = [
   {
     '@context': 'https://schema.org',
     '@type': 'Person',
+    '@id': 'https://codenest.uk/about/#michelle-rana',
     name: 'Michelle Rana',
     jobTitle: 'Fractional CFO',
     worksFor: codenest,
@@ -102,6 +105,8 @@ const LinkedInIcon = () => (
     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
   </svg>
 )
+
+const aboutBreadcrumbs = breadcrumbs([{ name: 'About', path: '/about/' }])
 
 export default function AboutPage() {
   const principals = [
@@ -190,6 +195,7 @@ export default function AboutPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(peopleSchema) }}
       />
+      <JsonLd schema={aboutBreadcrumbs} />
       <Navigation />
 
       <main id="main-content">
@@ -311,7 +317,7 @@ export default function AboutPage() {
                   <div>
                     <p className="text-sm font-semibold text-slate-900 mb-1">Beyond Advisory</p>
                     <p className="text-sm text-slate-600">
-                      In rare cases, for exceptional opportunities, Ankit considers deeper partnerships — including technical co-founder roles. If you're building something truly ambitious and looking for a committed partner, not just an advisor, <a href="/contact" className="text-accent-700 font-medium hover:text-accent-800 underline">let's talk</a>.
+                      In rare cases, for exceptional opportunities, Ankit considers deeper partnerships — including technical co-founder roles. If you're building something truly ambitious and looking for a committed partner, not just an advisor, <a href="/contact/" className="text-accent-700 font-medium hover:text-accent-800 underline">let's talk</a>.
                     </p>
                   </div>
                 </div>
@@ -419,7 +425,7 @@ export default function AboutPage() {
             Let's discuss how we can help you build something great.
           </p>
           <a
-            href="/contact"
+            href="/contact/"
             className="inline-flex items-center bg-accent-400 text-primary-900 px-8 py-4 rounded-lg font-semibold hover:bg-accent-500 transition-all shadow-gold hover:shadow-gold-lg"
           >
             Request a Strategy Call

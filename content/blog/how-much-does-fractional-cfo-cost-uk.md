@@ -1,5 +1,6 @@
 ---
 title: 'How Much Does a Fractional CFO Cost in the UK? 2026 Pricing Guide'
+seoTitle: 'How Much Does a Fractional CFO Cost in the UK?'
 description: 'Complete UK pricing guide for fractional CFO services in 2026. Retainer ranges, day rates, full-time cost comparisons, and how to budget at every stage.'
 date: '2026-08-04'
 author: 'Michelle Rana'
@@ -13,7 +14,7 @@ If you're considering fractional CFO support for your startup, the first questio
 
 The short answer: **£2,000-£12,000 per month** depending on engagement level and experience. But let's break down what you get at each tier and how to think about the investment.
 
-Still weighing whether you need one at all? Start with [When Should You Hire a Fractional CFO?](/blog/when-to-hire-fractional-cfo) — this guide assumes you've decided financial leadership matters and want to budget for it.
+Still weighing whether you need one at all? Start with [When Should You Hire a Fractional CFO?](/blog/when-to-hire-fractional-cfo/) — this guide assumes you've decided financial leadership matters and want to budget for it.
 
 ## Fractional CFO Pricing Tiers
 
@@ -165,7 +166,7 @@ The value isn't just the saving versus a full-time hire. It's in:
 
 **Opportunities captured:**
 - Credibility with investors when your numbers withstand scrutiny
-- Levers identified to [extend your runway](/blog/extending-startup-runway-practical-guide) before you're forced to
+- Levers identified to [extend your runway](/blog/extending-startup-runway-practical-guide/) before you're forced to
 - Better terms, because prepared founders negotiate from strength
 
 ## Questions to Ask About Pricing
@@ -202,10 +203,10 @@ As a reference point, Codenest fractional CFO engagements start from £2,500 per
 - Flexible, monthly commitment
 - A start date measured in weeks, not months
 
-For the full picture of what the role covers at each stage, read our [complete fractional CFO guide](/guides/fractional-cfo-guide).
+For the full picture of what the role covers at each stage, read our [complete fractional CFO guide](/guides/fractional-cfo-guide/).
 
 The question isn't whether you can afford a fractional CFO — it's whether you can afford to keep making financial decisions without one.
 
 ---
 
-*Want to work out the right engagement level for your stage? Explore our [fractional CFO services](/services/fractional-cfo), model your burn with the free [Startup Runway Calculator](/tools/runway-calculator), or [get in touch](/contact) to talk through your numbers.*
+*Want to work out the right engagement level for your stage? Explore our [fractional CFO services](/services/fractional-cfo/), model your burn with the free [Startup Runway Calculator](/tools/runway-calculator/), or [get in touch](/contact/) to talk through your numbers.*
