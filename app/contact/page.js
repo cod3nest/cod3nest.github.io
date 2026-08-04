@@ -46,14 +46,16 @@ export default function ContactPage() {
       <Navigation />
 
       <main id="main-content">
-        <section className="pt-40 pb-24 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
+        {/* Shares the homepage's #contact id so the sticky CTA suppresses itself
+            here too — on this page the shortcut has nothing to offer. */}
+        <section id="contact" className="pt-40 pb-24 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
           {/* Background decorations */}
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent-400 opacity-[0.02] rounded-full blur-3xl" />
           <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-primary-600 opacity-[0.03] rounded-full blur-3xl" />
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div className="text-center mb-16">
-              <p className="text-sm uppercase tracking-[0.2em] text-accent-600 mb-4 font-medium">Start the conversation</p>
+              <p className="text-sm uppercase tracking-[0.2em] text-accent-700 mb-4 font-medium">Start the conversation</p>
               <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Let&apos;s Talk</h1>
               <p className="text-xl text-slate-600 max-w-2xl mx-auto">
                 Fractional CTO or CFO — tell us what you&apos;re building. No sales pitch, just an honest discussion about your needs.

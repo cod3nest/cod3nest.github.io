@@ -164,7 +164,7 @@ export default function ReferralPage() {
               >
                 <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${
                   tier.color === 'accent'
-                    ? 'bg-accent-100 text-accent-600'
+                    ? 'bg-accent-100 text-accent-700'
                     : tier.color === 'emerald'
                     ? 'bg-emerald-100 text-emerald-600'
                     : 'bg-primary-100 text-primary-600'
@@ -174,7 +174,7 @@ export default function ReferralPage() {
                 <h3 className="text-xl font-bold text-slate-900 mb-2">{tier.title}</h3>
                 <div className={`text-3xl font-bold mb-1 ${
                   tier.color === 'accent'
-                    ? 'text-accent-600'
+                    ? 'text-accent-700'
                     : tier.color === 'emerald'
                     ? 'text-emerald-600'
                     : 'text-primary-600'
@@ -378,7 +378,7 @@ export default function ReferralPage() {
               Submit Referral
             </button>
 
-            <p className="text-xs text-slate-500 text-center">
+            <p className="text-xs text-slate-400 text-center">
               We'll reach out to them within 48 hours and keep you updated on the progress.
             </p>
           </form>

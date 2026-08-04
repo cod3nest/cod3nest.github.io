@@ -171,23 +171,23 @@ export default function FractionalVsAgencyPage() {
               <h3 className="text-xl font-bold text-accent-900 mb-4">Choose an Agency When:</h3>
               <ul className="space-y-3 text-slate-700">
                 <li className="flex items-start gap-3">
-                  <span className="text-accent-600 font-bold">•</span>
+                  <span className="text-accent-700 font-bold">•</span>
                   You know exactly what you want built
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-accent-600 font-bold">•</span>
+                  <span className="text-accent-700 font-bold">•</span>
                   You need development capacity fast
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-accent-600 font-bold">•</span>
+                  <span className="text-accent-700 font-bold">•</span>
                   You have a fixed budget and scope
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-accent-600 font-bold">•</span>
+                  <span className="text-accent-700 font-bold">•</span>
                   You don't want to manage individual developers
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-accent-600 font-bold">•</span>
+                  <span className="text-accent-700 font-bold">•</span>
                   The project has a clear end date
                 </li>
               </ul>

@@ -39,7 +39,7 @@ export default function Home() {
     },
     {
       question: "What's your pricing model?",
-      answer: "We work on retainer for fractional leadership (monthly commitment) and fixed-fee for defined projects like MVP builds or financial modeling. Fractional engagements start from £2,500 per month (CFO) and £3,000 per month (CTO) — typically 60-80% less than equivalent full-time hires."
+      answer: "We work on retainer for fractional leadership (monthly commitment) and fixed-fee for defined projects like MVP builds or financial modelling. Every engagement is scoped to your stage and the intensity you need — typically 60-80% less than an equivalent full-time hire. Request a strategy call and we'll quote against your actual requirements."
     }
   ]
 
@@ -491,7 +491,7 @@ export default function Home() {
               <details key={index} className="group bg-white rounded-xl border border-slate-200 hover:border-accent-300 hover:shadow-md transition-all overflow-hidden">
                 <summary className="font-semibold text-lg text-slate-900 cursor-pointer list-none flex items-center justify-between p-6 hover:bg-slate-50 transition-colors">
                   <span className="flex items-center gap-4">
-                    <span className="flex-shrink-0 w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center text-accent-600 text-sm font-bold group-open:bg-accent-500 group-open:text-white transition-colors">
+                    <span className="flex-shrink-0 w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center text-accent-700 text-sm font-bold group-open:bg-accent-500 group-open:text-white transition-colors">
                       {index + 1}
                     </span>
                     {faq.question}
@@ -510,7 +510,7 @@ export default function Home() {
           {/* Additional CTA */}
           <div className="mt-12 text-center">
             <p className="text-slate-600 mb-4">Still have questions?</p>
-            <a href="#contact" className="inline-flex items-center gap-2 text-accent-600 hover:text-accent-700 font-semibold">
+            <a href="#contact" className="inline-flex items-center gap-2 text-accent-700 hover:text-accent-800 font-semibold">
               Request a Strategy Call
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

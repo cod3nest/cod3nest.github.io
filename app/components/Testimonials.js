@@ -1,14 +1,16 @@
 // Testimonial policy (BRANDING.md §2.3): only real feedback. Named attributions
 // require the client's permission; confidential ones are explicitly anonymised.
-// Owner-verified (4 Aug 2026): the two anonymised quotes are genuine client
-// feedback published under NDA — keep them; name clients only with permission.
+// Owner-verified (4 Aug 2026): all three quotes are genuine client feedback.
+// The HR-tech quote was published with a named attribution that had never been
+// permission-checked, so it was anonymised on the owner's instruction (4 Aug 2026)
+// rather than left standing on an assumption. Name a client only with permission.
 const testimonials = [
   {
     quote: "They transformed our platform from handling 5 users to 1000+ concurrent users. The migration was seamless with zero downtime. Exactly the technical leadership we needed.",
-    name: "Julie Chakraverty",
-    title: "Founder & CEO",
-    company: "Rungway",
-    initials: "JC",
+    name: "Founder & CEO, London HR-tech platform",
+    title: "Name withheld under NDA",
+    company: "",
+    initials: "HT",
     track: "technical",
     outcome: "5 → 1,000+ concurrent users"
   },
@@ -61,7 +63,7 @@ export default function Testimonials() {
                 "{testimonial.quote}"
               </p>
               <div className="flex items-center gap-4 border-t border-slate-100 pt-4 relative">
-                <div className={`w-12 h-12 rounded-full flex items-center justify-center font-semibold text-lg ${testimonial.track === 'financial' ? 'bg-accent-100 text-accent-600' : 'bg-primary-100 text-primary-600'}`}>
+                <div className={`w-12 h-12 rounded-full flex items-center justify-center font-semibold text-lg ${testimonial.track === 'financial' ? 'bg-accent-100 text-accent-700' : 'bg-primary-100 text-primary-600'}`}>
                   {testimonial.initials}
                 </div>
                 <div>

@@ -80,7 +80,7 @@ export default function CaseStudiesPage() {
         <section className="pt-40 pb-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
-              <p className="text-sm uppercase tracking-[0.2em] text-accent-600 mb-4 font-medium">Proven Track Record</p>
+              <p className="text-sm uppercase tracking-[0.2em] text-accent-700 mb-4 font-medium">Proven Track Record</p>
               <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Case Studies</h1>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto">
                 Startup outcomes, backed by enterprise-grade experience — deep, hands-on collaboration at every stage
@@ -117,7 +117,7 @@ export default function CaseStudiesPage() {
                           <p className="text-slate-600">{study.solution}</p>
                         </div>
                         <div>
-                          <h3 className="text-sm font-semibold text-accent-600 uppercase tracking-wide mb-3">Results</h3>
+                          <h3 className="text-sm font-semibold text-accent-700 uppercase tracking-wide mb-3">Results</h3>
                           <ul className="space-y-2">
                             {study.results.map((result, i) => (
                               <li key={i} className="flex items-start">

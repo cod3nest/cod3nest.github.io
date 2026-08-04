@@ -8,7 +8,7 @@ import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
 
 export const metadata = {
   title: 'Fractional CFO Services London for UK Startups',
-  description: 'Fractional CFO for UK startups from £2.5k/month. Financial modelling, fundraising support and investor reporting. Free 30-minute strategy call.',
+  description: 'Fractional CFO for UK startups, pre-seed to Series A. Financial modelling, fundraising support and investor reporting. Free 30-minute strategy call.',
   keywords: ['fractional CFO UK', 'fractional CFO London', 'startup CFO', 'FP&A UK', 'financial planning analysis', 'financial strategy', 'startup finance UK', 'part-time CFO'],
   openGraph: {
     title: 'Fractional CFO Services London | Codenest',
@@ -175,7 +175,7 @@ export default function FractionalCFOPage() {
                 FP&A, financial modeling, and investor-ready reporting from a part-time CFO. The financial discipline of a high-growth company — without the overhead.
               </p>
               <p className="text-sm font-medium text-slate-700 mb-8">
-                Engagements from £2,500/month &middot; typically 60-80% less than a full-time CFO
+                Retained monthly engagements, scoped to your stage &middot; typically 60-80% less than a full-time CFO
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button href="/contact/">Request a Strategy Call</Button>
@@ -235,7 +235,7 @@ export default function FractionalCFOPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {services.map((service, index) => (
                   <div key={index} className="flex items-start">
-                    <svg className="w-5 h-5 text-accent-600 mt-1 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-5 h-5 text-accent-700 mt-1 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span className="text-slate-700">{service}</span>
@@ -321,17 +321,21 @@ export default function FractionalCFOPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-accent-500 to-accent-600">
+      {/* Charcoal ground, gold carried on the eyebrow and the button. A full-bleed
+          gold band put dark-on-gold body copy at 3.4:1 and made this page end in a
+          different brand from its Fractional CTO twin (BRANDING.md §3). */}
+      <section className="py-20 bg-gradient-to-r from-primary-600 to-primary-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary-900 mb-4">
+          <p className="text-sm uppercase tracking-[0.2em] text-accent-300 mb-4 font-medium">Financial Leadership</p>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">
             Ready for a Fractional CFO?
           </h2>
-          <p className="text-xl text-primary-800 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
             Request a free 30-minute discovery call. No sales pitch — just an honest conversation about your financial and business strategy needs.
           </p>
           <a
             href="/contact/"
-            className="inline-block bg-primary-600 text-white px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-primary-700 transition-all shadow-lg hover:shadow-xl"
+            className="inline-block bg-accent-400 text-primary-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-accent-500 transition-all shadow-gold hover:shadow-gold-lg"
           >
             Request a Strategy Call
           </a>

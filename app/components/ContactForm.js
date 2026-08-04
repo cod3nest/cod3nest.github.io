@@ -429,6 +429,15 @@ const ContactForm = () => {
         <p className="text-sm text-slate-500 text-center -mt-2">
           We&apos;ll reply within 24 hours with times.
         </p>
+        {/* Privacy information has to be available where the data is collected,
+            not only in the footer (UK GDPR, Art. 13). */}
+        <p className="text-xs text-slate-500 text-center">
+          We use your details only to reply to you — never for marketing lists. See our{' '}
+          <a href="/privacy/" className="underline hover:text-slate-700">
+            Privacy Policy
+          </a>
+          .
+        </p>
       </form>
     </div>
   )

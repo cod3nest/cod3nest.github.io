@@ -121,17 +121,17 @@ export default function RunwayCalculatorPage() {
                   </tr>
                   <tr className="bg-slate-50">
                     <td className="border border-slate-300 px-4 py-3">12-18 months</td>
-                    <td className="border border-slate-300 px-4 py-3 text-green-600">Good</td>
+                    <td className="border border-slate-300 px-4 py-3 text-green-700">Good</td>
                     <td className="border border-slate-300 px-4 py-3">Start thinking about fundraising strategy</td>
                   </tr>
                   <tr>
                     <td className="border border-slate-300 px-4 py-3">9-12 months</td>
-                    <td className="border border-slate-300 px-4 py-3 text-yellow-600">Caution</td>
+                    <td className="border border-slate-300 px-4 py-3 text-yellow-700">Caution</td>
                     <td className="border border-slate-300 px-4 py-3">Begin active fundraising now</td>
                   </tr>
                   <tr className="bg-slate-50">
                     <td className="border border-slate-300 px-4 py-3">6-9 months</td>
-                    <td className="border border-slate-300 px-4 py-3 text-orange-600">Warning</td>
+                    <td className="border border-slate-300 px-4 py-3 text-orange-700">Warning</td>
                     <td className="border border-slate-300 px-4 py-3">Urgent: fundraise or cut costs</td>
                   </tr>
                   <tr>

@@ -23,11 +23,12 @@ export default function Footer() {
           <div>
             <h2 className="font-semibold mb-4">Advisory</h2>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/services/" className="text-slate-400 hover:text-accent-400 transition-colors">All Services</Link></li>
+              {/* Only real destinations. "0-to-1 Product Builds" and "AI & Data
+                  Engineering" used to sit here pointing at /services/ — capabilities
+                  dressed as pages, which is the same bait the service cards had. */}
               <li><Link href="/services/fractional-cto/" className="text-slate-400 hover:text-accent-400 transition-colors">Fractional CTO</Link></li>
               <li><Link href="/services/fractional-cfo/" className="text-slate-400 hover:text-accent-400 transition-colors">Fractional CFO</Link></li>
-              <li><Link href="/services/" className="text-slate-400 hover:text-accent-400 transition-colors">0-to-1 Product Builds</Link></li>
-              <li><Link href="/services/" className="text-slate-400 hover:text-accent-400 transition-colors">AI & Data Engineering</Link></li>
+              <li><Link href="/services/" className="text-slate-400 hover:text-accent-400 transition-colors">All Services</Link></li>
             </ul>
           </div>
           <div>
@@ -66,12 +67,27 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-slate-400 text-sm">
-            © {currentYear} Codenest. All rights reserved.
-          </p>
-          <p className="text-slate-400 text-xs">
-            Boutique technical & financial advisory for UK startups
+        <div className="pt-8 border-t border-slate-800 space-y-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-slate-400 text-sm">
+              © {currentYear} Codenest Ltd. All rights reserved.
+            </p>
+            <div className="flex items-center gap-6">
+              <Link href="/privacy/" className="text-slate-400 hover:text-accent-400 transition-colors text-sm">
+                Privacy Policy
+              </Link>
+              <p className="text-slate-400 text-xs">
+                Boutique technical & financial advisory for UK startups
+              </p>
+            </div>
+          </div>
+          {/* Statutory trading disclosures — a limited company must show its
+              registered name, number, place of registration and registered office
+              on its website (Companies Act 2006 s.82 / Trading Disclosures Regs 2015). */}
+          <p className="text-slate-400 text-xs leading-relaxed">
+            Codenest Ltd is a company registered in England and Wales, company number 10909723.
+            Registered office: Clearways Accountants, Clearways, Colley Way, Reigate RH2 9JH,
+            United Kingdom. VAT registration number 275 3255 93.
           </p>
         </div>
       </div>

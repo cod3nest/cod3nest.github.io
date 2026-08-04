@@ -65,9 +65,12 @@ every claim — write as if they will check, because they will.
    employment is framed as pedigree: "Founder track record includes…" — never
    "Trusted by…". Anonymous testimonials are labelled as discretion
    ("Founder & CEO, London fintech — name withheld under NDA"), never left ambiguous.
-   The two anonymised testimonials (fintech Series A; B2B SaaS MVP) are verified
-   genuine — owner confirmed 4 Aug 2026, real clients under NDA. Keep them; name
-   a client only with that client's permission.
+   All three testimonials (HR-tech scale-up; fintech Series A; B2B SaaS MVP) are
+   verified genuine — owner confirmed 4 Aug 2026. All three are now anonymised:
+   the HR-tech quote carried a named attribution that had never been
+   permission-checked, and was anonymised on the owner's instruction rather than
+   left standing on an assumption. Keep all three; name a client only with that
+   client's written permission.
 4. **Two principals, two seats.** Codenest is **Ankit Rana, Fractional CTO** and
    **Michelle Rana FCCA, Fractional CFO** — not one generalist covering both.
    Never attribute the CFO offer to Ankit or the CTO offer to Michelle, in copy or
@@ -167,8 +170,15 @@ Assemble pages from these; don't invent parallel patterns:
 - **Two-Track cards** — the CTO/CFO pair. Titles are the service names
   ("Fractional CTO" / "Fractional CFO"), gold accent = CFO, charcoal = CTO,
   four outcome bullets, link "Explore Fractional {CTO|CFO} Services".
-- **ServiceCard** — title (service name or deliverable), benefit line, three outcomes.
-  Must link somewhere (its track's service page) — no dead-end cards.
+- **ServiceCard** — title, benefit line, three outcomes. Used **only for capabilities
+  delivered inside a seat**, and renders as a static tile: no hover-lift, no arrow, no
+  link. Never re-add the fallback href it used to carry — a card that promises "AI &
+  Data Engineering" and delivers a generic Fractional CTO page is worse than one that
+  never claimed to be a link. The component still renders an anchor if given an
+  explicit `href`, reserved for the day a capability earns a page of its own; nothing
+  passes one today. The two seats are **not** ServiceCards — they are the Two-Track
+  cards, and listing "Fractional CTO" as an item inside the Fractional CTO track put
+  the seat on one page three times. (4 Aug 2026.)
 - **Outcome badges** — "Series A closed", "MVP in 10 weeks" — the approved proof
   device (never star ratings).
 - **Comparison grid** — categories only, factual rows, "Best for:" footers, Codenest
@@ -206,8 +216,13 @@ Assemble pages from these; don't invent parallel patterns:
 - **Blog:** meta description = frontmatter `description`; post CTA is tag-aware
   (finance tags → Fractional CFO CTA, technical tags → Fractional CTO CTA);
   evergreen titles carry no year unless the content is genuinely refreshed annually.
-- **Pricing:** whatever figure metadata promises, the page states visibly. Current
-  anchors: CTO from £3k/month, CFO from £2.5k/month, "60-80% less than full-time".
+- **Pricing:** **Codenest publishes no prices of its own** (owner, 4 Aug 2026). The
+  £3k/£2.5k-per-month anchors are retired from pages, metadata, guides and posts.
+  Engagements are described as "scoped to your stage"; the quote comes on the call.
+  The relative claim "60-80% less than a full-time CTO/CFO" stays. *Market-rate*
+  editorial — the £2,000-£12,000 range, full-time salary comparisons, the two
+  cost-guide posts — is content, not our price list, and stays. Do not reintroduce a
+  Codenest figure without also settling the VAT basis (§13.21).
 
 ## 9. Logo
 
@@ -270,9 +285,11 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
 11. **Opayo engagement dates: August 2019 – June 2026** — a Codenest-era engagement.
     Elavon (US Bancorp) employment 2011-2015 is separate early-career history; never
     date Opayo work into that window. (Owner, 4 Aug 2026.)
-12. **The two anonymised testimonials are verified genuine** (owner, 4 Aug 2026) —
-    real clients under NDA. Never delete or reword them as "placeholders"; name a
-    client only with permission.
+12. **All three testimonials are verified genuine** (owner, 4 Aug 2026) — real
+    clients. Never delete or reword them as "placeholders". All three are
+    anonymised: a named attribution is published only against written permission
+    from that client, and the previously-named HR-tech quote was anonymised on the
+    owner's instruction (4 Aug 2026) because no such permission was on record.
 13. **Stat cells carry a named engagement or an offer term** — Rungway users, Opayo
     duration, the testimonial-backed Series A, 8-12 wks MVP. No bare counts without
     a citable denominator ("15+ startups" retired). (4 Aug 2026.)
@@ -292,3 +309,34 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
 17. **Never publish personal contact details.** No personal mobile numbers or personal
     email addresses for either principal, from CVs or anywhere else — the contact form
     and the business address are the only channels. (Owner, 4 Aug 2026.)
+18. **Privacy information lives where data is collected.** Every form that takes
+    personal data carries a one-line notice and a link to `/privacy`, not just the
+    footer (UK GDPR Art. 13). `/privacy` lists each collection point and every
+    processor by name — update it in the same change that adds a field, a form, or a
+    third-party call. (4 Aug 2026.)
+19. **No gold-flooded sections.** Full-bleed `accent-*` grounds are banned: they force
+    dark-on-gold body copy below AA and break the charcoal/gold hierarchy. CTA bands
+    are `primary-600 → primary-700`; the track shows in the eyebrow and the button.
+    (4 Aug 2026 — replaced the Fractional CFO page's gold band at 3.42:1.)
+20. **Gold text on light grounds is `accent-700` or darker — no exceptions.**
+    `accent-600` at 14px on white measures 4.39:1 and fails AA; it had drifted onto
+    four pages. Verified sitewide by walking every rendered text node against its
+    effective background — re-run that check after any colour change rather than
+    eyeballing it. (4 Aug 2026.)
+21. **No Codenest prices on the site.** Own-price anchors are retired sitewide (owner,
+    4 Aug 2026) — pages, metadata, OG descriptions, guides and blog posts. Market-rate
+    editorial stays. If a price is ever reinstated it must state its VAT basis, because
+    Codenest is VAT-registered (275 3255 93) and the E-Commerce Regs require a quoted
+    price to say whether tax is included. (§8.)
+22. **Statutory disclosures live in the footer of every page:** registered name
+    Codenest Ltd, company number 10909723, England and Wales, registered office
+    Clearways Accountants, Clearways, Colley Way, Reigate RH2 9JH, and the VAT number.
+    Never remove them. Note the registered office is **Surrey, not London** — reconcile
+    any "London-based" claim and the `addressLocality` in `app/layout.js` against it.
+    (4 Aug 2026.)
+23. **The Services dropdown is the two seats, nothing else.** "All Services" was removed
+    from it (4 Aug 2026): every route out of `/services` leads back to one of those two
+    pages, so it was a third nav slot reaching nothing new — and a third page competing
+    for the same queries as its own children. `/services` stays linked from the homepage
+    and the footer as the side-by-side overview. Capabilities are never listed as
+    navigation destinations — that applies to the footer too. (4 Aug 2026.)
