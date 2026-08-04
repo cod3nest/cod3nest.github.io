@@ -297,9 +297,14 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     is the Fractional CFO. Any surface that names one must be checked for whether it
     should name both — especially `/about`, Person schema, and founder bylines.
     (Owner, 4 Aug 2026.)
-15. **Rungway predates Codenest.** It is founder track record, not a Codenest client
-    engagement — never caption it "our client" or attribute it to Codenest as a firm.
-    (Owner, 4 Aug 2026.)
+15. **Rungway and Dishoom are founder track record, not Codenest clients.** Rungway
+    predates Codenest; Dishoom was Michelle's employer (Head of Strategic Finance,
+    Sep 2017 – Jan 2026). Neither is a Codenest client engagement — never caption
+    either "our client" or attribute it to Codenest as a firm. The homepage logo strip
+    they sit in is captioned "Founder track record includes" for exactly this reason;
+    it is not a client wall, and nothing may relabel it as one. Attribute Dishoom's
+    numbers to Michelle's *role* ("led strategic finance at Dishoom through
+    £35m → £165m"), never to her personally growing the company. (Owner, 4 Aug 2026.)
 16. **Michelle covers both operational finance and fundraising.** Her CV documents the
     operational side in detail — multi-site P&L, budgeting and rolling forecasts,
     controls and governance, margin and procurement, Board reporting — and the owner

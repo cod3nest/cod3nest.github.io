@@ -351,9 +351,21 @@ export default function Home() {
               />
             </div>
 
+            {/* Dishoom - Hospitality. Michelle's track record, and the first
+                non-technical mark in a strip that was otherwise entirely Ankit's.
+                Sized on cap-height rather than box-height: the wordmark is ~9:1,
+                so h-8 would render it nearly three times wider than the others. */}
+            <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm transition-all cursor-default">
+              <img
+                src="/img/clients/dishoom.svg"
+                alt="Dishoom"
+                className="h-5 w-auto object-contain"
+              />
+            </div>
+
           </div>
           <p className="text-center text-sm text-slate-600 mt-8">
-            Led by <a href="/about/" className="font-semibold text-primary-700 hover:text-primary-800">Ankit Rana</a>, Fractional CTO — 15+ years across Deloitte Digital, Elavon (US Bancorp) and Opayo — and <a href="/about/" className="font-semibold text-primary-700 hover:text-primary-800">Michelle Rana FCCA</a>, Fractional CFO, who took a business from &pound;35m to &pound;165m revenue while improving EBITDA margin by 4%.
+            Led by <a href="/about/" className="font-semibold text-primary-700 hover:text-primary-800">Ankit Rana</a>, Fractional CTO — 15+ years across Deloitte Digital, Elavon (US Bancorp) and Opayo — and <a href="/about/" className="font-semibold text-primary-700 hover:text-primary-800">Michelle Rana FCCA</a>, Fractional CFO, who led strategic finance at Dishoom through &pound;35m to &pound;165m revenue growth and a four-point EBITDA margin improvement.
           </p>
         </div>
       </section>
