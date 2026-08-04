@@ -58,7 +58,7 @@ export default function AboutPage() {
     {
       year: "2017-Present",
       title: "Codenest",
-      description: "Founded Codenest to provide integrated technical and financial leadership for ambitious founders. Fractional CTO and CFO for startups across fintech, healthtech, proptech, and B2B SaaS — helping them build right and raise successfully."
+      description: "Founded Codenest to provide integrated technical and financial leadership for ambitious founders. Fractional CTO and CFO for startups across fintech, healthtech, proptech, and B2B SaaS — helping them build right and raise successfully. Engagements have ranged from pre-seed MVPs to a near seven-year payment-platform transformation with Opayo by Elavon (2019-2026)."
     }
   ]
 

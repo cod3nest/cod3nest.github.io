@@ -159,7 +159,7 @@ export default function Home() {
                   </svg>
                   <div>
                     <span className="font-medium">Every client diligence passed to date</span>
-                    <span className="text-slate-500 text-sm block">Technical and financial, across 15+ startups</span>
+                    <span className="text-slate-500 text-sm block">Technical and financial, from pre-seed to Series A</span>
                   </div>
                 </li>
               </ul>
@@ -347,7 +347,7 @@ export default function Home() {
 
           </div>
           <p className="text-center text-sm text-slate-600 mt-8">
-            Led by <a href="/about" className="font-semibold text-primary-700 hover:text-primary-800">Ankit Rana</a> — ex-Deloitte Digital and Elavon (US Bancorp), 15+ years building and scaling platforms.
+            Led by <a href="/about" className="font-semibold text-primary-700 hover:text-primary-800">Ankit Rana</a> — 15+ years building and scaling platforms, from early-career engineering at Deloitte Digital and Elavon (US Bancorp) to fractional CTO and CFO engagements today.
           </p>
         </div>
       </section>
@@ -365,12 +365,12 @@ export default function Home() {
               <div className="text-slate-300 text-sm md:text-base">Concurrent users scaled at Rungway</div>
             </div>
             <div className="space-y-2 group">
-              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gold-gradient stat-number group-hover:scale-105 transition-transform">15+</div>
-              <div className="text-slate-300 text-sm md:text-base">Startups supported</div>
+              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gold-gradient stat-number group-hover:scale-105 transition-transform">6+ yrs</div>
+              <div className="text-slate-300 text-sm md:text-base">Payments engagement at Opayo by Elavon</div>
             </div>
             <div className="space-y-2 group">
               <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gold-gradient stat-number group-hover:scale-105 transition-transform">Series A</div>
-              <div className="text-slate-300 text-sm md:text-base">Fundraises supported</div>
+              <div className="text-slate-300 text-sm md:text-base">Closed with our models and data room</div>
             </div>
             <div className="space-y-2 group">
               <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gold-gradient stat-number group-hover:scale-105 transition-transform">8-12 wks</div>
