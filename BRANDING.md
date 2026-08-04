@@ -27,9 +27,11 @@ editorial voice for headlines, and claims you could defend in a due-diligence ro
   "Code Nest", or "cod3nest" (the GitHub org `cod3nest` is a legacy identifier only;
   never surface it in copy, schema, or user-facing links — see §13.6).
 - **The offer (say it plainly, always):** **Fractional CTO and Fractional CFO services**
-  for UK startups, pre-seed to Series A. Two named executive seats, one integrated
-  partner. If a page or component cannot name at least one of the two services, it is
-  off-brand.
+  for UK startups, pre-seed to Series A. Two named executive seats, **each engageable on
+  its own.** Taking both is an option, not a condition — a founder who needs only a CFO
+  buys only the CFO seat. The integrated pairing is an advantage to offer, never a
+  minimum to imply. If a page or component cannot name at least one of the two services,
+  it is off-brand.
 - **Positioning line (the tagline):** "Big 4 rigour meets founder empathy."
 - **Brand flourish (secondary, display use only):** "Executive firepower. Startup agility."
 - **Retired lines — do not reintroduce:** "Where Startups Scale", "Big 4 rigour meets
@@ -38,8 +40,12 @@ editorial voice for headlines, and claims you could defend in a due-diligence ro
 - **The audience (ICP):** UK startup founders on the 0→1 journey, **pre-seed to
   Series A** (one phrasing, everywhere), in fintech, healthtech, and B2B SaaS.
   London-based, remote-friendly across the UK and Europe.
-- **The operator:** Codenest is founder-led — Ankit Rana, ex-Deloitte Digital and
-  Elavon (US Bancorp). This is a strength, not a secret (see §2 voice rules).
+- **The operators:** Codenest is founder-led in each track, and the tracks do not
+  overlap. **Ankit Rana, Fractional CTO** — ex-Deloitte Digital, Elavon (US Bancorp),
+  Opayo — leads the technical seat. **Michelle Rana FCCA, Fractional CFO** — strategic
+  finance at Dishoom — leads the financial seat. Being founder-led is a strength, not a
+  secret (see §2 voice rules), but "founder-led" never means one person covering both:
+  each seat is named to its own principal in copy and in schema (§2 rule 4, §13 rule 14).
 
 ## 2. Voice & tone
 
@@ -358,3 +364,9 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     for the same queries as its own children. `/services` stays linked from the homepage
     and the footer as the side-by-side overview. Capabilities are never listed as
     navigation destinations — that applies to the footer too. (4 Aug 2026.)
+27. **Either seat can be bought alone.** A client can engage the Fractional CTO, the
+    Fractional CFO, or both. Copy may say the two work better together; it may never
+    say or imply that both are required, and no CTA, FAQ or schema may present the
+    pair as the only unit of sale. "Most startups need both" is an observation about
+    startups, not a condition of engagement — if a sentence could read as the latter,
+    rewrite it. (Owner, 4 Aug 2026.)

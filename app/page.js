@@ -34,8 +34,8 @@ export default function Home() {
       answer: "Fractional CTO/CFO engagements typically run 3-6 months at 2-3 days per week. MVP builds are fixed-scope at 8-12 weeks. We tailor every engagement to your stage and needs. No cookie-cutter packages."
     },
     {
-      question: "Do you handle both technical and financial leadership?",
-      answer: "Yes. Many startups need both CTO and CFO guidance but can't justify two executive hires. We offer integrated leadership covering technology architecture, financial planning, and investor relations."
+      question: "Can I engage just the CTO or just the CFO?",
+      answer: "Yes. Each seat is a separate engagement — take the Fractional CTO, the Fractional CFO, or both. Founders who take both get one roadmap and one financial model built in the same conversations, rather than two advisers reconciling afterwards, but there is no requirement to buy the pair."
     },
     {
       question: "What's your pricing model?",
@@ -201,10 +201,10 @@ export default function Home() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-sm uppercase tracking-[0.2em] text-accent-700 mb-4 font-medium">Integrated Partnership</p>
+            <p className="text-sm uppercase tracking-[0.2em] text-accent-700 mb-4 font-medium">Two Executive Seats</p>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Your Fractional CTO &amp; CFO</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Most startups need both CTO and CFO guidance. We cover both seats in one engagement, so the technical plan and the financial plan agree.
+              Take either seat on its own, or both. Founders who take both get a technical plan and a financial plan that agree, because the same two people build them together.
             </p>
           </div>
 
