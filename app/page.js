@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import Button from './components/Button'
 import Navigation from './components/Navigation'
@@ -171,17 +170,24 @@ export default function Home() {
             <div className="relative animate-hero-image">
               {/* Premium gold frame effect */}
               <div className="absolute -inset-1 bg-gradient-to-br from-accent-400/30 via-accent-500/20 to-transparent rounded-2xl blur-sm" />
-              <div className="relative rounded-xl overflow-hidden h-[520px] img-warm-overlay ring-1 ring-accent-400/20">
-                <Image
-                  src="/img/photos/hero-team.jpg"
-                  alt="Strategic advisory session for startup founders"
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
-                />
-                {/* Warm overlay for premium feel */}
-                <div className="absolute inset-0 bg-gradient-to-br from-accent-400/5 to-transparent mix-blend-overlay pointer-events-none" />
+              {/* Two halves, equal height: the offer is 50/50 and the hero has to
+                  show it. Real proof beats a stock photo of people at laptops. */}
+              <div className="relative rounded-xl overflow-hidden min-h-[520px] ring-1 ring-accent-400/20 shadow-xl flex flex-col">
+                <div className="flex-1 bg-primary-800 p-8 flex flex-col justify-center">
+                  <p className="text-xs uppercase tracking-[0.2em] text-accent-300 mb-4 font-semibold">Fractional CTO</p>
+                  <p className="font-serif text-4xl md:text-5xl font-bold text-white mb-3">5 &rarr; 1,000+</p>
+                  <p className="text-slate-300 text-sm mb-4">Concurrent users scaled at Rungway</p>
+                  <p className="text-slate-300 text-xs">Architecture, engineering leadership, delivery</p>
+                </div>
+
+                <div className="h-px bg-gradient-to-r from-transparent via-accent-400 to-transparent" />
+
+                <div className="flex-1 bg-white p-8 flex flex-col justify-center">
+                  <p className="text-xs uppercase tracking-[0.2em] text-accent-700 mb-4 font-semibold">Fractional CFO</p>
+                  <p className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-3">&pound;35m &rarr; &pound;165m</p>
+                  <p className="text-slate-600 text-sm mb-4">Revenue scaled, EBITDA margin up 4%</p>
+                  <p className="text-slate-500 text-xs">Financial models, controls, fundraising</p>
+                </div>
               </div>
               {/* Gold accent decorations */}
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gold-gradient opacity-20 rounded-full blur-xl" />

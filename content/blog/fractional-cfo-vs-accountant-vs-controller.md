@@ -2,7 +2,7 @@
 title: 'Fractional CFO vs Accountant vs Financial Controller: What Your Startup Actually Needs'
 description: 'Accountant, financial controller, or fractional CFO? What each role does, what it costs in the UK, and which your startup needs from pre-seed to Series A.'
 date: '2026-08-04'
-author: 'Ankit Rana'
+author: 'Michelle Rana'
 readTime: '8 min read'
 tags: ['Fractional CFO', 'Startup Finance', 'Hiring']
 ---

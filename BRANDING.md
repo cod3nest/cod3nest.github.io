@@ -283,8 +283,12 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
 15. **Rungway predates Codenest.** It is founder track record, not a Codenest client
     engagement — never caption it "our client" or attribute it to Codenest as a firm.
     (Owner, 4 Aug 2026.)
-16. **Michelle's documented strength is operational scale-up finance**, not venture
-    fundraising: multi-site P&L, budgeting and rolling forecasts, controls and
-    governance, margin and procurement, Board reporting. Do not claim VC fundraising,
-    data-room or cap-table experience for her without owner confirmation.
-    (4 Aug 2026 — pending owner input.)
+16. **Michelle covers both operational finance and fundraising.** Her CV documents the
+    operational side in detail — multi-site P&L, budgeting and rolling forecasts,
+    controls and governance, margin and procurement, Board reporting — and the owner
+    confirmed fundraising and investor due-diligence experience on top (4 Aug 2026).
+    Claim the capability; do not attach invented specifics (round sizes, named
+    investors, amounts raised) until real figures are supplied.
+17. **Never publish personal contact details.** No personal mobile numbers or personal
+    email addresses for either principal, from CVs or anywhere else — the contact form
+    and the business address are the only channels. (Owner, 4 Aug 2026.)

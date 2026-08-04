@@ -2,7 +2,7 @@
 title: 'Financial Modeling for Seed-Stage Startups: A Practical Guide'
 description: 'What investors actually want to see in your financial model—revenue projections, unit economics, and scenario planning that builds confidence.'
 date: '2025-10-15'
-author: 'Ankit Rana'
+author: 'Michelle Rana'
 readTime: '8 min read'
 tags: ['Financial Modeling', 'Startup Finance']
 ---

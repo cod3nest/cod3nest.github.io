@@ -71,7 +71,8 @@ const peopleSchema = [
       'Financial modelling and scenario planning',
       'Budgeting and rolling forecasts',
       'Financial controls and governance',
-      'Board and Executive reporting',
+      'Board and investor reporting',
+      'Fundraising and investor due diligence',
       'Margin and cost optimisation',
     ],
     sameAs: ['https://www.linkedin.com/in/michellerana1'],
@@ -126,7 +127,7 @@ export default function AboutPage() {
       accent: "accent",
       linkedin: "https://www.linkedin.com/in/michellerana1",
       credentials: ["FCCA", "BSc Mathematics", "£165m P&L"],
-      bio: "Chartered accountant (FCCA) and strategic finance leader who took a multi-site business from 6 to 27 locations and £35m to £165m revenue while improving EBITDA margin by 4%. Has built and led a 20+ person finance function, owned Board and Executive reporting, and held a company's cash together through COVID-19.",
+      bio: "Chartered accountant (FCCA) and strategic finance leader who took a multi-site business from 6 to 27 locations and £35m to £165m revenue while improving EBITDA margin by 4%. Has built and led a 20+ person finance function, owned Board and investor reporting, held a company's cash together through COVID-19, and supported founders through fundraising and investor due diligence.",
       proof: "£35m → £165m revenue, +4% EBITDA margin",
       tracks: [
         { year: "2012-2014", title: "Commercial Foundations", description: "Pricing and commercial analysis at Ryder and Select Service Partners — negotiating contract hire deals over £1m and partnering with senior leaders across a £67m revenue budget." },
@@ -179,7 +180,7 @@ export default function AboutPage() {
   const expertise = [
     { category: "Cloud & Infrastructure", items: ["AWS", "GCP", "Kubernetes", "Terraform", "GitOps"] },
     { category: "Engineering & Data", items: ["Python", "Java", "Node.js", "Microservices", "ML & LLM Integration"] },
-    { category: "Planning & Reporting", items: ["Financial Modelling", "Rolling Forecasts", "Scenario Planning", "Board & Executive Reporting", "Unit Economics"] },
+    { category: "Planning & Reporting", items: ["Financial Modelling", "Rolling Forecasts", "Scenario Planning", "Board & Investor Reporting", "Fundraising Support"] },
     { category: "Controls & Commercial", items: ["Financial Controls", "Margin Optimisation", "Procurement & Cost", "CapEx Governance", "Cash Management"] }
   ]
 

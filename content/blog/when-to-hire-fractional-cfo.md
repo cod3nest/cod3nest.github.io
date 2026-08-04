@@ -2,7 +2,7 @@
 title: 'When Should You Hire a Fractional CFO? 7 Signs Your Startup Is Ready'
 description: 'Not sure if your startup needs a fractional CFO? Seven clear signs you are ready, from fundraising plans and runway anxiety to investor reporting burden.'
 date: '2026-08-04'
-author: 'Ankit Rana'
+author: 'Michelle Rana'
 readTime: '8 min read'
 tags: ['Fractional CFO', 'Hiring', 'Startup Finance']
 ---
