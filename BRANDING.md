@@ -289,6 +289,19 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     confirmed fundraising and investor due-diligence experience on top (4 Aug 2026).
     Claim the capability; do not attach invented specifics (round sizes, named
     investors, amounts raised) until real figures are supplied.
-17. **Never publish personal contact details.** No personal mobile numbers or personal
+17. **Two engagements we decline, stated on the homepage.** Technology as the core
+    moat (novel algorithms, custom hardware) and anything needing 40+ hours a week
+    both point at a full-time hire, and the site says so in "When we are the wrong
+    call". Owner-approved 4 Aug 2026. The 15+ engineers case and staff augmentation
+    were considered and deliberately NOT declined — do not add them.
+18. **No "X meets Y" or "X, not Y" constructions** outside the tagline itself. Both
+    read as generated marketing copy. The tagline keeps its "meets" by owner decision
+    (4 Aug 2026); everything else was rewritten. Em-dashes in body copy went from 130
+    to 57 for the same reason — prefer a colon, a comma or a full stop.
+19. **The homepage does not carry a staged process timeline.** A Discover/Build/Scale
+    block with tidy week ranges was removed 4 Aug 2026: the FAQ already states the
+    real shape (3-6 months at 2-3 days a week, 8-12 week fixed-scope MVPs, published
+    rates) and states it more precisely.
+20. **Never publish personal contact details.** No personal mobile numbers or personal
     email addresses for either principal, from CVs or anywhere else — the contact form
     and the business address are the only channels. (Owner, 4 Aug 2026.)

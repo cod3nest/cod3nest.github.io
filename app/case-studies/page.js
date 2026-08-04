@@ -83,7 +83,7 @@ export default function CaseStudiesPage() {
               <p className="text-sm uppercase tracking-[0.2em] text-accent-600 mb-4 font-medium">Proven Track Record</p>
               <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Case Studies</h1>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-                Startup outcomes, backed by enterprise-grade experience — deep, hands-on collaboration at every stage
+                Startup outcomes, backed by enterprise-grade experience. Deep, hands-on collaboration at every stage
               </p>
             </div>
 

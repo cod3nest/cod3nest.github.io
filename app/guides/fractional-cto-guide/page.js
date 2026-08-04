@@ -176,7 +176,7 @@ export default function FractionalCTOGuidePage() {
                 What is a Fractional CTO?
               </h2>
               <p>
-                A <strong>fractional CTO</strong> is a senior technology executive who provides part-time technical leadership to companies that need strategic guidance but aren't ready for—or can't afford—a full-time Chief Technology Officer.
+                A <strong>fractional CTO</strong> is a senior technology executive who provides part-time technical leadership to companies that need strategic guidance but aren't ready for, or can't afford, a full-time Chief Technology Officer.
               </p>
               <p>
                 Unlike consultants who provide advice and leave, a fractional CTO becomes embedded in your organization. They attend your standups, join your Slack channels, participate in investor meetings, and take accountability for technical outcomes.
@@ -335,7 +335,7 @@ export default function FractionalCTOGuidePage() {
                 <strong>Total Year 1:</strong> £210,000-£320,000+ plus equity dilution
               </p>
               <p>
-                A fractional CTO at the "Standard" level costs £48,000-£96,000 annually—<strong>60-80% savings</strong> with no equity dilution and no recruitment fees.
+                A fractional CTO at the "Standard" level costs £48,000-£96,000 annually, a <strong>60-80% saving</strong> with no equity dilution and no recruitment fees.
               </p>
             </section>
 
@@ -421,7 +421,7 @@ export default function FractionalCTOGuidePage() {
               <ul>
                 <li><strong>Focus:</strong> Building software to your specifications</li>
                 <li><strong>Accountability:</strong> Delivering agreed scope on time</li>
-                <li><strong>Strategic Input:</strong> Limited—they execute, you decide</li>
+                <li><strong>Strategic Input:</strong> Limited: they execute, you decide</li>
                 <li><strong>Knowledge Retention:</strong> Stays with the agency</li>
                 <li><strong>Cost:</strong> £50,000-£200,000+ per project</li>
               </ul>
@@ -430,7 +430,7 @@ export default function FractionalCTOGuidePage() {
               <ul>
                 <li><strong>Focus:</strong> Technical strategy and leadership</li>
                 <li><strong>Accountability:</strong> Long-term technical success</li>
-                <li><strong>Strategic Input:</strong> High—they shape technical direction</li>
+                <li><strong>Strategic Input:</strong> High: they shape technical direction</li>
                 <li><strong>Knowledge Retention:</strong> Stays with your company</li>
                 <li><strong>Cost:</strong> £48,000-£180,000 per year</li>
               </ul>
@@ -451,20 +451,20 @@ export default function FractionalCTOGuidePage() {
 
               <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Green Flags</h3>
               <ul>
-                <li><strong>Relevant industry experience</strong> — They've built similar products before</li>
-                <li><strong>Founder empathy</strong> — They've been in your shoes, not just worked at big companies</li>
-                <li><strong>Execution focus</strong> — They talk about outcomes, not just methodologies</li>
-                <li><strong>Clear communication</strong> — They can explain complex topics simply</li>
-                <li><strong>Strong references</strong> — Past clients willing to vouch for them</li>
+                <li><strong>Relevant industry experience:</strong> They've built similar products before</li>
+                <li><strong>Founder empathy:</strong> They've been in your shoes, not just worked at big companies</li>
+                <li><strong>Execution focus:</strong> They talk about outcomes, not just methodologies</li>
+                <li><strong>Clear communication:</strong> They can explain complex topics simply</li>
+                <li><strong>Strong references:</strong> Past clients willing to vouch for them</li>
               </ul>
 
               <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Red Flags</h3>
               <ul>
-                <li><strong>All theory, no practice</strong> — Lots of frameworks, no shipping stories</li>
-                <li><strong>No team experience</strong> — Great individual contributors don't always make good leaders</li>
-                <li><strong>Overcommitted</strong> — Managing 10+ clients means you won't get attention</li>
-                <li><strong>Equity-first pricing</strong> — Fractional should be cash-based; equity is for full-time</li>
-                <li><strong>Can't get technical</strong> — If they can't discuss architecture specifics, question their depth</li>
+                <li><strong>All theory, no practice:</strong> Lots of frameworks, no shipping stories</li>
+                <li><strong>No team experience:</strong> Great individual contributors don't always make good leaders</li>
+                <li><strong>Overcommitted:</strong> Managing 10+ clients means you won't get attention</li>
+                <li><strong>Equity-first pricing:</strong> Fractional should be cash-based; equity is for full-time</li>
+                <li><strong>Can't get technical:</strong> If they can't discuss architecture specifics, question their depth</li>
               </ul>
 
               <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Questions to Ask</h3>
