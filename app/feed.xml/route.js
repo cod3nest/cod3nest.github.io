@@ -1,4 +1,4 @@
-import { getAllBlogPosts } from '../../lib/blog'
+import { getAllBlogPosts, modifiedAt } from '../../lib/blog'
 import { BASE_URL } from '../../lib/schema'
 
 // Required for static export (GitHub Pages) — same reason as app/sitemap.js.
@@ -15,7 +15,12 @@ function escapeXml(value) {
 
 export function GET() {
   const posts = getAllBlogPosts()
-  const lastBuild = posts.length ? new Date(posts[0].date) : new Date(0)
+  // The newest activity, not the newest publication: posts sort on
+  // `updated || date`, so reading `.date` off the first one would report a 2025
+  // publication date as the channel's last build and march backwards whenever an
+  // older post is revised. `pubDate` below stays the publication date, which is
+  // what RSS means by it.
+  const lastBuild = posts.length ? new Date(modifiedAt(posts[0])) : new Date(0)
 
   const items = posts
     .map((post) => {

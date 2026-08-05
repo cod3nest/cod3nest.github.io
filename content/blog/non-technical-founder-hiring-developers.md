@@ -2,7 +2,8 @@
 title: "Non-Technical Founder's Guide to Hiring Developers in 2026"
 seoTitle: 'Hiring Developers as a Non-Technical Founder'
 description: "How to hire developers when you are not technical yourself. Practical guide covering where to find developers, how to evaluate them, and what to pay."
-date: '2026-08-04'
+date: '2025-01-02'
+updated: '2026-08-04'
 author: 'Ankit Rana'
 readTime: '11 min read'
 tags: ['Hiring', 'Team Building', 'Non-Technical Founders']

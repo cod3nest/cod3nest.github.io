@@ -2,7 +2,8 @@
 title: 'AWS Infrastructure for Startups: What Founders Actually Need to Decide'
 seoTitle: 'AWS Infrastructure for Startups: Founder Guide'
 description: 'A non-technical guide to infrastructure decisions: what to spend at each stage, which tool your team should pick, and the five questions to ask your engineers.'
-date: '2026-08-05'
+date: '2025-11-07'
+updated: '2026-08-05'
 author: 'Ankit Rana'
 readTime: '9 min read'
 tags: ['AWS', 'Infrastructure', 'Non-Technical Founders']

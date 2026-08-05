@@ -2,7 +2,8 @@
 title: "Kubernetes for Startups: When It Makes Sense (And When It Doesn't)"
 seoTitle: 'Kubernetes for Startups: Overkill or Essential?'
 description: 'A non-technical guide to the Kubernetes decision: what it costs in engineer time, the cheaper options your team may have skipped, and when it pays off.'
-date: '2026-08-05'
+date: '2025-11-07'
+updated: '2026-08-05'
 author: 'Ankit Rana'
 readTime: '8 min read'
 tags: ['Kubernetes', 'Infrastructure', 'Non-Technical Founders']
