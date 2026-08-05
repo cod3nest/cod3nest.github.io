@@ -472,10 +472,17 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     PrincipalBand highlight and `/about` all do. The owner directed the naming twice;
     written permission from Regeno to be named is not on file here, and getting it is
     an owner action, not a blocker the site re-litigates.
-    **Still outstanding:** Regeno is not on the homepage logo strip. That needs a logo
-    asset and a caption that no longer says "Founder track record includes" — the
-    strip is currently true only because it holds no clients. Change the caption and
-    add the mark in one commit, never the mark alone.
+    **Homepage strip, done 5 Aug 2026 (owner).** It is now two labelled groups:
+    **"Codenest clients"** (Regeno) above **"Founder track record includes"** (Rungway,
+    Opayo, AstraZeneca, Dishoom). The founder caption and the four marks under it are
+    untouched — the fix was to stop that caption having to cover a client, not to
+    reword it. Never merge the two groups back into one strip, and never move a mark
+    between them without the engagement changing.
+    **Regeno renders as a wordmark, not a logo.** No asset has been supplied, and a
+    client's brand asset is not Codenest's to lift from their codebase. The slot takes
+    an `<img>` the moment Regeno provides one; until then the text treatment matches
+    Rungway's name-and-sector block. Sector is "Agritech" — land-management and
+    compliance software for UK farmers.
 
     **Spelling: Regeno.** It was first published as "Regono" and corrected the same
     day. The company is `regeno.farm`; check the spelling against the source repos,

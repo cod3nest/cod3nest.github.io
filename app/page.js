@@ -273,9 +273,27 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Social Proof - Client Logos */}
+      {/* Social proof, in two labelled groups.
+          The strip used to carry one caption — "Founder track record includes" —
+          which was accurate only while Codenest had no clients to put in it.
+          Regeno is one (§13.15), so a client group exists rather than the client
+          being quietly filed under someone else's heading. The founder caption is
+          unchanged and still governs exactly the four marks it always did.
+          Regeno renders as a wordmark: no logo file has been supplied, and a
+          client's brand asset is not ours to lift. Drop an image into this slot
+          when they provide one. */}
       <section className="py-12 bg-slate-50/50 border-y border-slate-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-xs text-slate-500 mb-8 uppercase tracking-[0.2em] font-medium">Codenest clients</p>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 mb-12">
+            <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm transition-all cursor-default">
+              <div>
+                <span className="text-lg font-semibold text-slate-700 group-hover:text-slate-900 transition-colors">Regeno</span>
+                <p className="text-xs text-slate-500">Agritech</p>
+              </div>
+            </div>
+          </div>
+
           <p className="text-center text-xs text-slate-500 mb-8 uppercase tracking-[0.2em] font-medium">Founder track record includes</p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
             {/* Rungway - HR Tech */}
