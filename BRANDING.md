@@ -527,3 +527,37 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     **Never publish:** any other client or tenant name found in those repos, and
     the internal improvement plans or audit findings. Naming the stack at the level
     the Opayo study does is fine; publishing another party's name is not ours to do.
+30. **The footer is navigation, not a sitemap.** (5 Aug 2026, after an audit.) It
+    carried all 21 routes on the site, 9 of them in Resources, where seven guides sat
+    beside a link to the guides index. That handed the least commercial pages the
+    largest sitewide internal-link footprint — seven links each against **one** for
+    either service page. **Link budget: four groups, at most four destinations each,
+    plus Privacy and the logo.** The five comparison guides are reached from `/guides/`
+    and from in-content links; they do not belong on every page. Before adding a
+    footer link, remove one.
+    - **Column labels are `h3` inside `<nav aria-labelledby>`, never `h2`.** They
+      render on every page, so as `h2` they polluted every document outline — and on
+      `/contact`, which has no content `h2` of its own, the entire sub-`h1` outline
+      was "Advisory / Resources / Company / Partner With Us". The `nav` landmarks also
+      split what was one `contentinfo` region holding 21 undifferentiated links.
+    - **No CTA button in the footer.** `Navigation.js` pins a gold "Request a Strategy
+      Call" at this scroll depth on **both** breakpoints (`fixed bottom-6 right-6` on
+      desktop, a full-width bar on mobile), so a footer button puts two identical gold
+      CTAs on screen at once. The label stays a text link in Partner With Us. This was
+      tried and reverted — do not re-add it without first removing the sticky CTA.
+    - **Nav groups go two-up from the smallest breakpoint** (`grid-cols-2
+      lg:grid-cols-5`, brand block `col-span-2 lg:col-span-1`). Stacked one per row
+      with a 48px gap, the footer was **1452px — 46% of the whole of `/contact`** at
+      375px. Now 939px (35%). Measure the footer as a share of page height at 375px
+      after any change to it; the link count is not the thing that drives it.
+    - **No copyright year.** `new Date().getFullYear()` in a server component under
+      `output: 'export'` is evaluated once, at build, and baked in — deploys fire on
+      push, so the year goes stale silently. "© Codenest Ltd. All rights reserved."
+      needs no year to stand. Do not reintroduce a computed one.
+    - **The logo links home.** The footer's only other reference to `/` is the
+      `/#how-we-work` anchor, so without it `/privacy` offered no route back.
+      It carries `width`/`height` so it does not shift layout on load.
+    - **Say "boutique" once.** The bottom bar used to repeat the brand blurb as
+      "Boutique technical & financial advisory for UK startups", beside the Privacy
+      link where it read as part of the legal row. The brand column now carries the
+      one description, and it uses the §1 ICP phrasing "pre-seed to Series A".
