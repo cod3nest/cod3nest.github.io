@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Navigation from '../../components/Navigation'
 import Button from '../../components/Button'
 import Footer from '../../components/Footer'
+import PrincipalBand from '../../components/PrincipalBand'
 import JsonLd from '../../components/JsonLd'
 import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
 
@@ -208,6 +209,23 @@ export default function FractionalCTOPage() {
           </div>
         </div>
       </section>
+
+      {/* Directly after the pitch, because that is where the question "who
+          actually is this?" lands. Facts restated from /about; nothing new. */}
+      <PrincipalBand
+        name="Ankit Rana"
+        role="Fractional CTO"
+        accent="primary"
+        credentials={['AWS Certified', '15+ years engineering', 'Kubernetes & Cloud']}
+        bio="Fifteen years building and scaling technology platforms: payment processors at Deloitte Digital and Elavon (US Bancorp), then startups going through hypergrowth across fintech, healthtech and proptech. He has sat on the receiving end of technical due diligence, which is the fastest way to learn what it actually tests."
+        highlights={[
+          'Led engineering teams from 5 to 50+ across fintech and healthtech',
+          'Ran a near seven-year platform transformation at Opayo by Elavon: AWS EKS migration, GitOps, a payments monolith moved to microservices',
+          'Rebuilt Rungway as its interim CTO, taking the platform from 5 to 1,000+ concurrent users with a zero-downtime migration',
+        ]}
+        proof="Rungway: 5 → 1,000+ concurrent users"
+        linkedin="https://www.linkedin.com/in/arana198"
+      />
 
       {/* Benefits Section */}
       <section className="py-24 bg-white">

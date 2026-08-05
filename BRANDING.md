@@ -193,6 +193,16 @@ Assemble pages from these; don't invent parallel patterns:
   passes one today. The two seats are **not** ServiceCards — they are the Two-Track
   cards, and listing "Fractional CTO" as an item inside the Fractional CTO track put
   the seat on one page three times. (4 Aug 2026.)
+- **PrincipalBand** — the named executive behind a seat, on that seat's service page.
+  Sits directly after the hero, where "who actually is this?" lands. Ankit on
+  `/services/fractional-cto/`, Michelle on `/services/fractional-cfo/`, never crossed
+  (§2.4). Every fact restates `/about`; the band introduces no claim of its own, and
+  Dishoom's numbers stay attached to Michelle's *role* (§13.15). Carries no avatar
+  on purpose — real headshots are outstanding and a letter-avatar placeholder is
+  barred (§5); the left column is sized to take a portrait when the files exist.
+  It adds no `Person` schema: those nodes live on `/about` and are referenced by
+  `@id`, never restated (§8). (5 Aug 2026 — both service pages sold a seat without
+  naming who fills it.)
 - **Outcome badges** — "Series A closed", "MVP in 10 weeks" — the approved proof
   device (never star ratings).
 - **Comparison grid** — categories only, factual rows, "Best for:" footers, Codenest
