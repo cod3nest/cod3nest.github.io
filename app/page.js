@@ -8,6 +8,17 @@ import Testimonials from './components/Testimonials'
 export default function Home() {
 
   // Teaser data only — the full case studies live at /case-studies
+  // The one live client engagement, kept separate from the grid below. It is the
+  // only client work on this page, and dropping it in as a fourth equal tile
+  // would repeat the flattening /case-studies was fixed for (§13.15, §13.29).
+  const featuredStudy = {
+    kind: "Codenest client engagement",
+    status: "In progress",
+    title: "Regeno: A Company Brain and an AI Factory",
+    summary: "Agentic AI for a UK agritech platform: a queryable layer over the client's own records, and a delivery platform that takes a ticket from Linear, GitHub or Slack and drives it to a merged pull request unattended.",
+    layers: ["Agents in production", "AI factory", "Company brain"],
+  }
+
   const caseStudies = [
     {
       title: "Rungway: Scaling a Social Mentoring Platform",
@@ -384,9 +395,46 @@ export default function Home() {
             <p className="text-sm uppercase tracking-[0.2em] text-accent-700 mb-4 font-medium">Proven Track Record</p>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Case Studies</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Startup outcomes, backed by enterprise-grade experience
+              A live client engagement, and the founder track record behind it
             </p>
           </div>
+
+          {/* Featured, on charcoal: this is the agentic AI work, and the only
+              client engagement on the page. The layer names match the diagram on
+              /case-studies so the two read as the same thing. */}
+          <Link href="/case-studies/" className="group block mb-12">
+            <article className="bg-primary-800 border border-primary-700 rounded-xl p-8 md:p-10 hover:shadow-xl transition-all">
+              <div className="flex flex-wrap items-center gap-3 mb-5">
+                <p className="text-xs uppercase tracking-[0.2em] text-accent-300 font-semibold">{featuredStudy.kind}</p>
+                <span className="px-3 py-1 rounded-full border border-accent-300 text-accent-300 text-xs font-semibold uppercase tracking-wide">
+                  {featuredStudy.status}
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start">
+                <div className="lg:col-span-3">
+                  <h3 className="font-serif text-3xl font-bold text-white mb-4 leading-snug">{featuredStudy.title}</h3>
+                  <p className="text-slate-300 leading-relaxed mb-6">{featuredStudy.summary}</p>
+                  <span className="inline-flex items-center text-sm font-semibold text-accent-300 group-hover:text-accent-200">
+                    Read the case study
+                    <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </span>
+                </div>
+
+                <div className="lg:col-span-2 space-y-3">
+                  {featuredStudy.layers.map((layer) => (
+                    <div key={layer} className="rounded-lg border border-primary-600 bg-primary-700 px-4 py-3">
+                      <p className="text-white text-sm font-semibold">{layer}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </article>
+          </Link>
+
+          <p className="text-xs uppercase tracking-[0.2em] text-slate-500 mb-8 font-medium">Founder track record</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
               <Link key={index} href="/case-studies/" className="group">
