@@ -57,6 +57,12 @@ next-env.d.ts
 !README.md
 .nojekyll
 
-# claude-mem drops a CLAUDE.md into working directories; anything under public/
-# is copied verbatim into the published site, so keep this one out of the build.
-/public/CLAUDE.md
+# claude-mem drops a CLAUDE.md into whatever directory it is working in. Four of them
+# were committed under app/ and .github/, where Claude Code auto-loads them into every
+# session touching that directory — injecting an empty "No recent activity" block and
+# nothing else. One reached public/, which is copied verbatim into the published site.
+#
+# Ignore them everywhere; the root CLAUDE.md is the deliberate symlink to AGENTS.md and
+# is kept. Project instructions live in AGENTS.md, never in a scattered CLAUDE.md.
+CLAUDE.md
+!/CLAUDE.md

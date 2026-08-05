@@ -40,6 +40,11 @@ which asserts something untrue.
 
 | Field | Meaning |
 |---|---|
+| `title` | The post's h1. Carries no "\| Codenest" — the template appends it. |
+| `seoTitle` | Optional shorter title for the `<title>` tag when `title` blows the budget. |
+| `description` | The meta description. Without it the SERP snippet repeats the title. |
+| `author` | `Ankit Rana` or `Michelle Rana` — must match the post's track. |
+| `readTime` | e.g. `9 min read`. Rendered on the card and the OG image. |
 | `date` | First published. **Write once** — bumping it destroys the publication date. |
 | `updated` | Optional. Drives `dateModified` and the visible "Updated" line. |
 | `lastVerified` | When a human checked the facts against source. Never rendered. |
