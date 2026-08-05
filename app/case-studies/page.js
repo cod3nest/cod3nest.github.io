@@ -11,10 +11,10 @@ import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../lib/schema'
 // of its own, and not before.
 export const metadata = {
   title: 'Case Studies: Fractional CTO Engagements',
-  description: 'Technical engagements led by Ankit Rana, Fractional CTO: an agentic AI platform at Regono, scaling Rungway to 1,000+ concurrent users, transforming payments at Opayo, and a compliant MVP for AstraZeneca.',
+  description: 'Technical engagements led by Ankit Rana, Fractional CTO: an agentic AI platform at Regeno, scaling Rungway to 1,000+ concurrent users, transforming payments at Opayo, and a compliant MVP for AstraZeneca.',
   openGraph: {
     title: 'Codenest Case Studies — Track Record',
-    description: 'Agentic AI platform engineering, scaling, payments and regulated delivery. Regono, Rungway, Opayo by Elavon, AstraZeneca.',
+    description: 'Agentic AI platform engineering, scaling, payments and regulated delivery. Regeno, Rungway, Opayo by Elavon, AstraZeneca.',
     type: 'website',
     url: 'https://codenest.uk/case-studies/',
     images: [
@@ -31,30 +31,30 @@ export const metadata = {
   },
 }
 
-// Three of these are completed engagements with measured outcomes. Regono is
+// Three of these are completed engagements with measured outcomes. Regeno is
 // live, so it carries `status` and its third block is scope rather than results
 // — the card renderer relabels the headings from `labels` and prints `note`
 // instead of inventing figures nobody has measured yet (§4, §13.28). Fill in
 // real numbers and drop `status`/`note` when the engagement produces them.
 const caseStudies = [
   {
-    title: "Regono: A Company Brain and an AI Factory",
+    title: "Regeno: A Company Brain and an AI Factory",
     status: "Engagement in progress",
     labels: { challenge: "The Brief", solution: "The Build", results: "What Is Being Built" },
-    challenge: "Most companies meet AI twice over: institutional knowledge spread across documents, tools and people's heads with no way to query it, and AI pilots that arrive one at a time with nothing shared underneath them. This engagement treats both as a single platform problem rather than two initiatives.",
-    solution: "Ankit is building the company brain first: a retrieval layer over Regono's own documents, systems and process, so that people and agents answer from what the business already knows rather than from whatever fits in a prompt. The AI factory sits on top of it: shared agent scaffolding, an evaluation harness, guardrails, and the deployment and observability that agents need once they are doing real work. It exists so the tenth agent does not cost what the first one did.",
+    challenge: "Regeno builds land-management and compliance software for UK farmers, where the evidence that proves an agreement was met arrives as documents, photographs, audio and video rather than as tidy data. Two problems sat behind the AI work: knowledge the business already held that nothing could query, and a delivery backlog that no realistic amount of hiring was going to clear. The engagement treats both as one platform problem rather than two initiatives.",
+    solution: "The company brain makes the organisation's own records queryable and exposes them to agents over MCP, so that people and agents answer from what the business already knows rather than from whatever fits in a prompt. The AI factory is the delivery half. It takes a unit of work from where it already lives — a Linear ticket, a GitHub issue, a Slack message — and drives it to a merged pull request: typed workflow graphs, an isolated sandbox per run, bounded test and review loops, and a merge policy the operator sets. Every run leaves a ledger of its decisions, and writes back what it learned for the next one to recall.",
     results: [
-      "Retrieval layer over internal knowledge sources",
-      "Shared agent scaffolding and an evaluation harness",
-      "Guardrails, deployment and observability for production agents",
-      "One platform for agent delivery, rather than a build per project"
+      "Queryable layer over the organisation's own records, exposed to agents over MCP",
+      "Ticket in, reviewed and tested pull request out, running unattended",
+      "Typed workflow graphs: bounded retry, review and merge gates rather than one long prompt",
+      "A learning loop that ranks each run's lessons back into the next"
     ],
     note: "Outcome figures go up once they are measured and the client has approved them. This engagement is still running, so there are none here yet.",
-    tags: ["Agentic AI", "AI Platform Engineering", "Knowledge Retrieval", "Evaluation & Guardrails", "LLMOps"],
+    tags: ["Agentic AI", "AI Platform Engineering", "MCP", "Cloudflare Workers", "Knowledge Retrieval", "LLMOps"],
     diagram: [
-      { label: "Agents in production", detail: "Doing real work, watched" },
-      { label: "AI factory", detail: "Scaffolding, evaluation, deployment" },
-      { label: "Company brain", detail: "Retrieval over internal knowledge" },
+      { label: "Agents in production", detail: "Ticket in, merged PR out" },
+      { label: "AI factory", detail: "Workflow graphs, sandboxes, merge gates" },
+      { label: "Company brain", detail: "Queryable records, exposed over MCP" },
     ]
   },
   {
