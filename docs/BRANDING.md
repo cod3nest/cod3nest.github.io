@@ -171,8 +171,10 @@ Two faces, two jobs. Loaded via `next/font` in `app/layout.js` — never CDN-lin
 - Eyebrow labels: `text-sm uppercase tracking-[0.2em]` — the signature structural
   device that opens every section. One per section, sentence-case content
   ("Fractional CTO & CFO for UK Startups"), gold per §3 contrast rules.
-- The logo wordmark is currently Georgia-in-SVG (legacy); the target is outlined
-  Playfair paths. Do not set new UI text in Georgia.
+- The logo wordmark is outlined Playfair Display paths (§9). Georgia is gone from the
+  repo; do not reintroduce it, and never set brand text as SVG `<text>` — that is a
+  font *request*, and it resolves to a different face on any machine without the
+  named font installed.
 
 ## 5. Layout & surfaces
 
@@ -326,6 +328,23 @@ Assemble pages from these; don't invent parallel patterns:
   40px (`h-10`)–48px (`h-12`) as used in footer/nav.
 - Never distort, recolour, add effects, or set the wordmark in another face.
 - Alt text per §7.
+- **Every logo, icon and favicon is generated.** `scripts/lib/logo.js` holds the one
+  CN construction and the outlining helper; `scripts/generate-logo.js` writes the
+  SVGs and `scripts/generate-icons.js` the PNGs, both from `npm run assets` (wired
+  into `prebuild`). **Do not hand-edit the SVGs or PNGs** — the next build overwrites
+  them. A logo change is a change to `scripts/lib/logo.js`.
+- The mark is one skeleton at one stroke ratio (0.105 of cap height). Small sizes take
+  an optical `weight` multiplier, which thickens the stroke and changes nothing else.
+  Redrawing the C or N per asset is what produced three different marks before.
+- The wordmark is Playfair Display Regular outlines, tracked 0.18em, at 1.85x the
+  mark's cap height. No `<text>`, no font-family, anywhere in the asset pipeline —
+  including the OG cards.
+- The lockup has no gold underline. One was in the source for a long time but never
+  rendered: a horizontal `<line>` has a zero-height bounding box, and an
+  `objectBoundingBox` gradient on one means the element is dropped. The gold
+  signature is the segment on the N's right stem.
+- PWA icons: `icon-any.svg` is the full-bleed tile, `icon-maskable.svg` keeps the mark
+  inside Android's 40% safe radius. Do not declare one icon `"any maskable"`.
 
 ## 10. Accessibility & quality bar
 

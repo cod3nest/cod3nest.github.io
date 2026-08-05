@@ -215,10 +215,12 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <head>
         {/* Favicons */}
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="apple-touch-icon" href="/favicon-32x32.png" />
+        {/* iOS renders this at 180 on retina home screens; it pointed at the 32px
+            favicon, so the icon was a 5.6x upscale. */}
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
         {/* PWA Manifest */}
         <link rel="manifest" href="/manifest.json" />
