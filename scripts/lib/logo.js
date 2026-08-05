@@ -206,9 +206,9 @@ function textWidth(text, { fontFile, size, tracking = 0 }) {
 const LOCKUP_H = 48 // nav uses h-12, footer h-10 (BRANDING §9)
 const LOCKUP_PAD = 4
 const LOCKUP_INK_H = 36 // monogram ink fills the canvas rather than floating in it
-// The mark used to stand 2.05x the wordmark's cap height on the same stroke weight
+// The mark used to stand 2.05x the wordmark cap height on the same stroke weight
 // as the wordmark's stems, which made it read as a wireframe beside solid letters.
-const MARK_TO_CAP = 1.85
+const MARK_TO_CAP = 1.6
 const LOCKUP_GAP = 12 // mark to divider, and divider to wordmark
 const TRACKING_EM = 0.18 // matches the old 4/22
 
