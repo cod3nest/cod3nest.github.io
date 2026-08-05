@@ -212,6 +212,11 @@ export default function FractionalCFOGuidePage() {
                     Related reading: Financial modelling for seed-stage startups →
                   </Link>
                 </p>
+                <p className="mt-2">
+                  <Link href="/blog/how-cfos-use-ai-startup-finance/" className="text-primary-600 hover:text-primary-700 font-medium">
+                    Related reading: How CFOs can use AI in startup finance →
+                  </Link>
+                </p>
 
                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Cash &amp; Runway Management</h3>
                 <ul>

@@ -51,7 +51,7 @@ You raised, and now you owe monthly or quarterly updates. Each one is a night-be
 
 **The problem:** Inconsistent reporting does more damage than founders realise. When a metric changes definition between board packs, investors notice — and start quietly discounting everything else in the pack.
 
-**A fractional CFO helps by:** Establishing a monthly close rhythm, building a standing board pack with consistent KPI definitions, and writing the narrative that connects the numbers to strategy — so reporting becomes a strength investors remember at the next round.
+**A fractional CFO helps by:** Establishing a monthly close rhythm, building a standing board pack with consistent KPI definitions, and writing the narrative that connects the numbers to strategy — so reporting becomes a strength investors remember at the next round. Some of the mechanical work here is now worth automating: see [how CFOs can use AI in startup finance](/blog/how-cfos-use-ai-startup-finance/) for what a first-draft board commentary looks like and where it still needs a human.
 
 ## 5. Pricing Decisions Are Made on Gut Feel
 
