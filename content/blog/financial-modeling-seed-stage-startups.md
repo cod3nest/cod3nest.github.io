@@ -26,6 +26,8 @@ Founders who build models early make better decisions about hiring, pricing, and
 
 ## The Three Components Investors Expect
 
+[diagram:three-statement-model]
+
 ### 1. Revenue Model
 
 Your revenue model should clearly show how money flows into the business. For SaaS companies, this typically includes:

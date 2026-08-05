@@ -95,6 +95,8 @@ Describe your company, your stage and your controls, and ask for a first draft. 
 
 ## Where AI Should Not Be Trusted With Finance
 
+[diagram:ai-finance-boundary]
+
 An honest guide has to be specific about the failure modes.
 
 **It can state wrong things confidently.** This is the defining risk. A model can produce a plausible figure, a misremembered accounting rule or a citation that does not exist, in the same assured tone it uses when correct. The mitigation is procedural: for any number that leaves the building, the source document is the authority and the AI output is a draft. Ask for workings, then check them.

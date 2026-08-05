@@ -22,6 +22,8 @@ The short answer: **£3,000-£15,000 per month** depending on engagement level a
 
 ## Fractional CTO Pricing Tiers
 
+[diagram:cto-cost-tiers]
+
 ### Light Touch: £2,000-£4,000/month
 **~4-8 hours per week**
 

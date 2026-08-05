@@ -23,6 +23,8 @@ This guide explains the difference in plain terms, why it carries weight in a ra
 
 ## What "Infrastructure as Code" Means
 
+[diagram:iac-drift]
+
 Your product runs on cloud resources: servers, databases, networks, security rules. There are two ways they come into existence.
 
 Someone can create them by hand, clicking through Amazon's web console and filling in forms. It works, and it leaves no record of what was done or why.

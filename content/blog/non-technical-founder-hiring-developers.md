@@ -17,6 +17,8 @@ This guide covers everything non-technical founders need to know about finding, 
 
 ## Your Options: Employees vs Contractors vs Agencies
 
+[diagram:hiring-options]
+
 Before diving into hiring, understand your options:
 
 ### Full-Time Employees

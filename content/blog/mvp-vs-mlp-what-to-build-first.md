@@ -80,6 +80,8 @@ Limited inventory, but the experience of booking feels *good*.
 
 ## MVP vs MLP: Direct Comparison
 
+[diagram:mvp-vs-mlp]
+
 | Factor | MVP | MLP |
 |--------|-----|-----|
 | **Primary goal** | Validate hypothesis | Validate AND create engagement |
