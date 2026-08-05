@@ -4,8 +4,11 @@
 
 The canonical brand reference for the Codenest website (this repo). Any agent or human
 touching copy, components, metadata, or design reads this first. It encodes the
-decisions from the August 2026 site review (`WEBSITE_REVIEW.md`) — where the two
-disagree, this file wins, because it is the decided state.
+decisions from the August 2026 site review (`WEBSITE_REVIEW.md`, repo root) — where the
+two disagree, this file wins, because it is the decided state.
+
+Code comments across the site cite this file as "BRANDING.md §n". The filename is kept
+verbatim through the move into `docs/` so those ~25 citations stay accurate.
 
 The system has a name for its feel: **"the operator's letterhead"** — Big-4 restraint
 with a founder's directness. Charcoal authority, one disciplined gold accent, a serif
@@ -111,7 +114,7 @@ every claim — write as if they will check, because they will.
    a real scheduling tool is embedded — only then may it become "Book…"/"Schedule…".
    The form submit says "Request My Call" with the microcopy "We'll reply within
    24 hours with times."
-6. **No emojis.** Anywhere. (Project rule, `.claude/CLAUDE.md`.)
+6. **No emojis.** Anywhere. (Project rule, `AGENTS.md`.)
 7. **British English.** Rigour, organised, optimise.
 8. **No competitor names.** Comparisons are to *categories* (full-time hire, dev shop,
    solo freelancer) and stay factual — cost, capacity, incentives — never sneering.
@@ -272,7 +275,7 @@ Assemble pages from these; don't invent parallel patterns:
   the table instead. **Colour is meaning, not variety:** `trackName` follows the post's
   track, and inside a `Split` only the recommended column takes `emphasis` — colouring
   columns decoratively once put gold, the financial accent, on "AWS CDK" in a technical
-  post, which asserts something untrue. Authoring detail: `.claude/docs/blog-authoring.md`.
+  post, which asserts something untrue. Authoring detail: `docs/agents/blog-authoring.md`.
   (5 Aug 2026: all twenty posts had no images whatsoever; every one now has a diagram
   and its own 1200×630 OG card, generated per slug in `prebuild`.)
 
