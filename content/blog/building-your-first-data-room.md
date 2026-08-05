@@ -49,16 +49,16 @@ For pre-seed and seed rounds, Google Drive or Notion is usually sufficient. Upgr
 Here's the folder structure investors expect:
 
 ```
-📁 [Company Name] Data Room
-├── 📁 1. Company Overview
-├── 📁 2. Corporate Documents
-├── 📁 3. Financials
-├── 📁 4. Legal
-├── 📁 5. Team
-├── 📁 6. Product & Technology
-├── 📁 7. Customers & Traction
-├── 📁 8. Fundraising
-└── 📁 9. Appendix
+[Company Name] Data Room
+├── 1. Company Overview
+├── 2. Corporate Documents
+├── 3. Financials
+├── 4. Legal
+├── 5. Team
+├── 6. Product & Technology
+├── 7. Customers & Traction
+├── 8. Fundraising
+└── 9. Appendix
 ```
 
 ## What Goes in Each Folder
