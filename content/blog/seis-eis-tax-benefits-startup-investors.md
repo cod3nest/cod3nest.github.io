@@ -6,6 +6,13 @@ date: '2025-01-04'
 author: 'Michelle Rana'
 readTime: '9 min read'
 tags: ['Fundraising', 'Finance', 'UK Startups']
+# Statutory rates and limits. Core SEIS/EIS reliefs were checked against gov.uk
+# on 2026-08-05, but Finance Act 2026 changed EIS investment and gross asset
+# limits from 6 April 2026 and those figures here are NOT yet confirmed.
+# lastVerified stays at the content date until an accountant signs the EIS
+# section off. It is meant to be flagging.
+lastVerified: '2025-01-04'
+verifyEvery: 6
 ---
 
 # SEIS and EIS Explained: UK Tax Benefits for Startup Investors

@@ -6,6 +6,11 @@ date: '2026-08-04'
 author: 'Michelle Rana'
 readTime: '7 min read'
 tags: ['Fractional CFO', 'Pricing', 'Startup Finance']
+# Market rate bands, and the title carries a year, so BRANDING.md §8 requires a
+# genuine annual refresh. Seeded from the authorship date; the first review
+# cycle is where the ranges get independently re-checked.
+lastVerified: '2026-08-04'
+verifyEvery: 12
 ---
 
 # How Much Does a Fractional CFO Cost in the UK? 2026 Pricing Guide
