@@ -373,6 +373,19 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     inaccurate as overstating it**; check this list before labelling anything.
     Every card carries a `kind` label above its title saying which it is —
     "Codenest client engagement" or "Founder track record".
+    **Rightmove and Rated People are founder track record** (owner, 5 Aug 2026):
+    Ankit was at **Rated People 2013-2015** and **Rightmove in 2016**, both before
+    Codenest. They belong in the strip's lower group with Rungway and Dishoom, never
+    the "Codenest clients" group. Both were absent from the site entirely until the
+    owner asked for them, so `/about` was corrected in the same change rather than
+    after it: the 2011-2015 track is now "Platform Foundations" and names Rated
+    People, and 2015-2017 is "Scale and Hypergrowth" and names Rightmove. The old
+    titles said "Enterprise Foundations" and "Scaling Startups" — neither survives
+    contact with a consumer marketplace or with the UK's largest property portal.
+    **A logo may not go in the strip before the timeline that supports it**; a mark
+    the bio does not corroborate is the same flattening that produced the Opayo and
+    AstraZeneca mislabel.
+
     Do not drop those labels to make the page look like a client wall; the whole
     reason the distinction is drawn in copy is that the page can no longer rely on
     "none of these are clients" being true. Any study added later needs a `kind`.

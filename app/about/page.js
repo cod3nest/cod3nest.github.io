@@ -44,6 +44,8 @@ const peopleSchema = [
     alumniOf: [
       { '@type': 'Organization', name: 'Deloitte Digital' },
       { '@type': 'Organization', name: 'Elavon (US Bancorp)' },
+      { '@type': 'Organization', name: 'Rated People' },
+      { '@type': 'Organization', name: 'Rightmove' },
     ],
     knowsAbout: [
       'Fractional CTO services',
@@ -122,8 +124,8 @@ export default function AboutPage() {
       bio: "Fifteen years building and scaling technology platforms: payment processors at Deloitte Digital and Elavon (US Bancorp), then startups going through hypergrowth across fintech, healthtech and proptech. Has led engineering teams from 5 to 50+, run a near seven-year platform transformation at Opayo by Elavon, and sat on the receiving end of technical due diligence. Currently building agentic AI platforms.",
       proof: "Scaled Rungway from 5 to 1,000+ concurrent users",
       tracks: [
-        { year: "2011-2015", title: "Enterprise Foundations", description: "Payment processors and financial services platforms at Deloitte Digital and Elavon (US Bancorp) — learning what enterprise-grade actually costs, and what startups can borrow from it." },
-        { year: "2015-2017", title: "Scaling Startups", description: "Led engineering teams from 5 to 50+ across fintech and healthtech. Hypergrowth firsthand: the technical debt, the hiring mistakes, the architecture decisions that come back to haunt you." },
+        { year: "2011-2015", title: "Platform Foundations", description: "Payment processors and financial services platforms at Deloitte Digital and Elavon (US Bancorp), then consumer marketplace scale at Rated People (2013-2015) — learning what enterprise-grade actually costs, and what startups can borrow from it." },
+        { year: "2015-2017", title: "Scale and Hypergrowth", description: "Led engineering teams from 5 to 50+ across fintech, healthtech and proptech, including Rightmove in 2016. Hypergrowth firsthand: the technical debt, the hiring mistakes, the architecture decisions that come back to haunt you." },
         { year: "2019-2026", title: "Payments at Scale", description: "Platform transformation at Opayo by Elavon — AWS EKS migration, GitOps and Infrastructure as Code, moving a payments monolith to microservices without dropping a transaction." },
         { year: "2026-present", title: "Agentic AI Platforms", description: "Leading the Regeno engagement for Codenest: a company brain over the client's own records, and an AI factory that drives a ticket to a merged pull request unattended, with bounded review loops and a ledger of every decision." },
       ],
