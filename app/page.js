@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Button from './components/Button'
 import Navigation from './components/Navigation'
 import ContactForm from './components/ContactForm'
+import TrustBadges from './components/TrustBadges'
 import Footer from './components/Footer'
 import Testimonials from './components/Testimonials'
 
@@ -615,27 +616,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Trust indicators */}
-          <div className="flex flex-wrap justify-center gap-8 mb-12">
-            <div className="flex items-center gap-2 text-sm text-slate-600">
-              <svg className="w-5 h-5 text-accent-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              Typically respond within 24hrs
-            </div>
-            <div className="flex items-center gap-2 text-sm text-slate-600">
-              <svg className="w-5 h-5 text-accent-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
-              100% confidential
-            </div>
-            <div className="flex items-center gap-2 text-sm text-slate-600">
-              <svg className="w-5 h-5 text-accent-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-              </svg>
-              Free 30-minute consultation
-            </div>
-          </div>
+          <TrustBadges className="mb-12" />
 
           <div className="max-w-3xl mx-auto">
             <ContactForm />
