@@ -4,8 +4,11 @@
 
 The canonical brand reference for the Codenest website (this repo). Any agent or human
 touching copy, components, metadata, or design reads this first. It encodes the
-decisions from the August 2026 site review (`WEBSITE_REVIEW.md`) — where the two
-disagree, this file wins, because it is the decided state.
+decisions from the August 2026 site review (`WEBSITE_REVIEW.md`, repo root) — where the
+two disagree, this file wins, because it is the decided state.
+
+Code comments across the site cite this file as "BRANDING.md §n". The filename is kept
+verbatim through the move into `docs/` so those ~25 citations stay accurate.
 
 The system has a name for its feel: **"the operator's letterhead"** — Big-4 restraint
 with a founder's directness. Charcoal authority, one disciplined gold accent, a serif

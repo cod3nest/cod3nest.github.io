@@ -1,8 +1,7 @@
 # Writing and editing blog posts
 
 Read this before writing or editing anything in `content/blog/`. Brand law is
-`BRANDING.md` (repo root): §2 voice, §7 imagery, §8 blog metadata, §12 content
-strategy.
+`docs/BRANDING.md`: §2 voice, §7 imagery, §8 blog metadata, §12 content strategy.
 
 ## Every post carries at least one visual
 

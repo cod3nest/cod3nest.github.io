@@ -19,7 +19,7 @@ on demand — every word here is loaded into every session, by every tool.
 - **Deploy**: `output: 'export'` in next.config.js, `.nojekyll` file
 - **Audience**: Startup founders (0→1 journey)
 - **Tone**: Professional, technical, no emojis
-- **Brand**: `BRANDING.md` (repo root) is the canonical brand law — service naming,
+- **Brand**: `docs/BRANDING.md` is the canonical brand law — service naming,
   taglines, voice, colour/contrast rules, CTA label, claims policy. Read its section
   index, then the sections you need, BEFORE any copy, design, metadata, or component
   change. Services are always named "Fractional CTO" and "Fractional CFO".
