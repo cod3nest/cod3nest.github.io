@@ -23,7 +23,10 @@ const COMMON_TYPOS = {
   'yaho.com': 'yahoo.com',
 }
 
-const ContactForm = () => {
+// labelledBy: id of the heading that names this form. An unnamed <form> is not
+// exposed as a landmark at all, so without a name it cannot be reached by landmark
+// navigation. Pages that have no heading to point at fall back to the aria-label.
+const ContactForm = ({ labelledBy }) => {
   const formRef = useRef()
   const [formData, setFormData] = useState({
     name: '',
@@ -236,7 +239,13 @@ const ContactForm = () => {
 
   return (
     <div className="bg-white rounded-2xl shadow-lg p-8 border border-slate-200">
-      <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+      <form
+        ref={formRef}
+        onSubmit={handleSubmit}
+        className="space-y-6"
+        aria-labelledby={labelledBy}
+        aria-label={labelledBy ? undefined : 'Request a strategy call'}
+      >
         <div>
           <label htmlFor="name" className="block text-sm font-semibold text-slate-700 mb-2">
             Your Name *
