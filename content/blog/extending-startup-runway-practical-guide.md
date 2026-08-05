@@ -51,6 +51,8 @@ Why so much? Fundraising takes longer than expected (typically 4-6 months), and 
 
 ## The Levers You Can Pull
 
+[diagram:runway-levers]
+
 Runway extension comes down to two variables: reduce burn or increase revenue. Here's how to approach each systematically.
 
 ### Lever 1: Headcount Optimisation

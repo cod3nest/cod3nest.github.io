@@ -14,6 +14,8 @@ The question isn't whether your startup needs financial leadership — every fun
 
 Here are seven clear signs that your startup is ready for a fractional CFO.
 
+[diagram:cfo-triggers]
+
 ## 1. You're Preparing to Raise in the Next 6-12 Months
 
 A fundraise is won or lost months before the first investor meeting. Investors will ask you to walk through your financial model, defend your assumptions, justify the amount you're raising, and show what the money buys in milestones. Then diligence begins: historical accounts, forecast integrity, contracts, the cap table.

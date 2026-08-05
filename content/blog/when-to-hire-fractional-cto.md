@@ -14,6 +14,8 @@ The question isn't whether you need technical leadership—every tech startup do
 
 Here are seven clear signs that your startup is ready for a fractional CTO.
 
+[diagram:cto-triggers]
+
 ## 1. You're a Non-Technical Founder Making Technical Decisions
 
 If you're choosing between React and Vue, deciding whether to use AWS or GCP, or evaluating development agencies without the expertise to assess their recommendations, you're taking unnecessary risks.

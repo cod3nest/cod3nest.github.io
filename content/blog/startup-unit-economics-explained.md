@@ -26,6 +26,8 @@ If yes, you have a potentially scalable business. If no, you're burning money wi
 
 ## The Key Metrics
 
+[diagram:cac-payback]
+
 ### 1. Customer Acquisition Cost (CAC)
 
 **What it is:** The total cost of acquiring one new customer.

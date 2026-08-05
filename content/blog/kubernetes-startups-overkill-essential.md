@@ -51,6 +51,8 @@ Against this, teams do generally get better hardware efficiency by packing servi
 
 ## The Cheaper Options Your Team May Have Skipped
 
+[diagram:kubernetes-ladder]
+
 There are three rungs below Kubernetes, and skipping past them is the most common expensive mistake.
 
 **Managed platforms** such as Heroku, Railway and Render run everything for you. You deploy in minutes with no infrastructure knowledge. They cost more per unit of computing at scale and give you less control. Pre-seed to early seed, this is nearly always right: ship product, and revisit when something actually hurts.
