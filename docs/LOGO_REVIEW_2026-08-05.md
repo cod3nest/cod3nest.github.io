@@ -136,8 +136,9 @@ favicon, a 5.6x upscale.
 
 ## Mark-to-wordmark ratio
 
-The mark was reduced from 2.05x the wordmark's cap height to **1.6x**. Equal cap
-heights were considered and rejected on two measured grounds.
+The mark was reduced from 2.05x the wordmark's cap height to **1.45x**, in two steps
+(1.6x first, then 1.45x once the nav logo moved to `h-10`). Equal cap heights were
+considered and rejected on two measured grounds.
 
 Playfair Regular's cap stem is 0.0925em (measured by rasterising an "H"). The mark's
 stroke is fixed at 3.42px by the canvas, so:
@@ -146,18 +147,30 @@ stroke is fixed at 3.42px by the canvas, so:
 |---|---|---|---|---|
 | 1.0 | 46.0px | 4.26px | 3.42px | 24% lighter |
 | 1.3 | 35.4px | 3.27px | 3.42px | 4% heavier |
-| **1.6** | 30.7px | 2.70px | 3.42px | 27% heavier |
+| **1.45** | 31.7px | 2.94px | 3.42px | 17% heavier |
+| 1.6 | 28.8px | 2.66px | 3.42px | 29% heavier |
 | 1.85 | 24.9px | 2.30px | 3.42px | 49% heavier |
 
 At parity the monogram becomes the lighter element — the original defect, moved onto
-the other half of the lockup.
+the other half of the lockup. 1.3 is roughly where the two reach equal weight, and
+below it the mark stops leading.
 
-It also does not fit. The desktop nav appears at `lg` (1024px), where the links, the
-CTA and the `ml-10` gutter take 667px of the 960px container, leaving **293px** for the
-logo. 1.6 lands at 278px. Parity needs 389px, and 324px even at `h-10`.
+It also does not fit. The nav constrains height, not width, so closing the gap does not
+shrink the mark — it grows the wordmark, and the lockup widens. The desktop nav appears
+at `lg` (1024px), where the links, the CTA and the `ml-10` gutter take 667px of the
+960px container, leaving **293px**:
 
-1.3 is the true optical parity point and needs the nav logo at `h-10` (268px), which
-§9 permits. That remains available if the wordmark should carry more weight still.
+| Ratio | Width at `h-12` | Width at `h-10` |
+|---|---|---|
+| 1.6 | 278px | 232px |
+| **1.45** | 297px — over | **248px** |
+| 1.3 | 321px — over | 268px |
+| 1.0 | 389px — over | 324px — over |
+
+Parity is unreachable at any permitted logo height. 1.45 is the setting shipped, which
+is why the nav logo moved from `h-12` to `h-10`: at `h-12` it would be 297px against a
+293px budget. §9 permits 40–48px, and the footer was already at `h-10`, so both now
+match.
 
 ## Still open
 

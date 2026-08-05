@@ -325,7 +325,7 @@ Assemble pages from these; don't invent parallel patterns:
 ## 9. Logo
 
 - `companylogo.svg` on light grounds; `companylogo-light.svg` on dark. Minimum height
-  40px (`h-10`)–48px (`h-12`) as used in footer/nav.
+  40px (`h-10`)–48px (`h-12`); nav and footer both use `h-10`.
 - Never distort, recolour, add effects, or set the wordmark in another face.
 - Alt text per §7.
 - **Every logo, icon and favicon is generated.** `scripts/lib/logo.js` holds the one
@@ -336,9 +336,19 @@ Assemble pages from these; don't invent parallel patterns:
 - The mark is one skeleton at one stroke ratio (0.105 of cap height). Small sizes take
   an optical `weight` multiplier, which thickens the stroke and changes nothing else.
   Redrawing the C or N per asset is what produced three different marks before.
-- The wordmark is Playfair Display Regular outlines, tracked 0.18em, at 1.85x the
-  mark's cap height. No `<text>`, no font-family, anywhere in the asset pipeline —
-  including the OG cards.
+- The wordmark is Playfair Display Regular outlines, tracked 0.18em. No `<text>`, no
+  font-family, anywhere in the asset pipeline — including the OG cards.
+- **The mark stands 1.45x the wordmark's cap height** (`MARK_TO_CAP`). It is meant to
+  outsize the wordmark — it carries the brand alone on the favicon and app icon — but
+  it is lettering, not an abstract symbol, so too large a gap reads as the same two
+  letters said twice. Two limits bound this number and neither is taste:
+  - Below ~1.3 the mark stops leading. Playfair Regular's cap stem is 0.0925em against
+    the mark's fixed 3.42px stroke, so at equal cap heights the wordmark's stems reach
+    4.26px and the *mark* becomes the lighter element.
+  - The nav constrains height, not width, so closing the gap grows the wordmark and
+    widens the lockup. At `lg` (1024px) the links, CTA and `ml-10` gutter take 667px of
+    the 960px container, leaving **293px**. Changing `MARK_TO_CAP` means re-checking
+    that budget and the `width`/`height` on both `<img>` tags.
 - The lockup has no gold underline. One was in the source for a long time but never
   rendered: a horizontal `<line>` has a zero-height bounding box, and an
   `objectBoundingBox` gradient on one means the element is dropped. The gold
