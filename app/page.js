@@ -242,7 +242,7 @@ export default function Home() {
                   <svg className="w-5 h-5 text-primary-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  AI & Data Engineering
+                  Agentic AI & Data Engineering
                 </li>
                 <li className="flex items-center text-slate-700">
                   <svg className="w-5 h-5 text-primary-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -263,7 +263,7 @@ export default function Home() {
             <p className="text-slate-600">
               Also need delivery capacity? Explore{' '}
               <Link href="/services/" className="text-primary-600 hover:text-primary-700 font-medium">all services</Link>
-              {' '}including 0-to-1 product builds and AI engineering.
+              {' '}including 0-to-1 product builds and agentic AI engineering.
             </p>
             <p className="text-slate-600">
               Building something exceptional? For the right opportunity, we also consider{' '}

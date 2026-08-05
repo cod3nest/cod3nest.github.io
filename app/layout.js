@@ -26,6 +26,7 @@ export const metadata = {
   keywords: [
     'fractional CTO UK',
     'fractional CFO UK',
+    'agentic AI engineering',
     'startup technical leadership UK',
     'startup financial modelling',
     'technical co-founder UK',
@@ -144,6 +145,10 @@ export default function RootLayout({ children }) {
       email: 'hello@codenest.uk'
     },
     knowsAbout: [
+      'Agentic AI Engineering',
+      'LLM Application Development',
+      'AI Platform Engineering',
+      'Retrieval-Augmented Generation',
       'GitOps',
       'Infrastructure as Code',
       'Kubernetes',

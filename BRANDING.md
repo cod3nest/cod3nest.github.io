@@ -224,6 +224,12 @@ Assemble pages from these; don't invent parallel patterns:
   `accent-400`+`text-primary-900` (financial). No emoji (§2.6). No icon fonts.
 - Alt text: logos are always `Codenest - Fractional CTO & CFO for UK startups`;
   content images describe the content, no keyword stuffing.
+- **A schematic beats a stock photo when no real photo exists.** The Regono case
+  study renders a labelled charcoal stack of its platform layers rather than
+  `service-ai.jpg`, which is an off-palette blue 3D "AI" render that says nothing.
+  `PlatformDiagram` in `app/case-studies/page.js` takes the layers as data; a study
+  with a `diagram` gets it instead of an `image`. Reach for this before buying
+  another abstract-technology photograph.
 
 ## 8. Metadata & SEO conventions
 
@@ -430,3 +436,28 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     pair as the only unit of sale. "Most startups need both" is an observation about
     startups, not a condition of engagement — if a sentence could read as the latter,
     rewrite it. (Owner, 4 Aug 2026.)
+28. **Agentic AI engineering is the named technical capability.** (Owner, 5 Aug 2026 —
+    it is what the market is asking for now.) The generic "AI & Data Engineering" tile
+    is retired: the technical track leads with agentic AI on the homepage, `/services`,
+    `/services/fractional-cto` (its own charcoal band, §13.22 still bans gold grounds),
+    `/about`, and both `knowsAbout` blocks. Two terms carry specific meaning and are
+    not interchangeable marketing words for "we do AI":
+    a **company brain** is a retrieval layer over the organisation's own documents,
+    systems and process; an **AI factory** is the platform that makes agent delivery
+    repeatable — shared scaffolding, evaluation harness, guardrails, deployment,
+    observability. It stays a capability *inside* the Fractional CTO seat: it is not
+    a nav destination, not a page of its own, and not a fifth entry in the layout's
+    offer catalogue (§8, §13.26).
+29. **Regono is a live engagement, and the site says so.** (Owner, 5 Aug 2026.) It is
+    the first `/case-studies` entry that has not finished, so it breaks the card's
+    usual shape on purpose: a status pill, headings relabelled to Brief / Build /
+    What Is Being Built, and **no outcome figures at all**. The card prints a note
+    stating that figures go up once measured and client-approved, which is §13.4
+    made visible rather than an apology for a gap. Do not invent a metric, sector,
+    funding stage, team size or timeline for it; get them from the owner, then drop
+    `status` and `note` together with the real numbers. Regono is **not** in the
+    homepage logo strip — that strip is captioned "Founder track record includes"
+    and is not a client wall (§13.15). The study attributes the work to Ankit by
+    name, as the other three do; whether Regono may additionally be described as a
+    Codenest *client*, and whether it has given permission to be named at all, is
+    unconfirmed and needs the owner before any copy claims it.

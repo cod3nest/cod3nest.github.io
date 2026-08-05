@@ -13,11 +13,11 @@ import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
 // Kingdom, and the title now matches it. (BRANDING.md §13.25.)
 export const metadata = {
   title: 'Fractional CTO Services for UK Startups',
-  description: 'Fractional CTO for UK startups, pre-seed to Series A. Architecture, engineering hiring and due diligence preparation. Free 30-minute strategy call.',
-  keywords: ['fractional CTO UK', 'part-time CTO', 'startup CTO', 'technical leadership', 'CTO as a service', 'interim CTO UK', 'fractional CTO cost', 'startup technical leadership'],
+  description: 'Fractional CTO for UK startups, pre-seed to Series A. Agentic AI engineering, architecture, hiring and due diligence prep. Free 30-minute strategy call.',
+  keywords: ['fractional CTO UK', 'part-time CTO', 'startup CTO', 'technical leadership', 'CTO as a service', 'interim CTO UK', 'agentic AI engineering', 'fractional CTO AI', 'startup technical leadership'],
   openGraph: {
     title: 'Fractional CTO Services for UK Startups | Codenest',
-    description: 'Engineering rigour and technical leadership for UK startups — without the overhead.',
+    description: 'Engineering rigour, agentic AI delivery and technical leadership for UK startups.',
     type: 'website',
     url: 'https://codenest.uk/services/fractional-cto/',
     images: [
@@ -82,6 +82,8 @@ export default function FractionalCTOPage() {
   const services = [
     "Technical strategy and roadmap development",
     "Architecture design and review",
+    "Agentic AI strategy and delivery",
+    "LLM evaluation, guardrails and cost control",
     "Technology selection and evaluation",
     "Engineering team structure and hiring",
     "Code review and quality standards",
@@ -92,7 +94,38 @@ export default function FractionalCTOPage() {
     "Mentoring junior technical leaders",
   ]
 
+  // The capability the market is asking for right now, given its own band rather
+  // than a bullet inside "What We Do". Each block describes work Codenest does,
+  // not a claim about results — the Regono engagement is live and its outcome
+  // figures are not published yet (§13.28).
+  const agenticLayers = [
+    {
+      title: "The company brain",
+      description: "One retrieval layer over your own documents, systems and process, so that people and agents answer from what the business already knows rather than from whatever fits in a prompt.",
+    },
+    {
+      title: "The AI factory",
+      description: "The platform underneath agent delivery: shared scaffolding, an evaluation harness, guardrails, deployment and observability. It is what stops the tenth agent costing what the first one did.",
+    },
+    {
+      title: "Evaluation before scale",
+      description: "An agent with no evaluation harness is a demo. Measurement goes in before volume does, so you can tell a real regression from a bad afternoon.",
+    },
+    {
+      title: "Cost and latency discipline",
+      description: "Model choice, routing, caching and context hygiene. Inference bills scale with usage, and left alone they scale faster than the usage does.",
+    },
+  ]
+
   const faqs = [
+    {
+      question: "Do you build agentic AI, or only advise on it?",
+      answer: "Build. Ankit is currently building a company brain and an AI factory at Regono: a retrieval layer over internal knowledge, and the platform that puts agents into production against it. The person advising on the architecture is the person writing it."
+    },
+    {
+      question: "Everyone is telling us to build AI agents. How do you decide whether we should?",
+      answer: "By asking what breaks if you do nothing. Agents earn their place on work that is repetitive, judgement-light, and already written down somewhere. Where the process itself is undefined, an agent automates the confusion faster. We will tell you when that is what we see."
+    },
     {
       question: "What's the difference between a fractional CTO and a consultant?",
       answer: "A fractional CTO is embedded in your team and takes ownership of technical outcomes. Unlike consultants who provide advice and leave, we're accountable for execution and stay engaged as your technical leader."
@@ -115,7 +148,7 @@ export default function FractionalCTOPage() {
     },
     {
       question: "What's your tech stack expertise?",
-      answer: "We specialize in cloud-native architectures (AWS, GCP), Kubernetes, Terraform, Python, Java, Postgres/MySQL, GitOps, and modern data/ML stacks. But our real value is in architectural thinking — we choose the right tools for your specific needs."
+      answer: "We specialize in cloud-native architectures (AWS, GCP), Kubernetes, Terraform, Python, Java, Postgres/MySQL, GitOps, and agentic AI stacks: LLM orchestration, retrieval, evaluation and guardrails. But our real value is in architectural thinking — we choose the right tools for your specific needs."
     },
     {
       question: "What makes you different from a dev shop?",
@@ -146,7 +179,7 @@ export default function FractionalCTOPage() {
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: 'Fractional CTO Services',
-    description: 'Part-time technical leadership for startups. Architecture, team building, and strategic guidance.',
+    description: 'Part-time technical leadership for startups. Architecture, agentic AI engineering, team building, and strategic guidance.',
     // Reference the root layout's ProfessionalService by @id rather than
     // restating it: a second, differently-shaped Organization node for the same
     // business invites Google to treat them as two companies.
@@ -187,7 +220,7 @@ export default function FractionalCTOPage() {
                 Fractional CTO Services
               </h1>
               <p className="text-xl text-slate-600 mb-4 leading-relaxed">
-                Engineering rigour and technical leadership for ambitious startups. Make confident architecture decisions, build the right team, and become investor-ready — without the overhead.
+                Engineering rigour and technical leadership for ambitious startups. Make confident architecture decisions, put agentic AI into production, build the right team, and become investor-ready.
               </p>
               <p className="text-sm font-medium text-slate-700 mb-8">
                 Retained monthly engagements, scoped to your stage &middot; typically 60-80% less than a full-time CTO
@@ -220,9 +253,10 @@ export default function FractionalCTOPage() {
         name="Ankit Rana"
         role="Fractional CTO"
         accent="primary"
-        credentials={['AWS Certified', '15+ years engineering', 'Kubernetes & Cloud']}
+        credentials={['AWS Certified', '15+ years engineering', 'Kubernetes & Cloud', 'Agentic AI']}
         bio="Fifteen years building and scaling technology platforms: payment processors at Deloitte Digital and Elavon (US Bancorp), then startups going through hypergrowth across fintech, healthtech and proptech. He has sat on the receiving end of technical due diligence, which is the fastest way to learn what it actually tests."
         highlights={[
+          'Currently building a company brain and an AI factory at Regono: retrieval over internal knowledge, and the platform that ships agents against it',
           'Led engineering teams from 5 to 50+ across fintech and healthtech',
           'Ran a near seven-year platform transformation at Opayo by Elavon: AWS EKS migration, GitOps, a payments monolith moved to microservices',
           'Rebuilt Rungway as its interim CTO, taking the platform from 5 to 1,000+ concurrent users with a zero-downtime migration',
@@ -306,6 +340,38 @@ export default function FractionalCTOPage() {
                   </div>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Agentic AI. Charcoal rather than another white card grid: this is the
+          capability buyers are actively searching for, and it should not read as
+          the fifth item in a list. Gold grounds stay banned (§13.22). */}
+      <section className="py-24 bg-primary-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
+            <div className="lg:col-span-1">
+              <p className="text-sm uppercase tracking-[0.2em] text-accent-300 mb-4 font-medium">In demand right now</p>
+              <h2 className="font-serif text-4xl font-bold text-white mb-6">Agentic AI Engineering</h2>
+              <p className="text-slate-300 leading-relaxed mb-6">
+                Most companies have AI pilots. Far fewer have anything underneath them: no shared knowledge layer, no evaluation, no way to ship the second agent faster than the first. That gap is the work.
+              </p>
+              <Link href="/case-studies/" className="inline-flex items-center gap-2 font-semibold text-accent-300 hover:text-accent-200">
+                See the Regono engagement
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </div>
+
+            <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+              {agenticLayers.map((layer) => (
+                <div key={layer.title} className="border-l-2 border-accent-500 pl-6">
+                  <h3 className="text-xl font-bold text-white mb-3">{layer.title}</h3>
+                  <p className="text-slate-300 leading-relaxed">{layer.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>

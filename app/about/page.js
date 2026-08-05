@@ -48,6 +48,8 @@ const peopleSchema = [
     knowsAbout: [
       'Fractional CTO services',
       'Startup engineering',
+      'Agentic AI engineering',
+      'LLM application development',
       'Cloud architecture',
       'Kubernetes',
       'DevOps',
@@ -116,13 +118,14 @@ export default function AboutPage() {
       initial: "A",
       accent: "primary",
       linkedin: "https://www.linkedin.com/in/arana198",
-      credentials: ["AWS Certified", "15+ Years Engineering", "Kubernetes & Cloud"],
-      bio: "Fifteen years building and scaling technology platforms: payment processors at Deloitte Digital and Elavon (US Bancorp), then startups going through hypergrowth across fintech, healthtech and proptech. Has led engineering teams from 5 to 50+, run a near seven-year platform transformation at Opayo by Elavon, and sat on the receiving end of technical due diligence.",
+      credentials: ["AWS Certified", "15+ Years Engineering", "Kubernetes & Cloud", "Agentic AI"],
+      bio: "Fifteen years building and scaling technology platforms: payment processors at Deloitte Digital and Elavon (US Bancorp), then startups going through hypergrowth across fintech, healthtech and proptech. Has led engineering teams from 5 to 50+, run a near seven-year platform transformation at Opayo by Elavon, and sat on the receiving end of technical due diligence. Currently building agentic AI platforms.",
       proof: "Scaled Rungway from 5 to 1,000+ concurrent users",
       tracks: [
         { year: "2011-2015", title: "Enterprise Foundations", description: "Payment processors and financial services platforms at Deloitte Digital and Elavon (US Bancorp) — learning what enterprise-grade actually costs, and what startups can borrow from it." },
         { year: "2015-2017", title: "Scaling Startups", description: "Led engineering teams from 5 to 50+ across fintech and healthtech. Hypergrowth firsthand: the technical debt, the hiring mistakes, the architecture decisions that come back to haunt you." },
         { year: "2019-2026", title: "Payments at Scale", description: "Platform transformation at Opayo by Elavon — AWS EKS migration, GitOps and Infrastructure as Code, moving a payments monolith to microservices without dropping a transaction." },
+        { year: "2026-present", title: "Agentic AI Platforms", description: "Building a company brain and an AI factory at Regono: a retrieval layer over the organisation's own knowledge, plus the scaffolding, evaluation and guardrails that put agents into production and keep them honest there." },
       ],
     },
     {
@@ -184,7 +187,7 @@ export default function AboutPage() {
   // Two technical categories, two financial — the grid itself has to read 50/50.
   const expertise = [
     { category: "Cloud & Infrastructure", items: ["AWS", "GCP", "Kubernetes", "Terraform", "GitOps"] },
-    { category: "Engineering & Data", items: ["Python", "Java", "Node.js", "Microservices", "ML & LLM Integration"] },
+    { category: "Engineering & AI", items: ["Python", "Java", "Node.js", "Microservices", "Agentic AI & LLM Systems"] },
     { category: "Planning & Reporting", items: ["Financial Modelling", "Rolling Forecasts", "Scenario Planning", "Board & Investor Reporting", "Fundraising Support"] },
     { category: "Controls & Commercial", items: ["Financial Controls", "Margin Optimisation", "Procurement & Cost", "CapEx Governance", "Cash Management"] }
   ]
