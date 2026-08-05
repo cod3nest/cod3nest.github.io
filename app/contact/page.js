@@ -84,8 +84,15 @@ export default function ContactPage() {
               </div>
             </div>
 
+            {/* The page's only content heading. Without it the sub-h1 outline was
+                empty, and the four footer column labels were the whole of it until
+                they became h3s. "Let's Talk" carries the tone; this carries the
+                query, and matches both the page title and the §6 CTA label. */}
             <div className="max-w-3xl mx-auto">
-              <ContactForm />
+              <h2 id="contact-form-heading" className="font-serif text-2xl md:text-3xl font-bold text-slate-900 text-center mb-8">
+                Request a Strategy Call
+              </h2>
+              <ContactForm labelledBy="contact-form-heading" />
             </div>
           </div>
         </section>
