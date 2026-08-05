@@ -333,6 +333,11 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     it is not a client wall, and nothing may relabel it as one. Attribute Dishoom's
     numbers to Michelle's *role* ("led strategic finance at Dishoom through
     £35m → £165m"), never to her personally growing the company. (Owner, 4 Aug 2026.)
+    **`/case-studies` is CTO-only until it is not** (5 Aug 2026): all three studies are
+    technical, so the page title, meta description, OG description, h1, sub and
+    ItemList schema all say "Fractional CTO" and name Ankit. It previously advertised
+    "Fractional CTO & CFO Outcomes" against no CFO content. Restore the dual framing in
+    the same change that adds a CFO study, and never ahead of one.
 16. **Michelle covers both operational finance and fundraising.** Her CV documents the
     operational side in detail — multi-site P&L, budgeting and rolling forecasts,
     controls and governance, margin and procurement, Board reporting — and the owner
