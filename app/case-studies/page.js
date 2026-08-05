@@ -3,12 +3,17 @@ import Footer from '../components/Footer'
 import JsonLd from '../components/JsonLd'
 import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../lib/schema'
 
+// Every study on this page is technical. The title claimed "CTO & CFO Outcomes"
+// against no CFO content at all, and the description opened "How Codenest scaled
+// Rungway", which attributes founder track record to the firm (§13.15). Both now
+// say what the page holds. Restore the dual framing when the CFO seat has studies
+// of its own, and not before.
 export const metadata = {
-  title: 'Case Studies: Fractional CTO & CFO Outcomes',
-  description: 'How Codenest scaled Rungway from 5 to 1,000+ concurrent users, modernised payment infrastructure at Opayo, and delivered a compliant MVP for AstraZeneca.',
+  title: 'Case Studies: Fractional CTO Engagements',
+  description: 'Technical engagements led by Ankit Rana, Fractional CTO: scaling Rungway to 1,000+ concurrent users, transforming payments at Opayo, and a compliant MVP for AstraZeneca.',
   openGraph: {
     title: 'Codenest Case Studies — Track Record',
-    description: 'Startup outcomes, backed by enterprise-grade experience. Rungway, Opayo by Elavon, AstraZeneca.',
+    description: 'Technical leadership engagements led by Ankit Rana, Fractional CTO. Rungway, Opayo by Elavon, AstraZeneca.',
     type: 'website',
     url: 'https://codenest.uk/case-studies/',
     images: [
@@ -84,7 +89,9 @@ export default function CaseStudiesPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
               <p className="text-sm uppercase tracking-[0.2em] text-accent-700 mb-4 font-medium">Proven Track Record</p>
-              <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Case Studies</h1>
+              {/* Carries the target term, per §8. A bare "Case Studies" h1 sat
+                  under a title that named the service and matched neither. */}
+              <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Fractional CTO Case Studies</h1>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto">
                 Technical engagements led by Ankit Rana, Fractional CTO. Deep, hands-on collaboration at every stage
               </p>
