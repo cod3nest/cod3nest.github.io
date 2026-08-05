@@ -43,8 +43,11 @@ editorial voice for headlines, and claims you could defend in a due-diligence ro
   and claims no London base of its own. Describing a *client* as London-based is
   fine and true; describing *Codenest* that way is not (§13.25).
 - **The operators:** Codenest is founder-led in each track, and the tracks do not
-  overlap. **Ankit Rana, Fractional CTO** — ex-Deloitte Digital, Elavon (US Bancorp),
-  Opayo — leads the technical seat. **Michelle Rana FCCA, Fractional CFO** — strategic
+  overlap. **Ankit Rana, Fractional CTO** — Rated People, Rightmove and Rungway before
+  the firm; the Ministry of Justice, Tesco Bank, HSBC, AstraZeneca and Opayo by Elavon
+  through it — leads the technical seat. It previously read "ex-Deloitte Digital,
+  Elavon (US Bancorp), Opayo", which framed three Codenest engagements as pre-firm
+  background (§13.11). **Michelle Rana FCCA, Fractional CFO** — strategic
   finance at Dishoom — leads the financial seat. Being founder-led is a strength, not a
   secret (see §2 voice rules), but "founder-led" never means one person covering both:
   each seat is named to its own principal in copy and in schema (§2 rule 4, §13 rule 14).
@@ -337,8 +340,21 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
 9. **One FAQPage schema per page, owned by the page.** (4 Aug 2026.)
 10. **ICP phrasing is "pre-seed to Series A"** — one variant, sitewide. (4 Aug 2026.)
 11. **Opayo engagement dates: August 2019 – June 2026** — a Codenest-era engagement.
-    Elavon (US Bancorp) employment 2011-2015 is separate early-career history; never
-    date Opayo work into that window. (Owner, 4 Aug 2026.)
+    (Owner, 4 Aug 2026.)
+    **Corrected against the owner's CV, 5 Aug 2026.** This rule used to add that
+    "Elavon (US Bancorp) employment 2011-2015 is separate early-career history".
+    **There is no such period.** The CV shows one Elavon engagement, Aug 2019 – Jun
+    2026, delivered through Esynergy Solutions — the same engagement as Opayo. The
+    invented window had propagated into `/about`, `/services/fractional-cto`,
+    `/cofounder` and the homepage strip caption before anyone checked it against a
+    source. **Deloitte Digital was Jul 2018 – Aug 2019**, not 2011-2015, and it is
+    where the HSBC and AstraZeneca work was delivered.
+    **The firm's boundary is August 2017** (owner): every engagement from that date
+    is Codenest's. Ankit's own track record is everything before it — University of
+    Leicester (Oct 2011 – Aug 2012), Muddyboots (Sep 2012 – Jul 2013), Rated People
+    (Aug 2013 – Dec 2015), Rightmove (Jan – Jul 2016), Rungway (Aug 2016 – Aug 2017).
+    **Check a date against the CV, never against earlier site copy** — that is how
+    a fabricated Elavon decade survived four pages.
 12. **All three testimonials are verified genuine** (owner, 4 Aug 2026) — real
     clients. Never delete or reword them as "placeholders". All three are
     anonymised: a named attribution is published only against written permission
@@ -366,13 +382,28 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     the same change that adds a CFO study, and never ahead of one.
     **Which engagements are Codenest's** (owner, 5 Aug 2026, correcting an earlier
     mislabel): **Regeno, Opayo by Elavon and AstraZeneca are Codenest client
-    engagements.** Only **Rungway** (predates the firm; Ankit was interim CTO) and
+    engagements.** Only **Rungway** (Aug 2016 – Aug 2017, a month short of the firm's
+    Aug 2017 boundary; Ankit was Lead Software Engineer there) and
     **Dishoom** (Michelle's employer) are founder track record. Opayo and AstraZeneca
     were briefly published as founder track record — wrong, and §13.11 already dated
     Opayo Aug 2019 – Jun 2026 as Codenest-era. **Understating the client base is as
     inaccurate as overstating it**; check this list before labelling anything.
     Every card carries a `kind` label above its title saying which it is —
     "Codenest client engagement" or "Founder track record".
+    **The full engagement list, from the owner's CV (5 Aug 2026).** Codenest
+    engagements, all on or after the Aug 2017 boundary: **Ministry of Justice**
+    (Aug 2017 – Mar 2018), **Tesco Bank** (Mar – Jul 2018), **Deloitte Digital**
+    delivering for **HSBC** and **AstraZeneca** (Jul 2018 – Aug 2019), **LDN Labs
+    (Hitachi)** (May – Nov 2019), **Opayo by Elavon** via Esynergy (Aug 2019 – Jun
+    2026), **Frekkel** (Nov 2025 – Apr 2026), **Regeno** (2026 – present). Founder
+    track record, all before it: **Rated People**, **Rightmove**, **Rungway**, plus
+    Muddyboots and the University of Leicester. Michelle's **Dishoom** is founder
+    track record on her side. The owner cleared every name above for publication.
+    **Rungway's title was Lead Software Engineer, not interim CTO** (owner, 5 Aug
+    2026). The scope was CTO-level and copy may say he led engineering there; it may
+    not claim the title. "Interim CTO" was published on the homepage stat, the strip
+    comment and inside the Rungway case study, and is now out of all three.
+
     Do not drop those labels to make the page look like a client wall; the whole
     reason the distinction is drawn in copy is that the page can no longer rely on
     "none of these are clients" being true. Any study added later needs a `kind`.
