@@ -113,7 +113,7 @@ Create a monthly projection for 24-36 months:
 
 Categorise costs by type:
 
-**People costs** (typically 60-70% of spend):
+**People costs** (usually the largest category):
 - Engineering salaries
 - Sales salaries + commissions
 - Operations/support
