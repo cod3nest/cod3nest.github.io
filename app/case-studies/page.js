@@ -58,9 +58,21 @@ const caseStudies = [
     note: "Outcome figures go up once they are measured and the client has approved them. This engagement is still running, so there are none here yet.",
     tags: ["Agentic AI", "AI Platform Engineering", "MCP", "Cloudflare Workers", "Knowledge Retrieval", "LLMOps"],
     diagram: [
-      { label: "Agents in production", detail: "Ticket in, merged PR out" },
-      { label: "AI factory", detail: "Workflow graphs, sandboxes, merge gates" },
-      { label: "Company brain", detail: "Queryable records, exposed over MCP" },
+      {
+        label: "Agents in production",
+        detail: "Work arrives where it already lives, and leaves as a merged pull request.",
+        items: ["Linear", "GitHub", "Slack"],
+      },
+      {
+        label: "AI factory",
+        detail: "The platform that makes the tenth agent cheaper than the first.",
+        items: ["Workflow graphs", "Sandbox per run", "Merge gates", "Decision ledger"],
+      },
+      {
+        label: "Company brain",
+        detail: "What the business already knows, made answerable.",
+        items: ["Documents", "Photos", "Audio", "Video"],
+      },
     ]
   },
   {
@@ -118,20 +130,40 @@ const pageSchema = [
 // image in `public/img/photos` is a blue 3D "AI" render that is off-palette and
 // says nothing; a labelled stack of the actual layers carries more information
 // than a stock photo would, and stays in brand colours (§7).
+// Read bottom-up: the brain is the base, the factory sits on it, agents run on
+// top. Each layer names what is actually in it, which is why the panel can fill
+// a column sized by the prose beside it.
+//
+// Connectors are a fixed height on purpose. They used to be `flex-1` so the
+// stack stretched to the text column, which at 1440px meant 234px of content
+// pulled across 983px — three small boxes joined by 300px hairlines. Height
+// belongs to the layers; the connector only has to show direction.
 function PlatformDiagram({ layers }) {
   return (
-    <div className="h-full bg-primary-800 px-8 pb-8 pt-16 lg:px-10 lg:pb-10 flex flex-col">
-      <p className="text-xs uppercase tracking-[0.2em] text-accent-300 mb-6 font-medium">How the platform stacks</p>
+    <div className="h-full bg-primary-800 px-8 pb-8 pt-16 lg:px-10 flex flex-col">
+      <p className="text-xs uppercase tracking-[0.2em] text-accent-300 font-medium">How the platform stacks</p>
+
+      {/* Label pinned top, footnote pinned bottom, stack centred between them.
+          Centring the whole panel instead left the eyebrow floating 348px down
+          its own panel, which reads as a mistake rather than as composition. */}
+      <div className="flex-1 flex flex-col justify-center py-10">
       {layers.map((layer, i) => (
         <Fragment key={layer.label}>
-          <div className="rounded-xl border border-primary-600 bg-primary-700 px-5 py-4">
-            <p className="text-white font-semibold">{layer.label}</p>
-            <p className="text-slate-300 text-sm">{layer.detail}</p>
+          <div className="rounded-xl border border-primary-600 bg-primary-700 px-6 py-6">
+            <p className="text-white font-semibold mb-1">{layer.label}</p>
+            <p className="text-slate-300 text-sm leading-relaxed mb-3">{layer.detail}</p>
+            <div className="flex flex-wrap gap-1.5">
+              {layer.items.map((item) => (
+                <span key={item} className="px-2 py-0.5 rounded bg-primary-800 text-slate-300 text-xs">
+                  {item}
+                </span>
+              ))}
+            </div>
           </div>
-          {/* The connector grows, so the stack fills a column sized by the text
-              beside it instead of floating in the middle of a tall void. */}
+          {/* Grows to share the column's slack, but capped. Uncapped `flex-1`
+              turned these into 300px hairlines beside a tall block of prose. */}
           {i < layers.length - 1 && (
-            <div className="flex-1 min-h-[2.5rem] flex flex-col items-center py-2" aria-hidden="true">
+            <div className="flex-1 min-h-[2.5rem] max-h-28 flex flex-col items-center justify-center gap-1" aria-hidden="true">
               <svg className="w-4 h-4 text-accent-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
               </svg>
@@ -140,6 +172,11 @@ function PlatformDiagram({ layers }) {
           )}
         </Fragment>
       ))}
+      </div>
+
+      <p className="text-xs text-slate-400 leading-relaxed border-t border-primary-700 pt-4">
+        Read bottom-up: the company brain is the base, and agents run on top of it.
+      </p>
     </div>
   )
 }

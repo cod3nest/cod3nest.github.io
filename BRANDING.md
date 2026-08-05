@@ -230,6 +230,14 @@ Assemble pages from these; don't invent parallel patterns:
   `PlatformDiagram` in `app/case-studies/page.js` takes the layers as data; a study
   with a `diagram` gets it instead of an `image`. Reach for this before buying
   another abstract-technology photograph.
+  **Height belongs to the content, not the connectors.** The panel sits in a grid
+  cell sized by the prose beside it, which on a long study is ~1170px against ~450px
+  of diagram. Connectors were briefly `flex-1` so the stack filled that: at 1440px it
+  rendered three small boxes joined by 300px hairlines. They are now capped
+  (`max-h-28`), each layer carries its own tags so the stack earns its space, and the
+  panel is anchored by a label at top and a footnote at bottom with the stack centred
+  between them. If a future layout looks stretched or hollow, add content to the
+  layers — never let a connector grow without a cap.
 
 ## 8. Metadata & SEO conventions
 
