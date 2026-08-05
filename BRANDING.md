@@ -167,6 +167,14 @@ Two faces, two jobs. Loaded via `next/font` in `app/layout.js` — never CDN-lin
 - **Mobile:** verify at 375px. No horizontal scroll. The sticky mobile CTA must hide
   when the contact section is in view. In comparison grids, the Codenest card renders
   first on mobile (`order-first lg:order-none`).
+- **Hero sizing steps up, never down.** Desktop hero values do not ride down to mobile:
+  section top padding is `pt-28 md:pt-40|44` (`pt-24 md:pt-32` on interior pages), and
+  the homepage h1 is `text-4xl sm:text-5xl md:text-6xl`. Measured 5 Aug 2026: carrying
+  the desktop values down made the homepage hero 1798px tall at 375px, 2.2 screens, with
+  the primary CTA below the fold. After: 1411px, CTA at 746px. Re-measure hero height
+  and CTA offset at 375px after any hero change rather than eyeballing it.
+- **Wide content scrolls inside its own container.** Tables and code blocks get an
+  `overflow-x-auto` wrapper; the page body never scrolls horizontally.
 
 ## 6. Components (the section grammar)
 
@@ -215,6 +223,12 @@ Assemble pages from these; don't invent parallel patterns:
 - **Schema:** ProfessionalService lives in the root layout ONLY. FAQPage/Article
   schema belongs to the page that visibly renders the content — never sitewide, never
   two FAQPage blocks on one page. Finance posts are `BlogPosting` (not `TechArticle`).
+  **One offer catalogue, in the root layout** — the two retained seats plus the two
+  fixed-fee project shapes named in "How We Work". A page that needs to name the
+  company writes `provider: { '@id': ORGANIZATION_ID }`; it never restates an
+  Organization inline. (5 Aug 2026: the homepage carried a second
+  ProfessionalService and a three-item catalogue that had drifted from the
+  layout's four; it was deleted rather than kept in sync.)
 - **Canonicals & sitemap URLs carry the trailing slash** (config sets
   `trailingSlash: true`).
 - **OG image:** 1200×630 real card (logo + offer line), declared dimensions matching
@@ -357,13 +371,28 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     Clearways Accountants, Clearways, Colley Way, Reigate RH2 9JH, and the VAT number.
     Never remove them. Note the registered office is **Surrey, not London** — reconcile
     any "London-based" claim and the `addressLocality` in `app/layout.js` against it.
-    (4 Aug 2026.)
+    (4 Aug 2026.) **Reconciled 5 Aug 2026:** the schema `address` is now the registered
+    office, and the `geo` block is gone rather than re-guessed — it held the generic
+    51.5074/-0.1278 London centroid for an address the business does not occupy. The
+    footer's "London-based" line was dropped. Put a locality claim back only alongside
+    an address that supports it. **Still open:** the `/services/fractional-cto/` and
+    `/services/fractional-cfo/` page titles both say "London", as do several metadata
+    keywords — decide whether London is a claim Codenest can make before the next
+    metadata pass.
 26. **The Services dropdown is the two seats, nothing else.** "All Services" was removed
     from it (4 Aug 2026): every route out of `/services` leads back to one of those two
     pages, so it was a third nav slot reaching nothing new — and a third page competing
     for the same queries as its own children. `/services` stays linked from the homepage
-    and the footer as the side-by-side overview. Capabilities are never listed as
+    and the footer. Capabilities are never listed as
     navigation destinations — that applies to the footer too. (4 Aug 2026.)
+    **Updated 5 Aug 2026:** `/services` is no longer a side-by-side overview. It restated
+    the homepage's two-track section almost verbatim and competed with it, so it was
+    rewritten as the decision page — *which seat do I need?* — carrying the signal lists,
+    the two approved declines, and the capability grid. The track cards there give what
+    each seat owns and who leads it; they never repeat the homepage's bullet lists.
+    The nav also gained a **Resources** dropdown (Guides, Blog, Runway Calculator),
+    replacing the standalone Blog slot: five guides and the calculator were reachable
+    only from the footer. Slot count is unchanged at four plus the CTA.
 27. **Either seat can be bought alone.** A client can engage the Fractional CTO, the
     Fractional CFO, or both. Copy may say the two work better together; it may never
     say or imply that both are required, and no CTA, FAQ or schema may present the

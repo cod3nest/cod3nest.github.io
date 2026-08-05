@@ -142,11 +142,10 @@ export default function FractionalCTOPage() {
     '@type': 'Service',
     name: 'Fractional CTO Services',
     description: 'Part-time technical leadership for startups. Architecture, team building, and strategic guidance.',
-    provider: {
-      '@type': 'Organization',
-      name: 'Codenest',
-      url: 'https://codenest.uk'
-    },
+    // Reference the root layout's ProfessionalService by @id rather than
+    // restating it: a second, differently-shaped Organization node for the same
+    // business invites Google to treat them as two companies.
+    provider: { '@id': ORGANIZATION_ID },
     areaServed: {
       '@type': 'Country',
       name: 'United Kingdom'
@@ -172,7 +171,7 @@ export default function FractionalCTOPage() {
       <main id="main-content">
 
       {/* Hero Section */}
-      <section className="pt-40 pb-24 bg-gradient-to-b from-primary-50 to-white">
+      <section className="pt-28 md:pt-40 pb-24 bg-gradient-to-b from-primary-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -190,7 +189,7 @@ export default function FractionalCTOPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button href="/contact/">Request a Strategy Call</Button>
-                <Button href="/case-studies/" variant="secondary">View Client Outcomes</Button>
+                <Button href="/case-studies/" variant="secondary">View Case Studies</Button>
               </div>
             </div>
             <div className="relative">

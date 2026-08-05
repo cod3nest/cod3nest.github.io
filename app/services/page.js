@@ -5,12 +5,16 @@ import Footer from '../components/Footer'
 import JsonLd from '../components/JsonLd'
 import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../lib/schema'
 
+// This page used to restate the homepage's two-track section almost verbatim —
+// same descriptions, same eight bullets — and competed with it for the same
+// queries. It now answers the question the homepage does not: which seat do I
+// need? The capability grid below stays, because that is genuinely only here.
 export const metadata = {
-  title: 'Fractional CTO & CFO Services for UK Startups',
-  description: 'Two executive seats, each engageable on its own. Fractional CTO and Fractional CFO services for UK startups, pre-seed to Series A, and what each engagement covers.',
+  title: 'Fractional CTO or CFO: Which Does Your Startup Need?',
+  description: 'Which executive seat your startup needs now. The signals that point to a Fractional CTO, the signals that point to a Fractional CFO, and what each engagement covers. Either is engageable on its own.',
   openGraph: {
-    title: 'Codenest Services — Fractional CTO & Fractional CFO',
-    description: 'Technical and financial leadership for UK startups, pre-seed to Series A.',
+    title: 'Fractional CTO or Fractional CFO: Which Does Your Startup Need?',
+    description: 'The signals that point to each seat, and what each engagement covers. UK startups, pre-seed to Series A.',
     type: 'website',
     url: 'https://codenest.uk/services/',
     images: [
@@ -27,32 +31,87 @@ export const metadata = {
   },
 }
 
+// Deliberately not the homepage's bullet lists. Those four-item lists are
+// repeated verbatim in the capability grid further down this page; here the
+// cards carry what the seat owns and who leads it, and route onward.
 const tracks = [
   {
     name: 'Fractional CTO',
     href: '/services/fractional-cto/',
     accent: 'primary',
-    description: 'Architecture decisions, engineering team building, and infrastructure that scales from day one.',
-    items: [
-      'Technical Strategy & Architecture',
-      '0-to-1 Product Builds',
-      'AI & Data Engineering',
-      'DevOps & Platform Engineering',
-    ],
+    principal: 'Led by Ankit Rana',
+    owns: 'The technical plan, and the team that has to deliver it.',
+    bestFor: 'Founders carrying technical risk they cannot evaluate on their own.',
   },
   {
     name: 'Fractional CFO',
     href: '/services/fractional-cfo/',
     accent: 'accent',
-    description: 'Strategic finance, FP&A, and the financial discipline that makes your startup investable.',
+    principal: 'Led by Michelle Rana FCCA',
+    owns: 'The financial plan, and the numbers an investor will test.',
+    bestFor: 'Founders whose next decision has a cash consequence they cannot model.',
+  },
+]
+
+// The decision aid. Symptoms a founder would recognise in their own week, rather
+// than a list of capabilities they would have to translate first.
+const signals = [
+  {
+    heading: 'Signs you need the Fractional CTO',
+    accent: 'primary',
     items: [
-      'Financial Modeling & FP&A',
-      'Business Strategy & Planning',
-      'Fundraising & Investor Relations',
-      'Due Diligence Preparation',
+      'You are making architecture decisions you have no way to evaluate',
+      'The roadmap slips and you cannot tell whether the estimate or the execution was wrong',
+      'You are about to hire engineers and have nobody to interview them',
+      'Technical due diligence is coming and nobody owns the answers',
+      'Your build is outsourced and you have no independent read on its quality',
+      'Infrastructure cost is climbing faster than usage',
+    ],
+  },
+  {
+    heading: 'Signs you need the Fractional CFO',
+    accent: 'accent',
+    items: [
+      'You cannot state your runway without rebuilding a spreadsheet first',
+      'An investor asked for a model and you are starting from a blank page',
+      'You price on instinct and margin is drifting',
+      'Month-end takes two weeks and the numbers still get argued about',
+      'A raise is six to nine months out and there is no data room',
+      'The board pack gets assembled the night before',
+    ],
+  },
+  {
+    heading: 'Signs you need both',
+    accent: 'dark',
+    items: [
+      'Your hiring plan and your engineering roadmap are two documents that disagree',
+      'You are raising on a technical story the financial model does not support',
+      'Build-versus-buy and runway keep arriving as the same question',
+      'You are at 0-to-1, where every technical decision has an immediate cash consequence',
     ],
   },
 ]
+
+const SIGNAL_STYLES = {
+  primary: {
+    card: 'bg-primary-50 border-primary-200',
+    heading: 'text-slate-900',
+    icon: 'text-primary-600',
+    text: 'text-slate-700',
+  },
+  accent: {
+    card: 'bg-accent-50 border-accent-200',
+    heading: 'text-slate-900',
+    icon: 'text-accent-700',
+    text: 'text-slate-700',
+  },
+  dark: {
+    card: 'bg-primary-800 border-primary-800',
+    heading: 'text-white',
+    icon: 'text-accent-300',
+    text: 'text-slate-300',
+  },
+}
 
 // Capabilities delivered inside a seat — not services you buy separately, and not
 // pages. They render as static tiles (see ServiceCard). The two seats themselves are
@@ -112,7 +171,7 @@ const pageSchema = [
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: 'Codenest Services',
-    description: 'Fractional CTO and Fractional CFO services for UK startups.',
+    description: 'The two executive seats Codenest offers UK startups, each engageable on its own.',
     itemListElement: tracks.map((track, index) => ({
       '@type': 'ListItem',
       position: index + 1,
@@ -130,13 +189,58 @@ export default function ServicesPage() {
       <Navigation />
 
       <main id="main-content">
-        <section className="pt-40 pb-24 bg-white">
+        <section className="pt-28 md:pt-40 pb-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <p className="text-sm uppercase tracking-[0.2em] text-accent-700 mb-4 font-medium">Two Executive Seats</p>
-              <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Fractional CTO &amp; CFO Services</h1>
+              <p className="text-sm uppercase tracking-[0.2em] text-accent-700 mb-4 font-medium">Choosing a seat</p>
+              <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+                Fractional CTO or Fractional CFO?
+              </h1>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-                Two seats, each engageable on its own. Take the one you need now, or both and get a roadmap and a financial plan that already agree.
+                Which seat your startup needs now, what each one owns, and what an engagement
+                covers. Either is engageable on its own; taking both is an option rather than a
+                condition.
+              </p>
+            </div>
+
+            {/* The decision aid this page exists for. Three panels rather than the
+                two-card grid the homepage already runs (BRANDING.md §5). */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-20">
+              {signals.map((group) => {
+                const style = SIGNAL_STYLES[group.accent]
+                return (
+                  <div key={group.heading} className={`rounded-xl border p-8 ${style.card}`}>
+                    <h2 className={`text-lg font-bold mb-5 ${style.heading}`}>{group.heading}</h2>
+                    <ul className="space-y-3">
+                      {group.items.map((item) => (
+                        <li key={item} className="flex items-start gap-3">
+                          <svg
+                            className={`w-5 h-5 mt-0.5 flex-shrink-0 ${style.icon}`}
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            aria-hidden="true"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                          <span className={`text-sm leading-relaxed ${style.text}`}>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )
+              })}
+            </div>
+
+            {/* The two approved declines, worded as on the homepage. Nothing else
+                goes in here without owner sign-off (BRANDING.md §13.17). */}
+            <div className="max-w-3xl mx-auto mb-20 border-l-4 border-slate-300 pl-6">
+              <h2 className="text-lg font-bold text-slate-900 mb-3">When neither seat is the answer</h2>
+              <p className="text-slate-600 leading-relaxed">
+                If technology is your moat, a novel algorithm or custom hardware needs someone in
+                the building full time with their name on it. And if you need someone 40+ hours a
+                week, you are describing a permanent hire, where paying fractional rates is the
+                expensive route. We would rather say that on the first call than in the third month.
               </p>
             </div>
 
@@ -150,23 +254,20 @@ export default function ServicesPage() {
                       : 'bg-gradient-to-br from-primary-50 to-white border-primary-200 hover:border-primary-400 hover:shadow-lg'
                   }`}
                 >
-                  <h2 className="text-2xl font-bold text-slate-900 mb-4">{track.name}</h2>
-                  <p className="text-slate-600 mb-6 leading-relaxed">{track.description}</p>
-                  <ul className="space-y-3 mb-8">
-                    {track.items.map((item) => (
-                      <li key={item} className="flex items-center text-slate-700">
-                        <svg
-                          className={`w-5 h-5 mr-3 ${track.accent === 'accent' ? 'text-accent-500' : 'text-primary-600'}`}
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-1">{track.name}</h2>
+                  <p className={`text-sm font-semibold mb-5 ${track.accent === 'accent' ? 'text-accent-700' : 'text-primary-700'}`}>
+                    {track.principal}
+                  </p>
+                  <dl className="space-y-4 mb-8">
+                    <div>
+                      <dt className="text-xs uppercase tracking-[0.15em] text-slate-600 font-semibold mb-1">Owns</dt>
+                      <dd className="text-slate-700 leading-relaxed">{track.owns}</dd>
+                    </div>
+                    <div>
+                      <dt className="text-xs uppercase tracking-[0.15em] text-slate-600 font-semibold mb-1">Best for</dt>
+                      <dd className="text-slate-700 leading-relaxed">{track.bestFor}</dd>
+                    </div>
+                  </dl>
                   <Link
                     href={track.href}
                     className={`inline-flex items-center font-semibold ${
@@ -174,7 +275,7 @@ export default function ServicesPage() {
                     }`}
                   >
                     Explore {track.name} Services
-                    <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
                   </Link>

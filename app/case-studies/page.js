@@ -7,7 +7,7 @@ export const metadata = {
   title: 'Case Studies: Fractional CTO & CFO Outcomes',
   description: 'How Codenest scaled Rungway from 5 to 1,000+ concurrent users, modernised payment infrastructure at Opayo, and delivered a compliant MVP for AstraZeneca.',
   openGraph: {
-    title: 'Codenest Case Studies — Client Outcomes',
+    title: 'Codenest Case Studies — Track Record',
     description: 'Startup outcomes, backed by enterprise-grade experience. Rungway, Opayo by Elavon, AstraZeneca.',
     type: 'website',
     url: 'https://codenest.uk/case-studies/',
@@ -29,7 +29,7 @@ const caseStudies = [
   {
     title: "Rungway: Scaling a Social Mentoring Platform",
     challenge: "A London-based HR-tech startup needed fractional CTO support to scale their social mentoring platform. The system could only handle 5 concurrent users before experiencing severe performance degradation — completely inadequate for their UK enterprise client base.",
-    solution: "As Rungway's interim CTO, our founder delivered a complete architectural transformation: migrating from Neo4J to a hybrid MySQL/NoSQL architecture for the primary data store (retaining Neo4J for AI/ML), implementing microservices with domain-driven design, establishing Infrastructure as Code with AWS, building CI/CD pipelines, introducing event-driven architecture with SQS, and containerizing the entire stack.",
+    solution: "As Rungway's interim CTO, Ankit delivered a complete architectural transformation: migrating from Neo4J to a hybrid MySQL/NoSQL architecture for the primary data store (retaining Neo4J for AI/ML), implementing microservices with domain-driven design, establishing Infrastructure as Code with AWS, building CI/CD pipelines, introducing event-driven architecture with SQS, and containerizing the entire stack.",
     results: ["Scaled from 5 to 1000+ concurrent users", "Zero-downtime database migration", "Modern DevOps foundations established", "Event-driven microservices architecture"],
     tags: ["Backend Architecture", "AWS", "DevOps", "Scalability", "Microservices"],
     image: "/img/photos/case-rungway.jpg",
@@ -38,7 +38,7 @@ const caseStudies = [
   {
     title: "Opayo by Elavon: Payment Platform Transformation",
     challenge: "Leading UK fintech payment provider needed Kubernetes consulting to modernize their infrastructure and integrate new payment channels (Apple Pay, Google Pay) while maintaining 100% uptime for critical transaction processing across Europe.",
-    solution: "Working inside the Opayo platform team from August 2019 to June 2026, our founder orchestrated a comprehensive AWS EKS migration with Kubernetes and Helm, implementing GitOps workflows and Infrastructure as Code using Terraform — managing the transition from monolithic architecture to microservices, establishing Jenkins CI/CD pipelines on Kubernetes, and scaling engineering culture across distributed teams.",
+    solution: "Working inside the Opayo platform team from August 2019 to June 2026, Ankit orchestrated a comprehensive AWS EKS migration with Kubernetes and Helm, implementing GitOps workflows and Infrastructure as Code using Terraform — managing the transition from monolithic architecture to microservices, establishing Jenkins CI/CD pipelines on Kubernetes, and scaling engineering culture across distributed teams.",
     results: ["Accelerated releases from every 2 weeks to multiple times per day", "Contributed to 10% revenue increase through faster feature delivery", "Reduced CI pipeline failures through automated testing", "Successfully integrated Apple Pay and Google Pay"],
     tags: ["Payment Systems", "AWS EKS", "Kubernetes", "Terraform", "GitOps", "Team Leadership"],
     image: "/img/photos/case-opayo.jpg",
@@ -47,7 +47,7 @@ const caseStudies = [
   {
     title: "AstraZeneca: Drug Delivery Tracking System MVP",
     challenge: "AstraZeneca needed to replace manual spreadsheet-based drug delivery tracking with a modern web-based tool to improve efficiency and accelerate time-to-market for pharmaceutical products. The system required integration with existing workflows while maintaining regulatory compliance.",
-    solution: "Our founder built a production-grade web application with REST APIs and automated CI/CD pipelines, collaborating closely with stakeholders and business analysts to define requirements and align delivery with business goals — architecting scalable deployments on Kubernetes using Docker and Jenkins (config-as-code), and establishing robust testing practices with JUnit and Spock.",
+    solution: "Ankit built a production-grade web application with REST APIs and automated CI/CD pipelines, collaborating closely with stakeholders and business analysts to define requirements and align delivery with business goals — architecting scalable deployments on Kubernetes using Docker and Jenkins (config-as-code), and establishing robust testing practices with JUnit and Spock.",
     results: ["Accelerated delivery by 40% compared to manual processes", "Cut deployment errors by 30% through automated pipelines", "Improved stakeholder confidence through transparent roadmap planning", "Delivered production-ready MVP on Kubernetes infrastructure"],
     tags: ["Healthcare", "Team Leadership", "Kubernetes", "CI/CD", "REST APIs", "Stakeholder Management"],
     image: "/img/photos/case-astrazeneca.jpg",
@@ -61,7 +61,10 @@ const pageSchema = [
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: 'Codenest Case Studies',
-    description: 'Client outcomes from technical and financial leadership engagements.',
+    // Every study on this page is a technical engagement led by Ankit. The
+    // description said "technical and financial" while no financial study
+    // existed — a claim the page could not back (BRANDING.md §2.2).
+    description: 'Technical leadership engagements led by Ankit Rana, Fractional CTO.',
     itemListElement: caseStudies.map((study, index) => ({
       '@type': 'ListItem',
       position: index + 1,
@@ -77,13 +80,13 @@ export default function CaseStudiesPage() {
       <Navigation />
 
       <main id="main-content">
-        <section className="pt-40 pb-24 bg-white">
+        <section className="pt-28 md:pt-40 pb-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
               <p className="text-sm uppercase tracking-[0.2em] text-accent-700 mb-4 font-medium">Proven Track Record</p>
               <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Case Studies</h1>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-                Startup outcomes, backed by enterprise-grade experience. Deep, hands-on collaboration at every stage
+                Technical engagements led by Ankit Rana, Fractional CTO. Deep, hands-on collaboration at every stage
               </p>
             </div>
 

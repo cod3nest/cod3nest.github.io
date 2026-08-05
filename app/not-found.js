@@ -17,7 +17,7 @@ export default function NotFound() {
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <Navigation />
 
-      <section className="pt-40 pb-32">
+      <section className="pt-28 md:pt-40 pb-32">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-8xl font-bold text-primary-600 mb-4">404</h1>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">

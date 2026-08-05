@@ -15,15 +15,165 @@ const SERVICE_LINKS = [
   { href: '/services/fractional-cfo/', label: 'Fractional CFO', hint: 'Financial models, controls, fundraising' },
 ]
 
+// Five guides and the runway calculator used to be reachable only from the footer,
+// while Blog held a top-level slot on its own. Grouping the three surfaces the whole
+// library without spending another slot: the nav still shows four items plus the CTA.
+const RESOURCE_LINKS = [
+  { href: '/guides/', label: 'Guides', hint: 'In-depth comparisons and hiring guides' },
+  { href: '/blog/', label: 'Blog', hint: 'Technical and finance writing for founders' },
+  { href: '/tools/runway-calculator/', label: 'Runway Calculator', hint: 'Free: months of runway and when to raise' },
+]
+
+// One disclosure menu, used by both Services and Resources. All the focus
+// management lives here, so a second menu costs a line rather than a copy of it.
+function NavDropdown({ label, menuId, links }) {
+  const [isOpen, setIsOpen] = useState(false)
+  const containerRef = useRef(null)
+  const buttonRef = useRef(null)
+  const itemRefs = useRef([])
+  const pendingFocusIndex = useRef(null)
+  const pathname = usePathname()
+
+  // A dropdown that survives a route change, a click elsewhere, or Escape.
+  useEffect(() => {
+    setIsOpen(false)
+  }, [pathname])
+
+  useEffect(() => {
+    if (!isOpen) return
+    const closeOnOutsideClick = (event) => {
+      if (containerRef.current && !containerRef.current.contains(event.target)) {
+        setIsOpen(false)
+      }
+    }
+    const closeOnEscape = (event) => {
+      if (event.key !== 'Escape') return
+      setIsOpen(false)
+      // Below the lg breakpoint the desktop nav is display:none, and focusing a
+      // button with no CSS box silently drops focus to the body.
+      const button = buttonRef.current
+      if (button && button.offsetParent !== null) button.focus()
+    }
+    document.addEventListener('pointerdown', closeOnOutsideClick)
+    document.addEventListener('keydown', closeOnEscape)
+    return () => {
+      document.removeEventListener('pointerdown', closeOnOutsideClick)
+      document.removeEventListener('keydown', closeOnEscape)
+    }
+  }, [isOpen])
+
+  useEffect(() => {
+    // Clearing on close matters: a pending index that outlives its menu would
+    // be consumed by the next open and steal focus unasked.
+    if (!isOpen) {
+      pendingFocusIndex.current = null
+      return
+    }
+    if (pendingFocusIndex.current === null) return
+    const index = pendingFocusIndex.current
+    pendingFocusIndex.current = null
+    itemRefs.current[index]?.focus()
+  }, [isOpen])
+
+  // Keyboard activation is handled explicitly rather than leaning on the
+  // button's native Enter/Space behaviour, so the disclosure also supports the
+  // arrow keys a keyboard user expects from a navigation menu.
+  // The item refs only exist once the open menu has committed, so the focus
+  // move is deferred to an effect rather than run alongside the state update.
+  const open = (focusIndex) => {
+    pendingFocusIndex.current = focusIndex ?? null
+    setIsOpen(true)
+  }
+
+  // When the menu is already open, focus moves directly. Calling setState with
+  // the value it already holds makes React bail out without re-rendering, so
+  // the focus effect would never run and the pending index would go stale.
+  const handleButtonKeyDown = (event) => {
+    const lastIndex = links.length - 1
+    if (event.key === 'ArrowDown') {
+      event.preventDefault()
+      isOpen ? itemRefs.current[0]?.focus() : open(0)
+    } else if (event.key === 'ArrowUp') {
+      event.preventDefault()
+      isOpen ? itemRefs.current[lastIndex]?.focus() : open(lastIndex)
+    } else if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault()
+      isOpen ? setIsOpen(false) : open()
+    }
+  }
+
+  const handleItemKeyDown = (event, index) => {
+    const lastIndex = links.length - 1
+    if (event.key === 'ArrowDown') {
+      event.preventDefault()
+      itemRefs.current[index === lastIndex ? 0 : index + 1]?.focus()
+    } else if (event.key === 'ArrowUp') {
+      event.preventDefault()
+      itemRefs.current[index === 0 ? lastIndex : index - 1]?.focus()
+    }
+  }
+
+  return (
+    <div
+      className="relative"
+      ref={containerRef}
+      onBlur={(event) => {
+        // Tabbing past the last item would otherwise leave the panel
+        // open and floating with no focus inside it.
+        if (!containerRef.current?.contains(event.relatedTarget)) {
+          setIsOpen(false)
+        }
+      }}
+    >
+      <button
+        type="button"
+        ref={buttonRef}
+        onClick={() => setIsOpen((wasOpen) => !wasOpen)}
+        onKeyDown={handleButtonKeyDown}
+        aria-expanded={isOpen}
+        aria-controls={menuId}
+        className="flex items-center text-slate-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+      >
+        {label}
+        <svg
+          className={`w-4 h-4 ml-1.5 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      {isOpen && (
+        <div
+          id={menuId}
+          className="absolute left-0 mt-2 w-72 rounded-xl bg-white py-2 shadow-xl ring-1 ring-slate-200"
+        >
+          {links.map((link, index) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              ref={(node) => { itemRefs.current[index] = node }}
+              onClick={() => setIsOpen(false)}
+              onKeyDown={(event) => handleItemKeyDown(event, index)}
+              className="block px-4 py-3 hover:bg-slate-50 transition-colors focus:outline-none focus-visible:bg-slate-50 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-500"
+            >
+              <span className="block text-sm font-semibold text-slate-800">{link.label}</span>
+              <span className="block text-xs text-slate-500 mt-0.5">{link.hint}</span>
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isPastHero, setIsPastHero] = useState(false)
   const [isContactInView, setIsContactInView] = useState(false)
-  const servicesRef = useRef(null)
-  const servicesButtonRef = useRef(null)
-  const serviceItemRefs = useRef([])
-  const pendingFocusIndex = useRef(null)
   // On the homepage, scroll to its inline contact section instead of
   // navigating away (and potentially discarding in-progress form input).
   const pathname = usePathname()
@@ -59,85 +209,11 @@ export default function Navigation() {
 
   const showStickyCTA = isPastHero && !isContactInView
 
-  // A dropdown that survives a route change, a click elsewhere, or Escape.
+  // Each NavDropdown closes itself on a route change; the burger menu is this
+  // component's own state, so it still needs closing here.
   useEffect(() => {
-    setIsServicesOpen(false)
     setIsMenuOpen(false)
   }, [pathname])
-
-  useEffect(() => {
-    if (!isServicesOpen) return
-    const closeOnOutsideClick = (event) => {
-      if (servicesRef.current && !servicesRef.current.contains(event.target)) {
-        setIsServicesOpen(false)
-      }
-    }
-    const closeOnEscape = (event) => {
-      if (event.key !== 'Escape') return
-      setIsServicesOpen(false)
-      // Below the lg breakpoint the desktop nav is display:none, and focusing a
-      // button with no CSS box silently drops focus to the body.
-      const button = servicesButtonRef.current
-      if (button && button.offsetParent !== null) button.focus()
-    }
-    document.addEventListener('pointerdown', closeOnOutsideClick)
-    document.addEventListener('keydown', closeOnEscape)
-    return () => {
-      document.removeEventListener('pointerdown', closeOnOutsideClick)
-      document.removeEventListener('keydown', closeOnEscape)
-    }
-  }, [isServicesOpen])
-
-  useEffect(() => {
-    // Clearing on close matters: a pending index that outlives its menu would
-    // be consumed by the next open and steal focus unasked.
-    if (!isServicesOpen) {
-      pendingFocusIndex.current = null
-      return
-    }
-    if (pendingFocusIndex.current === null) return
-    const index = pendingFocusIndex.current
-    pendingFocusIndex.current = null
-    serviceItemRefs.current[index]?.focus()
-  }, [isServicesOpen])
-
-  // Keyboard activation is handled explicitly rather than leaning on the
-  // button's native Enter/Space behaviour, so the disclosure also supports the
-  // arrow keys a keyboard user expects from a navigation menu.
-  // The item refs only exist once the open menu has committed, so the focus
-  // move is deferred to an effect rather than run alongside the state update.
-  const openServices = (focusIndex) => {
-    pendingFocusIndex.current = focusIndex ?? null
-    setIsServicesOpen(true)
-  }
-
-  // When the menu is already open, focus moves directly. Calling setState with
-  // the value it already holds makes React bail out without re-rendering, so
-  // the focus effect would never run and the pending index would go stale.
-  const handleServicesButtonKeyDown = (event) => {
-    const lastIndex = SERVICE_LINKS.length - 1
-    if (event.key === 'ArrowDown') {
-      event.preventDefault()
-      isServicesOpen ? serviceItemRefs.current[0]?.focus() : openServices(0)
-    } else if (event.key === 'ArrowUp') {
-      event.preventDefault()
-      isServicesOpen ? serviceItemRefs.current[lastIndex]?.focus() : openServices(lastIndex)
-    } else if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault()
-      isServicesOpen ? setIsServicesOpen(false) : openServices()
-    }
-  }
-
-  const handleServicesItemKeyDown = (event, index) => {
-    const lastIndex = SERVICE_LINKS.length - 1
-    if (event.key === 'ArrowDown') {
-      event.preventDefault()
-      serviceItemRefs.current[index === lastIndex ? 0 : index + 1]?.focus()
-    } else if (event.key === 'ArrowUp') {
-      event.preventDefault()
-      serviceItemRefs.current[index === 0 ? lastIndex : index - 1]?.focus()
-    }
-  }
 
   return (
     <>
@@ -202,62 +278,10 @@ export default function Navigation() {
           {/* Desktop Menu — six links plus the CTA need lg; at md they overflow. */}
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-1">
-              <div
-                className="relative"
-                ref={servicesRef}
-                onBlur={(event) => {
-                  // Tabbing past the last item would otherwise leave the panel
-                  // open and floating with no focus inside it.
-                  if (!servicesRef.current?.contains(event.relatedTarget)) {
-                    setIsServicesOpen(false)
-                  }
-                }}
-              >
-                <button
-                  type="button"
-                  ref={servicesButtonRef}
-                  onClick={() => setIsServicesOpen((open) => !open)}
-                  onKeyDown={handleServicesButtonKeyDown}
-                  aria-expanded={isServicesOpen}
-                  aria-controls="services-menu"
-                  className="flex items-center text-slate-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
-                >
-                  Services
-                  <svg
-                    className={`w-4 h-4 ml-1.5 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-
-                {isServicesOpen && (
-                  <div
-                    id="services-menu"
-                    className="absolute left-0 mt-2 w-72 rounded-xl bg-white py-2 shadow-xl ring-1 ring-slate-200"
-                  >
-                    {SERVICE_LINKS.map((link, index) => (
-                      <Link
-                        key={link.href}
-                        href={link.href}
-                        ref={(node) => { serviceItemRefs.current[index] = node }}
-                        onClick={() => setIsServicesOpen(false)}
-                        onKeyDown={(event) => handleServicesItemKeyDown(event, index)}
-                        className="block px-4 py-3 hover:bg-slate-50 transition-colors focus:outline-none focus-visible:bg-slate-50 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-500"
-                      >
-                        <span className="block text-sm font-semibold text-slate-800">{link.label}</span>
-                        <span className="block text-xs text-slate-500 mt-0.5">{link.hint}</span>
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
+              <NavDropdown label="Services" menuId="services-menu" links={SERVICE_LINKS} />
               <a href="/case-studies/" className="text-slate-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Case Studies</a>
               <a href="/about/" className="text-slate-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">About</a>
-              <a href="/blog/" className="text-slate-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Blog</a>
+              <NavDropdown label="Resources" menuId="resources-menu" links={RESOURCE_LINKS} />
               <a href={contactHref} className="bg-accent-400 text-primary-900 px-6 py-2.5 ml-2 rounded-lg text-sm font-semibold hover:bg-accent-500 transition-all shadow-sm hover:shadow-gold">Request a Strategy Call</a>
             </div>
           </div>
@@ -302,7 +326,22 @@ export default function Navigation() {
               </ul>
               <a href="/case-studies/" onClick={() => setIsMenuOpen(false)} className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">Case Studies</a>
               <a href="/about/" onClick={() => setIsMenuOpen(false)} className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">About</a>
-              <a href="/blog/" onClick={() => setIsMenuOpen(false)} className="text-slate-700 hover:text-primary-700 block px-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50">Blog</a>
+              <p id="mobile-resources-heading" className="px-3 pt-2 pb-1 text-xs uppercase tracking-[0.15em] text-slate-500 font-semibold">
+                Resources
+              </p>
+              <ul aria-labelledby="mobile-resources-heading" className="space-y-1">
+                {RESOURCE_LINKS.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      onClick={() => setIsMenuOpen(false)}
+                      className="text-slate-700 hover:text-primary-700 block pl-6 pr-3 py-2 text-base font-medium rounded-lg hover:bg-slate-50"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
               <a href={contactHref} onClick={() => setIsMenuOpen(false)} className="bg-accent-400 text-primary-900 font-semibold block px-3 py-2 text-base rounded-lg hover:bg-accent-500 transition-all shadow-sm">Request a Strategy Call</a>
             </div>
           </div>

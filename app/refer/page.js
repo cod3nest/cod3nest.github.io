@@ -118,7 +118,7 @@ export default function ReferralPage() {
       <main id="main-content">
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+      <section className="pt-24 md:pt-32 pb-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm uppercase tracking-[0.2em] text-accent-400 mb-6 font-medium">
             Referral Program
