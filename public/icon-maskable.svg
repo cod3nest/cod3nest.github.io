@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="cn-mask-title">
+  <title id="cn-mask-title">Codenest</title>
+  <rect width="512" height="512" rx="0" fill="#2C3E50"/>
+  <g transform="translate(129.066 181.177) scale(1.354)">
+<path d="M88.707 18.093 A50 50 0 1 0 88.707 92.407" stroke="#ffffff" stroke-width="12.075" stroke-linecap="round" fill="none"/>
+<path d="M110.207 105.25 L110.207 5.25" stroke="#ffffff" stroke-width="12.075" stroke-linecap="round" fill="none"/>
+<path d="M110.207 5.25 L182.207 105.25" stroke="#ffffff" stroke-width="12.075" stroke-linecap="round" fill="none"/>
+<path d="M182.207 105.25 L182.207 5.25" stroke="#ffffff" stroke-width="12.075" stroke-linecap="round" fill="none"/>
+<path d="M182.207 37.25 L182.207 5.25" stroke="#D4AF37" stroke-width="12.075" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>

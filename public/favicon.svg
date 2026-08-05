@@ -1,50 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <defs>
-    <linearGradient id="favGoldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#B8860B"/>
-      <stop offset="50%" stop-color="#D4AF37"/>
-      <stop offset="100%" stop-color="#B8860B"/>
-    </linearGradient>
-    <linearGradient id="favGoldShine" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#E5C158"/>
-      <stop offset="50%" stop-color="#D4AF37"/>
-      <stop offset="100%" stop-color="#B8860B"/>
-    </linearGradient>
-  </defs>
-
-  <!-- Background with subtle gold border -->
-  <rect x="1" y="1" width="62" height="62" rx="12" fill="#2C3E50"/>
-  <rect x="1" y="1" width="62" height="62" rx="12" fill="none" stroke="url(#favGoldGradient)" stroke-width="1.5"/>
-
-  <g fill="none" fill-rule="evenodd">
-    <!-- Premium CN Monogram -->
-    <g transform="translate(10, 12)">
-      <!-- C - elegant curve -->
-      <path d="M18 4 C8 4, 0 13, 0 22 C0 31, 8 40, 18 40"
-            stroke="#FFFFFF"
-            stroke-width="4.5"
-            stroke-linecap="round"
-            fill="none"/>
-
-      <!-- N - geometric form -->
-      <path d="M24 40 L24 4"
-            stroke="#FFFFFF"
-            stroke-width="4.5"
-            stroke-linecap="round"
-            fill="none"/>
-      <path d="M24 4 L42 40"
-            stroke="#FFFFFF"
-            stroke-width="4.5"
-            stroke-linecap="round"
-            fill="none"/>
-      <path d="M42 40 L42 4"
-            stroke="#FFFFFF"
-            stroke-width="4.5"
-            stroke-linecap="round"
-            fill="none"/>
-
-      <!-- Gold accent bar - prominent -->
-      <rect x="39" y="0" width="5" height="12" rx="2.5" fill="url(#favGoldShine)"/>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="cn-fav-title">
+  <title id="cn-fav-title">Codenest</title>
+  <rect width="64" height="64" rx="12" fill="#2C3E50"/>
+  <g transform="translate(7.654 17.649) scale(0.26)">
+<path d="M88.707 18.093 A50 50 0 1 0 88.707 92.407" stroke="#ffffff" stroke-width="15.225" stroke-linecap="round" fill="none"/>
+<path d="M110.207 105.25 L110.207 5.25" stroke="#ffffff" stroke-width="15.225" stroke-linecap="round" fill="none"/>
+<path d="M110.207 5.25 L182.207 105.25" stroke="#ffffff" stroke-width="15.225" stroke-linecap="round" fill="none"/>
+<path d="M182.207 105.25 L182.207 5.25" stroke="#ffffff" stroke-width="15.225" stroke-linecap="round" fill="none"/>
+<path d="M182.207 37.25 L182.207 5.25" stroke="#D4AF37" stroke-width="15.225" stroke-linecap="round" fill="none"/>
   </g>
 </svg>

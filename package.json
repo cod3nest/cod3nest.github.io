@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/check-content-freshness.js && node scripts/generate-og-cards.js",
+    "prebuild": "node scripts/check-content-freshness.js && npm run assets",
+    "assets": "node scripts/generate-logo.js && node scripts/generate-icons.js && node scripts/generate-og-image.js && node scripts/generate-og-cards.js",
     "og:cards": "node scripts/generate-og-cards.js",
     "build": "next build",
     "start": "next start",
@@ -29,10 +30,11 @@
     "autoprefixer": "^10.4.20",
     "eslint": "^9.23.0",
     "eslint-config-next": "^15.1.6",
+    "opentype.js": "^2.0.0",
     "postcss": "^8.5.25",
+    "sharp": "^0.35.0",
     "tailwindcss": "^3.4.17",
-    "typescript": "^5.7.2",
-    "sharp": "^0.35.0"
+    "typescript": "^5.7.2"
   },
   "overrides": {
     "sharp": "^0.35.0",

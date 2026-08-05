@@ -99,7 +99,7 @@ export default function Footer() {
               <img
                 src="/img/companylogo-light.svg"
                 alt="Codenest - Fractional CTO &amp; CFO for UK startups"
-                width={217}
+                width={232}
                 height={40}
                 className="h-10 w-auto"
               />
