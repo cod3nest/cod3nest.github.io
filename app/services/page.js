@@ -136,10 +136,10 @@ const services =
       track: "business"
     },
     {
-      title: "AI & Data Engineering",
-      benefit: "Turn AI experiments into production revenue",
-      description: "Move beyond prototypes. We build production-grade LLM applications, ML pipelines, and data infrastructure that actually scale.",
-      outcomes: ["Production-ready AI", "Cost-optimized inference", "Scalable data pipelines"],
+      title: "Agentic AI Engineering",
+      benefit: "Get agents past the demo and into production",
+      description: "A knowledge layer over what your business already knows, and the platform that ships agents against it: shared scaffolding, evaluation, guardrails and observability.",
+      outcomes: ["Company brain over internal knowledge", "Evaluation and guardrails before scale", "Cost and latency under control"],
       track: "technical"
     },
     {
