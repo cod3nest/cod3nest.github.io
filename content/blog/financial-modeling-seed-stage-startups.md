@@ -191,6 +191,8 @@ They're not looking for perfect predictions—they're assessing whether you unde
 
 For seed-stage startups, Google Sheets is usually sufficient. The tool matters less than the thinking behind the model.
 
+An AI assistant is a useful reviewer at this point rather than a modelling tool in its own right: it will read a finished model and report which assumptions drive the output, where hardcoded numbers sit inside formulas, and where two tabs contradict each other. Our guide to [how CFOs can use AI in startup finance](/blog/how-cfos-use-ai-startup-finance/) covers that review pass, and the checks you should never delegate to it.
+
 ## Template Structure
 
 A well-organised model typically has these tabs:

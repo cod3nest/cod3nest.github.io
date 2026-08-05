@@ -1,22 +1,24 @@
 ---
-title: 'How CFOs Can Use Claude: A Practical Guide to AI in Startup Finance'
-seoTitle: 'How CFOs Can Use Claude for Startup Finance'
-description: 'A plain-English guide for finance leaders: what Claude does well, where it cannot be trusted, how to handle confidential data, and how to trial it in two weeks.'
+title: 'How CFOs Can Use AI in Startup Finance: A Practical Guide'
+seoTitle: 'How CFOs Can Use AI in Startup Finance'
+description: 'Plain-English guide for finance leaders: seven jobs AI does well, where it cannot be trusted, how to handle confidential data, and how to trial it in two weeks.'
 date: '2026-08-05'
 author: 'Michelle Rana'
 readTime: '11 min read'
 tags: ['Fractional CFO', 'AI', 'Startup Finance']
 ---
 
-# How CFOs Can Use Claude: A Practical Guide to AI in Startup Finance
+# How CFOs Can Use AI in Startup Finance: A Practical Guide
 
 Most finance leaders have now had the same week. Someone forwards an article about AI, the board asks what the company is doing about it, and the honest answer is a shrug. The material available tends to fall into two piles: breathless claims about replacing the finance function, or technical documentation written for engineers.
 
-This guide is neither. It is written for a founder or finance lead who wants to know what an AI assistant like Claude actually does inside a finance function, what it does badly, and what a sensible first month looks like. No coding knowledge is assumed.
+This guide is neither. It is written for a founder or finance lead who wants to know what an AI assistant actually does inside a finance function, what it does badly, and what a sensible first month looks like. No coding knowledge is assumed.
 
-## What Claude Actually Is, in Plain Terms
+Every example below uses Claude, the AI assistant built by Anthropic, because a guide written against a specific tool is more useful than one written against a category. The use cases, the failure modes and the confidentiality rules apply broadly to the assistants a UK startup is likely to be choosing between.
 
-Claude is an AI assistant built by Anthropic. You use it much as you would a chat window or a document editor: you type a request, attach any files it needs, and it responds in writing. It can read what you give it, including PDFs, spreadsheets and exports from your accounting system, and it can produce written analysis, tables, drafts and summaries in return.
+## What an AI Assistant Actually Is, in Plain Terms
+
+You use an assistant like Claude much as you would a chat window or a document editor: you type a request, attach any files it needs, and it responds in writing. It can read what you give it, including PDFs, spreadsheets and exports from your accounting system, and it can produce written analysis, tables, drafts and summaries in return.
 
 Three things about it matter to a finance leader.
 
@@ -28,7 +30,7 @@ Three things about it matter to a finance leader.
 
 There is one honest caveat before any of the use cases below. Claude is a drafting and analysis tool that sits under your review. It is not a filing system of record, it is not an auditor, and it does not carry professional liability. Your name still goes on the board pack.
 
-## Seven Places It Earns Its Keep
+## Seven Finance Jobs AI Does Well
 
 ### 1. Turning Management Accounts Into a Board Narrative
 
@@ -86,7 +88,7 @@ Expenses policy. Approval matrix. Month-end close checklist. Revenue recognition
 
 Describe your company, your stage and your controls, and ask for a first draft. Editing a competent draft into something that fits your business is a different order of task from starting cold.
 
-## Where It Should Not Be Trusted
+## Where AI Should Not Be Trusted With Finance
 
 An honest guide has to be specific about the failure modes.
 
@@ -100,7 +102,7 @@ An honest guide has to be specific about the failure modes.
 
 **Reproducibility is imperfect.** Ask the same question twice and the wording will differ. For anything reported repeatedly, fix the format in a template and require the same structure each time, rather than trusting the assistant to remember what you liked last month.
 
-## Confidentiality and Compliance
+## Confidentiality, UK GDPR and Your Auditor
 
 This is the part finance leaders are right to ask about first, and it is largely a procurement question rather than a technology one.
 
