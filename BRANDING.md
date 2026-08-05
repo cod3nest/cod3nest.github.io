@@ -265,6 +265,16 @@ Assemble pages from these; don't invent parallel patterns:
 - **Blog:** meta description = frontmatter `description`; post CTA is tag-aware
   (finance tags → Fractional CFO CTA, technical tags → Fractional CTO CTA);
   evergreen titles carry no year unless the content is genuinely refreshed annually.
+- **Three blog date fields, and they are not interchangeable** (5 Aug 2026):
+  `date` is when the post was **first** published — write it once, never move it,
+  not for a typo and not for a rewrite; it is `datePublished`. `updated` is when
+  the content last substantively changed; it is `dateModified` and it is what a
+  rewrite moves. `lastVerified` is when a human last checked the post's expiring
+  facts against source; it drives the freshness gate only and never reaches the
+  page. `date` used to absorb all three: six posts had it overwritten on rewrite,
+  which left ten of twenty sharing two dates, published a 2025 post as today's,
+  and dropped the index sort into `readdir` order for half the page. The index
+  sorts on `updated || date` and breaks ties on slug.
 - **Pricing:** **Codenest publishes no prices of its own** (owner, 4 Aug 2026). The
   £3k/£2.5k-per-month anchors are retired from pages, metadata, guides and posts.
   Engagements are described as "scoped to your stage"; the quote comes on the call.

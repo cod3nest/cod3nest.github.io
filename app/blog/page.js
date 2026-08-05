@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { getAllBlogPosts } from '../../lib/blog'
+import { formatDate } from '../../lib/formatDate'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import JsonLd from '../components/JsonLd'
@@ -108,6 +109,18 @@ export default function BlogPage() {
                       {post.description}
                     </p>
                   </div>
+
+                  {/* The index carried no date at all, which is a gap on a blog
+                      and is also what hid ten posts sharing two dates. */}
+                  <p className="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-500">
+                    <time dateTime={post.date}>{formatDate(post.date)}</time>
+                    {post.updated && (
+                      <>
+                        {' · updated '}
+                        <time dateTime={post.updated}>{formatDate(post.updated)}</time>
+                      </>
+                    )}
+                  </p>
                 </article>
               </Link>
             ))}

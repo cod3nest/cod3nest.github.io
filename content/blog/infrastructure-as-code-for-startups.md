@@ -2,7 +2,8 @@
 title: 'Infrastructure as Code for Startups: Why It Matters for Your Next Raise'
 seoTitle: 'Infrastructure as Code for Startups'
 description: 'Why "we click around in the AWS console" is a red flag in due diligence, what investors ask, and how to fix it in the months before you open a round.'
-date: '2026-08-05'
+date: '2025-11-07'
+updated: '2026-08-05'
 author: 'Ankit Rana'
 readTime: '8 min read'
 tags: ['Infrastructure', 'Due Diligence', 'Non-Technical Founders']

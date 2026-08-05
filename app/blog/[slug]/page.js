@@ -5,7 +5,8 @@ import rehypeHighlight from 'rehype-highlight'
 import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 import CusdisComments from '../../components/CusdisComments'
-import { getBlogPost, getAllBlogSlugs } from '../../../lib/blog'
+import { getBlogPost, getAllBlogSlugs, modifiedAt } from '../../../lib/blog'
+import { formatDate } from '../../../lib/formatDate'
 import 'highlight.js/styles/github-dark.css'
 
 export function generateStaticParams() {
@@ -33,6 +34,7 @@ export async function generateMetadata({ params }) {
       description: description,
       type: 'article',
       publishedTime: post.date,
+      modifiedTime: post.updated || post.date,
       authors: [post.author],
       tags: post.tags,
       url: `https://codenest.uk/blog/${slug}/`,
@@ -125,7 +127,10 @@ export default async function BlogPost({ params }) {
     },
     image: 'https://codenest.uk/img/og-default.png',
     datePublished: post.date,
-    dateModified: post.updated || post.date,
+    // `updated` when the content changed, otherwise the publication date. This
+    // read `post.updated` before the field existed on any post, so dateModified
+    // was always a copy of datePublished (site review, 5 Aug 2026).
+    dateModified: modifiedAt(post),
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `https://codenest.uk/blog/${slug}/`
@@ -195,22 +200,30 @@ export default async function BlogPost({ params }) {
             ))}
           </div>
 
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+          {/* font-serif: BRANDING §4 reserves the display face for h1 and section
+              h2. The blog index h1 was corrected for this and the article template
+              was missed, which left every post — the site's main organic entry
+              points — with an off-brand headline. */}
+          <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">
             {post.title}
           </h1>
 
-          <div className="flex items-center gap-4 text-slate-600">
-            <time dateTime={post.date}>
-              {new Date(post.date).toLocaleDateString('en-US', {
-                month: 'long',
-                day: 'numeric',
-                year: 'numeric'
-              })}
-            </time>
-            <span>•</span>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-slate-600">
+            <time dateTime={post.date}>{formatDate(post.date)}</time>
+            <span aria-hidden="true">•</span>
             <span>{post.readTime}</span>
-            <span>•</span>
+            <span aria-hidden="true">•</span>
             <span>{post.author}</span>
+            {/* Only when the content actually changed. `lastVerified` is a
+                fact-check date and deliberately never shown here. */}
+            {post.updated && (
+              <>
+                <span aria-hidden="true">•</span>
+                <span className="text-slate-500">
+                  Updated <time dateTime={post.updated}>{formatDate(post.updated)}</time>
+                </span>
+              </>
+            )}
           </div>
         </header>
 
