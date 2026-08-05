@@ -19,6 +19,25 @@ editorial voice for headlines, and claims you could defend in a due-diligence ro
 - Sitewide metadata + JSON-LD: `app/layout.js`
 - Logo assets: `public/img/companylogo.svg` (light bg), `companylogo-light.svg` (dark bg)
 
+**Section index** — this file is long. Read the sections your change touches rather
+than the whole thing; §13 is the law and settles conflicts.
+
+| § | Covers |
+|---|--------|
+| 1 | Brand essence: name, the two seats, taglines, ICP, the two principals |
+| 2 | Voice & tone: person, banned words, claims and substantiation policy |
+| 3 | Colour: palette, approved pairings, contrast |
+| 4 | Typography: fonts, type scale, serif/sans split |
+| 5 | Layout & surfaces: spacing, containers, overflow rules |
+| 6 | Components: section grammar, CTAs, trust chips, FAQ |
+| 7 | Iconography & imagery: icons, alt text, diagrams vs photography |
+| 8 | Metadata & SEO: titles, schema, canonicals, OG, blog conventions |
+| 9 | Logo: variants and clear space |
+| 10 | Accessibility & quality bar |
+| 11 | Implementation notes: build, export, deploy constraints |
+| 12 | Content strategy guardrails |
+| 13 | Standing rules (the law, with dates) |
+
 ---
 
 ## 1. Brand essence
@@ -241,6 +260,21 @@ Assemble pages from these; don't invent parallel patterns:
   panel is anchored by a label at top and a footnote at bottom with the stack centred
   between them. If a future layout looks stretched or hollow, add content to the
   layers — never let a connector grow without a cap.
+- **Every blog post carries at least one visual, and it should be a diagram.** A
+  prose-only post ships incomplete; a stock photograph on a blog post is never the
+  answer (photography stays on the hero and case studies). A post writes
+  `[diagram:name]` on its own line and the renderer resolves it against
+  `app/components/diagrams/registry.js`, whose entries are *data* passed to the six
+  shapes in `shapes.js` — `Flow`, `Cycle`, `Stack`, `Split`, `Timeline`, `Curve`. An
+  unknown name fails the build; raw SVG in a `.md` file is silently stripped, which is
+  why the marker exists at all. **The diagram carries the post's own argument** — if it
+  restates a table already on the page, it is padding, so diagram the mechanism behind
+  the table instead. **Colour is meaning, not variety:** `trackName` follows the post's
+  track, and inside a `Split` only the recommended column takes `emphasis` — colouring
+  columns decoratively once put gold, the financial accent, on "AWS CDK" in a technical
+  post, which asserts something untrue. Authoring detail: `.claude/docs/blog-authoring.md`.
+  (5 Aug 2026: all twenty posts had no images whatsoever; every one now has a diagram
+  and its own 1200×630 OG card, generated per slug in `prebuild`.)
 
 ## 8. Metadata & SEO conventions
 
