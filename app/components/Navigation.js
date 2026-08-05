@@ -268,13 +268,17 @@ export default function Navigation() {
           <div className="flex items-center">
             <a href="/" className="flex items-center" aria-label="Codenest Home">
               {/* width/height so the header does not reflow when the logo lands.
-                  Not lazy: this is the first thing painted. */}
+                  Not lazy: this is the first thing painted.
+                  h-10, not h-12 (BRANDING §9 permits 40-48px): the mark now sits
+                  closer to the wordmark's cap height, which makes the lockup wider,
+                  and at h-12 it would be 297px against the 293px the links and CTA
+                  leave at the lg breakpoint. */}
               <img
                 src="/img/companylogo.svg"
                 alt="Codenest - Fractional CTO & CFO for UK startups"
-                width={278}
-                height={48}
-                className="h-12 w-auto"
+                width={248}
+                height={40}
+                className="h-10 w-auto"
               />
             </a>
           </div>
