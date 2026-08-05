@@ -6,12 +6,16 @@ import Footer from '../../components/Footer'
 import JsonLd from '../../components/JsonLd'
 import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
 
+// No "London" in the title or keywords. The registered office is in Surrey and
+// the site publishes no London address, so a city in the title was an implied
+// geographic claim nothing on the site supported. `areaServed` is the United
+// Kingdom, and the title now matches it. (BRANDING.md §13.25.)
 export const metadata = {
-  title: 'Fractional CFO Services London for UK Startups',
+  title: 'Fractional CFO Services for UK Startups',
   description: 'Fractional CFO for UK startups, pre-seed to Series A. Financial modelling, fundraising support and investor reporting. Free 30-minute strategy call.',
-  keywords: ['fractional CFO UK', 'fractional CFO London', 'startup CFO', 'FP&A UK', 'financial planning analysis', 'financial strategy', 'startup finance UK', 'part-time CFO'],
+  keywords: ['fractional CFO UK', 'startup CFO', 'FP&A UK', 'financial planning analysis', 'financial strategy', 'startup finance UK', 'part-time CFO'],
   openGraph: {
-    title: 'Fractional CFO Services London | Codenest',
+    title: 'Fractional CFO Services for UK Startups | Codenest',
     description: 'FP&A and financial strategy for UK startups — investor-ready financials without the overhead.',
     type: 'website',
     url: 'https://codenest.uk/services/fractional-cfo/',

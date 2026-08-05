@@ -7,7 +7,7 @@ import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../lib/schema'
 export const metadata = {
   title: 'Refer a UK Startup, Earn Up to £2,000',
   description: 'Refer a UK startup that needs fractional CTO or CFO support and earn up to £2,000 per engagement. For VCs, accelerators and founders.',
-  keywords: ['startup referral program UK', 'refer a startup', 'fractional CTO referral', 'VC referral fees', 'startup partner program London'],
+  keywords: ['startup referral program UK', 'refer a startup', 'fractional CTO referral', 'VC referral fees', 'startup partner program UK'],
   openGraph: {
     title: 'Codenest Referral Program – Earn Up to £2,000',
     description: 'Know a UK founder who needs a fractional CTO or CFO? Refer them to Codenest and earn up to £2,000 per engagement.',

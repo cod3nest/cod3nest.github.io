@@ -39,7 +39,9 @@ editorial voice for headlines, and claims you could defend in a due-diligence ro
   hero badge, "Strategic Advisory" in any form.
 - **The audience (ICP):** UK startup founders on the 0→1 journey, **pre-seed to
   Series A** (one phrasing, everywhere), in fintech, healthtech, and B2B SaaS.
-  London-based, remote-friendly across the UK and Europe.
+  Many of them are London-based; Codenest works remotely across the UK and Europe
+  and claims no London base of its own. Describing a *client* as London-based is
+  fine and true; describing *Codenest* that way is not (§13.25).
 - **The operators:** Codenest is founder-led in each track, and the tracks do not
   overlap. **Ankit Rana, Fractional CTO** — ex-Deloitte Digital, Elavon (US Bancorp),
   Opayo — leads the technical seat. **Michelle Rana FCCA, Fractional CFO** — strategic
@@ -375,10 +377,16 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     office, and the `geo` block is gone rather than re-guessed — it held the generic
     51.5074/-0.1278 London centroid for an address the business does not occupy. The
     footer's "London-based" line was dropped. Put a locality claim back only alongside
-    an address that supports it. **Still open:** the `/services/fractional-cto/` and
-    `/services/fractional-cfo/` page titles both say "London", as do several metadata
-    keywords — decide whether London is a claim Codenest can make before the next
-    metadata pass.
+    an address that supports it. **Closed 5 Aug 2026:** "London" is out of both service
+    page titles and OG titles, and out of the `fractional CTO/CFO London` keywords in
+    `app/layout.js` and the referral page. The titles now say "for UK Startups", which
+    matches `areaServed`. This gave up a title-tag signal for "fractional CFO London",
+    a high-intent query — the owner accepted that cost rather than keep a geographic
+    claim the site cannot support. **What stays:** London in *client* and *market*
+    context is true and permitted — Rungway as a London-based startup, the anonymised
+    London testimonials (§2.3), and London salary benchmarks in the guides. Only claims
+    about where Codenest itself sits are barred. If a London presence is ever
+    established, reinstate the targeting and the address together, never separately.
 26. **The Services dropdown is the two seats, nothing else.** "All Services" was removed
     from it (4 Aug 2026): every route out of `/services` leads back to one of those two
     pages, so it was a third nav slot reaching nothing new — and a third page competing

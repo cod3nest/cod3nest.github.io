@@ -6,12 +6,16 @@ import Footer from '../../components/Footer'
 import JsonLd from '../../components/JsonLd'
 import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
 
+// No "London" in the title or keywords. The registered office is in Surrey and
+// the site publishes no London address, so a city in the title was an implied
+// geographic claim nothing on the site supported. `areaServed` is the United
+// Kingdom, and the title now matches it. (BRANDING.md §13.25.)
 export const metadata = {
-  title: 'Fractional CTO Services London for UK Startups',
+  title: 'Fractional CTO Services for UK Startups',
   description: 'Fractional CTO for UK startups, pre-seed to Series A. Architecture, engineering hiring and due diligence preparation. Free 30-minute strategy call.',
-  keywords: ['fractional CTO UK', 'fractional CTO London', 'part-time CTO', 'startup CTO', 'technical leadership', 'CTO as a service', 'interim CTO UK', 'fractional CTO cost', 'startup technical leadership'],
+  keywords: ['fractional CTO UK', 'part-time CTO', 'startup CTO', 'technical leadership', 'CTO as a service', 'interim CTO UK', 'fractional CTO cost', 'startup technical leadership'],
   openGraph: {
-    title: 'Fractional CTO Services London | Codenest',
+    title: 'Fractional CTO Services for UK Startups | Codenest',
     description: 'Engineering rigour and technical leadership for UK startups — without the overhead.',
     type: 'website',
     url: 'https://codenest.uk/services/fractional-cto/',

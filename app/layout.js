@@ -26,8 +26,6 @@ export const metadata = {
   keywords: [
     'fractional CTO UK',
     'fractional CFO UK',
-    'fractional CTO London',
-    'fractional CFO London',
     'startup technical leadership UK',
     'startup financial modelling',
     'technical co-founder UK',
