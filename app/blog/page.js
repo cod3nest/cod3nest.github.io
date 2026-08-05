@@ -8,7 +8,7 @@ import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../lib/schema'
 export const metadata = {
   title: 'Fractional CTO & CFO Insights for UK Founders',
   description: 'Practical guidance for startup founders on technical leadership, startup finance, fundraising, and scaling from 0 to 1.',
-  keywords: ['fractional CTO', 'fractional CFO', 'startup engineering blog', 'startup finance blog', 'financial modeling', 'fundraising', 'GitOps', 'Infrastructure as Code', 'startup scaling'],
+  keywords: ['fractional CTO', 'fractional CFO', 'startup engineering blog', 'startup finance blog', 'financial modelling', 'fundraising', 'GitOps', 'Infrastructure as Code', 'startup scaling'],
   openGraph: {
     title: 'Codenest Blog — Fractional CTO & CFO Insights',
     description: 'Practical lessons on technical leadership, startup finance, fundraising, and scaling from 0 to 1.',
@@ -64,8 +64,11 @@ export default function BlogPage() {
       {/* Hero Section */}
       <section className="pt-24 md:pt-32 pb-12 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Not a bare "Insights": the h1 carried no term the page is trying to
+              rank for while its own title tag targeted both seats (§8). The nav
+              and footer both call this page Blog. */}
           <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Insights
+            Fractional CTO &amp; CFO Insights
           </h1>
           <p className="text-lg text-slate-600">
             Practical guidance for startup founders on technical leadership, finance, and scaling.

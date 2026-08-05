@@ -294,4 +294,4 @@ Track them monthly. Improve them systematically. Present them honestly to invest
 
 ---
 
-*Need help building your financial model and unit economics? Our [fractional CFO services](/services/fractional-cfo/) include metrics analysis and investor-ready financial modeling.*
+*Need help building your financial model and unit economics? Our [fractional CFO services](/services/fractional-cfo/) include metrics analysis and investor-ready financial modelling.*

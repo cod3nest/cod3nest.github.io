@@ -160,7 +160,7 @@ export default function RootLayout({ children }) {
       'Fractional CFO Services',
       'Startup Engineering',
       'MVP Development',
-      'Financial Modeling',
+      'Financial Modelling',
       'Fundraising',
       'Startup Financial Strategy',
       'Technical Co-founder Partnerships',

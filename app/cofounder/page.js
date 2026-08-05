@@ -95,7 +95,7 @@ export default function CofounderPage() {
   const whatIBring = [
     '15+ years building scalable platforms (Opayo by Elavon, HSBC, AstraZeneca, startups)',
     'Full-stack technical leadership (architecture, engineering, DevOps)',
-    'Financial modeling and investor-readiness expertise',
+    'Financial modelling and investor-readiness expertise',
     'Experience scaling teams from 5 to 50+ engineers',
     'Series A due diligence and fundraising support',
     'AWS, Kubernetes, microservices, AI/ML integration'
@@ -164,7 +164,7 @@ export default function CofounderPage() {
               Technical Co-founder
             </p>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Looking for a Technical<br />Co-founder in the UK?
+              Looking for a Technical <br />Co-founder in the UK?
             </h1>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto leading-relaxed">
               I'm selectively open to co-founding the right company. If you're an exceptional founder with a compelling vision, let's explore whether we're a fit.

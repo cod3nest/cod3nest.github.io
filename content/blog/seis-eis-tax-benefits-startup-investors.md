@@ -183,7 +183,7 @@ Apply before you start fundraising. Having HMRC confirmation makes investor conv
 If raising more than £250k, structure as SEIS for the first £250k, then EIS for the rest. This maximizes investor tax benefits.
 
 ### 3. Work with Experienced Advisors
-SEIS/EIS has nuances and traps. Use a lawyer and accountant who specialize in startup fundraising to ensure compliance.
+SEIS/EIS has nuances and traps. Use a lawyer and accountant who specialise in startup fundraising to ensure compliance.
 
 ### 4. Document Everything
 Keep clear records of:

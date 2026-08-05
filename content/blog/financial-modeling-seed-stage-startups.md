@@ -1,16 +1,16 @@
 ---
-title: 'Financial Modeling for Seed-Stage Startups: A Practical Guide'
-seoTitle: 'Financial Modeling for Seed-Stage Startups'
+title: 'Financial Modelling for Seed-Stage Startups: A Practical Guide'
+seoTitle: 'Financial Modelling for Seed-Stage Startups'
 description: 'What investors actually want to see in your financial model—revenue projections, unit economics, and scenario planning that builds confidence.'
 date: '2025-10-15'
 author: 'Michelle Rana'
 readTime: '8 min read'
-tags: ['Financial Modeling', 'Startup Finance']
+tags: ['Financial Modelling', 'Startup Finance']
 ---
 
-# Financial Modeling for Seed-Stage Startups: A Practical Guide
+# Financial Modelling for Seed-Stage Startups: A Practical Guide
 
-You're preparing to raise your seed round. An investor asks: "Walk me through your financial model." If that question makes you nervous, you're not alone. Most first-time founders struggle with financial modeling—not because it's impossibly complex, but because no one teaches you what investors actually want to see.
+You're preparing to raise your seed round. An investor asks: "Walk me through your financial model." If that question makes you nervous, you're not alone. Most first-time founders struggle with financial modelling—not because it's impossibly complex, but because no one teaches you what investors actually want to see.
 
 This guide breaks down exactly how to build a financial model that satisfies investors while helping you run your business better.
 
@@ -180,7 +180,7 @@ Based on conversations with seed and Series A investors, here's what they focus 
 
 They're not looking for perfect predictions—they're assessing whether you understand your business drivers and can think clearly about the future.
 
-## Tools for Financial Modeling
+## Tools for Financial Modelling
 
 | Tool | Best For | Cost |
 |------|----------|------|
@@ -213,7 +213,7 @@ A well-organised model typically has these tabs:
 3. **Update monthly:** A model is only useful if it reflects current reality
 4. **Get feedback:** Have a CFO or financial advisor review before investor meetings
 
-Financial modeling is a skill that improves with practice. Your first model won't be perfect—but building it will force you to think rigorously about your business, and that clarity is valuable whether or not you raise funding.
+Financial modelling is a skill that improves with practice. Your first model won't be perfect—but building it will force you to think rigorously about your business, and that clarity is valuable whether or not you raise funding.
 
 ---
 

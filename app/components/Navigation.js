@@ -267,9 +267,13 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
             <a href="/" className="flex items-center" aria-label="Codenest Home">
+              {/* width/height so the header does not reflow when the logo lands.
+                  Not lazy: this is the first thing painted. */}
               <img
                 src="/img/companylogo.svg"
                 alt="Codenest - Fractional CTO & CFO for UK startups"
+                width={260}
+                height={48}
                 className="h-12 w-auto company-logo"
               />
             </a>

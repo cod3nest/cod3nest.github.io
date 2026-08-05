@@ -162,7 +162,7 @@ export default function RunwayCalculatorPage() {
             Need Help Extending Your Runway?
           </h2>
           <p className="text-xl text-primary-100 mb-8">
-            Our fractional CFO services help startups optimize burn rate, build financial models, and prepare for fundraising.
+            Our Fractional CFO service helps startups optimise burn rate, build financial models, and prepare for fundraising.
           </p>
           <a
             href="/contact/"

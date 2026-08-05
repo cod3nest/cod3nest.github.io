@@ -1,6 +1,7 @@
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import CopyButton from '../components/CopyButton'
+import ReferralForm from '../components/ReferralForm'
 import JsonLd from '../components/JsonLd'
 import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../lib/schema'
 
@@ -124,7 +125,7 @@ export default function ReferralPage() {
             Referral Program
           </p>
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Know a Founder Who<br />Needs Technical Help?
+            Know a Founder Who <br />Needs Technical Help?
           </h1>
           <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
             Earn up to £2,000 for every successful introduction. Help founders get the leadership they need while getting rewarded for your network.
@@ -232,7 +233,7 @@ export default function ReferralPage() {
                 </li>
                 <li className="flex items-center gap-3 text-slate-700">
                   <span className="w-2 h-2 bg-primary-500 rounded-full"></span>
-                  Financial modeling & fundraising support
+                  Financial modelling & fundraising support
                 </li>
                 <li className="flex items-center gap-3 text-slate-700">
                   <span className="w-2 h-2 bg-primary-500 rounded-full"></span>
@@ -281,7 +282,7 @@ export default function ReferralPage() {
       <section id="refer-form" className="py-20 bg-slate-900 text-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 id="refer-form-heading" className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">
               Make a Referral
             </h2>
             <p className="text-lg text-slate-300">
@@ -292,96 +293,7 @@ export default function ReferralPage() {
             </p>
           </div>
 
-          <form className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-sm font-medium text-slate-300 mb-2">
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  name="referrer_name"
-                  className="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-400 focus:ring-2 focus:ring-accent-500 focus:border-transparent"
-                  placeholder="Jane Smith"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-slate-300 mb-2">
-                  Your Email
-                </label>
-                <input
-                  type="email"
-                  name="referrer_email"
-                  className="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-400 focus:ring-2 focus:ring-accent-500 focus:border-transparent"
-                  placeholder="jane@company.com"
-                />
-              </div>
-            </div>
-
-            <div className="border-t border-slate-700 pt-6">
-              <p className="text-sm text-slate-400 mb-4">Founder you're referring:</p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-sm font-medium text-slate-300 mb-2">
-                  Founder's Name
-                </label>
-                <input
-                  type="text"
-                  name="founder_name"
-                  className="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-400 focus:ring-2 focus:ring-accent-500 focus:border-transparent"
-                  placeholder="Alex Johnson"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-slate-300 mb-2">
-                  Founder's Email
-                </label>
-                <input
-                  type="email"
-                  name="founder_email"
-                  className="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-400 focus:ring-2 focus:ring-accent-500 focus:border-transparent"
-                  placeholder="alex@startup.com"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-slate-300 mb-2">
-                Company Name
-              </label>
-              <input
-                type="text"
-                name="company_name"
-                className="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-400 focus:ring-2 focus:ring-accent-500 focus:border-transparent"
-                placeholder="Startup Ltd"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-slate-300 mb-2">
-                What do they need help with?
-              </label>
-              <textarea
-                name="context"
-                rows={4}
-                className="w-full px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-slate-400 focus:ring-2 focus:ring-accent-500 focus:border-transparent resize-none"
-                placeholder="e.g., They're building a fintech app, need help with architecture decisions and preparing for their seed round..."
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-accent-400 text-primary-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-accent-500 transition-all shadow-gold hover:shadow-gold-lg"
-            >
-              Submit Referral
-            </button>
-
-            <p className="text-xs text-slate-400 text-center">
-              We'll reach out to them within 48 hours and keep you updated on the progress.
-            </p>
-          </form>
+          <ReferralForm />
         </div>
       </section>
 
@@ -403,7 +315,7 @@ export default function ReferralPage() {
               <hr className="border-slate-200" />
               <p>Hi [Founder Name],</p>
               <p>
-                I wanted to connect you with Ankit from Codenest. He helps startups with fractional CTO/CFO support — technical architecture, financial modeling, fundraising prep, that kind of thing.
+                I wanted to connect you with Ankit from Codenest. He helps startups with fractional CTO/CFO support — technical architecture, financial modelling, fundraising prep, that kind of thing.
               </p>
               <p>
                 Given what you mentioned about [their specific challenge], I thought it might be worth a conversation.
@@ -421,7 +333,7 @@ export default function ReferralPage() {
 
 Hi [Founder Name],
 
-I wanted to connect you with Ankit from Codenest. He helps startups with fractional CTO/CFO support — technical architecture, financial modeling, fundraising prep, that kind of thing.
+I wanted to connect you with Ankit from Codenest. He helps startups with fractional CTO/CFO support — technical architecture, financial modelling, fundraising prep, that kind of thing.
 
 Given what you mentioned about [their specific challenge], I thought it might be worth a conversation.
 
@@ -474,7 +386,7 @@ I'll leave you both to connect.
                 </svg>
               </summary>
               <div className="px-6 pb-6 text-slate-600">
-                Absolutely. There's no limit to how many referrals you can make. Each successful referral earns its own fee.
+                No limit — each successful referral earns its own fee.
               </div>
             </details>
 

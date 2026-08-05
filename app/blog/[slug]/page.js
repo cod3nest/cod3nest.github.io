@@ -138,7 +138,7 @@ export default async function BlogPost({ params }) {
   // Route the end-of-post CTA to the service the post actually supports:
   // finance-tagged posts sell the Fractional CFO service unless an explicitly
   // technical tag overrides (e.g. technical due-diligence, CTO cost guides).
-  const FINANCE_TAGS = ['Fractional CFO', 'Finance', 'Startup Finance', 'Financial Modeling', 'Fundraising', 'Cash Management', 'Unit Economics', 'Data Room', 'Metrics']
+  const FINANCE_TAGS = ['Fractional CFO', 'Finance', 'Startup Finance', 'Financial Modelling', 'Fundraising', 'Cash Management', 'Unit Economics', 'Data Room', 'Metrics']
   const TECH_OVERRIDE_TAGS = ['Fractional CTO', 'Technical Leadership', 'Infrastructure']
   const postTags = post.tags ?? []
   const isFinancePost =
@@ -147,7 +147,7 @@ export default async function BlogPost({ params }) {
   const cta = isFinancePost
     ? {
         heading: 'Need investor-ready financials?',
-        body: 'Our Fractional CFO service covers financial modeling, runway planning, and data rooms that stand up to due diligence.',
+        body: 'Our Fractional CFO service covers financial modelling, runway planning, and data rooms that stand up to due diligence.',
         href: '/services/fractional-cfo/',
         label: 'Explore Fractional CFO Services',
       }

@@ -6,10 +6,14 @@ import Navigation from './components/Navigation'
 // crawlable soft-404). Next already adds noindex to not-found pages, but not a
 // canonical — so without this the 404 inherited the root layout's and told Google the
 // 404 page IS the homepage.
+// `robots` is set here as well: the page inherited the root layout's
+// "index, follow" alongside Next's own noindex, so the built page shipped two
+// contradictory robots tags. noindex wins either way, but only by accident.
 export const metadata = {
   title: 'Page Not Found',
   description: 'The page you are looking for does not exist or has been moved.',
   alternates: { canonical: 'https://codenest.uk/404/' },
+  robots: { index: false, follow: false },
 }
 
 export default function NotFound() {

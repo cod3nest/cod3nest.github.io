@@ -311,7 +311,7 @@ export default function RunwayCalculator() {
           <div className="bg-accent-50 rounded-2xl p-8 border border-accent-200">
             <h3 className="text-lg font-bold text-slate-900 mb-2">Email me my 12-month projection</h3>
             <p className="text-sm text-slate-600 mb-4">
-              We&apos;ll send this summary to your inbox — and if you want help extending your runway, our fractional CFO service covers burn-rate optimisation and cash management.
+              We&apos;ll send this summary to your inbox — and if you want help extending your runway, our Fractional CFO service covers burn-rate optimisation and cash management.
             </p>
             {emailStatus.state === 'sent' ? (
               <p className="text-sm font-medium text-green-700">{emailStatus.message}</p>

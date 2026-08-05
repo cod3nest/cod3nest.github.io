@@ -129,7 +129,7 @@ const services =
       track: "technical"
     },
     {
-      title: "Financial Modeling",
+      title: "Financial Modelling",
       benefit: "Know your numbers before investors ask",
       description: "3-statement models, unit economics, and scenario planning. Financial models that stand up to due diligence scrutiny.",
       outcomes: ["3-statement models", "Unit economics analysis", "Scenario planning"],

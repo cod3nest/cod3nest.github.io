@@ -129,7 +129,7 @@ export default function FractionalCFOGuidePage() {
                 Complete Guide
               </span>
               <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-                The Complete Guide to<br />Fractional CFO Services in the UK
+                The Complete Guide to <br />Fractional CFO Services in the UK
               </h1>
               <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-8">
                 Everything UK founders need to know about hiring a fractional CFO: what they do, what they cost, when to bring one in, and how to choose the right one.
