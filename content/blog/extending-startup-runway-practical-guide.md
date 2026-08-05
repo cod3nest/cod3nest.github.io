@@ -51,7 +51,7 @@ Runway extension comes down to two variables: reduce burn or increase revenue. H
 
 ### Lever 1: Headcount Optimisation
 
-People costs typically represent 60-80% of startup burn. This is your biggest lever.
+For most early-stage software startups, people are the largest line in the burn by a wide margin. Check your own figure before pulling any other lever, because it decides where the effort is worth spending.
 
 **Before hiring:**
 - Can this role wait 3 months?
@@ -133,12 +133,14 @@ Before raising more equity, explore non-dilutive options:
 Lenders like Clearco, Pipe, and Capchase advance cash against your future revenue. Useful for bridging short-term gaps, but expensive (effective rates of 15-30% annually).
 
 **R&D tax credits:**
-UK startups can claim back a portion of qualifying R&D spend. For SMEs, this can be 25-33% of eligible costs. Many founders leave this money on the table.
+UK startups can claim back a portion of qualifying R&D spend, and many founders leave this money on the table. The rules changed substantially: the separate SME and RDEC schemes were replaced for accounting periods beginning on or after 1 April 2024, so guidance written before then no longer describes what you can claim.
 
-| Scheme | Benefit | Eligibility |
-|--------|---------|------------|
-| SME R&D Relief | 25-33% of qualifying spend | <500 employees, <£86m turnover |
-| RDEC | 13% credit | Larger companies or subcontracted R&D |
+| Scheme | Benefit | Who it is for |
+|---|---|---|
+| Merged R&D expenditure credit | 20% expenditure credit, which is itself taxable | The default route for most companies |
+| Enhanced R&D intensive support (ERIS) | An extra 86% deduction on qualifying costs, plus a payable credit worth up to 14.5% of the surrendered loss | Loss-making SMEs that are R&D intensive |
+
+You cannot claim under both for the same expenditure. Which route applies, and what it is worth after tax, depends on your numbers, so treat this as a prompt to ask your accountant rather than a calculation to run yourself. Rates and thresholds in this area change at most fiscal events; confirm the current position before you build it into a forecast.
 
 **Grants:**
 Innovate UK, Horizon Europe, and sector-specific grants provide non-dilutive funding. Competitive and time-consuming, but worth exploring for the right projects.
