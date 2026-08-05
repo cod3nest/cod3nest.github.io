@@ -524,7 +524,9 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     written permission from Regeno to be named is not on file here, and getting it is
     an owner action, not a blocker the site re-litigates.
     **Homepage strip, 5 Aug 2026 (owner).** Two labelled groups:
-    **"Codenest clients"** — Regeno, Opayo by Elavon, AstraZeneca — above
+    **"Codenest clients"** — Regeno, Opayo by Elavon, AstraZeneca, HSBC and
+    Deloitte Digital (the last two added 5 Aug 2026: Jul 2018 – Aug 2019, after the
+    firm's Aug 2017 boundary, and the HSBC work was delivered through Deloitte) — above
     **"Founder track record includes"** — Rungway and Dishoom. Never merge the groups
     back into one strip, and never move a mark between them without the engagement
     itself changing.

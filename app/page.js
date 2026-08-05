@@ -298,13 +298,15 @@ export default function Home() {
 
       {/* Social proof, in two labelled groups.
           The strip carried one caption — "Founder track record includes" — which was
-          accurate only while Codenest had no clients in it. Three of these five marks
-          are client engagements: Regeno, and Opayo and AstraZeneca, which were
-          mislabelled as founder track record on the owner's correction of 5 Aug 2026
-          (Opayo ran Aug 2019 – Jun 2026, squarely Codenest-era; see §13.11).
-          Only Rungway (predates the firm) and Dishoom (Michelle's employer) are
-          founder track record — §13.15. Do not move a mark between groups without
-          the engagement itself changing. */}
+          accurate only while Codenest had no clients in it. Five of these seven marks
+          are client engagements: Regeno, Opayo, AstraZeneca, HSBC and Deloitte
+          Digital. Opayo and AstraZeneca were mislabelled as founder track record
+          until the owner's correction of 5 Aug 2026 (Opayo ran Aug 2019 – Jun 2026,
+          squarely Codenest-era; see §13.11).
+          The test is the firm's August 2017 boundary, not how the name feels: an
+          enterprise logo is not automatically pedigree. Only Rungway (Aug 2016 –
+          Aug 2017) and Dishoom (Michelle's employer) fall before it — §13.15.
+          Do not move a mark between groups without the engagement itself changing. */}
       <section className="py-12 bg-slate-50/50 border-y border-slate-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-xs text-slate-500 mb-8 uppercase tracking-[0.2em] font-medium">Codenest clients</p>
@@ -336,6 +338,26 @@ export default function Home() {
               <img
                 src="/img/clients/astrazeneca.png"
                 alt="AstraZeneca"
+                className="h-8 w-auto object-contain"
+              />
+            </div>
+
+            {/* HSBC and Deloitte Digital - Jul 2018 to Aug 2019, so both sit after
+                the firm's Aug 2017 boundary and belong in this group, not the one
+                below. The HSBC and AstraZeneca work was delivered through Deloitte
+                Digital; all three are the same engagement window (BRANDING §13.11). */}
+            <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm transition-all cursor-default">
+              <img
+                src="/img/clients/hsbc.png"
+                alt="HSBC"
+                className="h-8 w-auto object-contain"
+              />
+            </div>
+
+            <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm transition-all cursor-default">
+              <img
+                src="/img/clients/deloitte.png"
+                alt="Deloitte Digital"
                 className="h-8 w-auto object-contain"
               />
             </div>
