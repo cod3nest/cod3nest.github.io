@@ -28,6 +28,12 @@ so it goes in `docs/`.
 | `docs/` | Everything else written for humans: reviews, plans, notes. |
 | `.claude/` | Claude Code runtime config (`launch.json`, `settings.local.json`). Never instructions — they would be invisible to every other tool. |
 
+**`CLAUDE.md` exists only at the repo root, and only as the symlink to this file.** Never
+create one in a subdirectory. Claude Code auto-loads them when it touches that directory,
+so a stray one silently injects itself into sessions while remaining invisible to every
+other tool. `.gitignore` blocks them everywhere but the root; four had been committed
+under `app/` and `.github/`, and one reached `public/`, which is published verbatim.
+
 ## Commands
 
 ```bash
@@ -69,6 +75,10 @@ Nothing below errors — it ships looking wrong:
 - Page `title` must NOT contain "| Codenest" — the template appends it.
 - Canonicals and sitemap URLs carry a trailing slash (`trailingSlash: true`).
 - A stale `lastVerified` in a post **fails the build** via `prebuild`.
+- `.env` is **committed deliberately** and `.gitignore` also lists it, which does nothing
+  to an already-tracked file. `git rm --cached .env` still builds green and silently stops
+  every form on the site from sending. The keys are all `NEXT_PUBLIC_`, so they ship in the
+  client bundle anyway — committing them exposes nothing extra.
 
 ## Definition of Done
 
