@@ -96,20 +96,20 @@ export default function FractionalCTOPage() {
 
   // The capability the market is asking for right now, given its own band rather
   // than a bullet inside "What We Do". Each block describes work Codenest does,
-  // not a claim about results — the Regono engagement is live and its outcome
+  // not a claim about results — the Regeno engagement is live and its outcome
   // figures are not published yet (§13.28).
   const agenticLayers = [
     {
       title: "The company brain",
-      description: "One retrieval layer over your own documents, systems and process, so that people and agents answer from what the business already knows rather than from whatever fits in a prompt.",
+      description: "One queryable layer over your own documents, records and process, exposed to agents over MCP, so that people and agents answer from what the business already knows rather than from whatever fits in a prompt.",
     },
     {
       title: "The AI factory",
-      description: "The platform underneath agent delivery: shared scaffolding, an evaluation harness, guardrails, deployment and observability. It is what stops the tenth agent costing what the first one did.",
+      description: "The platform underneath agent delivery: typed workflow graphs, an isolated sandbox per run, bounded test and review loops, merge gates you control, and a ledger of every decision. It is what stops the tenth agent costing what the first one did.",
     },
     {
-      title: "Evaluation before scale",
-      description: "An agent with no evaluation harness is a demo. Measurement goes in before volume does, so you can tell a real regression from a bad afternoon.",
+      title: "Evaluation and learning",
+      description: "An agent with no evaluation harness is a demo. Measurement goes in before volume does, and what each run learns is captured and recalled into the next, so the system gets cheaper as it runs rather than dearer.",
     },
     {
       title: "Cost and latency discipline",
@@ -120,7 +120,7 @@ export default function FractionalCTOPage() {
   const faqs = [
     {
       question: "Do you build agentic AI, or only advise on it?",
-      answer: "Build. Ankit is currently building a company brain and an AI factory at Regono: a retrieval layer over internal knowledge, and the platform that puts agents into production against it. The person advising on the architecture is the person writing it."
+      answer: "Build. Regeno is a current Codenest client, and the engagement is a company brain and an AI factory: a queryable layer over their own records, and a delivery platform that takes a ticket from Linear, GitHub or Slack and drives it to a merged pull request unattended. The person advising on the architecture is the person writing it."
     },
     {
       question: "Everyone is telling us to build AI agents. How do you decide whether we should?",
@@ -256,7 +256,7 @@ export default function FractionalCTOPage() {
         credentials={['AWS Certified', '15+ years engineering', 'Kubernetes & Cloud', 'Agentic AI']}
         bio="Fifteen years building and scaling technology platforms: payment processors at Deloitte Digital and Elavon (US Bancorp), then startups going through hypergrowth across fintech, healthtech and proptech. He has sat on the receiving end of technical due diligence, which is the fastest way to learn what it actually tests."
         highlights={[
-          'Currently building a company brain and an AI factory at Regono: retrieval over internal knowledge, and the platform that ships agents against it',
+          'Leads the Regeno engagement, a current Codenest client: a company brain over their own records, and an AI factory that drives a ticket to a merged pull request unattended',
           'Led engineering teams from 5 to 50+ across fintech and healthtech',
           'Ran a near seven-year platform transformation at Opayo by Elavon: AWS EKS migration, GitOps, a payments monolith moved to microservices',
           'Rebuilt Rungway as its interim CTO, taking the platform from 5 to 1,000+ concurrent users with a zero-downtime migration',
@@ -358,7 +358,7 @@ export default function FractionalCTOPage() {
                 Most companies have AI pilots. Far fewer have anything underneath them: no shared knowledge layer, no evaluation, no way to ship the second agent faster than the first. That gap is the work.
               </p>
               <Link href="/case-studies/" className="inline-flex items-center gap-2 font-semibold text-accent-300 hover:text-accent-200">
-                See the Regono engagement
+                See the Regeno engagement
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>

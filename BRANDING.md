@@ -224,7 +224,7 @@ Assemble pages from these; don't invent parallel patterns:
   `accent-400`+`text-primary-900` (financial). No emoji (§2.6). No icon fonts.
 - Alt text: logos are always `Codenest - Fractional CTO & CFO for UK startups`;
   content images describe the content, no keyword stuffing.
-- **A schematic beats a stock photo when no real photo exists.** The Regono case
+- **A schematic beats a stock photo when no real photo exists.** The Regeno case
   study renders a labelled charcoal stack of its platform layers rather than
   `service-ai.jpg`, which is an off-palette blue 3D "AI" render that says nothing.
   `PlatformDiagram` in `app/case-studies/page.js` takes the layers as data; a study
@@ -356,6 +356,13 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     ItemList schema all say "Fractional CTO" and name Ankit. It previously advertised
     "Fractional CTO & CFO Outcomes" against no CFO content. Restore the dual framing in
     the same change that adds a CFO study, and never ahead of one.
+    **Codenest now has a client, and the page distinguishes it** (owner, 5 Aug 2026):
+    Regeno is a Codenest client engagement; Rungway, Opayo and AstraZeneca predate the
+    firm and are Ankit's own track record. Every card carries a `kind` label above its
+    title saying which it is — "Codenest client engagement" or "Founder track record".
+    Do not drop those labels to make the page look like a client wall; the whole
+    reason the distinction is drawn in copy is that the page can no longer rely on
+    "none of these are clients" being true. Any study added later needs a `kind`.
 16. **Michelle covers both operational finance and fundraising.** Her CV documents the
     operational side in detail — multi-site P&L, budgeting and rolling forecasts,
     controls and governance, margin and procurement, Board reporting — and the owner
@@ -448,16 +455,56 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     observability. It stays a capability *inside* the Fractional CTO seat: it is not
     a nav destination, not a page of its own, and not a fifth entry in the layout's
     offer catalogue (§8, §13.26).
-29. **Regono is a live engagement, and the site says so.** (Owner, 5 Aug 2026.) It is
+29. **Regeno is a live engagement, and the site says so.** (Owner, 5 Aug 2026.) It is
     the first `/case-studies` entry that has not finished, so it breaks the card's
     usual shape on purpose: a status pill, headings relabelled to Brief / Build /
     What Is Being Built, and **no outcome figures at all**. The card prints a note
     stating that figures go up once measured and client-approved, which is §13.4
     made visible rather than an apology for a gap. Do not invent a metric, sector,
     funding stage, team size or timeline for it; get them from the owner, then drop
-    `status` and `note` together with the real numbers. Regono is **not** in the
+    `status` and `note` together with the real numbers. Regeno is **not** in the
     homepage logo strip — that strip is captioned "Founder track record includes"
     and is not a client wall (§13.15). The study attributes the work to Ankit by
-    name, as the other three do; whether Regono may additionally be described as a
-    Codenest *client*, and whether it has given permission to be named at all, is
-    unconfirmed and needs the owner before any copy claims it.
+    name, as the other three do.
+    **Confirmed 5 Aug 2026: Regeno is a client of Codenest** — the firm's first named
+    client engagement, and the first proof on the site that is not founder track
+    record. Copy may say so directly; `/case-studies`, the CTO page FAQ, the
+    PrincipalBand highlight and `/about` all do. The owner directed the naming twice;
+    written permission from Regeno to be named is not on file here, and getting it is
+    an owner action, not a blocker the site re-litigates.
+    **Homepage strip, done 5 Aug 2026 (owner).** It is now two labelled groups:
+    **"Codenest clients"** (Regeno) above **"Founder track record includes"** (Rungway,
+    Opayo, AstraZeneca, Dishoom). The founder caption and the four marks under it are
+    untouched — the fix was to stop that caption having to cover a client, not to
+    reword it. Never merge the two groups back into one strip, and never move a mark
+    between them without the engagement changing.
+    **Regeno renders as a wordmark, not a logo.** No asset has been supplied, and a
+    client's brand asset is not Codenest's to lift from their codebase. The slot takes
+    an `<img>` the moment Regeno provides one; until then the text treatment matches
+    Rungway's name-and-sector block. Sector is "Agritech" — land-management and
+    compliance software for UK farmers.
+
+    **Spelling: Regeno.** It was first published as "Regono" and corrected the same
+    day. The company is `regeno.farm`; check the spelling against the source repos,
+    never against earlier site copy.
+
+    **Grounded 5 Aug 2026** against the owner's own repositories
+    (`~/workspace/regeno`), which replaced the first draft's generic description:
+    - **AI factory = Reggie** (`regeno/harlan`). It takes a unit of work from a
+      Linear ticket, GitHub issue or Slack message and drives it to a merged pull
+      request, unattended, with a ledger of every decision. Typed workflow graphs
+      (agent / action / wait nodes over guarded edges), an isolated sandbox per
+      run, bounded test and review re-entry, operator-set merge policy, MCP tool
+      bridging, and a learning loop that ranks each run's lessons back into later
+      runs on the same repository.
+    - **Regeno's own product** (`regeno/monorepo`) is land-management and
+      compliance software for UK farmers — SFI, Countryside Stewardship, Red
+      Tractor, environmental schemes — where evidence arrives as documents,
+      photographs, audio and video. That sector detail is now in the study.
+    - **"Company brain" is the owner's term, not the repos'.** It appears nowhere
+      in either codebase. The published description (queryable records exposed to
+      agents over MCP) is inferred from `monorepo/apps/mcp` and the platform's
+      document/audio/video handling. Confirm it before treating it as settled.
+    **Never publish:** any other client or tenant name found in those repos, and
+    the internal improvement plans or audit findings. Naming the stack at the level
+    the Opayo study does is fine; publishing another party's name is not ours to do.
