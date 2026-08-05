@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Navigation from '../../components/Navigation'
 import Button from '../../components/Button'
 import Footer from '../../components/Footer'
+import PrincipalBand from '../../components/PrincipalBand'
 import JsonLd from '../../components/JsonLd'
 import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
 
@@ -205,6 +206,24 @@ export default function FractionalCFOPage() {
           </div>
         </div>
       </section>
+
+      {/* This page carried no named human at all: a CFO buyer met a stock photo
+          and a list of capabilities. Dishoom's numbers stay attached to the role
+          Michelle held, never to her personally growing the business (§13.15). */}
+      <PrincipalBand
+        name="Michelle Rana FCCA"
+        role="Fractional CFO"
+        accent="accent"
+        credentials={['FCCA', 'BSc Mathematics', '£165m P&L']}
+        bio="Chartered accountant and strategic finance leader. As Head of Strategic Finance at Dishoom she owned the five-year model, rolling forecasts and CapEx governance through a 6-to-27-site expansion, and held the company's cash together through COVID-19. She has supported founders through fundraising and investor due diligence."
+        highlights={[
+          'Led strategic finance at Dishoom through £35m to £165m revenue and a four-point EBITDA margin improvement',
+          'Built and led a 20+ person finance function, owning Board and investor reporting',
+          'Rolling forecasts accurate to ±3%, month-end close cut from 14 days to 8, and £6m in procurement and contract improvements',
+        ]}
+        proof="Led strategic finance at Dishoom through £35m → £165m"
+        linkedin="https://www.linkedin.com/in/michellerana1"
+      />
 
       {/* Benefits Section */}
       <section className="py-24 bg-white">
