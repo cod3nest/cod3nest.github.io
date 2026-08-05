@@ -6,12 +6,14 @@ date: '2025-01-04'
 author: 'Michelle Rana'
 readTime: '9 min read'
 tags: ['Fundraising', 'Finance', 'UK Startups']
-# Statutory rates and limits. Core SEIS/EIS reliefs were checked against gov.uk
-# on 2026-08-05, but Finance Act 2026 changed EIS investment and gross asset
-# limits from 6 April 2026 and those figures here are NOT yet confirmed.
-# lastVerified stays at the content date until an accountant signs the EIS
-# section off. It is meant to be flagging.
-lastVerified: '2025-01-04'
+# Statutory rates and limits, checked against gov.uk on 2026-08-05. Finance Act
+# 2026 raised the EIS company limits from 6 April 2026 and those are corrected
+# here. The one figure deliberately NOT stated is the business property relief
+# allowance: it was revised after first announcement and the sources disagree,
+# so the IHT row describes the change and sends the reader to an adviser rather
+# than printing a number. Confirm that allowance with Michelle before anyone
+# adds one back.
+lastVerified: '2026-08-05'
 verifyEvery: 6
 ---
 
@@ -75,7 +77,15 @@ EIS is for slightly more mature early-stage companies.
 | **Capital Gains Tax Exemption** | No CGT on EIS gains if held 3+ years |
 | **Loss Relief** | Offset losses against income tax |
 | **CGT Deferral Relief** | Defer CGT from other gains |
-| **Inheritance Tax Relief** | Shares exempt from IHT after 2 years |
+| **Inheritance Tax Relief** | Business property relief may apply after 2 years, but it is no longer unlimited (see below) |
+
+**The inheritance tax position changed on 6 April 2026.** Business property relief
+on qualifying unquoted shares used to take them out of an estate without limit.
+It is now capped: full relief applies up to an allowance, and qualifying value
+above that allowance gets relief at 50% rather than 100%. The allowance figure
+was revised after it was first announced, so anyone relying on this for estate
+planning needs current advice rather than a number from an article. Treat IHT as
+the benefit most likely to have moved since you last looked at it.
 
 **Example:** An investor puts £500,000 into your EIS-qualifying startup.
 - Immediate tax relief: £150,000 (30% of investment)
@@ -84,12 +94,15 @@ EIS is for slightly more mature early-stage companies.
 
 ### EIS Limits and Requirements
 
-**Investment limits:**
-- Maximum £5 million per year per company (£12M lifetime)
-- Maximum £1 million per investor per tax year (£2M for knowledge-intensive companies)
+**Investment limits** (raised from 6 April 2026):
+- Maximum £10 million per year per company (£20M for knowledge-intensive companies)
+- Maximum £24 million lifetime (£40M for knowledge-intensive companies)
+- Maximum £1 million per investor per tax year (£2M where the investment is in knowledge-intensive companies)
+
+These company limits count risk-finance investment across SEIS, EIS and VCT together rather than EIS alone.
 
 **Company requirements:**
-- Fewer than £15 million in gross assets (£16M after investment)
+- Fewer than £30 million in gross assets immediately before the share issue, and fewer than £35M immediately after (both raised from 6 April 2026)
 - Fewer than 250 employees
 - Less than 7 years old (10 for knowledge-intensive companies)
 - Carrying on a qualifying trade
@@ -107,9 +120,14 @@ EIS is for slightly more mature early-stage companies.
 | Income Tax Relief | 50% | 30% |
 | Company Age | < 3 years | < 7 years |
 | Company Size | < 25 employees | < 250 employees |
-| Assets Limit | < £350k | < £15M |
-| Max Raise/Year | £250k | £5M |
+| Assets Limit | < £350k | < £30M before the share issue |
+| Max Raise | £250k lifetime | £10M/year, £24M lifetime |
 | Investor Max/Year | £200k | £1M |
+
+Knowledge-intensive companies get the higher EIS limits: £20M a year, £40M
+lifetime, up to 500 employees, and a 10-year age limit. The EIS company figures
+above were raised on 6 April 2026, so any guidance written before then
+understates them substantially.
 
 ## What Disqualifies a Company?
 
@@ -188,7 +206,7 @@ Ensure investors understand:
 If you raise without advance assurance and HMRC later determines you don't qualify, investors lose their tax relief. Some may have legal recourse against you.
 
 **2. Exceeding Limits**
-Raising more than £250k in SEIS or £5M in EIS per year breaches limits. Structure your round carefully.
+Raising more than £250k under SEIS, or more than the EIS annual company limit, breaches the rules. The limits count risk finance across SEIS, EIS and VCT together, so check the combined position rather than each scheme on its own.
 
 **3. Connected Persons**
 Investors who are "connected" to the company (e.g., substantial shareholders, employees) may not qualify. Understand the rules.
@@ -203,11 +221,17 @@ Changing your business model, structure, or activities after raising can breach 
 
 SEIS and EIS are powerful tools for UK startups:
 
-- **SEIS** offers 50% tax relief for investments up to £250k
-- **EIS** offers 30% tax relief for investments up to £5M per year
+- **SEIS** offers 50% tax relief, on up to £250k raised by the company in total
+- **EIS** offers 30% tax relief, on up to £10M raised by the company per year
 - Combined with loss relief, investors' downside is significantly protected
 
 This makes UK startups more attractive than equivalents in many other countries. Use it.
+
+**A note on dates.** These rules move at fiscal events, and several of the EIS
+figures above changed on 6 April 2026. This article was last checked against
+HMRC guidance on 5 August 2026. Before you rely on any number here, confirm the
+current position with your accountant, particularly on inheritance tax, where
+the treatment of business property relief changed in the same window.
 
 ---
 
