@@ -153,6 +153,8 @@ Pulumi lets you write infrastructure code in TypeScript, Python, Go, or C# inste
 
 **Our recommendation:** Start with Terraform unless you have a strong reason not to. It's the industry standard, which means more documentation, more examples, and easier hiring.
 
+If you are the founder rather than the engineer making this call, our guide to [AWS infrastructure decisions for founders](/blog/terraform-aws-infrastructure-as-code/) covers the same choice without the code: what to spend at each stage, and the five questions to ask your engineering lead.
+
 ## Implementation Roadmap
 
 ### Week 1: Foundation

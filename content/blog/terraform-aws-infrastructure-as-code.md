@@ -1,376 +1,156 @@
 ---
-title: 'AWS Infrastructure for Growing Startups: Choosing the Right Tools'
-seoTitle: 'AWS Infrastructure for Growing Startups'
-description: 'Cut through the IaC noise—Terraform, CloudFormation, CDK, Pulumi. How to choose the right infrastructure tools for your stage.'
-date: '2025-04-08'
+title: 'AWS Infrastructure for Startups: What Founders Actually Need to Decide'
+seoTitle: 'AWS Infrastructure for Startups: Founder Guide'
+description: 'A non-technical guide to infrastructure decisions: what to spend at each stage, which tool your team should pick, and the five questions to ask your engineers.'
+date: '2026-08-05'
 author: 'Ankit Rana'
-readTime: '8 min read'
-tags: ['AWS', 'Terraform']
+readTime: '9 min read'
+tags: ['AWS', 'Infrastructure', 'Non-Technical Founders']
 ---
 
-# AWS Infrastructure for Growing Startups: Choosing the Right Tools
+# AWS Infrastructure for Startups: What Founders Actually Need to Decide
 
-You've outgrown Heroku. Your AWS bill is climbing. Someone mentions "Infrastructure as Code" and suddenly you're drowning in acronyms: Terraform, CloudFormation, CDK, Pulumi.
+Your AWS bill has started climbing. Someone on the team wants time to "sort out the infrastructure", and the words that follow are Terraform, CloudFormation, CDK and Pulumi. You have no way to judge whether this is a genuine need or an engineer's preference dressed up as urgency.
 
-This guide cuts through the noise and helps you choose the right infrastructure tools for your stage—without over-engineering or under-investing.
+That judgement is the point of this guide. It assumes no technical background. It will not teach you to write infrastructure code, because you should never need to. It will tell you what the decision costs, what happens if you get it wrong in either direction, and what to ask the people who will do the work.
 
-## The Real Question
+## The Only Question That Matters at Your Stage
 
-The question isn't "which IaC tool is best?" It's "what level of infrastructure maturity do we need right now?"
+Founders ask which tool is best. The useful question is how much infrastructure maturity your company needs right now, because the answer changes completely between stages.
 
-Different stages require different approaches:
+| Stage | Typical AWS spend | What the infrastructure should be |
+|---|---|---|
+| Pre-seed | £0-500/month | A managed platform. No infrastructure project at all. |
+| Seed | £500-3k/month | Core pieces written down as code, two environments |
+| Series A | £3k-15k/month | Everything as code, automated, multiple environments |
+| Series B+ | £15k+/month | The above, plus deliberate cost management |
 
-| Stage | Typical AWS Spend | Infrastructure Approach |
-|-------|-------------------|------------------------|
-| Pre-seed | £0-500/month | Managed platforms (Heroku, Railway) |
-| Seed | £500-3k/month | Basic AWS with some automation |
-| Series A | £3k-15k/month | Full IaC, multiple environments |
-| Series B+ | £15k+/month | Advanced automation, cost optimisation |
+Both directions of error are expensive. Infrastructure built for a fifteen-person Series A team will consume months of a three-person pre-seed team's runway and deliver nothing a customer can see. Infrastructure built for three people will start failing a fifteen-person team in ways that surface as outages, blocked releases, and engineers waiting on each other.
 
-**Key insight:** The infrastructure that works for a 3-person pre-seed team will fail a 15-person Series A team. The infrastructure that works for Series A would be over-engineering for pre-seed.
+The failure mode is rarely the tool. It is the mismatch between the setup and the stage.
 
-## The Tool Landscape
+## What "Infrastructure as Code" Means If You Have Never Seen It
 
-### Terraform
+Two ways exist to create the servers and databases your product runs on.
 
-**What it is:** A tool that lets you define infrastructure in configuration files and apply them consistently.
+The first is clicking through the AWS website, filling in forms. It works, it is fast the first time, and it leaves no record. What exists, who created it and why are held in one engineer's memory.
 
-**Best for:** Most startups post-seed who need flexibility and industry-standard tooling.
+The second is writing it down in a text file that a tool reads and applies. The file lives in the same place as your product code, changes go through the same review, and the whole environment can be rebuilt from it.
+
+Here is what that file looks like. You do not need to read it closely, and that is the point:
 
 ```terraform
-# Example: Creating an RDS database
 resource "aws_db_instance" "main" {
   identifier        = "myapp-production"
   engine            = "postgres"
-  engine_version    = "14"
   instance_class    = "db.t3.medium"
   allocated_storage = 100
-
-  db_name  = "myapp"
-  username = "admin"
-  password = var.db_password
 
   backup_retention_period = 7
-  multi_az               = true
+  multi_az                = true
 }
 ```
 
-**Pros:**
-- Industry standard (investors recognise it)
-- Huge community and ecosystem
-- Works with any cloud provider
-- Plenty of examples and documentation
-
-**Cons:**
-- Separate language to learn (HCL)
-- State file management requires attention
-- Initial learning curve
-
-**Verdict:** The default choice for most startups. Well-documented, widely understood, and signals engineering maturity.
-
-### AWS CloudFormation
-
-**What it is:** AWS's native infrastructure-as-code service.
+That is the production database. Anyone on the team can see it exists, that it keeps seven days of backups, and that it runs in two locations so a single failure does not take the product down. Changing it means a change to this file that another engineer reviews before it happens.
 
-**Best for:** Teams deeply committed to AWS who prefer native tooling.
+The commercial translation: **the infrastructure stops being knowledge that can walk out of the door.** That is a governance property, and it is why the topic reaches you rather than staying with the engineering team. Our post on [why infrastructure as code matters in due diligence](/blog/infrastructure-as-code-for-startups/) covers the diligence angle in more depth.
 
-```yaml
-# Example: Creating an RDS database
-Resources:
-  Database:
-    Type: AWS::RDS::DBInstance
-    Properties:
-      DBInstanceIdentifier: myapp-production
-      Engine: postgres
-      EngineVersion: "14"
-      DBInstanceClass: db.t3.medium
-      AllocatedStorage: 100
-      MasterUsername: admin
-      MasterUserPassword: !Ref DBPassword
-      MultiAZ: true
-```
-
-**Pros:**
-- Native AWS integration
-- No external state file to manage
-- Built-in drift detection
-- No additional tools to install
+## The Four Tools, and the Answer
 
-**Cons:**
-- AWS-only (no flexibility for multi-cloud)
-- More verbose syntax
-- Smaller community than Terraform
-
-**Verdict:** Good choice if you're 100% AWS and prefer native tooling. Less common in the startup ecosystem.
-
-### AWS CDK
-
-**What it is:** Define infrastructure using familiar programming languages (TypeScript, Python, etc.).
-
-**Best for:** Teams with strong developers who prefer code over configuration files.
-
-```typescript
-// Example: Creating an RDS database
-import * as rds from 'aws-cdk-lib/aws-rds';
-import * as ec2 from 'aws-cdk-lib/aws-ec2';
-
-const database = new rds.DatabaseInstance(this, 'Database', {
-  engine: rds.DatabaseInstanceEngine.postgres({
-    version: rds.PostgresEngineVersion.VER_14,
-  }),
-  instanceType: ec2.InstanceType.of(
-    ec2.InstanceClass.T3,
-    ec2.InstanceSize.MEDIUM,
-  ),
-  vpc: vpc,
-  multiAz: true,
-});
-```
-
-**Pros:**
-- Use languages your team knows
-- Full programming capabilities (loops, conditionals)
-- Strong type checking and IDE support
-- High-level abstractions reduce boilerplate
-
-**Cons:**
-- AWS-only
-- Can be over-engineered ("just because you can doesn't mean you should")
-- Steeper learning curve for infrastructure concepts
-
-**Verdict:** Good for TypeScript/Python-heavy teams. Can lead to over-engineering if not disciplined.
-
-### Pulumi
-
-**What it is:** Like CDK but works with any cloud provider.
-
-**Best for:** Multi-cloud teams or those who want CDK-style experience with flexibility.
-
-**Pros:**
-- Use familiar programming languages
-- Works with AWS, GCP, Azure, etc.
-- Growing community
-
-**Cons:**
-- Smaller ecosystem than Terraform
-- Less documentation and examples
-- Less familiar to most engineers
-
-**Verdict:** Consider if you need multi-cloud and prefer code over configuration. Otherwise, Terraform is usually the safer choice.
-
-## Our Recommendation by Stage
+Your team will name four options. Here is what each is, in commercial terms.
 
-### Pre-Seed: Don't Use IaC Yet
+| Tool | What it is | Where it fits |
+|---|---|---|
+| **Terraform** | The industry standard. Works with any cloud provider. | The default for most startups. Largest talent pool, most documentation. |
+| **CloudFormation** | Amazon's own version, built into AWS. | Fine if you are certain you will stay on AWS. Fewer engineers know it well. |
+| **CDK** | Amazon's version, written in a normal programming language. | Suits strong developer teams. Tends toward over-engineering without discipline. |
+| **Pulumi** | Like CDK, but works across providers. | Only if you have a genuine multi-cloud requirement. |
 
-At this stage, you need to ship product, not manage infrastructure.
+**For almost every UK startup pre-seed to Series A, the answer is Terraform.** The reasoning is about hiring rather than technical merit. Terraform is what the most engineers already know, what the most documentation covers, and what a new contractor or hire can pick up on day one without a handover. The others are defensible choices; none of them is defensible *enough* to justify a smaller pool of people who can maintain the result.
 
-**Approach:**
-- Use managed platforms (Heroku, Railway, Render)
-- Or use AWS console for simple setups
-- Document what you create (a simple spreadsheet works)
+Two answers should prompt a follow-up conversation. If someone proposes Pulumi, ask which second cloud provider you are actually planning to use, because that is the reason it exists. If someone proposes CDK, ask how the team will stop it becoming a bespoke framework only its author understands.
 
-**Why:** Every hour spent on infrastructure is an hour not spent on product. Your infrastructure needs will change dramatically as you find product-market fit.
+None of this is worth a long debate. A team using Terraform reasonably will beat a team debating tools for three weeks.
 
-### Seed: Start Simple
-
-Once you have paying customers and basic traction:
-
-**Approach:**
-- Learn Terraform basics
-- Codify your core infrastructure (database, cache, storage)
-- Set up two environments: staging and production
-- Use managed services (RDS, ElastiCache) over self-managed
+## What to Spend, by Stage
 
-**Example structure:**
-```
-infrastructure/
-├── main.tf           # Provider and backend config
-├── database.tf       # RDS configuration
-├── networking.tf     # VPC, subnets, security groups
-├── staging.tfvars    # Staging-specific values
-└── production.tfvars # Production-specific values
-```
+### Pre-seed: spend nothing on this
 
-**Why:** This gives you reproducibility and disaster recovery without massive investment.
+Use a managed platform such as Heroku, Railway or Render, or a simple setup created through the AWS console. Keep a one-page note of what exists.
 
-### Series A: Full IaC
+Every hour on infrastructure at this stage is an hour not spent finding out whether anyone wants the product. Your requirements will change beyond recognition once you do. If an engineer proposes an infrastructure project pre-seed, the answer is almost always not yet.
 
-With more engineers and complexity:
+### Seed: a contained piece of work
 
-**Approach:**
-- Everything in Terraform (or your chosen tool)
-- Automated deployment via CI/CD
-- Multiple environments (dev, staging, production)
-- Module structure for reusability
-- Remote state with locking
+Once you have paying customers and something worth protecting, the goal is reproducibility. Write down the pieces you could not survive losing, usually the database, the network and file storage. Set up two environments so changes get tested before customers see them. Prefer managed services, where Amazon runs the thing for you, over anything your team has to maintain themselves.
 
-**Example structure:**
-```
-infrastructure/
-├── modules/
-│   ├── vpc/          # Reusable VPC module
-│   ├── database/     # Reusable RDS module
-│   └── application/  # Application infrastructure
-├── environments/
-│   ├── dev/
-│   │   ├── main.tf
-│   │   └── terraform.tfvars
-│   ├── staging/
-│   └── production/
-└── README.md
-```
+Expect this to take a competent engineer one to two weeks. If the estimate comes back in months, the scope has grown beyond what your stage needs, and it is worth asking what would be cut to reach two weeks.
 
-**Why:** At this scale, manual infrastructure management becomes a bottleneck. IaC enables team growth and operational reliability.
+### Series A: the real investment
 
-## Common Mistakes to Avoid
+With more engineers, manual infrastructure becomes the bottleneck that shows up as slow releases. Everything is written down, changes deploy automatically after review, environments are separated, and access is restricted to named people.
 
-### 1. Over-Engineering Early
+This is also the stage where technical due diligence starts examining it seriously. Our [technical due diligence checklist](/blog/startup-technical-due-diligence-checklist/) covers what gets looked at.
 
-**Mistake:** Building complex module hierarchies and abstractions for a 2-person team.
+## Five Questions to Ask Your Engineering Lead
 
-**Reality:** Simple, readable Terraform is better than clever Terraform. You can refactor later.
+You do not have to evaluate the work. You do have to ask questions whose answers you can judge.
 
-**Bad:**
-```terraform
-module "super_flexible_database" {
-  source = "./modules/database"
+**1. If our AWS account were deleted tonight, how long until we are running again, and how do you know?**
 
-  # 47 configurable parameters...
-  enable_read_replicas = false
-  cross_region_backup_enabled = false
-  parameter_group_family = "postgres14"
-  # ... etc
-}
-```
+A good answer is a number of hours, and evidence that someone has tested it. A bad answer describes a process nobody has ever run. This single question surfaces most of what matters.
 
-**Good:**
-```terraform
-resource "aws_db_instance" "main" {
-  identifier        = "myapp-production"
-  engine            = "postgres"
-  engine_version    = "14"
-  instance_class    = "db.t3.medium"
-  allocated_storage = 100
+**2. Who can change production, and what stops an accident?**
 
-  # Clear, readable, direct
-}
-```
+You want a small number of named people and a review step before changes apply. "Everyone has access" is a real risk, and it is one an investor will find.
 
-### 2. Ignoring State Management
+**3. Where are our passwords and keys stored?**
 
-**Mistake:** Storing Terraform state locally or in Git.
+The correct answer names a secrets manager. If the answer is that they sit in the code, in a spreadsheet or in a chat history, that is a security incident waiting to be discovered, and it needs fixing this month.
 
-**Reality:** Multiple people running Terraform with local state will corrupt your infrastructure.
+**4. What did we spend on AWS last month, and which part of the product caused it?**
 
-**Fix:** Use remote state from day one:
+Not knowing the second half is the common case, and it is how a bill triples quietly. Cost visibility is finance infrastructure as much as engineering infrastructure.
 
-```terraform
-terraform {
-  backend "s3" {
-    bucket         = "mycompany-terraform-state"
-    key            = "production/terraform.tfstate"
-    region         = "eu-west-2"
-    encrypt        = true
-    dynamodb_table = "terraform-locks"  # Prevents concurrent runs
-  }
-}
-```
+**5. What would break first if we tripled our customers tomorrow?**
 
-### 3. Storing Secrets in Code
+Any engineer who knows the system can answer this immediately. Hesitation tells you nobody has looked.
 
-**Mistake:** Committing database passwords or API keys to your Terraform files.
+## The Five Red Flags in Diligence
 
-**Reality:** Once a secret is in Git, it's compromised forever.
+Technical due diligence asks the same questions in a more formal register. These are the answers that cost you.
 
-**Fix:** Use AWS Secrets Manager or Parameter Store:
+| Area | What passes | What gets flagged |
+|---|---|---|
+| How infrastructure is defined | It is written down and version-controlled | One person set it up by hand |
+| Disaster recovery | A tested recovery time | Nobody has tried |
+| Making changes | Reviewed, then applied automatically | People change things directly in the console |
+| Access control | A short list of named admins | Shared credentials |
+| Cost | Spend tracked by service | The bill is a monthly surprise |
 
-```terraform
-data "aws_secretsmanager_secret_version" "db_password" {
-  secret_id = "myapp/production/db-password"
-}
+None of these require sophisticated infrastructure. They require ordinary infrastructure that somebody wrote down. A diligence process is far more interested in whether your engineering practice is repeatable than in whether your architecture is clever.
 
-resource "aws_db_instance" "main" {
-  # ...
-  password = data.aws_secretsmanager_secret_version.db_password.secret_string
-}
-```
+## If You Have None of This Today
 
-### 4. No CI/CD Integration
+Nothing here needs converting overnight, and a big-bang infrastructure rewrite is its own risk.
 
-**Mistake:** Running `terraform apply` manually from laptops.
+A reasonable sequence for one engineer, roughly a month of part-time work:
 
-**Reality:** Manual applies lead to inconsistent environments and no audit trail.
+1. Write down the database first. It is the resource whose loss would end the company.
+2. Add the network and access rules around it.
+3. Move passwords and keys into a secrets manager.
+4. Connect it to your deployment pipeline so changes go through review.
 
-**Fix:** Integrate with your CI/CD pipeline:
+Then stop. Whatever remains is a candidate for later, and most of it will still be waiting a year from now without anyone noticing, which tells you it was correctly deprioritised.
 
-```yaml
-# .github/workflows/terraform.yaml
-name: Terraform
+## The Bottom Line
 
-on:
-  pull_request:
-    paths: ['infrastructure/**']
-  push:
-    branches: [main]
-    paths: ['infrastructure/**']
+Infrastructure tooling is a stage decision wearing technical clothing. Pre-seed, the right amount of investment is close to zero. At seed, it is a contained two-week job on the pieces you cannot lose. By Series A, it is the difference between an engineering team that ships and one that queues.
 
-jobs:
-  plan:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+Pick Terraform unless someone gives you a specific reason otherwise, keep the setup as simple as your stage allows, and use the five questions above to check in twice a year. That is the whole of the founder's job here.
 
-      - name: Terraform Plan
-        run: terraform plan -out=plan.tfplan
-        working-directory: infrastructure/production
-
-  apply:
-    if: github.ref == 'refs/heads/main'
-    needs: plan
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Terraform Apply
-        run: terraform apply -auto-approve plan.tfplan
-        working-directory: infrastructure/production
-```
-
-## What Investors Look For
-
-Technical due diligence typically examines:
-
-| Area | Good Signal | Red Flag |
-|------|-------------|----------|
-| **Infrastructure definition** | "Everything is in Terraform" | "Our CTO set it up manually" |
-| **Disaster recovery** | "We can recreate our environment in 2 hours" | "It would take a while to figure out" |
-| **Change management** | "Pull request, code review, automated apply" | "We change things in the console" |
-| **Access control** | "Only two senior engineers have admin access" | "Everyone shares the AWS root credentials" |
-| **Cost visibility** | "We track spend by service and environment" | "We get surprised by AWS bills" |
-
-## Getting Started Today
-
-If you don't have IaC yet:
-
-1. **Week 1:** Install Terraform, complete the official tutorial
-2. **Week 2:** Write Terraform for your database (the most critical resource)
-3. **Week 3:** Add your VPC and security groups
-4. **Week 4:** Set up remote state and basic CI/CD
-
-You don't need to convert everything overnight. Start with critical resources and expand from there.
-
-## Summary
-
-The right infrastructure tooling depends on your stage:
-
-**Pre-seed:** Use managed platforms. Don't invest in IaC yet.
-
-**Seed:** Learn Terraform, codify critical resources, use managed AWS services.
-
-**Series A+:** Full IaC with CI/CD, multiple environments, proper access controls.
-
-The goal isn't to have the most sophisticated infrastructure—it's to have infrastructure that matches your needs today while positioning you for growth tomorrow.
+If you want to know whether your current setup is stage-appropriate, [Kubernetes: overkill or essential?](/blog/kubernetes-startups-overkill-essential/) applies the same test to the other decision founders get talked into early.
 
 ---
 
-*Need help setting up your AWS infrastructure or preparing for technical due diligence? [Get in touch](/contact/) for a consultation.*
+*Not sure whether your infrastructure is a risk or a distraction? Our [Fractional CTO service](/services/fractional-cto/) covers architecture, infrastructure and due diligence readiness, or [get in touch](/contact/) to talk through your situation.*
