@@ -6,6 +6,10 @@ date: '2025-08-10'
 author: 'Michelle Rana'
 readTime: '9 min read'
 tags: ['Cash Management', 'Startup Finance']
+# Carries UK R&D tax relief rates. Corrected and checked against gov.uk on
+# 2026-08-05 after the pre-2024 SME/RDEC figures were found still published.
+lastVerified: '2026-08-05'
+verifyEvery: 6
 ---
 
 # Extending Your Runway: A Practical Guide to Startup Cash Management

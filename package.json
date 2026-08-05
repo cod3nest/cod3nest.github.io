@@ -4,8 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/check-content-freshness.js",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "check:freshness": "node scripts/check-content-freshness.js",
+    "check:freshness:strict": "node scripts/check-content-freshness.js --strict"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

@@ -6,6 +6,11 @@ date: '2026-08-05'
 author: 'Michelle Rana'
 readTime: '11 min read'
 tags: ['Fractional CFO', 'AI', 'Startup Finance']
+# Describes a third party's product behaviour and commercial terms, both of
+# which change without notice. The copy deliberately tells readers to verify
+# the terms for their own plan, but the surrounding claims still need a look.
+lastVerified: '2026-08-05'
+verifyEvery: 12
 ---
 
 # How CFOs Can Use AI in Startup Finance: A Practical Guide
