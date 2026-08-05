@@ -53,7 +53,7 @@ export default function RunwayCalculatorPage() {
       <main id="main-content">
 
       {/* Hero */}
-      <section className="pt-32 pb-12 bg-gradient-to-b from-accent-50 to-white">
+      <section className="pt-24 md:pt-32 pb-12 bg-gradient-to-b from-accent-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="inline-block px-4 py-2 bg-accent-100 text-accent-800 rounded-full text-sm font-medium mb-6">
             Free Tool

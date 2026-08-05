@@ -57,52 +57,11 @@ export default function Home() {
     }))
   }
 
-  // Service Schema for SEO
-  const serviceSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    serviceType: 'Business Consulting',
-    provider: {
-      '@type': 'ProfessionalService',
-      name: 'Codenest',
-      url: 'https://codenest.uk'
-    },
-    areaServed: {
-      '@type': 'Country',
-      name: 'United Kingdom'
-    },
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'Startup Advisory Services',
-      itemListElement: [
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Fractional CTO',
-            description: 'Part-time technical leadership for startups. Architecture decisions, team building, and investor readiness.'
-          }
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: 'Fractional CFO',
-            description: 'Part-time financial leadership for startups. Financial modeling, fundraising support, and strategic planning.'
-          }
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Service',
-            name: '0-to-1 Product Development',
-            description: 'End-to-end MVP development from strategy to launch.'
-          }
-        }
-      ]
-    }
-  }
-
+  // No Service/OfferCatalog block here. The root layout already declares the
+  // company and everything it sells; this page used to restate both, and its
+  // `provider` was a second ProfessionalService node for the same business
+  // (BRANDING.md §8: ProfessionalService lives in the root layout ONLY). The two
+  // catalogues had also drifted apart — four offers in the layout, three here.
   return (
     <div className="min-h-screen bg-white">
       {/* Structured Data for SEO */}
@@ -110,28 +69,27 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
       <Navigation />
 
       <main id="main-content">
 
       {/* Hero Section */}
-      <section id="home" className="pt-44 pb-32 bg-white">
+      {/* At 375px this hero measured 1798px tall — 2.2 screens, with the primary
+          CTA below the fold. Every size below steps up at a breakpoint rather
+          than carrying its desktop value down to mobile. */}
+      <section id="home" className="pt-28 md:pt-44 pb-20 md:pb-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
-              <p className="text-sm uppercase tracking-[0.2em] text-accent-700 mb-8 font-medium animate-hero-1">
+              <p className="text-xs sm:text-sm uppercase tracking-[0.2em] text-accent-700 mb-6 md:mb-8 font-medium animate-hero-1">
                 Fractional CTO &amp; CFO for UK Startups
               </p>
-              <h1 className="font-serif text-5xl md:text-6xl font-normal text-slate-900 leading-[1.1] mb-6 animate-hero-2">
+              <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-normal text-slate-900 leading-[1.1] mb-6 animate-hero-2">
                 Executive Firepower.<br />
                 <span className="italic">Startup Agility.</span>
               </h1>
               <p className="text-xl text-slate-600 mb-6 leading-relaxed max-w-lg animate-hero-3">
-                Big 4 rigour meets founder empathy. Your part-time CTO and CFO in one engagement: architecture, engineering leadership, financial models, and fundraising for founders from pre-seed to Series A.
+                Big 4 rigour meets founder empathy. A part-time CTO, a part-time CFO, or both: architecture, engineering leadership, financial models, and fundraising for founders from pre-seed to Series A.
               </p>
               <ul className="space-y-4 mb-8 max-w-lg animate-hero-3">
                 <li className="flex items-start text-slate-700 group">
@@ -172,20 +130,20 @@ export default function Home() {
               <div className="absolute -inset-1 bg-gradient-to-br from-accent-400/30 via-accent-500/20 to-transparent rounded-2xl blur-sm" />
               {/* Two halves, equal height: the offer is 50/50 and the hero has to
                   show it. Real proof beats a stock photo of people at laptops. */}
-              <div className="relative rounded-xl overflow-hidden min-h-[520px] ring-1 ring-accent-400/20 shadow-xl flex flex-col">
-                <div className="flex-1 bg-primary-800 p-8 flex flex-col justify-center">
+              <div className="relative rounded-xl overflow-hidden min-h-[400px] sm:min-h-[520px] ring-1 ring-accent-400/20 shadow-xl flex flex-col">
+                <div className="flex-1 bg-primary-800 p-6 sm:p-8 flex flex-col justify-center">
                   <p className="text-xs uppercase tracking-[0.2em] text-accent-300 mb-4 font-semibold">Fractional CTO</p>
                   <p className="font-serif text-4xl md:text-5xl font-bold text-white mb-3">5 &rarr; 1,000+</p>
-                  <p className="text-slate-300 text-sm mb-4">Concurrent users scaled at Rungway</p>
+                  <p className="text-slate-300 text-sm mb-4">Concurrent users at Rungway, where Ankit was interim CTO</p>
                   <p className="text-slate-300 text-xs">Architecture, engineering leadership, delivery</p>
                 </div>
 
                 <div className="h-px bg-gradient-to-r from-transparent via-accent-400 to-transparent" />
 
-                <div className="flex-1 bg-white p-8 flex flex-col justify-center">
+                <div className="flex-1 bg-white p-6 sm:p-8 flex flex-col justify-center">
                   <p className="text-xs uppercase tracking-[0.2em] text-accent-700 mb-4 font-semibold">Fractional CFO</p>
                   <p className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-3">&pound;35m &rarr; &pound;165m</p>
-                  <p className="text-slate-600 text-sm mb-4">Revenue scaled, EBITDA margin up 4%</p>
+                  <p className="text-slate-600 text-sm mb-4">Revenue at Dishoom, where Michelle led strategic finance</p>
                   <p className="text-slate-500 text-xs">Financial models, controls, fundraising</p>
                 </div>
               </div>
@@ -595,7 +553,7 @@ export default function Home() {
               <svg className="w-5 h-5 text-accent-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              Free initial consultation
+              Free 30-minute consultation
             </div>
           </div>
 

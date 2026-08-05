@@ -38,7 +38,9 @@ export default function Footer() {
               <li><Link href="/guides/fractional-cto-guide/" className="text-slate-400 hover:text-accent-400 transition-colors">Fractional CTO Guide</Link></li>
               <li><Link href="/guides/fractional-cfo-guide/" className="text-slate-400 hover:text-accent-400 transition-colors">Fractional CFO Guide</Link></li>
               <li><Link href="/guides/fractional-cto-vs-full-time/" className="text-slate-400 hover:text-accent-400 transition-colors">CTO vs Full-Time</Link></li>
+              <li><Link href="/guides/fractional-cfo-vs-full-time/" className="text-slate-400 hover:text-accent-400 transition-colors">CFO vs Full-Time</Link></li>
               <li><Link href="/guides/fractional-cto-vs-agency/" className="text-slate-400 hover:text-accent-400 transition-colors">CTO vs Agency</Link></li>
+              <li><Link href="/guides/fractional-cfo-vs-outsourced-finance/" className="text-slate-400 hover:text-accent-400 transition-colors">CFO vs Outsourced Finance</Link></li>
               <li><Link href="/guides/technical-cofounder-alternatives/" className="text-slate-400 hover:text-accent-400 transition-colors">Co-founder Alternatives</Link></li>
               <li><Link href="/tools/runway-calculator/" className="text-slate-400 hover:text-accent-400 transition-colors">Runway Calculator</Link></li>
             </ul>
@@ -46,7 +48,7 @@ export default function Footer() {
           <div>
             <h2 className="font-semibold mb-4">Company</h2>
             <ul className="space-y-2 text-sm">
-              <li><a href="/case-studies/" className="text-slate-400 hover:text-accent-400 transition-colors">Client Partnerships</a></li>
+              <li><a href="/case-studies/" className="text-slate-400 hover:text-accent-400 transition-colors">Case Studies</a></li>
               <li><a href="/#how-we-work" className="text-slate-400 hover:text-accent-400 transition-colors">Our Methodology</a></li>
               <li><a href="/about/" className="text-slate-400 hover:text-accent-400 transition-colors">Our Story</a></li>
               <li><Link href="/blog/" className="text-slate-400 hover:text-accent-400 transition-colors">Insights</Link></li>
@@ -61,8 +63,12 @@ export default function Footer() {
               <li><a href="https://www.linkedin.com/company/codenest-ltd" className="text-slate-400 hover:text-accent-400 transition-colors" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
             </ul>
             <div className="mt-6">
+              {/* "London-based" removed: the only address this site publishes is
+                  the registered office in Reigate, Surrey, and the schema in
+                  app/layout.js now states that one. Put a locality claim back
+                  only alongside an address that supports it (BRANDING.md §13.25). */}
               <p className="text-slate-400 text-xs">
-                London-based. Serving select founders across the UK and Europe.
+                Serving select founders across the UK and Europe.
               </p>
             </div>
           </div>

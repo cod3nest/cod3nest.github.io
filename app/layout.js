@@ -109,16 +109,18 @@ export default function RootLayout({ children }) {
     image: 'https://codenest.uk/img/companylogo.png',
     description: 'Boutique technical and financial advisory for ambitious UK founders. Big 4 rigour meets founder empathy. Fractional CTO and CFO services with executive firepower.',
     priceRange: '£££',
+    // The registered office — the only address the site publishes, and the one in
+    // the statutory footer disclosure. It previously claimed London with the
+    // generic 51.5074/-0.1278 city centroid, an address the business does not
+    // occupy paired with coordinates nobody measured. The `geo` block is gone
+    // rather than re-guessed. (BRANDING.md §13.25.)
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'London',
-      addressRegion: 'Greater London',
+      streetAddress: 'Clearways Accountants, Clearways, Colley Way',
+      addressLocality: 'Reigate',
+      addressRegion: 'Surrey',
+      postalCode: 'RH2 9JH',
       addressCountry: 'GB'
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 51.5074,
-      longitude: -0.1278
     },
     areaServed: [
       {
@@ -158,6 +160,11 @@ export default function RootLayout({ children }) {
       'Technical Co-founder Partnerships',
       'Startup Equity Partnerships'
     ],
+    // The single offer catalogue for the site. The homepage carried a second,
+    // shorter one (three offers, its own ProfessionalService provider) that had
+    // drifted from this list; it was removed rather than kept in sync. Two
+    // retained seats plus the two fixed-fee project shapes named in "How We Work"
+    // — nothing else the site sells is a separate purchase.
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Startup Leadership Services',
@@ -190,7 +197,7 @@ export default function RootLayout({ children }) {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'Financial Modeling & Strategy',
+            name: 'Financial Modelling & Strategy',
             description: 'Financial models, unit economics, and fundraising preparation'
           }
         }

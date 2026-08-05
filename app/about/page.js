@@ -201,7 +201,7 @@ export default function AboutPage() {
       <main id="main-content">
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-b from-slate-50 to-white">
+      <section className="pt-24 md:pt-32 pb-20 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="text-sm uppercase tracking-[0.2em] text-accent-700 mb-4 font-medium">Our Story</p>

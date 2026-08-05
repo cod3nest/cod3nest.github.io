@@ -62,7 +62,7 @@ export default function BlogPage() {
       <main id="main-content">
 
       {/* Hero Section */}
-      <section className="pt-32 pb-12 bg-white">
+      <section className="pt-24 md:pt-32 pb-12 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-4">
             Insights

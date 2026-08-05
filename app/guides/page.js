@@ -6,7 +6,7 @@ import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../lib/schema'
 
 export const metadata = {
   title: 'Fractional CTO & CFO Guides for UK Founders',
-  description: 'Free in-depth guides for UK startup founders: fractional CTO costs and comparisons, technical co-founder alternatives, and the startup runway calculator.',
+  description: 'Free in-depth guides for UK startup founders: fractional CTO and CFO costs and comparisons, technical co-founder alternatives, and the startup runway calculator.',
   openGraph: {
     title: 'Codenest Guides — Startup Leadership Resources',
     description: 'Free in-depth guides and tools for UK startup founders evaluating fractional CTO and CFO support.',
@@ -40,9 +40,21 @@ const guides = [
     tag: 'Guide',
   },
   {
+    title: 'Fractional CFO vs Full-Time CFO',
+    href: '/guides/fractional-cfo-vs-full-time/',
+    description: 'Year-one costs, equity dilution and time to start, with a decision framework for each stage.',
+    tag: 'Comparison',
+  },
+  {
     title: 'Fractional CTO vs Full-Time CTO',
     href: '/guides/fractional-cto-vs-full-time/',
     description: 'The real cost analysis: salary, equity, hidden costs, and the strategic trade-offs at each stage.',
+    tag: 'Comparison',
+  },
+  {
+    title: 'Fractional CFO vs Outsourced Finance Function',
+    href: '/guides/fractional-cfo-vs-outsourced-finance/',
+    description: 'Processing versus judgement: what each delivers, and why most startups end up with both.',
     tag: 'Comparison',
   },
   {
@@ -82,7 +94,7 @@ export default function GuidesPage() {
       <Navigation />
 
       <main id="main-content">
-        <section className="pt-40 pb-24 bg-white">
+        <section className="pt-28 md:pt-40 pb-24 bg-white">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <p className="text-sm uppercase tracking-[0.2em] text-accent-700 mb-4 font-medium">Resources</p>

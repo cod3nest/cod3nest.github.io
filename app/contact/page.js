@@ -48,7 +48,7 @@ export default function ContactPage() {
       <main id="main-content">
         {/* Shares the homepage's #contact id so the sticky CTA suppresses itself
             here too — on this page the shortcut has nothing to offer. */}
-        <section id="contact" className="pt-40 pb-24 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
+        <section id="contact" className="pt-28 md:pt-40 pb-24 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
           {/* Background decorations */}
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent-400 opacity-[0.02] rounded-full blur-3xl" />
           <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-primary-600 opacity-[0.03] rounded-full blur-3xl" />

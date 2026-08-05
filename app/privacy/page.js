@@ -76,7 +76,7 @@ export default function PrivacyPolicyPage() {
       <Navigation />
 
       <main id="main-content">
-        <section className="pt-40 pb-24 bg-white">
+        <section className="pt-28 md:pt-40 pb-24 bg-white">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-14">
               <p className="text-sm uppercase tracking-[0.2em] text-accent-700 mb-4 font-medium">Legal</p>
