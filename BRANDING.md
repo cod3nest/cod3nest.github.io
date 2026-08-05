@@ -371,6 +371,12 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     Do not drop those labels to make the page look like a client wall; the whole
     reason the distinction is drawn in copy is that the page can no longer rely on
     "none of these are clients" being true. Any study added later needs a `kind`.
+    **The homepage teaser carries the same split** (5 Aug 2026): the client engagement
+    is a featured charcoal card, the three track-record studies sit in the grid below
+    under their own "Founder track record" label. It is a hand-maintained summary, not
+    a render of `/case-studies` data — when a study is added, edited or reordered
+    there, update `featuredStudy`/`caseStudies` in `app/page.js` too. It was already
+    stale once.
 16. **Michelle covers both operational finance and fundraising.** Her CV documents the
     operational side in detail — multi-site P&L, budgeting and rolling forecasts,
     controls and governance, margin and procurement, Board reporting — and the owner
