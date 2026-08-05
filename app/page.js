@@ -154,7 +154,10 @@ export default function Home() {
                 <div className="flex-1 bg-primary-800 p-6 sm:p-8 flex flex-col justify-center">
                   <p className="text-xs uppercase tracking-[0.2em] text-accent-300 mb-4 font-semibold">Fractional CTO</p>
                   <p className="font-serif text-4xl md:text-5xl font-bold text-white mb-3">5 &rarr; 1,000+</p>
-                  <p className="text-slate-300 text-sm mb-4">Concurrent users at Rungway, where Ankit was interim CTO</p>
+                  {/* Not "interim CTO": the title was Lead Software Engineer. The
+                      scope was CTO-level and the copy may say so, but the title is
+                      the CV's (owner, 5 Aug 2026 — BRANDING §13.15). */}
+                  <p className="text-slate-300 text-sm mb-4">Concurrent users at Rungway, where Ankit led engineering</p>
                   <p className="text-slate-300 text-xs">Architecture, engineering leadership, delivery</p>
                 </div>
 
@@ -340,7 +343,8 @@ export default function Home() {
 
           <p className="text-center text-xs text-slate-500 mb-8 uppercase tracking-[0.2em] font-medium">Founder track record includes</p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-            {/* Rungway - HR Tech. Predates Codenest; Ankit was interim CTO. */}
+            {/* Rungway - HR Tech. Aug 2016 - Aug 2017, so it predates the firm by a
+                month; Ankit was Lead Software Engineer with CTO-level scope. */}
             <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm transition-all cursor-default">
               <img
                 src="/img/clients/rungway.webp"
@@ -367,7 +371,7 @@ export default function Home() {
 
           </div>
           <p className="text-center text-sm text-slate-600 mt-8">
-            <a href="/about/" className="font-semibold text-primary-700 hover:text-primary-800">Ankit Rana</a>, Fractional CTO, brings 15+ years across Deloitte Digital, Elavon (US Bancorp) and Opayo. <a href="/about/" className="font-semibold text-primary-700 hover:text-primary-800">Michelle Rana FCCA</a>, Fractional CFO, led strategic finance at Dishoom through &pound;35m to &pound;165m revenue growth and a four-point EBITDA margin improvement.
+            <a href="/about/" className="font-semibold text-primary-700 hover:text-primary-800">Ankit Rana</a>, Fractional CTO, has delivered for the Ministry of Justice, Tesco Bank, HSBC, AstraZeneca and Opayo by Elavon. <a href="/about/" className="font-semibold text-primary-700 hover:text-primary-800">Michelle Rana FCCA</a>, Fractional CFO, led strategic finance at Dishoom through &pound;35m to &pound;165m revenue growth and a four-point EBITDA margin improvement.
           </p>
         </div>
       </section>

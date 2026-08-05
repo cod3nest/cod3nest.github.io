@@ -254,12 +254,13 @@ export default function FractionalCTOPage() {
         role="Fractional CTO"
         accent="primary"
         credentials={['AWS Certified', '15+ years engineering', 'Kubernetes & Cloud', 'Agentic AI']}
-        bio="Fifteen years building and scaling technology platforms: payment processors at Deloitte Digital and Elavon (US Bancorp), then startups going through hypergrowth across fintech, healthtech and proptech. He has sat on the receiving end of technical due diligence, which is the fastest way to learn what it actually tests."
+        bio="Fifteen years building and scaling technology platforms: consumer-scale Java at Rated People and Rightmove, then leading engineering at Rungway, then a decade of regulated delivery through Codenest across government, banking, pharma and payments. He has sat on the receiving end of technical due diligence, which is the fastest way to learn what it actually tests."
         highlights={[
           'Leads the Regeno engagement, a current Codenest client: a company brain over their own records, and an AI factory that drives a ticket to a merged pull request unattended',
           'Led engineering teams from 5 to 50+ across fintech and healthtech',
           'Ran a near seven-year platform transformation at Opayo by Elavon: AWS EKS migration, GitOps, a payments monolith moved to microservices',
-          'Rebuilt Rungway as its interim CTO, taking the platform from 5 to 1,000+ concurrent users with a zero-downtime migration',
+          'Delivered under regulatory scrutiny for the Ministry of Justice, Tesco Bank, HSBC and AstraZeneca',
+          'Rebuilt Rungway as its lead engineer, taking the platform from 5 to 1,000+ concurrent users with a zero-downtime migration',
         ]}
         proof="Rungway: 5 → 1,000+ concurrent users"
         linkedin="https://www.linkedin.com/in/arana198"
