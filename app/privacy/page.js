@@ -168,9 +168,11 @@ export default function PrivacyPolicyPage() {
                     visit and is not something we collect or can see.
                   </li>
                   <li>
-                    <strong className="text-slate-900">Giscus and GitHub Discussions</strong> power the comment section
-                    at the bottom of blog posts. Comments are entirely optional, require a GitHub account, and are
-                    public. Anything you post there is handled by GitHub under its own privacy policy.
+                    <strong className="text-slate-900">Cusdis</strong> powers the comment section at the bottom of blog
+                    posts. Commenting is entirely optional and needs no account. Cusdis sets no cookies. The nickname
+                    you type, your comment, and an email address if you choose to give one are stored by Cusdis under
+                    its own privacy policy; we see them in its moderation dashboard. Approved comments are public, and
+                    an email address is never displayed.
                   </li>
                 </ul>
                 <p className="mt-4 text-sm text-slate-500">
