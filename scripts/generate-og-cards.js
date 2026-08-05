@@ -102,7 +102,10 @@ function card({ title, track, readTime, author }) {
 
 async function main() {
   fs.mkdirSync(OUT_DIR, { recursive: true })
-  const files = fs.readdirSync(BLOG_DIR).filter((f) => f.endsWith('.md'))
+  // Posts are lowercase-kebab (the filename is the slug); any other .md dropped in
+  // here would otherwise render a card titled "undefined". Kept in step with
+  // `isPostFile` in lib/blog.js.
+  const files = fs.readdirSync(BLOG_DIR).filter((f) => /^[a-z0-9-]+\.md$/.test(f))
 
   for (const file of files) {
     const slug = file.replace(/\.md$/, '')

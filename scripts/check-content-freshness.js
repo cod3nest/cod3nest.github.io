@@ -53,7 +53,10 @@ function readPosts() {
 
   return fs
     .readdirSync(BLOG_DIR)
-    .filter((file) => file.endsWith('.md'))
+    // Posts are lowercase-kebab (the filename is the slug); any other .md dropped in
+    // here is not content and must not be gated. Kept in step with `isPostFile` in
+    // lib/blog.js.
+    .filter((file) => /^[a-z0-9-]+\.md$/.test(file))
     .map((file) => {
       const { data } = matter(fs.readFileSync(path.join(BLOG_DIR, file), 'utf8'))
       return { slug: file.replace(/\.md$/, ''), frontmatter: data }
