@@ -356,6 +356,13 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     ItemList schema all say "Fractional CTO" and name Ankit. It previously advertised
     "Fractional CTO & CFO Outcomes" against no CFO content. Restore the dual framing in
     the same change that adds a CFO study, and never ahead of one.
+    **Codenest now has a client, and the page distinguishes it** (owner, 5 Aug 2026):
+    Regeno is a Codenest client engagement; Rungway, Opayo and AstraZeneca predate the
+    firm and are Ankit's own track record. Every card carries a `kind` label above its
+    title saying which it is — "Codenest client engagement" or "Founder track record".
+    Do not drop those labels to make the page look like a client wall; the whole
+    reason the distinction is drawn in copy is that the page can no longer rely on
+    "none of these are clients" being true. Any study added later needs a `kind`.
 16. **Michelle covers both operational finance and fundraising.** Her CV documents the
     operational side in detail — multi-site P&L, budgeting and rolling forecasts,
     controls and governance, margin and procurement, Board reporting — and the owner
@@ -458,9 +465,17 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     `status` and `note` together with the real numbers. Regeno is **not** in the
     homepage logo strip — that strip is captioned "Founder track record includes"
     and is not a client wall (§13.15). The study attributes the work to Ankit by
-    name, as the other three do; whether Regeno may additionally be described as a
-    Codenest *client*, and whether it has given permission to be named at all, is
-    unconfirmed and needs the owner before any copy claims it.
+    name, as the other three do.
+    **Confirmed 5 Aug 2026: Regeno is a client of Codenest** — the firm's first named
+    client engagement, and the first proof on the site that is not founder track
+    record. Copy may say so directly; `/case-studies`, the CTO page FAQ, the
+    PrincipalBand highlight and `/about` all do. The owner directed the naming twice;
+    written permission from Regeno to be named is not on file here, and getting it is
+    an owner action, not a blocker the site re-litigates.
+    **Still outstanding:** Regeno is not on the homepage logo strip. That needs a logo
+    asset and a caption that no longer says "Founder track record includes" — the
+    strip is currently true only because it holds no clients. Change the caption and
+    add the mark in one commit, never the mark alone.
 
     **Spelling: Regeno.** It was first published as "Regono" and corrected the same
     day. The company is `regeno.farm`; check the spelling against the source repos,

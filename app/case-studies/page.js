@@ -11,7 +11,7 @@ import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../lib/schema'
 // of its own, and not before.
 export const metadata = {
   title: 'Case Studies: Fractional CTO Engagements',
-  description: 'Technical engagements led by Ankit Rana, Fractional CTO: an agentic AI platform at Regeno, scaling Rungway to 1,000+ concurrent users, transforming payments at Opayo, and a compliant MVP for AstraZeneca.',
+  description: 'Fractional CTO work led by Ankit Rana: an agentic AI platform for Codenest client Regeno, plus the founder track record behind it at Rungway, Opayo by Elavon and AstraZeneca.',
   openGraph: {
     title: 'Codenest Case Studies — Track Record',
     description: 'Agentic AI platform engineering, scaling, payments and regulated delivery. Regeno, Rungway, Opayo by Elavon, AstraZeneca.',
@@ -31,6 +31,11 @@ export const metadata = {
   },
 }
 
+// `kind` is the load-bearing field. Regeno is a Codenest client; the other three
+// predate the firm and are Ankit's own track record (§13.15). Flattening the two
+// into one undifferentiated wall would read as four clients, which is the exact
+// claim §13.4 bars. Every study states which it is, above its own title.
+//
 // Three of these are completed engagements with measured outcomes. Regeno is
 // live, so it carries `status` and its third block is scope rather than results
 // — the card renderer relabels the headings from `labels` and prints `note`
@@ -39,10 +44,11 @@ export const metadata = {
 const caseStudies = [
   {
     title: "Regeno: A Company Brain and an AI Factory",
-    status: "Engagement in progress",
+    kind: "Codenest client engagement",
+    status: "In progress",
     labels: { challenge: "The Brief", solution: "The Build", results: "What Is Being Built" },
-    challenge: "Regeno builds land-management and compliance software for UK farmers, where the evidence that proves an agreement was met arrives as documents, photographs, audio and video rather than as tidy data. Two problems sat behind the AI work: knowledge the business already held that nothing could query, and a delivery backlog that no realistic amount of hiring was going to clear. The engagement treats both as one platform problem rather than two initiatives.",
-    solution: "The company brain makes the organisation's own records queryable and exposes them to agents over MCP, so that people and agents answer from what the business already knows rather than from whatever fits in a prompt. The AI factory is the delivery half. It takes a unit of work from where it already lives — a Linear ticket, a GitHub issue, a Slack message — and drives it to a merged pull request: typed workflow graphs, an isolated sandbox per run, bounded test and review loops, and a merge policy the operator sets. Every run leaves a ledger of its decisions, and writes back what it learned for the next one to recall.",
+    challenge: "Regeno builds land-management and compliance software for UK farmers, where the evidence that proves an agreement was met arrives as documents, photographs, audio and video rather than as tidy data. Two problems sat behind the AI work: knowledge the business already held that nothing could query, and a delivery backlog that no realistic amount of hiring was going to clear. Codenest was brought in to treat both as one platform problem rather than two initiatives.",
+    solution: "The company brain makes Regeno's own records queryable and exposes them to agents over MCP, so that people and agents answer from what the business already knows rather than from whatever fits in a prompt. The AI factory is the delivery half. It takes a unit of work from where it already lives — a Linear ticket, a GitHub issue, a Slack message — and drives it to a merged pull request: typed workflow graphs, an isolated sandbox per run, bounded test and review loops, and a merge policy the operator sets. Every run leaves a ledger of its decisions, and writes back what it learned for the next one to recall.",
     results: [
       "Queryable layer over the organisation's own records, exposed to agents over MCP",
       "Ticket in, reviewed and tested pull request out, running unattended",
@@ -59,6 +65,7 @@ const caseStudies = [
   },
   {
     title: "Rungway: Scaling a Social Mentoring Platform",
+    kind: "Founder track record",
     challenge: "A London-based HR-tech startup needed fractional CTO support to scale their social mentoring platform. The system could only handle 5 concurrent users before experiencing severe performance degradation — completely inadequate for their UK enterprise client base.",
     solution: "As Rungway's interim CTO, Ankit delivered a complete architectural transformation: migrating from Neo4J to a hybrid MySQL/NoSQL architecture for the primary data store (retaining Neo4J for AI/ML), implementing microservices with domain-driven design, establishing Infrastructure as Code with AWS, building CI/CD pipelines, introducing event-driven architecture with SQS, and containerizing the entire stack.",
     results: ["Scaled from 5 to 1000+ concurrent users", "Zero-downtime database migration", "Modern DevOps foundations established", "Event-driven microservices architecture"],
@@ -68,6 +75,7 @@ const caseStudies = [
   },
   {
     title: "Opayo by Elavon: Payment Platform Transformation",
+    kind: "Founder track record",
     challenge: "Leading UK fintech payment provider needed Kubernetes consulting to modernize their infrastructure and integrate new payment channels (Apple Pay, Google Pay) while maintaining 100% uptime for critical transaction processing across Europe.",
     solution: "Working inside the Opayo platform team from August 2019 to June 2026, Ankit orchestrated a comprehensive AWS EKS migration with Kubernetes and Helm, implementing GitOps workflows and Infrastructure as Code using Terraform — managing the transition from monolithic architecture to microservices, establishing Jenkins CI/CD pipelines on Kubernetes, and scaling engineering culture across distributed teams.",
     results: ["Accelerated releases from every 2 weeks to multiple times per day", "Contributed to 10% revenue increase through faster feature delivery", "Reduced CI pipeline failures through automated testing", "Successfully integrated Apple Pay and Google Pay"],
@@ -77,6 +85,7 @@ const caseStudies = [
   },
   {
     title: "AstraZeneca: Drug Delivery Tracking System MVP",
+    kind: "Founder track record",
     challenge: "AstraZeneca needed to replace manual spreadsheet-based drug delivery tracking with a modern web-based tool to improve efficiency and accelerate time-to-market for pharmaceutical products. The system required integration with existing workflows while maintaining regulatory compliance.",
     solution: "Ankit built a production-grade web application with REST APIs and automated CI/CD pipelines, collaborating closely with stakeholders and business analysts to define requirements and align delivery with business goals — architecting scalable deployments on Kubernetes using Docker and Jenkins (config-as-code), and establishing robust testing practices with JUnit and Spock.",
     results: ["Accelerated delivery by 40% compared to manual processes", "Cut deployment errors by 30% through automated pipelines", "Improved stakeholder confidence through transparent roadmap planning", "Delivered production-ready MVP on Kubernetes infrastructure"],
@@ -92,10 +101,11 @@ const pageSchema = [
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: 'Codenest Case Studies',
-    // Every study on this page is a technical engagement led by Ankit. The
-    // description said "technical and financial" while no financial study
-    // existed — a claim the page could not back (BRANDING.md §2.2).
-    description: 'Technical leadership engagements led by Ankit Rana, Fractional CTO.',
+    // Every study on this page is technical and led by Ankit. The description
+    // said "technical and financial" while no financial study existed — a claim
+    // the page could not back (BRANDING.md §2.2). It names both categories the
+    // page holds rather than implying all four are client work (§13.15).
+    description: 'Fractional CTO work led by Ankit Rana: Codenest client engagements and the founder track record behind them.',
     itemListElement: caseStudies.map((study, index) => ({
       '@type': 'ListItem',
       position: index + 1,
@@ -149,7 +159,7 @@ export default function CaseStudiesPage() {
                   under a title that named the service and matched neither. */}
               <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Fractional CTO Case Studies</h1>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-                Technical engagements led by Ankit Rana, Fractional CTO. Agentic AI platforms, scaling, payments and regulated delivery
+                Client engagements and the founder track record behind them, led by Ankit Rana, Fractional CTO. Each is labelled for which it is
               </p>
             </div>
 
@@ -179,11 +189,14 @@ export default function CaseStudiesPage() {
                       </div>
                     </div>
                     <div className={`p-10 lg:p-12 ${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}>
-                      {study.status && (
-                        <p className="inline-block mb-4 px-3 py-1 rounded-full border border-accent-300 bg-accent-50 text-accent-800 text-xs font-semibold uppercase tracking-wide">
-                          {study.status}
-                        </p>
-                      )}
+                      <div className="flex flex-wrap items-center gap-3 mb-4">
+                        <p className="text-xs uppercase tracking-[0.2em] text-accent-700 font-semibold">{study.kind}</p>
+                        {study.status && (
+                          <span className="px-3 py-1 rounded-full border border-accent-300 bg-accent-50 text-accent-800 text-xs font-semibold uppercase tracking-wide">
+                            {study.status}
+                          </span>
+                        )}
+                      </div>
                       <h2 className="text-3xl font-bold text-slate-900 mb-4 group-hover:text-primary-700 transition-colors">{study.title}</h2>
                       <div className="space-y-6">
                         <div>

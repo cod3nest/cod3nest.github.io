@@ -120,7 +120,7 @@ export default function FractionalCTOPage() {
   const faqs = [
     {
       question: "Do you build agentic AI, or only advise on it?",
-      answer: "Build. Ankit is currently building a company brain and an AI factory at Regeno: a queryable layer over the organisation's own records, and a delivery platform that takes a ticket from Linear, GitHub or Slack and drives it to a merged pull request unattended. The person advising on the architecture is the person writing it."
+      answer: "Build. Regeno is a current Codenest client, and the engagement is a company brain and an AI factory: a queryable layer over their own records, and a delivery platform that takes a ticket from Linear, GitHub or Slack and drives it to a merged pull request unattended. The person advising on the architecture is the person writing it."
     },
     {
       question: "Everyone is telling us to build AI agents. How do you decide whether we should?",
@@ -256,7 +256,7 @@ export default function FractionalCTOPage() {
         credentials={['AWS Certified', '15+ years engineering', 'Kubernetes & Cloud', 'Agentic AI']}
         bio="Fifteen years building and scaling technology platforms: payment processors at Deloitte Digital and Elavon (US Bancorp), then startups going through hypergrowth across fintech, healthtech and proptech. He has sat on the receiving end of technical due diligence, which is the fastest way to learn what it actually tests."
         highlights={[
-          'Currently building a company brain and an AI factory at Regeno: queryable knowledge exposed to agents, and a platform that drives a ticket to a merged pull request unattended',
+          'Leads the Regeno engagement, a current Codenest client: a company brain over their own records, and an AI factory that drives a ticket to a merged pull request unattended',
           'Led engineering teams from 5 to 50+ across fintech and healthtech',
           'Ran a near seven-year platform transformation at Opayo by Elavon: AWS EKS migration, GitOps, a payments monolith moved to microservices',
           'Rebuilt Rungway as its interim CTO, taking the platform from 5 to 1,000+ concurrent users with a zero-downtime migration',
