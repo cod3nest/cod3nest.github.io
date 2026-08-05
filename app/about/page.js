@@ -141,7 +141,10 @@ export default function AboutPage() {
       ],
     },
     {
-      name: "Michelle Rana",
+      // "Michelle Rana FCCA" everywhere she is named in copy (§1) — the
+      // PrincipalBand and the homepage strip caption already do. Only the Person
+      // schema above keeps the bare legal name.
+      name: "Michelle Rana FCCA",
       role: "Fractional CFO",
       initial: "M",
       accent: "accent",
@@ -157,44 +160,6 @@ export default function AboutPage() {
     },
   ]
 
-  const values = [
-    {
-      title: "Founder-First",
-      description: "We're here to make you self-sufficient. Billable hours are not the measure.",
-      icon: (
-        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-        </svg>
-      )
-    },
-    {
-      title: "No Fluff",
-      description: "We don't do PowerPoint consulting. Every recommendation comes with implementation. We build alongside you.",
-      icon: (
-        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      )
-    },
-    {
-      title: "Long-Term Thinking",
-      description: "We build systems that scale. No shortcuts that create technical debt. No financial models that fall apart under scrutiny.",
-      icon: (
-        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-        </svg>
-      )
-    },
-    {
-      title: "Radical Honesty",
-      description: "We'll tell you if your idea won't work. We'll push back on bad decisions. Honest guidance beats comfortable agreement.",
-      icon: (
-        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-        </svg>
-      )
-    }
-  ]
 
   // Two technical categories, two financial — the grid itself has to read 50/50.
   const expertise = [
@@ -219,9 +184,12 @@ export default function AboutPage() {
       <section className="pt-24 md:pt-32 pb-20 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-sm uppercase tracking-[0.2em] text-accent-700 mb-4 font-medium">Our Story</p>
+            {/* The eyebrow carries the terms the h1 does not: "Built by Operators,
+                for Founders" is the strongest line on the site and is not worth
+                trading for keywords, so the structural opener does that job (§8). */}
+            <p className="text-sm uppercase tracking-[0.2em] text-accent-700 mb-4 font-medium">Meet Your Fractional CTO &amp; CFO</p>
             <h1 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-              Built by Operators,<br />for Founders
+              Built by Operators, <br />for Founders
             </h1>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
               Codenest is two executives, not one generalist. A CTO who has scaled the systems, and a CFO who has scaled the numbers.
@@ -382,27 +350,14 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-3xl font-bold text-slate-900 mb-4">How We Work</h2>
-            <p className="text-slate-600">The principles that guide every engagement</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="bg-slate-50 rounded-xl p-8 border border-slate-200 hover:border-accent-300 hover:shadow-md transition-all">
-                <div className="w-12 h-12 bg-accent-100 rounded-lg flex items-center justify-center text-accent-700 mb-4">
-                  {value.icon}
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">{value.title}</h3>
-                <p className="text-slate-600">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* The second "How We Work" block lived here — Founder-First / No Fluff /
+          Long-Term Thinking / Radical Honesty. The homepage already answers that
+          question at #how-we-work, in four sharper and more specific statements,
+          and the footer's "Our Methodology" link points there. Two canonical
+          answers to one question, with the weaker one on the page a founder reads
+          while deciding whether to trust us. Removed rather than kept in sync
+          (site review, 5 Aug 2026). "What We Believe" above stays: it is this
+          page's own material, not a restatement of the homepage's. */}
 
       {/* Expertise Section */}
       <section className="py-20 bg-slate-50">

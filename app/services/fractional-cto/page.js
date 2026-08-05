@@ -128,7 +128,7 @@ export default function FractionalCTOPage() {
     },
     {
       question: "What's the difference between a fractional CTO and a consultant?",
-      answer: "A fractional CTO is embedded in your team and takes ownership of technical outcomes. Unlike consultants who provide advice and leave, we're accountable for execution and stay engaged as your technical leader."
+      answer: "A consultant hands you a recommendation and leaves. A fractional CTO is in your standups and your Slack, owns the technical outcome, and is still there when the decision has to survive contact with production."
     },
     {
       question: "How many hours per week do you typically work?",
@@ -144,11 +144,11 @@ export default function FractionalCTOPage() {
     },
     {
       question: "Do you work with non-technical founders?",
-      answer: "Absolutely. Many of our clients are first-time founders without technical backgrounds. We excel at translating complex concepts into clear business terms."
+      answer: "Yes, and it is a large part of the job. The work is translation as much as architecture: what a decision costs, what it forecloses, and what you are actually buying when an engineer recommends something. You should never have to take a technical answer on trust."
     },
     {
       question: "What's your tech stack expertise?",
-      answer: "We specialize in cloud-native architectures (AWS, GCP), Kubernetes, Terraform, Python, Java, Postgres/MySQL, GitOps, and agentic AI stacks: LLM orchestration, retrieval, evaluation and guardrails. But our real value is in architectural thinking — we choose the right tools for your specific needs."
+      answer: "We specialise in cloud-native architectures (AWS, GCP), Kubernetes, Terraform, Python, Java, Postgres/MySQL, GitOps, and agentic AI stacks: LLM orchestration, retrieval, evaluation and guardrails. But our real value is in architectural thinking — we choose the right tools for your specific needs."
     },
     {
       question: "What makes you different from a dev shop?",
@@ -156,7 +156,7 @@ export default function FractionalCTOPage() {
     },
     {
       question: "Do you offer ongoing support after delivery?",
-      answer: "Yes. We offer retainer arrangements for post-launch support, scaling assistance, and continued technical leadership. Many clients transition from intensive builds to lighter advisory after launch."
+      answer: "Yes. A build usually steps down into a lighter retainer once it is live: scaling questions, hiring, and the architecture decisions that only surface under real load. The step down is planned, not improvised at the end."
     },
   ]
 
@@ -254,7 +254,7 @@ export default function FractionalCTOPage() {
         role="Fractional CTO"
         accent="primary"
         credentials={['AWS Certified', '15+ years engineering', 'Kubernetes & Cloud', 'Agentic AI']}
-        bio="Fifteen years building and scaling technology platforms: consumer-scale Java at Rated People and Rightmove, then leading engineering at Rungway, then a decade of regulated delivery through Codenest across government, banking, pharma and payments. He has sat on the receiving end of technical due diligence, which is the fastest way to learn what it actually tests."
+        bio="Fifteen years building and scaling technology platforms: consumer-scale Java at Rated People and Rightmove, then leading engineering at Rungway, then regulated delivery through Codenest since 2017 across government, banking, pharma and payments. He has sat on the receiving end of technical due diligence, which is the fastest way to learn what it actually tests."
         highlights={[
           'Leads the Regeno engagement, a current Codenest client: a company brain over their own records, and an AI factory that drives a ticket to a merged pull request unattended',
           'Led engineering teams from 5 to 50+ across fintech and healthtech',
@@ -297,7 +297,7 @@ export default function FractionalCTOPage() {
             <div>
               <h2 className="font-serif text-4xl font-bold text-slate-900 mb-6">What We Do</h2>
               <p className="text-xl text-slate-600 mb-8">
-                Comprehensive technical leadership covering strategy, architecture, team, and execution.
+                What the seat covers: strategy, architecture, the team, and the delivery of both.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {services.map((service, index) => (

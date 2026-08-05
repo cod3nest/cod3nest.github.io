@@ -134,7 +134,7 @@ export default function FractionalCTOGuidePage() {
               Complete Guide
             </span>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              The Complete Guide to<br />Fractional CTO Services
+              The Complete Guide to <br />Fractional CTO Services
             </h1>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-8">
               Everything UK founders need to know about hiring a fractional CTO: costs, benefits, timing, and how to make it work for your startup.
@@ -179,7 +179,7 @@ export default function FractionalCTOGuidePage() {
                 A <strong>fractional CTO</strong> is a senior technology executive who provides part-time technical leadership to companies that need strategic guidance but aren't ready for, or can't afford, a full-time Chief Technology Officer.
               </p>
               <p>
-                Unlike consultants who provide advice and leave, a fractional CTO becomes embedded in your organization. They attend your standups, join your Slack channels, participate in investor meetings, and take accountability for technical outcomes.
+                Unlike consultants who provide advice and leave, a fractional CTO becomes embedded in your organisation. They attend your standups, join your Slack channels, participate in investor meetings, and take accountability for technical outcomes.
               </p>
               <p>
                 The "fractional" model has become increasingly popular among UK startups, particularly in the pre-seed to Series A stages. It allows founders to access executive-level expertise while preserving runway and avoiding premature scaling of their leadership team.
@@ -231,7 +231,7 @@ export default function FractionalCTOGuidePage() {
               <ul>
                 <li>Implementing DevOps and CI/CD pipelines</li>
                 <li>Security architecture and compliance</li>
-                <li>Performance optimization</li>
+                <li>Performance optimisation</li>
                 <li>Vendor negotiation (cloud providers, tools)</li>
               </ul>
             </section>
@@ -283,7 +283,7 @@ export default function FractionalCTOGuidePage() {
                 How Much Does a Fractional CTO Cost?
               </h2>
               <p>
-                Fractional CTO costs in the UK vary based on experience level, engagement intensity, and industry specialization. Here's what to expect:
+                Fractional CTO costs in the UK vary based on experience level, engagement intensity, and industry specialisation. Here's what to expect:
               </p>
 
               <div className="overflow-x-auto my-8 not-prose">

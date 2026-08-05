@@ -33,11 +33,14 @@ const GROUPS = [
   {
     id: 'footer-company',
     heading: 'Company',
+    // Labels match the nav's. "Our Story" and "Insights" pointed at /about and
+    // /blog, which the nav calls About and Blog — three names for two pages, and
+    // the sitewide anchor text (40 pages) was the one carrying no keyword.
     links: [
       { href: '/case-studies/', label: 'Case Studies' },
-      { href: '/#how-we-work', label: 'Our Methodology' },
-      { href: '/about/', label: 'Our Story' },
-      { href: '/blog/', label: 'Insights' },
+      { href: '/#how-we-work', label: 'How We Work' },
+      { href: '/about/', label: 'About' },
+      { href: '/blog/', label: 'Blog' },
     ],
   },
   {
@@ -60,7 +63,11 @@ const GROUPS = [
   },
 ]
 
-const LINK_CLASS = 'text-slate-400 hover:text-accent-400 transition-colors'
+// `inline-block py-1.5` gives the anchor a hit area rather than leaving it at the
+// 17px of its own line box. Measured at 375px, every footer link was 15-20px tall
+// against the 24px WCAG 2.2 (2.5.8) minimum: `space-y-2` on the <li> separated
+// them visually without making any of them easier to hit.
+const LINK_CLASS = 'inline-block py-1.5 text-slate-400 hover:text-accent-400 transition-colors'
 
 function FooterLink({ href, label, external }) {
   if (external) {
@@ -119,7 +126,7 @@ export default function Footer() {
               <h3 id={group.id} className="font-semibold mb-4">
                 {group.heading}
               </h3>
-              <ul className="space-y-2 text-sm">
+              <ul className="space-y-1 text-sm">
                 {group.links.map((link) => (
                   <li key={link.href}>
                     <FooterLink {...link} />

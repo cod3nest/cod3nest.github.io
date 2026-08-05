@@ -44,9 +44,10 @@ const pageSchema = [
   },
 ]
 
-// Kept as data so the two collection points stay in sync with the forms
-// themselves — if a field is added to ContactForm or RunwayCalculator, it is
-// added here in the same change.
+// Kept as data so the collection points stay in sync with the forms themselves —
+// if a field is added to ContactForm, RunwayCalculator or ReferralForm, it is
+// added here in the same change. The referral form was missing from this list
+// entirely while it was live (site review, 5 Aug 2026).
 const collectionPoints = [
   {
     name: 'Strategy call request form',
@@ -67,6 +68,15 @@ const collectionPoints = [
       'The figures you enter into the calculator, which are sent alongside that projection',
     ],
   },
+  {
+    name: 'Referral form',
+    where: '/refer',
+    fields: [
+      'Your name and email address (both required)',
+      "The referred founder's name, company and email address (all optional) — we ask you to confirm they are happy for you to share these before you send them",
+      'What you tell us they need help with (optional)',
+    ],
+  },
 ]
 
 export default function PrivacyPolicyPage() {
@@ -84,7 +94,7 @@ export default function PrivacyPolicyPage() {
               <p className="text-xl text-slate-600">
                 What we collect when you contact us, who else touches it, and how to get it removed.
               </p>
-              <p className="text-sm text-slate-500 mt-4">Last updated: 4 August 2026</p>
+              <p className="text-sm text-slate-500 mt-4">Last updated: 5 August 2026</p>
             </div>
 
             <div className="space-y-12 text-slate-600 leading-relaxed">
@@ -111,8 +121,8 @@ export default function PrivacyPolicyPage() {
               <section>
                 <h2 className="text-2xl font-bold text-slate-900 mb-4">What we collect, and when</h2>
                 <p className="mb-6">
-                  We only collect personal data that you type into a form yourself. There are two places on this site
-                  where that happens.
+                  We only collect personal data that you type into a form yourself. There are three places on this
+                  site where that happens.
                 </p>
                 <div className="space-y-6">
                   {collectionPoints.map((point) => (
@@ -155,8 +165,8 @@ export default function PrivacyPolicyPage() {
                 <h2 className="text-2xl font-bold text-slate-900 mb-4">Who else processes it</h2>
                 <ul className="space-y-4">
                   <li>
-                    <strong className="text-slate-900">EmailJS</strong> delivers both forms on this site. Everything you
-                    submit passes through EmailJS on its way to our inbox.
+                    <strong className="text-slate-900">EmailJS</strong> delivers all three forms on this site.
+                    Everything you submit passes through EmailJS on its way to our inbox.
                   </li>
                   <li>
                     <strong className="text-slate-900">Our email provider</strong> holds the resulting message, in the
@@ -179,6 +189,23 @@ export default function PrivacyPolicyPage() {
                   The contact form contains an optional email-verification step that would check an address against a
                   third-party validation service. It is switched off, and no address is sent anywhere for verification.
                   If we ever enable it, this page will say so before it goes live.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-bold text-slate-900 mb-4">If someone referred you to us</h2>
+                <p>
+                  The referral form lets one person pass on another person&apos;s details. We ask the referrer to
+                  confirm you already know about the introduction before they send anything, and we use what they
+                  give us only to make contact once.
+                </p>
+                <p className="mt-4">
+                  If we get in touch and you would rather we had not, tell us and we will delete your details
+                  immediately — reply to the email, or write to{' '}
+                  <a href="mailto:hello@codenest.uk" className="font-semibold text-primary-700 hover:text-primary-800 underline">
+                    hello@codenest.uk
+                  </a>
+                  . You can also ask us who referred you.
                 </p>
               </section>
 

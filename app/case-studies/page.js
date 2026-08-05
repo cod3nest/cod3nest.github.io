@@ -38,11 +38,21 @@ export const metadata = {
 // and §13.11 already dated Opayo as Codenest-era. Understating the client base
 // is as inaccurate as overstating it. Every study states which it is.
 //
-// Three of these are completed engagements with measured outcomes. Regeno is
-// live, so it carries `status` and its third block is scope rather than results
-// — the card renderer relabels the headings from `labels` and prints `note`
-// instead of inventing figures nobody has measured yet (§4, §13.28). Fill in
-// real numbers and drop `status`/`note` when the engagement produces them.
+// Three of these are completed engagements. Regeno is live, so it carries
+// `status` and its third block is scope rather than results — the card renderer
+// relabels the headings from `labels` and prints `note` instead of inventing
+// figures nobody has measured yet (§4, §13.28). Fill in real numbers and drop
+// `status`/`note` when the engagement produces them.
+//
+// `results` entries state what was built or what changed, with a bound or a
+// named artefact. They must not carry a bare percentage. The claims stripped from
+// the homepage under §2.2 survived here until 5 Aug 2026: "maintaining 100%
+// uptime", "contributed to 10% revenue increase" (a revenue claim about a third
+// party), "accelerated delivery by 40%" and "cut deployment errors by 30%" — four
+// figures with no denominator and no source, on the page a diligence-minded
+// investor reads hardest, directly above a study that prints "outcome figures go
+// up once they are measured". If a number cannot be sourced, name the artefact
+// instead.
 const caseStudies = [
   {
     title: "Regeno: A Company Brain and an AI Factory",
@@ -80,9 +90,9 @@ const caseStudies = [
   {
     title: "Opayo by Elavon: Payment Platform Transformation",
     kind: "Codenest client engagement",
-    challenge: "Leading UK fintech payment provider needed Kubernetes consulting to modernize their infrastructure and integrate new payment channels (Apple Pay, Google Pay) while maintaining 100% uptime for critical transaction processing across Europe.",
-    solution: "Working inside the Opayo platform team from August 2019 to June 2026, Ankit orchestrated a comprehensive AWS EKS migration with Kubernetes and Helm, implementing GitOps workflows and Infrastructure as Code using Terraform — managing the transition from monolithic architecture to microservices, establishing Jenkins CI/CD pipelines on Kubernetes, and scaling engineering culture across distributed teams.",
-    results: ["Accelerated releases from every 2 weeks to multiple times per day", "Contributed to 10% revenue increase through faster feature delivery", "Reduced CI pipeline failures through automated testing", "Successfully integrated Apple Pay and Google Pay"],
+    challenge: "A UK payments provider needed to move off self-managed infrastructure and add new payment channels (Apple Pay, Google Pay), on a platform that had to keep processing transactions across Europe throughout.",
+    solution: "Working inside the Opayo platform team from August 2019 to June 2026, Ankit led an AWS EKS migration with Kubernetes and Helm, GitOps workflows and Infrastructure as Code in Terraform, the move from a payments monolith to microservices, and Jenkins CI/CD pipelines running on Kubernetes.",
+    results: ["Releases went from every two weeks to multiple times per day", "Apple Pay and Google Pay integrated as new payment channels", "Automated test gates in the pipeline, so a failing build stops before a release branch", "Monolith decomposed to microservices on AWS EKS, migrated in place"],
     tags: ["Payment Systems", "AWS EKS", "Kubernetes", "Terraform", "GitOps", "Team Leadership"],
     image: "/img/photos/case-opayo.jpg",
     imageAlt: "Secure payment processing and mobile payment integration"
@@ -91,8 +101,8 @@ const caseStudies = [
     title: "AstraZeneca: Drug Delivery Tracking System MVP",
     kind: "Codenest client engagement",
     challenge: "AstraZeneca needed to replace manual spreadsheet-based drug delivery tracking with a modern web-based tool to improve efficiency and accelerate time-to-market for pharmaceutical products. The system required integration with existing workflows while maintaining regulatory compliance.",
-    solution: "Ankit built a production-grade web application with REST APIs and automated CI/CD pipelines, collaborating closely with stakeholders and business analysts to define requirements and align delivery with business goals — architecting scalable deployments on Kubernetes using Docker and Jenkins (config-as-code), and establishing robust testing practices with JUnit and Spock.",
-    results: ["Accelerated delivery by 40% compared to manual processes", "Cut deployment errors by 30% through automated pipelines", "Improved stakeholder confidence through transparent roadmap planning", "Delivered production-ready MVP on Kubernetes infrastructure"],
+    solution: "Ankit built a web application with REST APIs behind it, defining requirements with stakeholders and business analysts, deploying on Kubernetes with Docker and Jenkins as config-as-code, and putting the test suite in JUnit and Spock behind the pipeline.",
+    results: ["Production-ready MVP delivered on Kubernetes infrastructure", "Spreadsheet-based tracking replaced by a single web tool", "Deployments automated end to end, with tests as a release gate", "Requirements agreed with stakeholders before each delivery increment"],
     tags: ["Healthcare", "Team Leadership", "Kubernetes", "CI/CD", "REST APIs", "Stakeholder Management"],
     image: "/img/photos/case-astrazeneca.jpg",
     imageAlt: "Healthcare technology and pharmaceutical tracking systems"
@@ -100,9 +110,9 @@ const caseStudies = [
   {
     title: "Rungway: Scaling a Social Mentoring Platform",
     kind: "Founder track record",
-    challenge: "A London-based HR-tech startup needed fractional CTO support to scale their social mentoring platform. The system could only handle 5 concurrent users before experiencing severe performance degradation — completely inadequate for their UK enterprise client base.",
-    solution: "Leading engineering at Rungway, Ankit delivered a complete architectural transformation: migrating from Neo4J to a hybrid MySQL/NoSQL architecture for the primary data store (retaining Neo4J for AI/ML), implementing microservices with domain-driven design, establishing Infrastructure as Code with AWS, building CI/CD pipelines, introducing event-driven architecture with SQS, and containerizing the entire stack.",
-    results: ["Scaled from 5 to 1000+ concurrent users", "Zero-downtime database migration", "Modern DevOps foundations established", "Event-driven microservices architecture"],
+    challenge: "A London-based HR-tech startup needed its social mentoring platform rebuilt to carry an enterprise client base. The system degraded badly beyond 5 concurrent users. Ankit joined as Lead Software Engineer, with the scope of a CTO, a year before Codenest existed.",
+    solution: "Ankit led the rebuild: migrating from Neo4J to a hybrid MySQL/NoSQL primary data store (keeping Neo4J for AI/ML), microservices along domain boundaries, Infrastructure as Code on AWS, CI/CD pipelines, event-driven messaging over SQS, and containerising the stack.",
+    results: ["Scaled from 5 to 1,000+ concurrent users", "Zero-downtime database migration", "Event-driven microservices replacing the original architecture", "CI/CD and Infrastructure as Code established from scratch"],
     tags: ["Backend Architecture", "AWS", "DevOps", "Scalability", "Microservices"],
     image: "/img/photos/case-rungway.jpg",
     imageAlt: "Data analytics dashboard showing platform scalability metrics"

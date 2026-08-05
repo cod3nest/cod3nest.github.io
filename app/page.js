@@ -29,7 +29,7 @@ export default function Home() {
     {
       title: "Opayo by Elavon: Payment Platform Transformation",
       kind: "Codenest client engagement",
-      results: ["Releases accelerated from fortnightly to multiple times per day"]
+      results: ["Releases went from every two weeks to multiple times per day"]
     },
     {
       title: "AstraZeneca: Drug Delivery Tracking System MVP",
@@ -39,7 +39,7 @@ export default function Home() {
     {
       title: "Rungway: Scaling a Social Mentoring Platform",
       kind: "Founder track record",
-      results: ["Scaled from 5 to 1000+ concurrent users"]
+      results: ["Scaled from 5 to 1,000+ concurrent users"]
     }
   ]
 
@@ -47,7 +47,7 @@ export default function Home() {
   const faqs = [
     {
       question: "How quickly can we start?",
-      answer: "Most engagements start within 1-2 weeks after our initial discovery call. For urgent projects, we can mobilize faster."
+      answer: "Most engagements start within 1-2 weeks after our initial discovery call. For urgent projects, we can mobilise faster."
     },
     {
       question: "What does a typical engagement look like?",
@@ -214,7 +214,7 @@ export default function Home() {
                   <svg className="w-5 h-5 text-accent-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  Financial Modeling & FP&A
+                  Financial Modelling & FP&A
                 </li>
                 <li className="flex items-center text-slate-700">
                   <svg className="w-5 h-5 text-accent-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -315,6 +315,9 @@ export default function Home() {
             <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm transition-all cursor-default">
               <img
                 src="/img/clients/regeno.png"
+                width={40}
+                height={40}
+                loading="lazy"
                 alt="Regeno"
                 className="w-10 h-10 rounded-lg object-contain"
               />
@@ -328,6 +331,9 @@ export default function Home() {
             <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm transition-all cursor-default">
               <img
                 src="/img/clients/opayo.png"
+                width={100}
+                height={32}
+                loading="lazy"
                 alt="Opayo by Elavon"
                 className="h-8 w-auto object-contain"
               />
@@ -337,6 +343,9 @@ export default function Home() {
             <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm transition-all cursor-default">
               <img
                 src="/img/clients/astrazeneca.png"
+                width={128}
+                height={32}
+                loading="lazy"
                 alt="AstraZeneca"
                 className="h-8 w-auto object-contain"
               />
@@ -349,6 +358,9 @@ export default function Home() {
             <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm transition-all cursor-default">
               <img
                 src="/img/clients/hsbc.png"
+                width={118}
+                height={32}
+                loading="lazy"
                 alt="HSBC"
                 className="h-8 w-auto object-contain"
               />
@@ -357,6 +369,9 @@ export default function Home() {
             <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm transition-all cursor-default">
               <img
                 src="/img/clients/deloitte.png"
+                width={119}
+                height={32}
+                loading="lazy"
                 alt="Deloitte Digital"
                 className="h-8 w-auto object-contain"
               />
@@ -370,6 +385,9 @@ export default function Home() {
             <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm transition-all cursor-default">
               <img
                 src="/img/clients/rungway.webp"
+                width={40}
+                height={40}
+                loading="lazy"
                 alt="Rungway"
                 className="w-10 h-10 rounded-lg object-contain"
               />
@@ -386,6 +404,9 @@ export default function Home() {
             <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm transition-all cursor-default">
               <img
                 src="/img/clients/dishoom.svg"
+                width={176}
+                height={20}
+                loading="lazy"
                 alt="Dishoom"
                 className="h-5 w-auto object-contain"
               />

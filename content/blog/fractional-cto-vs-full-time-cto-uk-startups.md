@@ -66,7 +66,7 @@ A good fractional CTO provides:
 - **Technical Strategy** — Architecture decisions, build vs buy, technology selection
 - **Team Leadership** — Hiring support, engineering culture, developer mentorship
 - **Investor Readiness** — Technical due diligence prep, CTO-in-meetings for fundraising
-- **Vendor Management** — Contract negotiation, AWS/GCP optimization, tool selection
+- **Vendor Management** — Contract negotiation, AWS/GCP optimisation, tool selection
 - **Risk Mitigation** — Security architecture, compliance guidance, disaster recovery
 
 The difference from a consultant? A fractional CTO has accountability for outcomes, not just advice. They're in your Slack, your standups, your board meetings.

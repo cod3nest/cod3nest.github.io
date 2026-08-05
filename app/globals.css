@@ -103,20 +103,10 @@
   }
 }
 
-/* Subtle pulse animation for CTAs */
-/* Attention-grabbing bounce for sticky CTA */
-@keyframes subtleBounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-3px);
-  }
-}
-
-.cta-bounce {
-  animation: subtleBounce 2s ease-in-out infinite;
-}
+/* `subtleBounce`/`.cta-bounce` lived here: an infinite attention animation on the
+   sticky CTA, referenced by nothing since `cta-pulse` was retired. BRANDING §5
+   bans infinite attention animations outright, so it was dead code that could
+   only be revived into a rule violation. Removed 5 Aug 2026. */
 
 /* Safe area for iPhone notch/home indicator */
 .safe-area-bottom {

@@ -222,14 +222,27 @@ const ContactForm = ({ labelledBy }) => {
 
       setSubmitStatus({
         type: 'success',
-        message: 'Thank you! Your message has been sent successfully. We will get back to you soon.'
+        // Matches the promise printed under the button. The two used to disagree
+        // ("we will get back to you soon" against "within 24 hours with times").
+        message: "Thank you — that's with us. We'll reply within 24 hours with some times."
       })
       setFormData({ name: '', email: '', company: '', engagement: '', message: '' })
       setEmailValidation({ status: 'idle', message: '', suggestion: null })
     } catch (error) {
+      // The address has to be in the message itself. This used to say "email us
+      // directly" while no email address appeared anywhere on the page — the one
+      // moment the fallback matters was the one moment it was missing (§11).
       setSubmitStatus({
         type: 'error',
-        message: 'Sorry, there was an error sending your message. Please try again or email us directly.'
+        message: (
+          <>
+            Sorry, that didn&apos;t send. Please try again, or email us at{' '}
+            <a href="mailto:hello@codenest.uk" className="font-semibold underline">
+              hello@codenest.uk
+            </a>
+            .
+          </>
+        )
       })
       console.error('EmailJS Error:', error)
     } finally {
@@ -414,6 +427,8 @@ const ContactForm = ({ labelledBy }) => {
 
         {submitStatus.message && (
           <div
+            role="status"
+            aria-live="polite"
             className={`p-4 rounded-xl ${
               submitStatus.type === 'success'
                 ? 'bg-green-50 border border-green-200 text-green-800'

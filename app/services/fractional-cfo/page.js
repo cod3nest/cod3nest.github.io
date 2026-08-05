@@ -40,10 +40,17 @@ const cfoBreadcrumbs = breadcrumbs([
 ])
 
 export default function FractionalCFOPage() {
+  // Each tile carries a `proof` line, and each one names where the number comes
+  // from. All four used to be figure-free while Michelle's numbers sat one screen
+  // above in the PrincipalBand — the proof was on the page and unused at the point
+  // it converts (site review, 5 Aug 2026). Dishoom figures attach to her *role*,
+  // never to Codenest as a firm (§13.15); the Series A line is the one outcome a
+  // verified client testimonial supports (§2.3).
   const benefits = [
     {
       title: "Investor-Ready Financials",
-      description: "Build financial models and reporting that satisfy even the most demanding investors.",
+      description: "Financial models and reporting built to be tested, not admired.",
+      proof: "Michelle owned Board and investor reporting at Dishoom",
       icon: (
         <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -52,7 +59,8 @@ export default function FractionalCFOPage() {
     },
     {
       title: "Extend Your Runway",
-      description: "Optimize cash flow and burn rate to give yourself more time to hit milestones.",
+      description: "Cash flow and burn under a forecast you can act on, months before the decision lands.",
+      proof: "Rolling forecasts accurate to ±3% at Dishoom",
       icon: (
         <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -61,7 +69,8 @@ export default function FractionalCFOPage() {
     },
     {
       title: "Close Rounds Faster",
-      description: "Prepared data rooms and polished financials help you close fundraising rounds with confidence.",
+      description: "A data room and a model that answer the questions before an investor has to ask them.",
+      proof: "Series A closed on our models and data room (client, name withheld)",
       icon: (
         <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
@@ -70,7 +79,8 @@ export default function FractionalCFOPage() {
     },
     {
       title: "Board-Level Reporting",
-      description: "Professional financial reporting that builds confidence with your board and investors.",
+      description: "A close that lands on time, so the board pack is not assembled the night before.",
+      proof: "Month-end close cut from 14 days to 8 at Dishoom",
       icon: (
         <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -80,8 +90,8 @@ export default function FractionalCFOPage() {
   ]
 
   const services = [
-    "Financial modeling and forecasting",
-    "Cash flow management and optimization",
+    "Financial modelling and forecasting",
+    "Cash flow management and optimisation",
     "Unit economics analysis",
     "Data room creation and management",
     "Investor presentation support",
@@ -96,7 +106,7 @@ export default function FractionalCFOPage() {
   const faqs = [
     {
       question: "What's the difference between FP&A and accounting?",
-      answer: "Accountants handle historical compliance and bookkeeping. FP&A is forward-looking: financial modeling, forecasting, unit economics, pricing strategy, and investor communications. We provide strategic finance leadership, not bookkeeping."
+      answer: "Accountants handle historical compliance and bookkeeping. FP&A is forward-looking: financial modelling, forecasting, unit economics, pricing strategy, and investor communications. We provide strategic finance leadership, not bookkeeping."
     },
     {
       question: "How many hours per week do you typically work?",
@@ -104,15 +114,35 @@ export default function FractionalCFOPage() {
     },
     {
       question: "When should a startup invest in FP&A?",
-      answer: "Ideal timing is when you're preparing to raise funding, need to optimize runway, or want to professionalize your financial operations. Typically pre-seed through Series A — and we stay on as you scale."
+      answer: "Ideal timing is when you're preparing to raise funding, need to optimise runway, or want to professionalise your financial operations. Typically pre-seed through Series A — and we stay on as you scale."
     },
     {
       question: "Can you help us prepare for due diligence?",
-      answer: "Absolutely. Due diligence preparation is one of our core strengths. We ensure your financials, projections, and data room are investor-ready and can withstand scrutiny."
+      answer: "Yes. We build the model, the data room and the supporting schedules, then work the questions an investor will actually ask against them. Michelle has been through investor due diligence from the inside, which is the fastest way to learn what it tests."
     },
     {
       question: "Can you help with fundraising?",
-      answer: "Yes. We prepare financial models, data rooms, and due diligence materials. We've supported raises from pre-seed through Series A across fintech, healthtech, and B2B SaaS."
+      answer: "Yes. Financial models, data rooms and due diligence materials, plus the investor conversations that run off them. What we will not do is put a number on your raise before we have seen your numbers."
+    },
+    {
+      question: "Do we still need a bookkeeper or an accountant?",
+      answer: "Yes, and we are not a replacement for either. A bookkeeper records what happened and an accountant files it. A Fractional CFO decides what to do next: pricing, hiring, runway, the shape of the raise. We work alongside whoever already does your compliance."
+    },
+    {
+      question: "Can you work with the finance team we already have?",
+      answer: "Yes. Michelle built and led a 20+ person finance function, so working through a team is the normal case rather than the exception. We set the reporting, the controls and the forecast rhythm, and your team runs them."
+    },
+    {
+      question: "We are not raising. Is a Fractional CFO still worth it?",
+      answer: "Often, yes. Fundraising is one use of the seat, not the point of it. Pricing, margin, month-end close, cash management, budgeting and Board reporting are the operational half, and they are what makes the next raise straightforward when it comes."
+    },
+    {
+      question: "What does the first month look like?",
+      answer: "We start with what exists: the numbers, how they are produced, and where they are argued about. From that comes a working model, an agreed reporting pack, and a short list of the decisions that need a number attached to them. No 90-day discovery phase."
+    },
+    {
+      question: "Can you help us hire a permanent finance lead?",
+      answer: "Yes. Part of the job is making the seat unnecessary: defining the role, sitting in on interviews, and handing over a function that runs without us. The same applies on the technical side with the Fractional CTO."
     },
   ]
 
@@ -135,7 +165,7 @@ export default function FractionalCFOPage() {
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: 'Fractional CFO Services',
-    description: 'Part-time financial leadership for startups. FP&A, financial modeling, and fundraising support.',
+    description: 'Part-time financial leadership for startups. FP&A, financial modelling, and fundraising support.',
     // Reference the root layout's ProfessionalService by @id rather than
     // restating it: a second, differently-shaped Organization node for the same
     // business invites Google to treat them as two companies.
@@ -176,7 +206,7 @@ export default function FractionalCFOPage() {
                 Fractional CFO Services
               </h1>
               <p className="text-xl text-slate-600 mb-4 leading-relaxed">
-                FP&A, financial modeling, and investor-ready reporting from a part-time CFO. The financial discipline of a high-growth company — without the overhead.
+                FP&A, financial modelling, and investor-ready reporting from a part-time CFO. The financial discipline of a high-growth company — without the overhead.
               </p>
               <p className="text-sm font-medium text-slate-700 mb-8">
                 Retained monthly engagements, scoped to your stage &middot; typically 60-80% less than a full-time CFO
@@ -243,6 +273,11 @@ export default function FractionalCFOPage() {
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{benefit.title}</h3>
                 <p className="text-slate-600">{benefit.description}</p>
+                {benefit.proof && (
+                  <p className="mt-4 pt-4 border-t border-slate-200 text-sm font-semibold text-accent-700">
+                    {benefit.proof}
+                  </p>
+                )}
               </div>
             ))}
           </div>
@@ -256,7 +291,7 @@ export default function FractionalCFOPage() {
             <div>
               <h2 className="font-serif text-4xl font-bold text-slate-900 mb-6">What We Do</h2>
               <p className="text-xl text-slate-600 mb-8">
-                Comprehensive financial leadership covering strategy, systems implementation, and operational excellence.
+                What the seat covers: the plan, the systems that produce the numbers, and the discipline that keeps them true.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {services.map((service, index) => (
@@ -287,7 +322,7 @@ export default function FractionalCFOPage() {
                   </span>
                   <div>
                     <p className="font-semibold text-slate-900">Founders needing financial discipline</p>
-                    <p className="text-slate-600 text-sm">Want to optimize runway and understand unit economics</p>
+                    <p className="text-slate-600 text-sm">Want to optimise runway and understand unit economics</p>
                   </div>
                 </li>
                 <li className="flex items-start">
@@ -346,7 +381,7 @@ export default function FractionalCFOPage() {
               </Link>{' '}
               — or read{' '}
               <Link href="/blog/financial-modeling-seed-stage-startups/" className="font-semibold text-accent-700 hover:text-accent-800 underline">
-                our financial modeling guide
+                our financial modelling guide
               </Link>.
             </p>
           </div>
