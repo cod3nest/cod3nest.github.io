@@ -68,6 +68,11 @@ and open a PR; do not commit to `master`.
 The workflow checks out with `fetch-depth: 0` because `app/sitemap.js` reads per-file
 commit dates for `<lastmod>`; a shallow clone would stamp every URL with the same date.
 
+The custom domain lives in `public/CNAME`, so it is copied into `out/` and travels with
+the artifact. It previously sat at the repository root, where the workflow never saw it —
+the binding held only because it was also set in the repository's Pages settings, in one
+place, undocumented and unversioned.
+
 Never copy `out/` back over the repository root. Build output at the root is not served —
 the workflow only ever publishes `out/` — so it silently rots. The root previously held a
 six-URL `sitemap.xml` against the real thirty-six, and a duplicate `manifest.json` with
