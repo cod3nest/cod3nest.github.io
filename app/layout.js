@@ -132,9 +132,12 @@ export default function RootLayout({ children }) {
         name: 'Europe'
       }
     ],
+    // LinkedIn only. The GitHub org URL was the one place the legacy `cod3nest`
+    // identifier still reached a public surface, and §1 bars it from schema by
+    // name. It was a real entity-disambiguation signal; the owner chose the rule
+    // over the signal (5 Aug 2026).
     sameAs: [
-      'https://www.linkedin.com/company/codenest-ltd',
-      'https://github.com/cod3nest'
+      'https://www.linkedin.com/company/codenest-ltd'
     ],
     contactPoint: {
       '@type': 'ContactPoint',

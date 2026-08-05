@@ -298,6 +298,14 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
 5. **Tagline is "Big 4 rigour meets founder empathy"** + flourish "Executive
    firepower. Startup agility." — all other slogans retired. (4 Aug 2026.)
 6. **"cod3nest" never appears in user-facing surfaces.** (4 Aug 2026.)
+   **Enforced 5 Aug 2026:** the GitHub org URL was removed from the
+   `ProfessionalService` `sameAs` in `app/layout.js` and from `public/humans.txt`.
+   The `sameAs` entry was a genuine entity-disambiguation signal for Google, and the
+   owner chose this rule over that signal — do not reinstate it as an SEO
+   improvement. **One unavoidable exception:** `GiscusComments.js` passes
+   `data-repo="cod3nest/cod3nest.github.io"`, which is functional configuration
+   rather than copy, and comments break without it. It stays until the repository
+   itself is renamed.
 7. **No emojis.** (Project CLAUDE.md, standing.)
 8. **No gold text on white below AA contrast.** (4 Aug 2026.)
 9. **One FAQPage schema per page, owned by the page.** (4 Aug 2026.)

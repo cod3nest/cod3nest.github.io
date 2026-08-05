@@ -2,7 +2,6 @@
 Company: Codenest Ltd
 Site: https://codenest.uk
 LinkedIn: https://www.linkedin.com/company/codenest-ltd
-GitHub: https://github.com/cod3nest
 Location: United Kingdom
 
 /* THANKS */
@@ -10,7 +9,7 @@ Built with: Next.js 15, TailwindCSS
 Hosted on: GitHub Pages
 
 /* SITE */
-Last update: 2024/11/05
+Last update: 2026/08/05
 Standards: HTML5, CSS3, ES2024
 Components: React, EmailJS
 SEO: Optimized with structured data, sitemap, and semantic HTML
