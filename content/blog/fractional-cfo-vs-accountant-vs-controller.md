@@ -66,6 +66,8 @@ A CFO is the forward-looking layer: strategy, capital, and the decisions that de
 
 ## The Three Roles at a Glance
 
+[diagram:cfo-roles-split]
+
 | | Accountant | Financial Controller | Fractional CFO |
 |---|---|---|---|
 | **Orientation** | Historical | Operational | Forward-looking |

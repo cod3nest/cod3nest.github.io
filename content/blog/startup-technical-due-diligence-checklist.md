@@ -16,6 +16,8 @@ Technical due diligence can make or break a deal. I've helped startups prepare f
 
 ## What Is Technical Due Diligence?
 
+[diagram:tech-dd-layers]
+
 Technical due diligence is an investor's assessment of your technology, team, and processes. They're trying to answer one question: **Can this company deliver on its technical promises?**
 
 For early-stage startups, the bar isn't perfection. Investors know you're moving fast with limited resources. What they're looking for is:

@@ -58,6 +58,8 @@ The commercial translation: **the infrastructure stops being knowledge that can 
 
 ## The Four Tools, and the Answer
 
+[diagram:terraform-tools]
+
 Your team will name four options. Here is what each is, in commercial terms.
 
 | Tool | What it is | Where it fits |

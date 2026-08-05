@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/check-content-freshness.js",
+    "prebuild": "node scripts/check-content-freshness.js && node scripts/generate-og-cards.js",
+    "og:cards": "node scripts/generate-og-cards.js",
     "build": "next build",
     "start": "next start",
     "check:freshness": "node scripts/check-content-freshness.js",

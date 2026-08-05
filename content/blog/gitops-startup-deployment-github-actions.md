@@ -17,6 +17,8 @@ This guide is for making that call. It assumes no technical background, and it w
 
 ## What a Deployment Is, and Why Yours Might Be Fragile
 
+[diagram:gitops-loop]
+
 A deployment is the act of taking the software your team has written and putting it in front of customers. It happens every time you ship anything.
 
 In a young company it usually works like this. An engineer finishes a feature. Someone, often the same person every time, runs a series of steps by hand to push it live. They rely on remembering the order. If something breaks, they work backwards under pressure to find what changed.

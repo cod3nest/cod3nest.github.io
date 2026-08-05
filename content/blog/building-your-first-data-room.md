@@ -46,6 +46,8 @@ For pre-seed and seed rounds, Google Drive or Notion is usually sufficient. Upgr
 
 ## Data Room Structure
 
+[diagram:data-room-structure]
+
 Here's the folder structure investors expect:
 
 ```

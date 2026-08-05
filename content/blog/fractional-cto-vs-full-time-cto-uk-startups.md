@@ -108,6 +108,8 @@ If you've had a bad CTO hire, fractional lets you de-risk while still getting le
 
 ## The Hybrid Path: Fractional to Full-Time
 
+[diagram:fractional-to-fulltime]
+
 Many successful startups use fractional as a bridge:
 
 **Phase 1: Fractional (Months 1-6)**

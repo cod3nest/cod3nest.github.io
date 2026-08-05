@@ -282,6 +282,8 @@ If due diligence calls reveal co-founder tension or misaligned visions, investor
 
 ## Timeline and Process
 
+[diagram:dd-process]
+
 ### Typical Seed Due Diligence Timeline
 
 | Week | Activity |

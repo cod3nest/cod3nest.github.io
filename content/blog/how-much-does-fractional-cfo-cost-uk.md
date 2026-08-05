@@ -23,6 +23,8 @@ Still weighing whether you need one at all? Start with [When Should You Hire a F
 
 ## Fractional CFO Pricing Tiers
 
+[diagram:cfo-cost-tiers]
+
 ### Light-Touch Advisory: £2,000-£3,500/month
 **~2-4 hours per week**
 

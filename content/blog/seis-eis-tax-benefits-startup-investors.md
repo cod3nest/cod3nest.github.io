@@ -115,6 +115,8 @@ These company limits count risk-finance investment across SEIS, EIS and VCT toge
 
 ## SEIS vs EIS: Quick Comparison
 
+[diagram:seis-eis]
+
 | Factor | SEIS | EIS |
 |--------|------|-----|
 | Income Tax Relief | 50% | 30% |
