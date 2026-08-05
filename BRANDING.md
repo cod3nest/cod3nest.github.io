@@ -364,19 +364,25 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     ItemList schema all say "Fractional CTO" and name Ankit. It previously advertised
     "Fractional CTO & CFO Outcomes" against no CFO content. Restore the dual framing in
     the same change that adds a CFO study, and never ahead of one.
-    **Codenest now has a client, and the page distinguishes it** (owner, 5 Aug 2026):
-    Regeno is a Codenest client engagement; Rungway, Opayo and AstraZeneca predate the
-    firm and are Ankit's own track record. Every card carries a `kind` label above its
-    title saying which it is — "Codenest client engagement" or "Founder track record".
+    **Which engagements are Codenest's** (owner, 5 Aug 2026, correcting an earlier
+    mislabel): **Regeno, Opayo by Elavon and AstraZeneca are Codenest client
+    engagements.** Only **Rungway** (predates the firm; Ankit was interim CTO) and
+    **Dishoom** (Michelle's employer) are founder track record. Opayo and AstraZeneca
+    were briefly published as founder track record — wrong, and §13.11 already dated
+    Opayo Aug 2019 – Jun 2026 as Codenest-era. **Understating the client base is as
+    inaccurate as overstating it**; check this list before labelling anything.
+    Every card carries a `kind` label above its title saying which it is —
+    "Codenest client engagement" or "Founder track record".
     Do not drop those labels to make the page look like a client wall; the whole
     reason the distinction is drawn in copy is that the page can no longer rely on
     "none of these are clients" being true. Any study added later needs a `kind`.
-    **The homepage teaser carries the same split** (5 Aug 2026): the client engagement
-    is a featured charcoal card, the three track-record studies sit in the grid below
-    under their own "Founder track record" label. It is a hand-maintained summary, not
-    a render of `/case-studies` data — when a study is added, edited or reordered
-    there, update `featuredStudy`/`caseStudies` in `app/page.js` too. It was already
-    stale once.
+    **The homepage teaser carries the same split** (5 Aug 2026): Regeno is a featured
+    charcoal card, and the remaining three sit in the grid below with a `kind` label
+    **per card** — a single caption over the grid was what made Opayo and AstraZeneca
+    read as founder track record. It is a hand-maintained summary, not a render of
+    `/case-studies` data — when a study is added, edited, reordered or *reclassified*
+    there, update `featuredStudy`/`caseStudies` in `app/page.js` too. It has gone stale
+    twice already; rendering both from one source is the real fix.
 16. **Michelle covers both operational finance and fundraising.** Her CV documents the
     operational side in detail — multi-site P&L, budgeting and rolling forecasts,
     controls and governance, margin and procurement, Board reporting — and the owner
@@ -486,17 +492,16 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     PrincipalBand highlight and `/about` all do. The owner directed the naming twice;
     written permission from Regeno to be named is not on file here, and getting it is
     an owner action, not a blocker the site re-litigates.
-    **Homepage strip, done 5 Aug 2026 (owner).** It is now two labelled groups:
-    **"Codenest clients"** (Regeno) above **"Founder track record includes"** (Rungway,
-    Opayo, AstraZeneca, Dishoom). The founder caption and the four marks under it are
-    untouched — the fix was to stop that caption having to cover a client, not to
-    reword it. Never merge the two groups back into one strip, and never move a mark
-    between them without the engagement changing.
-    **Regeno renders as a wordmark, not a logo.** No asset has been supplied, and a
-    client's brand asset is not Codenest's to lift from their codebase. The slot takes
-    an `<img>` the moment Regeno provides one; until then the text treatment matches
-    Rungway's name-and-sector block. Sector is "Agritech" — land-management and
-    compliance software for UK farmers.
+    **Homepage strip, 5 Aug 2026 (owner).** Two labelled groups:
+    **"Codenest clients"** — Regeno, Opayo by Elavon, AstraZeneca — above
+    **"Founder track record includes"** — Rungway and Dishoom. Never merge the groups
+    back into one strip, and never move a mark between them without the engagement
+    itself changing.
+    **Regeno's logo is `public/img/clients/regeno.png`** (owner-supplied 5 Aug 2026;
+    200×200, converted from the LinkedIn JPEG on request). It is a square dark-green
+    tile, so it takes Rungway's `w-10 h-10 rounded-lg` treatment with the name and
+    sector beside it. Sector is "Agritech" — land-management and compliance software
+    for UK farmers. Every client logo is self-hosted; never hotlink a CDN URL.
 
     **Spelling: Regeno.** It was first published as "Regono" and corrected the same
     day. The company is `regeno.farm`; check the spelling against the source repos,

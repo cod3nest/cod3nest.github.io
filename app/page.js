@@ -7,10 +7,12 @@ import Testimonials from './components/Testimonials'
 
 export default function Home() {
 
-  // Teaser data only — the full case studies live at /case-studies
-  // The one live client engagement, kept separate from the grid below. It is the
-  // only client work on this page, and dropping it in as a fourth equal tile
-  // would repeat the flattening /case-studies was fixed for (§13.15, §13.29).
+  // Teaser data only — the full case studies live at /case-studies. Keep the
+  // `kind` values identical to the ones there; this list is hand-maintained and
+  // has drifted before (§13.15).
+  //
+  // The featured slot is the live engagement, kept out of the grid so the agentic
+  // AI work leads rather than sitting as a fourth equal tile.
   const featuredStudy = {
     kind: "Codenest client engagement",
     status: "In progress",
@@ -19,18 +21,24 @@ export default function Home() {
     layers: ["Agents in production", "AI factory", "Company brain"],
   }
 
+  // Per-card labels, not one heading over the grid: Opayo and AstraZeneca are
+  // client engagements and only Rungway predates the firm, so a single
+  // "Founder track record" caption over all three understated the client base.
   const caseStudies = [
     {
-      title: "Rungway: Scaling a Social Mentoring Platform",
-      results: ["Scaled from 5 to 1000+ concurrent users"]
-    },
-    {
       title: "Opayo by Elavon: Payment Platform Transformation",
+      kind: "Codenest client engagement",
       results: ["Releases accelerated from fortnightly to multiple times per day"]
     },
     {
       title: "AstraZeneca: Drug Delivery Tracking System MVP",
+      kind: "Codenest client engagement",
       results: ["Production-ready MVP delivered on Kubernetes infrastructure"]
+    },
+    {
+      title: "Rungway: Scaling a Social Mentoring Platform",
+      kind: "Founder track record",
+      results: ["Scaled from 5 to 1000+ concurrent users"]
     }
   ]
 
@@ -285,38 +293,28 @@ export default function Home() {
       </section>
 
       {/* Social proof, in two labelled groups.
-          The strip used to carry one caption — "Founder track record includes" —
-          which was accurate only while Codenest had no clients to put in it.
-          Regeno is one (§13.15), so a client group exists rather than the client
-          being quietly filed under someone else's heading. The founder caption is
-          unchanged and still governs exactly the four marks it always did.
-          Regeno renders as a wordmark: no logo file has been supplied, and a
-          client's brand asset is not ours to lift. Drop an image into this slot
-          when they provide one. */}
+          The strip carried one caption — "Founder track record includes" — which was
+          accurate only while Codenest had no clients in it. Three of these five marks
+          are client engagements: Regeno, and Opayo and AstraZeneca, which were
+          mislabelled as founder track record on the owner's correction of 5 Aug 2026
+          (Opayo ran Aug 2019 – Jun 2026, squarely Codenest-era; see §13.11).
+          Only Rungway (predates the firm) and Dishoom (Michelle's employer) are
+          founder track record — §13.15. Do not move a mark between groups without
+          the engagement itself changing. */}
       <section className="py-12 bg-slate-50/50 border-y border-slate-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-xs text-slate-500 mb-8 uppercase tracking-[0.2em] font-medium">Codenest clients</p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 mb-12">
-            <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm transition-all cursor-default">
-              <div>
-                <span className="text-lg font-semibold text-slate-700 group-hover:text-slate-900 transition-colors">Regeno</span>
-                <p className="text-xs text-slate-500">Agritech</p>
-              </div>
-            </div>
-          </div>
-
-          <p className="text-center text-xs text-slate-500 mb-8 uppercase tracking-[0.2em] font-medium">Founder track record includes</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-            {/* Rungway - HR Tech */}
+            {/* Regeno - Agritech. Square tile, so it takes Rungway's treatment. */}
             <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm transition-all cursor-default">
               <img
-                src="/img/clients/rungway.webp"
-                alt="Rungway"
+                src="/img/clients/regeno.png"
+                alt="Regeno"
                 className="w-10 h-10 rounded-lg object-contain"
               />
               <div>
-                <span className="text-lg font-semibold text-slate-700 group-hover:text-slate-900 transition-colors">Rungway</span>
-                <p className="text-xs text-slate-500">HR Tech</p>
+                <span className="text-lg font-semibold text-slate-700 group-hover:text-slate-900 transition-colors">Regeno</span>
+                <p className="text-xs text-slate-500">Agritech</p>
               </div>
             </div>
 
@@ -337,9 +335,25 @@ export default function Home() {
                 className="h-8 w-auto object-contain"
               />
             </div>
+          </div>
 
-            {/* Dishoom - Hospitality. Michelle's track record, and the first
-                non-technical mark in a strip that was otherwise entirely Ankit's.
+          <p className="text-center text-xs text-slate-500 mb-8 uppercase tracking-[0.2em] font-medium">Founder track record includes</p>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+            {/* Rungway - HR Tech. Predates Codenest; Ankit was interim CTO. */}
+            <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm transition-all cursor-default">
+              <img
+                src="/img/clients/rungway.webp"
+                alt="Rungway"
+                className="w-10 h-10 rounded-lg object-contain"
+              />
+              <div>
+                <span className="text-lg font-semibold text-slate-700 group-hover:text-slate-900 transition-colors">Rungway</span>
+                <p className="text-xs text-slate-500">HR Tech</p>
+              </div>
+            </div>
+
+            {/* Dishoom - Hospitality. Michelle's employer, and the only non-technical
+                mark in a strip that is otherwise entirely Ankit's.
                 Sized on cap-height rather than box-height: the wordmark is ~9:1,
                 so h-8 would render it nearly three times wider than the others. */}
             <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm transition-all cursor-default">
@@ -361,9 +375,10 @@ export default function Home() {
       <section className="py-24 bg-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            {/* Not "Client Outcomes": two of these four cells (Rungway, Opayo) are
-                founder track record rather than Codenest client engagements, and the
-                fourth is an offer term. The heading has to cover all three honestly. */}
+            {/* Not "Client Outcomes": Rungway predates the firm and is founder track
+                record, and the fourth cell is an offer term rather than an outcome.
+                Opayo is a client engagement (§13.11, corrected 5 Aug 2026) but two of
+                the four still are not, so the heading has to cover all three honestly. */}
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">Track Record</h2>
             <p className="text-slate-400 max-w-2xl mx-auto">Numbers we can point to, each tied to a named engagement or offer term</p>
           </div>
@@ -395,7 +410,7 @@ export default function Home() {
             <p className="text-sm uppercase tracking-[0.2em] text-accent-700 mb-4 font-medium">Proven Track Record</p>
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-slate-900 mb-6">Case Studies</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              A live client engagement, and the founder track record behind it
+              Client engagements, and the founder track record behind them
             </p>
           </div>
 
@@ -434,12 +449,11 @@ export default function Home() {
             </article>
           </Link>
 
-          <p className="text-xs uppercase tracking-[0.2em] text-slate-500 mb-8 font-medium">Founder track record</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
               <Link key={index} href="/case-studies/" className="group">
                 <article className="bg-white rounded-xl border border-slate-200 p-8 hover:shadow-lg hover:border-accent-200 transition-all h-full flex flex-col">
-                  <span className="text-sm font-bold text-primary-600 mb-4">{String(index + 1).padStart(2, '0')}</span>
+                  <p className="text-xs uppercase tracking-[0.15em] text-slate-500 mb-4 font-medium">{study.kind}</p>
                   <h3 className="text-xl font-semibold text-slate-900 mb-3 group-hover:text-primary-700 transition-colors leading-snug">{study.title}</h3>
                   <p className="text-slate-600 text-sm mb-4 flex-grow">{study.results[0]}</p>
                   <span className="inline-flex items-center text-sm font-semibold text-accent-700 group-hover:text-accent-800">
