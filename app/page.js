@@ -304,9 +304,9 @@ export default function Home() {
 
       {/* Social proof, in two labelled groups.
           The strip carried one caption — "Founder track record includes" — which was
-          accurate only while Codenest had no clients in it. Five of these seven marks
-          are client engagements: Regeno, Opayo, AstraZeneca, HSBC and Deloitte
-          Digital. Opayo and AstraZeneca were mislabelled as founder track record
+          accurate only while Codenest had no clients in it. Six of these eight marks
+          are client engagements: Regeno, Frekkel, Opayo, AstraZeneca, HSBC and
+          Deloitte Digital. Opayo and AstraZeneca were mislabelled as founder track record
           until the owner's correction of 5 Aug 2026 (Opayo ran Aug 2019 – Jun 2026,
           squarely Codenest-era; see §13.11).
           The test is the firm's August 2017 boundary, not how the name feels: an
@@ -316,7 +316,7 @@ export default function Home() {
       <section className="py-12 bg-slate-50/50 border-y border-slate-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-xs text-slate-500 mb-8 uppercase tracking-[0.2em] font-medium">Codenest clients</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 mb-12">
+          <div className="flex flex-wrap justify-center items-center gap-6 lg:gap-8 mb-12">
             {/* Regeno - Agritech. Square tile, so it takes Rungway's treatment. */}
             <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm transition-all cursor-default">
               <img
@@ -331,6 +331,19 @@ export default function Home() {
                 <span className="text-lg font-semibold text-slate-700 group-hover:text-slate-900 transition-colors">Regeno</span>
                 <p className="text-xs text-slate-500">Agritech</p>
               </div>
+            </div>
+
+            {/* Frekkel - Consumer AI. 2025 MVP engagement (owner, 23 Nov 2026). Wordmark
+                taken from frekkel.com; viewBox 688.64 x 188.83, so h-8 renders ~117px. */}
+            <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm transition-all cursor-default">
+              <img
+                src="/img/clients/frekkel.svg"
+                width={117}
+                height={32}
+                loading="lazy"
+                alt="Frekkel"
+                className="h-8 w-auto object-contain"
+              />
             </div>
 
             {/* Opayo/Elavon - Payments */}
