@@ -5,6 +5,7 @@ import { seatCta, EXTERNAL_LINK_PROPS } from '../../../lib/booking'
 import Button from '../../components/Button'
 import Footer from '../../components/Footer'
 import PrincipalBand from '../../components/PrincipalBand'
+import FirstNinetyDays from '../../components/FirstNinetyDays'
 import JsonLd from '../../components/JsonLd'
 import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
 
@@ -92,6 +93,29 @@ export default function FractionalCFOPage() {
     },
   ]
 
+  // Drafted from what this page already says the seat delivers (23 Nov 2026);
+  // days 1-30 restate the first-month FAQ. Owner to confirm each phase.
+  const firstNinetyDays = [
+    {
+      days: '1-30',
+      name: 'Start from the numbers',
+      work: 'We start with what exists: the numbers, how they are produced, and where they are argued about.',
+      keep: 'A working model, an agreed reporting pack, and a short list of the decisions that need a number attached to them.',
+    },
+    {
+      days: '31-60',
+      name: 'Run the month',
+      work: 'Month-end close, cash management and budget tracking on a rhythm the Board can rely on. Unit economics and pricing checked against what customers actually pay.',
+      keep: 'A monthly close and cash forecast that arrive on time, and unit economics you can defend.',
+    },
+    {
+      days: '61-90',
+      name: 'Ready for the next conversation',
+      work: 'A forecast the team plans against, Board reporting that runs without being chased, and, if you are raising, the model and data room an investor will work through.',
+      keep: 'A finance function a Board or an investor can examine, and a clear view of when you next need to raise.',
+    },
+  ]
+
   const services = [
     "Financial modelling and forecasting",
     "Cash flow management and optimisation",
@@ -141,7 +165,7 @@ export default function FractionalCFOPage() {
     },
     {
       question: "What does the first month look like?",
-      answer: "We start with what exists: the numbers, how they are produced, and where they are argued about. From that comes a working model, an agreed reporting pack, and a short list of the decisions that need a number attached to them. No 90-day discovery phase."
+      answer: "We start with what exists: the numbers, how they are produced, and where they are argued about. From that comes a working model, an agreed reporting pack, and a short list of the decisions that need a number attached to them. It is not a discovery phase: the first month ends in work you keep, and the plan for the first 90 days is set out on this page."
     },
     {
       question: "Can you help us hire a permanent finance lead?",
@@ -342,6 +366,13 @@ export default function FractionalCFOPage() {
           </div>
         </div>
       </section>
+
+      <FirstNinetyDays
+        seat="cfo"
+        title="Your First 90 Days"
+        intro="What the Fractional CFO seat delivers in its first three months. The order flexes to your stage and to what we find; every phase ends in something you keep."
+        phases={firstNinetyDays}
+      />
 
       {/* FAQ Section */}
       <section className="py-24 bg-white">
