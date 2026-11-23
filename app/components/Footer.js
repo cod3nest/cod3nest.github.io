@@ -22,12 +22,14 @@ const GROUPS = [
     id: 'footer-resources',
     heading: 'Resources',
     // The five comparison guides are reached from /guides/ and from in-content
-    // links, not from every page on the site.
+    // links, not from every page on the site. One guide and one tool per seat,
+    // labelled as the nav labels them. The guides index left this column for the
+    // diligence check (23 Nov 2026): the nav's "Guides" link reaches it on every page.
     links: [
-      { href: '/guides/', label: 'All Guides' },
       { href: '/guides/fractional-cto-guide/', label: 'Fractional CTO Guide' },
       { href: '/guides/fractional-cfo-guide/', label: 'Fractional CFO Guide' },
       { href: '/tools/runway-calculator/', label: 'Runway Calculator' },
+      { href: '/tools/technical-due-diligence-check/', label: 'Diligence Readiness Check' },
     ],
   },
   {
