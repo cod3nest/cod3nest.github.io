@@ -11,10 +11,10 @@ import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../lib/schema'
 // of its own, and not before.
 export const metadata = {
   title: 'Case Studies: Fractional CTO Engagements',
-  description: 'Fractional CTO client engagements led by Ankit Rana: an agentic AI platform for Regeno, payments transformation at Opayo by Elavon, a compliant MVP for AstraZeneca, and scaling Rungway to 1,000+ concurrent users.',
+  description: 'Fractional CTO client engagements led by Ankit Rana: an agentic AI platform for Regeno, an AI skincare MVP for Frekkel in 12 weeks, payments at Opayo by Elavon, an MVP for AstraZeneca, and scaling Rungway.',
   openGraph: {
     title: 'Codenest Case Studies — Track Record',
-    description: 'Agentic AI platform engineering, scaling, payments and regulated delivery. Regeno, Rungway, Opayo by Elavon, AstraZeneca.',
+    description: 'Agentic AI platform engineering, a 12-week AI MVP, scaling, payments and regulated delivery. Regeno, Frekkel, Rungway, Opayo by Elavon, AstraZeneca.',
     type: 'website',
     url: 'https://codenest.uk/case-studies/',
     images: [
@@ -31,14 +31,14 @@ export const metadata = {
   },
 }
 
-// `kind` is the load-bearing field. Three of these are Codenest client
-// engagements — Regeno, Opayo and AstraZeneca. Only Rungway predates the firm and
+// `kind` is the load-bearing field. Four of these are Codenest client
+// engagements — Regeno, Frekkel, Opayo and AstraZeneca. Only Rungway predates the firm and
 // is Ankit's own track record (§13.15). Opayo and AstraZeneca were briefly
 // mislabelled "Founder track record" here; corrected by the owner 5 Aug 2026,
 // and §13.11 already dated Opayo as Codenest-era. Understating the client base
 // is as inaccurate as overstating it. Every study states which it is.
 //
-// Three of these are completed engagements. Regeno is live, so it carries
+// Four of these are completed engagements. Regeno is live, so it carries
 // `status` and its third block is scope rather than results — the card renderer
 // relabels the headings from `labels` and prints `note` instead of inventing
 // figures nobody has measured yet (§4, §13.28). Fill in real numbers and drop
@@ -118,6 +118,47 @@ const caseStudies = [
     ]
   },
   {
+    // Owner, 23 Nov 2026: a 2025 Codenest engagement that ended at MVP handover,
+    // before Frekkel appointed the Fractional CTO its own team page now names.
+    // Product description from frekkel.com (read 23 Nov 2026). Frekkel is named on
+    // the owner's direction; written permission is an owner action (§13).
+    title: "Frekkel: An AI Skincare MVP in 12 Weeks",
+    kind: "Codenest client engagement",
+    challenge: "Frekkel is an independent skincare guidance app, built first for women going through perimenopause and menopause. It sells no products and takes no payment from brands. A user sets up a skin profile, then checks any product by scanning its barcode, photographing the pack or searching by name, and gets a rating of how well it fits their skin, with the reasons, what to watch for, and how confident the rating is. The founder had the research and the proposition. The product had to be planned, designed and built from nothing.",
+    solution: "Ankit worked with the founder from the first scoping session to a working MVP: agreeing what the first version had to prove and what could wait, designing the user journey and the system behind it, and building the backend and the AI infrastructure that produces the fit rating. The engagement ended at MVP handover, and Frekkel has since appointed its own Fractional CTO.",
+    results: [
+      "MVP delivered in 12 weeks, from first scoping session to working product",
+      "Skin profile, product check by barcode, pack photo or name, and a saved shelf of products",
+      "A fit rating that shows its reasons and its confidence, not just a score",
+      "Backend and AI infrastructure built 0→1, and handed over at MVP",
+    ],
+    tags: ["MVP", "0→1", "Consumer AI", "Product Design", "Backend Architecture"],
+    diagramTitle: "How the MVP works",
+    diagramNote: "Read bottom-up: the skin profile comes first, and every check is rated against it.",
+    diagram: [
+      {
+        label: "My Shelf",
+        detail: "The products a user owns or is considering, kept in one place.",
+        items: ["Saved products", "How they fit together"],
+      },
+      {
+        label: "Fit rating",
+        detail: "A possible-fit rating that says why, not just how much.",
+        items: ["Reasons", "What to watch for", "Confidence"],
+      },
+      {
+        label: "Product check",
+        detail: "Any product, however the user has it to hand.",
+        items: ["Barcode scan", "Pack photo", "Search by name"],
+      },
+      {
+        label: "Skin profile",
+        detail: "Set once, and every check is rated against it.",
+        items: ["Skin type", "Up to 3 concerns", "Sensitivity", "Preferences"],
+      },
+    ]
+  },
+  {
     title: "Opayo by Elavon: Payment Platform Transformation",
     kind: "Codenest client engagement",
     challenge: "A UK payments provider needed to move off self-managed infrastructure and add new payment channels (Apple Pay, Google Pay), on a platform that had to keep processing transactions across Europe throughout.",
@@ -180,10 +221,10 @@ const pageSchema = [
 // stack stretched to the text column, which at 1440px meant 234px of content
 // pulled across 983px — three small boxes joined by 300px hairlines. Height
 // belongs to the layers; the connector only has to show direction.
-function PlatformDiagram({ layers }) {
+function PlatformDiagram({ layers, title = 'How the platform stacks', note = 'Read bottom-up: the company brain is the base, and agents run on top of it.' }) {
   return (
     <div className="h-full bg-primary-800 px-8 pb-8 pt-16 lg:px-10 flex flex-col">
-      <p className="text-xs uppercase tracking-[0.2em] text-accent-300 font-medium">How the platform stacks</p>
+      <p className="text-xs uppercase tracking-[0.2em] text-accent-300 font-medium">{title}</p>
 
       {/* Label pinned top, footnote pinned bottom, stack centred between them.
           Centring the whole panel instead left the eyebrow floating 348px down
@@ -217,7 +258,7 @@ function PlatformDiagram({ layers }) {
       </div>
 
       <p className="text-xs text-slate-400 leading-relaxed border-t border-primary-700 pt-4">
-        Read bottom-up: the company brain is the base, and agents run on top of it.
+        {note}
       </p>
     </div>
   )
@@ -251,7 +292,7 @@ export default function CaseStudiesPage() {
                         because a fixed 20rem box would clip the bottom layer. */}
                     <div className={`relative overflow-hidden ${study.diagram ? '' : 'h-80'} lg:h-auto ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
                       {study.diagram ? (
-                        <PlatformDiagram layers={study.diagram} />
+                        <PlatformDiagram layers={study.diagram} title={study.diagramTitle} note={study.diagramNote} />
                       ) : (
                         <img
                           src={study.image}
