@@ -413,7 +413,13 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
 ## 13. Standing rules (the law, with dates)
 
 1. **Services are named "Fractional CTO" and "Fractional CFO" — everywhere.**
-   Aliases retired. (Site review, 4 Aug 2026.)
+   Aliases retired. (Site review, 4 Aug 2026.) **Amended 23 Nov 2026 (owner):**
+   "Finance Director" (and "part-time FD", "interim FD") is a *stated synonym* for
+   the CFO seat, because Michelle works as a CFO, a Finance Director, or both, and
+   founders search for either title. It may appear in CFO-page body copy, an h2 or
+   comparison that explains the two roles, the FAQ, metadata descriptions and
+   keywords, and Michelle's bio. The service's *name* stays "Fractional CFO" in
+   navigation, cards, h1s, titles, footers and schema.
 2. **The hero names the offer.** The homepage h1 carries the target term:
    "Your Fractional CTO and CFO, until you can hire full-time." The flourish
    "Executive firepower. Startup agility." sits in the eyebrow, not the h1.

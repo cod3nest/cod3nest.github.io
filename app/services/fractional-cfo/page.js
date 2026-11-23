@@ -16,8 +16,8 @@ import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
 // Kingdom, and the title now matches it. (BRANDING.md §13.25.)
 export const metadata = {
   title: 'Fractional CFO Services for UK Startups',
-  description: 'Fractional CFO for UK startups, pre-seed to Series A. Business and financial strategy, modelling, fundraising and investor reporting. Free 30-minute call.',
-  keywords: ['fractional CFO UK', 'startup CFO', 'FP&A UK', 'financial planning analysis', 'financial strategy', 'business strategy', 'startup finance UK', 'part-time CFO'],
+  description: 'Fractional CFO or part-time Finance Director for UK startups, pre-seed to Series A. Business and financial strategy, modelling, fundraising and reporting.',
+  keywords: ['fractional CFO UK', 'startup CFO', 'FP&A UK', 'financial planning analysis', 'financial strategy', 'business strategy', 'startup finance UK', 'part-time CFO', 'fractional finance director', 'part-time finance director', 'part-time FD'],
   openGraph: {
     title: 'Fractional CFO Services for UK Startups | Codenest',
     description: 'Business and financial strategy, and FP&A, for UK startups — investor-ready financials without the overhead.',
@@ -146,6 +146,33 @@ export default function FractionalCFOPage() {
     },
   ]
 
+  const seatRoles = [
+    {
+      title: 'Finance Director',
+      summary: 'Runs the finance function',
+      items: [
+        'Month-end close and management accounts',
+        'Cash management and forecasting',
+        'Financial controls, purchasing and payroll',
+        'Budgets, and the Board pack that reports against them',
+        'Building and leading the finance team',
+      ],
+      when: 'you have revenue, and the numbers arrive late, get argued about, or have no owner.',
+    },
+    {
+      title: 'Chief Financial Officer',
+      summary: 'Sets the financial strategy',
+      items: [
+        'Business and financial strategy',
+        'The financial model, and the scenarios behind each decision',
+        'Fundraising, the data room and investor relations',
+        'Pricing and unit economics',
+        'What the Board and investors are told, and why',
+      ],
+      when: 'a raise, a pivot or a big commitment needs a number behind it.',
+    },
+  ]
+
   const services = [
     "Business and financial strategy",
     "Financial modelling and forecasting",
@@ -163,8 +190,11 @@ export default function FractionalCFOPage() {
 
   const faqs = [
     {
-      question: "What's the difference between FP&A and accounting?",
-      answer: "Accountants handle historical compliance and bookkeeping. FP&A is forward-looking: financial modelling, forecasting, unit economics, pricing strategy, and investor communications. We provide strategic finance leadership, not bookkeeping."
+      // Owner, 23 Nov 2026: Michelle works as a CFO, a Finance Director, or both.
+      // Replaces the FP&A-vs-accounting question, which the bookkeeper FAQ below
+      // already covers, so the page keeps parity with the CTO page's ten.
+      question: "Fractional CFO, Finance Director, part-time FD, interim FD: what's the difference?",
+      answer: "A Finance Director runs the finance function: month-end close, management accounts, cash, controls, and the team that produces them. A CFO sets the financial strategy: the model, the plan, fundraising, and what the Board and investors are told. In a growing business they are often the same seat, and Michelle takes either or both. Fractional and part-time mean the same thing: a set number of days a month, ongoing. An interim FD covers a gap full time, usually between permanent hires; if that is what you need, say so on the call and we will tell you whether we can do it."
     },
     {
       question: "How many hours per week do you typically work?",
@@ -264,7 +294,7 @@ export default function FractionalCFOPage() {
                 Fractional CFO Services
               </h1>
               <p className="text-xl text-slate-600 mb-4 leading-relaxed">
-                Business and financial strategy, FP&A, financial modelling and investor-ready reporting from a part-time CFO. The financial discipline of a high-growth company — without the overhead.
+                Business and financial strategy, FP&A, financial modelling and investor-ready reporting from a part-time CFO or Finance Director. The financial discipline of a high-growth company — without the overhead.
               </p>
               <p className="text-sm font-medium text-slate-700 mb-8">
                 Retained monthly engagements, scoped to your stage &middot; typically 60-80% less than a full-time CFO
@@ -403,6 +433,48 @@ export default function FractionalCFOPage() {
               </ul>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Owner, 23 Nov 2026: Michelle is a CFO, a Finance Director, or both, and
+          founders search for either title. "Fractional CFO" stays the service's
+          name (BRANDING §13.1); "Finance Director" is a stated synonym for the
+          same seat, here and in the FAQ. Each list is drawn from Michelle's record
+          on this page and on /about. Charcoal ground, between the slate "What We Do"
+          and the white 90-day plan; gold grounds stay banned (§13.22). */}
+      <section className="py-24 bg-primary-800" aria-labelledby="cfo-or-fd">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 id="cfo-or-fd" className="font-serif text-4xl font-bold text-white mb-4">CFO or Finance Director?</h2>
+            <p className="text-xl text-slate-300">
+              Michelle Rana FCCA takes either seat, or both. Which you need depends on whether the gap is running the
+              numbers or deciding what they should say.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {seatRoles.map((r) => (
+              <div key={r.title} className="bg-white rounded-2xl border border-slate-200 border-t-4 border-t-accent-400 p-8">
+                <h3 className="text-2xl font-bold text-slate-900 mb-1">{r.title}</h3>
+                <p className="text-accent-700 font-semibold mb-6">{r.summary}</p>
+                <ul className="space-y-3 mb-6">
+                  {r.items.map((item) => (
+                    <li key={item} className="flex items-start text-slate-700">
+                      <svg className="w-5 h-5 text-accent-700 mt-0.5 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-sm text-slate-600 border-t border-slate-100 pt-4">
+                  <span className="font-semibold text-slate-900">Right when: </span>{r.when}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-slate-300 mt-10">
+            Most businesses need some of each. The engagement is scoped to the gap, not to the title.
+          </p>
         </div>
       </section>
 

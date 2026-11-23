@@ -150,7 +150,7 @@ export default function AboutPage() {
       accent: "accent",
       linkedin: "https://www.linkedin.com/in/michellerana1",
       credentials: ["FCCA", "BSc Mathematics", "£165m P&L"],
-      bio: "Chartered accountant (FCCA) and strategic finance leader who took a multi-site business from 6 to 27 locations and £35m to £165m revenue while improving EBITDA margin by 4%. Has built and led a 20+ person finance function, owned Board and investor reporting, held a company's cash together through COVID-19, and supported founders through fundraising and investor due diligence. Works with founders on business and financial strategy, not only the numbers behind it.",
+      bio: "Chartered accountant (FCCA) and strategic finance leader who took a multi-site business from 6 to 27 locations and £35m to £165m revenue while improving EBITDA margin by 4%. Has built and led a 20+ person finance function, owned Board and investor reporting, held a company's cash together through COVID-19, and supported founders through fundraising and investor due diligence. Works with founders on business and financial strategy, not only the numbers behind it, as a Fractional CFO, a part-time Finance Director, or both.",
       proof: "£35m → £165m revenue, +4% EBITDA margin",
       tracks: [
         { year: "2012-2014", title: "Commercial Foundations", description: "Pricing and commercial analysis at Ryder and Select Service Partners — negotiating contract hire deals over £1m and partnering with senior leaders across a £67m revenue budget." },
