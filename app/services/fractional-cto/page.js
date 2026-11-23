@@ -87,9 +87,9 @@ export default function FractionalCTOPage() {
   const firstNinetyDays = [
     {
       days: '1-30',
-      name: 'Read what exists',
-      work: 'We read the codebase, the infrastructure and the delivery process, and sit with the people who built them. Nothing gets rewritten in month one.',
-      keep: 'A written assessment of what is sound and what is at risk, and the first fixes ranked by cost and consequence.',
+      name: 'Assess, then fix',
+      work: 'The first two weeks go on the codebase, the infrastructure and the delivery process, and the people who built them. The rest of the month goes on the fixes that cost least and matter most.',
+      keep: 'A written assessment by the end of week two, with the risks ranked by cost and consequence, and the first of those fixes done.',
     },
     {
       days: '31-60',
