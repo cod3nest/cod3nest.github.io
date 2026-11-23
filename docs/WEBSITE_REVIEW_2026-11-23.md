@@ -427,7 +427,7 @@ Move the FAQs to the service pages, where they already exist in full.
 | **P0** | Michelle's Codenest row absent (start: January 2026, owner); "we" history since 2017 | Add a "2026-present, Codenest: Fractional CFO" row, and put the 2025 Series A on her track; rewrite "Why We Started Codenest" truthfully | Consistent story under scrutiny | Low (owner input) |
 | **P1** | CFO seat aimed only at pre-seed founders; FD/SME search invisible | Add the SME/scale-up segment and "Finance Director" synonym (amends §1, §13.1, §13.10) | Opens the segment where Michelle's record is strongest | Medium |
 | **P1** | Form forgets the seat | Read `?seat=` in `ContactForm.js`; service-page CTAs pass it; name who replies | Less friction, and leads arrive already sorted | Low |
-| **P1** | No price signal on service pages (a deliberate owner rule, 4 Aug) | Revisit the rule; if reversed, publish "from £[x]/month" per seat | Pre-qualifies leads, fewer wasted calls | Low (owner decision) |
+| **P3** *(was P1; none of the three competitors in `COMPETITOR_COMPARISON_2026-11-23.md` publishes a price)* | No price signal on service pages (a deliberate owner rule, 4 Aug) | Revisit the rule; if reversed, publish "from £[x]/month" per seat | Pre-qualifies leads, fewer wasted calls | Low (owner decision) |
 | **P1** | Engagement shape inconsistent (2-3 days vs 8-20h vs 8-16h); "8-12 weeks" means two things | One commitment model; a "first month" section on the CTO page too | Buyers understand what they are buying | Low |
 | **P1** | Homepage h1 carries no target term | Section 7 rewrite; reconcile §13.2 with the DoD | Clarity and SEO | Low |
 | **P1** | CTO case studies read as contracting | State the owned decision and reporting line in each | CTO proof matches the seat being sold | Low (owner input) |
@@ -508,3 +508,7 @@ BRANDING §1 and §13.10 record the split.
 
 The owner declined the recommendation to remove the co-founder offer (23 Nov 2026). It stays on the
 homepage, in the footer, in the contact form, on `/about` and on `/cofounder`.
+
+A competitor comparison against three UK fractional CTO sites (S30 Labs, PIMASI, Codeidon) is in
+`docs/COMPETITOR_COMPARISON_2026-11-23.md`. It moves the pricing row from P1 to P3. It adds a P1 for a
+fixed-fee first step after the call, and it raises "proof written as decisions" to P1.
