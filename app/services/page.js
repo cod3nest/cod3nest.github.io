@@ -48,7 +48,7 @@ const tracks = [
     href: '/services/fractional-cfo/',
     accent: 'accent',
     principal: 'Led by Michelle Rana FCCA',
-    owns: 'The financial plan, and the numbers an investor will test.',
+    owns: 'The business and financial strategy, the plan behind it, and the numbers an investor will test.',
     bestFor: 'Founders whose next decision has a cash consequence they cannot model.',
   },
 ]

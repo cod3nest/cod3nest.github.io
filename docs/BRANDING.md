@@ -413,7 +413,13 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
 ## 13. Standing rules (the law, with dates)
 
 1. **Services are named "Fractional CTO" and "Fractional CFO" — everywhere.**
-   Aliases retired. (Site review, 4 Aug 2026.)
+   Aliases retired. (Site review, 4 Aug 2026.) **Amended 23 Nov 2026 (owner):**
+   "Finance Director" (and "part-time FD", "interim FD") is a *stated synonym* for
+   the CFO seat, because Michelle works as a CFO, a Finance Director, or both, and
+   founders search for either title. It may appear in CFO-page body copy, an h2 or
+   comparison that explains the two roles, the FAQ, metadata descriptions and
+   keywords, and Michelle's bio. The service's *name* stays "Fractional CFO" in
+   navigation, cards, h1s, titles, footers and schema.
 2. **The hero names the offer.** The homepage h1 carries the target term:
    "Your Fractional CTO and CFO, until you can hire full-time." The flourish
    "Executive firepower. Startup agility." sits in the eyebrow, not the h1.
@@ -631,9 +637,8 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     **Confirmed 5 Aug 2026: Regeno is a client of Codenest** — the firm's first named
     client engagement, and the first proof on the site that is not founder track
     record. Copy may say so directly; `/case-studies`, the CTO page FAQ, the
-    PrincipalBand highlight and `/about` all do. The owner directed the naming twice;
-    written permission from Regeno to be named is not on file here, and getting it is
-    an owner action, not a blocker the site re-litigates.
+    PrincipalBand highlight and `/about` all do. **Permission to name Regeno and use
+    its logo: confirmed by the owner, 23 Nov 2026.**
     **Homepage strip, 5 Aug 2026 (owner).** Two labelled groups:
     **"Codenest clients"** — Regeno, Opayo by Elavon, AstraZeneca, HSBC and
     Deloitte Digital (the last two added 5 Aug 2026: Jul 2018 – Aug 2019, after the
@@ -646,6 +651,14 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     tile, so it takes Rungway's `w-10 h-10 rounded-lg` treatment with the name and
     sector beside it. Sector is "Agritech" — land-management and compliance software
     for UK farmers. Every client logo is self-hosted; never hotlink a CDN URL.
+    **Frekkel and Noodle+Kin joined the "Codenest clients" group on 23 Nov 2026**
+    (owner), and the owner has both clients' permission to name them and use their
+    logos (confirmed 23 Nov 2026). Frekkel (`frekkel.svg`) is the wordmark from
+    frekkel.com, sized `h-8` like Opayo. Noodle+Kin (`noodleandkin.svg`, styled with
+    a "+") is the header mark from noodleandkin.co.uk; it has no wordmark, so it takes
+    Regeno's tile with the name and "Early years" beside it. Noodle+Kin is the CFO
+    seat's first named client: Michelle has been its Fractional CFO since 2026.
+    The clients row is capped at `max-w-3xl` so seven marks split four and three.
 
     **Spelling: Regeno.** It was first published as "Regono" and corrected the same
     day. The company is `regeno.farm`; check the spelling against the source repos,

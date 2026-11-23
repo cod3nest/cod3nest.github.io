@@ -150,7 +150,7 @@ export default function AboutPage() {
       accent: "accent",
       linkedin: "https://www.linkedin.com/in/michellerana1",
       credentials: ["FCCA", "BSc Mathematics", "£165m P&L"],
-      bio: "Chartered accountant (FCCA) and strategic finance leader who took a multi-site business from 6 to 27 locations and £35m to £165m revenue while improving EBITDA margin by 4%. Has built and led a 20+ person finance function, owned Board and investor reporting, held a company's cash together through COVID-19, and supported founders through fundraising and investor due diligence.",
+      bio: "Chartered accountant (FCCA) and strategic finance leader who took a multi-site business from 6 to 27 locations and £35m to £165m revenue while improving EBITDA margin by 4%. Has built and led a 20+ person finance function, owned Board and investor reporting, held a company's cash together through COVID-19, and supported founders through fundraising and investor due diligence. Works with founders on business and financial strategy, not only the numbers behind it, as a Fractional CFO, a part-time Finance Director, or both.",
       proof: "£35m → £165m revenue, +4% EBITDA margin",
       tracks: [
         { year: "2012-2014", title: "Commercial Foundations", description: "Pricing and commercial analysis at Ryder and Select Service Partners — negotiating contract hire deals over £1m and partnering with senior leaders across a £67m revenue budget." },
@@ -159,7 +159,7 @@ export default function AboutPage() {
         // Done before her Codenest start, so it sits on her own track, not the firm's.
         { year: "2025", title: "Series A Readiness", description: "Built the financial model, the data room and the diligence Q&A for a London fintech's Series A, which closed. Founder track record, before Codenest." },
         // Owner, 23 Nov 2026: Michelle joined Codenest in January 2026, as Dishoom ended.
-        { year: "2026-present", title: "Codenest: Fractional CFO", description: "Leads the financial seat: models and rolling forecasts, Board and investor reporting, controls, and raise readiness, alongside the technical seat or on its own." },
+        { year: "2026-present", title: "Codenest: Fractional CFO", description: "Leads the financial seat: models and rolling forecasts, Board and investor reporting, controls, and raise readiness, alongside the technical seat or on its own. Fractional CFO to Noodle+Kin, a creativity-led nursery for children from nine months to school age, with a creative studio for screen-free family sessions at weekends." },
       ],
     },
   ]

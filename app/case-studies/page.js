@@ -118,10 +118,10 @@ const caseStudies = [
     ]
   },
   {
-    // Owner, 23 Nov 2026: a 2025 Codenest engagement that ended at MVP handover,
-    // before Frekkel appointed the Fractional CTO its own team page now names.
-    // Product description from frekkel.com (read 23 Nov 2026). Frekkel is named on
-    // the owner's direction; written permission is an owner action (§13).
+    // Codenest engagement, Nov 2025 - Apr 2026 per the owner's CV (BRANDING §13);
+    // it ended at MVP handover, before Frekkel appointed the Fractional CTO its own
+    // team page now names. Product description from frekkel.com (read 23 Nov 2026).
+    // The owner has Frekkel's permission to name it and use its logo (23 Nov 2026).
     title: "Frekkel: An AI Skincare MVP in 12 Weeks",
     kind: "Codenest client engagement",
     challenge: "Frekkel is an independent skincare guidance app, built first for women going through perimenopause and menopause. It sells no products and takes no payment from brands. A user sets up a skin profile, then checks any product by scanning its barcode, photographing the pack or searching by name, and gets a rating of how well it fits their skin, with the reasons, what to watch for, and how confident the rating is. The founder had the research and the proposition. The product had to be planned, designed and built from nothing.",
