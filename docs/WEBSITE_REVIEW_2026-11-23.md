@@ -66,7 +66,7 @@ against:*
 - **Price-led benefits.** "Save 60-80% vs full-time executives" is the *first* hero bullet and the
   *first* CTO benefit tile. Leading with the discount positions the seat as a cheap substitute
   rather than as senior judgement.
-- **The co-founder offer.** (A related defect was fixed on 23 Nov: the offer's "What I bring" list also gave Ankit "financial
+- **The co-founder offer.** *(Owner decision, 23 Nov 2026: declined. The co-founder offer stays everywhere it appears today.)* (A related defect was fixed on 23 Nov: the offer's "What I bring" list also gave Ankit "financial
   modelling" and "Series A due diligence and fundraising support", which broke §13.14. Those lines
   are now technical only.) Co-founder partnerships appear on the homepage, in the footer, in the
   contact form (as an equal fourth option), in "Beyond Advisory" on `/about`, and on `/cofounder`
@@ -253,7 +253,7 @@ behaviour of the dropdowns.
 /about/                   Two principals, each with a dated Codenest row
 /guides/ /blog/ /tools/   Resources (add one CTO tool to match the runway calculator)
 /contact/?seat=cto|cfo    Preselected form
-/cofounder/               Unlinked from nav, footer, homepage and form; reachable only directly
+/cofounder/               Unlinked from nav, footer, homepage and form (declined by the owner, 23 Nov: stays linked)
 ```
 
 GitHub Pages cannot issue 301 redirects, so **do not move the service URLs**. Restructure inside
@@ -414,7 +414,7 @@ invented.
 | 6 | Founders say | Social proof | "What founders say" | The three genuine quotes, each labelled with its seat | No avatar initials; outcome badge only | — |
 | 7 | Contact | Convert | "Thirty minutes. We will tell you if you don't need us." | "Ankit or Michelle replies within 24 hours, depending on the seat." | Form with seat preselected from the route | Request My Call |
 
-Cut from the homepage: the stats band (repeated by the proof section) and the co-founder line.
+Cut from the homepage: the stats band (repeated by the proof section). The co-founder line was also proposed for cutting; the owner declined that on 23 Nov, so it stays.
 Move the FAQs to the service pages, where they already exist in full.
 
 ## 13. Prioritised action plan
@@ -431,7 +431,7 @@ Move the FAQs to the service pages, where they already exist in full.
 | **P1** | Engagement shape inconsistent (2-3 days vs 8-20h vs 8-16h); "8-12 weeks" means two things | One commitment model; a "first month" section on the CTO page too | Buyers understand what they are buying | Low |
 | **P1** | Homepage h1 carries no target term | Section 7 rewrite; reconcile §13.2 with the DoD | Clarity and SEO | Low |
 | **P1** | CTO case studies read as contracting | State the owned decision and reporting line in each | CTO proof matches the seat being sold | Low (owner input) |
-| **P1** | Co-founder offer undercuts the retainer | Remove it from the homepage, form, footer and `/about`; leave `/cofounder` unlinked | Stronger commitment signal | Low |
+| ~~P1~~ | Co-founder offer undercuts the retainer | **Declined by the owner (23 Nov 2026): keep the offer as it is.** Originally: remove it from the homepage, form, footer and `/about`; leave `/cofounder` unlinked | — | — |
 | **P1** | Letter avatars | Principal photographs ≥1600px | Trust in the two people being bought | Low (owner input) |
 | **P2** | "60-80%" leads the hero and the CTO tiles | Demote it to FAQs and guides | Premium positioning | Low |
 | **P2** | No interim CTO/FD, technical diligence or cash-review offers | Add the fixed-scope offers from sections 3 and 4 | Lower-risk first purchase | Medium |
@@ -450,7 +450,7 @@ Move the FAQs to the service pages, where they already exist in full.
    CTO or solo fractional CFO cannot copy. Keep both seats independently buyable, and sell the
    joint offer at specific moments.
 3. **Premium and credible?** The design and restraint, yes. The tagline, the discount-led hero
-   and the co-founder offer pull the other way.
+   and the co-founder offer pull the other way. (The owner has decided to keep the co-founder offer.)
 4. **Would I engage?** *CTO:* yes. A real AI build, named regulated work and a person I can look
    up. I would ask what he *owned* at Opayo. *CFO:* not yet from the site alone. The principal is
    credible, and the 2025 Series A raise is real proof, but the site presents it as Codenest client work
@@ -505,3 +505,6 @@ metadata, the homepage hero and "how we work" line, the footer, `/services`, `/r
 service page (meta, FAQ, "Ideal for") and its guide's closing line, and the OG card. The CFO page
 keeps "pre-seed to Series A". Market commentary in guides and blog posts was left as written.
 BRANDING §1 and §13.10 record the split.
+
+The owner declined the recommendation to remove the co-founder offer (23 Nov 2026). It stays on the
+homepage, in the footer, in the contact form, on `/about` and on `/cofounder`.
