@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Navigation from '../../components/Navigation'
+import { seatCta, EXTERNAL_LINK_PROPS } from '../../../lib/booking'
 import Button from '../../components/Button'
 import Footer from '../../components/Footer'
 import PrincipalBand from '../../components/PrincipalBand'
@@ -40,6 +41,7 @@ const ctoBreadcrumbs = breadcrumbs([
 ])
 
 export default function FractionalCTOPage() {
+  const cta = seatCta('cto')
   const benefits = [
     {
       title: "Save 60-80% vs Full-Time",
@@ -226,7 +228,7 @@ export default function FractionalCTOPage() {
                 Retained monthly engagements, scoped to your stage &middot; typically 60-80% less than a full-time CTO
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button href="/contact/">Request a Strategy Call</Button>
+                <Button href={cta.href} {...(cta.external ? EXTERNAL_LINK_PROPS : {})}>{cta.label}</Button>
                 <Button href="/case-studies/" variant="secondary">View Case Studies</Button>
               </div>
             </div>
@@ -429,10 +431,11 @@ export default function FractionalCTOPage() {
             Request a free 30-minute call. No sales pitch, and we'll say so if a fractional CTO isn't what you need.
           </p>
           <a
-            href="/contact/"
+            href={cta.href}
+            {...(cta.external ? EXTERNAL_LINK_PROPS : {})}
             className="inline-block bg-accent-500 text-primary-900 px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-accent-600 transition-all shadow-lg hover:shadow-xl"
           >
-            Request a Strategy Call
+            {cta.label}
           </a>
         </div>
       </section>

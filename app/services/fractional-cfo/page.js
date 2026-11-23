@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Navigation from '../../components/Navigation'
+import { seatCta, EXTERNAL_LINK_PROPS } from '../../../lib/booking'
 import Button from '../../components/Button'
 import Footer from '../../components/Footer'
 import PrincipalBand from '../../components/PrincipalBand'
@@ -40,6 +41,7 @@ const cfoBreadcrumbs = breadcrumbs([
 ])
 
 export default function FractionalCFOPage() {
+  const cta = seatCta('cfo')
   // Each tile carries a `proof` line, and each one names where the number comes
   // from. All four used to be figure-free while Michelle's numbers sat one screen
   // above in the PrincipalBand — the proof was on the page and unused at the point
@@ -213,7 +215,7 @@ export default function FractionalCFOPage() {
                 Retained monthly engagements, scoped to your stage &middot; typically 60-80% less than a full-time CFO
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button href="/contact/">Request a Strategy Call</Button>
+                <Button href={cta.href} {...(cta.external ? EXTERNAL_LINK_PROPS : {})}>{cta.label}</Button>
                 {/* Not /case-studies: every study there is a technical engagement,
                     so a CFO buyer clicking through for proof landed on three
                     Kubernetes write-ups. /about carries Michelle's actual record
@@ -403,10 +405,11 @@ export default function FractionalCFOPage() {
             Request a free 30-minute call. No sales pitch, and we&apos;ll say so if a fractional CFO isn&apos;t what you need.
           </p>
           <a
-            href="/contact/"
+            href={cta.href}
+            {...(cta.external ? EXTERNAL_LINK_PROPS : {})}
             className="inline-block bg-accent-400 text-primary-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-accent-500 transition-all shadow-gold hover:shadow-gold-lg"
           >
-            Request a Strategy Call
+            {cta.label}
           </a>
         </div>
       </section>

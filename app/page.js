@@ -101,12 +101,15 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
+              {/* The h1 names the offer and when it ends (owner, 23 Nov 2026); the
+                  flourish moved up to the eyebrow. "Executive Firepower. Startup
+                  Agility." as the h1 carried no service and no search term. */}
               <p className="text-xs sm:text-sm uppercase tracking-[0.2em] text-accent-700 mb-6 md:mb-8 font-medium animate-hero-1">
-                Fractional CTO &amp; CFO for UK Startups
+                Executive firepower. Startup agility.
               </p>
               <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-normal text-slate-900 leading-[1.1] mb-6 animate-hero-2">
-                Executive Firepower.<br />
-                <span className="italic">Startup Agility.</span>
+                Your Fractional CTO and CFO,<br />
+                <span className="italic">until you can hire full-time.</span>
               </h1>
               <p className="text-xl text-slate-600 mb-6 leading-relaxed max-w-lg animate-hero-3">
                 Senior operators. Plans that survive diligence. A part-time CTO, a part-time CFO, or both: architecture, engineering leadership, financial models, and fundraising for founders at pre-seed and seed, and on the finance side through Series A.

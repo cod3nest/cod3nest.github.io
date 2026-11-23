@@ -2,6 +2,7 @@
 
 import { useState, useRef, useCallback, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
+import { liveBookings, BOOK_LABEL, EXTERNAL_LINK_PROPS } from '../../lib/booking'
 
 // Email format regex - comprehensive pattern
 const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/
@@ -43,6 +44,19 @@ const ContactForm = ({ labelledBy }) => {
     suggestion: null
   })
   const validationTimeoutRef = useRef(null)
+
+  // Service-page CTAs link here as /contact/?seat=cto|cfo|both, so a visitor
+  // who arrived from one seat's page does not have to state it again. Read on
+  // mount: useSearchParams would force a Suspense boundary under static export.
+  useEffect(() => {
+    const seat = new URLSearchParams(window.location.search).get('seat')
+    const engagement = { cto: 'fractional-cto', cfo: 'fractional-cfo', both: 'both' }[seat]
+    if (engagement) {
+      setFormData((prev) => (prev.engagement ? prev : { ...prev, engagement }))
+    }
+  }, [])
+
+  const bookings = liveBookings()
 
   // Cleanup timeout on unmount
   useEffect(() => {
@@ -252,6 +266,27 @@ const ContactForm = ({ labelledBy }) => {
 
   return (
     <div className="bg-white rounded-2xl shadow-lg p-8 border border-slate-200">
+      {/* Renders only once a seat's calendar link is set in lib/booking.js. The
+          form stays below it for anyone who would rather write (owner, 23 Nov 2026). */}
+      {bookings.length > 0 && (
+        <div className="mb-8 pb-8 border-b border-slate-200">
+          <p className="text-sm font-semibold text-slate-700 mb-3">Pick a time directly</p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            {bookings.map((b) => (
+              <a
+                key={b.seat}
+                href={b.url}
+                {...EXTERNAL_LINK_PROPS}
+                className="flex-1 inline-block bg-accent-400 text-primary-900 font-semibold rounded-lg px-5 py-3 text-sm text-center hover:bg-accent-500 transition-all"
+              >
+                {BOOK_LABEL}
+                <span className="block text-xs font-normal">{b.seat} &middot; {b.person}</span>
+              </a>
+            ))}
+          </div>
+          <p className="text-sm text-slate-500 mt-4">Or tell us what you are working on below, and we will reply within 24 hours.</p>
+        </div>
+      )}
       <form
         ref={formRef}
         onSubmit={handleSubmit}
