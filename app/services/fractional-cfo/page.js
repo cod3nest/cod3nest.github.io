@@ -5,6 +5,7 @@ import { seatCta, EXTERNAL_LINK_PROPS } from '../../../lib/booking'
 import Button from '../../components/Button'
 import Footer from '../../components/Footer'
 import PrincipalBand from '../../components/PrincipalBand'
+import SoundsFamiliar from '../../components/SoundsFamiliar'
 import FirstNinetyDays from '../../components/FirstNinetyDays'
 import JsonLd from '../../components/JsonLd'
 import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
@@ -113,6 +114,35 @@ export default function FractionalCFOPage() {
       name: 'Ready for the next conversation',
       work: 'A forecast the team plans against, Board reporting that runs without being chased, and, if you are raising, the model and data room an investor will work through.',
       keep: 'A finance function a Board or an investor can examine, and a clear view of when you next need to raise.',
+    },
+  ]
+
+  // Drafted 23 Nov 2026 for the owner to confirm. Each item is a situation the
+  // page goes on to answer; none carries a figure or an outcome.
+  const situations = [
+    {
+      title: 'You are raising, and the model only makes sense to you.',
+      body: 'Investors will ask how every number is built. The model has to answer them without you in the room.',
+    },
+    {
+      title: 'You know the bank balance, not the runway.',
+      body: 'Cash is checked, not forecast, so the date you need to raise by keeps moving, and you find out late.',
+    },
+    {
+      title: 'Pricing was set once and never revisited.',
+      body: 'Margins and unit economics are assumed rather than measured, so nobody knows which customers make money.',
+    },
+    {
+      title: 'The Board pack is built the night before.',
+      body: 'Reporting arrives late, changes shape every month, and the Board has stopped trusting the numbers in it.',
+    },
+    {
+      title: 'Your accountant files the returns. Nobody plans.',
+      body: 'Compliance is covered. Forecasting, budgeting and the decisions that need a number attached are not.',
+    },
+    {
+      title: 'Series A diligence is next, and there is no data room.',
+      body: 'A financial review will want the model, the history behind it and the contracts, in an order an investor can follow.',
     },
   ]
 
@@ -280,6 +310,12 @@ export default function FractionalCFOPage() {
         ]}
         proof="Led strategic finance at Dishoom through £35m → £165m"
         linkedin="https://www.linkedin.com/in/michellerana1"
+      />
+
+      <SoundsFamiliar
+        seat="cfo"
+        intro="Founders rarely book a call about finance for its own sake. A number is due, and nobody on their side can stand behind it. These are the usual ones."
+        items={situations}
       />
 
       {/* Benefits Section */}

@@ -5,6 +5,7 @@ import { seatCta, EXTERNAL_LINK_PROPS } from '../../../lib/booking'
 import Button from '../../components/Button'
 import Footer from '../../components/Footer'
 import PrincipalBand from '../../components/PrincipalBand'
+import SoundsFamiliar from '../../components/SoundsFamiliar'
 import FirstNinetyDays from '../../components/FirstNinetyDays'
 import JsonLd from '../../components/JsonLd'
 import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
@@ -102,6 +103,35 @@ export default function FractionalCTOPage() {
       name: 'Tie it to the money',
       work: 'The technical roadmap mapped to the milestones your next round is meant to fund, and the hiring plan matched to the one the financial model pays for.',
       keep: 'A roadmap, a hiring plan, and documentation a diligence team can read without us in the room.',
+    },
+  ]
+
+  // Drafted 23 Nov 2026 for the owner to confirm. Each item is a situation the
+  // page goes on to answer; none carries a figure or an outcome.
+  const situations = [
+    {
+      title: 'You are about to commit to a build you cannot judge.',
+      body: 'An agency quote, a freelancer\'s estimate, a stack someone swears by. Each sounds plausible, and nobody on your side can tell you which one is right.',
+    },
+    {
+      title: 'The MVP worked. Now it is in the way.',
+      body: 'It won the first users. It cannot take the next feature, the pivot or a second kind of customer, and someone has already said the word "rewrite".',
+    },
+    {
+      title: 'Your first engineering hire will set the bar for the rest.',
+      body: 'You can judge a pitch, not a senior engineer. Getting this hire wrong costs months of roadmap, not one salary.',
+    },
+    {
+      title: 'Engineering spend is rising. Output is not.',
+      body: 'More contractors, more tools, the same roadmap. Nobody inside the business can say what the spend should be buying.',
+    },
+    {
+      title: 'A round is coming, and so is technical due diligence.',
+      body: 'You do not know what an investor\'s reviewer will find in the code, the infrastructure or the IP, and you would rather find it first.',
+    },
+    {
+      title: 'AI is on the roadmap and nobody owns it.',
+      body: 'The demo took a weekend. Putting it into production with evaluation, guardrails and a cost you can predict is a different job.',
     },
   ]
 
@@ -293,6 +323,12 @@ export default function FractionalCTOPage() {
         ]}
         proof="Rungway: 5 → 1,000+ concurrent users"
         linkedin="https://www.linkedin.com/in/arana198"
+      />
+
+      <SoundsFamiliar
+        seat="cto"
+        intro="Founders rarely book a call about technology for its own sake. A decision is due, and nobody on their side can judge it. These are the usual ones."
+        items={situations}
       />
 
       {/* Benefits Section */}
