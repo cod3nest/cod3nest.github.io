@@ -109,7 +109,7 @@ export default function Home() {
                 <span className="italic">Startup Agility.</span>
               </h1>
               <p className="text-xl text-slate-600 mb-6 leading-relaxed max-w-lg animate-hero-3">
-                Big 4 rigour meets founder empathy. A part-time CTO, a part-time CFO, or both: architecture, engineering leadership, financial models, and fundraising for founders from pre-seed to Series A.
+                Senior operators. Plans that survive diligence. A part-time CTO, a part-time CFO, or both: architecture, engineering leadership, financial models, and fundraising for founders from pre-seed to Series A.
               </p>
               <ul className="space-y-4 mb-8 max-w-lg animate-hero-3">
                 <li className="flex items-start text-slate-700 group">

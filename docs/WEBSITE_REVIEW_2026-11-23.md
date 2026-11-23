@@ -494,3 +494,7 @@ helped startups raise"), and a new 2025 row on `/about`. `/about` also gains Mic
 "2026-present, Codenest: Fractional CFO" row, and "Why We Started Codenest" becomes "How Codenest
 Started" with the true dates. The financial items on `/cofounder` that credited Ankit with CFO work
 are removed. BRANDING §2, §13.13 and §13.15 record the rule.
+
+The "Big 4 rigour meets founder empathy" tagline is replaced by "Senior operators. Plans that
+survive diligence." (owner, 23 Nov 2026) in the homepage hero, footer, sitewide metadata and the
+default OG card. BRANDING §1 and §13.5 are amended, and any "Big 4" claim is now a retired line.

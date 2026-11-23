@@ -54,9 +54,14 @@ than the whole thing; §13 is the law and settles conflicts.
   buys only the CFO seat. The integrated pairing is an advantage to offer, never a
   minimum to imply. If a page or component cannot name at least one of the two services,
   it is off-brand.
-- **Positioning line (the tagline):** "Big 4 rigour meets founder empathy."
+- **Positioning line (the tagline):** "Senior operators. Plans that survive diligence." (owner, 23 Nov 2026). It replaced
+  "Big 4 rigour meets founder empathy", which neither principal's employment backed:
+  the only Big 4 link is the Deloitte Digital engagement (Jul 2018 – Aug 2019), and a
+  founder checking LinkedIn would find that in one click. Every word of the new line
+  can be shown on the site.
 - **Brand flourish (secondary, display use only):** "Executive firepower. Startup agility."
 - **Retired lines — do not reintroduce:** "Where Startups Scale", "Big 4 rigour meets
+  founder empathy" and any other "Big 4" claim (23 Nov 2026), "Big 4 rigour meets
   startup agility" (the mutated variant), "Boutique Advisory for Select Founders" as a
   hero badge, "Strategic Advisory" in any form.
 - **The audience (ICP):** UK startup founders on the 0→1 journey, **pre-seed to
@@ -402,8 +407,9 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
    (4 Aug 2026.)
 4. **Truth-first proof** — bounded stats, no fabricated testimonials, no star-rating
    UI, enterprise names framed as pedigree not clientele. (4 Aug 2026.)
-5. **Tagline is "Big 4 rigour meets founder empathy"** + flourish "Executive
-   firepower. Startup agility." — all other slogans retired. (4 Aug 2026.)
+5. **Tagline is "Senior operators. Plans that survive diligence."** + flourish "Executive
+   firepower. Startup agility." — all other slogans retired. (4 Aug 2026; tagline
+   replaced 23 Nov 2026, owner, because no "Big 4" claim is backed — see §1.)
 6. **"cod3nest" never appears in user-facing surfaces.** (4 Aug 2026.)
    **Enforced 5 Aug 2026:** the GitHub org URL was removed from the
    `ProfessionalService` `sameAs` in `app/layout.js` and from `public/humans.txt`.
