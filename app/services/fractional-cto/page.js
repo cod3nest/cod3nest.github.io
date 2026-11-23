@@ -5,6 +5,7 @@ import { seatCta, EXTERNAL_LINK_PROPS } from '../../../lib/booking'
 import Button from '../../components/Button'
 import Footer from '../../components/Footer'
 import PrincipalBand from '../../components/PrincipalBand'
+import FirstNinetyDays from '../../components/FirstNinetyDays'
 import JsonLd from '../../components/JsonLd'
 import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
 
@@ -78,6 +79,29 @@ export default function FractionalCTOPage() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       ),
+    },
+  ]
+
+  // Drafted from what this page already says the seat delivers (23 Nov 2026).
+  // Owner to confirm each phase before it is treated as settled.
+  const firstNinetyDays = [
+    {
+      days: '1-30',
+      name: 'Assess, then fix',
+      work: 'The first two weeks go on the codebase, the infrastructure and the delivery process, and the people who built them. The rest of the month goes on the fixes that cost least and matter most.',
+      keep: 'A written assessment by the end of week two, with the risks ranked by cost and consequence, and the first of those fixes done.',
+    },
+    {
+      days: '31-60',
+      name: 'Decide and write it down',
+      work: 'The architecture and technology decisions the next year depends on, made with you and recorded with their trade-offs. Delivery gets a cadence: reviewed changes, automated tests and deployments.',
+      keep: 'Written architecture decisions, and a delivery process that does not depend on any one person.',
+    },
+    {
+      days: '61-90',
+      name: 'Tie it to the money',
+      work: 'The technical roadmap mapped to the milestones your next round is meant to fund, and the hiring plan matched to the one the financial model pays for.',
+      keep: 'A roadmap, a hiring plan, and documentation a diligence team can read without us in the room.',
     },
   ]
 
@@ -350,6 +374,13 @@ export default function FractionalCTOPage() {
           </div>
         </div>
       </section>
+
+      <FirstNinetyDays
+        seat="cto"
+        title="Your First 90 Days"
+        intro="What the Fractional CTO seat delivers in its first three months. The order flexes to your stage and to what we find; every phase ends in something you keep."
+        phases={firstNinetyDays}
+      />
 
       {/* Agentic AI. Charcoal rather than another white card grid: this is the
           capability buyers are actively searching for, and it should not read as
