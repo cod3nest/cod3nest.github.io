@@ -305,6 +305,8 @@ export default function FractionalCFOPage() {
         credentials={['FCCA', 'BSc Mathematics', '£165m P&L']}
         bio="Chartered accountant and strategic finance leader. As Head of Strategic Finance at Dishoom she owned the five-year model, rolling forecasts and CapEx governance through a 6-to-27-site expansion, and held the company's cash together through COVID-19. She works with founders on business and financial strategy, and has supported them through fundraising and investor due diligence."
         highlights={[
+          // Owner, 23 Nov 2026: a current Codenest client, and the first on the CFO seat.
+          'Fractional CFO to Noodle+Kin, a creativity-led nursery and family studio, since 2026',
           'Led strategic finance at Dishoom through £35m to £165m revenue and a four-point EBITDA margin improvement',
           'Built and led a 20+ person finance function, owning Board and investor reporting',
           'Rolling forecasts accurate to ±3%, month-end close cut from 14 days to 8, and £6m in procurement and contract improvements',

@@ -304,9 +304,9 @@ export default function Home() {
 
       {/* Social proof, in two labelled groups.
           The strip carried one caption — "Founder track record includes" — which was
-          accurate only while Codenest had no clients in it. Six of these eight marks
-          are client engagements: Regeno, Frekkel, Opayo, AstraZeneca, HSBC and
-          Deloitte Digital. Opayo and AstraZeneca were mislabelled as founder track record
+          accurate only while Codenest had no clients in it. Seven of these nine marks
+          are client engagements: Regeno, Frekkel, Noodle+Kin (the CFO seat's), Opayo,
+          AstraZeneca, HSBC and Deloitte Digital. Opayo and AstraZeneca were mislabelled as founder track record
           until the owner's correction of 5 Aug 2026 (Opayo ran Aug 2019 – Jun 2026,
           squarely Codenest-era; see §13.11).
           The test is the firm's August 2017 boundary, not how the name feels: an
@@ -316,7 +316,7 @@ export default function Home() {
       <section className="py-12 bg-slate-50/50 border-y border-slate-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-xs text-slate-500 mb-8 uppercase tracking-[0.2em] font-medium">Codenest clients</p>
-          <div className="flex flex-wrap justify-center items-center gap-6 lg:gap-8 mb-12">
+          <div className="max-w-3xl mx-auto flex flex-wrap justify-center items-center gap-6 lg:gap-8 mb-12">
             {/* Regeno - Agritech. Square tile, so it takes Rungway's treatment. */}
             <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm transition-all cursor-default">
               <img
@@ -344,6 +344,24 @@ export default function Home() {
                 alt="Frekkel"
                 className="h-8 w-auto object-contain"
               />
+            </div>
+
+            {/* Noodle+Kin - Early years. A current Fractional CFO client (Michelle,
+                since 2026; owner, 23 Nov 2026) and the first on the CFO seat. Their
+                header mark only, from noodleandkin.co.uk, so it takes Regeno's tile. */}
+            <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm transition-all cursor-default">
+              <img
+                src="/img/clients/noodleandkin.svg"
+                width={36}
+                height={40}
+                loading="lazy"
+                alt=""
+                className="h-10 w-auto object-contain"
+              />
+              <div>
+                <span className="text-lg font-semibold text-slate-700 group-hover:text-slate-900 transition-colors">Noodle+Kin</span>
+                <p className="text-xs text-slate-500">Early years</p>
+              </div>
             </div>
 
             {/* Opayo/Elavon - Payments */}
@@ -416,8 +434,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Dishoom - Hospitality. Michelle's employer, and the only non-technical
-                mark in a strip that is otherwise entirely Ankit's.
+            {/* Dishoom - Hospitality. Michelle's employer, and the only CFO-seat
+                mark in this group; Noodle+Kin is the CFO seat's client above.
                 Sized on cap-height rather than box-height: the wordmark is ~9:1,
                 so h-8 would render it nearly three times wider than the others. */}
             <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm transition-all cursor-default">
