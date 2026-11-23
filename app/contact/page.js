@@ -7,7 +7,7 @@ import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../lib/schema'
 
 export const metadata = {
   title: 'Contact | Request a Strategy Call',
-  description: 'Request a free 30-minute strategy call with Codenest — fractional CTO and CFO services for UK startups at pre-seed and seed, with the CFO seat through Series A. We reply within 24 hours.',
+  description: 'Request a free 30-minute strategy call about a Fractional CTO or CFO for your UK startup. We reply within 24 hours with times.',
   openGraph: {
     title: 'Contact Codenest — Request a Strategy Call',
     description: 'Fractional CTO and CFO services for UK startups. Free 30-minute strategy call, no sales pitch.',

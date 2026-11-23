@@ -419,7 +419,11 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
    founders search for either title. It may appear in CFO-page body copy, an h2 or
    comparison that explains the two roles, the FAQ, metadata descriptions and
    keywords, and Michelle's bio. The service's *name* stays "Fractional CFO" in
-   navigation, cards, h1s, titles, footers and schema.
+   navigation, cards, h1s, titles, footers and schema. **One exception, owner,
+   23 Nov 2026 (SEO strategy, `docs/SEO_STRATEGY_2026-11-23.md`):** the CFO page's
+   `<title>` and OG title are "Fractional CFO & Finance Director for UK Startups",
+   because UK founders search for both titles and page-one competitors pair them.
+   The service is still named first; no other page's title takes the synonym.
 2. **The hero names the offer.** The homepage h1 carries the target term:
    "Your Fractional CTO and CFO, until you can hire full-time." The flourish
    "Executive firepower. Startup agility." sits in the eyebrow, not the h1.

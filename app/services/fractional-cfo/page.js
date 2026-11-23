@@ -15,11 +15,14 @@ import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
 // geographic claim nothing on the site supported. `areaServed` is the United
 // Kingdom, and the title now matches it. (BRANDING.md §13.25.)
 export const metadata = {
-  title: 'Fractional CFO Services for UK Startups',
+  // The one title that carries the FD synonym (owner, 23 Nov 2026, BRANDING §13.1):
+  // fractional, part-time and interim FD each show >100 UK searches a month.
+  // 49 characters, the budget before the template's " | Codenest".
+  title: 'Fractional CFO & Finance Director for UK Startups',
   description: 'Fractional CFO or part-time Finance Director for UK startups, pre-seed to Series A. Business and financial strategy, modelling, fundraising and reporting.',
   keywords: ['fractional CFO UK', 'startup CFO', 'FP&A UK', 'financial planning analysis', 'financial strategy', 'business strategy', 'startup finance UK', 'part-time CFO', 'fractional finance director', 'part-time finance director', 'part-time FD'],
   openGraph: {
-    title: 'Fractional CFO Services for UK Startups | Codenest',
+    title: 'Fractional CFO & Finance Director for UK Startups | Codenest',
     description: 'Business and financial strategy, and FP&A, for UK startups — investor-ready financials without the overhead.',
     type: 'website',
     url: 'https://codenest.uk/services/fractional-cfo/',
@@ -312,7 +315,7 @@ export default function FractionalCFOPage() {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl h-[450px]">
                 <Image
                   src="/img/photos/service-diligence.jpg"
-                  alt="Financial and business strategy leadership for startup team"
+                  alt="Fractional CFO working through financial plans with a startup team"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -385,7 +388,7 @@ export default function FractionalCFOPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="font-serif text-4xl font-bold text-slate-900 mb-6">What We Do</h2>
+              <h2 className="font-serif text-4xl font-bold text-slate-900 mb-6">What a Fractional CFO Does for Your Startup</h2>
               <p className="text-xl text-slate-600 mb-8">
                 What the seat covers: the plan, the systems that produce the numbers, and the discipline that keeps them true.
               </p>
@@ -489,7 +492,7 @@ export default function FractionalCFOPage() {
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl font-bold text-slate-900 mb-4">Common Questions</h2>
+            <h2 className="font-serif text-4xl font-bold text-slate-900 mb-4">Fractional CFO Questions</h2>
           </div>
 
           <div className="space-y-6">
@@ -511,7 +514,7 @@ export default function FractionalCFOPage() {
             <p className="text-slate-700">
               New to strategic finance? Read{' '}
               <Link href="/guides/fractional-cfo-guide/" className="font-semibold text-accent-700 hover:text-accent-800 underline">
-                The Complete Guide to Fractional CFO Services
+                What Is a Fractional CFO? A Guide for UK Founders
               </Link>.
               {' '}Weighing this against a permanent hire or an outsourced provider? Compare{' '}
               <Link href="/guides/fractional-cfo-vs-full-time/" className="font-semibold text-accent-700 hover:text-accent-800 underline">
@@ -527,6 +530,12 @@ export default function FractionalCFOPage() {
               — or read{' '}
               <Link href="/blog/financial-modeling-seed-stage-startups/" className="font-semibold text-accent-700 hover:text-accent-800 underline">
                 our financial modelling guide
+              </Link>. Budgeting for the seat? See{' '}
+              <Link href="/blog/how-much-does-fractional-cfo-cost-uk/" className="font-semibold text-accent-700 hover:text-accent-800 underline">
+                what a fractional CFO costs in the UK
+              </Link>{' '}and{' '}
+              <Link href="/blog/when-to-hire-fractional-cfo/" className="font-semibold text-accent-700 hover:text-accent-800 underline">
+                the seven signs it is time to hire one
               </Link>.
             </p>
           </div>

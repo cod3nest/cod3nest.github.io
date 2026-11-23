@@ -148,9 +148,13 @@ function NavDropdown({ label, menuId, links }) {
         </svg>
       </button>
 
-      {isOpen && (
-        <div
+      {/* Always rendered, hidden when closed. Mounting the panel only on open kept
+          these links out of the static HTML, so crawlers saw no nav link to
+          /guides/ or either service page. `hidden` is display:none, which also
+          keeps closed items out of the tab order and the accessibility tree. */}
+      <div
           id={menuId}
+          hidden={!isOpen}
           className="absolute left-0 mt-2 w-72 rounded-xl bg-white py-2 shadow-xl ring-1 ring-slate-200"
         >
           {links.map((link, index) => (
@@ -167,7 +171,6 @@ function NavDropdown({ label, menuId, links }) {
             </Link>
           ))}
         </div>
-      )}
     </div>
   )
 }
@@ -321,8 +324,8 @@ export default function Navigation() {
         </div>
 
         {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div id="mobile-menu" className="lg:hidden">
+        {/* Rendered closed for the same reason as NavDropdown: crawlable links. */}
+        <div id="mobile-menu" hidden={!isMenuOpen} className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-slate-100">
               {/* Flattened on touch: a nested tap-to-expand menu costs an extra
                   tap and hides the two pages people came for. */}
@@ -363,7 +366,6 @@ export default function Navigation() {
               <a href={contactHref} {...ctaLinkProps} onClick={() => setIsMenuOpen(false)} className="bg-accent-400 text-primary-900 font-semibold block px-3 py-2 text-base rounded-lg hover:bg-accent-500 transition-all shadow-sm">{cta.label}</a>
             </div>
           </div>
-        )}
       </div>
     </nav>
     </>

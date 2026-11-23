@@ -5,11 +5,15 @@ import JsonLd from '../../components/JsonLd'
 import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
 
 export const metadata = {
-  title: 'The Complete Guide to Fractional CTO Services UK',
-  description: 'What a fractional CTO does, UK costs, when to hire one, and how to choose the right one — the full picture for startup founders.',
+  // Informational title on purpose. As "…Fractional CTO Services UK" this guide
+  // outranked /services/fractional-cto/ for the commercial head terms (GSC, Aug-Nov
+  // 2026: guide at position 23, service page at 50). The guide owns "what is" and
+  // cost intent; the service page owns "services" and "hire". See docs/SEO_STRATEGY_2026-11-23.md.
+  title: 'What Is a Fractional CTO? A Guide for UK Founders',
+  description: 'What a fractional CTO does, what one costs in the UK, when to hire one and how to choose. A plain guide for startup founders.',
   keywords: ['fractional CTO guide', 'what is a fractional CTO', 'fractional CTO cost UK', 'when to hire fractional CTO', 'fractional CTO vs full-time CTO', 'part-time CTO startup', 'CTO as a service UK'],
   openGraph: {
-    title: 'The Complete Guide to Fractional CTO Services UK',
+    title: 'What Is a Fractional CTO? A Guide for UK Founders',
     description: 'Everything UK founders need to know about fractional CTO services: costs, benefits, when to hire, and how to choose.',
     type: 'article',
     url: 'https://codenest.uk/guides/fractional-cto-guide/',
@@ -77,7 +81,7 @@ export default function FractionalCTOGuidePage() {
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'The Complete Guide to Fractional CTO Services UK',
+    headline: 'What Is a Fractional CTO? A Guide for UK Founders',
     description: 'Everything UK founders need to know about fractional CTO services.',
     author: {
       '@type': 'Organization',
@@ -134,7 +138,7 @@ export default function FractionalCTOGuidePage() {
               Complete Guide
             </span>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              The Complete Guide to <br />Fractional CTO Services
+              What Is a Fractional CTO? <br />A Guide for UK Founders
             </h1>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-8">
               Everything UK founders need to know about hiring a fractional CTO: costs, benefits, timing, and how to make it work for your startup.
@@ -182,7 +186,7 @@ export default function FractionalCTOGuidePage() {
                 Unlike consultants who provide advice and leave, a fractional CTO becomes embedded in your organisation. They attend your standups, join your Slack channels, participate in investor meetings, and take accountability for technical outcomes.
               </p>
               <p>
-                The "fractional" model has become increasingly popular among UK startups, particularly in the pre-seed to Series A stages. It allows founders to access executive-level expertise while preserving runway and avoiding premature scaling of their leadership team.
+                The "fractional" model has become increasingly popular among UK startups, particularly in the pre-seed to Series A stages. It allows founders to access executive-level expertise while preserving runway and avoiding premature scaling of their leadership team. If you already know you need one, our <Link href="/services/fractional-cto/" className="text-primary-600 hover:text-primary-700 font-medium">Fractional CTO services page</Link> sets out what an engagement covers.
               </p>
               <div className="bg-primary-50 border border-primary-200 rounded-xl p-6 my-8 not-prose">
                 <p className="font-semibold text-primary-900 mb-2">Key Point</p>
@@ -242,7 +246,7 @@ export default function FractionalCTOGuidePage() {
                 When Should You Hire a Fractional CTO?
               </h2>
               <p>
-                The right time to hire a fractional CTO depends on your specific situation, but here are the most common triggers:
+                The right time to hire a fractional CTO depends on your specific situation, but here are the most common triggers. For the full checklist, see <Link href="/blog/when-to-hire-fractional-cto/" className="text-primary-600 hover:text-primary-700 font-medium">seven signs your startup is ready for a fractional CTO</Link>.
               </p>
 
               <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">You're a Non-Technical Founder</h3>
@@ -283,7 +287,7 @@ export default function FractionalCTOGuidePage() {
                 How Much Does a Fractional CTO Cost?
               </h2>
               <p>
-                Fractional CTO costs in the UK vary based on experience level, engagement intensity, and industry specialisation. Here's what to expect:
+                Fractional CTO costs in the UK vary based on experience level, engagement intensity, and industry specialisation. Here's what to expect (the <Link href="/blog/how-much-does-fractional-cto-cost-uk/" className="text-primary-600 hover:text-primary-700 font-medium">UK fractional CTO pricing guide</Link> breaks it down further):
               </p>
 
               <div className="overflow-x-auto my-8 not-prose">
@@ -402,8 +406,8 @@ export default function FractionalCTOGuidePage() {
               </p>
 
               <p className="mt-6">
-                <Link href="/blog/fractional-cto-vs-full-time-cto-uk-startups/" className="text-primary-600 hover:text-primary-700 font-medium">
-                  Read our detailed analysis: Fractional CTO vs Full-Time CTO →
+                <Link href="/guides/fractional-cto-vs-full-time/" className="text-primary-600 hover:text-primary-700 font-medium">
+                  Read the full comparison: Fractional CTO vs Full-Time CTO →
                 </Link>
               </p>
             </section>
@@ -574,7 +578,7 @@ export default function FractionalCTOGuidePage() {
                 href="/services/fractional-cto/"
                 className="inline-block bg-accent-500 text-primary-900 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-accent-600 transition-all"
               >
-                Learn About Our Services
+                See Our Fractional CTO Services
               </Link>
             </section>
 

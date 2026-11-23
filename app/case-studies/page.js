@@ -11,7 +11,7 @@ import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../lib/schema'
 // of its own, and not before.
 export const metadata = {
   title: 'Case Studies: Fractional CTO Engagements',
-  description: 'Fractional CTO client engagements led by Ankit Rana: an agentic AI platform for Regeno, an AI skincare MVP for Frekkel in 12 weeks, payments at Opayo by Elavon, an MVP for AstraZeneca, and scaling Rungway.',
+  description: 'Fractional CTO engagements led by Ankit Rana: an agentic AI platform for Regeno, a 12-week AI MVP for Frekkel, payments at Opayo by Elavon, and more.',
   openGraph: {
     title: 'Codenest Case Studies — Track Record',
     description: 'Agentic AI platform engineering, a 12-week AI MVP, scaling, payments and regulated delivery. Regeno, Frekkel, Rungway, Opayo by Elavon, AstraZeneca.',
