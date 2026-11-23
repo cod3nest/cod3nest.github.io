@@ -15,11 +15,14 @@ import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
 // geographic claim nothing on the site supported. `areaServed` is the United
 // Kingdom, and the title now matches it. (BRANDING.md §13.25.)
 export const metadata = {
-  title: 'Fractional CFO Services for UK Startups',
+  // The one title that carries the FD synonym (owner, 23 Nov 2026, BRANDING §13.1):
+  // fractional, part-time and interim FD each show >100 UK searches a month.
+  // 49 characters, the budget before the template's " | Codenest".
+  title: 'Fractional CFO & Finance Director for UK Startups',
   description: 'Fractional CFO or part-time Finance Director for UK startups, pre-seed to Series A. Business and financial strategy, modelling, fundraising and reporting.',
   keywords: ['fractional CFO UK', 'startup CFO', 'FP&A UK', 'financial planning analysis', 'financial strategy', 'business strategy', 'startup finance UK', 'part-time CFO', 'fractional finance director', 'part-time finance director', 'part-time FD'],
   openGraph: {
-    title: 'Fractional CFO Services for UK Startups | Codenest',
+    title: 'Fractional CFO & Finance Director for UK Startups | Codenest',
     description: 'Business and financial strategy, and FP&A, for UK startups — investor-ready financials without the overhead.',
     type: 'website',
     url: 'https://codenest.uk/services/fractional-cfo/',

@@ -3,6 +3,12 @@ import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 import JsonLd from '../../components/JsonLd'
 import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
+import { getDiagram } from '../../components/diagrams/registry'
+
+// This guide absorbed /blog/fractional-cto-vs-full-time-cto-uk-startups/ on
+// 23 Nov 2026: the two pages answered the same question and split its signals.
+// The blog URL 301s here via a Cloudflare Redirect Rule (docs/SEO_STRATEGY_2026-11-23.md).
+const FractionalToFullTime = getDiagram('fractional-to-fulltime')
 
 export const metadata = {
   title: 'Fractional CTO vs Full-Time CTO: Cost Comparison',
@@ -40,7 +46,7 @@ const pageSchema = [
     author: { '@id': ORGANIZATION_ID },
     publisher: { '@id': ORGANIZATION_ID },
     datePublished: '2026-01-13',
-    dateModified: '2026-08-04',
+    dateModified: '2026-11-23',
     mainEntityOfPage: 'https://codenest.uk/guides/fractional-cto-vs-full-time/',
     inLanguage: 'en-GB',
   },
@@ -306,6 +312,110 @@ export default function FractionalVsFullTimePage() {
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Costs founders miss */}
+      <section className="py-16 bg-slate-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-serif text-3xl font-bold text-slate-900 mb-8">
+            The Costs Founders Miss
+          </h2>
+          <div className="space-y-6 text-slate-700 leading-relaxed">
+            <p>
+              <strong>Hiring time.</strong> A permanent CTO search usually takes three to six months. Technical decisions do not wait for it: they stall, or they get made by whoever is nearest, and both show up later in due diligence.
+            </p>
+            <p>
+              <strong>Founder time.</strong> Twenty hours a week on a search for four months is over 300 hours not spent on customers, product or the raise.
+            </p>
+            <p>
+              <strong>A wrong hire.</strong> An executive who does not work out costs the salary already paid, the severance, a second search, and the months of drift in between. A fractional engagement that is not working ends at the next monthly review.
+            </p>
+            <p>
+              <strong>Hiring for a team you do not have yet.</strong> A CTO who can run fifty engineers is expensive overhead for three. You pay for capability you may not need for two or three years.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Fractional to full-time */}
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-serif text-3xl font-bold text-slate-900 mb-6">
+            From Fractional to Full-Time
+          </h2>
+          <p className="text-slate-700 leading-relaxed mb-8">
+            The choice is rarely permanent. Many startups use a fractional CTO as the bridge to a full-time hire, and plan it that way from the start.
+          </p>
+          <FractionalToFullTime />
+          <div className="grid md:grid-cols-3 gap-6 mt-8">
+            <div className="bg-white rounded-2xl p-6 border border-slate-200">
+              <h3 className="text-lg font-bold text-slate-900 mb-2">1. Fractional</h3>
+              <p className="text-slate-700">The fractional CTO sets the architecture, the hiring process and the engineering habits, while runway goes on growth.</p>
+            </div>
+            <div className="bg-white rounded-2xl p-6 border border-slate-200">
+              <h3 className="text-lg font-bold text-slate-900 mb-2">2. Hire or promote</h3>
+              <p className="text-slate-700">Once the team needs a full-time leader, promote a strong engineering lead or hire against a role the fractional CTO helped define.</p>
+            </div>
+            <div className="bg-white rounded-2xl p-6 border border-slate-200">
+              <h3 className="text-lg font-bold text-slate-900 mb-2">3. Handover</h3>
+              <p className="text-slate-700">The permanent CTO inherits a documented system. Some companies keep the fractional CTO on as an adviser for a while.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How to evaluate */}
+      <section className="py-16 bg-slate-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-serif text-3xl font-bold text-slate-900 mb-8">
+            How to Evaluate a Fractional CTO
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-2xl p-8 border border-slate-200">
+              <h3 className="text-xl font-bold text-slate-900 mb-4">Good signs</h3>
+              <ul className="space-y-3 text-slate-700 list-disc pl-5">
+                <li>Experience at your stage and in a similar sector</li>
+                <li>Strategy that comes with hands-on delivery, not just a document</li>
+                <li>They describe outcomes, not hours</li>
+                <li>Past clients who will take your call</li>
+                <li>A clear plan for handing over to a permanent hire</li>
+              </ul>
+            </div>
+            <div className="bg-white rounded-2xl p-8 border border-slate-200">
+              <h3 className="text-xl font-bold text-slate-900 mb-4">Warning signs</h3>
+              <ul className="space-y-3 text-slate-700 list-disc pl-5">
+                <li>Frameworks and methodology, but nothing shipped</li>
+                <li>No experience leading a team</li>
+                <li>Too many clients to be available when it matters</li>
+                <li>Asking for equity in place of a fee</li>
+                <li>No technical depth behind the diagrams</li>
+              </ul>
+            </div>
+          </div>
+          <h3 className="text-xl font-bold text-slate-900 mt-10 mb-4">Questions to ask</h3>
+          <ol className="space-y-3 text-slate-700 list-decimal pl-5">
+            <li>Walk me through a technical decision at a similar-stage startup that did not work out. What did you learn?</li>
+            <li>How do you handle the engineering team disagreeing with your recommendation?</li>
+            <li>What is your availability for investor meetings and due diligence calls?</li>
+            <li>Which past clients can I speak to?</li>
+            <li>What does a successful first 90 days look like for a company at our stage?</li>
+          </ol>
+        </div>
+      </section>
+
+      {/* Making it work */}
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="font-serif text-3xl font-bold text-slate-900 mb-8">
+            Making a Fractional CTO Work
+          </h2>
+          <div className="space-y-6 text-slate-700 leading-relaxed">
+            <p><strong>Define outcomes, not a role.</strong> Not &quot;provide technical leadership&quot; but &quot;set up the deployment pipeline, hire two senior engineers, prepare the technical due diligence pack&quot;.</p>
+            <p><strong>Integrate them properly.</strong> Slack, the standups that matter, an introduction to the team. Part-time does not mean outsider.</p>
+            <p><strong>Set a rhythm.</strong> A weekly founder sync, an agreed route for urgent questions, and a monthly written update.</p>
+            <p><strong>Plan the exit from day one.</strong> The goal is a team that can run without the fractional CTO, or a clean handover to a permanent one, never dependency.</p>
           </div>
         </div>
       </section>

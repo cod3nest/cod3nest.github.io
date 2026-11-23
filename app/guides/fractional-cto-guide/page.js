@@ -406,8 +406,8 @@ export default function FractionalCTOGuidePage() {
               </p>
 
               <p className="mt-6">
-                <Link href="/blog/fractional-cto-vs-full-time-cto-uk-startups/" className="text-primary-600 hover:text-primary-700 font-medium">
-                  Read our detailed analysis: Fractional CTO vs Full-Time CTO →
+                <Link href="/guides/fractional-cto-vs-full-time/" className="text-primary-600 hover:text-primary-700 font-medium">
+                  Read the full comparison: Fractional CTO vs Full-Time CTO →
                 </Link>
               </p>
             </section>

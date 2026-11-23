@@ -143,8 +143,10 @@ export default function PrivacyPolicyPage() {
                   ))}
                 </div>
                 <p className="mt-6">
-                  We do not run analytics, advertising or tracking scripts on this site, and we do not set cookies of
-                  our own. There is no cookie banner because there is nothing to consent to.
+                  We count visits with Cloudflare Web Analytics, which records which pages are viewed and where
+                  visitors arrived from, in aggregate. It sets no cookies, stores nothing on your device and does not
+                  fingerprint your browser, and we cannot identify you from it. We run no advertising or tracking
+                  scripts and set no cookies of our own, so there is no cookie banner: there is nothing to consent to.
                 </p>
               </section>
 
@@ -176,6 +178,11 @@ export default function PrivacyPolicyPage() {
                     <strong className="text-slate-900">GitHub Pages</strong> hosts this site. GitHub processes standard
                     server log data, including your IP address, when you load a page. This happens on every website you
                     visit and is not something we collect or can see.
+                  </li>
+                  <li>
+                    <strong className="text-slate-900">Cloudflare</strong> sits in front of GitHub Pages: every request
+                    to this site passes through its network, which processes your IP address to deliver the page and
+                    protect the site. Cloudflare Web Analytics, described above, also runs on Cloudflare.
                   </li>
                   <li>
                     <strong className="text-slate-900">Calendly</strong> handles bookings. The &ldquo;Book a Strategy

@@ -15,13 +15,14 @@ brand rule are listed under "Decisions for the owner", not acted on.
 | Source | Access | What it gave |
 |---|---|---|
 | Google Search Console (domain property) | **Yes**, read-only through the owner's browser | Queries, pages, positions, indexing, sitemaps, links. All numbers below are from GSC unless marked otherwise. |
-| Google Analytics 4 | **No.** The site has no analytics tag of any kind | Nothing. There is no traffic, journey or conversion data anywhere. |
+| Google Analytics 4 | **No.** No GA4 tag | Nothing. |
+| Cloudflare Web Analytics | **Yes.** Found already running (auto-injected, "excluding EU visitors"), though `/privacy` said the site ran no analytics | Visits, page views, real-user LCP. No conversion events. |
 | Google Ads Keyword Planner | **No.** No Ads account on the owner's login | Nothing. Creating one needs the owner. |
 | Ahrefs free keyword generator (UK) | Yes, public | Volume **buckets** only (<100, >100, >1,000 a month). Treat them as ranges, not numbers. |
 | Google Search (google.co.uk, `pws=0`) | Yes | Who ranks for the head terms, 23 Nov 2026. One snapshot. |
 | PageSpeed Insights | Yes, web UI (the shared API key was over quota) | Lighthouse lab data. No field (CrUX) data: too little traffic. |
 | Rich Results Test | Not run | JSON-LD parses on every page (local audit), and GSC reports 13 valid breadcrumb items with no errors. |
-| Bing Webmaster Tools | **Not set up** | Nothing. |
+| Bing Webmaster Tools | **Set up 23 Nov 2026** (imported from GSC, sitemap submitted) | No data yet. |
 | Ahrefs / Semrush paid, Screaming Frog | No | Crawl replaced by an audit script over the static export in `out/` (every page, every link). Backlinks from GSC's Links report only. |
 
 Nothing below is estimated where a source was missing; gaps are stated.
@@ -40,7 +41,8 @@ Nothing below is estimated where a source was missing; gaps are stated.
 | Indexed pages | 23 | |
 | Not indexed | 21 (13 crawled-not-indexed, 6 redirects, 2 not found) | |
 | External links | 10, from 8 sites: crunchbase.com, fractionalcfocost.co.uk, aybarion.com, cfo-index.com, github.com, linkedin.com, mapquest.com, rocketreach.co | |
-| Core Web Vitals (field) | No data: below CrUX's traffic threshold | |
+| Core Web Vitals (field) | No CrUX data: below the traffic threshold. Cloudflare real-user LCP p75 1.65 s (30 days) | |
+| Cloudflare Web Analytics, last 30 days | 110 visits, 120 page views (non-EU visitors only) | |
 
 **Brand versus non-brand.** The query "codenest" brought 18 of the 72 clicks (165 impressions,
 position 3.9). The homepage took 48 clicks in all. Filtering out "codenest" leaves **one click in
@@ -146,11 +148,14 @@ no nav link to `/guides/`, the two tools, or (from the nav) either service page.
 **zero** crawlable internal links. **Fixed on this branch:** the panels are always rendered and
 hidden with the `hidden` attribute; `/guides/` now has 41.
 
-### 2.5 No measurement
+### 2.5 Measurement existed but was undeclared, and enquiries carry no source
 
-No GA4, no privacy-friendly analytics, no conversion tracking, and EmailJS form submissions carry
-no source. There is no way today to say which page, query or channel produced an enquiry.
-See section 13.
+Cloudflare Web Analytics was already switched on for codenest.uk (auto-injected beacon, "enable,
+excluding visitor data in the EU"), while `/privacy` said the site ran no analytics. UK visitors are
+not EU visitors, so they were being measured. **Fixed on this branch:** `/privacy` now names
+Cloudflare (which also proxies every request and was not listed) and describes the analytics.
+Still missing: conversion tracking. EmailJS submissions carry no source, so there is no way to say
+which page, query or channel produced an enquiry. See section 13.
 
 ### 2.6 Smaller technical findings
 
@@ -281,10 +286,13 @@ city pages, or sector pages. Each becomes justified only when it has a case stud
 unique content to stand alone (roughly 800 words that would not fit on the seat page). Technical
 due diligence is the first candidate once one DD engagement can be written up.
 
-**Consolidate (needs owner approval, section 14):** `/blog/fractional-cto-vs-full-time-cto-uk-startups/`
-and `/guides/fractional-cto-vs-full-time/` cover the same comparison. Merge the stronger content
-into the guide and 301 the blog URL with a Cloudflare Redirect Rule. Cloudflare in front of GitHub
-Pages makes real 301s possible; the repo alone cannot issue them.
+**Consolidated 23 Nov 2026 (owner approved):** `/blog/fractional-cto-vs-full-time-cto-uk-startups/`
+and `/guides/fractional-cto-vs-full-time/` covered the same comparison. The post's unique sections
+(costs founders miss, the fractional-to-full-time path and its diagram, how to evaluate a fractional
+CTO, making it work) moved into the guide; an unsourced "40% of executive hires fail" figure was
+dropped. The post is deleted and a Cloudflare Single Redirect ("Merged CTO vs full-time post to
+guide", wildcard on the old path) 301s it to the guide; verified with curl for both slash forms.
+Cloudflare in front of GitHub Pages is what makes a real 301 possible; the repo alone cannot.
 
 ---
 
@@ -338,9 +346,12 @@ service pages' links into their cluster, four meta descriptions.
 7. **Image alt text:** every image has one. The CFO hero photo's alt used a retired alias pattern
    (§2.1); **fixed on this branch** to name the Fractional CFO.
 
-**Decisions for the owner** (not changed here, because BRANDING.md settles them the other way):
+**Owner decisions, 23 Nov 2026:**
 
-- **"Finance Director" in the CFO page's title or h1.** §2.1 and §13.1 keep the service name as
+- **"Finance Director" in the CFO page's title: done.** The `<title>` and OG title are now
+  "Fractional CFO & Finance Director for UK Startups"; BRANDING §13.1 records it as the one title
+  exception. The h1 stays "Fractional CFO Services". The original reasoning follows.
+- *Reasoning:* §2.1 and §13.1 keep the service name as
   "Fractional CFO" everywhere, with descriptors in body copy only. The evidence for adding it:
   fractional, part-time and interim FD each show ">100" UK searches a month, page-one
   competitors pair the two terms in their titles, and the site has one FD impression in 16 months.
@@ -445,7 +456,7 @@ named principals, a first-90-days plan on each seat page). The SEO-specific gaps
 | Mobile | No horizontal overflow at 375px (checked on `/` and `/services/fractional-cfo/`). |
 | Performance | Lab 100 across the board. No field data yet. |
 | Images | `next/image` with sizes; every image has alt text. |
-| Bing / IndexNow | Not set up. Turning on Cloudflare **Crawler Hints** sends IndexNow pings automatically. |
+| Bing / IndexNow | Bing Webmaster Tools set up and sitemap submitted; Cloudflare **Crawler Hints** on (sends IndexNow pings), 23 Nov 2026. |
 
 ---
 
@@ -462,6 +473,21 @@ named principals, a first-90-days plan on each seat page). The SEO-specific gaps
 | `app/services/fractional-cto/page.js` | h2s "What a Fractional CTO Does for Your Startup" and "Fractional CTO Questions"; links to the DD checklist, cost and when-to-hire posts | Same |
 | `app/layout.js`, `app/services/page.js`, `app/case-studies/page.js`, `app/contact/page.js` | Meta descriptions cut to 126-156 characters | They were 186-205 and truncated in results. The case-studies one also stopped implying Rungway was a client. |
 
+**Second round, same day (owner: "do all"):**
+
+| Where | Change |
+|---|---|
+| `app/services/fractional-cfo/page.js`, `docs/BRANDING.md` §13.1 | Title "Fractional CFO & Finance Director for UK Startups"; rule exception recorded |
+| `app/guides/fractional-cto-vs-full-time/page.js` | Absorbed the blog post's unique sections and diagram; `dateModified` 2026-11-23 |
+| `content/blog/fractional-cto-vs-full-time-cto-uk-startups.md`, its OG card | Deleted; the CTO guide's link now points at the comparison guide |
+| `app/privacy/page.js` | Names Cloudflare as a processor and describes Cloudflare Web Analytics |
+| Cloudflare (dashboard) | 301 redirect rule for the merged post; Crawler Hints on |
+| Google Search Console | Sitemap resubmitted (read same day, 41 URLs); indexing requested for `/blog/how-much-does-fractional-cto-cost-uk/` and `/blog/when-to-hire-fractional-cto/` |
+| Bing Webmaster Tools | Account created with the owner's Google sign-in; codenest.uk imported from GSC (homelabflix.co.uk deliberately left out); sitemap submitted |
+
+The merge with `master` kept master's own Finance Director FAQ and hero copy (PR #102) over this
+branch's version of the same.
+
 Validated: `npm run build` passes (freshness gate included); the audit of `out/` shows one h1 per
 page, unique self-canonicals, titles within budget, parseable JSON-LD; dropdown and mobile menu
 checked in the browser at 1280px and 375px with no console errors.
@@ -470,10 +496,10 @@ checked in the browser at 1280px and 375px with no console errors.
 
 ## 13. Measurement
 
-**Install (owner decision):** **Cloudflare Web Analytics**. The site is already proxied through
-Cloudflare, it is cookieless (no consent banner under PECR), and it is free. It needs one line
-added to `/privacy` naming it (BRANDING §13.21) in the same change. GA4 is the alternative if
-the owner wants conversion events and Google Ads integration, at the cost of a consent banner.
+**Analytics: Cloudflare Web Analytics, already on.** Cookieless, so no consent banner under PECR;
+`/privacy` now declares it. It currently excludes EU visitors; switching to full "Enable" would add
+them, but the market is the UK, so it was left as found. GA4 remains the option if conversion
+events or Google Ads integration are wanted, at the cost of a consent banner.
 
 **Lead source:** add the landing page and referrer as hidden fields to the EmailJS payload, so
 each enquiry arrives saying where it started. This is new personal-data collection: update
@@ -502,23 +528,20 @@ Monthly, the KPI table above, kept in this file's successor. Quarterly, re-run t
 
 ## 14. Outstanding actions and dependencies
 
-**Needs the owner, in Google Search Console** (not done: they change the account):
+**Done 23 Nov 2026:** sitemap resubmitted; indexing requested for the two CTO posts; Bing set up;
+Crawler Hints on; CTO duplicate consolidated and redirected; FD in the CFO title; analytics
+declared in `/privacy`.
 
-1. Resubmit `https://codenest.uk/sitemap.xml` (last read 20 Jan 2026).
-2. After this branch deploys, URL Inspection → Request indexing for
-   `/blog/how-much-does-fractional-cto-cost-uk/`, `/blog/when-to-hire-fractional-cto/`, and both
-   guides (their titles changed).
+**Still open:**
 
-**Needs the owner, elsewhere:**
-
-3. Bing Webmaster Tools: sign up and import the property from GSC (one click), then turn on
-   Cloudflare Crawler Hints for IndexNow.
-4. Choose an analytics option (section 13).
-5. Decide on "Finance Director" in the CFO title (section 7).
-6. Approve the CTO vs full-time consolidation and 301 (section 5).
-7. Supply a CFO engagement for the first CFO case study.
-8. The link outreach in section 9 needs the principals' own voices; it cannot be done on their
-   behalf.
+1. **After this branch deploys:** request indexing in GSC for both retitled guides,
+   `/services/fractional-cfo/` (new title) and `/guides/fractional-cto-vs-full-time/` (merged).
+2. **CFO case study (Noodle+Kin).** Needs the facts from Michelle: the brief, what she built or
+   changed, and any outcome the client will let us publish. No figure goes up without them
+   (BRANDING §2.2, §13.29).
+3. **Lead source on enquiries** (section 13): hidden landing-page and referrer fields in EmailJS,
+   with the `/privacy` update in the same change.
+4. The link outreach in section 9 needs the principals' own voices.
 
 **Optional:** a Google Ads account would unlock Keyword Planner volumes, replacing the buckets in
 section 3.
@@ -529,9 +552,9 @@ section 3.
 
 | Weeks | Work | Measurable outcome |
 |---|---|---|
-| 1-2 | Merge this branch. Resubmit sitemap, request indexing (items 1-2). Set up Bing and Crawler Hints. Install analytics and lead-source fields. | Sitemap read with 41 URLs; analytics live |
+| 1-2 | Merge this branch; request indexing for the changed pages; add lead-source fields. (Sitemap, Bing, Crawler Hints, analytics disclosure: done 23 Nov.) | Changed pages recrawled; enquiries carry a source |
 | 2-4 | On-page items 1-5 in section 7 (DD section, non-technical founder block, startup CFO, outsourced CFO guide, conversational FAQ answers). Owner decision on the FD title. | All P1 on-page items shipped |
 | 3-6 | Link outreach wave 1: the four listicles, the FD directory, existing directory listings, client partner links, Clutch. | +5 referring domains |
-| 4-8 | FD terminology guide; 13-week cash flow forecast with template. Consolidate the CTO duplicate if approved. | Two P1 pieces live and linked from the CFO page |
-| 6-10 | Outreach wave 2: UKBAA, ACCA, accelerators for the two tools, one podcast each. First CFO case study if an engagement can be written up. | +4 referring domains; CFO proof page |
+| 4-8 | FD terminology guide; 13-week cash flow forecast with template. | Two P1 pieces live and linked from the CFO page |
+| 6-10 | Outreach wave 2: UKBAA, ACCA, accelerators for the two tools, one podcast each. Noodle+Kin CFO case study. | +4 referring domains; CFO proof page |
 | 10-12 | Re-run this audit; compare against the KPI table; reprioritise. | Indexed ≥ 35; service pages served for their head terms |
