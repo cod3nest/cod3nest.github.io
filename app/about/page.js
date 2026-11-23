@@ -159,7 +159,7 @@ export default function AboutPage() {
         // Done before her Codenest start, so it sits on her own track, not the firm's.
         { year: "2025", title: "Series A Readiness", description: "Built the financial model, the data room and the diligence Q&A for a London fintech's Series A, which closed. Founder track record, before Codenest." },
         // Owner, 23 Nov 2026: Michelle joined Codenest in January 2026, as Dishoom ended.
-        { year: "2026-present", title: "Codenest: Fractional CFO", description: "Leads the financial seat: models and rolling forecasts, Board and investor reporting, controls, and raise readiness, alongside the technical seat or on its own." },
+        { year: "2026-present", title: "Codenest: Fractional CFO", description: "Leads the financial seat: models and rolling forecasts, Board and investor reporting, controls, and raise readiness, alongside the technical seat or on its own. Fractional CFO to Noodle+Kin, a creativity-led nursery for children from nine months to school age, with a creative studio for screen-free family sessions at weekends." },
       ],
     },
   ]
