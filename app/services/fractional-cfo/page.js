@@ -16,11 +16,11 @@ import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
 // Kingdom, and the title now matches it. (BRANDING.md §13.25.)
 export const metadata = {
   title: 'Fractional CFO Services for UK Startups',
-  description: 'Fractional CFO for UK startups, pre-seed to Series A. Financial modelling, fundraising support and investor reporting. Free 30-minute strategy call.',
-  keywords: ['fractional CFO UK', 'startup CFO', 'FP&A UK', 'financial planning analysis', 'financial strategy', 'startup finance UK', 'part-time CFO'],
+  description: 'Fractional CFO for UK startups, pre-seed to Series A. Business and financial strategy, modelling, fundraising and investor reporting. Free 30-minute call.',
+  keywords: ['fractional CFO UK', 'startup CFO', 'FP&A UK', 'financial planning analysis', 'financial strategy', 'business strategy', 'startup finance UK', 'part-time CFO'],
   openGraph: {
     title: 'Fractional CFO Services for UK Startups | Codenest',
-    description: 'FP&A and financial strategy for UK startups — investor-ready financials without the overhead.',
+    description: 'Business and financial strategy, and FP&A, for UK startups — investor-ready financials without the overhead.',
     type: 'website',
     url: 'https://codenest.uk/services/fractional-cfo/',
     images: [
@@ -147,6 +147,7 @@ export default function FractionalCFOPage() {
   ]
 
   const services = [
+    "Business and financial strategy",
     "Financial modelling and forecasting",
     "Cash flow management and optimisation",
     "Unit economics analysis",
@@ -222,7 +223,7 @@ export default function FractionalCFOPage() {
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: 'Fractional CFO Services',
-    description: 'Part-time financial leadership for startups. FP&A, financial modelling, and fundraising support.',
+    description: 'Part-time financial leadership for startups. Business and financial strategy, FP&A, financial modelling, and fundraising support.',
     // Reference the root layout's ProfessionalService by @id rather than
     // restating it: a second, differently-shaped Organization node for the same
     // business invites Google to treat them as two companies.
@@ -263,7 +264,7 @@ export default function FractionalCFOPage() {
                 Fractional CFO Services
               </h1>
               <p className="text-xl text-slate-600 mb-4 leading-relaxed">
-                FP&A, financial modelling, and investor-ready reporting from a part-time CFO. The financial discipline of a high-growth company — without the overhead.
+                Business and financial strategy, FP&A, financial modelling and investor-ready reporting from a part-time CFO. The financial discipline of a high-growth company — without the overhead.
               </p>
               <p className="text-sm font-medium text-slate-700 mb-8">
                 Retained monthly engagements, scoped to your stage &middot; typically 60-80% less than a full-time CFO
@@ -302,7 +303,7 @@ export default function FractionalCFOPage() {
         role="Fractional CFO"
         accent="accent"
         credentials={['FCCA', 'BSc Mathematics', '£165m P&L']}
-        bio="Chartered accountant and strategic finance leader. As Head of Strategic Finance at Dishoom she owned the five-year model, rolling forecasts and CapEx governance through a 6-to-27-site expansion, and held the company's cash together through COVID-19. She has supported founders through fundraising and investor due diligence."
+        bio="Chartered accountant and strategic finance leader. As Head of Strategic Finance at Dishoom she owned the five-year model, rolling forecasts and CapEx governance through a 6-to-27-site expansion, and held the company's cash together through COVID-19. She works with founders on business and financial strategy, and has supported them through fundraising and investor due diligence."
         highlights={[
           'Led strategic finance at Dishoom through £35m to £165m revenue and a four-point EBITDA margin improvement',
           'Built and led a 20+ person finance function, owning Board and investor reporting',
