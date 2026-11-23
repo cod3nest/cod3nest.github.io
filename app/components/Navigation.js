@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { seatCta, REQUEST_LABEL, EXTERNAL_LINK_PROPS } from '../../lib/booking'
 
 // The offer is two executive seats, so the dropdown is two links. The /services
 // hub used to sit here as "All Services", but every route out of it leads to one
@@ -177,7 +178,15 @@ export default function Navigation() {
   // On the homepage, scroll to its inline contact section instead of
   // navigating away (and potentially discarding in-progress form input).
   const pathname = usePathname()
-  const contactHref = pathname === '/' ? '/#contact' : '/contact/'
+  // On a seat's own pages the CTA follows that seat: its calendar once live,
+  // otherwise the form with the seat preselected. Everywhere else it is the form.
+  const seat = pathname?.startsWith('/services/fractional-cto') ? 'cto'
+    : pathname?.startsWith('/services/fractional-cfo') ? 'cfo' : null
+  const cta = seat
+    ? seatCta(seat)
+    : { href: pathname === '/' ? '/#contact' : '/contact/', label: REQUEST_LABEL, external: false }
+  const contactHref = cta.href
+  const ctaLinkProps = cta.external ? EXTERNAL_LINK_PROPS : {}
 
   useEffect(() => {
     const handleScroll = () => {
@@ -233,13 +242,13 @@ export default function Navigation() {
         }`}
       >
         <a
-          href={contactHref}
+          href={contactHref} {...ctaLinkProps}
           className="flex items-center gap-2 bg-accent-400 text-primary-900 px-6 py-3 rounded-full text-sm font-semibold shadow-gold hover:shadow-gold-lg hover:bg-accent-500 transition-all"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
           </svg>
-          Request a Strategy Call
+          {cta.label}
         </a>
       </div>
 
@@ -251,13 +260,13 @@ export default function Navigation() {
       >
         <div className="bg-white/95 backdrop-blur-sm border-t border-slate-200 px-4 py-3 safe-area-bottom">
           <a
-            href={contactHref}
+            href={contactHref} {...ctaLinkProps}
             className="flex items-center justify-center gap-2 bg-accent-400 text-primary-900 w-full py-3.5 rounded-xl text-base font-semibold shadow-gold hover:bg-accent-500 transition-all"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
             </svg>
-            Request a Strategy Call
+            {cta.label}
           </a>
         </div>
       </div>
@@ -290,7 +299,7 @@ export default function Navigation() {
               <a href="/case-studies/" className="text-slate-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">Case Studies</a>
               <a href="/about/" className="text-slate-700 hover:text-primary-700 px-3 py-2 text-sm font-medium transition-colors rounded-xl hover:bg-slate-50 link-gold">About</a>
               <NavDropdown label="Resources" menuId="resources-menu" links={RESOURCE_LINKS} />
-              <a href={contactHref} className="bg-accent-400 text-primary-900 px-6 py-2.5 ml-2 rounded-lg text-sm font-semibold hover:bg-accent-500 transition-all shadow-sm hover:shadow-gold">Request a Strategy Call</a>
+              <a href={contactHref} {...ctaLinkProps} className="bg-accent-400 text-primary-900 px-6 py-2.5 ml-2 rounded-lg text-sm font-semibold hover:bg-accent-500 transition-all shadow-sm hover:shadow-gold">{cta.label}</a>
             </div>
           </div>
 
@@ -350,7 +359,7 @@ export default function Navigation() {
                   </li>
                 ))}
               </ul>
-              <a href={contactHref} onClick={() => setIsMenuOpen(false)} className="bg-accent-400 text-primary-900 font-semibold block px-3 py-2 text-base rounded-lg hover:bg-accent-500 transition-all shadow-sm">Request a Strategy Call</a>
+              <a href={contactHref} {...ctaLinkProps} onClick={() => setIsMenuOpen(false)} className="bg-accent-400 text-primary-900 font-semibold block px-3 py-2 text-base rounded-lg hover:bg-accent-500 transition-all shadow-sm">{cta.label}</a>
             </div>
           </div>
         )}

@@ -127,8 +127,11 @@ every claim — write as if they will check, because they will.
    in schema. "We"/"Codenest" is the default voice for methodology and delivery;
    attribute individual track records by name ("Ankit led…", "Michelle owned…").
    Prior employment stays framed as pedigree, never as Codenest client work.
-5. **CTA honesty.** The primary CTA is **"Request a Strategy Call"** everywhere, until
-   a real scheduling tool is embedded — only then may it become "Book…"/"Schedule…".
+5. **CTA honesty.** The label follows what the click does. **"Book a Strategy Call"**
+   only where it opens a live calendar; **"Request a Strategy Call"** where it reaches
+   the form. There is one calendar link per seat, set in `lib/booking.js`: Ankit's on
+   the CTO journey, Michelle's on the CFO journey. An empty link falls back to the
+   form, so the label can never promise a booking that does not exist (23 Nov 2026).
    The form submit says "Request My Call" with the microcopy "We'll reply within
    24 hours with times."
 6. **No emojis.** Anywhere. (Project rule, `AGENTS.md`.)
@@ -411,10 +414,14 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
 
 1. **Services are named "Fractional CTO" and "Fractional CFO" — everywhere.**
    Aliases retired. (Site review, 4 Aug 2026.)
-2. **The hero names the offer.** Badge/subhead must say Fractional CTO & CFO; the
-   brand H1 may stay evocative. (4 Aug 2026.)
-3. **CTA label is "Request a Strategy Call"** until a real scheduler ships.
-   (4 Aug 2026.)
+2. **The hero names the offer.** The homepage h1 carries the target term:
+   "Your Fractional CTO and CFO, until you can hire full-time." The flourish
+   "Executive firepower. Startup agility." sits in the eyebrow, not the h1.
+   (4 Aug 2026; h1 made literal 23 Nov 2026, owner, to meet the Definition of Done.)
+3. **CTA label follows the click** — "Book a Strategy Call" opens a seat's live
+   calendar, "Request a Strategy Call" reaches the form (§2 rule 5). Service-page CTAs
+   pass `?seat=cto|cfo` so the form arrives preselected. (4 Aug 2026; per-seat
+   booking 23 Nov 2026.)
 4. **Truth-first proof** — bounded stats, no fabricated testimonials, no star-rating
    UI, enterprise names framed as pedigree not clientele. (4 Aug 2026.)
 5. **Tagline is "Senior operators. Plans that survive diligence."** + flourish "Executive
