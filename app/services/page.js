@@ -145,7 +145,7 @@ const services =
     {
       title: "Fundraising Support",
       benefit: "Close your round with confidence",
-      description: "Pitch deck financial sections, data room preparation, and investor Q&A coaching. We've helped startups raise from pre-seed to Series A.",
+      description: "Pitch deck financial sections, data room preparation, and investor Q&A coaching. Michelle built the model, data room and diligence Q&A behind a Series A that closed in 2025.",
       outcomes: ["Data room ready", "Financial due diligence prep", "Valuation support"],
       track: "business"
     },

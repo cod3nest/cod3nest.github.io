@@ -44,8 +44,9 @@ export default function FractionalCFOPage() {
   // from. All four used to be figure-free while Michelle's numbers sat one screen
   // above in the PrincipalBand — the proof was on the page and unused at the point
   // it converts (site review, 5 Aug 2026). Dishoom figures attach to her *role*,
-  // never to Codenest as a firm (§13.15); the Series A line is the one outcome a
-  // verified client testimonial supports (§2.3).
+  // never to Codenest as a firm (§13.15). The Series A line is backed by a verified
+  // testimonial (§2.3), and it was Michelle's own 2025 work, before her Jan 2026
+  // start at Codenest, so it is labelled founder track record (owner, 23 Nov 2026).
   const benefits = [
     {
       title: "Investor-Ready Financials",
@@ -70,7 +71,7 @@ export default function FractionalCFOPage() {
     {
       title: "Close Rounds Faster",
       description: "A data room and a model that answer the questions before an investor has to ask them.",
-      proof: "Series A closed on our models and data room (client, name withheld)",
+      proof: "Series A closed in 2025 on Michelle's model and data room (founder track record, name withheld)",
       icon: (
         <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />

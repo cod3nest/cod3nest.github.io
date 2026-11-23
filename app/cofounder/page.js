@@ -95,9 +95,8 @@ export default function CofounderPage() {
   const whatIBring = [
     '15+ years building scalable platforms (Opayo by Elavon, HSBC, AstraZeneca, startups)',
     'Full-stack technical leadership (architecture, engineering, DevOps)',
-    'Financial modelling and investor-readiness expertise',
     'Experience scaling teams from 5 to 50+ engineers',
-    'Series A due diligence and fundraising support',
+    'Technical due diligence preparation, from the receiving end',
     'AWS, Kubernetes, microservices, AI/ML integration'
   ]
 

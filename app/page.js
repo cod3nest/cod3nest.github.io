@@ -135,8 +135,11 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <div>
-                    <span className="font-medium">Every client diligence passed to date</span>
-                    <span className="text-slate-500 text-sm block">Technical and financial, from pre-seed to Series A</span>
+                    {/* Michelle's 2025 raise predates her Jan 2026 start at Codenest, so it is
+                        founder track record (§13.15), never "client" work. The old line,
+                        "Every client diligence passed to date", had no denominator. */}
+                    <span className="font-medium">Series A diligence passed</span>
+                    <span className="text-slate-500 text-sm block">Michelle's 2025 model, data room and investor Q&amp;A</span>
                   </div>
                 </li>
               </ul>
@@ -441,7 +444,7 @@ export default function Home() {
             </div>
             <div className="space-y-2 group">
               <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gold-gradient stat-number group-hover:scale-105 transition-transform">Series A</div>
-              <div className="text-slate-300 text-sm md:text-base">Closed with our models and data room</div>
+              <div className="text-slate-300 text-sm md:text-base">Closed in 2025 on Michelle's model and data room</div>
             </div>
             <div className="space-y-2 group">
               <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gold-gradient stat-number group-hover:scale-105 transition-transform">8-12 wks</div>

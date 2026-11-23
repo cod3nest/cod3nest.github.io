@@ -90,7 +90,9 @@ every claim — write as if they will check, because they will.
    ("Financial Leadership" is acceptable as the CFO page's badge/eyebrow category.)
 2. **Truth-first claims.** Every number carries its bound or denominator: prefer
    "Rungway: 5 → 1,000+ concurrent users" over "200x scalability gains"; prefer
-   "Every client diligence passed to date" over "100% due diligence pass rate".
+   "Series A diligence passed: Michelle's 2025 model, data room and investor Q&A"
+   over "100% due diligence pass rate". ("Every client diligence passed to date" was
+   the earlier substitute; it had no denominator and was retired 23 Nov 2026.)
    No firm-wide averages ("40% average runway extension") without a real, citable
    basis. No absolute claims in sitewide metadata.
 3. **No fabricated proof.** No placeholder testimonials, no decorative star ratings,
@@ -437,7 +439,8 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     from that client, and the previously-named HR-tech quote was anonymised on the
     owner's instruction (4 Aug 2026) because no such permission was on record.
 13. **Stat cells carry a named engagement or an offer term** — Rungway users, Opayo
-    duration, the testimonial-backed Series A, 8-12 wks MVP. No bare counts without
+    duration, the testimonial-backed Series A (Michelle's, 2025, founder track
+    record), 8-12 wks MVP. No bare counts without
     a citable denominator ("15+ startups" retired). (4 Aug 2026.)
 14. **Codenest is two people.** Ankit Rana is the Fractional CTO; Michelle Rana FCCA
     is the Fractional CFO. Any surface that names one must be checked for whether it
@@ -451,6 +454,13 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     it is not a client wall, and nothing may relabel it as one. Attribute Dishoom's
     numbers to Michelle's *role* ("led strategic finance at Dishoom through
     £35m → £165m"), never to her personally growing the company. (Owner, 4 Aug 2026.)
+    **The fintech Series A is founder track record too** (owner, 23 Nov 2026).
+    Michelle built the financial model, the data room and the diligence Q&A in 2025,
+    before she **joined Codenest in January 2026**. Never call it "our models", a
+    "client" engagement, or work by Ankit or the firm. Label it "Founder track record:
+    Michelle Rana FCCA, 2025" wherever it appears (homepage hero and stat cell, the
+    testimonial, the CFO benefit tile, `/services`, the `/about` timeline). Michelle's
+    Codenest row on `/about` starts January 2026.
     **`/case-studies` is CTO-only until it is not** (5 Aug 2026): all three studies are
     technical, so the page title, meta description, OG description, h1, sub and
     ItemList schema all say "Fractional CTO" and name Ankit. It previously advertised
