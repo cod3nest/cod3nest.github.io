@@ -23,6 +23,7 @@ const RESOURCE_LINKS = [
   { href: '/guides/', label: 'Guides', hint: 'In-depth comparisons and hiring guides' },
   { href: '/blog/', label: 'Blog', hint: 'Technical and finance writing for founders' },
   { href: '/tools/runway-calculator/', label: 'Runway Calculator', hint: 'Free: months of runway and when to raise' },
+  { href: '/tools/technical-due-diligence-check/', label: 'Diligence Readiness Check', hint: 'Free: score your startup for technical due diligence' },
 ]
 
 // One disclosure menu, used by both Services and Resources. All the focus

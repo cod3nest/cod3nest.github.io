@@ -68,6 +68,36 @@ const caseStudies = [
       "A learning loop that ranks each run's lessons back into the next"
     ],
     note: "Outcome figures go up once they are measured and the client has approved them. This engagement is still running, so there are none here yet.",
+    // Proof written as decisions, not tasks (competitor comparison, 23 Nov 2026).
+    // Each choice and the alternative it beat are taken from what this study
+    // already says; the trade-off is the cost of the approach itself, not a
+    // measured project figure. Ankit to confirm before any is changed.
+    decisions: [
+      {
+        choice: "One platform, not two initiatives",
+        instead: "a knowledge project and a delivery-automation project, run separately",
+        why: "The agents that clear the backlog need the same knowledge the business wants to query. Built apart, the second project rebuilds the first.",
+        tradeoff: "A larger first build before either half is useful on its own.",
+      },
+      {
+        choice: "Answer from the company's own records, over MCP",
+        instead: "agents that answer from whatever fits in a prompt",
+        why: "Compliance evidence arrives as documents, photographs, audio and video. An answer that cannot point back to that evidence is not one a farm agreement can rest on.",
+        tradeoff: "Every kind of record has to be made queryable before an agent can use it.",
+      },
+      {
+        choice: "Typed workflow graphs with bounded loops",
+        instead: "one long prompt that retries until it succeeds",
+        why: "A bounded graph fails at a known gate with a reason. A long prompt fails by improvising.",
+        tradeoff: "Each new kind of work needs its graph defined before it can run.",
+      },
+      {
+        choice: "A sandbox per run, a merge policy the operator sets, and a ledger",
+        instead: "agents sharing an environment, with the right to merge",
+        why: "Work that runs unattended has to be contained and traceable: a bad run cannot touch another, and every merged change can be followed back to the decisions behind it.",
+        tradeoff: "Every run pays the cost of setting up its own environment.",
+      },
+    ],
     tags: ["Agentic AI", "AI Platform Engineering", "MCP", "Cloudflare Workers", "Knowledge Retrieval", "LLMOps"],
     diagram: [
       {
@@ -256,6 +286,21 @@ export default function CaseStudiesPage() {
                           <h3 className="text-sm font-semibold text-primary-600 uppercase tracking-wide mb-2">{study.labels?.solution || 'Solution'}</h3>
                           <p className="text-slate-600">{study.solution}</p>
                         </div>
+                        {study.decisions && (
+                          <div>
+                            <h3 className="text-sm font-semibold text-primary-600 uppercase tracking-wide mb-3">Decisions Ankit Owned</h3>
+                            <ol className="space-y-4">
+                              {study.decisions.map((d, i) => (
+                                <li key={i} className="border-l-2 border-primary-200 pl-4">
+                                  <p className="font-semibold text-slate-900">{d.choice}</p>
+                                  <p className="text-sm text-slate-500 mb-1">Instead of {d.instead}.</p>
+                                  <p className="text-slate-600">{d.why}</p>
+                                  <p className="text-sm text-slate-600 mt-1"><span className="font-semibold text-slate-700">The trade-off:</span> {d.tradeoff}</p>
+                                </li>
+                              ))}
+                            </ol>
+                          </div>
+                        )}
                         <div>
                           <h3 className="text-sm font-semibold text-accent-700 uppercase tracking-wide mb-3">{study.labels?.results || 'Results'}</h3>
                           <ul className="space-y-2">

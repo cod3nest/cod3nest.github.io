@@ -3,6 +3,7 @@ title: 'Startup Technical Due Diligence Checklist: What Investors Actually Look 
 seoTitle: 'Technical Due Diligence Checklist for Startups'
 description: 'Preparing for investor due diligence? Here is the complete checklist of what VCs examine during technical due diligence, and how to prepare.'
 date: '2025-01-08'
+updated: '2026-11-23'
 author: 'Ankit Rana'
 readTime: '10 min read'
 tags: ['Due Diligence', 'Fundraising', 'Technical Leadership']
@@ -12,7 +13,7 @@ tags: ['Due Diligence', 'Fundraising', 'Technical Leadership']
 
 You've got investor interest. The term sheet is looking promising. Then comes due diligence—and suddenly they want to look under the hood.
 
-Technical due diligence can make or break a deal. I've helped startups prepare for due diligence from pre-seed to Series A, and I've seen what makes investors confident—or concerned. Here's your complete preparation checklist.
+Technical due diligence can make or break a deal. I've sat on the receiving end of technical due diligence, and delivered platforms under regulatory scrutiny in banking, payments and pharma. What follows is what that scrutiny actually tests, and how to prepare for it. If you would rather score yourself first, the [technical due diligence readiness check](/tools/technical-due-diligence-check/) runs through the same seven areas in a few minutes.
 
 ## What Is Technical Due Diligence?
 

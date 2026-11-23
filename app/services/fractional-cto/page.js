@@ -129,8 +129,11 @@ export default function FractionalCTOPage() {
       answer: "By asking what breaks if you do nothing. Agents earn their place on work that is repetitive, judgement-light, and already written down somewhere. Where the process itself is undefined, an agent automates the confusion faster. We will tell you when that is what we see."
     },
     {
-      question: "What's the difference between a fractional CTO and a consultant?",
-      answer: "A consultant hands you a recommendation and leaves. A fractional CTO is in your standups and your Slack, owns the technical outcome, and is still there when the decision has to survive contact with production."
+      // Replaces the consultant-only question rather than adding an eleventh, so the
+      // CTO and CFO pages keep the same FAQ count. It also carries the search terms
+      // founders use for the same seat (competitor comparison, 23 Nov 2026).
+      question: "Fractional, part-time, interim, CTO as a service, consultant: what's the difference?",
+      answer: "Fractional and part-time CTO mean the same thing: a senior technical leader who holds the seat for a set number of days a month, ongoing. CTO as a service is the same arrangement under another name. An interim CTO covers a gap full time, usually between permanent hires, for a fixed period. A consultant hands you a recommendation and leaves. A fractional CTO is in your standups and your Slack, owns the technical outcome, and is still there when the decision has to survive contact with production. We work fractionally; if what you need is interim cover, say so on the call and we will tell you whether we can do it."
     },
     {
       question: "How many hours per week do you typically work?",
@@ -415,6 +418,9 @@ export default function FractionalCTOPage() {
               and{' '}
               <Link href="/guides/fractional-cto-vs-agency/" className="font-semibold text-primary-700 hover:text-primary-800 underline">
                 fractional vs agency
+              </Link>. Raising soon? Score yourself with the free{' '}
+              <Link href="/tools/technical-due-diligence-check/" className="font-semibold text-primary-700 hover:text-primary-800 underline">
+                technical due diligence readiness check
               </Link>.
             </p>
           </div>
