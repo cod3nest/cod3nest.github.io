@@ -360,7 +360,7 @@ export default function FractionalCTOPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="font-serif text-4xl font-bold text-slate-900 mb-6">What We Do</h2>
+              <h2 className="font-serif text-4xl font-bold text-slate-900 mb-6">What a Fractional CTO Does for Your Startup</h2>
               <p className="text-xl text-slate-600 mb-8">
                 What the seat covers: strategy, architecture, the team, and the delivery of both.
               </p>
@@ -454,7 +454,7 @@ export default function FractionalCTOPage() {
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl font-bold text-slate-900 mb-4">Common Questions</h2>
+            <h2 className="font-serif text-4xl font-bold text-slate-900 mb-4">Fractional CTO Questions</h2>
           </div>
 
           <div className="space-y-6">
@@ -476,7 +476,7 @@ export default function FractionalCTOPage() {
             <p className="text-slate-700">
               Still researching? Read{' '}
               <Link href="/guides/fractional-cto-guide/" className="font-semibold text-primary-700 hover:text-primary-800 underline">
-                The Complete Guide to Fractional CTO Services
+                What Is a Fractional CTO? A Guide for UK Founders
               </Link>{' '}
               or compare{' '}
               <Link href="/guides/fractional-cto-vs-full-time/" className="font-semibold text-primary-700 hover:text-primary-800 underline">
@@ -488,6 +488,15 @@ export default function FractionalCTOPage() {
               </Link>. Raising soon? Score yourself with the free{' '}
               <Link href="/tools/technical-due-diligence-check/" className="font-semibold text-primary-700 hover:text-primary-800 underline">
                 technical due diligence readiness check
+              </Link>{' '}or read the{' '}
+              <Link href="/blog/startup-technical-due-diligence-checklist/" className="font-semibold text-primary-700 hover:text-primary-800 underline">
+                technical due diligence checklist
+              </Link>. Budgeting for the seat? See{' '}
+              <Link href="/blog/how-much-does-fractional-cto-cost-uk/" className="font-semibold text-primary-700 hover:text-primary-800 underline">
+                what a fractional CTO costs in the UK
+              </Link>{' '}and{' '}
+              <Link href="/blog/when-to-hire-fractional-cto/" className="font-semibold text-primary-700 hover:text-primary-800 underline">
+                the seven signs it is time to hire one
               </Link>.
             </p>
           </div>

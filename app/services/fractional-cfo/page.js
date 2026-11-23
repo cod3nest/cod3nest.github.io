@@ -161,6 +161,13 @@ export default function FractionalCFOPage() {
   ]
 
   const faqs = [
+    // UK searchers use "finance director" for this seat as often as "CFO"
+    // (fractional, part-time and interim FD all show UK demand). The service is
+    // still named Fractional CFO (BRANDING §2.1); FD appears as a descriptor only.
+    {
+      question: "Fractional CFO, part-time finance director, interim FD: what's the difference?",
+      answer: "At startup scale, a CFO and a finance director usually hold the same seat; UK businesses tend to say finance director, venture-backed companies tend to say CFO. Fractional and part-time mean the same arrangement: a senior finance leader who holds the seat for a set number of days a month, ongoing. An interim CFO or FD covers a gap full time, usually between permanent hires, for a fixed period. An outsourced finance function runs bookkeeping and management accounts rather than setting the plan. We work fractionally; if what you need is interim cover, say so on the call and we will tell you whether we can do it."
+    },
     {
       question: "What's the difference between FP&A and accounting?",
       answer: "Accountants handle historical compliance and bookkeeping. FP&A is forward-looking: financial modelling, forecasting, unit economics, pricing strategy, and investor communications. We provide strategic finance leadership, not bookkeeping."
@@ -263,7 +270,7 @@ export default function FractionalCFOPage() {
                 Fractional CFO Services
               </h1>
               <p className="text-xl text-slate-600 mb-4 leading-relaxed">
-                FP&A, financial modelling, and investor-ready reporting from a part-time CFO. The financial discipline of a high-growth company — without the overhead.
+                FP&A, financial modelling, and investor-ready reporting from a part-time CFO, the seat many UK businesses call a fractional finance director. The financial discipline of a high-growth company — without the overhead.
               </p>
               <p className="text-sm font-medium text-slate-700 mb-8">
                 Retained monthly engagements, scoped to your stage &middot; typically 60-80% less than a full-time CFO
@@ -281,7 +288,7 @@ export default function FractionalCFOPage() {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl h-[450px]">
                 <Image
                   src="/img/photos/service-diligence.jpg"
-                  alt="Financial and business strategy leadership for startup team"
+                  alt="Fractional CFO working through financial plans with a startup team"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -352,7 +359,7 @@ export default function FractionalCFOPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="font-serif text-4xl font-bold text-slate-900 mb-6">What We Do</h2>
+              <h2 className="font-serif text-4xl font-bold text-slate-900 mb-6">What a Fractional CFO Does for Your Startup</h2>
               <p className="text-xl text-slate-600 mb-8">
                 What the seat covers: the plan, the systems that produce the numbers, and the discipline that keeps them true.
               </p>
@@ -414,7 +421,7 @@ export default function FractionalCFOPage() {
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl font-bold text-slate-900 mb-4">Common Questions</h2>
+            <h2 className="font-serif text-4xl font-bold text-slate-900 mb-4">Fractional CFO Questions</h2>
           </div>
 
           <div className="space-y-6">
@@ -436,7 +443,7 @@ export default function FractionalCFOPage() {
             <p className="text-slate-700">
               New to strategic finance? Read{' '}
               <Link href="/guides/fractional-cfo-guide/" className="font-semibold text-accent-700 hover:text-accent-800 underline">
-                The Complete Guide to Fractional CFO Services
+                What Is a Fractional CFO? A Guide for UK Founders
               </Link>.
               {' '}Weighing this against a permanent hire or an outsourced provider? Compare{' '}
               <Link href="/guides/fractional-cfo-vs-full-time/" className="font-semibold text-accent-700 hover:text-accent-800 underline">
@@ -452,6 +459,12 @@ export default function FractionalCFOPage() {
               — or read{' '}
               <Link href="/blog/financial-modeling-seed-stage-startups/" className="font-semibold text-accent-700 hover:text-accent-800 underline">
                 our financial modelling guide
+              </Link>. Budgeting for the seat? See{' '}
+              <Link href="/blog/how-much-does-fractional-cfo-cost-uk/" className="font-semibold text-accent-700 hover:text-accent-800 underline">
+                what a fractional CFO costs in the UK
+              </Link>{' '}and{' '}
+              <Link href="/blog/when-to-hire-fractional-cfo/" className="font-semibold text-accent-700 hover:text-accent-800 underline">
+                the seven signs it is time to hire one
               </Link>.
             </p>
           </div>

@@ -5,11 +5,13 @@ import JsonLd from '../../components/JsonLd'
 import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
 
 export const metadata = {
-  title: 'The Complete Guide to Fractional CFO Services UK',
+  // Informational title on purpose: see the note in the CTO guide. Google served
+  // this guide (position 12) over /services/fractional-cfo/ (36) for "fractional cfo".
+  title: 'What Is a Fractional CFO? A Guide for UK Founders',
   description: 'What a fractional CFO does, UK costs, when to hire one, and how they differ from an accountant. The full picture for startup founders.',
   keywords: ['fractional CFO guide', 'what is a fractional CFO', 'fractional CFO cost UK', 'when to hire a fractional CFO', 'fractional CFO vs accountant', 'part-time CFO startup', 'fractional CFO services UK'],
   openGraph: {
-    title: 'The Complete Guide to Fractional CFO Services UK',
+    title: 'What Is a Fractional CFO? A Guide for UK Founders',
     description: 'Everything UK founders need to know about fractional CFO services: what they do, costs, when to hire, and how to choose.',
     type: 'article',
     url: 'https://codenest.uk/guides/fractional-cfo-guide/',
@@ -72,7 +74,7 @@ export default function FractionalCFOGuidePage() {
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'The Complete Guide to Fractional CFO Services UK',
+    headline: 'What Is a Fractional CFO? A Guide for UK Founders',
     description: 'Everything UK founders need to know about fractional CFO services.',
     author: {
       '@type': 'Organization',
@@ -129,7 +131,7 @@ export default function FractionalCFOGuidePage() {
                 Complete Guide
               </span>
               <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-                The Complete Guide to <br />Fractional CFO Services in the UK
+                What Is a Fractional CFO? <br />A Guide for UK Founders
               </h1>
               <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-8">
                 Everything UK founders need to know about hiring a fractional CFO: what they do, what they cost, when to bring one in, and how to choose the right one.
@@ -258,7 +260,7 @@ export default function FractionalCFOGuidePage() {
                   When Should You Hire a Fractional CFO?
                 </h2>
                 <p>
-                  Most founders bring in a fractional CFO in response to one of five triggers:
+                  Most founders bring in a fractional CFO in response to one of five triggers. The longer checklist is in <Link href="/blog/when-to-hire-fractional-cfo/" className="text-primary-600 hover:text-primary-700 font-medium">seven signs your startup is ready for a fractional CFO</Link>.
                 </p>
 
                 <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">You&apos;re Preparing to Raise</h3>
@@ -309,7 +311,7 @@ export default function FractionalCFOGuidePage() {
                   How Much Does a Fractional CFO Cost?
                 </h2>
                 <p>
-                  UK fractional CFO pricing varies with experience, sector and, above all, intensity. Most engagements fall roughly between £2,000 and £12,000 per month:
+                  UK fractional CFO pricing varies with experience, sector and, above all, intensity. Most engagements fall roughly between £2,000 and £12,000 per month (the <Link href="/blog/how-much-does-fractional-cfo-cost-uk/" className="text-primary-600 hover:text-primary-700 font-medium">UK fractional CFO pricing guide</Link> breaks it down further):
                 </p>
 
                 <div className="overflow-x-auto my-8 not-prose">
@@ -565,7 +567,7 @@ export default function FractionalCFOGuidePage() {
                   <p className="text-slate-700">
                     Many founders face the technical and financial leadership gaps at the same time, and the two searches follow the same logic.{' '}
                     <Link href="/guides/fractional-cto-guide/" className="text-primary-600 hover:text-primary-700 font-medium">
-                      Read the Complete Guide to Fractional CTO Services →
+                      Read the Fractional CTO guide →
                     </Link>
                   </p>
                 </div>

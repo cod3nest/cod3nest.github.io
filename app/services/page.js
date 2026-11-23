@@ -11,7 +11,7 @@ import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../lib/schema'
 // need? The capability grid below stays, because that is genuinely only here.
 export const metadata = {
   title: 'Fractional CTO or CFO: Which Does Your Startup Need?',
-  description: 'Which executive seat your startup needs now. The signals that point to a Fractional CTO, the signals that point to a Fractional CFO, and what each engagement covers. Either is engageable on its own.',
+  description: 'Which seat does your startup need? The signals that point to a Fractional CTO or a Fractional CFO, and what each covers. Either can be engaged on its own.',
   openGraph: {
     title: 'Fractional CTO or Fractional CFO: Which Does Your Startup Need?',
     description: 'The signals that point to each seat, and what each engagement covers. UK startups at pre-seed and seed; the CFO seat also through Series A.',
