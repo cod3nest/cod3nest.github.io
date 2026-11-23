@@ -58,6 +58,8 @@ const collectionPoints = [
       'Company or startup name (optional)',
       'Which service you are interested in — Fractional CTO, Fractional CFO, both, or a co-founder partnership (optional)',
       'Your message (required)',
+      'How you found us — search, an AI assistant, LinkedIn, a referral, an event or somewhere else (optional)',
+      'Sent with your message automatically: the page you sent the form from, and the page you came from before it (for another website, only its name, such as google.com). This tells us which pages bring enquiries; nothing is stored on your device to work it out.',
     ],
   },
   {
