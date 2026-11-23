@@ -94,7 +94,7 @@ export default function PrivacyPolicyPage() {
               <p className="text-xl text-slate-600">
                 What we collect when you contact us, who else touches it, and how to get it removed.
               </p>
-              <p className="text-sm text-slate-500 mt-4">Last updated: 5 August 2026</p>
+              <p className="text-sm text-slate-500 mt-4">Last updated: 23 November 2026</p>
             </div>
 
             <div className="space-y-12 text-slate-600 leading-relaxed">
@@ -176,6 +176,13 @@ export default function PrivacyPolicyPage() {
                     <strong className="text-slate-900">GitHub Pages</strong> hosts this site. GitHub processes standard
                     server log data, including your IP address, when you load a page. This happens on every website you
                     visit and is not something we collect or can see.
+                  </li>
+                  <li>
+                    <strong className="text-slate-900">Calendly</strong> handles bookings. The &ldquo;Book a Strategy
+                    Call&rdquo; buttons open our Calendly page in a new tab. Nothing passes from this site to Calendly;
+                    once you are on its page, Calendly handles your visit itself. The name, email address and any notes you give when booking are held by Calendly under
+                    its own privacy policy, and reach us as a calendar invitation. We use them only to hold the call and
+                    reply to you, as with the contact form.
                   </li>
                   <li>
                     <strong className="text-slate-900">Cusdis</strong> powers the comment section at the bottom of blog

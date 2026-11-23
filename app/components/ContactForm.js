@@ -280,7 +280,7 @@ const ContactForm = ({ labelledBy }) => {
                 className="flex-1 inline-block bg-accent-400 text-primary-900 font-semibold rounded-lg px-5 py-3 text-sm text-center hover:bg-accent-500 transition-all"
               >
                 {BOOK_LABEL}
-                <span className="block text-xs font-normal">{b.seat} &middot; {b.person}</span>
+                <span className="block text-xs font-normal">{b.label}</span>
               </a>
             ))}
           </div>
