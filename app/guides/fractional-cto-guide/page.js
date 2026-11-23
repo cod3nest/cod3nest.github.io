@@ -568,7 +568,7 @@ export default function FractionalCTOGuidePage() {
                 Need a Fractional CTO?
               </h2>
               <p className="text-primary-100 mb-6 max-w-xl mx-auto">
-                We provide fractional CTO services for UK startups from pre-seed to Series A. Request a free discovery call to discuss your needs.
+                We provide fractional CTO services for UK startups at pre-seed and seed. Request a free discovery call to discuss your needs.
               </p>
               <Link
                 href="/services/fractional-cto/"

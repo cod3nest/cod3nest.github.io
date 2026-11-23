@@ -109,7 +109,7 @@ export default function Home() {
                 <span className="italic">Startup Agility.</span>
               </h1>
               <p className="text-xl text-slate-600 mb-6 leading-relaxed max-w-lg animate-hero-3">
-                Senior operators. Plans that survive diligence. A part-time CTO, a part-time CFO, or both: architecture, engineering leadership, financial models, and fundraising for founders from pre-seed to Series A.
+                Senior operators. Plans that survive diligence. A part-time CTO, a part-time CFO, or both: architecture, engineering leadership, financial models, and fundraising for founders at pre-seed and seed, and on the finance side through Series A.
               </p>
               <ul className="space-y-4 mb-8 max-w-lg animate-hero-3">
                 <li className="flex items-start text-slate-700 group">
@@ -564,7 +564,7 @@ export default function Home() {
                 <div>
                   <dt className="text-xl font-bold text-slate-900 mb-2">We say when you should not hire us.</dt>
                   <dd className="text-slate-600 leading-relaxed">
-                    Fractional suits most startups between pre-seed and Series A. It does not suit every
+                    Fractional suits most startups at pre-seed and seed, and on the finance side through Series A. It does not suit every
                     one of them, and we would rather establish that on the first call than in the third
                     month.
                   </dd>

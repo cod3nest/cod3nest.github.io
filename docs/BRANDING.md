@@ -49,7 +49,7 @@ than the whole thing; §13 is the law and settles conflicts.
   "Code Nest", or "cod3nest" (the GitHub org `cod3nest` is a legacy identifier only;
   never surface it in copy, schema, or user-facing links — see §13.6).
 - **The offer (say it plainly, always):** **Fractional CTO and Fractional CFO services**
-  for UK startups, pre-seed to Series A. Two named executive seats, **each engageable on
+  for UK startups at pre-seed and seed, the CFO seat through Series A. Two named executive seats, **each engageable on
   its own.** Taking both is an option, not a condition — a founder who needs only a CFO
   buys only the CFO seat. The integrated pairing is an advantage to offer, never a
   minimum to imply. If a page or component cannot name at least one of the two services,
@@ -64,8 +64,18 @@ than the whole thing; §13 is the law and settles conflicts.
   founder empathy" and any other "Big 4" claim (23 Nov 2026), "Big 4 rigour meets
   startup agility" (the mutated variant), "Boutique Advisory for Select Founders" as a
   hero badge, "Strategic Advisory" in any form.
-- **The audience (ICP):** UK startup founders on the 0→1 journey, **pre-seed to
-  Series A** (one phrasing, everywhere), in fintech, healthtech, and B2B SaaS.
+- **The audience (ICP):** UK startup founders on the 0→1 journey, in fintech,
+  healthtech, and B2B SaaS. **The stage differs by seat** (owner, 23 Nov 2026):
+  - **Fractional CTO: pre-seed to seed.** Never "Series A" for the CTO seat.
+  - **Fractional CFO: pre-seed to seed, and through Series A.**
+  - **Firm-wide, where both seats are meant:** "pre-seed and seed", adding "with the
+    CFO seat through Series A" (or "and on the finance side through Series A") where
+    there is room. A short surface (footer, OG card) may say "pre-seed and seed" alone.
+  This replaced the single sitewide phrase "pre-seed to Series A" (4 Aug 2026). The
+  owner also declined the review's suggestion to aim the CFO seat at established SMEs.
+  Guides and blog posts that say where *fractional leadership in general* fits
+  ("most startups between pre-seed and Series A") are market commentary, not our
+  ICP, and stay as written.
   Many of them are London-based; Codenest works remotely across the UK and Europe
   and claims no London base of its own. Describing a *client* as London-based is
   fine and true; describing *Codenest* that way is not (§13.25).
@@ -422,7 +432,9 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
 7. **No emojis.** (Project CLAUDE.md, standing.)
 8. **No gold text on white below AA contrast.** (4 Aug 2026.)
 9. **One FAQPage schema per page, owned by the page.** (4 Aug 2026.)
-10. **ICP phrasing is "pre-seed to Series A"** — one variant, sitewide. (4 Aug 2026.)
+10. **ICP phrasing differs by seat** — CTO "pre-seed and seed", CFO "pre-seed to
+    Series A", firm-wide "pre-seed and seed" (see §1). (4 Aug 2026; split by seat
+    23 Nov 2026, owner.)
 11. **Opayo engagement dates: August 2019 – June 2026** — a Codenest-era engagement.
     (Owner, 4 Aug 2026.)
     **Corrected against the owner's CV, 5 Aug 2026.** This rule used to add that
@@ -685,4 +697,4 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     - **Say "boutique" once.** The bottom bar used to repeat the brand blurb as
       "Boutique technical & financial advisory for UK startups", beside the Privacy
       link where it read as part of the legal row. The brand column now carries the
-      one description, and it uses the §1 ICP phrasing "pre-seed to Series A".
+      one description, and it uses the §1 firm-wide ICP phrasing "pre-seed and seed".

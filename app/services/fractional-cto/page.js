@@ -13,7 +13,7 @@ import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
 // Kingdom, and the title now matches it. (BRANDING.md §13.25.)
 export const metadata = {
   title: 'Fractional CTO Services for UK Startups',
-  description: 'Fractional CTO for UK startups, pre-seed to Series A. Agentic AI engineering, architecture, hiring and due diligence prep. Free 30-minute strategy call.',
+  description: 'Fractional CTO for UK startups at pre-seed and seed. Agentic AI engineering, architecture, hiring and due diligence prep. Free 30-minute strategy call.',
   keywords: ['fractional CTO UK', 'part-time CTO', 'startup CTO', 'technical leadership', 'CTO as a service', 'interim CTO UK', 'agentic AI engineering', 'fractional CTO AI', 'startup technical leadership'],
   openGraph: {
     title: 'Fractional CTO Services for UK Startups | Codenest',
@@ -136,7 +136,7 @@ export default function FractionalCTOPage() {
     },
     {
       question: "When should a startup hire a fractional CTO?",
-      answer: "Ideal timing is when you need technical leadership for strategic decisions but aren't ready for a £150-200k+ full-time hire. This is typically pre-seed through Series A stage."
+      answer: "Ideal timing is when you need technical leadership for strategic decisions but aren't ready for a £150-200k+ full-time hire. For us, that means pre-seed and seed."
     },
     {
       question: "Can you help us hire a full-time CTO eventually?",
@@ -318,7 +318,7 @@ export default function FractionalCTOPage() {
                     <span className="text-accent-700 font-bold">1</span>
                   </span>
                   <div>
-                    <p className="font-semibold text-slate-900">Pre-seed to Series A startups</p>
+                    <p className="font-semibold text-slate-900">Pre-seed and seed startups</p>
                     <p className="text-slate-600 text-sm">Need technical leadership before you can justify a full-time hire</p>
                   </div>
                 </li>

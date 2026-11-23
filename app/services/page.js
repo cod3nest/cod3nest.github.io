@@ -14,7 +14,7 @@ export const metadata = {
   description: 'Which executive seat your startup needs now. The signals that point to a Fractional CTO, the signals that point to a Fractional CFO, and what each engagement covers. Either is engageable on its own.',
   openGraph: {
     title: 'Fractional CTO or Fractional CFO: Which Does Your Startup Need?',
-    description: 'The signals that point to each seat, and what each engagement covers. UK startups, pre-seed to Series A.',
+    description: 'The signals that point to each seat, and what each engagement covers. UK startups at pre-seed and seed; the CFO seat also through Series A.',
     type: 'website',
     url: 'https://codenest.uk/services/',
     images: [

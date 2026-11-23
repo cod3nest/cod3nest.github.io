@@ -83,7 +83,7 @@ well executed, (a) is half executed, and (b) is asserted but not shown.
 complementary. Do not split into two brands: the joint plan is the moat, and two brands would
 throw it away. But make three changes:
 
-1. **Let each seat have its own buyer.** The CTO seat stays with founders, pre-seed to Series A.
+1. **Let each seat have its own buyer.** *(Owner decision, 23 Nov 2026: declined. The CTO seat targets pre-seed to seed, and the CFO seat pre-seed to seed and through Series A. Established SMEs are out of scope. The SME and "Finance Director" recommendations below stand as analysis, not as the plan.)* The CTO seat stays with founders, pre-seed to Series A.
    The CFO seat targets **founder-led and owner-managed businesses from roughly seed stage to
    £[owner to supply]m revenue, including established SMEs**, because that is where Michelle's
    record is strongest. This amends BRANDING §1 and §13.10 (one ICP phrase sitewide), which needs an
@@ -498,3 +498,10 @@ are removed. BRANDING §2, §13.13 and §13.15 record the rule.
 The "Big 4 rigour meets founder empathy" tagline is replaced by "Senior operators. Plans that
 survive diligence." (owner, 23 Nov 2026) in the homepage hero, footer, sitewide metadata and the
 default OG card. BRANDING §1 and §13.5 are amended, and any "Big 4" claim is now a retired line.
+
+The ICP is now split by seat (owner, 23 Nov 2026): **Fractional CTO pre-seed to seed; Fractional
+CFO pre-seed to seed and through Series A.** Firm-voice surfaces were updated: sitewide and contact
+metadata, the homepage hero and "how we work" line, the footer, `/services`, `/refer`, the CTO
+service page (meta, FAQ, "Ideal for") and its guide's closing line, and the OG card. The CFO page
+keeps "pre-seed to Series A". Market commentary in guides and blog posts was left as written.
+BRANDING §1 and §13.10 record the split.

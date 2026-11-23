@@ -105,7 +105,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Boutique advisory for UK founders, pre-seed to Series A.
+              Boutique advisory for UK founders at pre-seed and seed.
               Senior operators. Plans that survive diligence.
             </p>
             <p className="text-accent-400 text-sm font-medium mt-3">

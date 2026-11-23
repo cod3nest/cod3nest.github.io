@@ -19,7 +19,7 @@ export const metadata = {
     default: 'Fractional CTO & Fractional CFO for UK Startups | Codenest',
     template: '%s | Codenest'
   },
-  description: 'Fractional CTO and CFO for UK startups. A 15-year engineering leader and a chartered accountant (FCCA), working with founders from pre-seed to Series A.',
+  description: 'Fractional CTO and CFO for UK startups. A 15-year engineering leader and a chartered accountant (FCCA), working with founders at pre-seed and seed, and on the finance side through Series A.',
   // Google ignores this tag outright and a 34-term list reads as stuffing to the
   // engines that still glance at it. Kept short and limited to terms the site
   // actually ranks pages for.
@@ -41,7 +41,7 @@ export const metadata = {
   },
   openGraph: {
     title: 'Fractional CTO & Fractional CFO for UK Startups | Codenest',
-    description: 'Senior operators. Plans that survive diligence. Fractional CTO and CFO services for UK startups, pre-seed to Series A.',
+    description: 'Senior operators. Plans that survive diligence. Fractional CTO and CFO for UK startups at pre-seed and seed, with the CFO seat through Series A.',
     type: 'website',
     locale: 'en_GB',
     url: 'https://codenest.uk/',
