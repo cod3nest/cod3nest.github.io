@@ -156,6 +156,10 @@ export default function AboutPage() {
         { year: "2012-2014", title: "Commercial Foundations", description: "Pricing and commercial analysis at Ryder and Select Service Partners — negotiating contract hire deals over £1m and partnering with senior leaders across a £67m revenue budget." },
         { year: "2014-2017", title: "Multi-Channel Finance", description: "Omni-channel finance manager at Oasis & Warehouse, owning reporting and budgeting for franchise, wholesale, licensing and distribution, and delivering Board packs to CEO and CFO." },
         { year: "2017-2026", title: "Scale-Up Finance", description: "Head of Strategic Finance at Dishoom through the 6-to-27-site expansion: five-year strategic model, rolling forecasts accurate to ±3%, CapEx governance, £6m in procurement and contract improvements, and month-end close cut from 14 days to 8." },
+        // Done before her Codenest start, so it sits on her own track, not the firm's.
+        { year: "2025", title: "Series A Readiness", description: "Built the financial model, the data room and the diligence Q&A for a London fintech's Series A, which closed. Founder track record, before Codenest." },
+        // Owner, 23 Nov 2026: Michelle joined Codenest in January 2026, as Dishoom ended.
+        { year: "2026-present", title: "Codenest: Fractional CFO", description: "Leads the financial seat: models and rolling forecasts, Board and investor reporting, controls, and raise readiness, alongside the technical seat or on its own." },
       ],
     },
   ]
@@ -247,12 +251,12 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-8">
               <div>
-                <h3 className="text-xl font-bold text-slate-900 mb-4">Why We Started Codenest</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-4">How Codenest Started</h3>
                 <p className="text-slate-600 leading-relaxed mb-4">
                   Too many startups fail not because of bad ideas, but because of avoidable mistakes: architecture that doesn't scale, financial models that fall apart under scrutiny, technical debt that slows everything down.
                 </p>
                 <p className="text-slate-600 leading-relaxed mb-4">
-                  We kept seeing the same patterns. Founders who needed senior guidance but couldn't justify a full-time CTO or CFO. Startups that hired dev shops and got code, but not strategy. Companies that grew revenue but couldn't answer basic questions about their unit economics.
+                  Ankit started Codenest in 2017, and Michelle joined in January 2026 to lead the financial seat. Between them they kept seeing the same patterns. Founders who needed senior guidance but couldn't justify a full-time CTO or CFO. Startups that hired dev shops and got code, but not strategy. Companies that grew revenue but couldn't answer basic questions about their unit economics.
                 </p>
                 <p className="text-slate-600 leading-relaxed">
                   Codenest exists to fill that gap, and to fill it properly. You get an engineer who has actually run the platform and an accountant who has actually owned the P&amp;L, rather than one generalist doing a passable impression of both.

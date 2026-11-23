@@ -49,18 +49,33 @@ than the whole thing; §13 is the law and settles conflicts.
   "Code Nest", or "cod3nest" (the GitHub org `cod3nest` is a legacy identifier only;
   never surface it in copy, schema, or user-facing links — see §13.6).
 - **The offer (say it plainly, always):** **Fractional CTO and Fractional CFO services**
-  for UK startups, pre-seed to Series A. Two named executive seats, **each engageable on
+  for UK startups at pre-seed and seed, the CFO seat through Series A. Two named executive seats, **each engageable on
   its own.** Taking both is an option, not a condition — a founder who needs only a CFO
   buys only the CFO seat. The integrated pairing is an advantage to offer, never a
   minimum to imply. If a page or component cannot name at least one of the two services,
   it is off-brand.
-- **Positioning line (the tagline):** "Big 4 rigour meets founder empathy."
+- **Positioning line (the tagline):** "Senior operators. Plans that survive diligence." (owner, 23 Nov 2026). It replaced
+  "Big 4 rigour meets founder empathy", which neither principal's employment backed:
+  the only Big 4 link is the Deloitte Digital engagement (Jul 2018 – Aug 2019), and a
+  founder checking LinkedIn would find that in one click. Every word of the new line
+  can be shown on the site.
 - **Brand flourish (secondary, display use only):** "Executive firepower. Startup agility."
 - **Retired lines — do not reintroduce:** "Where Startups Scale", "Big 4 rigour meets
+  founder empathy" and any other "Big 4" claim (23 Nov 2026), "Big 4 rigour meets
   startup agility" (the mutated variant), "Boutique Advisory for Select Founders" as a
   hero badge, "Strategic Advisory" in any form.
-- **The audience (ICP):** UK startup founders on the 0→1 journey, **pre-seed to
-  Series A** (one phrasing, everywhere), in fintech, healthtech, and B2B SaaS.
+- **The audience (ICP):** UK startup founders on the 0→1 journey, in fintech,
+  healthtech, and B2B SaaS. **The stage differs by seat** (owner, 23 Nov 2026):
+  - **Fractional CTO: pre-seed to seed.** Never "Series A" for the CTO seat.
+  - **Fractional CFO: pre-seed to seed, and through Series A.**
+  - **Firm-wide, where both seats are meant:** "pre-seed and seed", adding "with the
+    CFO seat through Series A" (or "and on the finance side through Series A") where
+    there is room. A short surface (footer, OG card) may say "pre-seed and seed" alone.
+  This replaced the single sitewide phrase "pre-seed to Series A" (4 Aug 2026). The
+  owner also declined the review's suggestion to aim the CFO seat at established SMEs.
+  Guides and blog posts that say where *fractional leadership in general* fits
+  ("most startups between pre-seed and Series A") are market commentary, not our
+  ICP, and stay as written.
   Many of them are London-based; Codenest works remotely across the UK and Europe
   and claims no London base of its own. Describing a *client* as London-based is
   fine and true; describing *Codenest* that way is not (§13.25).
@@ -90,7 +105,9 @@ every claim — write as if they will check, because they will.
    ("Financial Leadership" is acceptable as the CFO page's badge/eyebrow category.)
 2. **Truth-first claims.** Every number carries its bound or denominator: prefer
    "Rungway: 5 → 1,000+ concurrent users" over "200x scalability gains"; prefer
-   "Every client diligence passed to date" over "100% due diligence pass rate".
+   "Series A diligence passed: Michelle's 2025 model, data room and investor Q&A"
+   over "100% due diligence pass rate". ("Every client diligence passed to date" was
+   the earlier substitute; it had no denominator and was retired 23 Nov 2026.)
    No firm-wide averages ("40% average runway extension") without a real, citable
    basis. No absolute claims in sitewide metadata.
 3. **No fabricated proof.** No placeholder testimonials, no decorative star ratings,
@@ -400,8 +417,9 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
    (4 Aug 2026.)
 4. **Truth-first proof** — bounded stats, no fabricated testimonials, no star-rating
    UI, enterprise names framed as pedigree not clientele. (4 Aug 2026.)
-5. **Tagline is "Big 4 rigour meets founder empathy"** + flourish "Executive
-   firepower. Startup agility." — all other slogans retired. (4 Aug 2026.)
+5. **Tagline is "Senior operators. Plans that survive diligence."** + flourish "Executive
+   firepower. Startup agility." — all other slogans retired. (4 Aug 2026; tagline
+   replaced 23 Nov 2026, owner, because no "Big 4" claim is backed — see §1.)
 6. **"cod3nest" never appears in user-facing surfaces.** (4 Aug 2026.)
    **Enforced 5 Aug 2026:** the GitHub org URL was removed from the
    `ProfessionalService` `sameAs` in `app/layout.js` and from `public/humans.txt`.
@@ -414,7 +432,9 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
 7. **No emojis.** (Project CLAUDE.md, standing.)
 8. **No gold text on white below AA contrast.** (4 Aug 2026.)
 9. **One FAQPage schema per page, owned by the page.** (4 Aug 2026.)
-10. **ICP phrasing is "pre-seed to Series A"** — one variant, sitewide. (4 Aug 2026.)
+10. **ICP phrasing differs by seat** — CTO "pre-seed and seed", CFO "pre-seed to
+    Series A", firm-wide "pre-seed and seed" (see §1). (4 Aug 2026; split by seat
+    23 Nov 2026, owner.)
 11. **Opayo engagement dates: August 2019 – June 2026** — a Codenest-era engagement.
     (Owner, 4 Aug 2026.)
     **Corrected against the owner's CV, 5 Aug 2026.** This rule used to add that
@@ -437,7 +457,8 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     from that client, and the previously-named HR-tech quote was anonymised on the
     owner's instruction (4 Aug 2026) because no such permission was on record.
 13. **Stat cells carry a named engagement or an offer term** — Rungway users, Opayo
-    duration, the testimonial-backed Series A, 8-12 wks MVP. No bare counts without
+    duration, the testimonial-backed Series A (Michelle's, 2025, founder track
+    record), 8-12 wks MVP. No bare counts without
     a citable denominator ("15+ startups" retired). (4 Aug 2026.)
 14. **Codenest is two people.** Ankit Rana is the Fractional CTO; Michelle Rana FCCA
     is the Fractional CFO. Any surface that names one must be checked for whether it
@@ -451,6 +472,13 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     it is not a client wall, and nothing may relabel it as one. Attribute Dishoom's
     numbers to Michelle's *role* ("led strategic finance at Dishoom through
     £35m → £165m"), never to her personally growing the company. (Owner, 4 Aug 2026.)
+    **The fintech Series A is founder track record too** (owner, 23 Nov 2026).
+    Michelle built the financial model, the data room and the diligence Q&A in 2025,
+    before she **joined Codenest in January 2026**. Never call it "our models", a
+    "client" engagement, or work by Ankit or the firm. Label it "Founder track record:
+    Michelle Rana FCCA, 2025" wherever it appears (homepage hero and stat cell, the
+    testimonial, the CFO benefit tile, `/services`, the `/about` timeline). Michelle's
+    Codenest row on `/about` starts January 2026.
     **`/case-studies` is CTO-only until it is not** (5 Aug 2026): all three studies are
     technical, so the page title, meta description, OG description, h1, sub and
     ItemList schema all say "Fractional CTO" and name Ankit. It previously advertised
@@ -669,4 +697,4 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     - **Say "boutique" once.** The bottom bar used to repeat the brand blurb as
       "Boutique technical & financial advisory for UK startups", beside the Privacy
       link where it read as part of the legal row. The brand column now carries the
-      one description, and it uses the §1 ICP phrasing "pre-seed to Series A".
+      one description, and it uses the §1 firm-wide ICP phrasing "pre-seed and seed".

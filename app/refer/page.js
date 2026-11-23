@@ -89,7 +89,7 @@ export default function ReferralPage() {
     },
     {
       title: 'UK-based',
-      description: 'Pre-seed to Series A stage'
+      description: 'Pre-seed or seed (Series A for the CFO seat)'
     }
   ]
 

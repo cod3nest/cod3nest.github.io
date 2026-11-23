@@ -14,7 +14,7 @@ export const metadata = {
   description: 'Which executive seat your startup needs now. The signals that point to a Fractional CTO, the signals that point to a Fractional CFO, and what each engagement covers. Either is engageable on its own.',
   openGraph: {
     title: 'Fractional CTO or Fractional CFO: Which Does Your Startup Need?',
-    description: 'The signals that point to each seat, and what each engagement covers. UK startups, pre-seed to Series A.',
+    description: 'The signals that point to each seat, and what each engagement covers. UK startups at pre-seed and seed; the CFO seat also through Series A.',
     type: 'website',
     url: 'https://codenest.uk/services/',
     images: [
@@ -145,7 +145,7 @@ const services =
     {
       title: "Fundraising Support",
       benefit: "Close your round with confidence",
-      description: "Pitch deck financial sections, data room preparation, and investor Q&A coaching. We've helped startups raise from pre-seed to Series A.",
+      description: "Pitch deck financial sections, data room preparation, and investor Q&A coaching. Michelle built the model, data room and diligence Q&A behind a Series A that closed in 2025.",
       outcomes: ["Data room ready", "Financial due diligence prep", "Valuation support"],
       track: "business"
     },

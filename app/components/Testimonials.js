@@ -4,6 +4,8 @@
 // The HR-tech quote was published with a named attribution that had never been
 // permission-checked, so it was anonymised on the owner's instruction (4 Aug 2026)
 // rather than left standing on an assumption. Name a client only with permission.
+// The fintech Series A was Michelle's own work in 2025, before she joined Codenest
+// in January 2026 (owner, 23 Nov 2026): it is founder track record, labelled as such.
 const testimonials = [
   {
     quote: "They transformed our platform from handling 5 users to 1000+ concurrent users. The migration was seamless with zero downtime. Exactly the technical leadership we needed.",
@@ -18,10 +20,10 @@ const testimonials = [
     quote: "Their financial modeling and due diligence preparation were instrumental in closing our Series A. Investors commented on how well-organised our data room was.",
     name: "Founder & CEO, London fintech",
     title: "Name withheld under NDA",
-    company: "",
     initials: "FC",
     track: "financial",
-    outcome: "Series A closed"
+    outcome: "Series A closed",
+    company: "Founder track record: Michelle Rana FCCA, 2025"
   },
   {
     quote: "As a non-technical founder, I needed someone who could translate business requirements into technical reality. They delivered our MVP in 10 weeks with a system that just works.",

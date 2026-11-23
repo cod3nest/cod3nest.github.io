@@ -28,7 +28,7 @@ ${brand.markup}
   <rect x="90" y="232" width="180" height="3" fill="${GOLD}"/>
   ${line('Fractional CTO & CFO', { fontFile: PLAYFAIR, size: 52, x: 90, y: 330, fill: GOLD })}
   ${line('for UK Startups', { fontFile: PLAYFAIR, size: 52, x: 90, y: 400, fill: WHITE })}
-  ${line('Big 4 rigour meets founder empathy. Pre-seed to Series A.', { fontFile: INTER, size: 28, x: 90, y: 490, fill: MUTED })}
+  ${line('Senior operators. Plans that survive diligence. Pre-seed and seed.', { fontFile: INTER, size: 28, x: 90, y: 490, fill: MUTED })}
   ${line('codenest.uk', { fontFile: INTER, size: 24, x: 90, y: 560, fill: FAINT })}
 </svg>`
 
