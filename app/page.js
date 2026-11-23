@@ -333,7 +333,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Frekkel - Consumer AI. 2025 MVP engagement (owner, 23 Nov 2026). Wordmark
+            {/* Frekkel - Consumer AI. MVP engagement, Nov 2025 - Apr 2026; logo used with permission. Wordmark
                 taken from frekkel.com; viewBox 688.64 x 188.83, so h-8 renders ~117px. */}
             <div className="group flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white hover:shadow-sm transition-all cursor-default">
               <img
