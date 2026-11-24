@@ -727,3 +727,10 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     publish a week range as a promise ("8-12 weeks", "8-12 wks") anywhere: copy, stat
     cells, FAQ or schema. Say the timeline is agreed at scoping. A completed, named
     engagement's actual duration is a fact and may be stated ("Frekkel: MVP in 12 weeks").
+32. **CTO first, on the homepage and in shared copy.** Wherever both seats appear side by
+    side (hero panel, "When Founders Bring Us In", Two Tracks), the Fractional CTO comes
+    first, matching the h1 "Your Fractional CTO and CFO" and the site title (owner,
+    24 Nov 2026). The Two Tracks grid used to list the CFO first as the "strategy
+    track"; the mixed order was flagged by the 24 Nov council review.
+    **Reconfirmed the same day:** the eyebrow flourish stays (§13.2, §13.5), and no
+    Codenest prices go on the site (§13.24), even though two listing sites reward them.

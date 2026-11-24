@@ -195,16 +195,6 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               {
-                seat: 'Fractional CFO',
-                href: '/services/fractional-cfo/',
-                tone: 'text-accent-700',
-                items: [
-                  'You are raising, and the model only makes sense to you.',
-                  'You know the bank balance, not the runway.',
-                  'The Board pack is built the night before.',
-                ],
-              },
-              {
                 seat: 'Fractional CTO',
                 href: '/services/fractional-cto/',
                 tone: 'text-primary-700',
@@ -212,6 +202,16 @@ export default function Home() {
                   'You are about to commit to a build you cannot judge.',
                   'The MVP worked. Now it is in the way.',
                   'A round is coming, and so is technical due diligence.',
+                ],
+              },
+              {
+                seat: 'Fractional CFO',
+                href: '/services/fractional-cfo/',
+                tone: 'text-accent-700',
+                items: [
+                  'You are raising, and the model only makes sense to you.',
+                  'You know the bank balance, not the runway.',
+                  'The Board pack is built the night before.',
                 ],
               },
             ].map((column) => (
@@ -246,7 +246,53 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Strategy Track - Listed First */}
+            {/* Technical Track. CTO first in every homepage section, matching the h1
+                and the hero panel (owner, 24 Nov 2026, BRANDING §13.32). */}
+            <div className="bg-gradient-to-br from-primary-50 to-white border border-primary-200 rounded-xl p-10 hover:border-primary-400 hover:shadow-lg transition-all card-lift">
+              <div className="w-14 h-14 bg-primary-600 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Fractional CTO</h3>
+              <p className="text-slate-600 mb-6 leading-relaxed">
+                Architecture decisions, engineering team building, and infrastructure that scales from day one.
+              </p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center text-slate-700">
+                  <svg className="w-5 h-5 text-primary-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Technical Strategy &amp; Architecture
+                </li>
+                <li className="flex items-center text-slate-700">
+                  <svg className="w-5 h-5 text-primary-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  0-to-1 Product Builds
+                </li>
+                <li className="flex items-center text-slate-700">
+                  <svg className="w-5 h-5 text-primary-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Agentic AI & Data Engineering
+                </li>
+                <li className="flex items-center text-slate-700">
+                  <svg className="w-5 h-5 text-primary-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  DevOps & Platform Engineering
+                </li>
+              </ul>
+              <a href="/services/fractional-cto/" className="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold">
+                Explore Fractional CTO Services
+                <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+
+            {/* Finance Track */}
             <div className="bg-gradient-to-br from-accent-50 to-white border border-accent-200 rounded-xl p-10 hover:border-accent-400 hover:shadow-gold transition-all card-lift relative overflow-hidden">
               {/* Gold accent decoration */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-gold-gradient opacity-5 rounded-bl-full" />
@@ -288,51 +334,6 @@ export default function Home() {
               <a href="/services/fractional-cfo/" className="inline-flex items-center text-accent-700 hover:text-accent-800 font-semibold link-gold relative">
                 Explore Fractional CFO Services
                 <svg className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
-            </div>
-
-            {/* Technical Track */}
-            <div className="bg-gradient-to-br from-primary-50 to-white border border-primary-200 rounded-xl p-10 hover:border-primary-400 hover:shadow-lg transition-all card-lift">
-              <div className="w-14 h-14 bg-primary-600 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Fractional CTO</h3>
-              <p className="text-slate-600 mb-6 leading-relaxed">
-                Architecture decisions, engineering team building, and infrastructure that scales from day one.
-              </p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center text-slate-700">
-                  <svg className="w-5 h-5 text-primary-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  Technical Strategy &amp; Architecture
-                </li>
-                <li className="flex items-center text-slate-700">
-                  <svg className="w-5 h-5 text-primary-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  0-to-1 Product Builds
-                </li>
-                <li className="flex items-center text-slate-700">
-                  <svg className="w-5 h-5 text-primary-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  Agentic AI & Data Engineering
-                </li>
-                <li className="flex items-center text-slate-700">
-                  <svg className="w-5 h-5 text-primary-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  DevOps & Platform Engineering
-                </li>
-              </ul>
-              <a href="/services/fractional-cto/" className="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold">
-                Explore Fractional CTO Services
-                <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </a>
