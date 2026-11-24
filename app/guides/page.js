@@ -6,7 +6,7 @@ import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../lib/schema'
 
 export const metadata = {
   title: 'Fractional CTO & CFO Guides for UK Founders',
-  description: 'Free in-depth guides for UK startup founders: fractional CTO and CFO costs and comparisons, technical co-founder alternatives, and the startup runway calculator.',
+  description: 'Free guides for UK founders: fractional CTO and CFO costs, comparisons and hiring decisions, plus co-founder alternatives and a runway calculator.',
   openGraph: {
     title: 'Codenest Guides — Startup Leadership Resources',
     description: 'Free in-depth guides and tools for UK startup founders evaluating fractional CTO and CFO support.',
@@ -62,6 +62,12 @@ const guides = [
     href: '/guides/fractional-cto-vs-agency/',
     description: 'Strategy versus execution: which model fits your startup, and when to combine both.',
     tag: 'Comparison',
+  },
+  {
+    title: 'Series A Due Diligence: Technical and Financial',
+    href: '/guides/series-a-due-diligence/',
+    description: 'What investors check on the technology and the finances, and the cross-checks between them that stall raises.',
+    tag: 'Checklist',
   },
   {
     title: 'Technical Co-founder Alternatives',

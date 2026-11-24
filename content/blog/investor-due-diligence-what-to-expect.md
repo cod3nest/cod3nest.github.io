@@ -341,6 +341,9 @@ Before starting fundraising, verify:
 - [ ] Bank statements support claimed cash position
 - [ ] Customer references are prepared
 
+
+*Preparing both sides of a raise? The [Series A due diligence guide](/guides/series-a-due-diligence/) covers the technical and financial reviews together, and the cross-checks investors run between them.*
+
 ---
 
 *Preparing for due diligence or need help organising your data room? [Get in touch](/contact/)—we've helped multiple startups navigate this process successfully.*

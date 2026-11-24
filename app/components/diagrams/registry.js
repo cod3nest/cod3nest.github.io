@@ -271,6 +271,23 @@ export const DIAGRAMS = {
     />
   ),
 
+  // ------------------------------------------------------------ both seats
+  // Charcoal, not gold: the middle column belongs to neither track, and gold would
+  // assert that the cross-checks are a finance matter.
+  'diligence-cross-checks': () => (
+    <Split
+      trackName="technical"
+      title="Where technical and financial due diligence meet"
+      desc="Three columns: what the technical review examines, what the financial review examines, and the cross-checks investors run between them, such as the hiring plan in the model against the engineering roadmap."
+      caption="Each review can pass on its own and the raise still stall in the middle column, where one set of documents contradicts the other."
+      columns={[
+        { label: 'Technical review', items: ['Architecture and code', 'Infrastructure and cost', 'Security and data handling', 'Team and key people', 'IP and licences'] },
+        { label: 'Where they meet', emphasis: true, items: ['Hiring plan vs roadmap', 'Cloud spend vs the P&L', 'Contracts vs what the product does', 'IP assignments vs who wrote the code', 'Use of funds vs technical debt'] },
+        { label: 'Financial review', items: ['Historical accounts', 'Revenue and contracts', 'The model and assumptions', 'Cap table and liabilities', 'Use of funds'] },
+      ]}
+    />
+  ),
+
   'cfo-roles-split': () => (
     <Split
       trackName="financial"

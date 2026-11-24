@@ -10,7 +10,7 @@ import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
 // is the booking link, so there is nothing to promise and nothing to store.
 export const metadata = {
   title: 'Technical Due Diligence Readiness Check',
-  description: 'Free technical due diligence readiness check for UK startups. Twenty-five statements across seven areas investors examine, scored in your browser. Nothing is sent anywhere.',
+  description: 'Free technical due diligence readiness check for UK startups: 25 statements across the seven areas investors examine, scored in your browser.',
   openGraph: {
     title: 'Technical Due Diligence Readiness Check',
     description: 'Score your startup against the seven areas investors examine in technical due diligence.',
