@@ -58,7 +58,9 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Fractional CTO & Fractional CFO for UK Startups | Codenest',
-    description: 'Fractional CTO and CFO services for UK startups. Executive firepower, founder-friendly terms.',
+    // Same as the OG description. This one said "Executive firepower, founder-friendly
+    // terms", a retired pairing that carried neither the tagline nor the stage split.
+    description: 'Senior operators. Plans that survive diligence. Fractional CTO and CFO for UK startups at pre-seed and seed, with the CFO seat through Series A.',
     images: ['/img/og-default.png'],
   },
   robots: {
