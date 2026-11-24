@@ -490,6 +490,13 @@ export default function FractionalCTOPage() {
             <p className="text-xl text-slate-600">
               AI earns its place on a process someone understands. So discovery starts with the business, not the model.
             </p>
+            <p className="text-slate-600 leading-relaxed mt-4">
+              With both seats, the{' '}
+              <Link href="/services/fractional-cfo/#ai-finance" className="font-semibold text-accent-700 hover:text-accent-800 underline">
+                Fractional CFO
+              </Link>{' '}
+              runs the same discovery on the finance function, and the two build it together.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
