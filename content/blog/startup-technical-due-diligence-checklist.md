@@ -208,6 +208,9 @@ Remember: investors aren't expecting perfection. They're expecting:
 
 A startup that acknowledges "We have technical debt in our payment system, here's our plan to address it over the next 6 months" is more fundable than one that claims everything is perfect.
 
+
+*Preparing both sides of a raise? The [Series A due diligence guide](/guides/series-a-due-diligence/) covers the technical and financial reviews together, and the cross-checks investors run between them.*
+
 ---
 
 *Need help preparing for technical due diligence? Our [fractional CTO services](/services/fractional-cto/) include due diligence preparation and investor meeting support.*

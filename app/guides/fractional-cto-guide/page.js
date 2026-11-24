@@ -71,6 +71,11 @@ export default function FractionalCTOGuidePage() {
       question: 'How long do fractional CTO engagements typically last?',
       answer: 'Engagements typically range from 6 months to 2+ years. Some startups use fractional CTOs as a bridge until they can afford full-time leadership; others maintain the relationship through Series A and beyond.'
     },
+    // Searched in these words, guide at position 25-28 (Search Console, 24 Nov 2026).
+    {
+      question: 'Is a fractional CTO a good fit for a non-technical founder?',
+      answer: 'It is one of the most common fits. A non-technical founder can judge a pitch but not an architecture, a senior engineer or an agency quote. A fractional CTO is someone on your side who can: they choose and check the build approach, run or vet the first engineering hires, translate between the business and the engineers, and prepare the product for technical due diligence. The aim is to leave you able to hire a permanent technical lead, not to depend on the fractional one.'
+    },
     {
       question: 'Do fractional CTOs write code?',
       answer: 'It depends on the engagement. Some fractional CTOs are hands-on and contribute code, especially at early stages. Others focus purely on strategy, architecture, and team leadership. Clarify expectations upfront.'
@@ -97,7 +102,7 @@ export default function FractionalCTOGuidePage() {
       }
     },
     datePublished: '2025-01-13',
-    dateModified: '2026-08-04',
+    dateModified: '2026-11-24',
     mainEntityOfPage: 'https://codenest.uk/guides/fractional-cto-guide/'
   }
 

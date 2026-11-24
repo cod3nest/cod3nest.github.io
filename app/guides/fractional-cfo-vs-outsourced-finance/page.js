@@ -6,7 +6,7 @@ import { breadcrumbs, ORGANIZATION_ID } from '../../../lib/schema'
 
 export const metadata = {
   title: 'Fractional CFO vs Outsourced Finance Function',
-  description: 'Outsourced finance providers run your books; a fractional CFO owns the decisions behind them. What each delivers, where they overlap, and why most UK startups end up with both.',
+  description: 'Outsourced finance runs your books; a fractional CFO owns the decisions behind them. What each delivers, and why most UK startups end up with both.',
   keywords: ['fractional CFO vs outsourced finance', 'outsourced finance function UK', 'finance as a service startup', 'outsourced FD vs fractional CFO', 'startup bookkeeping vs CFO'],
   openGraph: {
     title: 'Fractional CFO vs Outsourced Finance Function',

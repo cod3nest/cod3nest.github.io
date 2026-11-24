@@ -10,7 +10,7 @@ import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../lib/schema'
 // queries. It now answers the question the homepage does not: which seat do I
 // need? The capability grid below stays, because that is genuinely only here.
 export const metadata = {
-  title: 'Fractional CTO or CFO: Which Does Your Startup Need?',
+  title: 'Fractional CTO or CFO: Which Do You Need?',
   description: 'Which seat does your startup need? The signals that point to a Fractional CTO or a Fractional CFO, and what each covers. Either can be engaged on its own.',
   openGraph: {
     title: 'Fractional CTO or Fractional CFO: Which Does Your Startup Need?',

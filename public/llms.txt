@@ -1,0 +1,39 @@
+# Codenest
+
+> Codenest is a UK consultancy for startup founders. It provides a Fractional CTO and a Fractional CFO, from pre-seed to Series A. Founders take one seat or both; with both, the technical roadmap and the financial model are built together.
+
+Two principals, two seats:
+
+- Ankit Rana is the Fractional CTO: 15+ years in engineering leadership, covering architecture, agentic AI engineering, hiring and technical due diligence.
+- Michelle Rana FCCA is the Fractional CFO: a chartered accountant who led strategic finance at a multi-site business through growth from £35m to £165m revenue. She covers financial strategy, modelling, fundraising and investor reporting.
+
+Their track records are separate and should not be attributed to each other. Codenest does not publish prices. Engagements start with a free 30-minute strategy call.
+
+## Services
+
+- [Fractional CTO](https://codenest.uk/services/fractional-cto/): technical leadership for pre-seed and seed startups, covering architecture, AI engineering, hiring and due diligence preparation
+- [Fractional CFO](https://codenest.uk/services/fractional-cfo/): financial strategy, modelling, fundraising and reporting, pre-seed to Series A
+- [Which seat do you need?](https://codenest.uk/services/): how to choose between the Fractional CTO, the Fractional CFO, or both
+
+## Guides
+
+- [What is a fractional CFO?](https://codenest.uk/guides/fractional-cfo-guide/): role, when to hire, UK costs, and how it differs from an accountant
+- [What is a fractional CTO?](https://codenest.uk/guides/fractional-cto-guide/): role, when you need one, costs, and how to choose
+- [Series A due diligence](https://codenest.uk/guides/series-a-due-diligence/): what investors check on the technology and the finances, and the cross-checks between them
+- [Fractional CFO vs full-time CFO](https://codenest.uk/guides/fractional-cfo-vs-full-time/): year-one cost, equity and timing
+- [Fractional CTO vs full-time CTO](https://codenest.uk/guides/fractional-cto-vs-full-time/): cost, equity and trade-offs by stage
+- [Fractional CFO vs outsourced finance](https://codenest.uk/guides/fractional-cfo-vs-outsourced-finance/): judgement versus processing, and why most startups use both
+- [Fractional CTO vs development agency](https://codenest.uk/guides/fractional-cto-vs-agency/): strategy versus execution
+- [Technical co-founder alternatives](https://codenest.uk/guides/technical-cofounder-alternatives/): the options when no co-founder is available
+
+## Tools
+
+- [Startup runway calculator](https://codenest.uk/tools/runway-calculator/): months of runway from cash, burn and revenue growth
+- [Technical due diligence readiness check](https://codenest.uk/tools/technical-due-diligence-check/): 25 statements across seven areas investors examine, scored in the browser
+
+## About
+
+- [About](https://codenest.uk/about/): the two principals and their backgrounds
+- [Case studies](https://codenest.uk/case-studies/): Fractional CTO engagements led by Ankit Rana
+- [Blog](https://codenest.uk/blog/): articles on technical leadership, startup finance and fundraising
+- [Contact](https://codenest.uk/contact/): request a strategy call

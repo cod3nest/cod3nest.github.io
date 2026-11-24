@@ -68,6 +68,20 @@ export default function FractionalCFOGuidePage() {
       question: 'Can a fractional CFO help with fundraising?',
       answer: 'Yes. For most early-stage engagements it is the core of the role. A fractional CFO builds the financial model, prepares the data room, stress-tests your assumptions before investors do, and helps you answer diligence questions with confidence.'
     },
+    // The three below answer questions founders already search in these words and
+    // find this guide for (Search Console, 16 months to 24 Nov 2026: positions 5-7).
+    {
+      question: 'What milestones should I set for a fractional CFO engagement?',
+      answer: 'Set them by output, not hours. By day 30: a working financial model, an agreed reporting pack, and a short list of the decisions that need a number attached. By day 60: a monthly close and cash forecast that arrive on time, and unit economics you can defend. By day 90: a forecast the team plans against, Board reporting that runs without being chased and, if you are raising, a model and data room an investor can work through. After that, milestones follow the business: the next raise, a pricing review, or the hire of a permanent finance lead.'
+    },
+    {
+      question: 'What services does a fractional CFO include for a startup?',
+      answer: 'Usually the financial model and forecast, cash and runway management, budgeting, Board and investor reporting, pricing and unit economics, and fundraising support: the data room, investor materials and diligence questions. Many also take the Finance Director work of month-end close, management accounts and controls. Bookkeeping, statutory accounts and tax filing normally stay with your bookkeeper and accountant.'
+    },
+    {
+      question: 'How long do founders typically work with a fractional CFO?',
+      answer: 'It depends on the goal. Getting ready for a raise is a defined piece of work measured in months. Running the monthly rhythm of reporting, forecasting and Board support is ongoing, and many founders keep a fractional CFO until the business can justify a full-time finance lead, whom the fractional CFO then helps to hire.'
+    },
   ]
 
   // Structured data
@@ -90,7 +104,7 @@ export default function FractionalCFOGuidePage() {
       }
     },
     datePublished: '2026-08-04',
-    dateModified: '2026-08-04',
+    dateModified: '2026-11-24',
     mainEntityOfPage: 'https://codenest.uk/guides/fractional-cfo-guide/'
   }
 

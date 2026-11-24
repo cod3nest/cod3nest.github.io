@@ -270,6 +270,9 @@ A well-organised data room:
 
 Invest the time upfront. The payoff is faster closes and better investor relationships.
 
+
+*Preparing both sides of a raise? The [Series A due diligence guide](/guides/series-a-due-diligence/) covers the technical and financial reviews together, and the cross-checks investors run between them.*
+
 ---
 
 *Need help preparing for fundraising? Our [fractional CFO services](/services/fractional-cfo/) include data room creation and due diligence preparation.*
