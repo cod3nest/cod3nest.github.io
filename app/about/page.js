@@ -40,6 +40,7 @@ const peopleSchema = [
     '@id': 'https://codenest.uk/about/#ankit-rana',
     name: 'Ankit Rana',
     jobTitle: 'Fractional CTO',
+    image: 'https://codenest.uk/img/team/ankit-rana.jpg',
     worksFor: codenest,
     // Pre-Codenest employers only. Deloitte Digital and Elavon were removed on
     // 5 Aug 2026: both post-date Aug 2017 and are client engagements delivered
@@ -121,6 +122,7 @@ export default function AboutPage() {
       name: "Ankit Rana",
       role: "Fractional CTO",
       initial: "A",
+      photo: "/img/team/ankit-rana.jpg",
       accent: "primary",
       linkedin: "https://www.linkedin.com/in/arana198",
       credentials: ["AWS Certified", "15+ Years Engineering", "Kubernetes & Cloud", "Agentic AI"],
@@ -210,9 +212,19 @@ export default function AboutPage() {
               const style = ACCENT_STYLES[person.accent]
               return (
                 <div key={person.name} className="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
-                  <div className={`w-24 h-24 rounded-2xl bg-gradient-to-br ${style.avatar} flex items-center justify-center text-white text-4xl font-serif shadow-lg mb-6`}>
-                    {person.initial}
-                  </div>
+                  {person.photo ? (
+                    <img
+                      src={person.photo}
+                      alt={`${person.name}, ${person.role} at Codenest`}
+                      width={96}
+                      height={96}
+                      className="w-24 h-24 rounded-2xl object-cover shadow-lg mb-6"
+                    />
+                  ) : (
+                    <div className={`w-24 h-24 rounded-2xl bg-gradient-to-br ${style.avatar} flex items-center justify-center text-white text-4xl font-serif shadow-lg mb-6`}>
+                      {person.initial}
+                    </div>
+                  )}
                   <h2 className="text-2xl font-bold text-slate-900 mb-1">{person.name}</h2>
                   <p className={`${style.role} font-semibold mb-5`}>{person.role}</p>
 
