@@ -227,6 +227,13 @@ export default function SeriesADueDiligencePage() {
               ))}
             </div>
             <p className="text-slate-700 leading-relaxed mt-8">
+              Key-person cover is the item founders most often answer with a promise. A{' '}
+              <Link href="/services/fractional-cto/#ai-process" className="text-accent-700 font-semibold hover:underline">
+                company brain
+              </Link>
+              , a searchable record of decisions, processes and the reasons behind them, answers it with evidence.
+            </p>
+            <p className="text-slate-700 leading-relaxed mt-4">
               On the infrastructure items: why{' '}
               <Link href="/blog/infrastructure-as-code-for-startups/" className="text-accent-700 font-semibold hover:underline">
                 infrastructure as code matters in diligence
