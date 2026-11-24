@@ -173,10 +173,41 @@ export default function FractionalCTOPage() {
     },
   ]
 
+  // How AI work starts (owner, 24 Nov 2026): discovery maps the business process
+  // before anything is built. Describes the method, not results (§13.28).
+  const aiProcessSteps = [
+    {
+      title: "Map the process",
+      description: "Discovery starts with how the work actually gets done: who does what, where it waits, where data is typed in twice, and where the judgement sits.",
+    },
+    {
+      title: "Find where AI removes work",
+      description: "Then we mark the steps AI can take over, the ones it should only assist, and the ones it should leave alone. Where the process itself is unclear, that gets fixed first.",
+    },
+    {
+      title: "Build small, then measure",
+      description: "The smallest version that proves the time saved, with an evaluation in place before it handles volume. What works is kept; what does not is switched off.",
+    },
+  ]
+
+  // The company brain as a deliverable (owner, 24 Nov 2026). Codenest runs its own,
+  // which is what the closing line claims; client builds stay with the client.
+  const companyBrainBenefits = [
+    "What people know stays when they leave: decisions and the reasons for them, suppliers, and how the systems fit together.",
+    "New starters get up to speed by asking it, not by borrowing a colleague's afternoon.",
+    "Answers cite their sources, so people can check them rather than take them on trust.",
+    "Documentation and key-person cover that a diligence team can inspect.",
+    "Agents answer from what the business already knows, not from whatever fits in a prompt.",
+  ]
+
   const faqs = [
     {
       question: "Do you build agentic AI, or only advise on it?",
       answer: "Build. Regeno is a current Codenest client, and the engagement is a company brain and an AI factory: a queryable layer over their own records, and a delivery platform that takes a ticket from Linear, GitHub or Slack and drives it to a merged pull request unattended. The person advising on the architecture is the person writing it."
+    },
+    {
+      question: "Who owns the company brain when the engagement ends?",
+      answer: "You do. It is built in your own accounts from your own documents, and it stays with you, with the documentation behind it, when the engagement ends. A knowledge base that left with the people who built it would recreate the key-person risk it exists to remove."
     },
     {
       question: "Everyone is telling us to build AI agents. How do you decide whether we should?",
@@ -445,6 +476,55 @@ export default function FractionalCTOPage() {
                   <p className="text-slate-300 leading-relaxed">{layer.description}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Process first, then AI (owner, 24 Nov 2026). Slate, so it does not run into the white FAQ. */}
+      <section id="ai-process" className="py-24 bg-slate-50 scroll-mt-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl mb-16">
+            <p className="text-sm uppercase tracking-[0.2em] text-accent-700 mb-4 font-medium">How we use AI</p>
+            <h2 className="font-serif text-4xl font-bold text-slate-900 mb-6">Process First, Then AI</h2>
+            <p className="text-xl text-slate-600">
+              AI earns its place on a process someone understands. So discovery starts with the business, not the model.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+            <ol className="space-y-10">
+              {aiProcessSteps.map((step, index) => (
+                <li key={step.title} className="flex items-start">
+                  <span className="w-10 h-10 bg-primary-100 text-primary-700 rounded-full flex items-center justify-center mr-5 flex-shrink-0 font-bold" aria-hidden="true">
+                    {index + 1}
+                  </span>
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">{step.title}</h3>
+                    <p className="text-slate-600 leading-relaxed">{step.description}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+
+            <div className="bg-white rounded-2xl border border-slate-200 p-8 lg:p-10">
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">A company brain that stays yours</h3>
+              <p className="text-slate-600 leading-relaxed mb-6">
+                A searchable record of how your business works, built in your own accounts. It searches by meaning, not only by keyword, so people can ask it questions in their own words.
+              </p>
+              <ul className="space-y-4 mb-8">
+                {companyBrainBenefits.map((benefit) => (
+                  <li key={benefit} className="flex items-start text-slate-700">
+                    <svg className="w-5 h-5 text-accent-700 mt-0.5 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    {benefit}
+                  </li>
+                ))}
+              </ul>
+              <p className="text-sm text-slate-600 border-t border-slate-200 pt-6">
+                We run one ourselves: both Codenest seats work from a company brain of our own, and every answer it gives cites the note it came from.
+              </p>
             </div>
           </div>
         </div>

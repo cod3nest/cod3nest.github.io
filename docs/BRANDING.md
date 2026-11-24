@@ -734,3 +734,25 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     track"; the mixed order was flagged by the 24 Nov council review.
     **Reconfirmed the same day:** the eyebrow flourish stays (§13.2, §13.5), and no
     Codenest prices go on the site (§13.24), even though two listing sites reward them.
+33. **AI and the company brain: what the site may claim.** (Owner, 24 Nov 2026.) Both
+    seats use AI, and both work from a company brain (§13.28 defines the term). The copy
+    lives in `/services/fractional-cto/#ai-process`, `/services/fractional-cfo/#ai-finance`,
+    the homepage's "You own the output", and one line in the Series A guide.
+    - **The method:** the CTO seat maps the business process in discovery before it
+      builds anything with AI. Steps where AI should only assist, or should stay out,
+      are named as such.
+    - **Claim:** Codenest runs its own company brain, and both seats use it. That is
+      Keepsake (`~/workspace/codenest/keepsake`). It searches by meaning, and every
+      answer cites its source.
+    - **Claim:** a company brain built for a client goes in the client's own accounts and
+      stays with the client when the engagement ends. On the homepage it is offered
+      "if you want one", not as part of every engagement.
+    - **Never claim** that Keepsake is a product clients can use: it serves two named
+      users. Never claim client data stays on client infrastructure either, because
+      answering a question sends the passages it needs to a model provider.
+    - **Never publish** a time or cost saving from AI until it has been measured on a
+      named engagement (§13.4).
+    - **On finance:** AI drafts and checks the work around the numbers. The figures
+      themselves come from the ledger, and a qualified person signs them off. Michelle's
+      post `/blog/how-cfos-use-ai-startup-finance/` is the source; keep the CFO copy
+      consistent with it.

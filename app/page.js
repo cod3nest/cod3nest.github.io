@@ -634,9 +634,10 @@ export default function Home() {
                 <div>
                   <dt className="text-xl font-bold text-slate-900 mb-2">You own the output.</dt>
                   <dd className="text-slate-600 leading-relaxed">
-                    Code, infrastructure, financial models, documentation. Handover is designed in from
-                    the first week, so there is nothing to unpick when we leave and no dependency on us
-                    once we have.
+                    Code, infrastructure, financial models, documentation, and a company brain if you
+                    want one: a searchable record of your decisions and processes that answers with its
+                    sources. Handover is designed in from the first week, so what we learned stays with
+                    you when we leave and nothing depends on us once we have.
                   </dd>
                 </div>
                 <div>

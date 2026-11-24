@@ -191,11 +191,22 @@ export default function FractionalCFOPage() {
     "Procurement systems project management",
   ]
 
+  // Grounded in Michelle's own guide (/blog/how-cfos-use-ai-startup-finance/): AI drafts
+  // and checks the work around the numbers; the figures come from the ledger and a
+  // person signs them off. Owner, 24 Nov 2026.
+  const aiFinanceUses = [
+    "A first draft of the Board narrative from the management accounts",
+    "Interrogating a financial model you did not build: what drives it, and where it breaks",
+    "Due diligence answers drafted, and the data room checked for gaps",
+    "Scenarios for runway and fundraising conversations",
+    "Contracts read for their financial consequences",
+  ]
+
   const faqs = [
     {
       // Owner, 23 Nov 2026: Michelle works as a CFO, a Finance Director, or both.
       // Replaces the FP&A-vs-accounting question, which the bookkeeper FAQ below
-      // already covers, so the page keeps parity with the CTO page's ten.
+      // already covers, so the page keeps parity with the CTO page's count.
       question: "Fractional CFO, Finance Director, part-time FD, interim FD: what's the difference?",
       answer: "A Finance Director runs the finance function: month-end close, management accounts, cash, controls, and the team that produces them. A CFO sets the financial strategy: the model, the plan, fundraising, and what the Board and investors are told. In a growing business they are often the same seat, and Michelle takes either or both. Fractional and part-time mean the same thing: a set number of days a month, ongoing. An interim FD covers a gap full time, usually between permanent hires; if that is what you need, say so on the call and we will tell you whether we can do it."
     },
@@ -210,6 +221,10 @@ export default function FractionalCFOPage() {
     {
       question: "Can you help us prepare for due diligence?",
       answer: "Yes. We build the model, the data room and the supporting schedules, then work the questions an investor will actually ask against them. Michelle has been through investor due diligence from the inside, which is the fastest way to learn what it tests."
+    },
+    {
+      question: "Do you use AI in the finance function?",
+      answer: "Yes, for the work around the numbers: drafting Board narrative, interrogating models, preparing diligence answers and reading contracts. The figures themselves come from your accounting system, and a qualified person checks anything that leaves the building. Confidential and personal data are handled under a written rule about what may go into an AI tool, agreed with you first."
     },
     {
       question: "Can you help with fundraising?",
@@ -487,6 +502,56 @@ export default function FractionalCFOPage() {
         intro="What the Fractional CFO seat delivers in its first three months. The order flexes to your stage and to what we find; every phase ends in something you keep."
         phases={firstNinetyDays}
       />
+
+      {/* AI in finance and the shared company brain (owner, 24 Nov 2026). */}
+      <section id="ai-finance" className="py-24 bg-slate-50 scroll-mt-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl mb-16">
+            <p className="text-sm uppercase tracking-[0.2em] text-accent-700 mb-4 font-medium">How we use AI</p>
+            <h2 className="font-serif text-4xl font-bold text-slate-900 mb-6">AI in the Finance Function</h2>
+            <p className="text-xl text-slate-600">
+              AI speeds up the work around the numbers. The numbers themselves still come from the ledger, and a qualified person signs them off.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+            <div>
+              <h3 className="text-xl font-bold text-slate-900 mb-6">Where it earns its place</h3>
+              <ul className="space-y-4 mb-8">
+                {aiFinanceUses.map((use) => (
+                  <li key={use} className="flex items-start text-slate-700">
+                    <svg className="w-5 h-5 text-accent-700 mt-0.5 mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    {use}
+                  </li>
+                ))}
+              </ul>
+              <p className="text-slate-600 leading-relaxed">
+                Where it does not: producing the figures, reconciling the bank, or anything a statutory filing depends on. Michelle&apos;s guide to{' '}
+                <Link href="/blog/how-cfos-use-ai-startup-finance/" className="font-semibold text-accent-700 hover:text-accent-800 underline">
+                  how CFOs can use AI in startup finance
+                </Link>{' '}
+                sets out both sides.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-2xl border border-slate-200 p-8 lg:p-10">
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">What the finance function knows, written down</h3>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                How month-end runs, why a price was set, what the Board was told and what was promised to an investor. In most startups that lives in one person&apos;s head. We build it into a company brain: a searchable record, built in your own accounts, that answers with its sources and stays with you when the engagement ends.
+              </p>
+              <p className="text-slate-600 leading-relaxed">
+                With both seats, the CFO and the{' '}
+                <Link href="/services/fractional-cto/#ai-process" className="font-semibold text-accent-700 hover:text-accent-800 underline">
+                  Fractional CTO
+                </Link>{' '}
+                work from the same company brain, so the financial model and the technical roadmap start from the same facts, and you explain your business once.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* FAQ Section */}
       <section className="py-24 bg-white">
