@@ -111,19 +111,14 @@ export default function Home() {
                 Your Fractional CTO and CFO,<br />
                 <span className="italic">until you can hire full-time.</span>
               </h1>
+              {/* One idea after the tagline: the differentiator, which used to wait for the
+                  next section. The capability list and the per-seat stages (§13.10) live
+                  further down; here they pushed the CTA below the first 375px screen
+                  (council review, 24 Nov 2026). Either seat alone stays possible (§13.27). */}
               <p className="text-xl text-slate-600 mb-6 leading-relaxed max-w-lg animate-hero-3">
-                Senior operators. Plans that survive diligence. A part-time CTO, a part-time CFO, or both: architecture, engineering leadership, financial models, and fundraising for founders at pre-seed and seed, and on the finance side through Series A.
+                Senior operators. Plans that survive diligence. Take one seat or both; with both, the roadmap and the financial model are built together.
               </p>
               <ul className="space-y-4 mb-8 max-w-lg animate-hero-3">
-                <li className="flex items-start text-slate-700 group">
-                  <svg className="w-5 h-5 text-accent-500 mr-3 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <div>
-                    <span className="font-medium">Save 60-80% vs full-time executives</span>
-                    <span className="text-slate-500 text-sm block">Enterprise-grade expertise, founder-friendly terms</span>
-                  </div>
-                </li>
                 <li className="flex items-start text-slate-700 group">
                   <svg className="w-5 h-5 text-accent-500 mr-3 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -142,7 +137,8 @@ export default function Home() {
                         founder track record (§13.15), never "client" work. The old line,
                         "Every client diligence passed to date", had no denominator. */}
                     <span className="font-medium">Series A diligence passed</span>
-                    <span className="text-slate-500 text-sm block">Michelle's 2025 model, data room and investor Q&amp;A</span>
+                    {/* The label §13.15 requires wherever this appears, hero included. */}
+                    <span className="text-slate-500 text-sm block">Founder track record: Michelle Rana FCCA, 2025</span>
                   </div>
                 </li>
               </ul>
@@ -163,7 +159,7 @@ export default function Home() {
                   {/* Not "interim CTO": the title was Lead Software Engineer. The
                       scope was CTO-level and the copy may say so, but the title is
                       the CV's (owner, 5 Aug 2026 — BRANDING §13.15). */}
-                  <p className="text-slate-300 text-sm mb-4">Concurrent users at Rungway, where Ankit led engineering</p>
+                  <p className="text-slate-300 text-sm mb-4">Concurrent users at Rungway, where Ankit Rana led engineering</p>
                   <p className="text-slate-300 text-xs">Architecture, engineering leadership, delivery</p>
                 </div>
 
@@ -172,7 +168,7 @@ export default function Home() {
                 <div className="flex-1 bg-white p-6 sm:p-8 flex flex-col justify-center">
                   <p className="text-xs uppercase tracking-[0.2em] text-accent-700 mb-4 font-semibold">Fractional CFO</p>
                   <p className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-3">&pound;35m &rarr; &pound;165m</p>
-                  <p className="text-slate-600 text-sm mb-4">Revenue at Dishoom, where Michelle led strategic finance</p>
+                  <p className="text-slate-600 text-sm mb-4">Revenue at Dishoom, where Michelle Rana FCCA led strategic finance</p>
                   <p className="text-slate-500 text-xs">Financial models, controls, fundraising</p>
                 </div>
               </div>
@@ -180,6 +176,58 @@ export default function Home() {
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gold-gradient opacity-20 rounded-full blur-xl" />
               <div className="absolute -top-2 -left-2 w-16 h-16 bg-gold-gradient opacity-15 rounded-full blur-lg" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* When founders bring us in. The homepage named services but never a founder's
+          situation; it only said when we are the wrong call. Three per seat, titles taken
+          from each service page's "Sounds Familiar?" list so the two never disagree —
+          change them there first. Problems only: no figures or outcomes here. */}
+      <section className="py-20 bg-slate-50 border-y border-slate-100" aria-labelledby="bring-us-in">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 id="bring-us-in" className="font-serif text-3xl md:text-4xl font-bold text-slate-900 mb-4">When Founders Bring Us In</h2>
+            <p className="text-lg text-slate-600">A decision is due, and nobody on the team can judge it yet.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              {
+                seat: 'Fractional CFO',
+                href: '/services/fractional-cfo/',
+                tone: 'text-accent-700',
+                items: [
+                  'You are raising, and the model only makes sense to you.',
+                  'You know the bank balance, not the runway.',
+                  'The Board pack is built the night before.',
+                ],
+              },
+              {
+                seat: 'Fractional CTO',
+                href: '/services/fractional-cto/',
+                tone: 'text-primary-700',
+                items: [
+                  'You are about to commit to a build you cannot judge.',
+                  'The MVP worked. Now it is in the way.',
+                  'A round is coming, and so is technical due diligence.',
+                ],
+              },
+            ].map((column) => (
+              <div key={column.seat} className="bg-white rounded-2xl border border-slate-200 p-8">
+                <h3 className={`text-xs uppercase tracking-[0.2em] font-semibold mb-6 ${column.tone}`}>{column.seat}</h3>
+                <ul className="space-y-4 mb-6">
+                  {column.items.map((item) => (
+                    <li key={item} className="text-slate-900 font-medium leading-snug">{item}</li>
+                  ))}
+                </ul>
+                <a href={column.href} className={`inline-flex items-center font-semibold ${column.tone} hover:underline`}>
+                  More on the {column.seat}
+                  <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </section>
