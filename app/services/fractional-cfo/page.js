@@ -120,7 +120,7 @@ export default function FractionalCFOPage() {
     },
   ]
 
-  // Drafted 23 Nov 2026 for the owner to confirm. Each item is a situation the
+  // Drafted 23 Nov 2026, confirmed by the owner 24 Nov 2026. Each item is a situation the
   // page goes on to answer; none carries a figure or an outcome.
   const situations = [
     {

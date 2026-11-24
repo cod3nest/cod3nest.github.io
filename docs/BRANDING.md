@@ -140,7 +140,7 @@ every claim — write as if they will check, because they will.
    solo freelancer) and stay factual — cost, capacity, incentives — never sneering.
 
 **Copy patterns that work:** short declaratives; outcome-first bullets ("Investor-ready
-in 8-12 weeks"); pain-fact framing ("Founders who needed senior guidance but couldn't
+before you raise"); pain-fact framing ("Founders who needed senior guidance but couldn't
 justify a full-time CTO or CFO"); concrete artefacts (data room, 3-statement model,
 CI/CD pipeline) over abstractions ("digital transformation", "synergy").
 
@@ -475,7 +475,7 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     owner's instruction (4 Aug 2026) because no such permission was on record.
 13. **Stat cells carry a named engagement or an offer term** — Rungway users, Opayo
     duration, the testimonial-backed Series A (Michelle's, 2025, founder track
-    record), 8-12 wks MVP. No bare counts without
+    record), the Frekkel MVP's 12 weeks. No bare counts without
     a citable denominator ("15+ startups" retired). (4 Aug 2026.)
 14. **Codenest is two people.** Ankit Rana is the Fractional CTO; Michelle Rana FCCA
     is the Fractional CFO. Any surface that names one must be checked for whether it
@@ -552,7 +552,7 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
     to 57 for the same reason — prefer a colon, a comma or a full stop.
 19. **The homepage does not carry a staged process timeline.** A Discover/Build/Scale
     block with tidy week ranges was removed 4 Aug 2026: the FAQ already states the
-    real shape (3-6 months at 2-3 days a week, 8-12 week fixed-scope MVPs) and states
+    real shape (3-6 months at 2-3 days a week, fixed-scope MVPs timed to the product) and states
     it more precisely.
 20. **Never publish personal contact details.** No personal mobile numbers or personal
     email addresses for either principal, from CVs or anywhere else — the contact form
@@ -722,3 +722,8 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
       "Boutique technical & financial advisory for UK startups", beside the Privacy
       link where it read as part of the legal row. The brand column now carries the
       one description, and it uses the §1 firm-wide ICP phrasing "pre-seed and seed".
+31. **No generic delivery timelines.** How long an MVP, a raise or "investor-ready" takes
+    depends on the use case and how complex the business is (owner, 24 Nov 2026). Do not
+    publish a week range as a promise ("8-12 weeks", "8-12 wks") anywhere: copy, stat
+    cells, FAQ or schema. Say the timeline is agreed at scoping. A completed, named
+    engagement's actual duration is a fact and may be stated ("Frekkel: MVP in 12 weeks").

@@ -196,7 +196,7 @@ export default function RootLayout({ children }) {
           itemOffered: {
             '@type': 'Service',
             name: 'MVP Development',
-            description: '8-12 week production-ready MVP builds'
+            description: 'Fixed-scope, production-ready MVP builds'
           }
         },
         {

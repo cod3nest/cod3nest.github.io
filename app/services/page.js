@@ -125,7 +125,7 @@ const services =
       title: "0-to-1 Product Builds",
       benefit: "Launch your MVP in weeks, not months",
       description: "Go from idea to production-ready product with a system built to scale. No rebuilding later, no technical debt from day one.",
-      outcomes: ["8-12 week delivery", "Built to handle growth", "Full ownership handover"],
+      outcomes: ["Timeline agreed at scoping", "Built to handle growth", "Full ownership handover"],
       track: "technical"
     },
     {
