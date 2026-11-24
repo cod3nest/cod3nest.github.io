@@ -116,7 +116,7 @@ Infrastructure as code is not a sophistication signal. It is the difference betw
 
 The work is small and the window is wide: two to four weeks, best done six months before you need it. The four questions above tell you where you stand today, and you can ask them this week without knowing anything technical.
 
-Fix it before it is on an investor's list rather than after.
+Fix it before it is on an investor's list rather than after. The next question diligence asks is how code reaches production; [GitOps for startups](/blog/gitops-startup-deployment-github-actions/) covers when automating that pays back.
 
 ---
 

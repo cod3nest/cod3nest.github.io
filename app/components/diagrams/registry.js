@@ -163,7 +163,9 @@ export const DIAGRAMS = {
         { label: 'Coders, no direction', detail: 'Good engineers, no owner' },
         { label: 'Raise approaching', detail: 'Diligence has no answers' },
         { label: 'Costs spiralling', detail: 'Spend with no visible return' },
+        { label: 'Full-time too soon', detail: 'Need the judgement, not the hours' },
         { label: 'Scaling the team', detail: 'Nobody to interview engineers' },
+        { label: 'Needed in the room', detail: 'Investors and buyers ask for a CTO' },
       ]}
     />
   ),

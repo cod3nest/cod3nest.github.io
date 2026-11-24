@@ -3,6 +3,11 @@ import Navigation from '../../components/Navigation'
 import Footer from '../../components/Footer'
 import JsonLd from '../../components/JsonLd'
 import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
+import { getDiagram } from '../../components/diagrams/registry'
+
+// Merged from /blog/when-to-hire-fractional-cto/ (24 Nov 2026, owner approved); a Cloudflare
+// 301 sends the old URL to #when-to-hire. Its unsourced cost table and percentages were dropped.
+const CtoTriggers = getDiagram('cto-triggers')
 
 export const metadata = {
   // Informational title on purpose. As "…Fractional CTO Services UK" this guide
@@ -149,7 +154,7 @@ export default function FractionalCTOGuidePage() {
               Everything UK founders need to know about hiring a fractional CTO: costs, benefits, timing, and how to make it work for your startup.
             </p>
             <p className="text-sm text-slate-500">
-              Updated August 2026 &middot; 15 min read
+              Updated November 2026 &middot; 15 min read
             </p>
           </div>
         </div>
@@ -251,39 +256,50 @@ export default function FractionalCTOGuidePage() {
                 When Should You Hire a Fractional CTO?
               </h2>
               <p>
-                The right time to hire a fractional CTO depends on your specific situation, but here are the most common triggers. For the full checklist, see <Link href="/blog/when-to-hire-fractional-cto/" className="text-primary-600 hover:text-primary-700 font-medium">seven signs your startup is ready for a fractional CTO</Link>.
+                Seven signals come up again and again. Each is below, with what a fractional CTO does about it.
               </p>
 
-              <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">You're a Non-Technical Founder</h3>
+              <CtoTriggers />
+
+              <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">You're a Non-Technical Founder Making Technical Decisions</h3>
               <p>
-                If you're building a technology product without technical co-founder, you need someone who can translate your vision into technical reality, evaluate developers' work, and make informed architecture decisions.
+                Choosing a cloud provider, a framework or a development agency without the expertise to judge the recommendation is a risk that compounds: an early architecture mistake is paid for later in rewrites. A fractional CTO translates business requirements into technical decisions, evaluates vendors and contractors, and makes sure you are building on sound foundations.
+              </p>
+
+              <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Your Developers Ship, but Nobody Owns the Direction</h3>
+              <p>
+                Good engineers focus on the code in front of them, which is what you want them doing. Someone still has to own architecture and scalability, security, technical debt and team structure. A fractional CTO provides that strategic layer above day-to-day development, and ties it to the business plan.
               </p>
 
               <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">You're Preparing to Fundraise</h3>
               <p>
-                Investors will ask detailed technical questions. Having a credible CTO (even fractional) in investor meetings significantly increases your chances of closing a round. They'll also help prepare due diligence materials.
+                Investors will ask you to walk them through the architecture, the scalability plan, data security and technical debt. A fractional CTO prepares the due diligence material and answers those questions in the room. The <Link href="/guides/series-a-due-diligence/" className="text-primary-600 hover:text-primary-700 font-medium">Series A due diligence guide</Link> covers what both reviews examine.
               </p>
 
-              <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Your Development Is Stalling</h3>
+              <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Development Costs Are Climbing Without Clear Return</h3>
               <p>
-                If you have developers but lack senior leadership, you might see symptoms like: missed deadlines, accumulating technical debt, team conflicts, or difficulty shipping features. A fractional CTO can diagnose and fix these issues.
+                Features take longer than expected, bugs keep reappearing, and the roadmap feels disconnected from what gets delivered. Without senior oversight there is no way to tell efficiency from waste. A fractional CTO audits the process, sets realistic expectations and makes the spend legible.
               </p>
 
-              <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">You Can't Afford a Full-Time CTO</h3>
+              <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">You Can't Justify a Full-Time CTO Yet</h3>
               <p>
-                A full-time CTO in London costs £150,000-£220,000+ in salary alone, plus equity, benefits, and recruitment fees. If that's not in your budget but you need the expertise, fractional is the answer.
+                A full-time CTO costs a senior salary plus equity, benefits and recruitment fees, before they have shipped anything (see the cost comparison below). If the business needs the judgement but not forty hours a week of it, a fractional CTO provides the leadership without the fixed cost or the dilution.
               </p>
 
-              <div className="bg-accent-50 border border-accent-200 rounded-xl p-6 my-8 not-prose">
-                <p className="font-semibold text-accent-900 mb-2">Signs You Need a Fractional CTO</p>
-                <ul className="text-accent-800 space-y-1 text-sm">
-                  <li>• You're spending more time managing developers than running the business</li>
-                  <li>• Technical decisions are being made without strategic oversight</li>
-                  <li>• Investors are asking questions you can't confidently answer</li>
-                  <li>• Your product roadmap feels disconnected from technical reality</li>
-                  <li>• Development costs are spiraling without clear ROI</li>
-                </ul>
-              </div>
+              <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">You're Growing the Team and Don't Know How</h3>
+              <p>
+                Going from two or three developers to a team of several means deciding which roles to hire, how to structure the team, and how to interview and assess technical candidates. A wrong hire is expensive in salary and in lost momentum. A fractional CTO defines the structure, writes the roles and runs the technical interviews.
+              </p>
+
+              <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">You Need a Technical Voice in the Room</h3>
+              <p>
+                Investor meetings, board presentations, enterprise sales calls and partnership discussions often need someone who can speak credibly about the technology. A fractional CTO attends those meetings as your technical lead, which builds confidence with stakeholders who care about technical capability.
+              </p>
+
+              <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">When a Fractional CTO Isn't Right</h3>
+              <p>
+                Fractional is not always the answer. You probably need a full-time CTO if you have a large engineering team that needs daily leadership, if the technology itself is your competitive moat (novel algorithms, custom hardware), or if the role genuinely needs full-time hours. For most startups from pre-seed to Series A, fractional provides the leadership needed while preserving runway.
+              </p>
             </section>
 
             {/* Costs */}

@@ -117,7 +117,7 @@ Deployment automation is a stage decision, and the trigger is usually team size 
 
 Pre-seed, use a managed platform and spend the time on product. At seed, once you have more than three engineers or shipping has started to queue behind one person, take the middle rung: simple automation, one to two weeks, done. Save full GitOps for the point where you are running Kubernetes and it has something specific to offer.
 
-The goal is releases that are boring. Sophisticated tooling that nobody can maintain is worse than a simple pipeline the whole team understands.
+The goal is releases that are boring. Sophisticated tooling that nobody can maintain is worse than a simple pipeline the whole team understands. If the GitOps proposal arrives bundled with a Kubernetes migration, [Kubernetes: overkill or essential?](/blog/kubernetes-startups-overkill-essential/) covers that decision on its own terms.
 
 ---
 

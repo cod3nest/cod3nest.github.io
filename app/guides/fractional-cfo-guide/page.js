@@ -151,7 +151,7 @@ export default function FractionalCFOGuidePage() {
                 Everything UK founders need to know about hiring a fractional CFO: what they do, what they cost, when to bring one in, and how to choose the right one.
               </p>
               <p className="text-sm text-slate-500">
-                Updated August 2026 &middot; 15 min read
+                Updated November 2026 &middot; 15 min read
               </p>
             </div>
           </div>
