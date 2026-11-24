@@ -69,7 +69,7 @@ export default function PrincipalBand({
                 width={160}
                 height={160}
                 loading="lazy"
-                className="w-40 h-40 rounded-2xl object-cover shadow-md mb-6"
+                className="w-40 h-40 rounded-full object-cover shadow-md mb-6"
               />
             )}
             <h2 className="font-serif text-3xl font-bold text-slate-900 mb-1">{name}</h2>
