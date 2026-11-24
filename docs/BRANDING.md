@@ -756,3 +756,9 @@ WCAG AA (4.5:1) on all text. The specific traps in this palette:
       themselves come from the ledger, and a qualified person signs them off. Michelle's
       post `/blog/how-cfos-use-ai-startup-finance/` is the source; keep the CFO copy
       consistent with it.
+    - **Michelle uses AI heavily, and builds it with the CTO** (owner, 24 Nov 2026).
+      Copy may say that she uses AI throughout her own finance work, and that she and
+      the Fractional CTO build it into a client's finance processes together: month-end,
+      reporting, forecasting, investor requests. The CFO seat bought alone still brings
+      her AI-assisted way of working (§13.27). Both statements describe how she works,
+      not results, so §13.4 still rules out savings figures.
