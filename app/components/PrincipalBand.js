@@ -11,10 +11,8 @@ import Link from 'next/link'
 // anything new. Dishoom's numbers stay attached to Michelle's *role* rather than
 // to her personally (§13.15).
 //
-// Deliberately no avatar. Real headshots are still outstanding, and a
-// letter-avatar placeholder is barred in production (§5) — an initial in a
-// coloured box is worse than nothing here. The left column is sized to take a
-// portrait when the files exist; drop it above the name.
+// The portrait is optional. A principal without a real photo gets no avatar at
+// all: a letter-avatar placeholder is barred in production (§5).
 
 const ACCENT_STYLES = {
   primary: {
@@ -51,6 +49,7 @@ export default function PrincipalBand({
   highlights,
   proof,
   linkedin,
+  photo,
 }) {
   const style = ACCENT_STYLES[accent]
 
@@ -63,6 +62,16 @@ export default function PrincipalBand({
             evidence on the right. */}
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16">
           <div className="lg:col-span-2">
+            {photo && (
+              <img
+                src={photo.src}
+                alt={photo.alt}
+                width={160}
+                height={160}
+                loading="lazy"
+                className="w-40 h-40 rounded-2xl object-cover shadow-md mb-6"
+              />
+            )}
             <h2 className="font-serif text-3xl font-bold text-slate-900 mb-1">{name}</h2>
             <p className={`${style.role} font-semibold mb-5`}>{role}</p>
             <div className={`w-16 h-1 rounded-full mb-6 ${style.rule}`} />
