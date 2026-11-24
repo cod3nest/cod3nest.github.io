@@ -417,6 +417,11 @@ Ten links from eight sites, two of them topical (cfo-index.com, fractionalcfocos
 | **G-Cloud Digital Marketplace** | A G-Cloud "fractional CTO" listing ranks on page one for "fractional cto uk"; the Ministry of Justice and HSBC engagements make a public-sector listing credible | High: framework application in the next G-Cloud window | Ankit, decide whether public sector is wanted |
 | **Clutch / GoodFirms profile** | Directory links and reviews for the CTO seat | Low | Ankit |
 
+**Update, 23 Nov 2026:** each route above was then checked; see `docs/OUTREACH_PACK_2026-11-23.md`.
+GoFractional, AKM Advisory and fractionalfinancedirectors.co.uk turned out to be self-ranked or a
+competitor's own network, so they are dropped. fractional-csuite.com and The Entrepreneurs Network
+are the best new targets. CFO Index already lists Codenest with a followed link to the CFO page.
+
 Avoid: paid link schemes, mass directories, guest-post farms, and anything that would put a
 competitor's or client's name in our copy without permission (BRANDING §2.8, §13.12).
 

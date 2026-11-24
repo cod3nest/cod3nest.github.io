@@ -24,16 +24,54 @@ const COMMON_TYPOS = {
   'yaho.com': 'yahoo.com',
 }
 
+// Self-reported because search engines withhold the query and AI assistants often send
+// no referrer at all, so the only reliable record of "found us on Google" versus "asked
+// ChatGPT" is the founder's own answer. Optional: it must never stand between a founder
+// and sending the form.
+const FOUND_US_OPTIONS = [
+  { value: '', label: 'Prefer not to say' },
+  { value: 'search', label: 'Google or another search engine' },
+  { value: 'ai-assistant', label: 'An AI assistant' },
+  { value: 'linkedin', label: 'LinkedIn' },
+  { value: 'referral', label: 'A referral or recommendation' },
+  { value: 'event-or-podcast', label: 'An event or podcast' },
+  { value: 'other', label: 'Somewhere else' },
+]
+
+// Lead source without cookies or device storage (privacy page, BRANDING §13.21): the
+// page the form was sent from and the page before it, read at the moment of sending.
+// An external referrer is cut to its hostname, since a full URL can carry another
+// site's query string, and nothing here identifies the visitor beyond what they typed.
+const describeReferrer = () => {
+  if (!document.referrer) return 'none (direct visit, or the browser withheld it)'
+  try {
+    const ref = new URL(document.referrer)
+    return ref.origin === window.location.origin ? ref.pathname : ref.hostname
+  } catch {
+    return 'unreadable'
+  }
+}
+
+const leadSource = (foundUs) => {
+  const answer = FOUND_US_OPTIONS.find((o) => o.value === foundUs)
+  return [
+    '---',
+    `How they found us: ${foundUs ? answer.label : 'not given'}`,
+    `Sent from: ${window.location.pathname}${window.location.search}`,
+    `Previous page: ${describeReferrer()}`,
+  ].join('\n')
+}
+
 // labelledBy: id of the heading that names this form. An unnamed <form> is not
 // exposed as a landmark at all, so without a name it cannot be reached by landmark
 // navigation. Pages that have no heading to point at fall back to the aria-label.
 const ContactForm = ({ labelledBy }) => {
-  const formRef = useRef()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     engagement: '',
+    foundUs: '',
     message: ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -227,10 +265,19 @@ const ContactForm = ({ labelledBy }) => {
     setSubmitStatus({ type: '', message: '' })
 
     try {
-      await emailjs.sendForm(
+      // send(), not sendForm(): the shared template renders only name, email, company,
+      // engagement and message, so the lead source rides at the foot of the message,
+      // as the referral form and runway calculator already pack theirs.
+      await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-        formRef.current,
+        {
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          engagement: formData.engagement,
+          message: `${formData.message}\n\n${leadSource(formData.foundUs)}`,
+        },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       )
 
@@ -240,7 +287,7 @@ const ContactForm = ({ labelledBy }) => {
         // ("we will get back to you soon" against "within 24 hours with times").
         message: "Thank you — that's with us. We'll reply within 24 hours with some times."
       })
-      setFormData({ name: '', email: '', company: '', engagement: '', message: '' })
+      setFormData({ name: '', email: '', company: '', engagement: '', foundUs: '', message: '' })
       setEmailValidation({ status: 'idle', message: '', suggestion: null })
     } catch (error) {
       // The address has to be in the message itself. This used to say "email us
@@ -288,7 +335,6 @@ const ContactForm = ({ labelledBy }) => {
         </div>
       )}
       <form
-        ref={formRef}
         onSubmit={handleSubmit}
         className="space-y-6"
         aria-labelledby={labelledBy}
@@ -458,6 +504,25 @@ const ContactForm = ({ labelledBy }) => {
             className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all text-slate-900 resize-none"
             placeholder="Tell us about your project, challenges, or what you're looking to build..."
           ></textarea>
+        </div>
+
+        <div>
+          <label htmlFor="foundUs" className="block text-sm font-semibold text-slate-700 mb-2">
+            How did you find us?
+          </label>
+          <select
+            id="foundUs"
+            name="foundUs"
+            value={formData.foundUs}
+            onChange={handleChange}
+            className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all text-slate-900 bg-white"
+          >
+            {FOUND_US_OPTIONS.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
         </div>
 
         {submitStatus.message && (
