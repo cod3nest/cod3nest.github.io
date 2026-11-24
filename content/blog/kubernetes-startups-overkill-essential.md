@@ -104,7 +104,7 @@ Kubernetes is a good answer to problems most startups do not yet have. Adopted a
 
 Pre-seed and early seed, use a managed platform. At seed with a handful of services, look hard at the middle rung before the top one. By Series A, if you are running many services with a growing team, it is a reasonable default.
 
-The question is never whether Kubernetes is good technology. It is whether running it is the best use of the engineering time you are paying for this quarter. For the wider infrastructure picture, our [AWS infrastructure guide for founders](/blog/terraform-aws-infrastructure-as-code/) covers the decisions around it.
+The question is never whether Kubernetes is good technology. It is whether running it is the best use of the engineering time you are paying for this quarter. For the wider infrastructure picture, our [AWS infrastructure guide for founders](/blog/terraform-aws-infrastructure-as-code/) covers the decisions around it, and [GitOps for startups](/blog/gitops-startup-deployment-github-actions/) covers deployment automation, which is often proposed alongside it.
 
 ---
 

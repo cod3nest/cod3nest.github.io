@@ -67,6 +67,8 @@ For early-stage startups, the bar isn't perfection. Investors know you're moving
 
 **Red flags:** Manual deployments, no monitoring, "it works on my machine" syndrome.
 
+Three founder-level deep dives cover this area: [why infrastructure as code matters in diligence](/blog/infrastructure-as-code-for-startups/), [whether automating deployments is worth it](/blog/gitops-startup-deployment-github-actions/), and [whether you need Kubernetes yet](/blog/kubernetes-startups-overkill-essential/).
+
 ### 3. Security & Compliance
 
 **What they'll ask:**

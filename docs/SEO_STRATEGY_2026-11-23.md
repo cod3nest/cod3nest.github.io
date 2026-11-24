@@ -294,6 +294,13 @@ dropped. The post is deleted and a Cloudflare Single Redirect ("Merged CTO vs fu
 guide", wildcard on the old path) 301s it to the guide; verified with curl for both slash forms.
 Cloudflare in front of GitHub Pages is what makes a real 301 possible; the repo alone cannot.
 
+**Consolidated 24 Nov 2026 (owner approved):** `/blog/when-to-hire-fractional-cto/` (859 words,
+crawled but not indexed) duplicated the CTO guide's "When should you hire" section. Its seven
+signals, its "when it isn't right" section and the `cto-triggers` diagram moved into the guide.
+Its unsourced cost table and percentages were dropped. The post and its OG card are deleted.
+A Cloudflare Single Redirect 301s the old path to `/guides/fractional-cto-guide/#when-to-hire`.
+See `docs/UNINDEXED_POSTS_PLAN_2026-11-24.md`.
+
 ---
 
 ## 6. Keyword-to-page map

@@ -227,6 +227,21 @@ export default function SeriesADueDiligencePage() {
               ))}
             </div>
             <p className="text-slate-700 leading-relaxed mt-8">
+              On the infrastructure items: why{' '}
+              <Link href="/blog/infrastructure-as-code-for-startups/" className="text-accent-700 font-semibold hover:underline">
+                infrastructure as code matters in diligence
+              </Link>
+              , when{' '}
+              <Link href="/blog/gitops-startup-deployment-github-actions/" className="text-accent-700 font-semibold hover:underline">
+                automating deployments
+              </Link>{' '}
+              pays back, and whether you{' '}
+              <Link href="/blog/kubernetes-startups-overkill-essential/" className="text-accent-700 font-semibold hover:underline">
+                need Kubernetes yet
+              </Link>
+              .
+            </p>
+            <p className="text-slate-700 leading-relaxed mt-4">
               Two free self-checks to start from: the{' '}
               <Link href="/tools/technical-due-diligence-check/" className="text-accent-700 font-semibold hover:underline">
                 technical due diligence readiness check

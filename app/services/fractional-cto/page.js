@@ -495,8 +495,14 @@ export default function FractionalCTOPage() {
               <Link href="/blog/how-much-does-fractional-cto-cost-uk/" className="font-semibold text-primary-700 hover:text-primary-800 underline">
                 what a fractional CTO costs in the UK
               </Link>{' '}and{' '}
-              <Link href="/blog/when-to-hire-fractional-cto/" className="font-semibold text-primary-700 hover:text-primary-800 underline">
+              <Link href="/guides/fractional-cto-guide/#when-to-hire" className="font-semibold text-primary-700 hover:text-primary-800 underline">
                 the seven signs it is time to hire one
+              </Link>. Facing an infrastructure decision? Read{' '}
+              <Link href="/blog/gitops-startup-deployment-github-actions/" className="font-semibold text-primary-700 hover:text-primary-800 underline">
+                whether automating deployments is worth it
+              </Link>{' '}and{' '}
+              <Link href="/blog/kubernetes-startups-overkill-essential/" className="font-semibold text-primary-700 hover:text-primary-800 underline">
+                whether you need Kubernetes yet
               </Link>.
             </p>
           </div>

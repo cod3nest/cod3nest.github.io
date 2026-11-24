@@ -1,7 +1,26 @@
 # Plan: the ten posts Google crawled but did not index
 
-24 November 2026. **This is a plan. Nothing in it has been done.** Merging or deleting a post
-needs the owner's yes, post by post.
+24 November 2026. Merging or deleting a post needs the owner's yes, post by post.
+
+## Decided 24 Nov 2026 (owner asked for the best approach on both)
+
+- **`when-to-hire-fractional-cto`: merged** into `/guides/fractional-cto-guide/#when-to-hire`.
+  All seven signals, the "when it isn't right" section and the `cto-triggers` diagram moved;
+  the diagram now plots all seven. The post's unsourced cost table and "60-80% less" claim
+  were dropped. The post and its OG card are deleted, the service page link is repointed,
+  and a Cloudflare 301 is needed (see "How a merge is done here").
+- **Infrastructure cluster: kept, not merged.** The premise below, that these posts are
+  "written for engineers", was wrong. All four were rewritten for founders on 5 Aug 2026,
+  are tagged `Non-Technical Founders`, and each answers a separate decision with its own
+  diagram. Merging would have destroyed good content to fix a link-weight problem. Instead
+  the two unindexed ones gained contextual links. Before this, GitOps had none at all
+  beyond the blog index. The new links come from:
+  - the Series A guide
+  - the CTO service page
+  - the due diligence checklist post
+  - each other
+- **Re-check on or after 5 January 2027** as below. Consider `noindex` only if they are
+  still unindexed after that.
 
 ## The problem
 
@@ -37,9 +56,11 @@ Two weaker signals are within our control:
 
 ### The infrastructure cluster
 
+*Superseded by the decision above: kept and linked, not merged.*
+
 `kubernetes-startups-overkill-essential`, `gitops-startup-deployment-github-actions`,
 `infrastructure-as-code-for-startups` and `terraform-aws-infrastructure-as-code` total about
-5,850 words. They are written for engineers. The two indexed ones (IaC, Terraform) bring little
+5,850 words. (The original claim here, that they are written for engineers, was wrong.) The two indexed ones (IaC, Terraform) bring little
 founder traffic either.
 
 Options:
@@ -75,5 +96,4 @@ skipped.
 
 ## Decisions needed from the owner
 
-- Merge `when-to-hire-fractional-cto` into the CTO guide and redirect it? (yes / no)
-- Infrastructure cluster: option 1, 2 or 3?
+None open. Both were decided on 24 Nov 2026 (above).
