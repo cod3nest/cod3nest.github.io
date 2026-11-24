@@ -218,10 +218,10 @@ export default function AboutPage() {
                       alt={`${person.name}, ${person.role} at Codenest`}
                       width={96}
                       height={96}
-                      className="w-24 h-24 rounded-2xl object-cover shadow-lg mb-6"
+                      className="w-24 h-24 rounded-full object-cover shadow-lg mb-6"
                     />
                   ) : (
-                    <div className={`w-24 h-24 rounded-2xl bg-gradient-to-br ${style.avatar} flex items-center justify-center text-white text-4xl font-serif shadow-lg mb-6`}>
+                    <div className={`w-24 h-24 rounded-full bg-gradient-to-br ${style.avatar} flex items-center justify-center text-white text-4xl font-serif shadow-lg mb-6`}>
                       {person.initial}
                     </div>
                   )}
