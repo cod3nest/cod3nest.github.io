@@ -74,7 +74,7 @@ export default function FractionalCTOGuidePage() {
     },
     {
       question: 'How long do fractional CTO engagements typically last?',
-      answer: 'Engagements typically range from 6 months to 2+ years. Some startups use fractional CTOs as a bridge until they can afford full-time leadership; others maintain the relationship through Series A and beyond.'
+      answer: 'It depends on the goal. A defined piece of work, such as preparing for technical due diligence or getting an MVP built, is measured in months. Ongoing technical leadership usually lasts until the business can justify a full-time CTO, whom the fractional CTO then helps to hire.'
     },
     // Searched in these words, guide at position 25-28 (Search Console, 24 Nov 2026).
     {
@@ -201,7 +201,7 @@ export default function FractionalCTOGuidePage() {
               <div className="bg-primary-50 border border-primary-200 rounded-xl p-6 my-8 not-prose">
                 <p className="font-semibold text-primary-900 mb-2">Key Point</p>
                 <p className="text-primary-800">
-                  A fractional CTO typically works 8-20 hours per week, costs 60-80% less than a full-time hire, and can start within 1-2 weeks versus 3-6 months for a permanent search.
+                  A fractional CTO typically works 8-20 hours per week, costs a fraction of a full-time hire with no equity, and can start within 1-2 weeks versus 3-6 months for a permanent search.
                 </p>
               </div>
             </section>
@@ -263,7 +263,7 @@ export default function FractionalCTOGuidePage() {
 
               <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">You're a Non-Technical Founder Making Technical Decisions</h3>
               <p>
-                Choosing a cloud provider, a framework or a development agency without the expertise to judge the recommendation is a risk that compounds: an early architecture mistake is paid for later in rewrites. A fractional CTO translates business requirements into technical decisions, evaluates vendors and contractors, and makes sure you are building on sound foundations.
+                Choosing a cloud provider, a framework or a development agency without the expertise to judge the recommendation is a risk that compounds: an early architecture mistake is paid for later in rewrites. A fractional CTO translates business requirements into technical decisions, evaluates vendors and contractors, and makes sure you are building on sound foundations. If you are hiring developers yourself in the meantime, see <Link href="/blog/non-technical-founder-hiring-developers/" className="text-primary-600 hover:text-primary-700 font-medium">how a non-technical founder can hire developers</Link>.
               </p>
 
               <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Your Developers Ship, but Nobody Owns the Direction</h3>
@@ -308,7 +308,7 @@ export default function FractionalCTOGuidePage() {
                 How Much Does a Fractional CTO Cost?
               </h2>
               <p>
-                Fractional CTO costs in the UK vary based on experience level, engagement intensity, and industry specialisation. Here's what to expect (the <Link href="/blog/how-much-does-fractional-cto-cost-uk/" className="text-primary-600 hover:text-primary-700 font-medium">UK fractional CTO pricing guide</Link> breaks it down further):
+                Fractional CTO costs in the UK vary based on experience level, engagement intensity, and industry specialisation. These are market ranges, not Codenest's prices (the <Link href="/blog/how-much-does-fractional-cto-cost-uk/" className="text-primary-600 hover:text-primary-700 font-medium">UK fractional CTO pricing guide</Link> breaks it down further):
               </p>
 
               <div className="overflow-x-auto my-8 not-prose">
@@ -346,21 +346,7 @@ export default function FractionalCTOGuidePage() {
 
               <h3 className="text-xl font-bold text-slate-900 mt-8 mb-4">Cost Comparison: Fractional vs Full-Time</h3>
               <p>
-                A full-time CTO in London typically costs:
-              </p>
-              <ul>
-                <li><strong>Base salary:</strong> £150,000-£220,000</li>
-                <li><strong>Employer NI:</strong> £18,000-£26,000</li>
-                <li><strong>Pension:</strong> £6,000-£9,000</li>
-                <li><strong>Benefits:</strong> £5,000-£15,000</li>
-                <li><strong>Equity:</strong> 1-4% (immediate dilution)</li>
-                <li><strong>Recruitment:</strong> £30,000-£50,000 (one-time)</li>
-              </ul>
-              <p>
-                <strong>Total Year 1:</strong> £210,000-£320,000+ plus equity dilution
-              </p>
-              <p>
-                A fractional CTO at the "Standard" level costs £48,000-£96,000 annually, a <strong>60-80% saving</strong> with no equity dilution and no recruitment fees.
+                A full-time CTO costs a senior salary plus employer NI, pension, benefits, recruitment fees and usually an equity grant, all before they have shipped anything. A fractional CTO has no recruitment fee and no equity, and the cost scales with the hours the business actually needs. The comparison below sets out the trade-offs; <Link href="/guides/fractional-cto-vs-full-time/" className="text-primary-600 hover:text-primary-700 font-medium">fractional vs full-time CTO</Link> works through the year-one numbers.
               </p>
             </section>
 

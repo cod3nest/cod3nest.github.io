@@ -536,6 +536,9 @@ export default function FractionalCFOPage() {
               </Link>{' '}and{' '}
               <Link href="/blog/when-to-hire-fractional-cfo/" className="font-semibold text-accent-700 hover:text-accent-800 underline">
                 the seven signs it is time to hire one
+              </Link>. Raising from UK angels? Read{' '}
+              <Link href="/blog/seis-eis-tax-benefits-startup-investors/" className="font-semibold text-accent-700 hover:text-accent-800 underline">
+                SEIS and EIS explained
               </Link>.
             </p>
           </div>

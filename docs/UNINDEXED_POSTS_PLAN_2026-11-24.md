@@ -88,7 +88,7 @@ skipped.
 
 ## Order
 
-1. Now: the zero-risk links. Link the non-technical founder post from the new FAQ, and SEIS/EIS
+1. **Done 24 Nov 2026.** The zero-risk links. Link the non-technical founder post from the new FAQ, and SEIS/EIS
    from the CFO service page.
 2. 5 January 2027: re-check GSC. Act only on posts still unindexed.
 3. With owner approval: deepen the CTO cost post; merge `when-to-hire-fractional-cto`.
