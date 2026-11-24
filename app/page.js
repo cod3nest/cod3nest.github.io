@@ -51,7 +51,7 @@ export default function Home() {
     },
     {
       question: "What does a typical engagement look like?",
-      answer: "Fractional CTO/CFO engagements typically run 3-6 months at 2-3 days per week. MVP builds are fixed-scope at 8-12 weeks. We tailor every engagement to your stage and needs. No cookie-cutter packages."
+      answer: "Fractional CTO/CFO engagements typically run 3-6 months at 2-3 days per week. MVP builds are fixed-scope: how long one takes depends on what the product has to do and how complex the business is, and we agree the timeline before work starts. We tailor every engagement to your stage and needs. No cookie-cutter packages."
     },
     {
       question: "Can I engage just the CTO or just the CFO?",
@@ -124,8 +124,10 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <div>
-                    <span className="font-medium">Investor-ready in 8-12 weeks</span>
-                    <span className="text-slate-500 text-sm block">Data room, financial models, technical architecture</span>
+                    {/* No week range: how long this takes depends on the business and the
+                        raise (owner, 24 Nov 2026, BRANDING §13.31). */}
+                    <span className="font-medium">Investor-ready before you raise</span>
+                    <span className="text-slate-500 text-sm block">Data room, financial model, technical architecture</span>
                   </div>
                 </li>
                 <li className="flex items-start text-slate-700 group">
@@ -526,11 +528,12 @@ export default function Home() {
             </div>
             <div className="space-y-2 group">
               <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gold-gradient stat-number group-hover:scale-105 transition-transform">Series A</div>
-              <div className="text-slate-300 text-sm md:text-base">Closed in 2025 on Michelle's model and data room</div>
+              <div className="text-slate-300 text-sm md:text-base">Closed on the model and data room. Founder track record: Michelle Rana FCCA, 2025</div>
             </div>
             <div className="space-y-2 group">
-              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gold-gradient stat-number group-hover:scale-105 transition-transform">8-12 wks</div>
-              <div className="text-slate-300 text-sm md:text-base">Fixed-scope MVP delivery</div>
+              {/* A named engagement, not a generic range (§13.13, §13.31). */}
+              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gold-gradient stat-number group-hover:scale-105 transition-transform">12 wks</div>
+              <div className="text-slate-300 text-sm md:text-base">Frekkel MVP, first scoping session to working product</div>
             </div>
           </div>
         </div>
@@ -604,7 +607,7 @@ export default function Home() {
 
       {/* How We Work Section. Deliberately not a three-stage timeline: the FAQ below
           already carries the real engagement shape (3-6 months at 2-3 days a week,
-          8-12 week fixed-scope MVPs, published rates), and a tidy Discover/Build/Scale
+          fixed-scope MVPs timed to the product), and a tidy Discover/Build/Scale
           pipeline said less than that in more words. Two asymmetric columns rather
           than a third card grid. */}
       <section id="how-we-work" className="py-24 bg-white">
