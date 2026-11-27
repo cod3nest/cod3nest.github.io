@@ -7,6 +7,7 @@ import Footer from '../../components/Footer'
 import PrincipalBand from '../../components/PrincipalBand'
 import SoundsFamiliar from '../../components/SoundsFamiliar'
 import FirstNinetyDays from '../../components/FirstNinetyDays'
+import WaysToWork from '../../components/WaysToWork'
 import JsonLd from '../../components/JsonLd'
 import { breadcrumbs, ORGANIZATION_ID, WEBSITE_ID } from '../../../lib/schema'
 
@@ -211,6 +212,30 @@ export default function FractionalCFOPage() {
     "Investor and diligence requests answered from one record",
   ]
 
+  // Owner, 27 Nov 2026. Terms restated from the homepage "How We Work" and the
+  // FAQ below; nothing here is new. Interim full-time cover is not offered as a
+  // model: the FAQ says we will tell you on the call whether we can do it.
+  const engagementModels = [
+    {
+      name: 'Project',
+      terms: 'Fixed fee',
+      body: 'One defined piece of work with a clear end: a financial model, preparation for investor due diligence, or a pricing review. Scope and fee are agreed in writing before it starts, and you keep everything it produces.',
+      when: 'you need one thing done properly and someone senior to own it until it is.',
+    },
+    {
+      name: 'Retainer',
+      terms: 'Monthly',
+      body: 'A set amount of time each month, typically 8 to 16 hours a week, for the seat itself: the forecast, month-end, Board reporting, and the decisions that need a number attached.',
+      when: 'the finance work is ongoing, but not yet a full-time job.',
+    },
+    {
+      name: 'Through a raise',
+      terms: 'Retainer, stepped up',
+      body: 'More time in the weeks around a fundraise or a Board cycle: the model, the data room and the diligence questions, worked through with you. The days step back down once the round closes.',
+      when: 'a raise is coming and the numbers have to survive an investor\'s questions.',
+    },
+  ]
+
   const faqs = [
     {
       // Owner, 23 Nov 2026: Michelle works as a CFO, a Finance Director, or both.
@@ -317,14 +342,20 @@ export default function FractionalCFOPage() {
               <div className="inline-block px-4 py-2 bg-accent-100 text-accent-800 rounded-full text-sm font-medium mb-6">
                 Financial Leadership
               </div>
-              <h1 className="font-serif text-5xl md:text-6xl font-bold text-slate-900 leading-tight mb-6">
-                Fractional CFO Services
+              {/* Owner, 27 Nov 2026: the hero promises an outcome, after a competitor's.
+                  The target term stays first in the h1 (BRANDING §8); the promise is a
+                  capability, not a figure, and avoids "X, not Y" (§13.18). */}
+              <h1 className="font-serif font-bold text-slate-900 leading-tight mb-6">
+                <span className="block text-5xl md:text-6xl">Fractional CFO Services</span>{' '}
+                <span className="block text-2xl sm:text-3xl md:text-4xl text-accent-700 mt-4">
+                  Know what a decision is worth before you make it.
+                </span>
               </h1>
               <p className="text-xl text-slate-600 mb-4 leading-relaxed">
-                Business and financial strategy, FP&A, financial modelling and investor-ready reporting from a part-time CFO or Finance Director. The financial discipline of a high-growth company — without the overhead.
+                Pricing, hiring, runway and the shape of the raise, modelled before you commit to them. Business and financial strategy, FP&A and investor-ready reporting from a part-time CFO or Finance Director.
               </p>
               <p className="text-sm font-medium text-slate-700 mb-8">
-                Retained monthly engagements, scoped to your stage &middot; typically 60-80% less than a full-time CFO
+                Monthly retainer or fixed-fee project &middot; typically 60-80% less than a full-time CFO
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button href={cta.href} {...(cta.external ? EXTERNAL_LINK_PROPS : {})}>{cta.label}</Button>
@@ -504,6 +535,22 @@ export default function FractionalCFOPage() {
           </p>
         </div>
       </section>
+
+      <WaysToWork
+        seat="cfo"
+        intro="Three ways to bring Michelle in. Each is quoted against what you actually need, and the scope is agreed in writing before work starts."
+        models={engagementModels}
+        note={
+          <>
+            Need someone full time? That is a permanent hire, and we will help you make it. For what fractional
+            finance leadership costs in the UK, see{' '}
+            <Link href="/blog/how-much-does-fractional-cfo-cost-uk/" className="font-semibold text-primary-700 hover:text-primary-800 underline">
+              our pricing guide
+            </Link>
+            .
+          </>
+        }
+      />
 
       <FirstNinetyDays
         seat="cfo"
